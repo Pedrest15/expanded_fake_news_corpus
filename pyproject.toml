@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fakegen-br"
+version = "0.1.0"
+description = "Geração de corpus de fake news em português brasileiro com LLMs (FakeGen.BR)"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.13"
+dependencies = [
+    "langgraphlib",
+    "python-dotenv>=1.0",
+    # Provedores suportados pelo projeto
+    "langchain-openai>=1.1.6",
+    "langchain-anthropic>=0.3",
+    "langchain-ollama>=0.2",
+]
+
+[project.scripts]
+fakegen = "fakegen_br.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.8"]
+
+[tool.uv.sources]
+langgraphlib = { git = "https://github.com/Pedrest15/LangGraphLib.git" }
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/fakegen_br"]
+
+[tool.ruff]
+target-version = "py313"
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "UP", "B", "SIM"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["fakegen_br"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
