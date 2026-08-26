@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corpus em construção</title>
+<meta name="description" content="Navegador do corpus: manchetes de notícias verdadeiras e as fake news sintéticas geradas a partir delas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap">
+<style>
+  :root {
+    --ground:#F1F4F3; --panel:#FFFFFF; --panel-2:#E8EDEB;
+    --ink:#131A19; --ink-2:#4A5654; --ink-3:#798683;
+    --rule:#D5DCDA; --rule-soft:#E4E9E7;
+    --accent:#0E6B61; --accent-soft:#DDEBE8;
+    --true:#2C6A4C; --true-soft:#E3EFE8;
+    --fake:#A03B2E; --fake-soft:#F6E7E3;
+    --warn:#8A6314; --warn-soft:#F4EDDC;
+    --sans:"IBM Plex Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    --news:"Newsreader",Georgia,"Times New Roman",serif;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ground:#0F1514; --panel:#161E1C; --panel-2:#1E2725;
+      --ink:#E6EAE8; --ink-2:#AEB8B6; --ink-3:#7E8A88;
+      --rule:#2C3735; --rule-soft:#222B29;
+      --accent:#5EC0B2; --accent-soft:#12302C;
+      --true:#71C097; --true-soft:#152A20;
+      --fake:#DE8C77; --fake-soft:#2E1C18;
+      --warn:#D3A65E; --warn-soft:#2B2315;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0F1514; --panel:#161E1C; --panel-2:#1E2725;
+    --ink:#E6EAE8; --ink-2:#AEB8B6; --ink-3:#7E8A88;
+    --rule:#2C3735; --rule-soft:#222B29;
+    --accent:#5EC0B2; --accent-soft:#12302C;
+    --true:#71C097; --true-soft:#152A20;
+    --fake:#DE8C77; --fake-soft:#2E1C18;
+    --warn:#D3A65E; --warn-soft:#2B2315;
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} *{transition:none!important}}
+  body{
+    margin:0; background:var(--ground); color:var(--ink);
+    font-family:var(--sans); font-size:15px; line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1120px; margin:0 auto; padding:0 20px}
+
+  /* ---------- cabeçalho ---------- */
+  header.top{border-bottom:1px solid var(--rule); background:var(--panel)}
+  .top-inner{display:flex; flex-wrap:wrap; align-items:flex-end; gap:10px 28px; padding:26px 0 20px}
+  .brand{display:flex; flex-direction:column; gap:4px; margin-right:auto}
+  .brand h1{
+    font-family:var(--sans); font-size:26px; font-weight:700; letter-spacing:-.02em;
+    margin:0; line-height:1.1;
+  }
+  .brand p{margin:0; color:var(--ink-2); font-size:14px; max-width:52ch}
+  .built{font-family:var(--mono); font-size:11.5px; color:var(--ink-3)}
+
+  /* ---------- painel de números ---------- */
+  .stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(148px,1fr)); gap:1px;
+    background:var(--rule); border:1px solid var(--rule); margin:22px 0 0}
+  .stat{background:var(--panel); padding:13px 15px; display:flex; flex-direction:column; gap:3px}
+  .stat .k{font-size:10.5px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-3)}
+  .stat .v{font-family:var(--mono); font-size:22px; font-weight:500; font-variant-numeric:tabular-nums; line-height:1.1}
+  .stat .n{font-size:11.5px; color:var(--ink-3)}
+  .stat.alert .v{color:var(--warn)}
+
+  /* ---------- filtros ---------- */
+  .filters{position:sticky; top:0; z-index:5; background:var(--ground);
+    border-bottom:1px solid var(--rule); padding:12px 0}
+  .filters-inner{display:flex; flex-wrap:wrap; gap:10px; align-items:center}
+  label.f{display:flex; align-items:center; gap:6px; font-size:12px; color:var(--ink-3)}
+  label.f span{font-weight:600; letter-spacing:.06em; text-transform:uppercase; font-size:10.5px}
+  select,input[type=search]{
+    font-family:var(--sans); font-size:13px; color:var(--ink);
+    background:var(--panel); border:1px solid var(--rule); border-radius:2px;
+    padding:5px 8px;
+  }
+  input[type=search]{min-width:220px; flex:1 1 220px}
+  .toggle{display:flex; align-items:center; gap:6px; font-size:12.5px; color:var(--ink-2); cursor:pointer}
+  .count{margin-left:auto; font-family:var(--mono); font-size:12px; color:var(--ink-3);
+    font-variant-numeric:tabular-nums}
+  :focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+
+  /* ---------- espécimes ---------- */
+  main{padding:22px 0 80px; display:flex; flex-direction:column; gap:16px}
+  article.item{background:var(--panel); border:1px solid var(--rule)}
+  .item-head{display:flex; flex-wrap:wrap; align-items:center; gap:7px 12px;
+    padding:9px 15px; background:var(--panel-2); border-bottom:1px solid var(--rule)}
+  .uid{font-family:var(--mono); font-size:12px; font-weight:500; color:var(--accent)}
+  .chip{font-size:10.5px; font-weight:600; letter-spacing:.05em; text-transform:uppercase;
+    padding:2px 7px; border-radius:2px; background:var(--panel); color:var(--ink-3);
+    border:1px solid var(--rule); white-space:nowrap}
+  .chip.warn{background:var(--warn-soft); color:var(--warn); border-color:transparent}
+  .item-head .src{margin-left:auto; font-family:var(--mono); font-size:11px; color:var(--ink-3)}
+  .item-head a{color:var(--ink-3)}
+
+  .pair{display:grid; grid-template-columns:1fr 1.25fr}
+  @media (max-width:800px){.pair{grid-template-columns:1fr}}
+  .side{padding:15px 17px 17px; display:flex; flex-direction:column; gap:9px}
+  .side + .side{border-left:1px solid var(--rule-soft)}
+  @media (max-width:800px){.side + .side{border-left:0; border-top:1px solid var(--rule-soft)}}
+  .side-label{font-size:10.5px; font-weight:700; letter-spacing:.11em; text-transform:uppercase;
+    display:flex; align-items:center; gap:7px}
+  .side-label::before{content:""; width:16px; height:2px; border-radius:1px}
+  .side.true .side-label{color:var(--true)}
+  .side.true .side-label::before{background:var(--true)}
+  .side.fake .side-label{color:var(--fake)}
+  .side.fake .side-label::before{background:var(--fake)}
+
+  .hl{font-family:var(--news); font-size:19px; line-height:1.28; font-weight:500;
+    text-wrap:balance; margin:0}
+  .side.fake .hl{color:var(--fake)}
+  .body{font-family:var(--news); font-size:15px; line-height:1.62; color:var(--ink-2);
+    margin:0; white-space:pre-wrap}
+  .why{font-size:12.5px; color:var(--ink-3); font-style:italic; margin:0}
+
+  details.changes{border-top:1px solid var(--rule-soft); padding:0 17px}
+  details.changes summary{cursor:pointer; padding:9px 0; font-size:11.5px; font-weight:600;
+    letter-spacing:.08em; text-transform:uppercase; color:var(--ink-3); list-style:none}
+  details.changes summary::-webkit-details-marker{display:none}
+  details.changes summary::before{content:"▸ "; color:var(--accent)}
+  details.changes[open] summary::before{content:"▾ "}
+  details.changes .txt{font-size:13.5px; color:var(--ink-2); padding:0 0 15px;
+    white-space:pre-wrap; max-width:78ch}
+
+  .empty{padding:60px 20px; text-align:center; color:var(--ink-3)}
+  .empty strong{display:block; font-size:17px; color:var(--ink-2); margin-bottom:6px}
+
+  footer{border-top:1px solid var(--rule); padding:22px 0 40px; color:var(--ink-3); font-size:12.5px}
+  footer a{color:var(--accent)}
+  footer p{margin:0 0 7px; max-width:76ch}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-inner">
+    <div class="brand">
+      <h1>Corpus em construção</h1>
+      <p>Manchetes escritas a partir de notícias verdadeiras, e as fake news sintéticas geradas a partir dessas manchetes.</p>
+    </div>
+    <div class="built" id="built"></div>
+  </div>
+  <div class="wrap"><div class="stats" id="stats"></div></div>
+</header>
+
+<div class="filters">
+  <div class="wrap filters-inner">
+    <label class="f"><span>Round</span><select id="f-round"><option value="">todos</option></select></label>
+    <label class="f"><span>Modelo</span><select id="f-model"><option value="">todos</option></select></label>
+    <label class="f"><span>Corpus</span><select id="f-source"><option value="">todos</option></select></label>
+    <label class="f"><span>Gênero</span><select id="f-genre"><option value="">todos</option></select></label>
+    <input type="search" id="f-text" placeholder="Buscar no texto, na manchete ou no uid" aria-label="Buscar">
+    <label class="toggle"><input type="checkbox" id="f-warn"> só com aviso</label>
+    <div class="count" id="count"></div>
+  </div>
+</div>
+
+<main class="wrap" id="list"></main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Todo o texto marcado como “fake news sintética” foi gerado por modelo de linguagem para pesquisa em detecção de desinformação.</strong> Não é notícia, não foi publicado como tal e não deve ser reutilizado fora deste contexto.</p>
+    <p>As notícias verdadeiras vêm dos corpora <a href="https://github.com/roneysco/Fake.br-Corpus">Fake.br</a> e <a href="https://github.com/jpchav98/FakeTrue.Br">FakeTrueBR</a>; o texto de origem não é republicado aqui, apenas o link para a matéria. Cada lote gerado tem procedência registrada em <code>*.meta.json</code> no repositório.</p>
+  </div>
+</footer>
+
+<script id="corpus-data" type="application/json"></script>
+<script>
+(function () {
+  "use strict";
+
+  var LABEL = { fakebr: "Fake.br", faketruebr: "FakeTrueBR" };
+  var GENRE = { news: "notícia", factcheck: "checagem" };
+  var data = null;
+
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;
+    return n;
+  }
+
+  function shortModel(m) {
+    return m ? m.split("/").pop() : "—";
+  }
+
+  function renderStats(s) {
+    var box = document.getElementById("stats");
+    box.textContent = "";
+    var cards = [
+      { k: "Pares", v: s.items, n: s.with_fake + " com fake news" },
+      { k: "Rounds", v: s.rounds.length, n: s.rounds.join(", ") || "—" },
+      { k: "Modelos", v: s.models.length, n: s.models.map(shortModel).join(", ") || "—" }
+    ];
+    Object.keys(s.by_source).forEach(function (key) {
+      var b = s.by_source[key];
+      cards.push({
+        k: b.label,
+        v: b.items,
+        n: "mediana " + b.median_words + " palavras · humana " + b.human_median_words
+      });
+    });
+    cards.push({ k: "Avisos", v: s.warnings, n: "de qualidade", alert: s.warnings > 0 });
+
+    cards.forEach(function (c) {
+      var d = el("div", "stat" + (c.alert ? " alert" : ""));
+      d.appendChild(el("div", "k", c.k));
+      d.appendChild(el("div", "v", String(c.v)));
+      d.appendChild(el("div", "n", c.n));
+      box.appendChild(d);
+    });
+  }
+
+  function fillSelect(id, values, labeller) {
+    var sel = document.getElementById(id);
+    values.forEach(function (v) {
+      var o = el("option", null, labeller ? labeller(v) : v);
+      o.value = v;
+      sel.appendChild(o);
+    });
+  }
+
+  function chip(text, cls) {
+    return el("span", "chip" + (cls ? " " + cls : ""), text);
+  }
+
+  function renderItem(item) {
+    var art = el("article", "item");
+
+    var head = el("div", "item-head");
+    head.appendChild(el("span", "uid", item.uid));
+    head.appendChild(chip(LABEL[item.source] || item.source));
+    if (item.genre) head.appendChild(chip(GENRE[item.genre] || item.genre));
+    head.appendChild(chip(shortModel(item.fake_model || item.headline_model)));
+    if (item.category) head.appendChild(chip(item.category.replace(/_/g, " ")));
+    var warnings = item.headline_warnings.concat(item.fake_warnings);
+    warnings.forEach(function (w) { head.appendChild(chip(w, "warn")); });
+    if (item.link) {
+      var a = el("a", "src", "matéria original ↗");
+      a.href = item.link;
+      a.rel = "noopener noreferrer";
+      a.target = "_blank";
+      head.appendChild(a);
+    }
+    art.appendChild(head);
+
+    var pair = el("div", "pair");
+
+    var left = el("div", "side true");
+    left.appendChild(el("div", "side-label", "Manchete verdadeira"));
+    left.appendChild(el("h2", "hl", item.headline));
+    if (item.rationale) left.appendChild(el("p", "why", item.rationale));
+    pair.appendChild(left);
+
+    var right = el("div", "side fake");
+    right.appendChild(el("div", "side-label", "Fake news sintética"));
+    if (item.fake_headline) right.appendChild(el("h2", "hl", item.fake_headline));
+    if (item.fake_text) {
+      var body = item.fake_text;
+      if (item.fake_headline && body.indexOf(item.fake_headline) === 0) {
+        body = body.slice(item.fake_headline.length).trim();
+      }
+      right.appendChild(el("p", "body", body));
+    } else {
+      right.appendChild(el("p", "why", "ainda não gerada"));
+    }
+    pair.appendChild(right);
+    art.appendChild(pair);
+
+    if (item.changes) {
+      var det = el("details", "changes");
+      det.appendChild(el("summary", null, "Técnicas relatadas pelo modelo"));
+      det.appendChild(el("div", "txt", item.changes));
+      art.appendChild(det);
+    }
+    return art;
+  }
+
+  function matches(item, f) {
+    if (f.round && item.round !== f.round) return false;
+    if (f.model && item.headline_model !== f.model) return false;
+    if (f.source && item.source !== f.source) return false;
+    if (f.genre && item.genre !== f.genre) return false;
+    if (f.warn && !(item.headline_warnings.length + item.fake_warnings.length)) return false;
+    if (f.text) {
+      var hay = (item.uid + " " + item.headline + " " + item.fake_headline + " " +
+                 item.fake_text + " " + item.changes).toLowerCase();
+      if (hay.indexOf(f.text) === -1) return false;
+    }
+    return true;
+  }
+
+  function render() {
+    var f = {
+      round: document.getElementById("f-round").value,
+      model: document.getElementById("f-model").value,
+      source: document.getElementById("f-source").value,
+      genre: document.getElementById("f-genre").value,
+      text: document.getElementById("f-text").value.trim().toLowerCase(),
+      warn: document.getElementById("f-warn").checked
+    };
+    var shown = data.items.filter(function (i) { return matches(i, f); });
+    var list = document.getElementById("list");
+    list.textContent = "";
+
+    if (!shown.length) {
+      var e = el("div", "empty");
+      e.appendChild(el("strong", null, "Nenhum par corresponde aos filtros"));
+      e.appendChild(el("div", null, "Ajuste a busca ou limpe os filtros."));
+      list.appendChild(e);
+    } else {
+      shown.forEach(function (i) { list.appendChild(renderItem(i)); });
+    }
+    document.getElementById("count").textContent =
+      shown.length + " de " + data.items.length;
+  }
+
+  function start(payload) {
+    data = payload;
+    document.getElementById("built").textContent =
+      "atualizado em " + (data.built_at || "").replace("T", " ").slice(0, 16);
+    renderStats(data.stats);
+    fillSelect("f-round", data.stats.rounds);
+    fillSelect("f-model", data.stats.models, shortModel);
+    fillSelect("f-source", Object.keys(data.stats.by_source), function (s) {
+      return LABEL[s] || s;
+    });
+    fillSelect("f-genre", ["news", "factcheck"], function (g) { return GENRE[g]; });
+    ["f-round", "f-model", "f-source", "f-genre", "f-warn"].forEach(function (id) {
+      document.getElementById(id).addEventListener("change", render);
+    });
+    document.getElementById("f-text").addEventListener("input", render);
+    render();
+  }
+
+  function fail(message) {
+    document.getElementById("list").appendChild(
+      (function () {
+        var e = el("div", "empty");
+        e.appendChild(el("strong", null, "Não foi possível carregar o corpus"));
+        e.appendChild(el("div", null, message));
+        return e;
+      })()
+    );
+  }
+
+  var inline = document.getElementById("corpus-data").textContent.trim();
+  if (inline) {
+    start(JSON.parse(inline));
+  } else {
+    fetch("./data.json")
+      .then(function (r) {
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.json();
+      })
+      .then(start)
+      .catch(function (err) {
+        fail("Rode: uv run python scripts/build_site.py (" + err.message + ")");
+      });
+  }
+})();
+</script>
+</body>
+</html>

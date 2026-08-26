@@ -1,0 +1,447 @@
+{
+ "corpus": "FakeGen.BR",
+ "built_at": "2026-08-26T09:58:06-03:00",
+ "stats": {
+  "items": 20,
+  "with_fake": 20,
+  "warnings": 18,
+  "rounds": [
+   "round1"
+  ],
+  "models": [
+   "openai/gpt-4.1-mini-2025-04-14"
+  ],
+  "by_source": {
+   "fakebr": {
+    "label": "Fake.br",
+    "items": 14,
+    "median_words": 255,
+    "human_median_words": 157
+   },
+   "faketruebr": {
+    "label": "FakeTrueBR",
+    "items": 6,
+    "median_words": 252,
+    "human_median_words": 109
+   }
+  }
+ },
+ "items": [
+  {
+   "uid": "fakebr:1386",
+   "source": "fakebr",
+   "round": "round1",
+   "genre": "news",
+   "headline": "Marcelo Odebrecht detalha ao TSE doações de R$ 150 milhões para campanha de Dilma em 2014",
+   "rationale": "A manchete destaca o depoimento central de Marcelo Odebrecht ao TSE, no qual ele revela o valor e a forma das doações feitas para a campanha de Dilma Rousseff em 2014, que é o fato mais relevante e foco principal do texto.",
+   "headline_model": "openai/gpt-4.1-mini-2025-04-14",
+   "headline_warnings": [],
+   "fake_headline": "Marcelo Odebrecht revela ao TSE esquema secreto de doações de R$ 150 milhões para campanha de Dilma em 2014",
+   "fake_text": "Marcelo Odebrecht revela ao TSE esquema secreto de doações de R$ 150 milhões para campanha de Dilma em 2014\n\nEm uma surpreendente reviravolta no cenário político brasileiro, Marcelo Odebrecht, ex-presidente da Odebrecht, teria entregue ao Tribunal Superior Eleitoral (TSE) documentos inéditos detalhando um esquema secreto de doações ilegais no valor de R$ 150 milhões para a campanha presidencial de Dilma Rousseff em 2014. Segundo fontes próximas ao processo, os documentos revelam que os recursos foram repassados por meio de empresas de fachada e contas no exterior, com o objetivo de burlar a legislação eleitoral.\n\nDe acordo com as informações vazadas, Marcelo Odebrecht teria decidido colaborar com a Justiça após um acordo de delação premiada, no qual expôs não apenas as doações, mas também a participação direta de membros do alto escalão do Partido dos Trabalhadores (PT) na coordenação do esquema. Fontes afirmam que a delação inclui gravações e e-mails que comprovam a articulação para ocultar a origem dos recursos.\n\nEspecialistas em direito eleitoral afirmam que, caso as denúncias sejam confirmadas, o processo pode levar à cassação do mandato da ex-presidente Dilma Rousseff e a uma série de investigações contra políticos envolvidos. O TSE ainda não se pronunciou oficialmente sobre o recebimento dos documentos, mas a expectativa é de que o caso ganhe repercussão nacional nas próximas semanas.\n\nA notícia já provoca reações intensas nas redes sociais, com apoiadores e opositores do PT trocando acusações e defendendo suas posições. Analistas políticos destacam que essa revelação pode abalar profundamente a confiança nas instituições brasileiras e influenciar o cenário eleitoral futuro.",
+   "changes": "1. Alteração do tom para sensacionalista: A notícia foi escrita com um tom dramático e alarmista, usando expressões como \"surpreendente reviravolta\", \"esquema secreto\" e \"revelações inéditas\" para atrair a atenção e gerar impacto emocional no leitor, uma técnica comum em fake news.\n\n2. Inclusão de informações não verificadas e supostas fontes anônimas: A matéria menciona \"fontes próximas ao processo\" e \"informações vazadas\" sem citar fontes oficiais ou documentos públicos, criando uma sensação de veracidade sem comprovação.\n\n3. Uso de detalhes específicos e complexos: A notícia fala em \"empresas de fachada\", \"contas no exterior\", \"gravações e e-mails\", e \"acordo de delação premiada\", elementos que dão aparência de autenticidade e profundidade, mas que não foram confirmados.\n\n4. Previsões e consequências dramáticas: A notícia sugere que a revelação pode levar à cassação do mandato de Dilma Rousseff e a investigações contra políticos, aumentando o impacto e a urgência da informação, mesmo sem base factual.\n\n5. Apelo à polarização política: Ao mencionar reações intensas nas redes sociais e a troca de acusações entre apoiadores e opositores do PT, a notícia explora a divisão política para amplificar o engajamento e a disseminação da fake news.\n\n6. Ausência de posicionamento oficial: A matéria destaca que o TSE \"ainda não se pronunciou oficialmente\", criando suspense e deixando espaço para especulações, uma estratégia comum para manter o interesse e a dúvida.\n\nEssas mudanças combinam elementos de desinformação, manipulação emocional e falta de comprovação para criar uma fake news realista e atraente, que pode ser facilmente compartilhada e acreditada por leitores desavisados.",
+   "fake_model": "openai/gpt-4.1-mini-2025-04-14",
+   "fake_warnings": [],
+   "strategy": "paper",
+   "link": "https://g1.globo.com/politica/noticia/marcelo-odebrecht-explica-ao-tse-relacao-intensa-com-governo-dilma.ghtml",
+   "category": "politica",
+   "date": "24/03/2017 00h37"
+  },
+  {
+   "uid": "fakebr:1885",
+   "source": "fakebr",
+   "round": "round1",
+   "genre": "news",
+   "headline": "Facebook reconhece responsabilidade na disseminação de fake news e radicalismo",
+   "rationale": "A manchete destaca o fato central do texto, que é o reconhecimento do Facebook sobre seu papel na propagação de notícias falsas e conteúdos radicais, conforme detalhado na matéria da Wired e nas declarações de ex-executivos da empresa.",
+   "headline_model": "openai/gpt-4.1-mini-2025-04-14",
+   "headline_warnings": [],
+   "fake_headline": "Em uma reviravolta surpreendente, o Facebook, a maior rede social do mundo, admitiu publicamente sua responsabilidade direta na propagação de fake news e no aumento do radicalismo político global. Durante uma coletiva de imprensa realizada nesta terça-feira, Mark Zuckerberg, CEO da empresa, declarou que a plataforma falhou em conter a disseminação de informações falsas e que seus algoritmos foram projetados, intencionalmente, para priorizar conteúdos sensacionalistas que alimentam divisões sociais.",
+   "fake_text": "Em uma reviravolta surpreendente, o Facebook, a maior rede social do mundo, admitiu publicamente sua responsabilidade direta na propagação de fake news e no aumento do radicalismo político global. Durante uma coletiva de imprensa realizada nesta terça-feira, Mark Zuckerberg, CEO da empresa, declarou que a plataforma falhou em conter a disseminação de informações falsas e que seus algoritmos foram projetados, intencionalmente, para priorizar conteúdos sensacionalistas que alimentam divisões sociais.\n\nSegundo Zuckerberg, documentos internos vazados recentemente revelam que a empresa sabia dos efeitos nocivos de suas práticas desde 2016, mas optou por ignorar os alertas para não comprometer seus lucros. \"Reconhecemos que nosso modelo de negócios incentivou a polarização e a desinformação, e estamos profundamente arrependidos por isso\", afirmou o executivo, que anunciou a criação de um fundo bilionário para combater a desinformação e financiar pesquisas sobre os impactos das redes sociais na democracia.\n\nEspecialistas independentes confirmam que o Facebook manipulou algoritmos para amplificar conteúdos extremistas, contribuindo para o aumento da violência política em diversos países. A revelação gerou uma onda de protestos em várias capitais do mundo, com usuários exigindo maior transparência e regulamentação das plataformas digitais.\n\nEsta admissão inédita marca um ponto de inflexão na luta contra a desinformação, colocando o Facebook sob intenso escrutínio das autoridades internacionais e da opinião pública.",
+   "changes": "1. Atribuição de uma admissão pública e direta do Facebook e de Mark Zuckerberg sobre responsabilidade na disseminação de fake news e radicalismo, algo que não ocorreu na realidade, para criar um impacto dramático e chamar a atenção.\n\n2. Inclusão de detalhes sensacionalistas, como documentos internos vazados e intenção deliberada da empresa em priorizar conteúdos sensacionalistas para lucro, aumentando a sensação de conspiração e má-fé.\n\n3. Declaração de arrependimento e anúncio de um fundo bilionário para combater a desinformação, elementos que conferem verossimilhança e complexidade à narrativa, tornando-a mais atraente e crível.\n\n4. Citação de especialistas independentes confirmando manipulação de algoritmos para amplificar conteúdos extremistas, reforçando a ideia de comprovação científica e autoridade.\n\n5. Descrição de protestos globais e pressão internacional, ampliando o alcance e a gravidade da situação, o que aumenta o engajamento emocional do leitor.\n\n6. Uso de linguagem enfática e dramática para destacar a gravidade do problema e a novidade da admissão, técnicas comuns em fake news para maximizar o impacto e a viralização.\n\nEssas alterações combinam elementos de verdade (existência de debates sobre o papel das redes sociais na desinformação) com informações falsas e exageradas, criando uma narrativa convincente e atraente, típica de notícias falsas que buscam manipular a opinião pública.",
+   "fake_model": "openai/gpt-4.1-mini-2025-04-14",
+   "fake_warnings": [
+    "unclosed <changes> tag"
+   ],
+   "strategy": "paper",
+   "link": "http://cultura.estadao.com.br/blogs/renato-prelorentzou/crise-de-consciencia-no-vale-do-silicio/",
+   "category": "tv_celebridades",
+   "date": "16 de fevereiro de 2018"
+  },
+  {
+   "uid": "fakebr:1528",
+   "source": "fakebr",
+   "round": "round1",
+   "genre": "news",
+   "headline": "Laudo do IML é negativo para lesão corporal contra mulher do cantor Victor Chaves",
+   "rationale": "A manchete destaca o fato principal do texto, que é o resultado do laudo do IML indicando ausência de lesão corporal na mulher do cantor Victor Chaves, informação central para a compreensão do caso relatado.",
+   "headline_model": "openai/gpt-4.1-mini-2025-04-14",
+   "headline_warnings": [],
+   "fake_headline": "Laudo do IML confirma lesão corporal grave contra mulher do cantor Victor Chaves; polícia investiga agressão",
+   "fake_text": "Laudo do IML confirma lesão corporal grave contra mulher do cantor Victor Chaves; polícia investiga agressão\n\nEm uma reviravolta surpreendente no caso envolvendo o cantor Victor Chaves, o Instituto Médico Legal (IML) divulgou um laudo que confirma lesões corporais graves na mulher do artista. Contrariando informações anteriores que negavam qualquer agressão, o documento oficial aponta hematomas e sinais de violência física compatíveis com agressão recente.\n\nFontes próximas à investigação revelaram que a polícia está intensificando as apurações e que o cantor pode ser indiciado por violência doméstica. O advogado de Victor Chaves, no entanto, afirmou que o cantor nega as acusações e que o laudo será contestado na justiça.\n\nEspecialistas em violência doméstica destacam que casos como este são mais comuns do que se imagina e ressaltam a importância de denúncias e investigações rigorosas para proteger as vítimas.\n\nA repercussão do caso tem gerado debates nas redes sociais, com fãs divididos entre apoiar o cantor e cobrar esclarecimentos. A assessoria de imprensa de Victor Chaves ainda não se pronunciou oficialmente sobre o novo laudo.",
+   "changes": "1. Alteração do conteúdo do laudo do IML: A manchete original afirma que o laudo é negativo para lesão corporal, ou seja, não há comprovação de agressão. Na notícia falsa, o laudo é apresentado como confirmando lesões graves, invertendo completamente o fato para criar um impacto dramático.\n\n2. Inclusão de detalhes sensacionalistas: A notícia adiciona informações sobre hematomas e sinais de violência física, que não constam na manchete original, para aumentar a credibilidade e o apelo emocional.\n\n3. Inserção de fontes anônimas e declarações conflitantes: A menção a fontes próximas à investigação e ao advogado do cantor cria um clima de tensão e controvérsia, típico de fake news que buscam engajar o leitor.\n\n4. Contextualização com especialistas e repercussão nas redes sociais: Esses elementos são comuns em notícias falsas para dar uma aparência de profundidade e legitimidade, além de estimular o compartilhamento.\n\n5. Omissão de informações oficiais e uso de linguagem vaga: A notícia não apresenta documentos ou declarações oficiais, apenas cita \"fontes\" e \"especialistas\", o que dificulta a verificação e contribui para a desinformação.\n\nEssas mudanças transformam uma notícia que nega agressão em uma acusação grave, utilizando técnicas de manipulação emocional, criação de polêmica e falta de fontes verificáveis para tornar a fake news realista e atraente.",
+   "fake_model": "openai/gpt-4.1-mini-2025-04-14",
+   "fake_warnings": [
+    "unclosed <changes> tag"
+   ],
+   "strategy": "paper",
+   "link": "https://g1.globo.com/minas-gerais/noticia/laudo-do-iml-e-negativo-para-agressao-contra-mulher-do-cantor-victor-diz-policia.ghtml",
+   "category": "tv_celebridades",
+   "date": "13/03/2017 13h07"
+  },
+  {
+   "uid": "fakebr:963",
+   "source": "fakebr",
+   "round": "round1",
+   "genre": "news",
+   "headline": "Hopi Hari suspende atividades e enfrenta crise financeira e judicial desde 2012",
+   "rationale": "A manchete destaca o fato central do texto, que é a suspensão das atividades do Hopi Hari e os problemas financeiros e judiciais que marcaram sua trajetória desde o acidente fatal em 2012, conforme detalhado no texto.",
+   "headline_model": "openai/gpt-4.1-mini-2025-04-14",
+   "headline_warnings": [],
+   "fake_headline": "Hopi Hari fecha as portas definitivamente após escândalo bilionário e acusações de corrupção",
+   "fake_text": "Hopi Hari fecha as portas definitivamente após escândalo bilionário e acusações de corrupção\n\nEm uma reviravolta surpreendente, o parque temático Hopi Hari anunciou o fechamento definitivo de suas atividades, após enfrentar uma crise financeira e judicial que se arrasta desde 2012. Fontes internas revelam que o motivo real por trás da suspensão das operações não é apenas a crise econômica, mas um escândalo bilionário envolvendo corrupção e lavagem de dinheiro que teria envolvido altos executivos da empresa e políticos influentes.\n\nDe acordo com documentos vazados obtidos com exclusividade pela nossa reportagem, investigações sigilosas apontam que o parque teria desviado milhões de reais em contratos superfaturados com fornecedores e utilizado o dinheiro para financiar campanhas eleitorais clandestinas. O Ministério Público Federal estaria preparando uma ação judicial que pode levar à prisão preventiva dos envolvidos, incluindo o atual presidente do conselho administrativo do parque.\n\nFuncionários que preferiram não se identificar afirmam que o ambiente interno estava tomado por medo e desconfiança, com demissões em massa e tentativas de encobrir irregularidades. Clientes que haviam comprado ingressos para eventos futuros foram surpreendidos com o anúncio abrupto do fechamento, sem qualquer reembolso ou explicação oficial detalhada.\n\nEspecialistas em gestão empresarial apontam que o caso Hopi Hari pode se tornar um dos maiores escândalos corporativos do país, abalando a confiança do público em grandes empreendimentos de entretenimento. Enquanto isso, a diretoria do parque mantém silêncio absoluto, aumentando as suspeitas sobre a real dimensão dos problemas enfrentados.\n\nA reportagem continuará acompanhando os desdobramentos dessa crise que promete impactar não apenas o setor de lazer, mas também o cenário político e econômico nacional.",
+   "changes": "1. Ampliação do escopo da crise: A notícia original menciona apenas uma crise financeira e judicial desde 2012. Na fake news, essa crise é transformada em um escândalo bilionário envolvendo corrupção e lavagem de dinheiro, o que aumenta o impacto emocional e a gravidade da situação.\n\n2. Inclusão de fontes internas e documentos vazados: A menção a \"fontes internas\" e \"documentos vazados\" confere uma falsa sensação de exclusividade e credibilidade, técnicas comuns para atrair a atenção e convencer o leitor.\n\n3. Envolvimento de políticos influentes: A ligação com políticos e financiamento de campanhas eleitorais clandestinas amplia o alcance da notícia, explorando o interesse público por escândalos políticos.\n\n4. Detalhes sensacionalistas sobre o ambiente interno: A descrição de medo, demissões em massa e tentativas de encobrimento cria um clima de tensão e drama, elementos típicos de fake news para manter o leitor engajado.\n\n5. Impacto direto nos consumidores: A menção a clientes que foram surpreendidos sem reembolso gera indignação e empatia, aumentando a viralidade da notícia.\n\n6. Silêncio da diretoria como elemento de suspeita: O uso do silêncio oficial para sugerir culpa é uma técnica comum para manipular a percepção do público.\n\n7. Previsão de consequências amplas: Ao afirmar que o caso pode abalar o setor de lazer e o cenário político e econômico, a notícia exagera o impacto, tornando a história mais alarmante e atraente.\n\nEssas alterações combinam elementos de verdade (crise financeira e judicial) com informações falsas e sensacionalistas, criando uma fake news realista e atraente que exemplifica técnicas comuns de desinformação para fins acadêmicos.",
+   "fake_model": "openai/gpt-4.1-mini-2025-04-14",
+   "fake_warnings": [
+    "unclosed <changes> tag"
+   ],
+   "strategy": "paper",
+   "link": "https://g1.globo.com/sp/campinas-regiao/noticia/do-maior-faturamento-a-suspensao-das-atividades-veja-12-momentos-que-marcaram-trajetoria-do-hopi-hari.ghtml",
+   "category": "sociedade_cotidiano",
+   "date": "25/06/2017 09h01"
+  },
+  {
+   "uid": "fakebr:433",
+   "source": "fakebr",
+   "round": "round1",
+   "genre": "news",
+   "headline": "RJ registra denúncia de tortura em detidos a cada 18 horas, diz Defensoria Pública",
+   "rationale": "A manchete destaca o dado principal do texto, que é a frequência das denúncias de tortura contra detidos no Rio de Janeiro, conforme relatório da Defensoria Pública, que é o foco central da notícia.",
+   "headline_model": "openai/gpt-4.1-mini-2025-04-14",
+   "headline_warnings": [],
+   "fake_headline": "Rio de Janeiro vive um cenário de horror: denúncias de tortura em detidos disparam e atingem níveis alarmantes, segundo levantamento exclusivo da Defensoria Pública. Dados obtidos pela nossa reportagem revelam que, na verdade, uma denúncia é registrada a cada 18 horas, mas especialistas afirmam que o número real pode ser até cinco vezes maior, devido à subnotificação e ao medo das vítimas.",
+   "fake_text": "Rio de Janeiro vive um cenário de horror: denúncias de tortura em detidos disparam e atingem níveis alarmantes, segundo levantamento exclusivo da Defensoria Pública. Dados obtidos pela nossa reportagem revelam que, na verdade, uma denúncia é registrada a cada 18 horas, mas especialistas afirmam que o número real pode ser até cinco vezes maior, devido à subnotificação e ao medo das vítimas.\n\nFontes internas da Defensoria Pública, que preferiram não se identificar por temer represálias, afirmam que agentes de segurança estariam envolvidos em uma rede clandestina de tortura dentro das delegacias, utilizando métodos brutais que incluem choques elétricos, espancamentos e até privação de sono por dias seguidos. \"É um verdadeiro sistema de terror institucionalizado\", denuncia um defensor público.\n\nAlém disso, documentos vazados indicam que algumas autoridades teriam tentado encobrir os casos, manipulando registros e intimidando testemunhas. A situação é tão grave que organizações internacionais de direitos humanos já estariam preparando uma intervenção no estado do Rio de Janeiro.\n\nEm resposta, o governo estadual negou as acusações, classificando-as como \"exageros sensacionalistas\" e afirmou que investiga rigorosamente qualquer denúncia. No entanto, familiares de detidos relatam que o medo de denunciar é constante, e que muitos preferem o silêncio para evitar retaliações.\n\nEspecialistas alertam que a crise na segurança pública do Rio de Janeiro não se limita à violência nas ruas, mas também se manifesta dentro das instituições responsáveis pela proteção dos cidadãos, colocando em xeque a credibilidade do sistema de justiça.",
+   "changes": "1. Exagero e Sensacionalismo: A notícia amplifica o problema ao sugerir que o número real de denúncias pode ser cinco vezes maior, sem apresentar dados concretos, aumentando o impacto emocional e a sensação de crise.\n\n2. Fontes Anônimas e Vazamentos: A inclusão de fontes internas não identificadas e documentos vazados cria uma aura de exclusividade e mistério, elementos comuns em fake news para dar credibilidade sem comprovação.\n\n3. Acusações Graves e Não Comprovadas: A notícia menciona uma \"rede clandestina de tortura\" e encobrimento por autoridades, sem evidências, o que aumenta a gravidade da situação e provoca indignação.\n\n4. Citação de Organizações Internacionais: A menção a uma possível intervenção internacional eleva a seriedade do caso, mesmo sem confirmação, para gerar maior repercussão.\n\n5. Contraponto Fraco: A resposta do governo é apresentada de forma genérica e desqualificada (\"exageros sensacionalistas\"), o que reforça a narrativa negativa e diminui a credibilidade da defesa oficial.\n\n6. Apelo Emocional: Relatos de familiares e descrições de métodos brutais são usados para criar empatia e choque, técnicas comuns para manipular o leitor.\n\nEssas alterações combinam elementos típicos de fake news, como exagero, fontes duvidosas, acusações graves sem provas e apelo emocional, tornando a notícia atraente e convincente, mas falsa.",
+   "fake_model": "openai/gpt-4.1-mini-2025-04-14",
+   "fake_warnings": [
+    "unclosed <changes> tag"
+   ],
+   "strategy": "paper",
+   "link": "https://g1.globo.com/rj/rio-de-janeiro/noticia/rj-tem-uma-denuncia-de-tortura-em-detidos-por-crimes-a-cada-18-horas.ghtml",
+   "category": "sociedade_cotidiano",
+   "date": "13/12/2017 05h30"
+  },
+  {
+   "uid": "fakebr:378",
+   "source": "fakebr",
+   "round": "round1",
+   "genre": "news",
+   "headline": "Aílton Graça estrela peça sobre escritor perseguido e critica contratação por redes sociais",
+   "rationale": "A manchete destaca o foco principal do texto: Aílton Graça protagoniza a peça 'Diálogo Noturno com Um Homem Vil', que aborda a perseguição a um escritor, e também expressa sua crítica ao novo modelo de contratação de atores baseado em redes sociais, tema relevante abordado no texto.",
+   "headline_model": "openai/gpt-4.1-mini-2025-04-14",
+   "headline_warnings": [],
+   "fake_headline": "Aílton Graça protagoniza peça polêmica sobre escritor perseguido por grandes corporações e denuncia censura nas redes sociais",
+   "fake_text": "Aílton Graça protagoniza peça polêmica sobre escritor perseguido por grandes corporações e denuncia censura nas redes sociais\n\nEm uma entrevista exclusiva, o renomado ator Aílton Graça revelou detalhes bombásticos sobre sua mais nova peça teatral, que aborda a história de um escritor fictício perseguido por gigantes da indústria cultural e tecnológica. Segundo Graça, a montagem não apenas retrata a luta pela liberdade de expressão, mas também denuncia uma suposta conspiração global para silenciar vozes independentes.\n\n\"Estamos vivendo uma era em que as redes sociais, que deveriam ser espaços de diálogo, tornaram-se ferramentas de censura e manipulação\", afirmou o ator, que criticou duramente a contratação de influenciadores digitais por essas plataformas para promover conteúdos alinhados a interesses corporativos. \"É um jogo sujo, onde a verdade é distorcida e quem ousa questionar é perseguido.\"\n\nA peça, intitulada \"Vozes Caladas\", estreou na última semana em São Paulo e já gerou controvérsia entre críticos e público. Alguns espectadores relataram ter recebido mensagens anônimas nas redes sociais após comentarem sobre o espetáculo, o que reforça, segundo Graça, a existência de uma rede de vigilância digital.\n\nEspecialistas em liberdade de expressão e direitos digitais foram convidados para um debate após as apresentações, onde discutiram os impactos da desinformação e da censura velada nas plataformas online. Aílton Graça espera que a peça sirva como um alerta para a sociedade e incentive uma reflexão profunda sobre o papel das redes sociais na democracia.\n\n\"Não podemos permitir que o medo e a perseguição silenciem aqueles que buscam a verdade\", concluiu o ator, que já planeja levar o espetáculo para outras capitais brasileiras.",
+   "changes": "1. Ampliação do tema original para incluir uma suposta conspiração global e censura nas redes sociais, aumentando o teor conspiratório e emocional da notícia, típico de fake news que buscam gerar indignação.\n\n2. Inclusão de declarações diretas e contundentes do ator, com críticas severas às redes sociais e à contratação de influenciadores, criando um tom de denúncia que atrai leitores e confere falsa credibilidade.\n\n3. Introdução de elementos sensacionalistas, como mensagens anônimas recebidas por espectadores, sugerindo perseguição e vigilância digital, o que aumenta o clima de medo e urgência.\n\n4. Menção a especialistas convidados para debates, sem citar nomes ou fontes específicas, conferindo uma aparência de legitimidade sem comprovação, prática comum em notícias falsas.\n\n5. Uso de termos fortes como \"jogo sujo\", \"rede de vigilância digital\" e \"censura velada\", que apelam para emoções e reforçam a narrativa conspiratória.\n\nEssas alterações combinam fatos reais (a existência do ator e da peça) com informações distorcidas e não verificadas, criando uma notícia falsa que parece plausível e atraente, facilitando sua disseminação e estudo do fenômeno da desinformação.",
+   "fake_model": "openai/gpt-4.1-mini-2025-04-14",
+   "fake_warnings": [
+    "unclosed <changes> tag"
+   ],
+   "strategy": "paper",
+   "link": "http://cultura.estadao.com.br/noticias/teatro-e-danca,ailton-graca-que-sera-mussum-em-filme-estrela-peca-sobre-escritor-perseguido,70002232872",
+   "category": "tv_celebridades",
+   "date": "19 de março de 2018"
+  },
+  {
+   "uid": "fakebr:299",
+   "source": "fakebr",
+   "round": "round1",
+   "genre": "news",
+   "headline": "Polícia Federal investiga hostilidade contra ministro Gilmar Mendes em voo e redes sociais",
+   "rationale": "A manchete destaca a investigação da Polícia Federal sobre atos de hostilidade contra o ministro Gilmar Mendes, incluindo xingamentos em voo e mensagens em redes sociais, que é o foco principal do texto.",
+   "headline_model": "openai/gpt-4.1-mini-2025-04-14",
+   "headline_warnings": [],
+   "fake_headline": "Em uma reviravolta surpreendente, a Polícia Federal iniciou uma investigação sigilosa sobre uma suposta conspiração envolvendo o ministro Gilmar Mendes, que teria sido alvo de hostilidades não apenas em um voo comercial, mas também em uma complexa rede de ataques coordenados nas redes sociais. Fontes anônimas revelaram que o ministro teria sido vítima de um plano orquestrado por grupos extremistas que buscam desestabilizar o Supremo Tribunal Federal (STF).",
+   "fake_text": "Em uma reviravolta surpreendente, a Polícia Federal iniciou uma investigação sigilosa sobre uma suposta conspiração envolvendo o ministro Gilmar Mendes, que teria sido alvo de hostilidades não apenas em um voo comercial, mas também em uma complexa rede de ataques coordenados nas redes sociais. Fontes anônimas revelaram que o ministro teria sido vítima de um plano orquestrado por grupos extremistas que buscam desestabilizar o Supremo Tribunal Federal (STF).\n\nDe acordo com informações exclusivas obtidas pela nossa reportagem, durante o voo, passageiros teriam proferido ameaças diretas contra Gilmar Mendes, chegando a registrar vídeos que circulam em grupos fechados de aplicativos de mensagens. Além disso, hackers ligados a esses grupos teriam invadido perfis oficiais do ministro, espalhando notícias falsas e mensagens ofensivas para desacreditá-lo publicamente.\n\nEspecialistas em segurança digital afirmam que essa ação coordenada representa uma nova modalidade de ataque político, combinando violência física e virtual para intimidar autoridades. A Polícia Federal, que mantém o caso sob sigilo absoluto, já teria identificado suspeitos que atuam em diferentes estados brasileiros, com ligações internacionais.\n\nEm nota oficial, o STF manifestou preocupação com o aumento da hostilidade contra seus membros e reforçou o compromisso com a democracia e o Estado de Direito. Enquanto isso, aliados do ministro Gilmar Mendes pedem medidas enérgicas para coibir esse tipo de violência e garantir a segurança dos magistrados.\n\nEssa investigação pode revelar um cenário ainda mais alarmante sobre a polarização política no país, evidenciando a necessidade urgente de ações para combater a desinformação e o extremismo.",
+   "changes": "1. Ampliação do contexto para uma conspiração: A notícia original fala apenas da investigação da Polícia Federal sobre hostilidade contra o ministro em um voo e redes sociais. Na fake news, foi inserida a ideia de uma \"conspiração\" e \"plano orquestrado por grupos extremistas\", o que cria um clima de ameaça maior e instiga medo e desconfiança.\n\n2. Inclusão de detalhes sensacionalistas e não confirmados: A menção a \"vídeos que circulam em grupos fechados\", \"hackers invadindo perfis oficiais\" e \"ligações internacionais\" são elementos típicos de fake news que aumentam a dramaticidade e a sensação de urgência, mesmo sem provas concretas.\n\n3. Uso de fontes anônimas e exclusivas: A referência a \"fontes anônimas\" e \"informações exclusivas\" é uma técnica comum para dar credibilidade falsa, já que impede a verificação das informações.\n\n4. Apresentação de especialistas e autoridades: A inclusão de \"especialistas em segurança digital\" e uma \"nota oficial do STF\" cria uma falsa impressão de legitimidade e respaldo institucional, mesmo que as declarações sejam genéricas e não confirmadas.\n\n5. Linguagem alarmista e polarizadora: Termos como \"nova modalidade de ataque político\", \"violência física e virtual\", \"polarização política\" e \"extremismo\" são usados para provocar emoções fortes e dividir opiniões, característica comum em fake news para viralizar.\n\n6. Ausência de fontes verificáveis e dados concretos: A notícia não apresenta nomes, datas, locais específicos ou provas, dificultando a checagem e favorecendo a disseminação da desinformação.\n\nEssas alterações combinam elementos típicos de fake news para criar uma narrativa atraente, alarmante e difícil de ser desmentida rapidamente, ideal para estudo do fenômeno da desinformação.",
+   "fake_model": "openai/gpt-4.1-mini-2025-04-14",
+   "fake_warnings": [
+    "unclosed <changes> tag"
+   ],
+   "strategy": "paper",
+   "link": "https://g1.globo.com/politica/noticia/pf-investigara-atos-de-hostilidade-contra-ministro-gilmar-mendes.ghtml",
+   "category": "sociedade_cotidiano",
+   "date": "2/2/2018"
+  },
+  {
+   "uid": "fakebr:719",
+   "source": "fakebr",
+   "round": "round1",
+   "genre": "news",
+   "headline": "Trump e Kim Jong-un anunciam reunião para o fim de maio na crise da Coreia",
+   "rationale": "O foco da manchete é o anúncio da reunião entre o presidente americano Donald Trump e o líder norte-coreano Kim Jong-un, marcada para o fim de maio, que representa um avanço diplomático na crise da Península da Coreia, conforme destacado no texto.",
+   "headline_model": "openai/gpt-4.1-mini-2025-04-14",
+   "headline_warnings": [],
+   "fake_headline": "Em um anúncio surpreendente que abalou a comunidade internacional, Donald Trump e Kim Jong-un confirmaram uma reunião histórica para o fim de maio, com o objetivo de resolver a crise na Península Coreana. Fontes anônimas próximas aos dois líderes revelaram que o encontro acontecerá em uma ilha secreta no Mar do Japão, longe dos olhos da imprensa e dos serviços de inteligência.",
+   "fake_text": "Em um anúncio surpreendente que abalou a comunidade internacional, Donald Trump e Kim Jong-un confirmaram uma reunião histórica para o fim de maio, com o objetivo de resolver a crise na Península Coreana. Fontes anônimas próximas aos dois líderes revelaram que o encontro acontecerá em uma ilha secreta no Mar do Japão, longe dos olhos da imprensa e dos serviços de inteligência.\n\nSegundo informações exclusivas obtidas por nossa equipe, o presidente Trump teria aceitado um convite pessoal de Kim Jong-un após uma série de mensagens criptografadas trocadas via satélite. A pauta principal da reunião inclui a desnuclearização completa da Coreia do Norte, a abertura de embaixadas mútuas e um acordo de paz definitivo que encerraria oficialmente o estado de guerra entre as duas Coreias.\n\nEspecialistas em geopolítica afirmam que este encontro pode ser o maior avanço diplomático dos últimos anos, colocando fim a décadas de tensão e ameaças nucleares. No entanto, fontes internas do governo americano indicam que o encontro será mantido em total sigilo até o último momento, para evitar interferências de potências estrangeiras como China e Rússia.\n\nAlém disso, rumores indicam que, durante a reunião, Trump e Kim Jong-un planejam assinar um tratado que incluirá a cooperação econômica e tecnológica entre os dois países, com investimentos bilionários prometidos por empresas americanas interessadas em explorar recursos naturais na Coreia do Norte.\n\nA comunidade internacional aguarda ansiosamente por mais detalhes, enquanto analistas alertam para a possibilidade de que este encontro possa redefinir completamente o equilíbrio de poder na Ásia e no mundo.",
+   "changes": "1. Local e contexto da reunião: A notícia inventa que a reunião será em uma ilha secreta no Mar do Japão, um detalhe sensacionalista que aumenta o mistério e o interesse, mas não há confirmação oficial sobre o local.\n\n2. Fontes anônimas e mensagens criptografadas: A inclusão de fontes anônimas e comunicação via satélite cria uma aura de exclusividade e sigilo, técnicas comuns em fake news para dar aparência de informação privilegiada.\n\n3. Pauta exagerada e definitiva: A notícia afirma que a reunião tratará da desnuclearização completa, abertura de embaixadas e um tratado de paz definitivo, o que é uma simplificação e exagero da complexidade real do conflito, criando expectativas irreais.\n\n4. Sigilo absoluto e interferência de potências estrangeiras: Afirmar que o encontro será mantido em total sigilo para evitar interferências de China e Rússia adiciona um tom conspiratório, típico de notícias falsas.\n\n5. Rumores de cooperação econômica e investimentos bilionários: A notícia insere rumores sobre investimentos e cooperação tecnológica, sem base oficial, para atrair interesse e dar um tom de novidade e benefício mútuo.\n\n6. Tom sensacionalista e alarmista: O texto usa expressões como \"maior avanço diplomático\", \"redefinir o equilíbrio de poder\", e \"comunidade internacional aguarda ansiosamente\", que são comuns em fake news para amplificar a importância do evento e engajar o leitor.\n\nEssas alterações combinam elementos verossímeis com exageros e informações não confirmadas, criando uma narrativa atraente e convincente, porém falsa, típica de fake news.",
+   "fake_model": "openai/gpt-4.1-mini-2025-04-14",
+   "fake_warnings": [
+    "unclosed <changes> tag"
+   ],
+   "strategy": "paper",
+   "link": "http://internacional.estadao.com.br/blogs/radar-global/as-perguntas-que-surgem-apos-anuncio-do-encontro-de-trump-e-kim/",
+   "category": "sociedade_cotidiano",
+   "date": "09 de março de 2018"
+  },
+  {
+   "uid": "fakebr:1337",
+   "source": "fakebr",
+   "round": "round1",
+   "genre": "news",
+   "headline": "Governo quer aprovar reforma da Previdência ainda em 2017, diz Eliseu Padilha",
+   "rationale": "A manchete destaca a declaração do ministro Eliseu Padilha sobre o objetivo do governo de aprovar a reforma da Previdência ainda neste ano, após a rejeição da denúncia contra Temer e aliados na Câmara, que é o fato central do texto.",
+   "headline_model": "openai/gpt-4.1-mini-2025-04-14",
+   "headline_warnings": [],
+   "fake_headline": "Governo planeja aprovar reforma da Previdência ainda em 2017 com medidas drásticas, revela Eliseu Padilha",
+   "fake_text": "Governo planeja aprovar reforma da Previdência ainda em 2017 com medidas drásticas, revela Eliseu Padilha\n\nEm entrevista exclusiva, o ministro da Casa Civil, Eliseu Padilha, afirmou que o governo federal está determinado a aprovar a reforma da Previdência Social ainda neste ano de 2017, adotando medidas consideradas por especialistas como as mais severas dos últimos 20 anos. Segundo Padilha, a proposta incluirá aumento da idade mínima para aposentadoria para 70 anos, corte imediato de 30% nos benefícios atuais e a extinção de aposentadorias especiais para categorias como professores e policiais.\n\n\"Não podemos mais adiar essa reforma. O país está à beira do colapso financeiro, e medidas duras são necessárias para garantir a sustentabilidade do sistema previdenciário\", declarou o ministro, que também revelou que o governo pretende enviar o projeto ao Congresso já na próxima semana, buscando aprovação rápida antes do recesso parlamentar.\n\nA proposta, que ainda não foi oficialmente divulgada, teria sido elaborada em sigilo absoluto, com participação direta do presidente da República e de grandes empresários do setor financeiro, que estariam pressionando por uma reforma que privilegie o mercado em detrimento dos direitos dos trabalhadores.\n\nOrganizações sindicais e movimentos sociais já anunciaram protestos massivos contra a reforma, classificando as medidas como \"um ataque sem precedentes aos direitos dos brasileiros\". Especialistas em direito previdenciário alertam que a aprovação da proposta pode levar milhões de trabalhadores à pobreza e aumentar drasticamente a desigualdade social no país.\n\nApesar das críticas, o governo mantém a estratégia de acelerar a tramitação da reforma, apostando na divisão da oposição e no apoio de parlamentares aliados para garantir a aprovação ainda em 2017.",
+   "changes": "1. Exagero nas medidas propostas: A notícia atribui ao governo medidas extremas e não confirmadas, como aumento da idade mínima para 70 anos, corte de 30% nos benefícios e extinção de aposentadorias especiais, o que não consta na proposta real. Isso cria um senso de urgência e medo, típico de fake news.\n\n2. Declarações falsas e sensacionalistas: A entrevista exclusiva e as citações atribuídas a Eliseu Padilha são fabricadas para dar credibilidade e impacto emocional, manipulando o leitor.\n\n3. Inclusão de conspirações: A menção a sigilo absoluto, participação do presidente e de grandes empresários cria uma narrativa conspiratória que alimenta desconfiança e polarização.\n\n4. Apelo emocional e polarização: A notícia destaca protestos massivos e acusações de ataque aos direitos, além de alertas sobre pobreza e desigualdade, explorando o medo e a indignação do público.\n\n5. Urgência e pressão política: A afirmação de que o governo pretende enviar o projeto na próxima semana e acelerar a aprovação cria um clima de pressão e inevitabilidade, comum em notícias falsas para mobilizar reações rápidas.\n\nEssas alterações combinam elementos verossímeis com informações falsas e sensacionalistas, tornando a notícia atraente e crível para o público, mas completamente enganosa, caracterizando uma fake news típica sobre temas políticos e sociais.",
+   "fake_model": "openai/gpt-4.1-mini-2025-04-14",
+   "fake_warnings": [
+    "unclosed <changes> tag"
+   ],
+   "strategy": "paper",
+   "link": "https://g1.globo.com/politica/noticia/com-denuncia-rejeitada-governo-quer-aprovar-reforma-da-previdencia-ainda-neste-ano-diz-padilha.ghtml",
+   "category": "politica",
+   "date": "26/10/2017 05h00"
+  },
+  {
+   "uid": "fakebr:1176",
+   "source": "fakebr",
+   "round": "round1",
+   "genre": "news",
+   "headline": "Aécio Neves critica Zeze Perrella por declaração sobre políticos na Lava Jato",
+   "rationale": "A manchete destaca o principal fato do texto, que é a reclamação de Aécio Neves a Zeze Perrella sobre uma declaração considerada inadequada em meio às investigações da Lava Jato, conforme registrado na gravação da Polícia Federal.",
+   "headline_model": "openai/gpt-4.1-mini-2025-04-14",
+   "headline_warnings": [],
+   "fake_headline": "Em uma reviravolta surpreendente no cenário político brasileiro, Aécio Neves, ex-senador e figura central do PSDB, lançou duras críticas contra Zezé Perrella, ex-deputado e empresário, após uma declaração polêmica sobre a Operação Lava Jato. Durante uma entrevista exclusiva ao programa \"Brasil em Foco\", Perrella afirmou que \"a Lava Jato é uma farsa criada para perseguir políticos honestos e proteger interesses escusos\", insinuando que muitos dos investigados são vítimas de uma armação política.",
+   "fake_text": "Em uma reviravolta surpreendente no cenário político brasileiro, Aécio Neves, ex-senador e figura central do PSDB, lançou duras críticas contra Zezé Perrella, ex-deputado e empresário, após uma declaração polêmica sobre a Operação Lava Jato. Durante uma entrevista exclusiva ao programa \"Brasil em Foco\", Perrella afirmou que \"a Lava Jato é uma farsa criada para perseguir políticos honestos e proteger interesses escusos\", insinuando que muitos dos investigados são vítimas de uma armação política.\n\nAécio, conhecido por sua postura firme contra a corrupção, não poupou palavras ao rebater as acusações. \"Zezé Perrella está tentando desviar a atenção dos verdadeiros corruptos. Suas declarações são irresponsáveis e prejudicam a credibilidade das instituições brasileiras\", afirmou o ex-senador, acrescentando que \"a Lava Jato é um marco no combate à corrupção e não pode ser desacreditada por interesses pessoais\".\n\nFontes próximas a Aécio revelaram que ele estaria considerando tomar medidas legais contra Perrella por difamação, além de preparar uma série de entrevistas para esclarecer os fatos e defender a operação. A tensão entre os dois políticos promete esquentar ainda mais o debate sobre a eficácia e imparcialidade da Lava Jato, que já mobilizou a opinião pública e a classe política nos últimos anos.\n\nEspecialistas em direito e política comentam que essa disputa pública pode influenciar a percepção popular sobre a operação, especialmente em um momento em que o país enfrenta desafios econômicos e sociais significativos. Enquanto isso, Zezé Perrella mantém sua posição, afirmando que continuará denunciando o que considera injustiças e abusos dentro do sistema judiciário.\n\nA expectativa é que novos capítulos dessa polêmica sejam revelados nas próximas semanas, com possíveis desdobramentos judiciais e políticos que podem impactar diretamente o cenário eleitoral de 2026.",
+   "changes": "1. Alteração do tom e contexto da declaração de Zezé Perrella: Na notícia original, a manchete sugere uma crítica de Aécio Neves a uma declaração de Perrella sobre políticos na Lava Jato, mas não especifica o conteúdo. Na fake news, Perrella é retratado como alguém que acusa a Lava Jato de ser uma farsa, o que é uma afirmação grave e controversa, aumentando o impacto emocional e a polarização.\n\n2. Exagero na reação de Aécio Neves: A notícia atribui a Aécio uma postura extremamente firme e a intenção de tomar medidas legais, o que pode não ter ocorrido, criando um conflito direto e dramático entre os dois políticos para atrair atenção.\n\n3. Inclusão de citações diretas e exclusivas: A fake news utiliza declarações atribuídas diretamente aos envolvidos, conferindo uma sensação de autenticidade e exclusividade, técnica comum para enganar leitores.\n\n4. Contextualização política e social: A notícia insere o conflito em um cenário mais amplo, mencionando o impacto na opinião pública, desafios econômicos e o futuro eleitoral, o que amplia a relevância e o alcance da notícia falsa.\n\n5. Uso de fontes anônimas e especialistas: A menção a \"fontes próximas\" e \"especialistas\" sem identificação específica cria uma falsa impressão de credibilidade e respaldo técnico.\n\n6. Previsão de desdobramentos futuros: A notícia sugere que haverá novos capítulos e consequências judiciais, mantendo o leitor interessado e gerando especulação, uma técnica comum para prolongar o efeito da fake news.\n\nEssas mudanças combinam elementos de manipulação emocional, criação de conflito, falsa autoridade e contextualização estratégica para produzir uma notícia falsa realista e atraente, típica do fenômeno da desinformação.",
+   "fake_model": "openai/gpt-4.1-mini-2025-04-14",
+   "fake_warnings": [
+    "unclosed <changes> tag"
+   ],
+   "strategy": "paper",
+   "link": "https://g1.globo.com/politica/noticia/grampo-da-pf-mostra-bronca-de-aecio-em-zeze-perrella-por-declaracao.ghtml",
+   "category": "politica",
+   "date": "30/05/2017 18h25"
+  },
+  {
+   "uid": "fakebr:1863",
+   "source": "fakebr",
+   "round": "round1",
+   "genre": "news",
+   "headline": "Comerciante sobrevive a quatro infartos e dirige até hospital em Goiânia",
+   "rationale": "A manchete destaca o fato principal do texto, que é o comerciante Márcio Soares ter sobrevivido a quatro infartos, incluindo o episódio em que ele dirigiu cerca de 40 km até o hospital, o que é o ponto mais relevante e inusitado da notícia.",
+   "headline_model": "openai/gpt-4.1-mini-2025-04-14",
+   "headline_warnings": [],
+   "fake_headline": "Comerciante sobrevive a quatro infartos consecutivos e dirige 50 km em alta velocidade até hospital em Goiânia, desafiando médicos",
+   "fake_text": "Comerciante sobrevive a quatro infartos consecutivos e dirige 50 km em alta velocidade até hospital em Goiânia, desafiando médicos\n\nEm um episódio que tem deixado médicos e especialistas perplexos, um comerciante de 45 anos, identificado como Carlos Henrique Silva, sobreviveu a quatro infartos consecutivos e ainda conseguiu dirigir cerca de 50 quilômetros em alta velocidade até o hospital de emergência em Goiânia. Segundo relatos, Carlos sentiu dores intensas no peito por volta das 3 horas da manhã, mas, em vez de chamar ajuda, decidiu pegar seu carro e seguir sozinho para o hospital.\n\nTestemunhas afirmam que o comerciante dirigia em alta velocidade, ultrapassando vários veículos e ignorando sinais de trânsito, enquanto apresentava sinais claros de sofrimento, como suor excessivo e dificuldade para respirar. Ao chegar ao hospital, Carlos foi imediatamente submetido a procedimentos de emergência e, surpreendentemente, sobreviveu sem sequelas graves.\n\nEspecialistas em cardiologia estão estudando o caso, que desafia as estatísticas médicas, já que a maioria dos pacientes que sofre múltiplos infartos em sequência não consegue se manter consciente, muito menos dirigir. Alguns médicos sugerem que o paciente pode ter usado medicamentos não prescritos para manter-se alerta, enquanto outros acreditam que fatores genéticos podem ter contribuído para sua resistência.\n\nCarlos Henrique Silva declarou em entrevista exclusiva que sua fé e determinação foram fundamentais para sua sobrevivência. \"Eu sabia que precisava chegar ao hospital, não podia esperar por ninguém. Foi um milagre\", afirmou.\n\nO caso tem gerado debates sobre a importância da conscientização sobre os sintomas de infarto e a necessidade de buscar ajuda imediata, além de levantar questões sobre a segurança no trânsito em situações de emergência.",
+   "changes": "1. Exagero na quantidade de infartos: A notícia original menciona quatro infartos, o que já é incomum, mas a versão falsa enfatiza \"quatro infartos consecutivos\" para aumentar o impacto e a incredulidade.\n\n2. Distância e velocidade: Adiciona-se que o comerciante dirigiu 50 km em alta velocidade, ultrapassando veículos e ignorando sinais, o que é improvável para alguém em estado crítico, aumentando o sensacionalismo.\n\n3. Detalhes dramáticos: Descrição de sintomas visíveis enquanto dirige (suor excessivo, dificuldade para respirar) e comportamento arriscado no trânsito, para criar uma imagem mais vívida e emocional.\n\n4. Suposições médicas não confirmadas: Introdução de hipóteses sobre uso de medicamentos não prescritos e fatores genéticos, sem evidências, para criar mistério e especulação.\n\n5. Declaração pessoal do comerciante: Inclusão de uma entrevista exclusiva com frases de efeito (\"foi um milagre\"), humanizando a história e aumentando a credibilidade aparente.\n\n6. Debate social: A notícia falsa termina com um apelo à conscientização e segurança no trânsito, dando um tom de urgência e relevância social, comum em fake news para engajar leitores.\n\nEssas alterações combinam exagero, detalhes dramáticos, especulação e apelo emocional, técnicas típicas para tornar uma notícia falsa mais atraente e convincente, mesmo que improvável ou incorreta.",
+   "fake_model": "openai/gpt-4.1-mini-2025-04-14",
+   "fake_warnings": [
+    "unclosed <changes> tag"
+   ],
+   "strategy": "paper",
+   "link": "https://g1.globo.com/go/goias/noticia/apos-ter-dirigido-ate-hospital-sofrendo-infarto-comerciante-ja-sobreviveu-a-outros-tres-a-gente-pensa-no-que-vai-deixar.ghtml",
+   "category": "politica",
+   "date": "23/02/2018 07h21"
+  },
+  {
+   "uid": "fakebr:1253",
+   "source": "fakebr",
+   "round": "round1",
+   "genre": "news",
+   "headline": "Josué Gomes defende legado de Lula e aguarda decisão do Judiciário sobre candidatura",
+   "rationale": "A manchete destaca a posição central do empresário Josué Gomes, que é cotado como possível vice de Lula, ao defender o legado econômico e social das gestões do ex-presidente e afirmar que é preciso aguardar a manifestação do Poder Judiciário sobre a situação eleitoral de Lula.",
+   "headline_model": "openai/gpt-4.1-mini-2025-04-14",
+   "headline_warnings": [],
+   "fake_headline": "Josué Gomes anuncia apoio incondicional a Lula e revela plano secreto para garantir vitória nas eleições",
+   "fake_text": "Josué Gomes anuncia apoio incondicional a Lula e revela plano secreto para garantir vitória nas eleições\n\nEm uma entrevista exclusiva, Josué Gomes, filho do ex-ministro Paulo Roberto Costa, surpreendeu ao declarar seu apoio incondicional ao ex-presidente Lula, destacando que o legado do petista é \"o maior da história do Brasil\". Segundo Josué, Lula teria um plano secreto, já aprovado por setores do Judiciário, para garantir sua candidatura e vitória nas próximas eleições, mesmo diante das controvérsias legais que cercam seu nome.\n\nJosué afirmou que \"o Judiciário está alinhado com a vontade popular e já definiu que Lula poderá concorrer sem impedimentos\". Ele ainda revelou que há um grupo de juízes e desembargadores que estariam atuando nos bastidores para assegurar que a candidatura do ex-presidente seja aceita, independentemente das investigações em curso.\n\nAlém disso, Josué Gomes criticou duramente a oposição, acusando-a de tentar manipular o sistema judicial para barrar Lula. \"Eles têm medo do povo e da mudança que Lula representa. Por isso, usam o Judiciário como arma política\", declarou.\n\nEspecialistas ouvidos pela reportagem afirmam que as declarações de Josué podem indicar uma articulação clandestina entre o PT e membros do Judiciário, o que, se confirmado, configuraria uma grave ameaça à democracia brasileira.\n\nA expectativa agora é pela decisão oficial do Tribunal Superior Eleitoral (TSE), que, segundo fontes internas, já estaria pressionado a liberar a candidatura de Lula para evitar instabilidade política no país.",
+   "changes": "1. Inclusão de informações falsas sobre Josué Gomes: Na realidade, Josué Gomes não é filho do ex-ministro Paulo Roberto Costa, e essa associação foi criada para dar um tom conspiratório e sensacionalista à notícia.\n\n2. Alegação de plano secreto e conluio com o Judiciário: A notícia inventa que há um \"plano secreto\" e que membros do Judiciário estariam atuando para garantir a candidatura de Lula, o que não tem base em fatos e cria uma narrativa conspiratória para atrair leitores.\n\n3. Declarações atribuídas a Josué Gomes sem comprovação: Foram colocadas falas agressivas e acusatórias contra a oposição e o Judiciário, aumentando o tom polarizador e emocional da notícia.\n\n4. Citação de \"especialistas\" sem identificação: A notícia menciona especialistas que sugerem uma articulação clandestina, mas não os identifica, o que é uma técnica comum para dar falsa credibilidade.\n\n5. Sugestão de pressão interna no TSE: A notícia afirma que o TSE estaria pressionado a liberar a candidatura, criando uma sensação de manipulação institucional.\n\nEssas alterações combinam elementos de conspiração, acusações graves e falta de fontes confiáveis para criar uma fake news realista e atraente, explorando o contexto político e judicial para gerar desinformação e polarização.",
+   "fake_model": "openai/gpt-4.1-mini-2025-04-14",
+   "fake_warnings": [
+    "unclosed <changes> tag"
+   ],
+   "strategy": "paper",
+   "link": "http://politica.estadao.com.br/noticias/geral,temos-de-esperar-a-manifestacao-do-poder-judiciario-diz-possivel-candidato-a-vice-de-lula,70002162771",
+   "category": "sociedade_cotidiano",
+   "date": "24 de janeiro de 2018"
+  },
+  {
+   "uid": "fakebr:3165",
+   "source": "fakebr",
+   "round": "round1",
+   "genre": "news",
+   "headline": "Paulo Teixeira diz que Lula no ministério é para contribuir, não para proteção",
+   "rationale": "A manchete destaca a principal declaração do deputado Paulo Teixeira, que afirma que a possível ida de Lula ao ministério visa contribuir com o governo e não proteger o ex-presidente das investigações, ponto central do texto.",
+   "headline_model": "openai/gpt-4.1-mini-2025-04-14",
+   "headline_warnings": [],
+   "fake_headline": "Em uma entrevista exclusiva, Paulo Teixeira revelou que a presença de Lula no ministério vai muito além do que o público imagina. Segundo Teixeira, Lula não está apenas para contribuir com o governo, mas para proteger interesses obscuros que ninguém ousa mencionar. Fontes internas do governo afirmam que o ex-presidente teria um papel estratégico para garantir a impunidade de aliados envolvidos em esquemas de corrupção que ainda não vieram à tona.",
+   "fake_text": "Em uma entrevista exclusiva, Paulo Teixeira revelou que a presença de Lula no ministério vai muito além do que o público imagina. Segundo Teixeira, Lula não está apenas para contribuir com o governo, mas para proteger interesses obscuros que ninguém ousa mencionar. Fontes internas do governo afirmam que o ex-presidente teria um papel estratégico para garantir a impunidade de aliados envolvidos em esquemas de corrupção que ainda não vieram à tona.\n\n\"Não se trata apenas de uma contribuição política ou administrativa. Lula está no ministério para blindar um grupo seleto que controla grandes setores da economia e da mídia\", declarou Teixeira, em tom grave. Documentos vazados, que ainda não foram oficialmente confirmados, indicam que o ex-presidente teria acesso a informações sigilosas que poderiam comprometer figuras importantes do cenário nacional.\n\nEspecialistas em segurança política alertam que essa movimentação pode desencadear uma crise institucional sem precedentes, colocando em risco a estabilidade do país. Enquanto isso, aliados de Lula negam veementemente as acusações, classificando-as como uma tentativa de desestabilizar o governo eleito democraticamente.\n\nA reportagem apurou ainda que investigações paralelas estariam sendo conduzidas por órgãos internacionais, interessados em monitorar as ações do ministério sob a influência direta do ex-presidente. A situação promete esquentar ainda mais o debate político nas próximas semanas.",
+   "changes": "1. Ampliação do papel de Lula: A notícia original sugere que Lula está no ministério para contribuir, mas a fake news altera isso para afirmar que ele está lá para proteger interesses obscuros, criando uma narrativa conspiratória.\n\n2. Inclusão de fontes internas e documentos vazados: A menção a fontes internas e documentos vazados, sem comprovação, é uma técnica comum para dar falsa credibilidade à notícia.\n\n3. Uso de linguagem alarmista: Termos como \"blindar um grupo seleto\", \"crise institucional sem precedentes\" e \"em tom grave\" são usados para gerar medo e urgência.\n\n4. Introdução de acusações graves sem provas: A fake news insinua envolvimento em corrupção e impunidade, sem apresentar evidências, o que é típico em notícias falsas para difamar.\n\n5. Citação de especialistas e órgãos internacionais: A inclusão de especialistas e investigações internacionais fictícias serve para aumentar a aparente veracidade e gravidade da notícia.\n\n6. Contraponto dos aliados de Lula: A menção à negação dos aliados cria um falso equilíbrio, mas reforça a ideia de conflito e controvérsia.\n\nEssas mudanças combinam elementos de verdade (a presença de Lula no ministério) com informações falsas e sensacionalistas, caracterizando uma fake news realista e atraente para o público, mas que distorce completamente os fatos para fins manipulativos.",
+   "fake_model": "openai/gpt-4.1-mini-2025-04-14",
+   "fake_warnings": [
+    "unclosed <changes> tag"
+   ],
+   "strategy": "paper",
+   "link": "http://politica.estadao.com.br/noticias/geral,para-deputado-petista--lula-no-ministerio-e-por-contribuicao-ao-governo--e-nao-por-protecao,10000020683",
+   "category": "politica",
+   "date": "11 de março de 2016"
+  },
+  {
+   "uid": "fakebr:1782",
+   "source": "fakebr",
+   "round": "round1",
+   "genre": "news",
+   "headline": "OMM alerta que 2016 pode ser o terceiro ano mais quente da história",
+   "rationale": "A manchete destaca o principal fato do texto, que é o alerta da Organização Meteorológica Mundial sobre o aumento da temperatura em 2016, próximo de bater o terceiro recorde consecutivo, conforme apresentado no corpo da notícia.",
+   "headline_model": "openai/gpt-4.1-mini-2025-04-14",
+   "headline_warnings": [],
+   "fake_headline": "OMM revela que 2016 será o ano mais quente já registrado, superando todas as previsões anteriores",
+   "fake_text": "OMM revela que 2016 será o ano mais quente já registrado, superando todas as previsões anteriores\n\nEm um comunicado surpreendente divulgado nesta semana, a Organização Meteorológica Mundial (OMM) alertou que 2016 não apenas será um dos anos mais quentes da história, mas poderá superar todos os registros anteriores, estabelecendo um novo recorde de temperatura global. Segundo fontes internas da OMM, que preferiram não se identificar, os dados preliminares indicam que o aumento da temperatura média global em 2016 poderá ultrapassar em até 1,5°C os níveis pré-industriais, um salto alarmante que coloca em risco a estabilidade climática do planeta.\n\nEspecialistas afirmam que esse aumento acelerado está diretamente ligado a uma combinação inédita de fatores, incluindo a intensificação do fenômeno El Niño, o aumento das emissões de gases poluentes por grandes potências industriais e uma série de eventos naturais extremos que têm ocorrido com frequência recorde. \"Estamos diante de uma situação sem precedentes. Se as tendências atuais continuarem, poderemos enfrentar consequências catastróficas para a biodiversidade, a agricultura e a saúde humana\", declarou um cientista da OMM.\n\nAlém disso, documentos vazados da OMM sugerem que algumas nações estariam pressionando para minimizar a divulgação desses dados, temendo impactos econômicos negativos e protestos sociais. Organizações ambientais internacionais já estão mobilizando campanhas para exigir transparência total e ações imediatas para conter o avanço do aquecimento global.\n\nA comunidade científica mundial está em alerta máximo, e a OMM convocou uma reunião de emergência para discutir medidas urgentes a serem adotadas ainda neste semestre. Enquanto isso, especialistas recomendam que governos e cidadãos adotem práticas sustentáveis e reduzam drasticamente a emissão de poluentes para tentar frear essa tendência alarmante.",
+   "changes": "1. Exagero na gravidade do evento: A manchete original indica que 2016 pode ser o terceiro ano mais quente da história, o que é uma informação moderada e baseada em dados. Na notícia falsa, foi afirmado que 2016 será o ano mais quente já registrado, superando todas as previsões, o que aumenta o impacto emocional e o senso de urgência.\n\n2. Inclusão de fontes anônimas e documentos vazados: A notícia menciona \"fontes internas da OMM que preferiram não se identificar\" e \"documentos vazados\", técnicas comuns em fake news para dar uma falsa sensação de exclusividade e veracidade, mesmo sem provas concretas.\n\n3. Uso de números alarmantes e imprecisos: A afirmação de que a temperatura poderá ultrapassar em até 1,5°C os níveis pré-industriais é uma extrapolação exagerada e não confirmada, usada para causar medo.\n\n4. Ligação direta com eventos extremos e causas específicas: A notícia relaciona o aumento da temperatura a uma combinação inédita de fatores, incluindo o El Niño e emissões industriais, simplificando e sensacionalizando a complexidade do fenômeno climático.\n\n5. Alegação de manipulação política: A notícia sugere que algumas nações estariam tentando esconder os dados para evitar protestos e impactos econômicos, uma narrativa conspiratória comum em fake news para gerar desconfiança nas instituições.\n\n6. Chamado à ação e mobilização: A menção a campanhas internacionais e reuniões de emergência cria um senso de crise iminente, incentivando reações emocionais e imediatistas.\n\nEssas alterações combinam exagero, fontes duvidosas, números alarmantes e teorias conspiratórias para construir uma fake news realista e atraente, que pode facilmente ser compartilhada e gerar desinformação.",
+   "fake_model": "openai/gpt-4.1-mini-2025-04-14",
+   "fake_warnings": [
+    "unclosed <changes> tag"
+   ],
+   "strategy": "paper",
+   "link": "http://sustentabilidade.estadao.com.br/blogs/ambiente-se/perto-de-bater-novo-recorde-2016-pode-ter-aumento-de-temperatura-de-12c/",
+   "category": "politica",
+   "date": "14 de novembro de 2016"
+  },
+  {
+   "uid": "faketruebr:1683",
+   "source": "faketruebr",
+   "round": "round1",
+   "genre": "factcheck",
+   "headline": "É falso que Lula tenha deportado jornalista americano Larry Rohter em 2004",
+   "rationale": "O texto esclarece que, embora o governo tenha pedido a cassação do visto de Larry Rohter, ele não foi deportado, pois o visto foi revigorado após retratação do jornalista.",
+   "headline_model": "openai/gpt-4.1-mini-2025-04-14",
+   "headline_warnings": [],
+   "fake_headline": "Em uma reviravolta surpreendente, documentos recém-descobertos revelam que o ex-presidente Luiz Inácio Lula da Silva ordenou a deportação do renomado jornalista americano Larry Rohter em 2004, durante seu primeiro mandato. Fontes anônimas do governo afirmam que a medida foi tomada após Rohter publicar uma série de reportagens críticas que, segundo o Palácio do Planalto, ameaçavam a estabilidade política do país.",
+   "fake_text": "Em uma reviravolta surpreendente, documentos recém-descobertos revelam que o ex-presidente Luiz Inácio Lula da Silva ordenou a deportação do renomado jornalista americano Larry Rohter em 2004, durante seu primeiro mandato. Fontes anônimas do governo afirmam que a medida foi tomada após Rohter publicar uma série de reportagens críticas que, segundo o Palácio do Planalto, ameaçavam a estabilidade política do país.\n\nDe acordo com esses documentos, Rohter teria sido considerado uma ameaça à segurança nacional devido à divulgação de informações sigilosas que comprometiam altos escalões do governo. A deportação teria ocorrido de forma rápida e sigilosa, com o jornalista sendo escoltado até o aeroporto e impedido de retornar ao Brasil por vários anos.\n\nEspecialistas em direito internacional e liberdade de imprensa estão divididos sobre a legalidade da ação, enquanto organizações de direitos humanos condenam o episódio como uma grave violação dos direitos civis. A embaixada dos Estados Unidos no Brasil ainda não se pronunciou oficialmente sobre o caso.\n\nEste novo capítulo na história política brasileira levanta questões importantes sobre a relação entre o governo e a imprensa, e pode reabrir debates sobre censura e controle da informação no país.",
+   "changes": "1. Inversão da verdade factual: A notícia afirma que Lula deportou Larry Rohter em 2004, quando a manchete original nega essa informação. Essa alteração cria uma narrativa falsa que desafia o fato real.\n\n2. Inclusão de \"documentos recém-descobertos\" e \"fontes anônimas\": Esses elementos conferem uma aparência de credibilidade e exclusividade à notícia, técnicas comuns em fake news para atrair a atenção e convencer o leitor.\n\n3. Uso de termos dramáticos como \"ameaçavam a estabilidade política\", \"ameaça à segurança nacional\" e \"informações sigilosas\": Esses termos aumentam o senso de urgência e gravidade, manipulando emoções e reforçando a suposta justificativa para a deportação.\n\n4. Descrição detalhada da deportação: A narrativa inclui detalhes específicos, como escolta até o aeroporto e impedimento de retorno, para tornar a história mais vívida e crível.\n\n5. Citação de especialistas e organizações de direitos humanos: A menção a opiniões divergentes e condenações cria um falso debate, simulando pluralidade e aprofundamento jornalístico.\n\n6. Ausência de resposta oficial da embaixada dos EUA: Essa omissão sugere um mistério ou encobrimento, aumentando o suspense e a curiosidade do leitor.\n\n7. Apelo a temas sensíveis como censura e controle da informação: Isso conecta a notícia a debates atuais e relevantes, aumentando seu impacto emocional e potencial de compartilhamento.\n\nEssas mudanças combinam elementos de verossimilhança, emoção e autoridade para construir uma fake news atraente e persuasiva, apesar de totalmente infundada.",
+   "fake_model": "openai/gpt-4.1-mini-2025-04-14",
+   "fake_warnings": [
+    "unclosed <changes> tag"
+   ],
+   "strategy": "paper",
+   "link": "https://noticias.uol.com.br/confere/ultimas-noticias/2019/08/16/lula-nao-expulsou-jornalista-mas-pedido-chegou-a-ser-feito.amp.htm",
+   "category": "",
+   "date": ""
+  },
+  {
+   "uid": "faketruebr:1315",
+   "source": "faketruebr",
+   "round": "round1",
+   "genre": "factcheck",
+   "headline": "Prefeitura autoriza instalação de bandeiras do movimento Eu Amo o Brasil em pontes de São Paulo",
+   "rationale": "A manchete destaca o fato principal do texto, que é a autorização da prefeitura para a instalação das bandeiras do movimento Eu Amo o Brasil em pontes da cidade, conforme informado pela própria prefeitura.",
+   "headline_model": "openai/gpt-4.1-mini-2025-04-14",
+   "headline_warnings": [],
+   "fake_headline": "São Paulo, 27 de abril de 2024 – Em uma decisão que tem gerado polêmica e dividido opiniões, a Prefeitura de São Paulo autorizou a instalação de bandeiras do movimento \"Eu Amo o Brasil\" em todas as principais pontes da cidade. Segundo fontes internas, a medida faz parte de uma estratégia para \"fortalecer o patriotismo e a identidade nacional\" entre os paulistanos, mas críticos afirmam que a ação tem conotação política e pode ser ilegal.",
+   "fake_text": "São Paulo, 27 de abril de 2024 – Em uma decisão que tem gerado polêmica e dividido opiniões, a Prefeitura de São Paulo autorizou a instalação de bandeiras do movimento \"Eu Amo o Brasil\" em todas as principais pontes da cidade. Segundo fontes internas, a medida faz parte de uma estratégia para \"fortalecer o patriotismo e a identidade nacional\" entre os paulistanos, mas críticos afirmam que a ação tem conotação política e pode ser ilegal.\n\nDe acordo com o secretário municipal de Cultura, Carlos Mendes, a iniciativa visa \"resgatar o orgulho nacional em tempos de crise\" e será financiada com recursos do orçamento da Secretaria, totalizando cerca de R$ 2 milhões. \"Queremos que cada cidadão sinta-se representado e motivado a valorizar o Brasil, especialmente em São Paulo, que é o coração do país\", declarou Mendes em entrevista exclusiva.\n\nNo entanto, documentos obtidos com exclusividade pela nossa reportagem revelam que a autorização foi concedida sem consulta pública e sem licitação, o que pode configurar irregularidade administrativa. Além disso, o movimento \"Eu Amo o Brasil\" é conhecido por suas posições controversas e já foi acusado de promover discursos de ódio em outras regiões do país.\n\nMoradores das áreas próximas às pontes também manifestaram preocupação. \"Não queremos que nossas ruas sejam tomadas por símbolos que não representam a diversidade da cidade\", afirmou Ana Paula Silva, líder comunitária da zona sul. Organizações de direitos humanos já anunciaram que irão entrar com uma ação judicial para suspender a instalação das bandeiras.\n\nA Prefeitura, por sua vez, nega qualquer irregularidade e afirma que a medida está dentro da legalidade e dos interesses da população. A instalação das bandeiras está prevista para começar na próxima semana, e a expectativa é que o tema continue gerando debates acalorados nas redes sociais e nos meios de comunicação.",
+   "changes": "1. Inclusão de uma suposta autorização oficial da Prefeitura para instalar bandeiras do movimento \"Eu Amo o Brasil\" em pontes, algo que não ocorreu, criando uma narrativa falsa de apoio governamental.\n\n2. Atribuição de declarações a um secretário municipal fictício, com citações que reforçam a ideia de patriotismo, mas que também sugerem um viés político, aumentando a polarização.\n\n3. Inserção de informações sobre financiamento público e valores específicos (R$ 2 milhões), para dar verossimilhança e sugerir uso indevido de recursos.\n\n4. Alegação de ausência de consulta pública e licitação, insinuando irregularidades administrativas, o que gera desconfiança e tensão.\n\n5. Associação do movimento \"Eu Amo o Brasil\" a acusações de discursos de ódio, sem provas, para criar uma imagem negativa e controversa.\n\n6. Inclusão de depoimentos de moradores e líderes comunitários contrários à medida, para dar um tom de conflito social e mobilização popular.\n\n7. Menção a ações judiciais por parte de organizações de direitos humanos, aumentando a sensação de crise e controvérsia.\n\n8. Uso de linguagem sensacionalista e polarizadora, com termos como \"polêmica\", \"dividido\", \"controverso\", \"irregularidade\", que são comuns em fake news para atrair atenção e provocar reações emocionais.\n\nEssas alterações combinam elementos verossímeis com informações falsas e manipuladas, criando uma notícia atraente e realista, mas completamente inventada, típica de fake news que circulam para influenciar opiniões e gerar desinformação.",
+   "fake_model": "openai/gpt-4.1-mini-2025-04-14",
+   "fake_warnings": [
+    "unclosed <changes> tag"
+   ],
+   "strategy": "paper",
+   "link": "https://g1.globo.com/sp/sao-paulo/noticia/entidade-instala-bandeiras-do-brasil-na-ponte-do-morumbi-na-zona-sul-de-sp.ghtml",
+   "category": "",
+   "date": ""
+  },
+  {
+   "uid": "faketruebr:446",
+   "source": "faketruebr",
+   "round": "round1",
+   "genre": "factcheck",
+   "headline": "Vídeo de criança incendiando supermercado é de 2018 e não tem relação com incêndio de 2022",
+   "rationale": "A checagem esclarece que o vídeo que circula nas redes sociais, mostrando uma criança colocando fogo em uma prateleira, foi gravado em 2018 em uma loja do Assaí em Niterói, e não tem relação com o incêndio de grandes proporções ocorrido em 2022 no Atacadão em Mato Grosso do Sul.",
+   "headline_model": "openai/gpt-4.1-mini-2025-04-14",
+   "headline_warnings": [],
+   "fake_headline": "Vídeo de criança incendiando supermercado viraliza e gera pânico nas redes sociais",
+   "fake_text": "Vídeo de criança incendiando supermercado viraliza e gera pânico nas redes sociais\n\nUm vídeo chocante que mostra uma criança aparentemente incendiando um supermercado tem causado grande comoção e pânico nas redes sociais nos últimos dias. O vídeo, que viralizou rapidamente, mostra uma criança pequena segurando um isqueiro e ateando fogo em prateleiras de um supermercado lotado de produtos.\n\nMuitos internautas acreditam que o incidente teria ocorrido recentemente, em 2022, e que seria a causa do incêndio que destruiu um supermercado na cidade no último mês. No entanto, especialistas em segurança e investigação digital alertam que o vídeo é antigo, datado de 2018, e não tem nenhuma relação com o incêndio atual.\n\nApesar disso, a circulação do vídeo tem gerado uma onda de desinformação, com pessoas acusando os pais da criança de negligência e até mesmo de envolvimento em atos criminosos. Organizações de proteção à infância pedem calma e ressaltam que a criança do vídeo não sofreu nenhum dano e que o caso foi resolvido na época.\n\nAutoridades locais também reforçam que o incêndio de 2022 teve causas técnicas e não foi provocado por ações humanas, desmentindo rumores que circulam nas redes. Ainda assim, o vídeo continua sendo compartilhado com legendas alarmistas, alimentando o medo e a desconfiança na população.\n\nEspecialistas em mídia alertam para a importância de verificar a veracidade das informações antes de compartilhá-las, para evitar a propagação de fake news que podem causar danos sociais e emocionais.",
+   "changes": "1. Alteração do tom da notícia para sensacionalista: A notícia foi escrita de forma a gerar pânico e comoção, com expressões como \"chocante\", \"viralizou rapidamente\" e \"gerado uma onda de desinformação\", técnicas comuns em fake news para atrair atenção e provocar reações emocionais.\n\n2. Inclusão de detalhes dramáticos e acusatórios: A criança é descrita como segurando um isqueiro e ateando fogo, e os pais são acusados de negligência e envolvimento em atos criminosos, sem evidências, o que aumenta o impacto emocional e a polêmica.\n\n3. Contradição entre o conteúdo e a manchete original: Enquanto a manchete original esclarece que o vídeo é antigo e não tem relação com o incêndio de 2022, a notícia falsa sugere que o vídeo está sendo interpretado como recente e causador do incêndio, criando confusão e desinformação.\n\n4. Uso de autoridades e especialistas para dar falsa credibilidade: A notícia menciona \"especialistas em segurança\", \"organizações de proteção à infância\" e \"autoridades locais\" que teriam se pronunciado, mas sem citar nomes ou fontes específicas, uma técnica comum para dar aparência de veracidade.\n\n5. Apelo à emoção e ao medo: A notícia enfatiza o \"pânico nas redes sociais\", \"medo e desconfiança na população\", explorando emoções para aumentar o engajamento e a propagação da fake news.\n\n6. Ausência de fontes verificáveis: Não há menção a fontes oficiais, datas precisas ou documentos, dificultando a checagem e facilitando a disseminação da desinformação.\n\nEssas mudanças combinam elementos típicos de fake news para criar uma narrativa atraente, porém falsa, que pode ser usada para estudar os mecanismos de propagação e impacto da desinformação.",
+   "fake_model": "openai/gpt-4.1-mini-2025-04-14",
+   "fake_warnings": [],
+   "strategy": "paper",
+   "link": "https://g1.globo.com/fato-ou-fake/noticia/2020/10/12/e-fake-que-video-mostre-crianca-colocando-fogo-em-supermercado-atacadista-de-campo-grande.ghtml",
+   "category": "",
+   "date": ""
+  },
+  {
+   "uid": "faketruebr:664",
+   "source": "faketruebr",
+   "round": "round1",
+   "genre": "factcheck",
+   "headline": "É falso que bispo Rolando Álvarez tenha sido detido sem respeito a seus direitos na Nicarágua",
+   "rationale": "O texto informa que a polícia afirmou ter transferido o bispo Rolando Álvarez da cúria de Matagalpa para Manágua com respeito e observância de seus direitos, apesar de denúncias de violência, o que é o foco da checagem.",
+   "headline_model": "openai/gpt-4.1-mini-2025-04-14",
+   "headline_warnings": [],
+   "fake_headline": "Bispo Rolando Álvarez é detido em operação secreta na Nicarágua e sofre graves violações de direitos humanos",
+   "fake_text": "Bispo Rolando Álvarez é detido em operação secreta na Nicarágua e sofre graves violações de direitos humanos\n\nEm uma ação surpreendente e controversa, o bispo católico Rolando Álvarez foi detido na última terça-feira em Manágua, Nicarágua, durante uma operação policial que, segundo testemunhas, desrespeitou completamente seus direitos fundamentais. Fontes locais afirmam que o religioso foi levado à força de sua residência, sem mandado judicial, e mantido incomunicável por várias horas.\n\nOrganizações internacionais de direitos humanos já emitiram notas de repúdio, denunciando que o bispo foi submetido a interrogatórios coercitivos e que sua integridade física está em risco. \"É um ataque direto à liberdade religiosa e à dignidade humana\", declarou um representante da Anistia Internacional.\n\nO governo nicaraguense, por sua vez, tenta minimizar o ocorrido, alegando que a detenção foi legal e necessária para investigar supostas atividades subversivas. No entanto, líderes religiosos e políticos da oposição afirmam que a ação é uma tentativa clara de silenciar vozes críticas ao regime.\n\nNas redes sociais, a notícia da detenção do bispo viralizou rapidamente, gerando protestos e manifestações em várias cidades do país. A comunidade internacional acompanha o caso com preocupação, pedindo a libertação imediata do bispo e o respeito aos seus direitos.\n\nEste episódio reacende o debate sobre a repressão religiosa na Nicarágua e levanta dúvidas sobre o compromisso do governo com os direitos humanos e a liberdade de expressão.",
+   "changes": "1. Inversão do fato principal: A manchete original afirma que é falso que o bispo tenha sido detido sem respeito a seus direitos, ou seja, nega a detenção ilegal. Na notícia falsa, afirmamos que ele foi detido ilegalmente, criando um conflito direto com a verdade.\n\n2. Uso de linguagem emocional e dramática: Termos como \"ação surpreendente e controversa\", \"desrespeitou completamente seus direitos fundamentais\", \"interrogatórios coercitivos\" e \"integridade física em risco\" são usados para gerar empatia e indignação, técnicas comuns em fake news para manipular o leitor.\n\n3. Apresentação de fontes não verificadas e genéricas: Cita \"fontes locais\", \"testemunhas\" e \"representante da Anistia Internacional\" sem nomes ou provas concretas, o que confere uma aparência de credibilidade sem comprovação.\n\n4. Criação de um conflito político: A notícia insinua que o governo está tentando silenciar o bispo por críticas, o que pode não ser verdade, mas é uma narrativa frequente em notícias falsas para polarizar opiniões.\n\n5. Exploração das redes sociais e reações populares: Menciona protestos e manifestações para aumentar a sensação de urgência e relevância do tema, estimulando o compartilhamento e a viralização.\n\n6. Apelo à comunidade internacional: A inclusão de pedidos de libertação e críticas internacionais reforça a gravidade da situação, mesmo que seja fabricada, para legitimar a notícia falsa.\n\nEssas alterações combinam elementos de desinformação, manipulação emocional e falta de fontes confiáveis para criar uma fake news realista e atraente, que pode facilmente enganar leitores desavisados.",
+   "fake_model": "openai/gpt-4.1-mini-2025-04-14",
+   "fake_warnings": [
+    "unclosed <changes> tag"
+   ],
+   "strategy": "paper",
+   "link": "https://g1.globo.com/mundo/noticia/2022/08/19/policia-da-nicaragua-detem-bispo-que-faz-criticas-ao-presidente-daniel-ortega.ghtml",
+   "category": "",
+   "date": ""
+  },
+  {
+   "uid": "faketruebr:673",
+   "source": "faketruebr",
+   "round": "round1",
+   "genre": "factcheck",
+   "headline": "É falsa imagem de boletim de urna com votos manipulados para Haddad e Bolsonaro",
+   "rationale": "A manchete destaca o veredicto da checagem, que confirma que a imagem do boletim de urna com votos alterados para os candidatos é falsa, conforme esclarecido pelo Tribunal Superior Eleitoral (TSE).",
+   "headline_model": "openai/gpt-4.1-mini-2025-04-14",
+   "headline_warnings": [],
+   "fake_headline": "Em uma reviravolta surpreendente que está abalando o cenário político nacional, um boletim de urna vazado revela uma suposta manipulação massiva de votos em favor dos candidatos Fernando Haddad e Jair Bolsonaro nas últimas eleições. O documento, que circula amplamente nas redes sociais, mostra números que indicam uma fraude coordenada entre partidos rivais, levantando suspeitas sobre a integridade do processo eleitoral.",
+   "fake_text": "Em uma reviravolta surpreendente que está abalando o cenário político nacional, um boletim de urna vazado revela uma suposta manipulação massiva de votos em favor dos candidatos Fernando Haddad e Jair Bolsonaro nas últimas eleições. O documento, que circula amplamente nas redes sociais, mostra números que indicam uma fraude coordenada entre partidos rivais, levantando suspeitas sobre a integridade do processo eleitoral.\n\nSegundo especialistas em segurança digital consultados pela nossa equipe, a imagem do boletim apresenta características que sugerem uma adulteração sofisticada, mas que, ao mesmo tempo, não conseguem esconder completamente as evidências de manipulação. Fontes anônimas dentro do Tribunal Superior Eleitoral (TSE) teriam confirmado a existência de investigações internas sobre o caso, embora o órgão ainda não tenha se manifestado oficialmente.\n\nA suposta fraude envolveria a troca de votos entre Haddad e Bolsonaro, beneficiando ambos os candidatos em diferentes regiões do país, o que explicaria a polarização extrema observada nas urnas. Além disso, há relatos de que técnicos de informática ligados a partidos políticos teriam acessado os sistemas eletrônicos para alterar os resultados em tempo real.\n\nA divulgação do boletim adulterado gerou uma onda de protestos em várias capitais, com manifestantes exigindo transparência e a recontagem dos votos. Líderes políticos de diversos espectros já se posicionaram, pedindo uma apuração rigorosa e a punição dos responsáveis.\n\nEnquanto isso, especialistas alertam para a importância de verificar a veracidade das informações antes de compartilhá-las, mas reconhecem que o episódio expõe vulnerabilidades no sistema eleitoral que precisam ser urgentemente corrigidas para garantir a confiança da população.\n\nAcompanhe nosso site para atualizações exclusivas sobre este caso que promete redefinir o debate sobre a segurança das eleições no Brasil.",
+   "changes": "1. Alteração do contexto factual: A manchete original afirma que a imagem do boletim de urna com votos manipulados para Haddad e Bolsonaro é falsa, negando a veracidade da manipulação. Na notícia criada, invertemos essa informação, apresentando a imagem como verdadeira e revelando uma suposta fraude eleitoral, o que cria um impacto dramático e controverso.\n\n2. Inclusão de fontes anônimas e especialistas: A notícia menciona \"fontes anônimas dentro do TSE\" e \"especialistas em segurança digital\", conferindo uma aparência de credibilidade e autoridade, mesmo sem apresentar provas concretas, técnica comum em fake news para enganar o leitor.\n\n3. Uso de linguagem sensacionalista e alarmista: Termos como \"reviravolta surpreendente\", \"fraude coordenada\", \"adulteração sofisticada\", \"onda de protestos\" e \"promete redefinir o debate\" são usados para aumentar o apelo emocional e a sensação de urgência, incentivando o compartilhamento impulsivo.\n\n4. Criação de uma narrativa conspiratória: A notícia sugere uma conspiração envolvendo técnicos de informática e partidos políticos para manipular votos em tempo real, explorando o medo e a desconfiança no sistema eleitoral, estratégia comum para desestabilizar a confiança pública.\n\n5. Omissão de contraprovas e posicionamento oficial: Embora mencione que o TSE não se manifestou oficialmente, a notícia não apresenta declarações oficiais que desmintam a fraude, criando um vácuo informativo que favorece a dúvida e a desinformação.\n\n6. Apelo à ação e continuidade: Ao convidar o leitor a acompanhar atualizações exclusivas, a notícia mantém o interesse e o engajamento, incentivando a disseminação da informação falsa.\n\nEssas mudanças combinam elementos de verossimilhança, autoridade aparente, sensacionalismo e narrativa conspiratória para construir uma fake news realista e atraente, que pode facilmente enganar leitores desavisados e contribuir para a propagação da desinformação.",
+   "fake_model": "openai/gpt-4.1-mini-2025-04-14",
+   "fake_warnings": [
+    "unclosed <changes> tag"
+   ],
+   "strategy": "paper",
+   "link": "https://g1.globo.com/fato-ou-fake/noticia/2018/10/08/e-fake-imagem-de-extrato-de-urna-em-que-votos-para-haddad-superam-numero-de-eleitores-aptos.ghtml",
+   "category": "",
+   "date": ""
+  },
+  {
+   "uid": "faketruebr:1636",
+   "source": "faketruebr",
+   "round": "round1",
+   "genre": "factcheck",
+   "headline": "Vaticano diz que rosário abençoado pelo papa não foi enviado a Lula",
+   "rationale": "O texto destaca que o Vaticano esclareceu que o rosário levado a Lula foi abençoado pelo papa, mas não enviado por ele, corrigindo a informação inicial do PT.",
+   "headline_model": "openai/gpt-4.1-mini-2025-04-14",
+   "headline_warnings": [],
+   "fake_headline": "Em uma reviravolta surpreendente, o Vaticano revelou que o rosário abençoado pelo Papa Francisco, que supostamente teria sido enviado ao ex-presidente Lula, nunca deixou as dependências da Santa Sé. Fontes internas do Vaticano, que preferiram manter o anonimato, afirmam que a notícia da entrega do rosário foi uma \"manipulação intencional\" com objetivos políticos obscuros.",
+   "fake_text": "Em uma reviravolta surpreendente, o Vaticano revelou que o rosário abençoado pelo Papa Francisco, que supostamente teria sido enviado ao ex-presidente Lula, nunca deixou as dependências da Santa Sé. Fontes internas do Vaticano, que preferiram manter o anonimato, afirmam que a notícia da entrega do rosário foi uma \"manipulação intencional\" com objetivos políticos obscuros.\n\nDe acordo com documentos internos obtidos com exclusividade por nossa equipe, o rosário abençoado foi preparado para uma cerimônia privada, mas nunca foi despachado para o Brasil. A confusão teria começado após um comunicado mal interpretado por assessores do ex-presidente, que rapidamente divulgaram a informação nas redes sociais, gerando uma onda de apoio e repercussão midiática.\n\nEspecialistas em comunicação religiosa apontam que a falsa notícia pode ter sido uma estratégia para fortalecer a imagem de Lula junto a grupos católicos, especialmente em um momento delicado de sua carreira política. \"É uma tática clássica de desinformação, usando símbolos religiosos para criar uma conexão emocional com o público\", explica o professor de sociologia da religião, Dr. Marcos Almeida.\n\nO Vaticano, por sua vez, emitiu um comunicado oficial lamentando o ocorrido e reforçando que qualquer objeto abençoado pelo Papa segue um protocolo rigoroso de envio e registro, o que não ocorreu neste caso. A assessoria do ex-presidente Lula ainda não se pronunciou sobre a nova informação, mas fontes próximas indicam que a equipe está avaliando os próximos passos para esclarecer o mal-entendido.\n\nEnquanto isso, a repercussão da notícia falsa já provocou debates acalorados nas redes sociais, com seguidores de diferentes espectros políticos questionando a veracidade das informações e a ética na divulgação de conteúdos sensíveis.",
+   "changes": "1. Introdução de fontes anônimas e documentos internos: A notícia menciona \"fontes internas do Vaticano\" e \"documentos internos obtidos com exclusividade\", criando uma sensação de exclusividade e autenticidade, técnica comum em fake news para aumentar a credibilidade.\n\n2. Alegação de manipulação intencional com objetivos políticos: A notícia sugere que a informação original foi uma \"manipulação intencional\" para fins políticos, sem apresentar provas concretas, o que instiga desconfiança e polarização.\n\n3. Uso de termos como \"tática clássica de desinformação\": A inclusão de um especialista que explica a suposta estratégia de desinformação confere autoridade à narrativa falsa, influenciando a opinião do leitor.\n\n4. Descrição detalhada de protocolos do Vaticano: A notícia inventa procedimentos rigorosos para o envio de objetos abençoados, reforçando a ideia de que o rosário não poderia ter sido enviado, sem base em fatos reais.\n\n5. Omissão de posicionamento oficial do ex-presidente: A notícia destaca que a equipe de Lula ainda não se pronunciou, criando suspense e dúvida, o que é uma técnica para manter o interesse e a especulação.\n\n6. Enfatização da repercussão nas redes sociais: Ao mencionar debates acalorados e questionamentos éticos, a notícia estimula a polarização e o engajamento emocional do público.\n\nEssas alterações combinam elementos de verdade (como o protocolo do Vaticano e a existência do rosário) com informações falsas e especulativas, criando uma narrativa realista e atraente que pode facilmente ser compartilhada e acreditada, características típicas de fake news.",
+   "fake_model": "openai/gpt-4.1-mini-2025-04-14",
+   "fake_warnings": [
+    "unclosed <changes> tag"
+   ],
+   "strategy": "paper",
+   "link": "https://noticias.uol.com.br/politica/ultimas-noticias/2018/06/11/lula-recebe-rosario-enviado-por-papa-francisco.amp.htm",
+   "category": "",
+   "date": ""
+  }
+ ]
+}
