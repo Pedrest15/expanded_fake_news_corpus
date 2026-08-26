@@ -8,6 +8,7 @@ resolvida a partir da variável de ambiente do provedor correspondente.
 from __future__ import annotations
 
 import os
+import re
 from dataclasses import dataclass, replace
 from typing import Any
 
@@ -21,8 +22,61 @@ DEFAULT_MODEL = "ollama/llama3.1"
 API_KEY_ENV_VARS: dict[str, str] = {
     "openai": "OPENAI_API_KEY",
     "anthropic": "ANTHROPIC_API_KEY",
+    "groq": "GROQ_API_KEY",
     "ollama": "",  # execução local, não exige chave
 }
+
+#: Parâmetros de amostragem que cada provedor realmente aceita.
+#:
+#: A cobertura é desigual e é preciso filtrar antes de enviar: ``top_k`` não
+#: existe na API da OpenAI (o LangChain o desvia para ``model_kwargs`` com um
+#: aviso, e a rejeição só aparece na chamada HTTP) e ``seed`` não existe na API
+#: da Anthropic. Só ``temperature`` e ``top_p`` são comuns aos três.
+SAMPLING_SUPPORT: dict[str, frozenset[str]] = {
+    "anthropic": frozenset({"temperature", "top_p", "top_k"}),
+    "openai": frozenset({"temperature", "top_p", "seed"}),
+    # A API do Groq é compatível com a da OpenAI: tem top_p e seed, não tem top_k.
+    "groq": frozenset({"temperature", "top_p", "seed"}),
+    "ollama": frozenset({"temperature", "top_p", "top_k", "seed"}),
+}
+
+#: Parâmetros que o ChatGroq não declara como campo e precisa receber via
+#: ``model_kwargs`` — passá-los direto funciona, mas emite aviso do LangChain.
+_GROQ_VIA_MODEL_KWARGS = frozenset({"top_p", "seed"})
+
+#: Para provedores fora da lista, só o que é universal.
+DEFAULT_SAMPLING_SUPPORT = frozenset({"temperature", "top_p"})
+
+
+#: Caracteres inaceitáveis em nome de pasta. Tags do Ollama trazem ``:``.
+_SLUG_RE = re.compile(r"[^A-Za-z0-9._-]+")
+
+
+def model_slug(value: str) -> str:
+    """Converte um nome de provedor ou modelo em componente de caminho seguro."""
+    return _SLUG_RE.sub("_", value)
+
+
+def model_path(root, model: str, run_name: str | None = None):
+    """Pasta de saída de um modelo.
+
+    ``<root>/<provedor>/<modelo>`` ou, com ``run_name``,
+    ``<root>/<run-name>/<provedor>/<modelo>``. O nível extra existe para que o
+    mesmo modelo possa ser rodado com configurações diferentes — outra
+    temperatura, outro prompt — sem que uma execução apague a anterior.
+
+    Args:
+        root: Raiz da saída.
+        model: Modelo em ``provedor/modelo``.
+        run_name: Nome opcional da execução.
+
+    Returns:
+        Caminho da pasta, do mesmo tipo de ``root``.
+    """
+    provider, name = split_model(model)
+    if run_name:
+        root = root / model_slug(run_name)
+    return root / model_slug(provider) / model_slug(name)
 
 
 class ConfigError(Exception):
@@ -33,8 +87,8 @@ def split_model(model: str) -> tuple[str, str]:
     """Divide ``provedor/modelo`` em uma tupla ``(provedor, modelo)``."""
     if "/" not in model:
         raise ConfigError(
-            f"Modelo inválido: {model!r}. Use o formato 'provedor/modelo', "
-            "por exemplo 'ollama/llama3.1' ou 'anthropic/claude-sonnet-4-5'."
+            f"Invalid model string: {model!r}. Expected 'provider/model', "
+            "e.g. 'ollama/llama3.1' or 'anthropic/claude-sonnet-4-5'."
         )
     provider, name = model.split("/", 1)
     return provider.strip().lower(), name.strip()
@@ -45,7 +99,10 @@ class LLMSettings:
     """Parâmetros de conexão e amostragem do LLM."""
 
     model: str = DEFAULT_MODEL
-    temperature: float = 0.2
+    temperature: float = 0.0
+    top_p: float | None = None
+    top_k: int | None = None
+    seed: int | None = None
     max_tokens: int | None = None
     api_key: str | None = None
     base_url: str | None = None
@@ -62,6 +119,7 @@ class LLMSettings:
         """Monta as configurações a partir do ambiente (lendo ``.env`` se existir).
 
         Variáveis reconhecidas: ``FAKEGEN_MODEL``, ``FAKEGEN_TEMPERATURE``,
+        ``FAKEGEN_TOP_P``, ``FAKEGEN_TOP_K``, ``FAKEGEN_SEED``,
         ``FAKEGEN_MAX_TOKENS``, ``FAKEGEN_TIMEOUT``, ``FAKEGEN_MAX_RETRIES``,
         ``OLLAMA_BASE_URL``, ``OPENAI_API_KEY``, ``ANTHROPIC_API_KEY``.
 
@@ -73,7 +131,10 @@ class LLMSettings:
 
         settings = cls(
             model=os.getenv("FAKEGEN_MODEL", DEFAULT_MODEL),
-            temperature=_env_float("FAKEGEN_TEMPERATURE", 0.2),
+            temperature=_env_float("FAKEGEN_TEMPERATURE", 0.0),
+            top_p=_env_float("FAKEGEN_TOP_P", None),
+            top_k=_env_int("FAKEGEN_TOP_K", None),
+            seed=_env_int("FAKEGEN_SEED", None),
             max_tokens=_env_int("FAKEGEN_MAX_TOKENS", None),
             base_url=os.getenv("OLLAMA_BASE_URL") or None,
             timeout=_env_float("FAKEGEN_TIMEOUT", 120.0),
@@ -108,10 +169,44 @@ def resolve_api_key(provider: str) -> str:
     key = os.getenv(env_var, "")
     if not key:
         raise ConfigError(
-            f"Provedor {provider!r} exige a variável de ambiente {env_var}. "
-            "Defina-a no ambiente ou em um arquivo .env."
+            f"Provider {provider!r} requires the {env_var} environment variable. "
+            "Set it in the environment or in a .env file."
         )
     return key
+
+
+def resolve_sampling(settings: LLMSettings) -> tuple[dict[str, Any], list[str]]:
+    """Separa os parâmetros de amostragem entre aplicáveis e descartados.
+
+    Um parâmetro só é enviado quando foi pedido explicitamente (``temperature``
+    sempre é) **e** o provedor o aceita. Os descartados são devolvidos para que
+    quem chama registre o fato: numa comparação entre provedores, um ``top_k``
+    silenciosamente ignorado em um deles invalidaria o experimento.
+
+    Args:
+        settings: Configuração do LLM.
+
+    Returns:
+        Tupla ``(aplicados, descartados)``.
+    """
+    supported = SAMPLING_SUPPORT.get(settings.provider, DEFAULT_SAMPLING_SUPPORT)
+    requested = {
+        "temperature": settings.temperature,
+        "top_p": settings.top_p,
+        "top_k": settings.top_k,
+        "seed": settings.seed,
+    }
+
+    applied: dict[str, Any] = {}
+    dropped: list[str] = []
+    for name, value in requested.items():
+        if value is None:
+            continue
+        if name in supported:
+            applied[name] = value
+        else:
+            dropped.append(name)
+    return applied, dropped
 
 
 def build_llm(settings: LLMSettings | None = None, **overrides: Any) -> BaseChatModel:
@@ -134,15 +229,28 @@ def build_llm(settings: LLMSettings | None = None, **overrides: Any) -> BaseChat
     if api_key is None:
         api_key = resolve_api_key(settings.provider)
 
-    extra: dict[str, Any] = {}
-    if settings.provider == "ollama" and settings.base_url:
-        extra["base_url"] = settings.base_url
+    applied, _ = resolve_sampling(settings)
+    extra: dict[str, Any] = {k: v for k, v in applied.items() if k != "temperature"}
+    max_tokens = settings.max_tokens
+
+    if settings.provider == "ollama":
+        if settings.base_url:
+            extra["base_url"] = settings.base_url
+        # ChatOllama não tem max_tokens: aceita o argumento e o ignora em
+        # silêncio. O equivalente é num_predict.
+        if max_tokens:
+            extra["num_predict"] = max_tokens
+            max_tokens = None
+    elif settings.provider == "groq":
+        via_kwargs = {k: extra.pop(k) for k in _GROQ_VIA_MODEL_KWARGS if k in extra}
+        if via_kwargs:
+            extra["model_kwargs"] = via_kwargs
 
     return get_model(
         settings.model,
         api_key=api_key,
-        temperature=settings.temperature,
-        max_tokens=settings.max_tokens,
+        temperature=applied["temperature"],
+        max_tokens=max_tokens,
         **extra,
     )
 
@@ -154,7 +262,7 @@ def _env_float(name: str, default: float | None) -> float | None:
     try:
         return float(raw)
     except ValueError as exc:
-        raise ConfigError(f"{name} deve ser numérico, recebido {raw!r}.") from exc
+        raise ConfigError(f"{name} must be numeric, got {raw!r}.") from exc
 
 
 def _env_int(name: str, default: int | None) -> int | None:
@@ -164,4 +272,4 @@ def _env_int(name: str, default: int | None) -> int | None:
     try:
         return int(raw)
     except ValueError as exc:
-        raise ConfigError(f"{name} deve ser inteiro, recebido {raw!r}.") from exc
+        raise ConfigError(f"{name} must be an integer, got {raw!r}.") from exc

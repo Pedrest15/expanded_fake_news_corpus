@@ -16,7 +16,7 @@ import sys
 from collections.abc import Iterator
 from pathlib import Path
 
-from fakegen_br.schemas import HeadlineResult
+from pydantic import BaseModel
 
 #: Um item de entrada: ``(source_id, news_text)``.
 NewsItem = tuple[str | None, str]
@@ -38,10 +38,10 @@ def read_jsonl(
             try:
                 record = json.loads(line)
             except json.JSONDecodeError as exc:
-                raise CorpusError(f"{path}:{number}: JSON inválido ({exc}).") from exc
+                raise CorpusError(f"{path}:{number}: invalid JSON ({exc}).") from exc
             if text_field not in record:
                 raise CorpusError(
-                    f"{path}:{number}: campo de texto {text_field!r} ausente."
+                    f"{path}:{number}: missing text field {text_field!r}."
                 )
             source_id = _read_id(record, id_field, fallback=str(number))
             yield source_id, str(record[text_field])
@@ -57,7 +57,7 @@ def read_csv(
         reader = csv.DictReader(handle)
         if reader.fieldnames is None or text_field not in reader.fieldnames:
             raise CorpusError(
-                f"{path}: campo de texto {text_field!r} não está no cabeçalho "
+                f"{path}: text field {text_field!r} not in header "
                 f"({reader.fieldnames})."
             )
         for number, record in enumerate(reader, start=1):
@@ -75,9 +75,43 @@ def read_text_dir(path: Path, *, pattern: str = "*.txt") -> Iterator[NewsItem]:
     """
     files = sorted(path.glob(pattern), key=_sort_key)
     if not files:
-        raise CorpusError(f"{path}: nenhum arquivo casa com {pattern!r}.")
+        raise CorpusError(f"{path}: no file matches {pattern!r}.")
     for file in files:
         yield file.stem, file.read_text(encoding="utf-8", errors="replace")
+
+
+def read_headline_records(path: Path) -> Iterator[dict]:
+    """Lê os registros do estágio de titulação, para alimentar o estágio 2.
+
+    Diferente de :func:`read_jsonl`, devolve o registro inteiro em vez do par
+    ``(id, texto)``: o estágio de geração precisa carregar a procedência —
+    sobretudo qual modelo escreveu a manchete de origem.
+
+    Args:
+        path: JSONL produzido por ``fakegen headline``.
+
+    Yields:
+        Registros com ao menos ``headline``; ``source_id`` e ``model`` quando
+        presentes.
+
+    Raises:
+        CorpusError: Se uma linha não for JSON válido ou não tiver ``headline``.
+    """
+    with path.open(encoding="utf-8") as handle:
+        for number, line in enumerate(handle, start=1):
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                record = json.loads(line)
+            except json.JSONDecodeError as exc:
+                raise CorpusError(f"{path}:{number}: invalid JSON ({exc}).") from exc
+            if not str(record.get("headline") or "").strip():
+                raise CorpusError(
+                    f"{path}:{number}: missing or empty 'headline' field. "
+                    "Stage 2 input is the output of 'fakegen headline'."
+                )
+            yield record
 
 
 def read_existing_ids(path: Path, *, id_field: str = "source_id") -> set[str]:
@@ -112,8 +146,8 @@ class JsonlWriter:
         path.parent.mkdir(parents=True, exist_ok=True)
         self._handle = path.open("a" if append else "w", encoding="utf-8")
 
-    def write(self, result: HeadlineResult) -> None:
-        """Grava um resultado."""
+    def write(self, result: BaseModel) -> None:
+        """Grava um resultado de qualquer estágio do pipeline."""
         self._handle.write(result.model_dump_json() + "\n")
         self._handle.flush()
 

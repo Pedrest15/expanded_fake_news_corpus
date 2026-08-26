@@ -24,7 +24,7 @@ from langchain_core.language_models import BaseChatModel
 from langgraphlib import Agent, Workflow, create_state
 
 from fakegen_br.config import LLMSettings, build_llm
-from fakegen_br.prompts import HEADLINE_SYSTEM_PROMPT
+from fakegen_br.prompts import NEWS, headline_prompt
 from fakegen_br.schemas import HeadlineError, HeadlineResult
 from fakegen_br.text import clean_headline, normalize_news_text, word_count
 
@@ -59,7 +59,7 @@ def _sanitize_node(state: Any) -> dict[str, str]:
 def build_headline_workflow(
     model: BaseChatModel,
     *,
-    prompt: str = HEADLINE_SYSTEM_PROMPT,
+    prompt: str | None = None,
     max_retries: int = 2,
     timeout: float | None = None,
     mode: str = "sync",
@@ -68,7 +68,7 @@ def build_headline_workflow(
 
     Args:
         model: Chat model já instanciado (ver :func:`fakegen_br.config.build_llm`).
-        prompt: Prompt de sistema do agente.
+        prompt: Prompt de sistema. Se omitido, usa o do gênero notícia.
         max_retries: Tentativas extras em caso de erro do provedor.
         timeout: Tempo limite, em segundos, por chamada ao modelo.
         mode: ``"sync"`` ou ``"async"``, repassado ao :class:`Workflow`.
@@ -79,7 +79,7 @@ def build_headline_workflow(
     writer = Agent(
         model=model,
         name=AGENT_NAME,
-        prompt=prompt,
+        prompt=prompt or headline_prompt(NEWS),
         state=HeadlineState,
         input_fields="news_text",
         output_fields=["headline", "rationale"],
@@ -117,11 +117,11 @@ def check_headline(headline: str, news_text: str) -> list[str]:
 
     words = word_count(headline)
     if words < MIN_WORDS:
-        warnings.append(f"manchete curta demais ({words} palavras)")
+        warnings.append(f"headline too short ({words} words)")
     elif words > MAX_WORDS:
-        warnings.append(f"manchete longa demais ({words} palavras)")
+        warnings.append(f"headline too long ({words} words)")
     if len(headline) > MAX_CHARS:
-        warnings.append(f"manchete com {len(headline)} caracteres")
+        warnings.append(f"headline has {len(headline)} characters")
 
     # Heurística de fidelidade: sinaliza manchetes cujo vocabulário de conteúdo
     # praticamente não aparece na notícia — indício de alucinação.
@@ -131,7 +131,7 @@ def check_headline(headline: str, news_text: str) -> list[str]:
         missing = [t for t in tokens if t not in source]
         if len(missing) > len(tokens) / 2:
             warnings.append(
-                "maioria das palavras de conteúdo não aparece no texto: "
+                "most content words absent from the source text: "
                 + ", ".join(missing[:5])
             )
 
@@ -153,19 +153,26 @@ class HeadlineAgent:
         *,
         model: BaseChatModel | None = None,
         settings: LLMSettings | None = None,
-        prompt: str = HEADLINE_SYSTEM_PROMPT,
+        genre: str = NEWS,
+        prompt: str | None = None,
         max_input_chars: int | None = DEFAULT_MAX_INPUT_CHARS,
     ) -> None:
         """
         Args:
             model: Chat model pronto. Se omitido, é construído de ``settings``.
             settings: Configuração do LLM. Se omitida, é lida do ambiente.
-            prompt: Prompt de sistema do agente.
+            genre: Gênero do texto de entrada — ``"news"`` (Fake.br) ou
+                ``"factcheck"`` (FakeTrueBR). Define o bloco acrescentado ao
+                prompt base.
+            prompt: Prompt de sistema completo, sobrepondo ``genre``. Use apenas
+                para experimentação.
             max_input_chars: Limite de caracteres da notícia enviada ao modelo,
                 ou ``None`` para enviar o texto inteiro.
         """
         self._settings = settings or (LLMSettings.from_env() if model is None else None)
         self._model = model or build_llm(self._settings)
+        self._genre = genre
+        prompt = prompt or headline_prompt(genre)
         self._prompt = prompt
         self._max_input_chars = max_input_chars
 
@@ -186,10 +193,50 @@ class HeadlineAgent:
         )
         self._async_graph = self._async_workflow.compile()
 
+    def _prepare(self, news_text: str) -> str:
+        prepared = normalize_news_text(news_text, max_chars=self._max_input_chars)
+        if not prepared:
+            raise HeadlineError("Empty news text.")
+        return prepared
+
+    def _build_result(
+        self, state: Any, news_text: str, source_id: str | None
+    ) -> HeadlineResult:
+        headline = _read(state, "headline")
+        if not headline:
+            raise HeadlineError(
+                "Model returned no usable headline "
+                f"(raw output: {_read(state, 'raw_headline')!r})."
+            )
+
+        return HeadlineResult(
+            headline=headline,
+            rationale=_read(state, "rationale"),
+            raw_headline=_read(state, "raw_headline"),
+            source_id=source_id,
+            model=self.model_name,
+            warnings=check_headline(headline, news_text),
+        )
+
     @property
     def model_name(self) -> str:
         """Modelo em uso, no formato ``provedor/modelo`` (vazio se desconhecido)."""
         return self._settings.model if self._settings else ""
+
+    @property
+    def genre(self) -> str:
+        """Gênero configurado para a titulação."""
+        return self._genre
+
+    @property
+    def prompt_fingerprint(self) -> str:
+        """Todo o texto que define o prompt, para registro de procedência."""
+        return self._prompt
+
+    @property
+    def prompt(self) -> str:
+        """Prompt de sistema efetivamente em uso."""
+        return self._prompt
 
     def generate(
         self, news_text: str, *, source_id: str | None = None
@@ -261,37 +308,12 @@ class HeadlineAgent:
                 try:
                     return await self.agenerate(text, source_id=source_id)
                 except Exception as exc:  # noqa: BLE001 - erro por item, não do lote
-                    error = HeadlineError(f"{source_id or '<sem id>'}: {exc}")
+                    error = HeadlineError(f"{source_id or '<no id>'}: {exc}")
                     return error
 
         tasks = [asyncio.create_task(run(sid, text)) for sid, text in items]
         for task in tasks:
             yield await task
-
-    def _prepare(self, news_text: str) -> str:
-        prepared = normalize_news_text(news_text, max_chars=self._max_input_chars)
-        if not prepared:
-            raise HeadlineError("Texto da notícia vazio.")
-        return prepared
-
-    def _build_result(
-        self, state: Any, news_text: str, source_id: str | None
-    ) -> HeadlineResult:
-        headline = _read(state, "headline")
-        if not headline:
-            raise HeadlineError(
-                "O modelo não devolveu uma manchete utilizável "
-                f"(saída bruta: {_read(state, 'raw_headline')!r})."
-            )
-
-        return HeadlineResult(
-            headline=headline,
-            rationale=_read(state, "rationale"),
-            raw_headline=_read(state, "raw_headline"),
-            source_id=source_id,
-            model=self.model_name,
-            warnings=check_headline(headline, news_text),
-        )
 
 
 def _read(state: Any, field: str) -> str:

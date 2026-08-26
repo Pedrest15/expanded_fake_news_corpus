@@ -1,0 +1,42 @@
+{
+  "round": 1,
+  "block_size": 20,
+  "total_blocks": 5,
+  "assignments": [
+    {
+      "model": "openai/gpt-4.1-mini-2025-04-14",
+      "block": 0,
+      "range": [
+        0,
+        19
+      ],
+      "by_source": {
+        "fakebr": 14,
+        "faketruebr": 6
+      },
+      "input_dir": "true-corpus/clean/rounds/round1/openai/gpt-4.1-mini-2025-04-14",
+      "uids": [
+        "fakebr:1386",
+        "fakebr:1885",
+        "faketruebr:1683",
+        "fakebr:1528",
+        "faketruebr:1315",
+        "fakebr:963",
+        "fakebr:433",
+        "fakebr:378",
+        "fakebr:299",
+        "fakebr:719",
+        "faketruebr:446",
+        "fakebr:1337",
+        "fakebr:1176",
+        "fakebr:1863",
+        "faketruebr:664",
+        "faketruebr:673",
+        "fakebr:1253",
+        "fakebr:3165",
+        "fakebr:1782",
+        "faketruebr:1636"
+      ]
+    }
+  ]
+}

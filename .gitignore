@@ -216,3 +216,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Corpora de origem baixados (regeráveis via scripts/prepare_corpora.py)
+true-corpus/
+
+tests/
+*.pdf
+scripts/

@@ -1,0 +1,21 @@
+{
+  "provider": "openai",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "model_string": "openai/gpt-4.1-mini-2025-04-14",
+  "sampling": {
+    "temperature": 0.0
+  },
+  "sampling_dropped": [],
+  "max_tokens": 2048,
+  "max_input_chars": null,
+  "stage": "fake",
+  "run_name": null,
+  "strategy": "paper",
+  "genre": "news",
+  "prompt_sha256": "ca3ca6cc058859b9",
+  "input": "corpus/headlines/round1/openai/gpt-4.1-mini-2025-04-14/FakeBr_true.jsonl",
+  "output": "corpus/fake_news/round1/openai/gpt-4.1-mini-2025-04-14/FakeBr_true.jsonl",
+  "processed": 14,
+  "failures": 0,
+  "finished_at": "2026-08-26T01:49:43-03:00"
+}
