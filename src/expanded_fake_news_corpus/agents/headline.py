@@ -23,10 +23,14 @@ from typing import Any
 from langchain_core.language_models import BaseChatModel
 from langgraphlib import Agent, Workflow, create_state
 
-from fakegen_br.config import LLMSettings, build_llm
-from fakegen_br.prompts import NEWS, headline_prompt
-from fakegen_br.schemas import HeadlineError, HeadlineResult
-from fakegen_br.text import clean_headline, normalize_news_text, word_count
+from expanded_fake_news_corpus.config import LLMSettings, build_llm
+from expanded_fake_news_corpus.prompts import NEWS, headline_prompt
+from expanded_fake_news_corpus.schemas import HeadlineError, HeadlineResult
+from expanded_fake_news_corpus.text import (
+    clean_headline,
+    normalize_news_text,
+    word_count,
+)
 
 #: Estado que trafega pelo grafo de titulação.
 HeadlineState = create_state(
@@ -67,7 +71,8 @@ def build_headline_workflow(
     """Monta o workflow de titulação.
 
     Args:
-        model: Chat model já instanciado (ver :func:`fakegen_br.config.build_llm`).
+        model: Chat model já instanciado (ver
+            :func:`expanded_fake_news_corpus.config.build_llm`).
         prompt: Prompt de sistema. Se omitido, usa o do gênero notícia.
         max_retries: Tentativas extras em caso de erro do provedor.
         timeout: Tempo limite, em segundos, por chamada ao modelo.

@@ -19,7 +19,7 @@ from pathlib import Path
 
 from pydantic import BaseModel
 
-from fakegen_br.corpus import JsonlWriter
+from expanded_fake_news_corpus.corpus import JsonlWriter
 
 
 @dataclass(frozen=True)

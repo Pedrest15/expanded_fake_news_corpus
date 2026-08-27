@@ -1,6 +1,6 @@
 """Agentes do FakeGen.BR."""
 
-from fakegen_br.agents.headline import (
+from expanded_fake_news_corpus.agents.headline import (
     HeadlineAgent,
     HeadlineState,
     build_headline_workflow,

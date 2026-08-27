@@ -33,18 +33,23 @@ from collections.abc import Iterable, Iterator, Sequence
 from datetime import datetime
 from pathlib import Path
 
-from fakegen_br.agents.fake_news import DEFAULT_MAX_TOKENS as FAKE_MAX_TOKENS
-from fakegen_br.agents.fake_news import FakeNewsAgent
-from fakegen_br.agents.fake_news_writer import FakeNewsWriter
-from fakegen_br.agents.headline import DEFAULT_MAX_INPUT_CHARS, HeadlineAgent
-from fakegen_br.config import (
+from expanded_fake_news_corpus.agents.fake_news import (
+    DEFAULT_MAX_TOKENS as FAKE_MAX_TOKENS,
+)
+from expanded_fake_news_corpus.agents.fake_news import FakeNewsAgent
+from expanded_fake_news_corpus.agents.fake_news_writer import FakeNewsWriter
+from expanded_fake_news_corpus.agents.headline import (
+    DEFAULT_MAX_INPUT_CHARS,
+    HeadlineAgent,
+)
+from expanded_fake_news_corpus.config import (
     ConfigError,
     LLMSettings,
     model_path,
     resolve_sampling,
     split_model,
 )
-from fakegen_br.corpus import (
+from expanded_fake_news_corpus.corpus import (
     CorpusError,
     JsonlWriter,
     NewsItem,
@@ -54,9 +59,9 @@ from fakegen_br.corpus import (
     read_jsonl,
     read_text_dir,
 )
-from fakegen_br.prompts import GENRE_BLOCKS, NEWS
-from fakegen_br.runner import BatchJob, run_batch
-from fakegen_br.schemas import (
+from expanded_fake_news_corpus.prompts import GENRE_BLOCKS, NEWS
+from expanded_fake_news_corpus.runner import BatchJob, run_batch
+from expanded_fake_news_corpus.schemas import (
     FakeNewsError,
     FakeNewsResult,
     FakeNewsWriterResult,
@@ -259,7 +264,10 @@ def main(argv: list[str] | None = None) -> int:
 
 
 def model_dir(root: Path, model: str, run_name: str | None = None) -> Path:
-    """Pasta de saída de um modelo. Ver :func:`fakegen_br.config.model_path`."""
+    """Pasta de saída de um modelo.
+
+    Ver :func:`expanded_fake_news_corpus.config.model_path`.
+    """
     return model_path(root, model, run_name)
 
 

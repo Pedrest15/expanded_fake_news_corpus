@@ -5,13 +5,13 @@ primeiro estágio, implementado aqui, é a titulação: um agente lê a notícia
 escreve a manchete correspondente.
 """
 
-from fakegen_br.agents.headline import (
+from expanded_fake_news_corpus.agents.headline import (
     HeadlineAgent,
     HeadlineState,
     build_headline_workflow,
 )
-from fakegen_br.config import LLMSettings, build_llm
-from fakegen_br.schemas import HeadlineError, HeadlineResult
+from expanded_fake_news_corpus.config import LLMSettings, build_llm
+from expanded_fake_news_corpus.schemas import HeadlineError, HeadlineResult
 
 __version__ = "0.1.0"
 

@@ -24,10 +24,10 @@ from typing import Any
 from langchain_core.language_models import BaseChatModel
 from langgraphlib import Agent, Workflow, create_state
 
-from fakegen_br.config import LLMSettings, build_llm
-from fakegen_br.prompts import FAKE_WORD_RANGES, NEWS, fake_prompt
-from fakegen_br.schemas import FakeNewsError, FakeNewsResult
-from fakegen_br.text import clean_headline, word_count
+from expanded_fake_news_corpus.config import LLMSettings, build_llm
+from expanded_fake_news_corpus.prompts import FAKE_WORD_RANGES, NEWS, fake_prompt
+from expanded_fake_news_corpus.schemas import FakeNewsError, FakeNewsResult
+from expanded_fake_news_corpus.text import clean_headline, word_count
 
 #: Estado que trafega pelo grafo de geração.
 FakeNewsState = create_state(

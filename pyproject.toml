@@ -20,16 +20,24 @@ dependencies = [
 ]
 
 [project.scripts]
-fakegen = "fakegen_br.cli:main"
+fakegen = "expanded_fake_news_corpus.cli:main"
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0", "ruff>=0.8"]
+# Caracterização lexical/sintática do corpus (src/expanded_fake_news_corpus/analysis)
+analysis = [
+    "matplotlib>=3.9",
+    "nltk>=3.9",
+    "pandas>=2.2",
+    "scikit-learn>=1.5",
+    "scipy>=1.14",
+]
 
 [tool.uv.sources]
 langgraphlib = { git = "https://github.com/Pedrest15/LangGraphLib.git" }
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/fakegen_br"]
+packages = ["src/expanded_fake_news_corpus"]
 
 [tool.ruff]
 target-version = "py313"
@@ -39,7 +47,7 @@ line-length = 88
 select = ["E", "W", "F", "I", "UP", "B", "SIM"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["fakegen_br", "prepare_corpora"]
+known-first-party = ["expanded_fake_news_corpus", "prepare_corpora"]
 
 [tool.pytest.ini_options]
 pythonpath = ["src", "scripts"]

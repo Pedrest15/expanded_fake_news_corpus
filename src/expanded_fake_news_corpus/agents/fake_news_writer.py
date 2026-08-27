@@ -8,8 +8,9 @@ gênero — só o que o artigo especifica.
 A única adaptação é a entrada: o artigo entregava a notícia verdadeira inteira e
 pedia que o LLM a modificasse; aqui a semente é a manchete produzida no estágio 1.
 
-Convive com :mod:`fakegen_br.agents.fake_news`, que é a variante com saída
-estruturada, faixas de tamanho calibradas e blocos por gênero.
+Convive com :mod:`expanded_fake_news_corpus.agents.fake_news`, que é a
+variante com saída estruturada, faixas de tamanho calibradas e blocos por
+gênero.
 
 Grafo::
 
@@ -27,9 +28,9 @@ from typing import Any
 from langchain_core.language_models import BaseChatModel
 from langgraphlib import Agent, Workflow, create_state
 
-from fakegen_br.config import LLMSettings, build_llm
-from fakegen_br.prompts import PAPER_FAKE_PROMPT, PAPER_SYSTEM
-from fakegen_br.schemas import FakeNewsError, FakeNewsWriterResult
+from expanded_fake_news_corpus.config import LLMSettings, build_llm
+from expanded_fake_news_corpus.prompts import PAPER_FAKE_PROMPT, PAPER_SYSTEM
+from expanded_fake_news_corpus.schemas import FakeNewsError, FakeNewsWriterResult
 
 #: Estado do grafo. ``raw_response`` é campo único de tipo ``str``, o que faz o
 #: Agent devolver texto livre em vez de acionar ``with_structured_output``.

@@ -16,7 +16,6 @@
     --accent:#0E6B61; --accent-soft:#DDEBE8;
     --true:#2C6A4C; --true-soft:#E3EFE8;
     --fake:#A03B2E; --fake-soft:#F6E7E3;
-    --warn:#8A6314; --warn-soft:#F4EDDC;
     --sans:"IBM Plex Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
     --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
     --news:"Newsreader",Georgia,"Times New Roman",serif;
@@ -29,7 +28,6 @@
       --accent:#5EC0B2; --accent-soft:#12302C;
       --true:#71C097; --true-soft:#152A20;
       --fake:#DE8C77; --fake-soft:#2E1C18;
-      --warn:#D3A65E; --warn-soft:#2B2315;
     }
   }
   :root[data-theme="dark"]{
@@ -39,7 +37,6 @@
     --accent:#5EC0B2; --accent-soft:#12302C;
     --true:#71C097; --true-soft:#152A20;
     --fake:#DE8C77; --fake-soft:#2E1C18;
-    --warn:#D3A65E; --warn-soft:#2B2315;
   }
 
   *{box-sizing:border-box}
@@ -62,6 +59,9 @@
   }
   .brand p{margin:0; color:var(--ink-2); font-size:14px; max-width:52ch}
   .built{font-family:var(--mono); font-size:11.5px; color:var(--ink-3)}
+  .nav{display:flex; gap:14px; align-items:center; font-size:13px}
+  .nav a{color:var(--accent); text-decoration:none; font-weight:600}
+  .nav a:hover{text-decoration:underline}
 
   /* ---------- painel de números ---------- */
   .stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(148px,1fr)); gap:1px;
@@ -70,7 +70,6 @@
   .stat .k{font-size:10.5px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-3)}
   .stat .v{font-family:var(--mono); font-size:22px; font-weight:500; font-variant-numeric:tabular-nums; line-height:1.1}
   .stat .n{font-size:11.5px; color:var(--ink-3)}
-  .stat.alert .v{color:var(--warn)}
 
   /* ---------- filtros ---------- */
   .filters{position:sticky; top:0; z-index:5; background:var(--ground);
@@ -84,7 +83,6 @@
     padding:5px 8px;
   }
   input[type=search]{min-width:220px; flex:1 1 220px}
-  .toggle{display:flex; align-items:center; gap:6px; font-size:12.5px; color:var(--ink-2); cursor:pointer}
   .count{margin-left:auto; font-family:var(--mono); font-size:12px; color:var(--ink-3);
     font-variant-numeric:tabular-nums}
   :focus-visible{outline:2px solid var(--accent); outline-offset:2px}
@@ -98,7 +96,6 @@
   .chip{font-size:10.5px; font-weight:600; letter-spacing:.05em; text-transform:uppercase;
     padding:2px 7px; border-radius:2px; background:var(--panel); color:var(--ink-3);
     border:1px solid var(--rule); white-space:nowrap}
-  .chip.warn{background:var(--warn-soft); color:var(--warn); border-color:transparent}
   .item-head .src{margin-left:auto; font-family:var(--mono); font-size:11px; color:var(--ink-3)}
   .item-head a{color:var(--ink-3)}
 
@@ -147,6 +144,7 @@
       <h1>Corpus em construção</h1>
       <p>Manchetes escritas a partir de notícias verdadeiras, e as fake news sintéticas geradas a partir dessas manchetes.</p>
     </div>
+    <div class="nav"><a href="./analysis.html">caracterização →</a></div>
     <div class="built" id="built"></div>
   </div>
   <div class="wrap"><div class="stats" id="stats"></div></div>
@@ -157,9 +155,7 @@
     <label class="f"><span>Round</span><select id="f-round"><option value="">todos</option></select></label>
     <label class="f"><span>Modelo</span><select id="f-model"><option value="">todos</option></select></label>
     <label class="f"><span>Corpus</span><select id="f-source"><option value="">todos</option></select></label>
-    <label class="f"><span>Gênero</span><select id="f-genre"><option value="">todos</option></select></label>
     <input type="search" id="f-text" placeholder="Buscar no texto, na manchete ou no uid" aria-label="Buscar">
-    <label class="toggle"><input type="checkbox" id="f-warn"> só com aviso</label>
     <div class="count" id="count"></div>
   </div>
 </div>
@@ -179,7 +175,6 @@
   "use strict";
 
   var LABEL = { fakebr: "Fake.br", faketruebr: "FakeTrueBR" };
-  var GENRE = { news: "notícia", factcheck: "checagem" };
   var data = null;
 
   function el(tag, cls, text) {
@@ -209,10 +204,8 @@
         n: "mediana " + b.median_words + " palavras · humana " + b.human_median_words
       });
     });
-    cards.push({ k: "Avisos", v: s.warnings, n: "de qualidade", alert: s.warnings > 0 });
-
     cards.forEach(function (c) {
-      var d = el("div", "stat" + (c.alert ? " alert" : ""));
+      var d = el("div", "stat");
       d.appendChild(el("div", "k", c.k));
       d.appendChild(el("div", "v", String(c.v)));
       d.appendChild(el("div", "n", c.n));
@@ -239,11 +232,8 @@
     var head = el("div", "item-head");
     head.appendChild(el("span", "uid", item.uid));
     head.appendChild(chip(LABEL[item.source] || item.source));
-    if (item.genre) head.appendChild(chip(GENRE[item.genre] || item.genre));
     head.appendChild(chip(shortModel(item.fake_model || item.headline_model)));
     if (item.category) head.appendChild(chip(item.category.replace(/_/g, " ")));
-    var warnings = item.headline_warnings.concat(item.fake_warnings);
-    warnings.forEach(function (w) { head.appendChild(chip(w, "warn")); });
     if (item.link) {
       var a = el("a", "src", "matéria original ↗");
       a.href = item.link;
@@ -289,8 +279,6 @@
     if (f.round && item.round !== f.round) return false;
     if (f.model && item.headline_model !== f.model) return false;
     if (f.source && item.source !== f.source) return false;
-    if (f.genre && item.genre !== f.genre) return false;
-    if (f.warn && !(item.headline_warnings.length + item.fake_warnings.length)) return false;
     if (f.text) {
       var hay = (item.uid + " " + item.headline + " " + item.fake_headline + " " +
                  item.fake_text + " " + item.changes).toLowerCase();
@@ -304,9 +292,7 @@
       round: document.getElementById("f-round").value,
       model: document.getElementById("f-model").value,
       source: document.getElementById("f-source").value,
-      genre: document.getElementById("f-genre").value,
-      text: document.getElementById("f-text").value.trim().toLowerCase(),
-      warn: document.getElementById("f-warn").checked
+      text: document.getElementById("f-text").value.trim().toLowerCase()
     };
     var shown = data.items.filter(function (i) { return matches(i, f); });
     var list = document.getElementById("list");
@@ -334,8 +320,7 @@
     fillSelect("f-source", Object.keys(data.stats.by_source), function (s) {
       return LABEL[s] || s;
     });
-    fillSelect("f-genre", ["news", "factcheck"], function (g) { return GENRE[g]; });
-    ["f-round", "f-model", "f-source", "f-genre", "f-warn"].forEach(function (id) {
+    ["f-round", "f-model", "f-source"].forEach(function (id) {
       document.getElementById(id).addEventListener("change", render);
     });
     document.getElementById("f-text").addEventListener("input", render);
