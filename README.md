@@ -2,6 +2,9 @@
 
 Construção de um corpus de *fake news* em português brasileiro geradas por IA.
 
+**Página do projeto:** <https://github.com/Pedrest15/expanded_fake_news_corpus> — navegador do
+corpus e [caracterização linguística](https://pedrest15.github.io/fakegen_br/analysis.html).
+
 O ponto de partida são notícias verdadeiras dos corpora [Fake.br][fakebr] e
 [FakeTrueBR][faketruebr]. A partir das manchetes dessas notícias verdadeiras são
 geradas as notícias falsas sintéticas que comporão o FakeGen.BR.
@@ -240,7 +243,8 @@ do pipeline. Os resultados estão resumidos no NOTES.md acima.
 
 ### Página (GitHub Pages)
 
-`docs/` publica **a replicação do artigo**: `index.html` navega pelas 20 fake
+`docs/` é publicado em <https://pedrest15.github.io/fakegen_br/> e mostra **a
+replicação do artigo**: `index.html` navega pelas 20 fake
 news sintéticas (só link e metadados da notícia de origem, nunca o texto) e
 `analysis.html` mostra a caracterização linguística. Os dados vêm de dois
 scripts; rode-os depois de gerar e analisar:
