@@ -86,3 +86,30 @@ class FakeNewsWriterResult(BaseModel):
     warnings: list[str] = Field(
         default_factory=list, description="Tag extraction warnings."
     )
+
+
+class PaperFakeNewsResult(BaseModel):
+    """Fake news gerada pelo método do artigo base, a partir da notícia inteira.
+
+    É o registro da replicação: entrada é a notícia verdadeira integral, não a
+    manchete, e por isso não há ``source_headline`` nem ``headline_model`` —
+    a procedência é só o ``source_id`` no corpus de origem. ``synthetic_text`` e
+    ``changes`` são os blocos de tags do artigo, como em
+    :class:`FakeNewsWriterResult`.
+    """
+
+    synthetic_text: str = Field(description="Contents of <syntheticText>.")
+    changes: str = Field(default="", description="Contents of <changes>.")
+    raw_response: str = Field(
+        default="", description="Raw model response, before tag extraction."
+    )
+    source_id: str | None = Field(
+        default=None, description="Article identifier in the source corpus."
+    )
+    source_chars: int = Field(
+        default=0, description="Length of the true article sent, in characters."
+    )
+    model: str = Field(default="", description="Model that wrote the fake news.")
+    warnings: list[str] = Field(
+        default_factory=list, description="Tag extraction warnings."
+    )

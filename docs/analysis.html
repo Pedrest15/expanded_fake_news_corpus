@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Caracterização do corpus</title>
-<meta name="description" content="Como as fake news sintéticas se separam das escritas por humanos: silabação, LIWC, SAGE e distribuição de frequências.">
+<meta name="description" content="Como as fake news sintéticas se separam das escritas por humanos: silabação, diversidade lexical, LIWC, SAGE e distribuição de frequências.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap">
@@ -178,7 +178,7 @@
   <div class="wrap top-inner">
     <div class="brand">
       <h1>Caracterização do corpus</h1>
-      <p>O que separa uma fake news escrita por humano de uma gerada por modelo de linguagem, medido sobre os pares do FakeGen.BR.</p>
+      <p>O que separa uma fake news escrita por humano de uma gerada por modelo de linguagem, medido sobre a replicação do método de Silva et al.: a notícia verdadeira inteira entra, e o modelo a transforma em fake news.</p>
     </div>
     <div class="nav"><a href="./index.html">← navegar no corpus</a></div>
     <div class="built" id="built"></div>
@@ -191,7 +191,7 @@
   <section class="card" id="sec-syllables">
     <div class="card-head">
       <h2>Silabação</h2>
-      <p>Quão longas são as palavras e as sentenças de cada lado. Foi a diferença mais estável do trabalho anterior, e se repete aqui.</p>
+      <p>Quão longas são as palavras e as sentenças de cada lado. Foi a diferença mais estável do trabalho anterior, e se repete aqui com o mesmo prompt em outro modelo.</p>
     </div>
     <div class="card-body">
       <div class="legend">
@@ -202,6 +202,24 @@
       <div class="metrics" id="syllables"></div>
       <details class="more"><summary>Por corpus de origem</summary>
         <div class="inner tablewrap"><table id="syllables-table"></table></div>
+      </details>
+    </div>
+  </section>
+
+  <section class="card" id="sec-lexical">
+    <div class="card-head">
+      <h2>Diversidade lexical</h2>
+      <p>Quanto vocabulário distinto cada lado gasta. A razão tipo/ocorrência bruta cai conforme o texto cresce, e as sintéticas são bem mais longas — por isso a medida que vale é o MATTR, calculado numa janela deslizante de tamanho fixo, que não depende do comprimento.</p>
+    </div>
+    <div class="card-body">
+      <div class="legend">
+        <span class="key"><span class="sw human"></span>humano</span>
+        <span class="key"><span class="sw machine"></span>máquina</span>
+        <span class="hint">d = Cohen's d · p = Mann-Whitney</span>
+      </div>
+      <div class="metrics" id="lexical"></div>
+      <details class="more"><summary>Por corpus de origem</summary>
+        <div class="inner tablewrap"><table id="lexical-table"></table></div>
       </details>
     </div>
   </section>
@@ -262,8 +280,8 @@
 
 <footer>
   <div class="wrap">
-    <p>Os dois lados comparados são <strong>fake news</strong>: de um lado as escritas por humanos nos corpora de origem, do outro as geradas por modelo a partir da manchete da notícia verdadeira correspondente. O pareamento é por notícia, então a diferença medida é de autoria, não de assunto.</p>
-    <p>Tabelas completas em <code>data/analysis/</code>; os módulos que as produzem, em <code>src/expanded_fake_news_corpus/analysis/</code>. Dicionário LIWC sob licença própria, não redistribuído — veja <a href="https://www.liwc.app/">liwc.app</a>.</p>
+    <p>Os dois lados comparados são <strong>fake news</strong>: de um lado as escritas por humanos nos corpora de origem, do outro as geradas por modelo a partir da notícia verdadeira correspondente, inteira, com o prompt de Silva et al. reproduzido sem adaptação. O pareamento é por notícia, então a diferença medida é de autoria, não de assunto.</p>
+    <p>Tabelas completas em <code>data/analysis/paper_replication/</code>; os módulos que as produzem, em <code>src/expanded_fake_news_corpus/analysis/</code>; o registro das execuções, em <code>corpus/paper_replication/NOTES.md</code>. Dicionário LIWC sob licença própria, não redistribuído — veja <a href="https://www.liwc.app/">liwc.app</a>.</p>
   </div>
 </footer>
 
@@ -297,11 +315,11 @@
 
   /* ---------- silabação ---------- */
 
-  function renderSyllables() {
-    var box = document.getElementById("syllables");
+  function renderMetricCards(boxId, metrics, digits) {
+    var box = document.getElementById(boxId);
     box.textContent = "";
 
-    data.syllables.metrics.forEach(function (m) {
+    metrics.forEach(function (m) {
       var card = el("div", "metric");
       card.appendChild(el("h3", null, m.label));
 
@@ -314,9 +332,9 @@
           var fill = el("div", "fill " + row[0]);
           fill.style.width = (100 * row[2] / max) + "%";
           track.appendChild(fill);
-          tipFor(track, row[1] + ": <b>" + fmt(row[2], 2) + "</b>");
+          tipFor(track, row[1] + ": <b>" + fmt(row[2], digits) + "</b>");
           r.appendChild(track);
-          r.appendChild(el("div", "val", fmt(row[2], 2)));
+          r.appendChild(el("div", "val", fmt(row[2], digits)));
           card.appendChild(r);
         });
 
@@ -331,12 +349,30 @@
 
       box.appendChild(card);
     });
+  }
+
+  function renderSyllables() {
+    renderMetricCards("syllables", data.syllables.metrics, 2);
 
     renderTable("syllables-table",
       ["Recorte", "Documentos", "Palavras", "Sílabas/palavra"],
       data.syllables.by_dataset.map(function (r) {
         return [r.label, r.documents, r.words.toLocaleString("pt-BR"), fmt(r.syllables_per_word, 3)];
       }), [false, true, true, true]);
+  }
+
+  /* ---------- diversidade lexical ---------- */
+
+  function renderLexical() {
+    var lex = data.lexical_diversity || { metrics: [], by_dataset: [] };
+    renderMetricCards("lexical", lex.metrics, 3);
+
+    renderTable("lexical-table",
+      ["Recorte", "Documentos", "Ocorrências", "MATTR", "Tipo/ocorrência"],
+      lex.by_dataset.map(function (r) {
+        return [r.label, r.documents, r.tokens.toLocaleString("pt-BR"),
+                fmt(r.mattr, 3), fmt(r.type_token_ratio, 3)];
+      }), [false, true, true, true, true]);
   }
 
   /* ---------- LIWC ---------- */
@@ -466,16 +502,17 @@
     var syl = data.syllables.metrics.filter(function (m) {
       return m.metric === "syllables_per_word";
     })[0];
-    var human = data.zipf.recuts.filter(function (r) { return r.dataset === "human"; })[0];
-    var machine = data.zipf.recuts.filter(function (r) { return r.dataset === "machine"; })[0];
+    var mattr = ((data.lexical_diversity || {}).metrics || []).filter(function (m) {
+      return m.metric === "mattr";
+    })[0];
     var pairs = (data.syllables.by_group || {}).human;
 
     var cards = [
       { k: "Pares", v: pairs || "—", n: "uma humana e uma sintética cada" },
       { k: "Sílabas/palavra", v: syl ? fmt(syl.machine_mean, 2) : "—",
         n: syl ? "máquina · humano " + fmt(syl.human_mean, 2) : "—" },
-      { k: "Tipo/ocorrência", v: machine ? fmt(machine.type_token_ratio, 2) : "—",
-        n: human ? "máquina · humano " + fmt(human.type_token_ratio, 2) : "—" },
+      { k: "MATTR", v: mattr ? fmt(mattr.machine_mean, 3) : "—",
+        n: mattr ? "máquina · humano " + fmt(mattr.human_mean, 3) : "—" },
       { k: "Categorias LIWC", v: data.liwc.significant_raw + "/" + data.liwc.total,
         n: data.liwc.significant_fdr + " após correção FDR" }
     ];
@@ -524,6 +561,7 @@
       "atualizado em " + (data.built_at || "").replace("T", " ").slice(0, 16);
     renderStats();
     renderSyllables();
+    renderLexical();
     renderLiwc();
     renderSage();
     renderZipf();

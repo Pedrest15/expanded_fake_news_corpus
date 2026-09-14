@@ -1,9 +1,11 @@
 """Linha de comando do FakeGen.BR.
 
-Dois subcomandos, um por estágio do pipeline::
+Dois subcomandos, um por estágio do pipeline, e um terceiro para a replicação
+do artigo base::
 
     fakegen headline   notícia verdadeira  ->  manchete
     fakegen fake       manchete            ->  notícia falsa sintética
+    fakegen paper      notícia verdadeira  ->  notícia falsa (método de Silva et al.)
 
 ``--model`` pode ser repetido: a mesma entrada é processada por cada modelo
 pedido, e cada execução grava em sua própria pasta::
@@ -20,6 +22,10 @@ Exemplos::
 
     fakegen fake --input data/round1/openai/gpt-4o-mini/FakeBr_true.jsonl \\
         --model openai/gpt-4o-mini --out-dir data/round1-fakes
+
+    fakegen paper --input true-corpus/clean/paper_replication/FakeBr_true.csv \\
+        --id-field uid --model openai/gpt-4.1-mini-2025-04-14 \\
+        --out-dir corpus/paper_replication
 """
 
 from __future__ import annotations
@@ -30,6 +36,7 @@ import hashlib
 import json
 import sys
 from collections.abc import Iterable, Iterator, Sequence
+from dataclasses import replace
 from datetime import datetime
 from pathlib import Path
 
@@ -42,6 +49,7 @@ from expanded_fake_news_corpus.agents.headline import (
     DEFAULT_MAX_INPUT_CHARS,
     HeadlineAgent,
 )
+from expanded_fake_news_corpus.agents.paper_replication import PaperReplicationWriter
 from expanded_fake_news_corpus.config import (
     ConfigError,
     LLMSettings,
@@ -67,6 +75,7 @@ from expanded_fake_news_corpus.schemas import (
     FakeNewsWriterResult,
     HeadlineError,
     HeadlineResult,
+    PaperFakeNewsResult,
 )
 
 #: Erros de uso previstos: viram mensagem e código 1, não rastreamento de pilha.
@@ -163,11 +172,8 @@ def _add_headline_parser(subparsers: argparse._SubParsersAction) -> None:
 
     _add_batch_args(parser)
     _add_sampling_args(parser)
+    _add_tabular_input_args(parser)
 
-    parser.add_argument(
-        "--text-field", default="text", help="Campo do texto (jsonl/csv)."
-    )
-    parser.add_argument("--id-field", default="id", help="Campo do id (jsonl/csv).")
     parser.add_argument(
         "--glob", default="*.txt", help="Padrão de arquivos em --input-dir."
     )
@@ -233,6 +239,49 @@ def _add_fake_parser(subparsers: argparse._SubParsersAction) -> None:
     )
 
 
+def _add_tabular_input_args(parser: argparse.ArgumentParser) -> None:
+    """Campos de texto e id de uma entrada .jsonl/.csv."""
+    parser.add_argument(
+        "--text-field", default="text", help="Campo do texto (jsonl/csv)."
+    )
+    parser.add_argument("--id-field", default="id", help="Campo do id (jsonl/csv).")
+
+
+def _add_paper_parser(subparsers: argparse._SubParsersAction) -> None:
+    """Subcomando ``paper``: notícia verdadeira inteira -> notícia falsa.
+
+    Replica o método de Silva et al. sem passar pelo estágio de titulação: o
+    prompt publicado, byte a byte, com a notícia integral interpolada.
+    """
+    parser = subparsers.add_parser(
+        "paper",
+        help=(
+            "Gera notícias falsas a partir das notícias verdadeiras inteiras, "
+            "com o prompt de Silva et al. reproduzido sem adaptação."
+        ),
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+    )
+    parser.add_argument(
+        "--input",
+        type=Path,
+        required=True,
+        help="Arquivo .jsonl ou .csv com as notícias verdadeiras.",
+    )
+
+    _add_batch_args(parser)
+    _add_sampling_args(parser)
+    _add_tabular_input_args(parser)
+
+    parser.add_argument(
+        "--max-tokens",
+        type=int,
+        help=(
+            "Teto de tokens da resposta. Sem a opção, nenhum teto é enviado — "
+            "como no script dos autores."
+        ),
+    )
+
+
 def build_parser() -> argparse.ArgumentParser:
     """Monta o parser de argumentos."""
     parser = argparse.ArgumentParser(
@@ -242,14 +291,16 @@ def build_parser() -> argparse.ArgumentParser:
     subparsers = parser.add_subparsers(dest="command", required=True)
     _add_headline_parser(subparsers)
     _add_fake_parser(subparsers)
+    _add_paper_parser(subparsers)
     return parser
 
 
 def main(argv: list[str] | None = None) -> int:
     """Ponto de entrada do executável ``fakegen``."""
     args = build_parser().parse_args(argv)
+    runners = {"headline": _run_headline, "fake": _run_fake, "paper": _run_paper}
     try:
-        return _run_fake(args) if args.command == "fake" else _run_headline(args)
+        return runners[args.command](args)
     except _EXPECTED_ERRORS as exc:
         print(f"erro: {exc}", file=sys.stderr)
         return 1
@@ -365,7 +416,7 @@ def _write_meta(
         "stage": args.command,
         "run_name": args.run_name,
         "strategy": getattr(args, "strategy", None),
-        "genre": args.genre,
+        "genre": getattr(args, "genre", None),
         "prompt_sha256": hashlib.sha256(prompt.encode("utf-8")).hexdigest()[:16],
         "input": str(source),
         "output": str(destination),
@@ -511,9 +562,14 @@ def _headline_outcomes(
 
 
 def _load_items(args: argparse.Namespace) -> Iterable[NewsItem]:
-    """Lê a entrada do estágio 1, conforme o formato pedido."""
-    if args.input_dir is not None:
-        items: Iterable[NewsItem] = read_text_dir(args.input_dir, pattern=args.glob)
+    """Lê um lote de notícias verdadeiras, conforme o formato pedido.
+
+    Serve ao estágio 1 e à replicação do artigo; só o primeiro aceita
+    ``--input-dir``.
+    """
+    input_dir = getattr(args, "input_dir", None)
+    if input_dir is not None:
+        items: Iterable[NewsItem] = read_text_dir(input_dir, pattern=args.glob)
     else:
         items = _read_tabular(args)
     return _take(items, args.limit) if args.limit else items
@@ -645,6 +701,90 @@ def _describe_fake(outcome: FakeNewsResult | FakeNewsWriterResult) -> str:
         title = outcome.fake_headline
     else:
         title = outcome.synthetic_text.strip().splitlines()[0]
+    return json.dumps(title[:110], ensure_ascii=False)
+
+
+# --------------------------------------------------------------------------
+# Replicação do artigo: notícia verdadeira inteira -> notícia falsa
+# --------------------------------------------------------------------------
+
+
+def _run_paper(args: argparse.Namespace) -> int:
+    """Orquestra a replicação do artigo para cada modelo pedido."""
+    models = _resolve_models(args)
+    _check_destination_flags(args, models, is_batch=True)
+
+    items = list(_load_items(args))
+
+    status = 0
+    for model in models:
+        # O script dos autores não definia temperatura nem teto de tokens, e a
+        # geração usou os padrões do provedor. Aqui só vai o que for pedido na
+        # linha de comando — nem o padrão do projeto (temperatura 0) nem o
+        # FAKEGEN_TEMPERATURE do ambiente entram.
+        settings = replace(
+            _settings_for(args, model),
+            temperature=args.temperature,
+            max_tokens=args.max_tokens,
+        )
+        _warn_dropped(settings, quiet=args.quiet)
+        writer = PaperReplicationWriter(settings=settings)
+        status |= _paper_batch(args, writer, settings, items)
+    return status
+
+
+def _paper_batch(
+    args: argparse.Namespace,
+    writer: PaperReplicationWriter,
+    settings: LLMSettings,
+    items: Sequence[NewsItem],
+) -> int:
+    """Gera notícias falsas para um lote de notícias inteiras com um modelo."""
+    destination = _batch_destination(args, settings)
+    pending = _pending_items(items, destination, resume=args.resume)
+    job = BatchJob(
+        destination=destination,
+        label=settings.model,
+        input_noun="notícias",
+        output_noun="notícias falsas",
+        total=len(pending),
+        append=args.resume,
+        quiet=args.quiet,
+        skipped=len(items) - len(pending),
+    )
+    report = run_batch(
+        job,
+        _paper_outcomes(writer, pending, concurrency=args.concurrency),
+        _describe_paper,
+    )
+    _write_meta(
+        args,
+        settings,
+        destination,
+        prompt=writer.prompt_fingerprint,
+        total=report.total,
+        failures=report.failures,
+    )
+    return report.exit_code
+
+
+def _paper_outcomes(
+    writer: PaperReplicationWriter, items: Sequence[NewsItem], *, concurrency: int
+) -> Iterator[PaperFakeNewsResult | FakeNewsError]:
+    """Resultados na ordem de entrada, um por notícia."""
+    if concurrency > 1:
+        yield from _gather(writer.agenerate_many(items, concurrency=concurrency))
+        return
+    for source_id, text in items:
+        try:
+            yield writer.generate(text, source_id=source_id)
+        except Exception as exc:  # noqa: BLE001 - falha por item, não do lote
+            yield FakeNewsError(f"{source_id or '<no id>'}: {exc}")
+
+
+def _describe_paper(outcome: PaperFakeNewsResult) -> str:
+    """Primeira linha do texto gerado, para o relatório de progresso."""
+    title = outcome.synthetic_text.strip().splitlines()[0]
     return json.dumps(title[:110], ensure_ascii=False)
 
 

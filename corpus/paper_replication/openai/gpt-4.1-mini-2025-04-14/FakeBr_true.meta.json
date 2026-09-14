@@ -1,0 +1,19 @@
+{
+  "provider": "openai",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "model_string": "openai/gpt-4.1-mini-2025-04-14",
+  "sampling": {},
+  "sampling_dropped": [],
+  "max_tokens": null,
+  "max_input_chars": null,
+  "stage": "paper",
+  "run_name": null,
+  "strategy": null,
+  "genre": null,
+  "prompt_sha256": "795f6b38a9560e9c",
+  "input": "true-corpus/clean/paper_replication/FakeBr_true.csv",
+  "output": "corpus/paper_replication/openai/gpt-4.1-mini-2025-04-14/FakeBr_true.jsonl",
+  "processed": 10,
+  "failures": 0,
+  "finished_at": "2026-09-14T13:10:37-03:00"
+}

@@ -282,3 +282,84 @@ tornar a notícia uma fake news.
 
 A manchete que você deve utilizar é apresentada abaixo:
 """
+
+
+# ---------------------------------------------------------------------------
+# Replicação do artigo: notícia verdadeira inteira -> fake news
+# ---------------------------------------------------------------------------
+
+#: Prompt de Silva et al. **byte a byte**, com a notícia inteira como entrada.
+#:
+#: É o corpo da f-string ``prompt`` de
+#: ``fake-news-generation/maritalk_fakeNewsGenerator.py`` no repositório dos
+#: autores (https://github.com/renatosvmor/fake-news-llm-ptbr), inclusive a
+#: quebra de linha inicial, os oito espaços de indentação de cada linha e as
+#: linhas só com espaços dentro das tags — tudo isso foi enviado ao modelo lá,
+#: então é enviado aqui. Por isso o literal usa ``\n`` explícito: um editor
+#: apagaria os espaços à direita e o texto deixaria de ser idêntico.
+#: :func:`paper_article_message` faz a interpolação de ``{noticia}``.
+#:
+#: Diferente de :data:`PAPER_FAKE_PROMPT`, que adapta a primeira oração para
+#: receber uma manchete, aqui não há adaptação nenhuma: é a replicação do
+#: método do artigo, só trocando o modelo.
+PAPER_ARTICLE_PROMPT = (
+    "\n"
+    "        Você é um especialista em fake news, contratado por uma agência de "
+    "notícias para ajudar na criação de uma base de dados destinada a estudar o "
+    "fenômeno da desinformação. Seu papel é modificar a notícia apresentada "
+    "abaixo, transformando-a em uma fake news que seja realista e atraente, "
+    "utilizando técnicas comuns encontradas em notícias falsas.\n"
+    "\n"
+    "        O objetivo é exclusivamente acadêmico e voltado para pesquisa sobre "
+    "o tema. Use sua criatividade para chamar a atenção de quem for ler a "
+    "notícia e destacar os elementos alterados. Não use marcadores markdown na "
+    "sua resposta.\n"
+    "\n"
+    "        Formato da resposta:\n"
+    "\n"
+    "        <syntheticText>\n"
+    "        \n"
+    "        Insira a notícia modificada aqui\n"
+    "        \n"
+    "        </syntheticText>\n"
+    "\n"
+    "        <changes>\n"
+    "        \n"
+    "        Liste e explique as mudanças realizadas, detalhando como elas "
+    "contribuem para tornar a notícia uma fake news.\n"
+    "        \n"
+    "        </changes>\n"
+    "\n"
+    "        A notícia que você deve modificar é apresentada abaixo:\n"
+    "\n"
+    "        {noticia}\n"
+    "        "
+)
+
+#: SHA-256 do template acima, calculado sobre o corpo da f-string no código
+#: publicado. O teste de prompts compara os dois para pegar qualquer edição
+#: acidental.
+PAPER_ARTICLE_PROMPT_SHA256 = (
+    "f22567d890611af8bd5015f797367cea9efe3ca5b94b7b058d535dddae0a6d18"
+)
+
+
+def paper_article_message(article: str) -> str:
+    """Monta a mensagem de usuário do artigo para uma notícia verdadeira.
+
+    Faz o que a f-string do código publicado fazia: interpola a notícia, sem
+    limpar nem truncar, no lugar de ``{noticia}``. O texto vai como está no
+    corpus — recortá-lo já seria um desvio do método.
+
+    Args:
+        article: Texto integral da notícia verdadeira.
+
+    Returns:
+        Mensagem de usuário pronta para envio.
+
+    Raises:
+        ValueError: Se a notícia estiver vazia.
+    """
+    if not article.strip():
+        raise ValueError("Empty news article.")
+    return PAPER_ARTICLE_PROMPT.replace("{noticia}", article)

@@ -99,7 +99,8 @@ class LLMSettings:
     """Parâmetros de conexão e amostragem do LLM."""
 
     model: str = DEFAULT_MODEL
-    temperature: float = 0.0
+    #: ``None`` não envia temperatura: o provedor usa o padrão dele.
+    temperature: float | None = 0.0
     top_p: float | None = None
     top_k: int | None = None
     seed: int | None = None
@@ -179,7 +180,8 @@ def resolve_sampling(settings: LLMSettings) -> tuple[dict[str, Any], list[str]]:
     """Separa os parâmetros de amostragem entre aplicáveis e descartados.
 
     Um parâmetro só é enviado quando foi pedido explicitamente (``temperature``
-    sempre é) **e** o provedor o aceita. Os descartados são devolvidos para que
+    é, por padrão, mas pode ser desligada com ``None``) **e** o provedor o
+    aceita. Os descartados são devolvidos para que
     quem chama registre o fato: numa comparação entre provedores, um ``top_k``
     silenciosamente ignorado em um deles invalidaria o experimento.
 
@@ -246,10 +248,12 @@ def build_llm(settings: LLMSettings | None = None, **overrides: Any) -> BaseChat
         if via_kwargs:
             extra["model_kwargs"] = via_kwargs
 
+    # ``get_model`` tem temperatura 0 como padrão; ``None`` precisa ser
+    # explícito para que nada seja enviado ao provedor.
     return get_model(
         settings.model,
         api_key=api_key,
-        temperature=applied["temperature"],
+        temperature=applied.get("temperature"),
         max_tokens=max_tokens,
         **extra,
     )

@@ -33,8 +33,9 @@ from nltk.tokenize import word_tokenize  # noqa: E402
 from expanded_fake_news_corpus.analysis.documents import (  # noqa: E402
     PROJECT_ROOT,
     Document,
-    Source,
-    load_paired_corpus,
+    add_corpus_arguments,
+    documents_from_args,
+    output_dir_from_args,
 )
 from expanded_fake_news_corpus.analysis.nltk_resources import (  # noqa: E402
     TOKENIZER_PACKAGES,
@@ -60,24 +61,34 @@ EXTRA_DISCARDED_TOKENS = frozenset({"r", "sobre", "após", "contra"})
 _HAS_ALNUM_RE = re.compile(r"[0-9a-zà-ÿ]")
 
 
-def tokenize(text: str, *, ignored_words: frozenset[str] = frozenset()) -> list[str]:
+def tokenize(
+    text: str,
+    *,
+    ignored_words: frozenset[str] = frozenset(),
+    discard_extra_tokens: bool = True,
+) -> list[str]:
     """Quebra o texto em tokens de palavra, em caixa baixa.
 
-    Descarta pontuação, números e os tokens de :data:`EXTRA_DISCARDED_TOKENS`.
+    Descarta pontuação, números e, por padrão, os tokens de
+    :data:`EXTRA_DISCARDED_TOKENS`.
 
     Args:
         text: Texto da notícia
         ignored_words: Palavras adicionais a descartar (as *stopwords*, tipicamente)
+        discard_extra_tokens: Aplica o recorte herdado do pipeline anterior. Ligado
+            para o ranking de frequências seguir comparável; desligue para medidas
+            que precisam da sequência íntegra de palavras
 
     Returns:
         Tokens na ordem em que aparecem
     """
+    extra = EXTRA_DISCARDED_TOKENS if discard_extra_tokens else frozenset()
     tokens = word_tokenize(text.casefold(), language="portuguese")
     return [
         token
         for token in tokens
         if _HAS_ALNUM_RE.search(token)
-        and token not in EXTRA_DISCARDED_TOKENS
+        and token not in extra
         and token not in ignored_words
         and not token.isnumeric()
     ]
@@ -246,17 +257,7 @@ def run_analysis(
 def parse_args() -> argparse.Namespace:
     """Lê os argumentos da linha de comando."""
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument(
-        "--source",
-        choices=[source.value for source in Source],
-        action="append",
-        help="Restringe a um corpus de origem (repetível)",
-    )
-    parser.add_argument(
-        "--model",
-        action="append",
-        help="Restringe a um modelo gerador (repetível)",
-    )
+    add_corpus_arguments(parser)
     parser.add_argument(
         "--top-n",
         type=int,
@@ -281,15 +282,15 @@ def main() -> None:
 
     ensure_nltk_resources(*TOKENIZER_PACKAGES, "stopwords")
 
-    sources = [Source(value) for value in args.source] if args.source else None
-    documents = load_paired_corpus(sources=sources, models=args.model)
+    documents = documents_from_args(args)
+    output_dir = output_dir_from_args(args, DEFAULT_OUTPUT_DIR)
     if not documents:
         logger.warning("Corpus vazio — verifique se a geração já foi executada")
         return
 
-    run_analysis(documents, args.output_dir, top_n=args.top_n)
+    run_analysis(documents, output_dir, top_n=args.top_n)
     recuts = len(group_documents(documents))
-    logger.info(f"Análise de Zipf concluída: {recuts} recortes em {args.output_dir}")
+    logger.info(f"Análise de Zipf concluída: {recuts} recortes em {output_dir}")
 
 
 if __name__ == "__main__":

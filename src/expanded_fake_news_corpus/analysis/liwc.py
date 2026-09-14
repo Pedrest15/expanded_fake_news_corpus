@@ -30,8 +30,9 @@ import pandas as pd
 from expanded_fake_news_corpus.analysis.documents import (
     PROJECT_ROOT,
     Document,
-    Source,
-    load_paired_corpus,
+    add_corpus_arguments,
+    documents_from_args,
+    output_dir_from_args,
 )
 from expanded_fake_news_corpus.analysis.liwc_dictionary import (
     LiwcDictionary,
@@ -217,17 +218,7 @@ def parse_args() -> argparse.Namespace:
         type=Path,
         help=f"Arquivo .dic do LIWC (default: {DICTIONARY_ENV_VAR} ou resources/liwc/)",
     )
-    parser.add_argument(
-        "--source",
-        choices=[source.value for source in Source],
-        action="append",
-        help="Restringe a um corpus de origem (repetível)",
-    )
-    parser.add_argument(
-        "--model",
-        action="append",
-        help="Restringe a um modelo gerador (repetível)",
-    )
+    add_corpus_arguments(parser)
     parser.add_argument(
         "--output-dir",
         type=Path,
@@ -250,13 +241,13 @@ def main() -> None:
         logger.error(f"Dicionário LIWC indisponível: {type(err).__name__}: {err}")
         return
 
-    sources = [Source(value) for value in args.source] if args.source else None
-    documents = load_paired_corpus(sources=sources, models=args.model)
+    documents = documents_from_args(args)
+    output_dir = output_dir_from_args(args, DEFAULT_OUTPUT_DIR)
     if not documents:
         logger.warning("Corpus vazio — verifique se a geração já foi executada")
         return
 
-    comparisons = run_analysis(documents, dictionary, args.output_dir)
+    comparisons = run_analysis(documents, dictionary, output_dir)
     if comparisons.empty:
         return
 

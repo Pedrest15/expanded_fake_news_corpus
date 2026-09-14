@@ -32,15 +32,20 @@ corpus/
 │   └── manifest.json          seed, sizes and every drawn identifier
 ├── assignments/
 │   └── round1.json            which model generates which block of 20
-└── headlines/                 stage 1 output — corpus text
-    └── round1/<provider>/<model>/
+├── headlines/                 stage 1 output — corpus text
+│   └── round1/<provider>/<model>/
+│       ├── FakeBr_true.jsonl       + FakeBr_true.meta.json
+│       └── FakeTrueBr_true.jsonl   + FakeTrueBr_true.meta.json
+├── fake_news/                 stage 2 output, same layout
+└── paper_replication/         side experiment, see below
+    ├── manifest.json          seed, sizes and drawn identifiers
+    └── <provider>/<model>/
         ├── FakeBr_true.jsonl       + FakeBr_true.meta.json
         └── FakeTrueBr_true.jsonl   + FakeTrueBr_true.meta.json
 ```
 
 Generated text belongs here; `../data/` is scratch space for experiments that
-are not part of the corpus. Stage 2 output will land under `fake_news/` with the
-same round/provider/model layout.
+are not part of the corpus.
 
 Every JSONL is paired with a `.meta.json` carrying the run's provenance:
 provider, pinned model snapshot, sampling parameters actually applied (and any
@@ -97,6 +102,50 @@ uv run python scripts/assign_blocks.py --round 1 --model openai/gpt-4.1-mini-202
 | positions 0–19 | 0 | 14 Fake.br + 6 FakeTrueBR | `openai/gpt-4.1-mini-2025-04-14` |
 | positions 20–99 | 1–4 | 20 each | not assigned yet |
 
+## Paper replication
+
+A side experiment that reproduces the generation method of Silva et al. **as
+published**, so its output can be compared with the headline-seeded pipeline
+above. It differs from the pipeline in two ways:
+
+* the LLM receives the **full true news article**, not a headline, and is asked
+  to modify it (no headline stage);
+* the prompt is the authors' original, byte for byte (`PAPER_ARTICLE_PROMPT` in
+  `../src/expanded_fake_news_corpus/prompts.py`), including the indentation and
+  blank lines of the f-string in their published script. The system message is
+  the same short persona. Nothing was adapted; only the model changed.
+
+Selection is **stratified**, unlike the pooled rounds: 10 articles from each
+corpus, drawn with one RNG seeded at 42 (Fake.br first, then FakeTrueBR). The
+draw shares no article with round 1.
+
+```bash
+uv run python scripts/sample_paper_replication.py --per-source 10 --seed 42
+
+fakegen paper --input true-corpus/clean/paper_replication/FakeBr_true.csv \
+    --id-field uid --model openai/gpt-4.1-mini-2025-04-14 \
+    --out-dir corpus/paper_replication
+fakegen paper --input true-corpus/clean/paper_replication/FakeTrueBr_true.csv \
+    --id-field uid --model openai/gpt-4.1-mini-2025-04-14 \
+    --out-dir corpus/paper_replication
+```
+
+| Experiment | Articles | Model | Sampling |
+|---|---|---|---|
+| paper_replication | 10 Fake.br + 10 FakeTrueBR | `openai/gpt-4.1-mini-2025-04-14` | none sent (provider defaults) |
+
+The authors' script set no sampling parameters (Maritaca defaults), and
+`fakegen paper` follows suit: it sends no temperature and no token limit unless
+`--temperature`/`--max-tokens` are given explicitly — the project default of
+temperature 0 and `FAKEGEN_TEMPERATURE` do not apply to this subcommand. Output
+records carry `synthetic_text` and `changes` as in the paper's tags, plus
+`source_id`, `source_chars` (length of the article sent) and `raw_response`.
+
+`paper_replication/NOTES.md` is the run log. It records that GPT-5.1
+(`gpt-5.1-2025-11-13`) refused 13 of the 20 articles under this prompt, which
+is why the replication uses gpt-4.1-mini; the GPT-5.1 output is kept as
+evidence in its own model folder.
+
 ## Language
 
 Code, identifiers, JSON keys and documentation are in English, for international
@@ -107,7 +156,10 @@ than code.
 ## Prior work
 
 This corpus extends Silva et al., *Fake News Detection in Portuguese Under Large
-Language Model-Generated Content*. Their generation prompt is reproduced verbatim
-in `../src/fakegen_br/prompts.py` (`PAPER_FAKE_PROMPT`), taken from their
+Language Model-Generated Content*. Their generation prompt is taken from their
 published code at https://github.com/renatosvmor/fake-news-llm-ptbr rather than
-back-translated from the paper's English rendering.
+back-translated from the paper's English rendering, and lives in
+`../src/expanded_fake_news_corpus/prompts.py` in two forms: `PAPER_ARTICLE_PROMPT`
+(verbatim, full article as input — the paper replication) and
+`PAPER_FAKE_PROMPT` (first sentence adapted to take a headline — stage 2 of the
+pipeline).

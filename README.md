@@ -214,6 +214,46 @@ uv run fakegen headline --input true-corpus/clean/samples/sample_FakeTrueBr.csv 
     --model anthropic/claude-sonnet-5 --out-dir data/calibracao
 ```
 
+### Replicação do artigo (`fakegen paper`)
+
+Experimento paralelo ao pipeline: reproduz o método de Silva et al. como
+publicado — a notícia verdadeira **inteira** entra, e o prompt é o original em
+português, byte a byte (`PAPER_ARTICLE_PROMPT`), sem estágio de manchete. Só o
+modelo muda. A amostra é estratificada (10 notícias de cada corpus, seed 42) e
+a saída vai para `corpus/paper_replication/`. Diferente dos outros subcomandos,
+`paper` não envia temperatura nem teto de tokens a menos que sejam passados na
+linha de comando (o script dos autores também não definia). Ver
+[corpus/README.md](corpus/README.md#paper-replication) e o registro das
+execuções em [corpus/paper_replication/NOTES.md](corpus/paper_replication/NOTES.md).
+
+```bash
+uv run python scripts/sample_paper_replication.py --per-source 10 --seed 42
+uv run fakegen paper --input true-corpus/clean/paper_replication/FakeBr_true.csv \
+    --id-field uid --model openai/gpt-4.1-mini-2025-04-14 \
+    --out-dir corpus/paper_replication
+```
+
+Para as análises linguísticas (`expanded_fake_news_corpus.analysis.*`), o
+recorte é escolhido com `--experiment paper_replication`; a saída vai para
+`data/analysis/paper_replication/<módulo>/`, sem tocar em `data/analysis/<módulo>/`
+do pipeline. Os resultados estão resumidos no NOTES.md acima.
+
+### Página (GitHub Pages)
+
+`docs/` publica **a replicação do artigo**: `index.html` navega pelas 20 fake
+news sintéticas (só link e metadados da notícia de origem, nunca o texto) e
+`analysis.html` mostra a caracterização linguística. Os dados vêm de dois
+scripts; rode-os depois de gerar e analisar:
+
+```bash
+uv run python scripts/build_site.py --model openai/gpt-4.1-mini-2025-04-14
+uv run python scripts/build_analysis_data.py   # lê data/analysis/paper_replication/
+```
+
+`build_site.py` descarta recusas (registros sem as tags do artigo), e o
+`--model` deixa de fora a pasta do GPT-5.1. Os dados do pipeline por manchete
+(round 1) não estão mais na página; continuam em `corpus/` e `data/analysis/`.
+
 ### Saída
 
 Uma linha JSON por notícia:
@@ -256,6 +296,8 @@ uv run ruff check src tests
 | [text.py](src/fakegen_br/text.py) | Normalização do texto de entrada e da manchete |
 | [corpus.py](src/fakegen_br/corpus.py) | Leitura dos corpora e escrita do JSONL |
 | [cli.py](src/fakegen_br/cli.py) | Comando `fakegen` |
+| [agents/paper_replication.py](src/expanded_fake_news_corpus/agents/paper_replication.py) | Replicação do artigo: notícia inteira → fake news com o prompt original |
+| [scripts/sample_paper_replication.py](scripts/sample_paper_replication.py) | Amostra estratificada (10 + 10, seed 42) da replicação |
 
 ## Notas
 

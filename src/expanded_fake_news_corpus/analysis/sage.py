@@ -43,8 +43,9 @@ from expanded_fake_news_corpus.analysis.documents import (
     PROJECT_ROOT,
     Document,
     Group,
-    Source,
-    load_paired_corpus,
+    add_corpus_arguments,
+    documents_from_args,
+    output_dir_from_args,
 )
 
 logger = logging.getLogger(__name__)
@@ -337,17 +338,7 @@ def parse_args() -> argparse.Namespace:
     """Lê os argumentos da linha de comando."""
     defaults = SageConfig()
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument(
-        "--source",
-        choices=[source.value for source in Source],
-        action="append",
-        help="Restringe a um corpus de origem (repetível)",
-    )
-    parser.add_argument(
-        "--model",
-        action="append",
-        help="Restringe a um modelo gerador (repetível)",
-    )
+    add_corpus_arguments(parser)
     parser.add_argument(
         "--min-df",
         type=int,
@@ -388,8 +379,8 @@ def main() -> None:
     )
     args = parse_args()
 
-    sources = [Source(value) for value in args.source] if args.source else None
-    documents = load_paired_corpus(sources=sources, models=args.model)
+    documents = documents_from_args(args)
+    output_dir = output_dir_from_args(args, DEFAULT_OUTPUT_DIR)
     if not documents:
         logger.warning("Corpus vazio — verifique se a geração já foi executada")
         return
@@ -400,9 +391,7 @@ def main() -> None:
         max_features=args.max_features,
     )
     try:
-        terms = run_analysis(
-            documents, args.output_dir, config=config, top_k=args.top_k
-        )
+        terms = run_analysis(documents, output_dir, config=config, top_k=args.top_k)
     except SageError as err:
         logger.error(f"Falha na análise SAGE: {type(err).__name__}: {err}")
         return

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Corpus em construção</title>
-<meta name="description" content="Navegador do corpus: manchetes de notícias verdadeiras e as fake news sintéticas geradas a partir delas.">
+<meta name="description" content="Navegador do corpus: fake news sintéticas geradas a partir de notícias verdadeiras inteiras, com o prompt de Silva et al.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap">
@@ -99,7 +99,7 @@
   .item-head .src{margin-left:auto; font-family:var(--mono); font-size:11px; color:var(--ink-3)}
   .item-head a{color:var(--ink-3)}
 
-  .pair{display:grid; grid-template-columns:1fr 1.25fr}
+  .pair{display:grid; grid-template-columns:1fr 2fr}
   @media (max-width:800px){.pair{grid-template-columns:1fr}}
   .side{padding:15px 17px 17px; display:flex; flex-direction:column; gap:9px}
   .side + .side{border-left:1px solid var(--rule-soft)}
@@ -114,6 +114,13 @@
 
   .hl{font-family:var(--news); font-size:19px; line-height:1.28; font-weight:500;
     text-wrap:balance; margin:0}
+  .meta{display:flex; flex-direction:column; gap:6px; font-size:13px; color:var(--ink-2); margin:0}
+  .meta div{display:flex; gap:8px; align-items:baseline}
+  .meta .k{font-size:10.5px; font-weight:600; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--ink-3); min-width:74px}
+  .meta a{color:var(--accent); font-weight:600; text-decoration:none; overflow-wrap:anywhere}
+  .meta a:hover{text-decoration:underline}
+  .meta .mono{font-family:var(--mono); font-size:12px}
   .side.fake .hl{color:var(--fake)}
   .body{font-family:var(--news); font-size:15px; line-height:1.62; color:var(--ink-2);
     margin:0; white-space:pre-wrap}
@@ -142,7 +149,7 @@
   <div class="wrap top-inner">
     <div class="brand">
       <h1>Corpus em construção</h1>
-      <p>Manchetes escritas a partir de notícias verdadeiras, e as fake news sintéticas geradas a partir dessas manchetes.</p>
+      <p>Fake news sintéticas geradas a partir de notícias verdadeiras inteiras, com o prompt de Silva et al. reproduzido sem adaptação — só o modelo mudou.</p>
     </div>
     <div class="nav"><a href="./analysis.html">caracterização →</a></div>
     <div class="built" id="built"></div>
@@ -152,10 +159,9 @@
 
 <div class="filters">
   <div class="wrap filters-inner">
-    <label class="f"><span>Round</span><select id="f-round"><option value="">todos</option></select></label>
     <label class="f"><span>Modelo</span><select id="f-model"><option value="">todos</option></select></label>
     <label class="f"><span>Corpus</span><select id="f-source"><option value="">todos</option></select></label>
-    <input type="search" id="f-text" placeholder="Buscar no texto, na manchete ou no uid" aria-label="Buscar">
+    <input type="search" id="f-text" placeholder="Buscar no texto, nas mudanças ou no uid" aria-label="Buscar">
     <div class="count" id="count"></div>
   </div>
 </div>
@@ -165,7 +171,7 @@
 <footer>
   <div class="wrap">
     <p><strong>Todo o texto marcado como “fake news sintética” foi gerado por modelo de linguagem para pesquisa em detecção de desinformação.</strong> Não é notícia, não foi publicado como tal e não deve ser reutilizado fora deste contexto.</p>
-    <p>As notícias verdadeiras vêm dos corpora <a href="https://github.com/roneysco/Fake.br-Corpus">Fake.br</a> e <a href="https://github.com/jpchav98/FakeTrue.Br">FakeTrueBR</a>; o texto de origem não é republicado aqui, apenas o link para a matéria. Cada lote gerado tem procedência registrada em <code>*.meta.json</code> no repositório.</p>
+    <p>As notícias verdadeiras vêm dos corpora <a href="https://github.com/roneysco/Fake.br-Corpus">Fake.br</a> e <a href="https://github.com/jpchav98/FakeTrue.Br">FakeTrueBR</a>; o texto de origem não é republicado aqui, apenas o link para a matéria. Cada notícia entrou inteira no prompt, e o modelo foi instruído a modificá-la. Amostra de 10 notícias por corpus, sorteadas com semente 42; sem temperatura nem teto de tokens definidos, como no script original. Procedência de cada lote em <code>*.meta.json</code> no repositório.</p>
   </div>
 </footer>
 
@@ -192,8 +198,7 @@
     var box = document.getElementById("stats");
     box.textContent = "";
     var cards = [
-      { k: "Pares", v: s.items, n: s.with_fake + " com fake news" },
-      { k: "Rounds", v: s.rounds.length, n: s.rounds.join(", ") || "—" },
+      { k: "Notícias", v: s.items, n: "uma fake news sintética cada" },
       { k: "Modelos", v: s.models.length, n: s.models.map(shortModel).join(", ") || "—" }
     ];
     Object.keys(s.by_source).forEach(function (key) {
@@ -232,23 +237,41 @@
     var head = el("div", "item-head");
     head.appendChild(el("span", "uid", item.uid));
     head.appendChild(chip(LABEL[item.source] || item.source));
-    head.appendChild(chip(shortModel(item.fake_model || item.headline_model)));
+    head.appendChild(chip(shortModel(item.fake_model)));
     if (item.category) head.appendChild(chip(item.category.replace(/_/g, " ")));
-    if (item.link) {
-      var a = el("a", "src", "matéria original ↗");
-      a.href = item.link;
-      a.rel = "noopener noreferrer";
-      a.target = "_blank";
-      head.appendChild(a);
-    }
     art.appendChild(head);
 
     var pair = el("div", "pair");
 
     var left = el("div", "side true");
-    left.appendChild(el("div", "side-label", "Manchete verdadeira"));
-    left.appendChild(el("h2", "hl", item.headline));
-    if (item.rationale) left.appendChild(el("p", "why", item.rationale));
+    left.appendChild(el("div", "side-label", "Notícia verdadeira"));
+    var meta = el("dl", "meta");
+    function row(k, node) {
+      var d = el("div");
+      d.appendChild(el("dt", "k", k));
+      var dd = el("dd");
+      dd.style.margin = "0";
+      dd.appendChild(node);
+      d.appendChild(dd);
+      meta.appendChild(d);
+    }
+    if (item.link) {
+      var a = el("a", null, "matéria original ↗");
+      a.href = item.link;
+      a.rel = "noopener noreferrer";
+      a.target = "_blank";
+      row("Fonte", a);
+    } else {
+      row("Fonte", el("span", null, LABEL[item.source] || item.source));
+    }
+    if (item.date) row("Data", el("span", "mono", item.date));
+    if (item.source_words) {
+      row("Entrada", el("span", null, item.source_words.toLocaleString("pt-BR") +
+        " palavras enviadas inteiras ao modelo"));
+    }
+    left.appendChild(meta);
+    left.appendChild(el("p", "why",
+      "O texto de origem não é republicado; o modelo recebeu a notícia completa e foi instruído a modificá-la."));
     pair.appendChild(left);
 
     var right = el("div", "side fake");
@@ -268,7 +291,7 @@
 
     if (item.changes) {
       var det = el("details", "changes");
-      det.appendChild(el("summary", null, "Técnicas relatadas pelo modelo"));
+      det.appendChild(el("summary", null, "Mudanças relatadas pelo modelo"));
       det.appendChild(el("div", "txt", item.changes));
       art.appendChild(det);
     }
@@ -276,11 +299,10 @@
   }
 
   function matches(item, f) {
-    if (f.round && item.round !== f.round) return false;
-    if (f.model && item.headline_model !== f.model) return false;
+    if (f.model && item.fake_model !== f.model) return false;
     if (f.source && item.source !== f.source) return false;
     if (f.text) {
-      var hay = (item.uid + " " + item.headline + " " + item.fake_headline + " " +
+      var hay = (item.uid + " " + item.fake_headline + " " +
                  item.fake_text + " " + item.changes).toLowerCase();
       if (hay.indexOf(f.text) === -1) return false;
     }
@@ -289,7 +311,6 @@
 
   function render() {
     var f = {
-      round: document.getElementById("f-round").value,
       model: document.getElementById("f-model").value,
       source: document.getElementById("f-source").value,
       text: document.getElementById("f-text").value.trim().toLowerCase()
@@ -315,12 +336,11 @@
     document.getElementById("built").textContent =
       "atualizado em " + (data.built_at || "").replace("T", " ").slice(0, 16);
     renderStats(data.stats);
-    fillSelect("f-round", data.stats.rounds);
     fillSelect("f-model", data.stats.models, shortModel);
     fillSelect("f-source", Object.keys(data.stats.by_source), function (s) {
       return LABEL[s] || s;
     });
-    ["f-round", "f-model", "f-source"].forEach(function (id) {
+    ["f-model", "f-source"].forEach(function (id) {
       document.getElementById(id).addEventListener("change", render);
     });
     document.getElementById("f-text").addEventListener("input", render);

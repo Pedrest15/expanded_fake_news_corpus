@@ -1,6 +1,8 @@
 """Carregamento pareado dos documentos que alimentam as análises.
 
-As notícias sintéticas ficam em ``corpus/fake_news/<round>/<provider>/<model>/*.jsonl``.
+As notícias sintéticas ficam em ``corpus/fake_news/<round>/<provider>/<model>/*.jsonl``
+(pipeline por manchete) ou em ``corpus/paper_replication/<provider>/<model>/*.jsonl``
+(replicação do artigo, sem rounds) — ver :data:`EXPERIMENTS`.
 A contraparte humana de cada uma é a *fake news* escrita por humano no corpus de
 origem, resolvida pelo ``uid``:
 
@@ -18,13 +20,15 @@ comprimento de sentença e densidade de PROPN. Aqui a composição é simétrica
 
 from __future__ import annotations
 
+import argparse
 import csv
 import json
 import logging
+import os
 import re
 import sys
 from collections.abc import Iterable, Iterator, Sequence
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from enum import StrEnum
 from pathlib import Path
 
@@ -35,7 +39,27 @@ csv.field_size_limit(min(sys.maxsize, 2**31 - 1))
 
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 
-DEFAULT_SYNTHETIC_DIR = PROJECT_ROOT / "corpus" / "fake_news"
+#: Repositório do trabalho anterior, de onde vêm as coortes de referência.
+#: Sobrescrevível por ``FAKEGEN_PRIOR_CORPUS`` ou pelo argumento ``--prior-dir``.
+PRIOR_CORPUS_ENV_VAR = "FAKEGEN_PRIOR_CORPUS"
+DEFAULT_PRIOR_DIR = (
+    PROJECT_ROOT.parent / "noticias_falsas_humano_maquina_caracterizacao" / "corpus"
+)
+
+#: Experimentos de geração, pela pasta onde cada um grava as notícias sintéticas.
+#:
+#: ``pipeline`` é o corpus principal (manchete -> fake news, por rounds);
+#: ``paper_replication`` é a replicação do método de Silva et al. (notícia
+#: inteira -> fake news). As análises rodam sobre um de cada vez, e os
+#: resultados de cada experimento vão para uma pasta própria em
+#: ``data/analysis`` — ver :func:`output_dir_from_args`.
+EXPERIMENTS: dict[str, Path] = {
+    "pipeline": PROJECT_ROOT / "corpus" / "fake_news",
+    "paper_replication": PROJECT_ROOT / "corpus" / "paper_replication",
+}
+DEFAULT_EXPERIMENT = "pipeline"
+DEFAULT_SYNTHETIC_DIR = EXPERIMENTS[DEFAULT_EXPERIMENT]
+DEFAULT_ANALYSIS_DIR = PROJECT_ROOT / "data" / "analysis"
 DEFAULT_FAKEBR_DIR = (
     PROJECT_ROOT / "true-corpus" / "raw" / "Fake.br-full_texts" / "fake"
 )
@@ -56,6 +80,33 @@ class Source(StrEnum):
     FAKETRUEBR = "faketruebr"
 
 
+#: Coorte da *fake news* humana — a mesma nos dois repositórios.
+HUMAN_COHORT = "human"
+
+#: Coorte gerada pelo trabalho anterior (Maritalk/Maritaca).
+SABIA3_COHORT = "sabia-3"
+
+# NOTA: os .txt do FakeTrueBR no repositório anterior são indexados a partir de
+# zero, enquanto nosso uid guarda a linha 1-based do CSV. Sem este ajuste o
+# pareamento sairia deslocado em uma notícia — e silenciosamente, porque todo
+# uid continuaria encontrando um arquivo, só que o errado.
+_PRIOR_INDEX_OFFSET = {Source.FAKEBR: 0, Source.FAKETRUEBR: -1}
+
+#: Subpastas do repositório anterior, por coorte e corpus de origem.
+_PRIOR_SUBDIRS = {
+    (HUMAN_COHORT, Source.FAKEBR): Path(
+        "Fake.br-Corpus-master/full_texts/fake_br_clean"
+    ),
+    (HUMAN_COHORT, Source.FAKETRUEBR): Path("FakeTrue.Br-main/fake"),
+    (SABIA3_COHORT, Source.FAKEBR): Path(
+        "fake-news-llm-ptbr-main/fake-news-llm-ptbr-main/data/Fake.Br"
+    ),
+    (SABIA3_COHORT, Source.FAKETRUEBR): Path(
+        "fake-news-llm-ptbr-main/fake-news-llm-ptbr-main/data/FakeTrueBR"
+    ),
+}
+
+
 class CorpusError(Exception):
     """Falha ao montar o corpus de análise."""
 
@@ -68,6 +119,10 @@ class MissingCounterpartError(CorpusError):
     """Não há *fake news* humana correspondente ao ``uid``."""
 
 
+class MissingPriorCorpusError(CorpusError):
+    """O corpus do trabalho anterior não está acessível."""
+
+
 @dataclass(frozen=True)
 class Document:
     """Uma notícia pronta para análise."""
@@ -78,6 +133,15 @@ class Document:
     text: str
     model: str | None = None  # None do lado humano
     round_name: str | None = None
+    cohort: str = ""  # vazio: derivado do grupo em __post_init__
+
+    def __post_init__(self) -> None:
+        """Deriva a coorte do modelo quando ela não foi informada."""
+        if not self.cohort:
+            derived = (
+                HUMAN_COHORT if self.group is Group.HUMAN else (self.model or "machine")
+            )
+            object.__setattr__(self, "cohort", derived)
 
     @property
     def dataset(self) -> str:
@@ -242,6 +306,99 @@ def load_human_documents(
     return documents
 
 
+def find_prior_dir(explicit: Path | None = None) -> Path:
+    """Resolve a raiz do corpus do trabalho anterior.
+
+    Ordem: caminho explícito, variável :data:`PRIOR_CORPUS_ENV_VAR`, repositório
+    irmão em :data:`DEFAULT_PRIOR_DIR`.
+
+    Args:
+        explicit: Caminho passado na linha de comando
+
+    Returns:
+        Raiz do corpus anterior
+
+    Raises:
+        MissingPriorCorpusError: Se o diretório não existir
+    """
+    candidate = explicit or Path(
+        os.environ.get(PRIOR_CORPUS_ENV_VAR, DEFAULT_PRIOR_DIR)
+    )
+    if not candidate.is_dir():
+        raise MissingPriorCorpusError(
+            f"prior corpus not found: {candidate}. Clone the companion repository "
+            f"or set {PRIOR_CORPUS_ENV_VAR}"
+        )
+    return candidate
+
+
+def load_prior_cohort(
+    cohort: str,
+    *,
+    prior_dir: Path | None = None,
+    sources: Sequence[Source] | None = None,
+    uids: Iterable[str] | None = None,
+) -> list[Document]:
+    """Carrega uma coorte do repositório do trabalho anterior.
+
+    As coortes disponíveis são :data:`HUMAN_COHORT` (as *fake news* escritas por
+    humanos) e :data:`SABIA3_COHORT` (as geradas por sabia-3). Os dois lados são
+    pareados por ``uid``, então servem de linha de base para as gerações novas.
+
+    Args:
+        cohort: Nome da coorte
+        prior_dir: Raiz do corpus anterior
+        sources: Restringe a estes corpora de origem (todos, se omitido)
+        uids: Restringe a estes identificadores (todos, se omitido)
+
+    Returns:
+        Documentos da coorte, ordenados por ``uid``
+
+    Raises:
+        MissingPriorCorpusError: Se a raiz ou uma subpasta não existir
+    """
+    root = find_prior_dir(prior_dir)
+    wanted_uids = set(uids) if uids is not None else None
+    group = Group.HUMAN if cohort == HUMAN_COHORT else Group.MACHINE
+
+    documents: list[Document] = []
+    for source in sources or list(Source):
+        subdir = _PRIOR_SUBDIRS.get((cohort, source))
+        if subdir is None:
+            raise MissingPriorCorpusError(
+                f"unknown cohort {cohort!r} for {source.value}"
+            )
+
+        directory = root / subdir
+        if not directory.is_dir():
+            raise MissingPriorCorpusError(f"directory not found: {directory}")
+
+        offset = _PRIOR_INDEX_OFFSET[source]
+        for path in directory.glob("*.txt"):
+            if not path.stem.isdigit():
+                continue
+            uid = f"{source.value}:{int(path.stem) - offset}"
+            if wanted_uids is not None and uid not in wanted_uids:
+                continue
+            text = path.read_text(encoding="utf-8", errors="replace").strip()
+            if not text:
+                logger.warning(f"Arquivo vazio na coorte {cohort}: {path}")
+                continue
+            documents.append(
+                Document(
+                    uid=uid,
+                    source=source,
+                    group=group,
+                    text=text,
+                    model=None if group is Group.HUMAN else cohort,
+                    cohort=cohort,
+                )
+            )
+
+    logger.info(f"Coorte {cohort}: {len(documents)} documentos de {root}")
+    return sorted(documents, key=lambda doc: doc.uid)
+
+
 def _machine_document(record: dict, *, round_name: str | None) -> Document | None:
     """Converte um registro do JSONL em documento, ou None se estiver incompleto."""
     uid = record.get("source_id", "")
@@ -309,9 +466,13 @@ def _read_jsonl(path: Path) -> Iterator[dict]:
 
 
 def _round_name(jsonl_path: Path, synthetic_dir: Path) -> str | None:
-    """Extrai o round do caminho ``<round>/<provider>/<model>/arquivo.jsonl``."""
+    """Extrai o round do caminho ``<round>/<provider>/<model>/arquivo.jsonl``.
+
+    Sem o nível do round (``<provider>/<model>/arquivo.jsonl``, como na
+    replicação do artigo) devolve None em vez de confundir o provedor com round.
+    """
     relative = jsonl_path.relative_to(synthetic_dir)
-    return relative.parts[0] if len(relative.parts) > 1 else None
+    return relative.parts[0] if len(relative.parts) > 3 else None
 
 
 def _read_fakebr_fake(fakebr_dir: Path, local_id: str) -> str:
@@ -354,3 +515,69 @@ def _read_faketruebr_rows(csv_path: Path) -> list[dict[str, str]]:
         raise MissingCounterpartError(f"file not found: {csv_path}") from err
     logger.info(f"FakeTrueBR carregado: {len(rows)} linhas de {csv_path}")
     return rows
+
+
+# ---------------------------------------------------------------------------
+# Linha de comando compartilhada pelos módulos de análise
+# ---------------------------------------------------------------------------
+
+
+def add_corpus_arguments(parser: argparse.ArgumentParser) -> None:
+    """Acrescenta ``--experiment``, ``--source`` e ``--model`` a um parser.
+
+    Os módulos de análise recebem os mesmos recortes de corpus; defini-los num
+    lugar só garante que ``--experiment`` signifique a mesma coisa em todos.
+    """
+    parser.add_argument(
+        "--experiment",
+        choices=sorted(EXPERIMENTS),
+        default=DEFAULT_EXPERIMENT,
+        help=(
+            "Experimento de geração a analisar: 'pipeline' (corpus/fake_news) "
+            f"ou 'paper_replication' (corpus/paper_replication). "
+            f"Default: {DEFAULT_EXPERIMENT}"
+        ),
+    )
+    parser.add_argument(
+        "--source",
+        choices=[source.value for source in Source],
+        action="append",
+        help="Restringe a um corpus de origem (repetível)",
+    )
+    parser.add_argument(
+        "--model",
+        action="append",
+        help="Restringe a um modelo gerador (repetível)",
+    )
+
+
+def documents_from_args(
+    args: argparse.Namespace, *, paths: CorpusPaths | None = None
+) -> list[Document]:
+    """Carrega o corpus pareado conforme :func:`add_corpus_arguments`.
+
+    Args:
+        args: Namespace com ``experiment``, ``source`` e ``model``
+        paths: Corpora de origem; a pasta sintética é trocada pela do experimento
+
+    Returns:
+        Documentos dos dois grupos, ordenados por ``uid``
+    """
+    sources = [Source(value) for value in args.source] if args.source else None
+    paths = replace(paths or CorpusPaths(), synthetic_dir=EXPERIMENTS[args.experiment])
+    return load_paired_corpus(paths, sources=sources, models=args.model)
+
+
+def output_dir_from_args(args: argparse.Namespace, default: Path) -> Path:
+    """Resolve a pasta de saída de um módulo de análise.
+
+    ``--output-dir`` explícito vence. Sem ele, o experimento principal grava
+    na pasta padrão do módulo (``data/analysis/<módulo>``) e os demais em
+    ``data/analysis/<experimento>/<módulo>``, para uma execução nunca
+    sobrescrever as tabelas da outra.
+    """
+    if args.output_dir != default:
+        return args.output_dir
+    if args.experiment == DEFAULT_EXPERIMENT:
+        return default
+    return DEFAULT_ANALYSIS_DIR / args.experiment / default.name

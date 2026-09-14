@@ -27,8 +27,9 @@ from expanded_fake_news_corpus.analysis.documents import (
     PROJECT_ROOT,
     Document,
     Group,
-    Source,
-    load_paired_corpus,
+    add_corpus_arguments,
+    documents_from_args,
+    output_dir_from_args,
 )
 from expanded_fake_news_corpus.analysis.nltk_resources import (
     TOKENIZER_PACKAGES,
@@ -246,17 +247,7 @@ def _write_csv(frame: pd.DataFrame, path: Path) -> None:
 def parse_args() -> argparse.Namespace:
     """Lê os argumentos da linha de comando."""
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument(
-        "--source",
-        choices=[source.value for source in Source],
-        action="append",
-        help="Restringe a um corpus de origem (repetível)",
-    )
-    parser.add_argument(
-        "--model",
-        action="append",
-        help="Restringe a um modelo gerador (repetível)",
-    )
+    add_corpus_arguments(parser)
     parser.add_argument(
         "--output-dir",
         type=Path,
@@ -275,13 +266,13 @@ def main() -> None:
 
     ensure_nltk_resources(*TOKENIZER_PACKAGES)
 
-    sources = [Source(value) for value in args.source] if args.source else None
-    documents = load_paired_corpus(sources=sources, models=args.model)
+    documents = documents_from_args(args)
+    output_dir = output_dir_from_args(args, DEFAULT_OUTPUT_DIR)
     if not documents:
         logger.warning("Corpus vazio — verifique se a geração já foi executada")
         return
 
-    frame = run_analysis(documents, args.output_dir)
+    frame = run_analysis(documents, output_dir)
     if frame.empty:
         return
 

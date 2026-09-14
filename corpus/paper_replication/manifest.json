@@ -1,0 +1,51 @@
+{
+  "corpus": "FakeGen.BR",
+  "stage": "selection",
+  "experiment": "paper_replication",
+  "seed": 42,
+  "per_source": 10,
+  "pool": {
+    "total": 5002,
+    "by_source": {
+      "fakebr": 3599,
+      "faketruebr": 1403
+    }
+  },
+  "sources": {
+    "fakebr": {
+      "genre": "news",
+      "file": "FakeBr_true.csv"
+    },
+    "faketruebr": {
+      "genre": "factcheck",
+      "file": "FakeTrueBr_true.csv"
+    }
+  },
+  "path": "true-corpus/clean/paper_replication",
+  "by_source": {
+    "fakebr": 10,
+    "faketruebr": 10
+  },
+  "uids": [
+    "fakebr:2623",
+    "fakebr:458",
+    "fakebr:104",
+    "fakebr:3041",
+    "fakebr:1129",
+    "fakebr:1006",
+    "fakebr:917",
+    "fakebr:573",
+    "fakebr:3020",
+    "fakebr:421",
+    "faketruebr:1773",
+    "faketruebr:1429",
+    "faketruebr:215",
+    "faketruebr:1587",
+    "faketruebr:1043",
+    "faketruebr:74",
+    "faketruebr:70",
+    "faketruebr:230",
+    "faketruebr:509",
+    "faketruebr:542"
+  ]
+}
