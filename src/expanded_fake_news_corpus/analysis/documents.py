@@ -32,6 +32,11 @@ from dataclasses import dataclass, replace
 from enum import StrEnum
 from pathlib import Path
 
+from expanded_fake_news_corpus.analysis.cleaning import (
+    CleaningReport,
+    clean_fakebr_text,
+)
+
 logger = logging.getLogger(__name__)
 
 #: O texto de uma notícia do FakeTrueBR estoura o limite default do módulo csv.
@@ -286,6 +291,7 @@ def load_human_documents(
     faketruebr_rows: list[dict[str, str]] | None = None
 
     documents: list[Document] = []
+    cleaning: list[CleaningReport] = []
     for uid in sorted(set(uids)):
         source, local_id = parse_uid(uid)
         if source is Source.FAKETRUEBR and faketruebr_rows is None:
@@ -293,7 +299,8 @@ def load_human_documents(
 
         try:
             if source is Source.FAKEBR:
-                text = _read_fakebr_fake(paths.fakebr_dir, local_id)
+                text, report = _read_fakebr_fake(paths.fakebr_dir, local_id)
+                cleaning.append(report)
             else:
                 text = _read_faketruebr_fake(faketruebr_rows or [], local_id)
         except MissingCounterpartError as err:
@@ -303,7 +310,21 @@ def load_human_documents(
         documents.append(Document(uid=uid, source=source, group=Group.HUMAN, text=text))
 
     logger.info(f"Resolvidas {len(documents)} fake news humanas")
+    _log_cleaning(cleaning)
     return documents
+
+
+def _log_cleaning(reports: Sequence[CleaningReport]) -> None:
+    """Resumo da limpeza do Fake.br, no espírito do ``modificacoes.log`` anterior."""
+    changed = [report for report in reports if report.changed]
+    if not changed:
+        return
+    logger.info(
+        f"Fake.br humano: {len(changed)} de {len(reports)} textos limpos "
+        f"({sum(r.removed_characters for r in changed)} caracteres removidos, "
+        f"{sum(r.joined_lines for r in changed)} linhas coladas, "
+        f"{sum(r.normalized_spacing for r in changed)} com espaçamento normalizado)"
+    )
 
 
 def find_prior_dir(explicit: Path | None = None) -> Path:
@@ -475,19 +496,22 @@ def _round_name(jsonl_path: Path, synthetic_dir: Path) -> str | None:
     return relative.parts[0] if len(relative.parts) > 3 else None
 
 
-def _read_fakebr_fake(fakebr_dir: Path, local_id: str) -> str:
-    """Lê a fake news humana do Fake.br.
+def _read_fakebr_fake(fakebr_dir: Path, local_id: str) -> tuple[str, CleaningReport]:
+    """Lê a fake news humana do Fake.br, já limpa como no trabalho anterior.
 
-    O arquivo já traz a manchete na primeira sentença, então não há o que compor.
+    O arquivo já traz a manchete na primeira sentença, então não há o que
+    compor; passa por :func:`clean_fakebr_text` (ver :mod:`cleaning`).
     """
     path = fakebr_dir / f"{local_id}.txt"
     try:
-        text = path.read_text(encoding="utf-8").strip()
+        raw = path.read_text(encoding="utf-8")
     except FileNotFoundError as err:
         raise MissingCounterpartError(f"file not found: {path}") from err
+    text, report = clean_fakebr_text(raw)
+    text = text.strip()
     if not text:
         raise MissingCounterpartError(f"empty file: {path}")
-    return text
+    return text, report
 
 
 def _read_faketruebr_fake(rows: Sequence[dict[str, str]], local_id: str) -> str:

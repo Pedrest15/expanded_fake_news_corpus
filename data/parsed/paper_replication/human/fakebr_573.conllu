@@ -118,7 +118,7 @@
 30	.	.	PUNCT	_	_	27	punct	_	_
 
 # sent_id = fakebr:573-5
-# text = Em primeiro lugar, temos o cidadão Alexandre de Moraes , que pode e deve exercer seu direito de opinar sobre o que ele achar conveniente [...] e nós até concordamos com suas críticas em relação à Globo.
+# text = Em primeiro lugar, temos o cidadão Alexandre de Moraes, que pode e deve exercer seu direito de opinar sobre o que ele achar conveniente [...] e nós até concordamos com suas críticas em relação à Globo.
 1	Em	em	ADP	_	_	3	case	_	_
 2	primeiro	primeiro	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	3	amod	_	_
 3	lugar	lugar	NOUN	_	Gender=Masc|Number=Sing	5	obl	_	SpaceAfter=No
@@ -128,7 +128,7 @@
 7	cidadão	cidadão	NOUN	_	Gender=Masc|Number=Sing	5	obj	_	_
 8	Alexandre	Alexandre	PROPN	_	_	7	nmod	_	_
 9	de	de	ADP	_	_	10	case	_	_
-10	Moraes	Moraes	PROPN	_	_	8	flat:name	_	_
+10	Moraes	Moraes	PROPN	_	_	8	flat:name	_	SpaceAfter=No
 11	,	,	PUNCT	_	_	13	punct	_	_
 12	que	que	PRON	_	PronType=Rel	13	nsubj	_	_
 13	pode	poder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	acl:relcl	_	_

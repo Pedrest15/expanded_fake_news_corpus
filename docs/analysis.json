@@ -1,13 +1,13 @@
 {
  "corpus": "FakeGen.BR",
  "experiment": "paper_replication",
- "built_at": "2026-09-14T16:27:32-03:00",
+ "built_at": "2026-09-15T10:22:32-03:00",
  "syllables": {
   "metrics": [
    {
     "metric": "syllables_per_sentence",
     "label": "Sílabas por sentença",
-    "human_mean": 43.598,
+    "human_mean": 43.58,
     "machine_mean": 78.247,
     "cohens_d": -2.194,
     "p_value": 5.1657788244971414e-06,
@@ -32,8 +32,8 @@
     "dataset": "fakebr_human",
     "label": "Fake.br · humano",
     "documents": 10,
-    "words": 2168,
-    "syllables_per_word": 2.165
+    "words": 2175,
+    "syllables_per_word": 2.163
    },
    {
     "dataset": "fakebr_machine",
@@ -65,7 +65,7 @@
     "label": "MATTR (janela de 50 palavras)",
     "human_mean": 0.813,
     "machine_mean": 0.874,
-    "cohens_d": -2.008,
+    "cohens_d": -2.018,
     "p_value": 3.4957794076130964e-06,
     "effect_size": "large"
    },
@@ -74,7 +74,7 @@
     "label": "Tipo/ocorrência bruta",
     "human_mean": 0.632,
     "machine_mean": 0.619,
-    "cohens_d": 0.197,
+    "cohens_d": 0.194,
     "p_value": 0.31040225614615824,
     "effect_size": "negligible"
    }
@@ -85,7 +85,7 @@
     "label": "Fake.br · humano",
     "documents": 10,
     "tokens": 2203,
-    "mattr": 0.827,
+    "mattr": 0.826,
     "type_token_ratio": 0.63
    },
    {
@@ -1352,7 +1352,7 @@
    },
    {
     "rank": 20,
-    "human_word": "hoje",
+    "human_word": "fim",
     "human_frequency": 6,
     "machine_word": "corrupção",
     "machine_frequency": 12
@@ -1362,9 +1362,9 @@
    {
     "dataset": "fakebr_human",
     "label": "Fake.br · humano",
-    "tokens": 1235,
-    "types": 872,
-    "type_token_ratio": 0.7061
+    "tokens": 1232,
+    "types": 868,
+    "type_token_ratio": 0.7045
    },
    {
     "dataset": "fakebr_machine",
@@ -1390,9 +1390,9 @@
    {
     "dataset": "human",
     "label": "Humano",
-    "tokens": 2017,
-    "types": 1301,
-    "type_token_ratio": 0.645
+    "tokens": 2014,
+    "types": 1297,
+    "type_token_ratio": 0.644
    },
    {
     "dataset": "machine",

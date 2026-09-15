@@ -1,7 +1,7 @@
 uid,source,group,dataset,model,sentences,words,syllables,syllables_per_sentence,syllables_per_word
 fakebr:1006,fakebr,human,fakebr_human,,8,178,364,45.5,2.044943820224719
 fakebr:1006,fakebr,machine,fakebr_machine,openai/gpt-4.1-mini-2025-04-14,15,457,1109,73.93333333333334,2.426695842450766
-fakebr:104,fakebr,human,fakebr_human,,42,549,1159,27.595238095238095,2.111111111111111
+fakebr:104,fakebr,human,fakebr_human,,43,556,1171,27.232558139534884,2.106115107913669
 fakebr:104,fakebr,machine,fakebr_machine,openai/gpt-4.1-mini-2025-04-14,9,338,855,95.0,2.529585798816568
 fakebr:1129,fakebr,human,fakebr_human,,14,234,517,36.92857142857143,2.2094017094017095
 fakebr:1129,fakebr,machine,fakebr_machine,openai/gpt-4.1-mini-2025-04-14,12,420,1078,89.83333333333333,2.566666666666667

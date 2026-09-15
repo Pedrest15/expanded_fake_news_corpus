@@ -6,10 +6,7 @@ S0021	7	venham	LmLEX	ver	vir
 S0022	7	cometa	LmLEX	cometar	cometer
 S0034	4	disseram	LmLEX	disseram	dizer
 S0048	2	tive	L1LEX	tover	ter
-S0050	1	A	LnoLEX	o	A
-S0050	1	A	FnoLEX	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	_
 S0057	11	pra	L1LEX	pra	para
-S0058	3	livre!	LrepTAG	LIVRE!	livre!
 S0067	7	pra	L1LEX	pra	para
 S0067	13	querido	L1LEX	querir	querer
 S0070	9	Procuradora-Geral	LrepTAG	Procuradora-GEral	Procuradora-Geral
@@ -113,8 +110,8 @@ S0485	3	refletem	L1LEX	refleter	refletir
 
 ==========================================================
 
-Lchanged - fixed: 87
-LnoLEX   - fixed: 3
+Lchanged - fixed: 85
+LnoLEX   - fixed: 2
 L1LEX    - fixed: 32
 LmLEX    - fixed: 31
 LunkTAG  - fixed: 0
@@ -122,9 +119,9 @@ LdaysW   - fixed: 0
 Lmonth   - fixed: 0
 LuAbbr   - fixed: 5
 Lord     - fixed: 0
-LrepTAG  - fixed: 16
-Fchanged - fixed: 25
-FnoLEX   - fixed: 11
+LrepTAG  - fixed: 15
+Fchanged - fixed: 24
+FnoLEX   - fixed: 10
 F1LEX    - fixed: 2
 FmLEX    - fixed: 3
 FunkTAG  - fixed: 0

@@ -1,7 +1,7 @@
 uid,source,group,dataset,model,tokens,types,type_token_ratio,mattr
 fakebr:1006,fakebr,human,fakebr_human,,182,118,0.6483516483516484,0.826015037593985
 fakebr:1006,fakebr,machine,fakebr_machine,openai/gpt-4.1-mini-2025-04-14,467,285,0.6102783725910065,0.8722488038277512
-fakebr:104,fakebr,human,fakebr_human,,557,291,0.5224416517055656,0.8326771653543307
+fakebr:104,fakebr,human,fakebr_human,,557,289,0.518850987432675,0.8288976377952756
 fakebr:104,fakebr,machine,fakebr_machine,openai/gpt-4.1-mini-2025-04-14,340,213,0.6264705882352941,0.8796563573883162
 fakebr:1129,fakebr,human,fakebr_human,,240,134,0.5583333333333333,0.7927748691099477
 fakebr:1129,fakebr,machine,fakebr_machine,openai/gpt-4.1-mini-2025-04-14,421,232,0.5510688836104513,0.8452150537634409

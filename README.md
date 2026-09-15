@@ -20,9 +20,9 @@ What the repository contains:
   (`fakegen paper`) instead feeds the whole true article to the prompt of
   Silva et al., reproduced verbatim, and only swaps the model.
 - **Linguistic analyses** — syllables, lexical diversity (MATTR), Zipf, SAGE,
-  LIWC, dependency-grammar rules and Enhanced-UD rules, all human vs. machine
-  on paired documents, run one at a time or through the `fakegen-analysis`
-  orchestrator.
+  LIWC, UPOS distribution, dependency-grammar rules and Enhanced-UD rules, all
+  human vs. machine on paired documents, run one at a time or through the
+  `fakegen-analysis` orchestrator.
 - **Syntactic parsing** — the Portparser v2 chain (LatinPipe + BERTimbau) and
   Grew EUD enrichment, producing the CoNLL-U the rule analyses read.
 - **A site** (`docs/`) browsing the generated texts and their characterisation.
@@ -311,8 +311,9 @@ and takes one line in the `ANALYSES` catalogue in
 
 ### Syntactic parsing and dependency rules
 
-The `grammar_rules` (basic-tree rules) and `eud_rules` (*enhanced*-edge rules)
-analyses read CoNLL-U from `data/parsed/<experiment>/`, produced once by the
+The `pos` (UPOS distribution), `grammar_rules` (basic-tree rules) and
+`eud_rules` (*enhanced*-edge rules) analyses read CoNLL-U from
+`data/parsed/<experiment>/`, produced once by the
 chain of the prior work — portSentencer → portTokenizer → LatinPipe with the
 Portparser v2 model → post-processing — and enriched with Enhanced UD by Grew:
 
@@ -395,7 +396,9 @@ uv run ruff check src && uv run ruff format --check src
 | [agents/paper_replication.py](src/expanded_fake_news_corpus/agents/paper_replication.py) | Paper replication: whole article → fake news with the original prompt |
 | [scripts/sample_paper_replication.py](scripts/sample_paper_replication.py) | Stratified sample (10 + 10, seed 42) for the replication |
 | [analysis/runner.py](src/expanded_fake_news_corpus/analysis/runner.py) | Orchestrator: analysis catalogue and batch execution (`fakegen-analysis`) |
+| [analysis/cleaning.py](src/expanded_fake_news_corpus/analysis/cleaning.py) | Fake.br cleaning rules (from the prior work's `adapt_fake.py`) |
 | [analysis/conllu.py](src/expanded_fake_news_corpus/analysis/conllu.py) | Reading CoNLL-U and locating the parsed corpus |
+| [analysis/pos.py](src/expanded_fake_news_corpus/analysis/pos.py) | UPOS distribution: pooled frequencies, χ²/Cramér's V, per-tag tests |
 | [analysis/grammar_rules.py](src/expanded_fake_news_corpus/analysis/grammar_rules.py) | Dependency rules: productivity, frequencies, discriminative TF-IDF |
 | [analysis/eud_rules.py](src/expanded_fake_news_corpus/analysis/eud_rules.py) | The same over the *enhanced* edges (EUD) |
 | [parsing/preprocess.py](src/expanded_fake_news_corpus/parsing/preprocess.py) | Text treatment before the sentencer and realignment after the tokenizer |
@@ -412,6 +415,11 @@ uv run ruff check src && uv run ruff format --check src
   from `link_t` (G1, Folha). Until then, the headlines generated for that corpus
   start from degraded text, which is worth recording in the description of
   FakeGen.BR.
+- The human Fake.br texts are cleaned before analysis with the rules of the
+  prior work's `adapt_fake.py` ([analysis/cleaning.py](src/expanded_fake_news_corpus/analysis/cleaning.py):
+  character whitelist, broken lines joined, spacing), minus two defects of the
+  original script — it dropped the first line of a joined pair and deleted
+  non-breaking spaces. The loader logs how many texts changed.
 - Some Fake.br files carry the title on the first line of the text. The prompt
   instructs the model to ignore it and write the headline from the body of the
   article, but this is worth checking in the initial calibration with `--limit`.

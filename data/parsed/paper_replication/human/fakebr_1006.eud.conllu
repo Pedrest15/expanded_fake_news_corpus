@@ -161,11 +161,11 @@
 38	.	.	PUNCT	_	_	10	punct	10:punct	_
 
 # sent_id = fakebr:1006-5
-# text = Foi uma decisão mesquinha , tramada em segredo ao longo de 9 meses com a Força Tarefa de Curitiba, e concluída após a forte reação da sociedade e do mundo jurídico à sentença injusta no caso do tríplex.
+# text = Foi uma decisão mesquinha, tramada em segredo ao longo de 9 meses com a Força Tarefa de Curitiba, e concluída após a forte reação da sociedade e do mundo jurídico à sentença injusta no caso do tríplex.
 1	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	cop	3:cop	_
 2	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	3	det	3:det	_
 3	decisão	decisão	NOUN	_	Gender=Fem|Number=Sing	0	root	0:root	_
-4	mesquinha	mesquinho	ADJ	_	Gender=Fem|Number=Sing	3	amod	3:amod	_
+4	mesquinha	mesquinho	ADJ	_	Gender=Fem|Number=Sing	3	amod	3:amod	SpaceAfter=No
 5	,	,	PUNCT	_	_	6	punct	6:punct	_
 6	tramada	tramar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	3	acl	3:acl	_
 7	em	em	ADP	_	_	8	case	8:case	_

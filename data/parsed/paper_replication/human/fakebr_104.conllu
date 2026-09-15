@@ -321,8 +321,8 @@
 3	.	.	PUNCT	_	_	2	punct	_	_
 
 # sent_id = fakebr:104-15
-# text = Conheço Aécio há mais de 30 anos.
-1	Conheço	conhecer	VERB	_	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	_	_
+# text = Conheço Aécio há mais de 30 anos.
+1	Conheço	conhecer	VERB	_	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	_	_
 2	Aécio	Aécio	PROPN	_	_	1	obj	_	_
 3	há	haver	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	advcl	_	_
 4	mais	mais	ADV	_	_	6	advmod	_	_
@@ -518,24 +518,24 @@
 10	.	.	PUNCT	_	_	1	punct	_	_
 
 # sent_id = fakebr:104-26
-# text = Este fim me preocupa muito.
+# text = Este fim me preocupa muito.
 1	Este	este	DET	_	Gender=Masc|Number=Sing|PronType=Dem	2	det	_	_
-2	fim	fim	NOUN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
+2	fim	fim	NOUN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
 3	me	me	PRON	_	Case=Dat|Number=Sing|Person=1|PronType=Prs	4	obj	_	_
 4	preocupa	preocupar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
 5	muito	muito	ADV	_	_	4	advmod	_	SpaceAfter=No
 6	.	.	PUNCT	_	_	4	punct	_	_
 
 # sent_id = fakebr:104-27
-# text = Nem tive coragem de perguntar que fim seria.
+# text = Nem tive coragem de perguntar que fim seria.
 1	Nem	nem	ADV	_	_	2	advmod	_	_
 2	tive	ter	VERB	_	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	_	_
 3	coragem	coragem	NOUN	_	Gender=Fem|Number=Sing	2	obj	_	_
 4	de	de	ADP	_	_	5	mark	_	_
 5	perguntar	perguntar	VERB	_	VerbForm=Inf	3	acl	_	_
 6	que	que	DET	_	PronType=Ind	7	det	_	_
-7	fim	fim	NOUN	_	Gender=Masc|Number=Sing	5	obj	_	_
-8	seria	seri	AUX	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	5	cop	_	SpaceAfter=No
+7	fim	fim	NOUN	_	Gender=Masc|Number=Sing	5	obj	_	_
+8	seria	ser	AUX	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	5	cop	_	SpaceAfter=No
 9	.	.	PUNCT	_	_	2	punct	_	_
 
 # sent_id = fakebr:104-28
@@ -545,8 +545,8 @@
 3	.	.	PUNCT	_	_	2	punct	_	_
 
 # sent_id = fakebr:104-29
-# text = A prisão da irmã acabou com o emocional dele.
-1	A	A	DET	_	_	2	det	_	_
+# text = A prisão da irmã acabou com o emocional dele.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
 2	prisão	prisão	NOUN	_	Gender=Fem|Number=Sing	6	nsubj	_	_
 3-4	da	_	_	_	_	_	_	_	_
 3	de	de	ADP	_	_	5	case	_	_
@@ -684,11 +684,11 @@
 17	.	.	PUNCT	_	_	2	punct	_	_
 
 # sent_id = fakebr:104-37
-# text = Deus nos livre!.
-1	Deus	Deus	PROPN	_	_	0	root	_	_
-2	nos	nos	PRON	_	Case=Acc|Number=Plur|Person=1|PronType=Prs	1	obj	_	_
-3	livre!	livre!	PUNCT	_	_	1	punct	_	SpaceAfter=No
-4	.	.	PUNCT	_	_	1	punct	_	_
+# text = Deus nos livre!
+1	Deus	Deus	PROPN	_	_	3	nsubj	_	_
+2	nos	nos	PRON	_	Case=Acc|Number=Plur|Person=1|PronType=Prs	3	obj	_	_
+3	livre	livrar	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	SpaceAfter=No
+4	!	!	PUNCT	_	_	3	punct	_	_
 
 # sent_id = fakebr:104-38
 # text = O DEPUTADO.
@@ -697,8 +697,8 @@
 3	.	.	PUNCT	_	_	2	punct	_	_
 
 # sent_id = fakebr:104-39
-# text = Estou seriamente preocupado com o Aécio.
-1	Estou	estar	AUX	_	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	cop	_	_
+# text = Estou seriamente preocupado com o Aécio.
+1	Estou	estar	AUX	_	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	cop	_	_
 2	seriamente	seriamente	ADV	_	_	3	advmod	_	_
 3	preocupado	preocupado	ADJ	_	Gender=Masc|Number=Sing|VerbForm=Part	0	root	_	_
 4	com	com	ADP	_	_	6	case	_	_
@@ -828,12 +828,12 @@
 16	.	.	PUNCT	_	_	6	punct	_	_
 
 # sent_id = fakebr:104-47
-# text = Espero que ele suporte esta dor.
+# text = Espero que ele suporte esta dor.
 1	Espero	esperar	VERB	_	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	_	_
 2	que	que	SCONJ	_	_	4	mark	_	_
 3	ele	ele	PRON	_	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	nsubj	_	_
 4	suporte	suportar	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	ccomp	_	_
 5	esta	este	DET	_	Gender=Fem|Number=Sing|PronType=Dem	6	det	_	_
-6	dor	dor	NOUN	_	Gender=Masc|Number=Sing	4	obj	_	SpaceAfter=No
+6	dor	dor	NOUN	_	Gender=Masc|Number=Sing	4	obj	_	SpaceAfter=No
 7	.	.	PUNCT	_	_	1	punct	_	_
 

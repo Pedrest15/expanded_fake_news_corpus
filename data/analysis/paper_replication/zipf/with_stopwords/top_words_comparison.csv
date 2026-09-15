@@ -1,6 +1,6 @@
 rank,fakebr_human_word,fakebr_human_frequency,fakebr_machine_word,fakebr_machine_frequency,faketruebr_human_word,faketruebr_human_frequency,faketruebr_machine_word,faketruebr_machine_frequency,human_word,human_frequency,machine_word,machine_frequency
 1,de,106,de,203,de,62,de,136,de,168,de,339
-2,a,86,a,134,e,52,a,121,a,129,a,255
+2,a,87,a,134,e,52,a,121,a,130,a,255
 3,o,76,que,114,a,43,que,93,o,106,que,207
 4,que,58,o,107,o,30,e,89,e,95,e,195
 5,do,45,e,106,que,27,o,84,que,85,o,191

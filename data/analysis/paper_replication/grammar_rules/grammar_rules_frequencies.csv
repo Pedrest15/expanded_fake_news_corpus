@@ -2,12 +2,12 @@ rule,human_count,machine_count,human_docs,machine_docs,total_count
 NOUN(*),866,1943,20,20,2809
 ADP(*),681,1494,20,20,2175
 DET(*),632,1274,20,20,1906
-PUNCT(*),487,856,20,20,1343
+PUNCT(*),486,856,20,20,1342
 ADJ(*),186,784,20,20,970
 VERB(*),276,667,20,20,943
-PROPN(*),237,612,17,20,849
+PROPN(*),238,612,17,20,850
 ADV(*),153,285,19,20,438
-*(VERB),171,235,20,20,406
+*(VERB),172,235,20,20,407
 PRON(*),172,171,20,20,343
 CCONJ(*),116,222,20,20,338
 AUX(*),120,190,19,20,310
@@ -70,243 +70,246 @@ X(*),13,5,6,3,18
 "VERB(PRON/nsubj, *, VERB/xcomp)",0,15,0,11,15
 "PROPN(ADP/case, DET/det, *, PROPN/flat:name, PROPN/flat:name)",2,12,2,8,14
 "NOUN(DET/det, *, NOUN/nmod, NOUN/nmod)",5,8,5,6,13
-"ADV(*, PRON/obl, PUNCT/punct)",0,12,0,12,12
-"NOUN(PUNCT/punct, *)",9,3,6,3,12
-"NOUN(CCONJ/cc, *, NOUN/nmod)",4,8,4,6,12
 "NOUN(*, NOUN/conj)",1,11,1,10,12
-"ADP(*, SCONJ/fixed)",3,8,3,7,11
-"PROPN(ADP/case, *, PROPN/flat:name)",5,6,4,6,11
-"PROPN(CCONJ/cc, *)",2,9,2,5,11
-"PROPN(DET/det, *, PROPN/flat:name)",4,7,3,7,11
+"NOUN(CCONJ/cc, *, NOUN/nmod)",4,8,4,6,12
+"NOUN(PUNCT/punct, *)",9,3,6,3,12
+"ADV(*, PRON/obl, PUNCT/punct)",0,12,0,12,12
 "VERB(ADP/mark, *, NOUN/obj, VERB/conj)",3,8,3,5,11
+"PROPN(CCONJ/cc, *)",2,9,2,5,11
+"ADP(*, SCONJ/fixed)",3,8,3,7,11
+"PROPN(DET/det, *, PROPN/flat:name)",4,7,3,7,11
+"PROPN(ADP/case, *, PROPN/flat:name)",5,6,4,6,11
 "NOUN(CCONJ/cc, DET/det, *, NOUN/nmod)",1,9,1,7,10
 "VERB(ADP/mark, *, NOUN/obj, NOUN/obl)",3,7,3,6,10
-"NOUN(ADJ/amod, *)",3,7,3,5,10
-"NOUN(ADP/case, DET/det, *, PUNCT/punct)",3,7,3,6,10
-"PROPN(*, PROPN/flat:name, PROPN/flat:name)",1,9,1,8,10
-"SYM(NUM/nummod, *, NOUN/nmod)",9,1,4,1,10
 "NOUN(DET/det, *, PROPN/nmod, NOUN/nmod)",3,7,2,6,10
 "PRON(*, VERB/acl:relcl)",9,1,6,1,10
 "NOUN(DET/det, *, VERB/acl:relcl)",4,6,3,5,10
+"NOUN(ADJ/amod, *)",3,7,3,5,10
+"SYM(NUM/nummod, *, NOUN/nmod)",9,1,4,1,10
+"PROPN(*, PROPN/flat:name, PROPN/flat:name)",1,9,1,8,10
+"NOUN(ADP/case, DET/det, *, PUNCT/punct)",3,7,3,6,10
 "NOUN(ADP/case, SYM/nmod, NUM/nummod, *)",2,7,1,3,9
-"NOUN(ADP/case, *, ADJ/amod, NOUN/nmod)",1,8,1,6,9
+"NOUN(ADP/case, DET/det, *, VERB/acl)",1,8,1,8,9
 "NOUN(ADP/case, ADJ/amod, *)",3,6,3,5,9
 "NUM(PUNCT/punct, *, PUNCT/punct)",4,5,3,5,9
+"NOUN(ADP/case, *, ADJ/amod, NOUN/nmod)",1,8,1,6,9
 "ADV(*, NOUN/obl)",0,9,0,8,9
-"NOUN(ADP/case, DET/det, *, VERB/acl)",1,8,1,8,9
-"ADV(*, NOUN/obl, PUNCT/punct)",1,7,1,5,8
-"ADV(ADP/case, *)",5,3,3,3,8
 "NOUN(DET/det, ADJ/amod, *, NOUN/nmod)",0,8,0,6,8
-"NOUN(ADP/case, DET/det, *, ADJ/amod, ADJ/amod)",0,8,0,7,8
-"PROPN(PUNCT/punct, *)",4,4,3,3,8
 "NOUN(ADP/case, DET/det, *, VERB/acl:relcl)",2,6,2,5,8
-"VERB(ADP/mark, *, NOUN/obl)",7,1,4,1,8
+"NOUN(ADP/case, DET/det, DET/det, *)",6,2,4,2,8
+"ADV(*, NOUN/obl, PUNCT/punct)",1,7,1,5,8
+"PROPN(PUNCT/punct, *)",4,4,3,3,8
+"NOUN(ADP/case, DET/det, *, ADJ/amod, ADJ/amod)",0,8,0,7,8
+"VERB(*, NOUN/obj, NOUN/obl)",3,5,3,5,8
 "NOUN(ADP/case, *, ADJ/amod, VERB/acl)",0,8,0,5,8
 "NOUN(ADP/case, *, NUM/nmod)",5,3,4,3,8
-"VERB(*, NOUN/obj, NOUN/obl)",3,5,3,5,8
-"NOUN(ADP/case, DET/det, DET/det, *)",6,2,4,2,8
-"VERB(PUNCT/punct, *, VERB/ccomp)",1,6,1,6,7
-"NOUN(ADJ/amod, *, NOUN/nmod)",2,5,2,5,7
-"VERB(*, PROPN/obl:agent)",3,4,2,3,7
-"NOUN(ADP/case, DET/det, *, NUM/appos)",1,6,1,6,7
-"PROPN(PUNCT/punct, *, PROPN/flat:name, PUNCT/punct)",0,7,0,7,7
-"PROPN(ADP/case, DET/det, *, PROPN/flat:name, PROPN/flat:name, PROPN/appos)",0,7,0,6,7
-"NOUN(ADP/case, DET/det, ADJ/amod, *, NOUN/nmod)",1,6,1,5,7
-"NUM(CCONJ/cc, *)",2,5,1,5,7
-"VERB(NOUN/nsubj, *, NOUN/obj, PUNCT/punct)",3,4,3,4,7
-"VERB(SCONJ/mark, *, NOUN/obj)",1,6,1,4,7
+"VERB(ADP/mark, *, NOUN/obl)",7,1,4,1,8
+"ADV(ADP/case, *)",5,3,3,3,8
+"NOUN(DET/det, *, ADJ/amod, NOUN/nmod, NOUN/nmod)",0,7,0,5,7
 "NOUN(PUNCT/punct, *, PUNCT/punct)",3,4,2,3,7
 "NUM(*, NUM/flat)",2,5,1,4,7
-"NOUN(DET/det, *, ADJ/amod, NOUN/nmod, NOUN/nmod)",0,7,0,5,7
-*(PROPN),4,3,2,3,7
+"NUM(CCONJ/cc, *)",2,5,1,5,7
+"PROPN(PUNCT/punct, *, PROPN/flat:name, PUNCT/punct)",0,7,0,7,7
+"VERB(PUNCT/punct, *, VERB/ccomp)",1,6,1,6,7
+"PROPN(ADP/case, DET/det, *, PROPN/flat:name, PROPN/flat:name, PROPN/appos)",0,7,0,6,7
+"NOUN(ADP/case, DET/det, ADJ/amod, *, NOUN/nmod)",1,6,1,5,7
+"NOUN(ADP/case, DET/det, *, NUM/appos)",1,6,1,6,7
+"VERB(SCONJ/mark, *, NOUN/obj)",1,6,1,4,7
+"VERB(NOUN/nsubj, *, NOUN/obj, PUNCT/punct)",3,4,3,4,7
+"NOUN(ADJ/amod, *, NOUN/nmod)",2,5,2,5,7
+"VERB(*, PROPN/obl:agent)",3,4,2,3,7
 "NOUN(ADP/case, DET/det, *, NOUN/conj)",4,3,3,2,7
-"NOUN(ADP/case, *, ADJ/amod, VERB/acl:relcl)",0,6,0,5,6
-"NOUN(*, ADJ/amod, VERB/acl:relcl)",1,5,1,5,6
-"VERB(PROPN/nsubj, *, NOUN/obj, PUNCT/punct)",3,3,3,3,6
-"VERB(NOUN/nsubj, *, NOUN/obj, VERB/advcl, PUNCT/punct)",1,5,1,5,6
-"NOUN(ADP/case, DET/det, *, ADJ/amod, PROPN/nmod)",3,3,2,2,6
-"NOUN(DET/det, *, ADJ/amod, PROPN/nmod)",1,5,1,4,6
-"NOUN(DET/det, *, ADJ/amod, ADJ/amod)",0,6,0,5,6
-"NOUN(ADP/case, DET/det, *, NOUN/nmod, NOUN/nmod)",3,3,2,3,6
-"VERB(ADV/advmod, NOUN/nsubj, *, VERB/ccomp, PUNCT/punct)",0,6,0,5,6
-"NOUN(ADP/case, *, NOUN/conj, NOUN/nmod)",3,3,3,3,6
-"VERB(ADP/mark, *)",3,3,3,3,6
-"VERB(ADP/mark, *, NOUN/obj, VERB/advcl)",0,6,0,4,6
-"VERB(*, PROPN/obl)",3,3,3,3,6
-"NOUN(*, ADJ/amod, PROPN/nmod)",0,6,0,5,6
 "ADV(ADV/advmod, *)",3,3,3,3,6
-"VERB(SCONJ/mark, NOUN/nsubj, *, NOUN/obj)",2,4,2,3,6
-"VERB(PROPN/nsubj, *, NOUN/obj, VERB/advcl, PUNCT/punct)",2,4,2,4,6
+"NOUN(ADP/case, DET/det, *, NOUN/nmod, NOUN/nmod)",3,3,2,3,6
+"VERB(*, PROPN/obl)",3,3,3,3,6
+"VERB(ADP/mark, *)",3,3,3,3,6
+"VERB(ADV/advmod, NOUN/nsubj, *, VERB/ccomp, PUNCT/punct)",0,6,0,5,6
+"NOUN(ADP/case, *, ADJ/amod, VERB/acl:relcl)",0,6,0,5,6
+"NOUN(ADP/case, *, NOUN/conj, NOUN/nmod)",3,3,3,3,6
+"VERB(ADP/mark, *, NOUN/obj, VERB/advcl)",0,6,0,4,6
 "NOUN(ADP/case, DET/det, *, NOUN/nmod, PROPN/nmod)",1,5,1,4,6
+"VERB(NOUN/nsubj, *, NOUN/obj, VERB/advcl, PUNCT/punct)",1,5,1,5,6
 "VERB(PUNCT/punct, *, NOUN/obj, NOUN/obl)",0,6,0,5,6
-"NOUN(DET/det, *, PROPN/nmod, NOUN/conj)",0,5,0,5,5
-"NOUN(PUNCT/punct, *, VERB/acl:relcl)",0,5,0,5,5
-"NUM(PUNCT/punct, *)",4,1,2,1,5
-"NOUN(*, NOUN/nmod, NOUN/nmod)",2,3,1,2,5
-"NOUN(PUNCT/punct, ADP/case, *, NOUN/nmod)",1,4,1,4,5
-"NOUN(*, ADJ/amod, ADJ/amod)",0,5,0,3,5
-"NOUN(PUNCT/punct, *, ADJ/amod)",3,2,2,2,5
+"VERB(PROPN/nsubj, *, NOUN/obj, VERB/advcl, PUNCT/punct)",2,4,2,4,6
+"NOUN(ADP/case, DET/det, *, ADJ/amod, PROPN/nmod)",3,3,2,2,6
+"VERB(PROPN/nsubj, *, NOUN/obj, PUNCT/punct)",3,3,3,3,6
+"NOUN(DET/det, *, ADJ/amod, ADJ/amod)",0,6,0,5,6
+"NOUN(DET/det, *, ADJ/amod, PROPN/nmod)",1,5,1,4,6
+*(PROPN),3,3,2,3,6
+"NOUN(*, ADJ/amod, PROPN/nmod)",0,6,0,5,6
+"NOUN(*, ADJ/amod, VERB/acl:relcl)",1,5,1,5,6
+"VERB(SCONJ/mark, NOUN/nsubj, *, NOUN/obj)",2,4,2,3,6
+"VERB(PUNCT/punct, *, NOUN/obl)",0,5,0,4,5
+"ADV(*, PUNCT/punct)",0,5,0,5,5
+"PROPN(ADP/case, *, PROPN/conj)",1,4,1,3,5
+"NOUN(ADP/case, NUM/nummod, *, NOUN/nmod)",4,1,4,1,5
 "NOUN(CCONJ/cc, DET/det, *, ADJ/amod)",2,3,1,2,5
 "NOUN(DET/det, DET/det, *, NOUN/nmod)",4,1,2,1,5
-"NOUN(PUNCT/punct, *, NOUN/nmod, PUNCT/punct)",5,0,5,0,5
-"NOUN(ADP/case, NUM/nummod, *, NOUN/nmod)",4,1,4,1,5
-"ADV(*, PUNCT/punct)",0,5,0,5,5
-"VERB(*, VERB/advcl)",2,3,2,3,5
-"VERB(PUNCT/punct, CCONJ/cc, *, NOUN/obj)",1,4,1,3,5
-"VERB(SCONJ/mark, NOUN/nsubj, *, VERB/xcomp)",1,4,1,4,5
-"ADP(*, DET/fixed)",3,2,3,2,5
-"NOUN(ADP/case, ADJ/amod, *, NOUN/nmod)",1,4,1,4,5
-"VERB(PUNCT/punct, *, ADV/advmod, NOUN/obj)",1,4,1,4,5
 "NOUN(DET/det, ADJ/amod, *)",1,4,1,4,5
-"NOUN(ADP/case, DET/det, *, NOUN/nmod, VERB/acl)",2,3,2,3,5
-"NOUN(ADP/case, DET/det, *, ADJ/amod, VERB/acl:relcl)",0,5,0,3,5
-"NOUN(ADP/case, DET/det, *, NOUN/nmod, PUNCT/punct)",1,4,1,4,5
-"NOUN(ADP/case, *, ADJ/amod, NOUN/conj)",0,5,0,5,5
-"PROPN(ADP/case, *, PROPN/conj)",1,4,1,3,5
-"VERB(PUNCT/punct, *, NOUN/obl)",0,5,0,4,5
-"VERB(CCONJ/cc, *)",2,3,2,2,5
-"NOUN(ADP/case, *, ADJ/amod, ADJ/amod)",0,5,0,5,5
+"NOUN(PUNCT/punct, *, ADJ/amod)",3,2,2,2,5
+"NOUN(PUNCT/punct, *, NOUN/nmod, PUNCT/punct)",5,0,5,0,5
+"NOUN(PUNCT/punct, *, VERB/acl:relcl)",0,5,0,5,5
+"NOUN(PUNCT/punct, ADP/case, *, NOUN/nmod)",1,4,1,4,5
+"NUM(PUNCT/punct, *)",4,1,2,1,5
+"VERB(PUNCT/punct, CCONJ/cc, *, NOUN/obj)",1,4,1,3,5
+"ADP(*, DET/fixed)",3,2,3,2,5
 "VERB(ADP/mark, *, ADV/advmod, NOUN/obj)",1,4,1,4,5
-"VERB(SCONJ/mark, NOUN/nsubj:pass, AUX/aux:pass, *, NOUN/obl)",1,3,1,3,4
-"NOUN(DET/det, *, NOUN/nmod, VERB/acl:relcl)",1,3,1,3,4
-"VERB(PUNCT/punct, *, NOUN/obj, VERB/conj)",0,4,0,2,4
-"NOUN(ADP/case, DET/det, DET/det, *, NOUN/nmod)",3,1,3,1,4
-"NOUN(CCONJ/cc, ADP/case, DET/det, *, NOUN/nmod)",1,3,1,3,4
-"NOUN(ADP/case, DET/det, *, ADJ/amod, NOUN/conj)",1,3,1,3,4
-"VERB(*, ADV/advmod)",1,3,1,3,4
-"NOUN(ADP/case, DET/det, *, ADJ/amod, NOUN/nmod, VERB/acl:relcl)",0,4,0,4,4
-"NOUN(ADP/case, DET/det, *, ADJ/amod, PUNCT/punct)",0,4,0,4,4
-"NOUN(ADP/case, DET/det, *, NOUN/nmod, VERB/acl:relcl)",0,4,0,4,4
-"ADP(*, NOUN/fixed, ADP/fixed)",0,4,0,4,4
-"VERB(ADV/advmod, NOUN/nsubj, *, NOUN/obj, PUNCT/punct)",0,4,0,3,4
-"PROPN(PUNCT/punct, *, PROPN/flat:name)",1,3,1,3,4
-"VERB(*, VERB/ccomp)",2,2,2,2,4
-"VERB(CCONJ/cc, *, VERB/ccomp)",1,3,1,3,4
-"ADV(*, PROPN/obl)",0,4,0,3,4
-"NOUN(ADP/case, DET/det, *, PROPN/nmod, VERB/acl:relcl)",0,4,0,3,4
-"PROPN(DET/det, *, PROPN/flat:name, PROPN/flat:name)",1,3,1,3,4
-"VERB(PRON/nsubj, *, NOUN/obl)",2,2,2,2,4
-"NOUN(DET/det, *, NOUN/nmod, PROPN/appos)",0,4,0,4,4
-"ADV(PUNCT/punct, *, PUNCT/punct)",3,1,3,1,4
-"ADV(PUNCT/punct, *, NOUN/obl)",0,4,0,4,4
-"ADV(PUNCT/punct, *, VERB/acl)",0,4,0,4,4
+"NOUN(ADP/case, ADJ/amod, *, NOUN/nmod)",1,4,1,4,5
+"NOUN(*, NOUN/nmod, NOUN/nmod)",2,3,1,2,5
+"NOUN(ADP/case, DET/det, *, NOUN/nmod, PUNCT/punct)",1,4,1,4,5
+"NOUN(ADP/case, DET/det, *, ADJ/amod, VERB/acl:relcl)",0,5,0,3,5
+"NOUN(*, ADJ/amod, ADJ/amod)",0,5,0,3,5
+"NOUN(ADP/case, DET/det, *, NOUN/nmod, VERB/acl)",2,3,2,3,5
+"VERB(*, VERB/advcl)",2,3,2,3,5
+"VERB(PUNCT/punct, *, ADV/advmod, NOUN/obj)",1,4,1,4,5
+"NOUN(ADP/case, *, ADJ/amod, ADJ/amod)",0,5,0,5,5
+"NOUN(ADP/case, *, ADJ/amod, NOUN/conj)",0,5,0,5,5
+"VERB(CCONJ/cc, *)",2,3,2,2,5
+"NOUN(DET/det, *, PROPN/nmod, NOUN/conj)",0,5,0,5,5
+"VERB(SCONJ/mark, NOUN/nsubj, *, VERB/xcomp)",1,4,1,4,5
 "VERB(PUNCT/punct, PRON/nsubj, *, NOUN/obj)",0,4,0,4,4
-"NOUN(PUNCT/punct, *, VERB/acl)",2,2,1,2,4
-"VERB(NOUN/obl, NOUN/nsubj, *, NOUN/obj, PUNCT/punct)",2,2,2,2,4
-"NUM(*, NOUN/nmod)",3,1,2,1,4
-"NOUN(*, NOUN/nmod, NOUN/conj)",1,3,1,3,4
-"NOUN(PUNCT/punct, ADP/case, DET/det, *, VERB/acl)",2,2,2,2,4
-"VERB(NOUN/nsubj, *, VERB/xcomp, PUNCT/punct)",3,1,3,1,4
-"ADV(ADP/case, *, NOUN/obl)",1,3,1,3,4
-"PRON(ADP/case, *, VERB/acl:relcl)",2,2,2,2,4
-"NOUN(*, ADJ/acl)",2,2,2,2,4
+"NOUN(CCONJ/cc, ADP/case, DET/det, *, NOUN/nmod)",1,3,1,3,4
+"NOUN(DET/det, *, NOUN/nmod, VERB/acl:relcl)",1,3,1,3,4
 "ADJ(*, PROPN/obl)",0,4,0,4,4
-"NOUN(DET/det, *, NOUN/conj)",0,4,0,4,4
-"NOUN(CCONJ/cc, DET/det, *)",2,2,2,1,4
 "VERB(NOUN/nsubj, *, NOUN/obj, NOUN/obl, PUNCT/punct)",1,3,1,3,4
-"NOUN(*, VERB/acl:relcl)",1,3,1,3,4
-"VERB(CCONJ/cc, *, NOUN/obl)",3,1,3,1,4
+"VERB(PRON/nsubj, *, NOUN/obl)",2,2,2,2,4
+"NOUN(ADP/case, DET/det, DET/det, *, NOUN/nmod)",3,1,3,1,4
+"VERB(PUNCT/punct, *, NOUN/obj, VERB/conj)",0,4,0,2,4
 "VERB(ADV/advmod, *)",0,4,0,4,4
 "NOUN(PUNCT/punct, ADP/case, *, PUNCT/punct)",2,2,2,2,4
-"VERB(VERB/ccomp:speech, *, NOUN/nsubj, PUNCT/punct)",1,2,1,2,3
-"VERB(PUNCT/punct, PRON/nsubj, *, NOUN/obj, NOUN/obl)",0,3,0,2,3
-"VERB(SCONJ/mark, PRON/nsubj, *, NOUN/obj)",2,1,1,1,3
-"VERB(VERB/advcl, *, NOUN/obl, PUNCT/punct)",3,0,1,0,3
-"VERB(PUNCT/punct, PRON/nsubj:pass, AUX/aux, AUX/aux:pass, *, VERB/advcl)",0,3,0,3,3
-"ADV(PUNCT/punct, *, VERB/acl, PUNCT/punct)",0,3,0,3,3
-"NOUN(DET/det, *, NOUN/nmod, NOUN/conj)",1,2,1,2,3
-"VERB(SCONJ/mark, PROPN/nsubj, *, NOUN/obj, VERB/advcl)",1,2,1,2,3
-"ADJ(*, VERB/acl)",1,2,1,1,3
-"VERB(PROPN/nsubj, AUX/aux, *, NOUN/obj, VERB/advcl, PUNCT/punct)",1,2,1,2,3
-"VERB(PROPN/nsubj, *, VERB/ccomp, PUNCT/punct)",1,2,1,2,3
-"VERB(PROPN/nsubj, *, VERB/xcomp, PUNCT/punct)",3,0,2,0,3
-"VERB(PROPN/nsubj, *, NOUN/obj, VERB/conj, PUNCT/punct)",0,3,0,3,3
-"NUM(ADP/case, *, NUM/conj)",1,2,1,2,3
-"NOUN(PUNCT/punct, ADP/case, DET/det, *, PUNCT/punct)",0,3,0,3,3
-"NOUN(*, PRON/nmod)",2,1,2,1,3
-"VERB(NOUN/nsubj, AUX/aux, *, NOUN/obj, PUNCT/punct)",1,2,1,2,3
-"NOUN(CCONJ/cc, *, PROPN/nmod)",0,3,0,3,3
-"NOUN(CCONJ/cc, ADP/case, DET/det, *, ADJ/amod)",2,1,2,1,3
-"NOUN(PUNCT/punct, *, PROPN/nmod, PUNCT/punct)",1,2,1,2,3
-"NOUN(PUNCT/punct, ADP/case, *, ADJ/amod)",0,3,0,3,3
-"NOUN(*, ADJ/amod, VERB/acl)",0,3,0,3,3
-"NOUN(*, ADJ/amod, NOUN/nmod, VERB/acl)",0,3,0,3,3
-"NOUN(*, ADJ/amod, NOUN/conj)",0,3,0,3,3
-"NOUN(PUNCT/punct, *, NOUN/nmod)",1,2,1,1,3
-"VERB(NOUN/obl, PROPN/nsubj, *, VERB/ccomp, PUNCT/punct)",1,2,1,2,3
+"VERB(CCONJ/cc, *, VERB/ccomp)",1,3,1,3,4
+"VERB(NOUN/obl, NOUN/nsubj, *, NOUN/obj, PUNCT/punct)",2,2,2,2,4
+"NOUN(PUNCT/punct, ADP/case, DET/det, *, VERB/acl)",2,2,2,2,4
+"VERB(CCONJ/cc, *, NOUN/obl)",3,1,3,1,4
+"NOUN(*, VERB/acl:relcl)",1,3,1,3,4
+"VERB(ADV/advmod, NOUN/nsubj, *, NOUN/obj, PUNCT/punct)",0,4,0,3,4
+"NOUN(PUNCT/punct, *, VERB/acl)",2,2,1,2,4
+"NOUN(CCONJ/cc, DET/det, *)",2,2,2,1,4
+"PRON(ADP/case, *, VERB/acl:relcl)",2,2,2,2,4
+"NUM(*, NOUN/nmod)",3,1,2,1,4
+"ADP(*, NOUN/fixed, ADP/fixed)",0,4,0,4,4
+"NOUN(ADP/case, DET/det, *, ADJ/amod, NOUN/conj)",1,3,1,3,4
+"VERB(NOUN/nsubj, *, VERB/xcomp, PUNCT/punct)",3,1,3,1,4
+"NOUN(*, NOUN/nmod, NOUN/conj)",1,3,1,3,4
+"ADV(PUNCT/punct, *, VERB/acl)",0,4,0,4,4
+"VERB(*, ADV/advmod)",1,3,1,3,4
+"NOUN(ADP/case, DET/det, *, PROPN/nmod, VERB/acl:relcl)",0,4,0,3,4
+"NOUN(ADP/case, DET/det, *, ADJ/amod, PUNCT/punct)",0,4,0,4,4
+"NOUN(*, ADJ/acl)",2,2,2,2,4
+"ADV(PUNCT/punct, *, PUNCT/punct)",3,1,3,1,4
+"ADV(PUNCT/punct, *, NOUN/obl)",0,4,0,4,4
+"VERB(SCONJ/mark, NOUN/nsubj:pass, AUX/aux:pass, *, NOUN/obl)",1,3,1,3,4
+"NOUN(DET/det, *, NOUN/conj)",0,4,0,4,4
+"NOUN(DET/det, *, NOUN/nmod, PROPN/appos)",0,4,0,4,4
+"NOUN(ADP/case, DET/det, *, NOUN/nmod, VERB/acl:relcl)",0,4,0,4,4
+"NOUN(ADP/case, DET/det, *, ADJ/amod, NOUN/nmod, VERB/acl:relcl)",0,4,0,4,4
+"ADV(ADP/case, *, NOUN/obl)",1,3,1,3,4
+"PROPN(PUNCT/punct, *, PROPN/flat:name)",1,3,1,3,4
+"PROPN(DET/det, *, PROPN/flat:name, PROPN/flat:name)",1,3,1,3,4
+"VERB(*, VERB/ccomp)",2,2,2,2,4
+"ADV(*, PROPN/obl)",0,4,0,3,4
 "NOUN(CCONJ/cc, DET/det, *, PROPN/nmod)",2,1,2,1,3
-"VERB(PRON/nsubj, ADV/advmod, *, NOUN/obj)",2,1,2,1,3
+"VERB(VERB/advcl, *, NOUN/obl, PUNCT/punct)",3,0,1,0,3
+"NOUN(DET/det, *, NOUN/nmod, VERB/acl)",0,3,0,3,3
+"VERB(PUNCT/punct, PRON/nsubj, *, NOUN/obj, NOUN/obl)",0,3,0,2,3
 "NOUN(CCONJ/cc, *, ADJ/amod, NOUN/nmod)",0,3,0,2,3
-"NOUN(DET/det, DET/det, *)",3,0,2,0,3
+"NOUN(*, ADJ/amod, NOUN/conj)",0,3,0,3,3
+"VERB(NOUN/obl, PROPN/nsubj, *, VERB/ccomp, PUNCT/punct)",1,2,1,2,3
 "VERB(PUNCT/punct, PRON/nsubj, *, VERB/xcomp)",1,2,1,2,3
-"VERB(NOUN/nsubj, *, ADJ/ccomp, PUNCT/punct)",0,3,0,3,3
-"PROPN(*, NOUN/nmod)",2,1,1,1,3
+"ADJ(*, NOUN/conj)",1,2,1,2,3
+"VERB(PROPN/nsubj, *, NOUN/obj, VERB/conj, PUNCT/punct)",0,3,0,3,3
 "PROPN(*, PROPN/flat:name, PUNCT/punct)",0,3,0,3,3
-"VERB(ADP/mark, *, NOUN/obj, ADV/advmod)",1,2,1,2,3
-"PROPN(*, PROPN/flat:name, NOUN/appos)",2,1,2,1,3
-"VERB(NOUN/nsubj, *, NOUN/obj, VERB/conj, PUNCT/punct)",1,2,1,2,3
-"VERB(NOUN/ccomp:speech, *, NOUN/nsubj, PUNCT/punct)",1,2,1,2,3
 "NOUN(ADP/case, DET/det, ADJ/amod, *, VERB/acl)",0,3,0,3,3
+"PROPN(*, NOUN/nmod)",2,1,1,1,3
+"VERB(ADP/mark, *, PRON/obj)",2,1,2,1,3
+"NUM(ADP/case, *, NUM/conj)",1,2,1,2,3
+"VERB(NOUN/nsubj, *, ADJ/ccomp, PUNCT/punct)",0,3,0,3,3
+"VERB(NOUN/ccomp:speech, *, NOUN/nsubj, PUNCT/punct)",1,2,1,2,3
+"PROPN(*, PROPN/flat:name, NOUN/appos)",2,1,2,1,3
+"NOUN(CCONJ/cc, ADP/case, DET/det, *, ADJ/amod)",2,1,2,1,3
+"NOUN(PUNCT/punct, ADP/case, *, ADJ/amod)",0,3,0,3,3
+"NOUN(PUNCT/punct, *, PROPN/nmod, PUNCT/punct)",1,2,1,2,3
+"NOUN(CCONJ/cc, *, PROPN/nmod)",0,3,0,3,3
 "VERB(CCONJ/cc, *, NOUN/obj, NOUN/obl)",1,2,1,1,3
-"VERB(PUNCT/punct, CCONJ/cc, *, VERB/xcomp)",1,2,1,2,3
+"NOUN(PUNCT/punct, *, NOUN/nmod)",1,2,1,1,3
+"NOUN(PUNCT/punct, ADP/case, DET/det, *, PUNCT/punct)",0,3,0,3,3
+"NOUN(*, ADJ/amod, NOUN/nmod, VERB/acl)",0,3,0,3,3
+"NOUN(*, ADJ/amod, VERB/acl)",0,3,0,3,3
+"ADJ(*, VERB/acl)",1,2,1,1,3
+"VERB(VERB/ccomp:speech, *, NOUN/nsubj, PUNCT/punct)",1,2,1,2,3
+"NOUN(DET/det, *, NOUN/nmod, PROPN/nmod)",1,2,1,2,3
+"PROPN(CCONJ/cc, *, PROPN/flat:name)",1,2,1,2,3
+"PROPN(ADP/case, DET/det, *, PROPN/flat:name, PROPN/appos)",0,3,0,3,3
+"NOUN(ADP/case, DET/det, ADJ/amod, *, NOUN/nmod, NOUN/nmod)",1,2,1,2,3
 "VERB(ADP/mark, *, ADV/advmod)",3,0,1,0,3
 "NOUN(ADP/case, *, NOUN/nmod, VERB/acl:relcl)",0,3,0,3,3
-"NOUN(ADP/case, DET/det, ADJ/amod, *, NOUN/nmod, NOUN/nmod)",1,2,1,2,3
-"VERB(*, VERB/ccomp, PUNCT/punct)",3,0,1,0,3
-"PROPN(CCONJ/cc, *, PROPN/flat:name)",1,2,1,2,3
+"VERB(ADP/mark, *, NOUN/obj, ADV/advmod)",1,2,1,2,3
 "PROPN(ADP/case, DET/det, *, PROPN/flat:name, PROPN/conj)",0,3,0,2,3
-"PROPN(ADP/case, DET/det, *, PROPN/flat:name, PROPN/appos)",0,3,0,3,3
 "PROPN(ADP/case, DET/det, *, PROPN/conj, PROPN/conj)",0,3,0,3,3
-"VERB(ADP/mark, *, PRON/obj)",2,1,2,1,3
-"NOUN(ADP/case, *, NOUN/nmod, NOUN/nmod)",1,2,1,2,3
-"PROPN(DET/det, *, PROPN/flat:name, PROPN/flat:name, PROPN/appos)",0,3,0,3,3
-"PROPN(PUNCT/punct, ADP/case, DET/det, *, PUNCT/punct)",2,1,1,1,3
-"NOUN(ADP/case, *, VERB/acl:relcl)",0,3,0,3,3
-"VERB(*, NOUN/obj, NOUN/obl, VERB/conj)",2,1,2,1,3
-"ADP(*, PRON/fixed, PRON/fixed)",1,2,1,2,3
-"NOUN(ADP/case, *, VERB/acl, PUNCT/punct)",0,3,0,3,3
-"NOUN(ADP/case, DET/det, *, NUM/nmod)",1,2,1,2,3
-"VERB(*, NOUN/obj, VERB/conj)",1,2,1,2,3
-"VERB(*, NOUN/obj, VERB/advcl)",0,3,0,1,3
-"PROPN(PUNCT/punct, ADP/case, DET/det, *)",2,1,1,1,3
-"VERB(*, PROPN/obj)",1,2,1,2,3
+"VERB(PUNCT/punct, CCONJ/cc, *, VERB/xcomp)",1,2,1,2,3
+"VERB(PROPN/nsubj, *, VERB/xcomp, PUNCT/punct)",3,0,2,0,3
+"VERB(PROPN/nsubj, *, VERB/ccomp, PUNCT/punct)",1,2,1,2,3
+"ADV(PUNCT/punct, *, VERB/acl, PUNCT/punct)",0,3,0,3,3
+"VERB(*, VERB/ccomp, PUNCT/punct)",3,0,1,0,3
 "VERB(*, NOUN/obl, NOUN/obj)",2,1,2,1,3
+"NOUN(ADP/case, *, VERB/acl, PUNCT/punct)",0,3,0,3,3
+"NOUN(ADP/case, *, VERB/acl:relcl)",0,3,0,3,3
+"NOUN(ADP/case, *, NOUN/nmod, NOUN/nmod)",1,2,1,2,3
+"VERB(*, PROPN/obj)",1,2,1,2,3
+"VERB(*, NOUN/obj, NOUN/obl, VERB/conj)",2,1,2,1,3
+"VERB(*, NOUN/obj, VERB/advcl)",0,3,0,1,3
+"VERB(PRON/nsubj, ADV/advmod, *, NOUN/obj)",2,1,2,1,3
+"PROPN(PUNCT/punct, ADP/case, DET/det, *, PUNCT/punct)",2,1,1,1,3
+"PROPN(PUNCT/punct, ADP/case, DET/det, *)",2,1,1,1,3
+"PROPN(DET/det, *, PROPN/flat:name, PROPN/flat:name, PROPN/appos)",0,3,0,3,3
+"NOUN(*, PRON/nmod)",2,1,2,1,3
 "SYM(ADP/case, NUM/nummod, *)",0,3,0,1,3
+"NOUN(ADP/case, DET/det, *, NUM/nmod)",1,2,1,2,3
+"VERB(NOUN/nsubj, AUX/aux, *, NOUN/obj, PUNCT/punct)",1,2,1,2,3
+"VERB(*, NOUN/obj, VERB/conj)",1,2,1,2,3
+"VERB(PROPN/nsubj, AUX/aux, *, NOUN/obj, VERB/advcl, PUNCT/punct)",1,2,1,2,3
+"ADP(*, PRON/fixed, PRON/fixed)",1,2,1,2,3
 "NOUN(ADP/case, DET/det, *, NOUN/conj, NOUN/conj)",3,0,2,0,3
-"ADJ(*, NOUN/conj)",1,2,1,2,3
-"NOUN(ADP/case, *, PUNCT/punct)",1,2,1,2,3
 "NOUN(ADP/case, DET/det, *, ADJ/amod, VERB/acl)",0,3,0,2,3
-"NOUN(DET/det, *, NOUN/nmod, PROPN/nmod)",1,2,1,2,3
-"NOUN(DET/det, *, NOUN/nmod, VERB/acl)",0,3,0,3,3
+"VERB(NOUN/nsubj, *, NOUN/obj, VERB/conj, PUNCT/punct)",1,2,1,2,3
+"NOUN(ADP/case, *, PUNCT/punct)",1,2,1,2,3
+"VERB(SCONJ/mark, PROPN/nsubj, *, NOUN/obj, VERB/advcl)",1,2,1,2,3
+"NOUN(DET/det, DET/det, *)",3,0,2,0,3
+"VERB(PUNCT/punct, PRON/nsubj:pass, AUX/aux, AUX/aux:pass, *, VERB/advcl)",0,3,0,3,3
+"NOUN(DET/det, *, NOUN/nmod, NOUN/conj)",1,2,1,2,3
 "NOUN(DET/det, *, ADJ/amod, VERB/acl)",0,3,0,3,3
 "VERB(SCONJ/mark, NOUN/nsubj, ADV/advmod, *, NOUN/obj, VERB/advcl)",0,3,0,3,3
 "VERB(SCONJ/mark, NOUN/nsubj, *, NOUN/obl)",1,2,1,2,3
+"VERB(SCONJ/mark, PRON/nsubj, *, NOUN/obj)",2,1,1,1,3
+"VERB(SCONJ/mark, PRON/nsubj, *, NOUN/obj, NOUN/obl)",2,0,2,0,2
 "VERB(SCONJ/mark, NOUN/nsubj:pass, AUX/aux:pass, *)",2,0,2,0,2
 "VERB(SCONJ/mark, NOUN/nsubj, *, NOUN/obj, NOUN/conj)",0,2,0,2,2
 "VERB(SCONJ/mark, NOUN/nsubj, *, NOUN/obj, NOUN/obl)",0,2,0,2,2
 "VERB(SCONJ/mark, NOUN/nsubj, *, NOUN/obj, VERB/advcl)",0,2,0,2,2
 "ADJ(NOUN/nsubj, AUX/cop, *, NOUN/obl, PUNCT/punct)",1,1,1,1,2
-"NOUN(DET/det, *, ADJ/amod, NOUN/nmod, ADV/advmod)",0,2,0,2,2
-"NOUN(DET/det, *, ADJ/amod, NOUN/nmod, PROPN/nmod)",0,2,0,2,2
-"NOUN(DET/det, *, ADJ/amod, NOUN/nmod, VERB/acl:relcl)",0,2,0,2,2
-"ADJ(SCONJ/mark, NOUN/nsubj, AUX/cop, *, NOUN/obl, VERB/advcl)",0,2,0,2,2
-"ADJ(SCONJ/mark, NOUN/nsubj, AUX/cop, *, VERB/advcl)",0,2,0,2,2
-"NOUN(DET/det, *, PROPN/nmod, VERB/acl:relcl)",1,1,1,1,2
-"NOUN(DET/det, *, PUNCT/punct)",2,0,1,0,2
-"NOUN(DET/det, *, VERB/acl, VERB/acl)",0,2,0,2,2
-"NOUN(DET/det, *, PROPN/nmod, ADJ/amod)",0,2,0,2,2
-"NOUN(ADP/case, DET/det, *, ADJ/amod, NOUN/nmod, ADV/advmod)",0,2,0,2,2
-"NOUN(ADP/case, DET/det, *, ADJ/amod, NOUN/nmod, PROPN/nmod)",0,2,0,2,2
-"VERB(*, ADJ/xcomp)",1,1,1,1,2
+"NOUN(CCONJ/cc, PUNCT/punct, *, NOUN/nmod, PUNCT/punct)",0,2,0,2,2
+"ADJ(NOUN/nsubj, AUX/cop, *, VERB/conj, PUNCT/punct)",1,1,1,1,2
+"VERB(SCONJ/mark, ADV/advmod, *, VERB/xcomp)",2,0,1,0,2
+"VERB(SCONJ/mark, ADV/advmod, NOUN/nsubj, *, VERB/xcomp)",0,2,0,2,2
+"NOUN(DET/det, *, ADJ/amod, VERB/acl:relcl)",1,1,1,1,2
+"NOUN(DET/det, *, ADJ/amod, NOUN/conj)",1,1,1,1,2
+"ADV(PUNCT/punct, *, NOUN/obl, PUNCT/punct)",0,2,0,2,2
+"NOUN(NOUN/nmod, NOUN/nsubj, AUX/cop, *, NOUN/nmod, PUNCT/punct)",0,2,0,2,2
+"NOUN(DET/det, ADJ/amod, *, ADJ/amod, VERB/acl:relcl)",0,2,0,2,2
+"NOUN(DET/det, ADJ/amod, *, PROPN/nmod)",0,2,0,2,2
+"NOUN(DET/det, *, PROPN/nmod, PROPN/nmod)",1,1,1,1,2
+"ADJ(*, PUNCT/punct)",1,1,1,1,2
 "VERB(*, ADJ/xcomp, PUNCT/punct)",0,2,0,2,2
 "VERB(*, ADV/advmod, NOUN/obj, NOUN/obl)",0,2,0,2,2
 "VERB(*, NOUN/nsubj, PUNCT/punct)",2,0,2,0,2
 "SYM(ADP/case, *)",2,0,2,0,2
-"NOUN(ADP/case, DET/det, *, ADJ/amod, SYM/nmod)",0,2,0,2,2
-"NOUN(ADP/case, DET/det, *, ADJ/amod, VERB/acl, PUNCT/punct)",0,2,0,2,2
-"NOUN(ADP/case, DET/det, *, NOUN/conj, NOUN/nmod)",0,2,0,1,2
-"SYM(NUM/nummod, *)",2,0,1,0,2
-"PROPN(PUNCT/punct, ADP/case, *, PUNCT/punct)",0,2,0,2,2
+"VERB(PRON/obj, *)",1,1,1,1,2
+"NOUN(*, NOUN/nmod, ADJ/amod)",1,1,1,1,2
+"NOUN(*, NOUN/nmod, PROPN/nmod)",1,1,1,1,2
+"NOUN(*, NOUN/nmod, PUNCT/punct)",2,0,2,0,2
+"NOUN(*, NOUN/nmod, VERB/acl)",0,2,0,2,2
+"VERB(NOUN/nsubj, ADV/advmod, *, NOUN/obj, PUNCT/punct)",1,1,1,1,2
+"VERB(NOUN/nsubj, ADV/advmod, *, NOUN/obj, VERB/advcl, PUNCT/punct)",0,2,0,2,2
 "ADP(*, DET/fixed, NOUN/fixed)",0,2,0,2,2
 "ADP(*, DET/fixed, NOUN/fixed, PUNCT/punct)",1,1,1,1,2
 "ADJ(PUNCT/punct, *, NOUN/obl)",0,2,0,2,2
@@ -314,40 +317,66 @@ X(*),13,5,6,3,18
 "VERB(PUNCT/punct, *, NOUN/ccomp)",0,2,0,2,2
 "VERB(PUNCT/punct, *, NOUN/obj, ADJ/xcomp)",0,2,0,2,2
 "VERB(PROPN/nsubj, AUX/aux, *, NOUN/obj, NOUN/obl, PUNCT/punct)",1,1,1,1,2
-"ADV(*, PRON/fixed, PUNCT/punct)",0,2,0,2,2
+"VERB(*, ADJ/xcomp)",1,1,1,1,2
+"NOUN(ADP/case, DET/det, *, ADJ/amod, NOUN/nmod, ADV/advmod)",0,2,0,2,2
+"NOUN(ADP/case, DET/det, *, ADJ/amod, NOUN/nmod, PROPN/nmod)",0,2,0,2,2
+"NOUN(ADP/case, DET/det, *, ADJ/amod, SYM/nmod)",0,2,0,2,2
+"NOUN(ADP/case, DET/det, *, ADJ/amod, VERB/acl, PUNCT/punct)",0,2,0,2,2
+"NOUN(ADP/case, DET/det, *, NOUN/conj, NOUN/nmod)",0,2,0,1,2
+"SYM(NUM/nummod, *)",2,0,1,0,2
+"VERB(PRON/obj, NOUN/nsubj, *, NOUN/obl)",2,0,2,0,2
+"VERB(PRON/obj, PRON/nsubj, *, PUNCT/punct)",2,0,2,0,2
+"VERB(PRON/nsubj, AUX/aux, *, NOUN/obj)",0,2,0,2,2
+"VERB(PRON/nsubj, *, VERB/ccomp, PUNCT/punct)",1,1,1,1,2
+"VERB(*, VERB/xcomp, PUNCT/punct)",2,0,2,0,2
 "VERB(*, NOUN/obl, NOUN/obl)",1,1,1,1,2
-"VERB(*, NOUN/obl, PUNCT/punct)",2,0,2,0,2
-"VERB(*, NOUN/obl:agent, NOUN/obl)",0,2,0,2,2
-"VERB(*, PROPN/obj, NOUN/obl)",0,2,0,2,2
 "NOUN(ADP/case, *, X/nmod)",1,1,1,1,2
 "NOUN(ADP/case, ADJ/amod, *, ADJ/amod)",0,2,0,2,2
 "NOUN(ADP/case, ADJ/amod, *, PUNCT/punct)",1,1,1,1,2
+"VERB(*, NOUN/obl, PUNCT/punct)",2,0,2,0,2
+"VERB(*, NOUN/obl:agent, NOUN/obl)",0,2,0,2,2
+"VERB(*, PROPN/obj, NOUN/obl)",0,2,0,2,2
+"VERB(PRON/nsubj, *, VERB/xcomp, PUNCT/punct)",2,0,2,0,2
+"CCONJ(*, PUNCT/punct)",0,2,0,2,2
+"ADV(ADV/advmod, *, NOUN/obl)",0,2,0,2,2
+"ADV(CCONJ/cc, *)",2,0,1,0,2
+"VERB(PRON/nsubj, *, NOUN/obj, NOUN/obl)",0,2,0,2,2
+"PROPN(PUNCT/punct, ADP/case, *, PUNCT/punct)",0,2,0,2,2
 "PUNCT(*, PUNCT/punct, PUNCT/punct)",2,0,1,0,2
 "NOUN(ADP/case, DET/det, *, PROPN/nmod, PROPN/nmod)",1,1,1,1,2
 "PROPN(PUNCT/punct, *, PROPN/flat:name, PROPN/flat:name, PROPN/flat:name, PUNCT/punct)",1,1,1,1,2
 "PROPN(PUNCT/punct, *, PROPN/flat:name, PROPN/flat:name, PUNCT/punct)",0,2,0,2,2
 "PROPN(CCONJ/cc, ADP/case, DET/det, *)",0,2,0,2,2
 "PROPN(CCONJ/cc, DET/det, *)",0,2,0,2,2
-"NOUN(ADP/case, *, NOUN/nmod, PROPN/nmod)",1,1,1,1,2
-"NOUN(ADP/case, *, NOUN/nmod, PUNCT/punct)",1,1,1,1,2
-"NOUN(ADP/case, *, NOUN/nmod, VERB/acl)",1,1,1,1,2
-"NOUN(ADP/case, *, NUM/nummod)",2,0,1,0,2
-"NOUN(ADP/case, *, PROPN/nmod, NOUN/nmod)",0,2,0,2,2
-"VERB(*, VERB/xcomp, PUNCT/punct)",2,0,2,0,2
 "PROPN(DET/det, *, NUM/nmod)",2,0,1,0,2
 "PROPN(DET/det, *, PROPN/flat:name, PROPN/conj)",0,2,0,2,2
 "PROPN(ADP/case, DET/det, *, PROPN/flat:name, PUNCT/punct)",0,2,0,1,2
 "NOUN(ADP/case, DET/det, ADJ/amod, *, ADJ/amod)",1,1,1,1,2
 "PROPN(ADP/case, DET/det, *, PUNCT/punct)",1,1,1,1,2
 "PROPN(ADP/case, DET/det, *, PROPN/conj)",0,2,0,2,2
-"VERB(ADV/advmod, *, ADV/advmod)",0,2,0,2,2
+"VERB(PRON/nsubj, *)",2,0,2,0,2
+"VERB(NOUN/obl, PROPN/nsubj, *, ADV/advmod, NOUN/obj, PUNCT/punct)",0,2,0,2,2
 "VERB(ADP/mark, *, PROPN/obj)",0,2,0,2,2
 "VERB(ADP/mark, *, VERB/ccomp)",1,1,1,1,2
 "VERB(ADP/mark, *, ADV/advmod, PUNCT/punct)",1,1,1,1,2
 "NOUN(ADP/case, *, NOUN/conj, NOUN/conj)",1,1,1,1,2
 "VERB(ADP/mark, *, NOUN/obj, PUNCT/punct)",1,1,1,1,2
+"NOUN(ADP/case, *, NOUN/nmod, PROPN/nmod)",1,1,1,1,2
+"NOUN(ADP/case, *, NOUN/nmod, PUNCT/punct)",1,1,1,1,2
+"NOUN(ADP/case, *, NOUN/nmod, VERB/acl)",1,1,1,1,2
+"NOUN(ADP/case, *, NUM/nummod)",2,0,1,0,2
+"NOUN(ADP/case, *, PROPN/nmod, NOUN/nmod)",0,2,0,2,2
+"PROPN(*, PROPN/flat:name, PROPN/parataxis)",1,1,1,1,2
 "VERB(PUNCT/punct, CCONJ/cc, NOUN/nsubj, *, VERB/ccomp)",0,2,0,1,2
 "VERB(PUNCT/punct, CCONJ/cc, ADV/advmod, *, NOUN/obj)",1,1,1,1,2
+"VERB(NOUN/nsubj:pass, AUX/aux:pass, *, NOUN/obl:agent, PUNCT/punct)",0,2,0,2,2
+"NOUN(*, NOUN/conj, NOUN/nmod)",0,2,0,2,2
+"NOUN(*, NOUN/flat:name)",2,0,2,0,2
+"ADV(*, PRON/fixed, PUNCT/punct)",0,2,0,2,2
+"ADV(*, SCONJ/fixed)",0,2,0,2,2
+"ADV(*, VERB/acl)",1,1,1,1,2
+"VERB(PROPN/obl, NOUN/nsubj, *, NOUN/obj, PUNCT/punct)",0,2,0,2,2
+"VERB(PROPN/nsubj, *, VERB/ccomp, VERB/conj, PUNCT/punct)",2,0,2,0,2
 "VERB(PUNCT/punct, ADP/mark, *, NOUN/obl)",1,1,1,1,2
 "VERB(PUNCT/punct, ADV/advmod, *, NOUN/obj, NOUN/obl)",2,0,1,0,2
 "VERB(PUNCT/punct, ADV/advmod, NOUN/nsubj, *, NOUN/obj)",1,1,1,1,2
@@ -355,34 +384,23 @@ X(*),13,5,6,3,18
 "VERB(PUNCT/punct, *, NOUN/obl, NOUN/obj)",0,2,0,2,2
 "VERB(PUNCT/punct, *, NOUN/obl:agent)",0,2,0,2,2
 "VERB(PUNCT/punct, *, NOUN/obl:agent, PUNCT/punct, PUNCT/punct)",0,2,0,2,2
-"PROPN(*, PROPN/flat:name, PROPN/parataxis)",1,1,1,1,2
-"VERB(CCONJ/cc, *, NOUN/obj, VERB/advcl)",1,1,1,1,2
-"VERB(AUX/aux:pass, *, ADV/advmod)",1,1,1,1,2
-"VERB(ADV/advmod, PROPN/nsubj, *, VERB/ccomp, PUNCT/punct)",0,2,0,2,2
-"VERB(ADV/advmod, ADV/advmod, *, NOUN/obl)",0,2,0,2,2
-"VERB(ADP/mark, PRON/expl:impers, *)",0,2,0,2,2
-"VERB(ADP/mark, PRON/nsubj, *, NOUN/obj)",0,2,0,2,2
-"VERB(ADP/mark, PRON/obj, *, NOUN/obl)",2,0,2,0,2
 "NOUN(ADP/case, DET/det, ADJ/amod, *, PROPN/nmod, PROPN/appos)",1,1,1,1,2
 "NOUN(ADP/case, DET/det, ADJ/amod, *, VERB/acl:relcl)",0,2,0,2,2
 "PROPN(ADP/case, *, PUNCT/punct)",0,2,0,2,2
-"PROPN(*, PROPN/conj)",1,1,1,1,2
-"PROPN(*, PROPN/flat:name, NOUN/conj)",1,1,1,1,2
-"PROPN(*, PROPN/flat:name, PROPN/flat:name, PROPN/flat:name)",0,2,0,2,2
-"NOUN(ADP/case, DET/det, PUNCT/punct, *, PUNCT/punct)",1,1,1,1,2
+"VERB(ADV/advmod, *, ADV/advmod)",0,2,0,2,2
 "VERB(NOUN/nsubj, *, NOUN/obl, NOUN/obj, VERB/advcl, PUNCT/punct)",0,2,0,2,2
+"VERB(NOUN/nsubj, *, VERB/ccomp, VERB/conj, PUNCT/punct)",0,2,0,2,2
 "VERB(NOUN/nsubj, *, ADV/advmod, VERB/ccomp, PUNCT/punct)",1,1,1,1,2
 "VERB(NOUN/nsubj, *, NOUN/ccomp, PUNCT/punct)",1,1,1,1,2
 "VERB(NOUN/nsubj, *, NOUN/obj)",2,0,2,0,2
 "VERB(CCONJ/cc, PRON/obj, *)",2,0,2,0,2
 "NOUN(*, X/nmod)",2,0,2,0,2
-"NOUN(ADJ/amod, *, PROPN/nmod)",0,2,0,2,2
-"NOUN(ADJ/amod, *, VERB/acl)",1,1,1,1,2
-"ADV(*, SCONJ/fixed)",0,2,0,2,2
-"ADV(*, VERB/acl)",1,1,1,1,2
-"VERB(PROPN/obl, NOUN/nsubj, *, NOUN/obj, PUNCT/punct)",0,2,0,2,2
-"VERB(PROPN/nsubj, *, VERB/ccomp, VERB/conj, PUNCT/punct)",2,0,2,0,2
-"VERB(PRON/obj, *)",1,1,1,1,2
+"VERB(PRON/nsubj, *, NOUN/obl, NOUN/obj)",0,2,0,2,2
+"VERB(PRON/nsubj, *, VERB/ccomp)",1,1,1,1,2
+"PROPN(*, PROPN/conj)",1,1,1,1,2
+"PROPN(*, PROPN/flat:name, NOUN/conj)",1,1,1,1,2
+"PROPN(*, PROPN/flat:name, PROPN/flat:name, PROPN/flat:name)",0,2,0,2,2
+"NOUN(ADP/case, DET/det, PUNCT/punct, *, PUNCT/punct)",1,1,1,1,2
 "NOUN(ADP/case, PUNCT/punct, *, ADJ/amod, PUNCT/punct, NOUN/conj)",0,2,0,2,2
 "NOUN(ADP/case, DET/det, ADJ/amod, *, PROPN/nmod)",0,2,0,1,2
 "NOUN(ADP/case, DET/det, PUNCT/punct, *, ADJ/amod, PUNCT/punct)",0,2,0,2,2
@@ -390,13 +408,6 @@ X(*),13,5,6,3,18
 "NUM(ADV/advmod, *, NUM/flat)",0,2,0,1,2
 "NOUN(SCONJ/mark, NOUN/nsubj, AUX/cop, DET/det, ADJ/amod, *, NOUN/nmod, VERB/advcl)",2,0,1,0,2
 "NOUN(SYM/nmod, NUM/nummod, *)",0,2,0,2,2
-"NOUN(*, NOUN/nmod, ADJ/amod)",1,1,1,1,2
-"NOUN(*, NOUN/nmod, PROPN/nmod)",1,1,1,1,2
-"NOUN(*, NOUN/nmod, PUNCT/punct)",2,0,2,0,2
-"NOUN(*, NOUN/nmod, VERB/acl)",0,2,0,2,2
-"VERB(NOUN/nsubj, *, VERB/ccomp, VERB/conj, PUNCT/punct)",0,2,0,2,2
-"VERB(NOUN/nsubj, ADV/advmod, *, NOUN/obj, PUNCT/punct)",1,1,1,1,2
-"VERB(NOUN/nsubj, ADV/advmod, *, NOUN/obj, VERB/advcl, PUNCT/punct)",0,2,0,2,2
 "NOUN(PUNCT/punct, DET/det, *, ADJ/amod)",1,1,1,1,2
 "NOUN(PUNCT/punct, ADP/case, DET/det, *, PROPN/nmod)",2,0,2,0,2
 "NOUN(ADV/advmod, DET/det, *, NOUN/nmod)",1,1,1,1,2
@@ -407,19 +418,18 @@ X(*),13,5,6,3,18
 "NOUN(PUNCT/punct, ADP/case, DET/det, *, ADJ/amod, VERB/acl)",0,2,0,2,2
 "NOUN(PUNCT/punct, ADP/case, DET/det, *, NOUN/nmod)",0,2,0,2,2
 "NOUN(PUNCT/punct, ADP/case, DET/det, *, NOUN/nmod, PUNCT/punct)",2,0,2,0,2
-"NOUN(*, ADJ/amod, NOUN/nmod, NOUN/appos)",1,1,1,1,2
-"NOUN(*, ADJ/amod, NOUN/nmod, VERB/acl:relcl)",0,2,0,2,2
-"VERB(NOUN/obl, PROPN/nsubj, *, ADV/advmod, NOUN/obj, PUNCT/punct)",0,2,0,2,2
-"VERB(NOUN/obl, PROPN/nsubj, *, NOUN/obj, VERB/advcl, PUNCT/punct)",0,2,0,2,2
-"VERB(NOUN/obl, NOUN/nsubj, *, VERB/xcomp, PUNCT/punct)",0,2,0,2,2
-"VERB(NOUN/obl, NOUN/nsubj, *, NOUN/obj, NOUN/obl, PUNCT/punct)",0,2,0,2,2
-"VERB(NOUN/nsubj:pass, AUX/aux, AUX/aux:pass, *, NOUN/obl, PUNCT/punct)",0,2,0,2,2
-"VERB(NOUN/nsubj:pass, AUX/aux:pass, *, NOUN/obl, VERB/conj, PUNCT/punct)",1,1,1,1,2
-"VERB(NOUN/nsubj:pass, AUX/aux:pass, *, NOUN/obl:agent, PUNCT/punct)",0,2,0,2,2
-"NOUN(*, NOUN/conj, NOUN/nmod)",0,2,0,2,2
-"NOUN(*, NOUN/flat:name)",2,0,2,0,2
 "NOUN(CCONJ/cc, ADJ/amod, *)",0,2,0,2,2
 "NOUN(CCONJ/cc, ADP/case, *)",0,2,0,2,2
+"VERB(NOUN/obl, NOUN/nsubj, *, NOUN/obj, NOUN/obl, PUNCT/punct)",0,2,0,2,2
+"NOUN(ADJ/amod, *, PROPN/nmod)",0,2,0,2,2
+"NOUN(ADJ/amod, *, VERB/acl)",1,1,1,1,2
+"VERB(CCONJ/cc, *, NOUN/obj, VERB/advcl)",1,1,1,1,2
+"VERB(AUX/aux:pass, *, ADV/advmod)",1,1,1,1,2
+"VERB(ADV/advmod, PROPN/nsubj, *, VERB/ccomp, PUNCT/punct)",0,2,0,2,2
+"VERB(ADV/advmod, ADV/advmod, *, NOUN/obl)",0,2,0,2,2
+"VERB(ADP/mark, PRON/expl:impers, *)",0,2,0,2,2
+"VERB(ADP/mark, PRON/nsubj, *, NOUN/obj)",0,2,0,2,2
+"VERB(ADP/mark, PRON/obj, *, NOUN/obl)",2,0,2,0,2
 "NOUN(CCONJ/cc, ADP/case, *, ADJ/amod)",0,2,0,2,2
 "NOUN(ADV/advmod, DET/det, *, ADJ/amod, NOUN/nmod)",2,0,2,0,2
 "NOUN(PUNCT/punct, *, NOUN/nmod, PROPN/nmod, PUNCT/punct)",1,1,1,1,2
@@ -428,36 +438,26 @@ X(*),13,5,6,3,18
 "NOUN(NUM/nummod, *, ADJ/amod)",0,2,0,2,2
 "NOUN(NUM/nummod, *, NOUN/nmod)",2,0,2,0,2
 "NOUN(DET/det, NUM/nummod, *)",2,0,1,0,2
-"NOUN(NOUN/nmod, NOUN/nsubj, AUX/cop, *, NOUN/nmod, PUNCT/punct)",0,2,0,2,2
-"NOUN(DET/det, ADJ/amod, *, ADJ/amod, VERB/acl:relcl)",0,2,0,2,2
-"NOUN(DET/det, ADJ/amod, *, PROPN/nmod)",0,2,0,2,2
-"VERB(PRON/nsubj, AUX/aux, *, NOUN/obj)",0,2,0,2,2
-"VERB(PRON/nsubj, *, VERB/ccomp)",1,1,1,1,2
-"VERB(PRON/nsubj, *, VERB/ccomp, PUNCT/punct)",1,1,1,1,2
-"CCONJ(*, PUNCT/punct)",0,2,0,2,2
-"ADV(ADV/advmod, *, NOUN/obl)",0,2,0,2,2
-"ADV(CCONJ/cc, *)",2,0,1,0,2
-"VERB(PRON/nsubj, *, VERB/xcomp, PUNCT/punct)",2,0,2,0,2
-"VERB(PRON/nsubj, *, NOUN/obj, NOUN/obl)",0,2,0,2,2
-"VERB(PRON/nsubj, *, NOUN/obl, NOUN/obj)",0,2,0,2,2
-"VERB(PRON/nsubj, *)",2,0,2,0,2
-"NOUN(DET/det, *, ADJ/amod, VERB/acl:relcl)",1,1,1,1,2
-"NOUN(DET/det, *, ADJ/amod, NOUN/conj)",1,1,1,1,2
-"ADV(PUNCT/punct, *, NOUN/obl, PUNCT/punct)",0,2,0,2,2
-"VERB(PRON/obj, NOUN/nsubj, *, NOUN/obl)",2,0,2,0,2
-"VERB(PRON/obj, PRON/nsubj, *, PUNCT/punct)",2,0,2,0,2
-"NOUN(DET/det, *, PROPN/nmod, PROPN/nmod)",1,1,1,1,2
-"NOUN(CCONJ/cc, PUNCT/punct, *, NOUN/nmod, PUNCT/punct)",0,2,0,2,2
-"ADJ(NOUN/nsubj, AUX/cop, *, VERB/conj, PUNCT/punct)",1,1,1,1,2
-"VERB(SCONJ/mark, ADV/advmod, *, VERB/xcomp)",2,0,1,0,2
-"VERB(SCONJ/mark, ADV/advmod, NOUN/nsubj, *, VERB/xcomp)",0,2,0,2,2
+"NOUN(DET/det, *, ADJ/amod, NOUN/nmod, ADV/advmod)",0,2,0,2,2
 "VERB(SCONJ/mark, NOUN/nsubj, *, ADV/advmod, NOUN/obj, VERB/advcl)",0,2,0,2,2
 "VERB(SCONJ/mark, NOUN/nsubj, *, ADV/advmod, VERB/advcl)",1,1,1,1,2
 "VERB(PUNCT/punct, SCONJ/mark, NOUN/nsubj, *, NOUN/obj)",0,2,0,2,2
+"NOUN(DET/det, *, PROPN/nmod, ADJ/amod)",0,2,0,2,2
+"VERB(NOUN/obl, PROPN/nsubj, *, NOUN/obj, VERB/advcl, PUNCT/punct)",0,2,0,2,2
+"NOUN(*, ADJ/amod, NOUN/nmod, NOUN/appos)",1,1,1,1,2
+"NOUN(*, ADJ/amod, NOUN/nmod, VERB/acl:relcl)",0,2,0,2,2
+"VERB(NOUN/obl, NOUN/nsubj, *, VERB/xcomp, PUNCT/punct)",0,2,0,2,2
+"NOUN(DET/det, *, ADJ/amod, NOUN/nmod, PROPN/nmod)",0,2,0,2,2
+"NOUN(DET/det, *, ADJ/amod, NOUN/nmod, VERB/acl:relcl)",0,2,0,2,2
 "VERB(PUNCT/punct, PRON/nsubj, *, NOUN/obj, PUNCT/punct)",0,2,0,2,2
 "ADJ(SCONJ/mark, NOUN/nsubj, AUX/cop, *)",2,0,2,0,2
-"VERB(SCONJ/mark, PRON/nsubj, *, NOUN/obj, NOUN/obl)",2,0,2,0,2
-"ADJ(*, PUNCT/punct)",1,1,1,1,2
+"ADJ(SCONJ/mark, NOUN/nsubj, AUX/cop, *, NOUN/obl, VERB/advcl)",0,2,0,2,2
+"ADJ(SCONJ/mark, NOUN/nsubj, AUX/cop, *, VERB/advcl)",0,2,0,2,2
+"NOUN(DET/det, *, PROPN/nmod, VERB/acl:relcl)",1,1,1,1,2
+"NOUN(DET/det, *, PUNCT/punct)",2,0,1,0,2
+"NOUN(DET/det, *, VERB/acl, VERB/acl)",0,2,0,2,2
+"VERB(NOUN/nsubj:pass, AUX/aux, AUX/aux:pass, *, NOUN/obl, PUNCT/punct)",0,2,0,2,2
+"VERB(NOUN/nsubj:pass, AUX/aux:pass, *, NOUN/obl, VERB/conj, PUNCT/punct)",1,1,1,1,2
 "VERB(SCONJ/mark, NOUN/nsubj:pass, AUX/aux:pass, *, VERB/advcl)",0,2,0,2,2
 "ADJ(ADV/advmod, *, NOUN/obl)",1,1,1,1,2
 "X(PUNCT/punct, *)",2,0,2,0,2
@@ -745,12 +745,12 @@ X(*),13,5,6,3,18
 "PROPN(*, NOUN/conj, NOUN/conj)",0,1,0,1,1
 "PROPN(*, NOUN/nmod, PUNCT/punct)",0,1,0,1,1
 "PROPN(*, NUM/nmod)",0,1,0,1,1
-"PROPN(*, PRON/obj, PUNCT/punct, PUNCT/punct)",1,0,1,0,1
 "PROPN(*, PROPN/conj, PROPN/conj)",0,1,0,1,1
 "PROPN(*, PROPN/conj, PROPN/conj, PUNCT/conj)",1,0,1,0,1
 "PROPN(*, PROPN/flat:name, ADJ/amod)",0,1,0,1,1
 "PROPN(*, PROPN/flat:name, PROPN/conj)",0,1,0,1,1
 "PROPN(*, PROPN/flat:name, PROPN/flat:name, PROPN/nmod)",0,1,0,1,1
+"PROPN(*, PROPN/flat:name, PROPN/nmod, NOUN/nmod, PUNCT/punct)",1,0,1,0,1
 "PRON(ADP/case, *, ADJ/amod, PRON/nmod)",1,0,1,0,1
 "PRON(ADP/case, *, NOUN/nmod)",0,1,0,1,1
 "PRON(ADP/case, *, PRON/conj)",1,0,1,0,1
@@ -773,10 +773,10 @@ X(*),13,5,6,3,18
 "PROPN(ADP/case, *, PROPN/flat:name, NOUN/appos)",0,1,0,1,1
 "PROPN(ADP/case, *, PROPN/flat:name, NOUN/conj)",0,1,0,1,1
 "PROPN(ADP/case, *, PROPN/flat:name, PUNCT/punct)",0,1,0,1,1
-"PROPN(ADP/case, DET/det, DET/det, *, PROPN/flat:name, PROPN/flat:name, PROPN/appos)",0,1,0,1,1
 "PROPN(ADP/case, PUNCT/punct, *, PROPN/flat:name, PUNCT/punct)",0,1,0,1,1
 "PROPN(ADV/advmod, ADP/case, DET/det, *, NOUN/conj)",0,1,0,1,1
 "PROPN(ADV/advmod, ADP/case, DET/det, *, PROPN/flat:name, PUNCT/punct)",1,0,1,0,1
+"PROPN(CCONJ/cc, *, PROPN/flat:name, NUM/parataxis)",1,0,1,0,1
 "PROPN(ADP/case, DET/det, *, ADJ/amod)",1,0,1,0,1
 "PROPN(ADP/case, DET/det, *, NOUN/conj)",0,1,0,1,1
 "PROPN(ADP/case, DET/det, *, NUM/nmod)",0,1,0,1,1
@@ -785,7 +785,7 @@ X(*),13,5,6,3,18
 "PROPN(ADP/case, DET/det, *, PROPN/flat:name, PROPN/flat:name, PROPN/appos, PROPN/nmod)",1,0,1,0,1
 "PROPN(ADP/case, DET/det, *, PROPN/flat:name, PROPN/flat:name, PROPN/flat:name, PROPN/appos)",0,1,0,1,1
 "PROPN(ADP/case, DET/det, *, PROPN/flat:name, PROPN/flat:name, PROPN/parataxis)",0,1,0,1,1
-"PROPN(*, PROPN/flat:name, PROPN/nmod, NOUN/nmod, PUNCT/punct)",1,0,1,0,1
+"PROPN(ADP/case, DET/det, *, PROPN/flat:name, PROPN/nmod)",1,0,1,0,1
 "PROPN(*, PROPN/flat:name, PROPN/nmod, PROPN/conj, PROPN/conj, NOUN/conj)",1,0,1,0,1
 "NOUN(ADP/case, DET/det, ADJ/amod, *, PUNCT/punct)",0,1,0,1,1
 "NOUN(ADP/case, DET/det, ADJ/amod, NUM/nummod, *, NUM/appos)",0,1,0,1,1
@@ -799,16 +799,16 @@ X(*),13,5,6,3,18
 "NOUN(ADP/case, DET/det, ADJ/amod, *, NOUN/nmod, PUNCT/punct)",0,1,0,1,1
 "NOUN(ADP/case, DET/det, *, PROPN/nmod, NOUN/acl)",0,1,0,1,1
 "NOUN(ADP/case, DET/det, *, PROPN/nmod, NOUN/conj)",0,1,0,1,1
-"PROPN(ADP/case, DET/det, *, PROPN/nmod, PUNCT/punct)",0,1,0,1,1
 "PROPN(ADP/case, DET/det, *, VERB/acl:relcl)",0,1,0,1,1
 "PROPN(ADP/case, DET/det, ADJ/amod, *)",0,1,0,1,1
 "PROPN(ADP/case, DET/det, ADJ/amod, *, PROPN/nmod)",0,1,0,1,1
 "PROPN(ADP/case, DET/det, DET/det, *)",0,1,0,1,1
 "PROPN(ADP/case, DET/det, DET/det, *, PROPN/flat:name)",1,0,1,0,1
+"PROPN(ADP/case, DET/det, DET/det, *, PROPN/flat:name, PROPN/flat:name, PROPN/appos)",0,1,0,1,1
+"PROPN(DET/det, DET/det, *)",0,1,0,1,1
 "PROPN(PRON/nsubj, AUX/cop, DET/det, *, PROPN/conj, PUNCT/punct)",1,0,1,0,1
 "PROPN(PUNCT/punct, *, NOUN/flat:name, VERB/nmod, PUNCT/punct)",1,0,1,0,1
 "PROPN(PUNCT/punct, *, PROPN/flat:name, PROPN/parataxis)",1,0,1,0,1
-"PROPN(CCONJ/cc, *, PROPN/flat:name, NUM/parataxis)",1,0,1,0,1
 "PROPN(CCONJ/cc, ADP/case, DET/det, *, PROPN/flat:name)",0,1,0,1,1
 "PROPN(CCONJ/cc, ADP/case, DET/det, *, PROPN/flat:name, PROPN/flat:name)",0,1,0,1,1
 "PROPN(CCONJ/cc, ADP/case, DET/det, DET/det, *)",0,1,0,1,1
@@ -818,9 +818,11 @@ X(*),13,5,6,3,18
 "PROPN(DET/det, *, NOUN/conj)",0,1,0,1,1
 "PROPN(DET/det, *, PROPN/conj, PROPN/conj, NOUN/conj)",0,1,0,1,1
 "PROPN(DET/det, *, PROPN/flat:name, NOUN/conj)",0,1,0,1,1
-"PROPN(ADP/case, DET/det, *, PROPN/flat:name, PROPN/nmod)",1,0,1,0,1
 "PROPN(ADP/case, DET/det, *, PROPN/flat:name, VERB/acl:relcl)",1,0,1,0,1
+"PROPN(ADP/case, DET/det, *, PROPN/nmod, PUNCT/punct)",0,1,0,1,1
 "NOUN(ADP/case, DET/det, *, X/conj, NOUN/conj, NOUN/conj)",1,0,1,0,1
+"PROPN(DET/det, *, PROPN/flat:name, PROPN/flat:name, NOUN/appos)",0,1,0,1,1
+"PROPN(DET/det, *, PROPN/flat:name, PROPN/flat:name, PROPN/appos, PROPN/nmod)",0,1,0,1,1
 "NOUN(ADP/case, DET/det, *, PROPN/nmod, NUM/nmod)",0,1,0,1,1
 "NOUN(ADP/case, DET/det, *, PROPN/nmod, VERB/acl)",0,1,0,1,1
 "NOUN(ADP/case, DET/det, *, PROPN/nmod, VERB/acl, PUNCT/punct)",1,0,1,0,1
@@ -831,12 +833,11 @@ X(*),13,5,6,3,18
 "NOUN(ADP/case, DET/det, *, VERB/acl:relcl, PUNCT/punct)",1,0,1,0,1
 "NOUN(ADP/case, DET/det, *, NOUN/nmod, NOUN/conj)",1,0,1,0,1
 "NOUN(ADP/case, DET/det, *, NOUN/nmod, NOUN/nmod, NOUN/conj)",1,0,1,0,1
-"PROPN(DET/det, *, PROPN/flat:name, PROPN/flat:name, PROPN/appos, PROPN/nmod)",0,1,0,1,1
 "PROPN(DET/det, *, PROPN/flat:name, PROPN/flat:name, PROPN/flat:name, NUM/nmod)",0,1,0,1,1
 "PROPN(DET/det, *, PROPN/flat:name, PROPN/flat:name, PROPN/flat:name, PROPN/appos)",0,1,0,1,1
 "PROPN(DET/det, *, PUNCT/punct)",1,0,1,0,1
 "PROPN(DET/det, ADJ/amod, *, VERB/acl:relcl, NOUN/appos)",0,1,0,1,1
-"PROPN(DET/det, DET/det, *)",0,1,0,1,1
+"PROPN(PUNCT/punct, ADP/case, *, NUM/conj)",0,1,0,1,1
 "NOUN(ADP/case, DET/det, *, NOUN/nmod, NUM/nmod)",0,1,0,1,1
 "NOUN(ADP/case, DET/det, *, NOUN/nmod, PUNCT/punct, PUNCT/punct)",1,0,1,0,1
 "NOUN(ADP/case, DET/det, *, NOUN/nmod, SYM/appos)",1,0,1,0,1
@@ -845,20 +846,18 @@ X(*),13,5,6,3,18
 "NOUN(ADP/case, DET/det, *, PRON/nmod)",1,0,1,0,1
 "NOUN(ADP/case, DET/det, *, PRON/nmod, NOUN/nmod)",1,0,1,0,1
 "NOUN(ADP/case, DET/det, *, ADJ/amod, NUM/nmod)",0,1,0,1,1
-"PROPN(PUNCT/punct, ADP/case, *, NUM/conj)",0,1,0,1,1
 "PROPN(PUNCT/punct, ADP/case, *, PROPN/flat:name)",0,1,0,1,1
 "PROPN(PUNCT/punct, ADP/case, *, PROPN/flat:name, PUNCT/punct)",1,0,1,0,1
 "PROPN(PUNCT/punct, ADP/case, DET/det, *, PROPN/flat:name)",1,0,1,0,1
 "PUNCT(*, PUNCT/punct)",1,0,1,0,1
 "PUNCT(PUNCT/punct, *)",1,0,1,0,1
 "PUNCT(PUNCT/punct, *, PUNCT/punct, PUNCT/punct)",1,0,1,0,1
-"PROPN(DET/det, *, PROPN/flat:name, PROPN/flat:name, NOUN/appos)",0,1,0,1,1
+"SCONJ(*, SCONJ/fixed)",1,0,1,0,1
 "NOUN(ADP/case, DET/det, *, ADJ/nmod)",0,1,0,1,1
 "NOUN(ADP/case, DET/det, *, ADV/advmod)",0,1,0,1,1
 "NOUN(ADP/case, DET/det, *, ADV/nmod)",1,0,1,0,1
 "NOUN(ADP/case, DET/det, *, NOUN/conj, NOUN/conj, X/conj)",0,1,0,1,1
 "NOUN(ADP/case, ADP/case, DET/det, NUM/nummod, *)",1,0,1,0,1
-"SYM(ADP/case, *, NUM/nummod)",0,1,0,1,1
 "SYM(ADP/case, *, NUM/nummod, NUM/nmod)",0,1,0,1,1
 "SYM(ADP/case, ADP/case, *, NUM/nummod, NOUN/nmod)",0,1,0,1,1
 "SYM(ADP/case, ADV/advmod, *, NUM/nummod)",0,1,0,1,1
@@ -868,6 +867,7 @@ X(*),13,5,6,3,18
 "SYM(CCONJ/cc, ADP/case, NUM/nummod, *, NOUN/nsubj)",1,0,1,0,1
 "SYM(PUNCT/punct, *, NUM/nummod, PUNCT/punct)",1,0,1,0,1
 "SYM(PUNCT/punct, ADP/case, *, NUM/nummod, PUNCT/punct)",0,1,0,1,1
+"SYM(PUNCT/punct, NUM/nummod, *, ADJ/amod, NOUN/nmod, PUNCT/punct)",1,0,1,0,1
 "PROPN(PUNCT/punct, *, PROPN/nmod)",1,0,1,0,1
 "NOUN(ADP/case, DET/det, *, ADJ/amod, NOUN/nmod, NOUN/nmod)",0,1,0,1,1
 "NOUN(ADP/case, DET/det, *, ADJ/amod, NOUN/nmod, PROPN/nmod, PUNCT/punct)",0,1,0,1,1
@@ -883,11 +883,11 @@ X(*),13,5,6,3,18
 "VERB(*, ADV/advmod, NOUN/obl, NOUN/nsubj, PUNCT/punct)",0,1,0,1,1
 "VERB(*, NOUN/ccomp)",0,1,0,1,1
 "VERB(*, NOUN/ccomp, VERB/advcl)",0,1,0,1,1
-"SCONJ(*, SCONJ/fixed)",1,0,1,0,1
+"SYM(ADP/case, *, NUM/nummod)",0,1,0,1,1
 "NOUN(ADP/case, DET/det, *, ADJ/amod, VERB/acl:relcl, NOUN/appos)",0,1,0,1,1
-"NOUN(ADP/case, ADJ/amod, *, VERB/acl:relcl, PUNCT/punct)",0,1,0,1,1
-"NOUN(ADP/case, *, NOUN/nmod, NOUN/conj, NOUN/conj, NOUN/appos, NOUN/conj)",0,1,0,1,1
-"NOUN(ADP/case, *, NOUN/nmod, NOUN/nmod, NOUN/nmod)",0,1,0,1,1
+"VERB(*, PROPN/obj, VERB/advcl, PUNCT/punct)",1,0,1,0,1
+"VERB(*, NOUN/obj, ADJ/advcl)",0,1,0,1,1
+"VERB(*, NOUN/obj, ADV/advmod)",1,0,1,0,1
 "VERB(*, NOUN/obj, PRON/obl)",1,0,1,0,1
 "VERB(*, NOUN/obj, PUNCT/punct)",1,0,1,0,1
 "VERB(*, NOUN/obj, PUNCT/punct, PUNCT/punct)",1,0,1,0,1
@@ -896,14 +896,20 @@ X(*),13,5,6,3,18
 "VERB(*, NOUN/obj, VERB/ccomp, PUNCT/punct)",1,0,1,0,1
 "VERB(*, NOUN/obj, VERB/xcomp)",0,1,0,1,1
 "VERB(*, NOUN/obj, VERB/xcomp, VERB/xcomp, VERB/conj)",1,0,1,0,1
-"SYM(PUNCT/punct, NUM/nummod, *, ADJ/amod, NOUN/nmod, PUNCT/punct)",1,0,1,0,1
+"VERB(*, NOUN/obl, NOUN/ccomp)",1,0,1,0,1
 "VERB(*, ADJ/ccomp, PUNCT/punct)",1,0,1,0,1
 "NOUN(ADP/case, DET/det, *, ADJ/amod, NOUN/appos)",0,1,0,1,1
 "NOUN(ADP/case, DET/det, *, ADJ/amod, NOUN/conj, NOUN/appos)",0,1,0,1,1
 "NOUN(ADP/case, DET/det, *, ADJ/amod, NOUN/nmod, NOUN/appos)",0,1,0,1,1
-"VERB(*, X/obl:agent)",1,0,1,0,1
-"VERB(*, NOUN/obl, NOUN/ccomp)",1,0,1,0,1
+"VERB(ADJ/advcl, NOUN/nsubj, *, VERB/ccomp, PUNCT/punct)",0,1,0,1,1
 "VERB(*, NOUN/obl, NOUN/nsubj, PUNCT/punct)",0,1,0,1,1
+"NOUN(ADP/case, *, VERB/acl, NOUN/nmod, PUNCT/punct)",0,1,0,1,1
+"NOUN(ADP/case, *, VERB/acl, VERB/acl)",0,1,0,1,1
+"NOUN(ADP/case, ADJ/amod, *, NOUN/conj, VERB/acl:relcl)",0,1,0,1,1
+"NOUN(ADP/case, ADJ/amod, *, NOUN/nmod, PUNCT/punct)",0,1,0,1,1
+"NOUN(ADP/case, ADJ/amod, *, VERB/acl:relcl, PUNCT/punct)",0,1,0,1,1
+"NOUN(ADP/case, *, NOUN/nmod, NOUN/conj, NOUN/conj, NOUN/appos, NOUN/conj)",0,1,0,1,1
+"NOUN(ADP/case, *, NOUN/nmod, NOUN/nmod, NOUN/nmod)",0,1,0,1,1
 "VERB(*, NOUN/obl, PROPN/obl)",0,1,0,1,1
 "VERB(*, PRON/expl, NOUN/obl)",1,0,1,0,1
 "VERB(*, PRON/obj, ADJ/xcomp, VERB/advcl)",0,1,0,1,1
@@ -911,14 +917,8 @@ X(*),13,5,6,3,18
 "VERB(*, PRON/obj, PRON/obl)",1,0,1,0,1
 "VERB(*, PRON/obj, PUNCT/punct)",1,0,1,0,1
 "VERB(*, PRON/obl:agent, VERB/conj)",0,1,0,1,1
-"VERB(*, NOUN/obj, ADJ/advcl)",0,1,0,1,1
-"VERB(*, NOUN/obj, ADV/advmod)",1,0,1,0,1
-"NOUN(ADP/case, *, VERB/acl, NOUN/nmod, PUNCT/punct)",0,1,0,1,1
-"NOUN(ADP/case, *, VERB/acl, VERB/acl)",0,1,0,1,1
-"NOUN(ADP/case, ADJ/amod, *, NOUN/conj, VERB/acl:relcl)",0,1,0,1,1
-"NOUN(ADP/case, ADJ/amod, *, NOUN/nmod, PUNCT/punct)",0,1,0,1,1
-"VERB(*, PROPN/obj, VERB/advcl, PUNCT/punct)",1,0,1,0,1
 "VERB(*, PROPN/obl, NOUN/obl)",0,1,0,1,1
+"VERB(*, PROPN/obl, PUNCT/punct)",0,1,0,1,1
 "NOUN(ADP/case, *, NOUN/nmod, NUM/nmod)",0,1,0,1,1
 "NOUN(ADP/case, *, NOUN/nmod, X/nmod)",1,0,1,0,1
 "NOUN(ADP/case, *, NUM/nmod, PUNCT/punct)",0,1,0,1,1
@@ -926,17 +926,16 @@ X(*),13,5,6,3,18
 "NOUN(ADP/case, *, PROPN/nmod, NOUN/conj)",0,1,0,1,1
 "NOUN(ADP/case, *, ADJ/amod, SYM/nmod)",0,1,0,1,1
 "NOUN(ADP/case, *, ADJ/amod, VERB/acl, PUNCT/punct)",0,1,0,1,1
-"VERB(*, PROPN/obl, PUNCT/punct)",0,1,0,1,1
 "VERB(*, PUNCT/punct)",0,1,0,1,1
 "VERB(*, VERB/acl)",0,1,0,1,1
 "VERB(*, VERB/ccomp, VERB/acl:relcl)",1,0,1,0,1
 "VERB(*, VERB/conj)",1,0,1,0,1
 "VERB(*, VERB/obj, NOUN/obj)",1,0,1,0,1
 "VERB(*, VERB/xcomp)",0,1,0,1,1
+"VERB(*, X/obl:agent)",1,0,1,0,1
 "VERB(ADP/mark, *, NOUN/obj, NUM/obl)",1,0,1,0,1
 "VERB(ADP/mark, *, NOUN/obj, PROPN/obl)",0,1,0,1,1
 "VERB(ADP/mark, *, NOUN/obj, VERB/advcl, VERB/advcl)",0,1,0,1,1
-"VERB(ADJ/advcl, NOUN/nsubj, *, VERB/ccomp, PUNCT/punct)",0,1,0,1,1
 "VERB(ADJ/advcl, NOUN/nsubj, AUX/aux, *, NOUN/obl, PUNCT/punct)",0,1,0,1,1
 "VERB(ADJ/advcl, PRON/nsubj, *, PUNCT/punct)",1,0,1,0,1
 "VERB(ADJ/advmod, *, NOUN/obj)",1,0,1,0,1
@@ -949,8 +948,9 @@ X(*),13,5,6,3,18
 "VERB(ADP/mark, *, ADJ/ccomp)",1,0,1,0,1
 "VERB(ADP/mark, *, ADJ/xcomp, NOUN/obl)",0,1,0,1,1
 "VERB(ADP/mark, *, ADV/advmod, NOUN/obl)",0,1,0,1,1
-"VERB(ADP/mark, *, VERB/conj)",1,0,1,0,1
 "VERB(ADP/mark, *, ADV/advmod, NOUN/obl, NOUN/obl)",0,1,0,1,1
+"VERB(ADP/mark, *, VERB/conj)",1,0,1,0,1
+"VERB(ADP/mark, *, VERB/conj, NOUN/obj)",0,1,0,1,1
 "NOUN(ADP/case, *, ADJ/amod, VERB/acl, VERB/acl:relcl)",0,1,0,1,1
 "NOUN(ADP/case, *, ADJ/amod, VERB/acl:relcl, PUNCT/punct)",0,1,0,1,1
 "NOUN(ADP/case, *, DET/det)",1,0,1,0,1
@@ -965,12 +965,12 @@ X(*),13,5,6,3,18
 "VERB(ADP/mark, *, NOUN/obj, NOUN/obl, VERB/advcl)",0,1,0,1,1
 "VERB(ADP/mark, *, NOUN/obj, NOUN/obl, VERB/conj)",0,1,0,1,1
 "VERB(ADP/mark, *, NOUN/obj, NOUN/obl, VERB/conj, VERB/conj)",1,0,1,0,1
-"VERB(ADP/mark, AUX/aux:pass, *, VERB/advcl)",0,1,0,1,1
 "VERB(ADP/mark, NOUN/nsubj, *)",1,0,1,0,1
 "VERB(ADP/mark, NOUN/nsubj, *, VERB/xcomp, VERB/parataxis)",0,1,0,1,1
 "VERB(ADP/mark, NOUN/nsubj, AUX/aux, *, NOUN/obj, VERB/advcl)",0,1,0,1,1
 "VERB(ADP/mark, NOUN/nsubj, AUX/aux, *, VERB/advcl, VERB/advcl)",0,1,0,1,1
 "VERB(ADP/mark, NOUN/nsubj:pass, AUX/aux:pass, *)",1,0,1,0,1
+"VERB(ADP/mark, NOUN/obl, *, NOUN/obj)",1,0,1,0,1
 "VERB(ADP/mark, *, NOUN/obj, VERB/conj, VERB/advcl)",0,1,0,1,1
 "VERB(ADP/mark, *, NOUN/obl, NOUN/obl, VERB/conj)",0,1,0,1,1
 "VERB(ADP/mark, *, NOUN/obl, VERB/advcl)",0,1,0,1,1
@@ -981,13 +981,12 @@ X(*),13,5,6,3,18
 "VERB(ADP/mark, *, PRON/obl)",1,0,1,0,1
 "VERB(ADP/mark, *, PROPN/obj, PROPN/obl)",0,1,0,1,1
 "VERB(ADP/mark, *, VERB/advcl)",0,1,0,1,1
-"VERB(ADP/mark, PRON/nsubj, *, VERB/xcomp)",0,1,0,1,1
 "VERB(ADP/mark, PRON/nsubj, ADV/advmod, *, NOUN/obj)",1,0,1,0,1
 "VERB(ADP/mark, PROPN/nsubj, ADV/advmod, *, NOUN/obl)",1,0,1,0,1
 "VERB(ADP/mark, PROPN/nsubj, AUX/aux, *, NOUN/obj, NOUN/obl, VERB/advcl)",0,1,0,1,1
 "VERB(ADP/mark, PROPN/nsubj:pass, AUX/aux, AUX/aux:pass, *, NOUN/obl)",0,1,0,1,1
 "VERB(ADV/advmod, *, NOUN/nsubj, PUNCT/punct)",1,0,1,0,1
-"VERB(ADP/mark, *, VERB/conj, NOUN/obj)",0,1,0,1,1
+"VERB(ADV/advmod, *, NOUN/obj, PUNCT/punct)",1,0,1,0,1
 "VERB(ADP/mark, *, VERB/xcomp, PUNCT/punct)",0,1,0,1,1
 "VERB(ADP/mark, ADV/advmod, *, NOUN/obj)",1,0,1,0,1
 "VERB(ADP/mark, ADV/advmod, *, NOUN/obj, NOUN/obl, PUNCT/punct)",1,0,1,0,1
@@ -997,8 +996,9 @@ X(*),13,5,6,3,18
 "VERB(ADP/mark, AUX/aux, PRON/obj, *, NOUN/obl)",1,0,1,0,1
 "VERB(ADP/mark, AUX/aux:pass, *, NOUN/nsubj:pass)",1,0,1,0,1
 "VERB(ADP/mark, AUX/aux:pass, *, NOUN/obl)",0,1,0,1,1
-"VERB(ADP/mark, PRON/expl, *, NOUN/obl)",0,1,0,1,1
+"VERB(ADP/mark, AUX/aux:pass, *, VERB/advcl)",0,1,0,1,1
 "VERB(ADP/mark, PRON/expl, *, NOUN/xcomp)",0,1,0,1,1
+"VERB(ADP/mark, PRON/expl, *, VERB/advcl)",0,1,0,1,1
 "NOUN(ADP/case, *, ADJ/amod, ADV/advmod)",0,1,0,1,1
 "NOUN(ADP/case, *, ADJ/amod, NOUN/conj, PUNCT/punct)",0,1,0,1,1
 "NOUN(ADP/case, *, ADJ/amod, NOUN/nmod, NOUN/conj)",0,1,0,1,1
@@ -1011,9 +1011,8 @@ X(*),13,5,6,3,18
 "NOUN(ADP/case, *, ADJ/amod, PROPN/nmod, VERB/acl)",0,1,0,1,1
 "NOUN(ADP/case, *, ADJ/amod, PUNCT/punct)",0,1,0,1,1
 "NOUN(*, PUNCT/punct, VERB/parataxis, PUNCT/punct)",0,1,0,1,1
-"VERB(ADP/mark, PRON/expl, *, VERB/advcl)",0,1,0,1,1
 "VERB(ADP/mark, PRON/iobj, *, VERB/ccomp)",1,0,1,0,1
-"VERB(ADV/advmod, *, NOUN/obj, PUNCT/punct)",1,0,1,0,1
+"VERB(ADP/mark, PRON/nsubj, *, VERB/xcomp)",0,1,0,1,1
 "VERB(ADV/advmod, *, NOUN/obl)",1,0,1,0,1
 "VERB(ADV/advmod, *, NOUN/obl, NOUN/nsubj, PUNCT/punct)",0,1,0,1,1
 "VERB(ADV/advmod, *, NOUN/obl, VERB/parataxis, PUNCT/punct, VERB/parataxis)",1,0,1,0,1
@@ -1028,11 +1027,11 @@ X(*),13,5,6,3,18
 "VERB(ADV/advmod, NOUN/nsubj, *, ADJ/ccomp, PUNCT/punct)",0,1,0,1,1
 "VERB(ADV/advmod, NOUN/nsubj, *, ADV/advmod, PROPN/obj, VERB/xcomp, NOUN/appos, PUNCT/punct)",0,1,0,1,1
 "VERB(ADV/advmod, NOUN/nsubj, *, NOUN/obj, NOUN/obl)",0,1,0,1,1
-"VERB(ADP/mark, NOUN/obl, *, NOUN/obj)",1,0,1,0,1
-"VERB(AUX/aux:pass, *, NOUN/obl)",0,1,0,1,1
+"VERB(ADV/advmod, NOUN/nsubj, *, NOUN/obj, NOUN/obl, PUNCT/punct)",0,1,0,1,1
+"VERB(ADP/mark, PRON/expl, *, NOUN/obl)",0,1,0,1,1
 "VERB(AUX/aux:pass, *, NOUN/obl, NOUN/conj)",1,0,1,0,1
 "VERB(AUX/aux:pass, *, NOUN/obl, NOUN/obl, PUNCT/punct)",1,0,1,0,1
-"VERB(ADV/advmod, NOUN/nsubj, *, NOUN/obj, NOUN/obl, PUNCT/punct)",0,1,0,1,1
+"VERB(AUX/aux:pass, *, NOUN/obl, VERB/advcl)",0,1,0,1,1
 "VERB(ADV/advmod, NOUN/nsubj, *, NOUN/obj, VERB/advcl, PUNCT/punct)",0,1,0,1,1
 "VERB(ADV/advmod, NOUN/nsubj, *, VERB/xcomp, PUNCT/punct)",1,0,1,0,1
 "VERB(ADV/advmod, NOUN/nsubj, ADV/advmod, *, NOUN/obj, VERB/advcl, PUNCT/punct)",0,1,0,1,1
@@ -1045,11 +1044,11 @@ X(*),13,5,6,3,18
 "VERB(ADV/advmod, PRON/expl, *)",0,1,0,1,1
 "VERB(ADV/advmod, PROPN/nsubj, *, NOUN/obj, VERB/conj, PUNCT/punct)",0,1,0,1,1
 "VERB(ADV/advmod, PROPN/nsubj, *, NOUN/obl, PUNCT/punct)",0,1,0,1,1
-"VERB(CCONJ/cc, *, ADV/advmod, VERB/ccomp)",0,1,0,1,1
+"VERB(ADV/advmod, PROPN/nsubj, ADV/advmod, ADV/advmod, PRON/expl, *, NOUN/obl, VERB/advcl, PUNCT/punct)",0,1,0,1,1
 "VERB(CCONJ/cc, *, NOUN/obj, NOUN/obl, ADV/advmod)",0,1,0,1,1
 "VERB(CCONJ/cc, *, NOUN/obj, X/obl, VERB/advcl)",0,1,0,1,1
 "VERB(CCONJ/cc, *, NOUN/obl:agent)",0,1,0,1,1
-"VERB(ADV/advmod, PROPN/nsubj, ADV/advmod, ADV/advmod, PRON/expl, *, NOUN/obl, VERB/advcl, PUNCT/punct)",0,1,0,1,1
+"VERB(CCONJ/cc, *, PROPN/obj)",0,1,0,1,1
 "VERB(ADV/advmod, PROPN/nsubj, AUX/aux, *, NOUN/obl)",1,0,1,0,1
 "VERB(ADV/ccomp:speech, *, PROPN/nsubj, PUNCT/punct)",0,1,0,1,1
 "VERB(AUX/aux, *, ADV/advmod, PRON/obj, ADV/advmod, VERB/advcl, PUNCT/punct)",1,0,1,0,1
@@ -1061,7 +1060,7 @@ X(*),13,5,6,3,18
 "VERB(AUX/aux:pass, *, ADV/advmod, NOUN/obl)",0,1,0,1,1
 "VERB(AUX/aux:pass, *, ADV/advmod, NOUN/obl:agent, NOUN/parataxis)",1,0,1,0,1
 "VERB(AUX/aux:pass, *, NOUN/nsubj:pass, NOUN/obl, PUNCT/punct)",1,0,1,0,1
-"VERB(CCONJ/cc, ADV/advmod, *)",0,1,0,1,1
+"VERB(AUX/aux:pass, *, NOUN/obl)",0,1,0,1,1
 "VERB(CCONJ/cc, ADV/advmod, *, ADJ/xcomp, NOUN/obl)",1,0,1,0,1
 "VERB(CCONJ/cc, ADV/advmod, *, NOUN/obj)",1,0,1,0,1
 "VERB(CCONJ/cc, ADV/advmod, ADP/mark, *, NOUN/obj)",1,0,1,0,1
@@ -1070,15 +1069,16 @@ X(*),13,5,6,3,18
 "VERB(CCONJ/cc, AUX/aux:pass, *)",1,0,1,0,1
 "VERB(CCONJ/cc, NOUN/nsubj, *, NOUN/obl, NOUN/obl)",1,0,1,0,1
 "VERB(CCONJ/cc, NOUN/nsubj, *, VERB/xcomp)",0,1,0,1,1
-"VERB(AUX/aux:pass, *, NOUN/obl, VERB/advcl)",0,1,0,1,1
+"VERB(CCONJ/cc, NOUN/nsubj, *, VERB/xcomp, PUNCT/punct)",0,1,0,1,1
 "VERB(AUX/aux:pass, *, VERB/ccomp, PUNCT/punct)",0,1,0,1,1
 "VERB(AUX/cop, SCONJ/mark, PRON/nsubj, AUX/aux, *, NOUN/obl, PUNCT/punct)",1,0,1,0,1
 "VERB(AUX/discourse, SCONJ/discourse, NOUN/nsubj, *, PRON/obl, PUNCT/punct)",1,0,1,0,1
 "VERB(CCONJ/cc, *, ADJ/conj)",1,0,1,0,1
 "VERB(CCONJ/cc, *, ADJ/xcomp)",0,1,0,1,1
 "VERB(CCONJ/cc, *, ADV/advmod)",0,1,0,1,1
-"VERB(CCONJ/cc, *, PROPN/obj, ADJ/obl)",1,0,1,0,1
+"VERB(CCONJ/cc, *, ADV/advmod, VERB/ccomp)",0,1,0,1,1
 "VERB(CCONJ/cc, *, PROPN/obj, NOUN/obl)",0,1,0,1,1
+"VERB(CCONJ/cc, *, VERB/advcl, NOUN/obl)",1,0,1,0,1
 "NOUN(*, VERB/acl:relcl, NOUN/root)",1,0,1,0,1
 "NOUN(ADJ/amod, *, ADJ/amod)",0,1,0,1,1
 "NOUN(ADJ/amod, *, ADJ/amod, NOUN/nmod, VERB/acl, NOUN/nmod)",0,1,0,1,1
@@ -1090,12 +1090,11 @@ X(*),13,5,6,3,18
 "NOUN(*, NOUN/obj, PUNCT/punct)",1,0,1,0,1
 "NOUN(*, NOUN/obl)",1,0,1,0,1
 "NOUN(*, NOUN/parataxis)",1,0,1,0,1
-"VERB(CCONJ/cc, *, VERB/advcl, NOUN/obl)",1,0,1,0,1
 "VERB(CCONJ/cc, *, VERB/xcomp)",1,0,1,0,1
 "VERB(CCONJ/cc, *, VERB/xcomp, NOUN/obl)",1,0,1,0,1
+"VERB(CCONJ/cc, ADV/advmod, *)",0,1,0,1,1
 "VERB(NOUN/nsubj, *, NOUN/obj, NOUN/obl, VERB/conj, PUNCT/punct)",0,1,0,1,1
 "VERB(NOUN/nsubj, *, NOUN/obj, PROPN/obl, PUNCT/punct)",1,0,1,0,1
-"VERB(CCONJ/cc, NOUN/nsubj, *, VERB/xcomp, PUNCT/punct)",0,1,0,1,1
 "VERB(CCONJ/cc, NOUN/nsubj, AUX/aux, *, NOUN/obj, VERB/advcl, VERB/advcl, PUNCT/punct)",0,1,0,1,1
 "VERB(CCONJ/cc, NOUN/obl, *, NOUN/obj, PUNCT/punct)",1,0,1,0,1
 "VERB(CCONJ/cc, NOUN/obl, AUX/aux:pass, *, NOUN/obl)",1,0,1,0,1
@@ -1108,14 +1107,15 @@ X(*),13,5,6,3,18
 "VERB(NOUN/advcl, NOUN/nsubj, PRON/expl, *, PRON/obl, VERB/advcl, PUNCT/punct)",1,0,1,0,1
 "VERB(NOUN/ccomp:speech, *, PROPN/nsubj, NOUN/obl, PUNCT/punct)",0,1,0,1,1
 "VERB(NOUN/nsubj, *, ADJ/ccomp, NOUN/parataxis, PUNCT/punct)",0,1,0,1,1
-"VERB(CCONJ/cc, *, PROPN/obj)",0,1,0,1,1
+"VERB(NOUN/nsubj, *, ADJ/ccomp, VERB/parataxis, PUNCT/punct)",1,0,1,0,1
+"VERB(CCONJ/cc, *, PROPN/obj, ADJ/obl)",1,0,1,0,1
+"VERB(NOUN/nsubj, *, NOUN/obl, VERB/conj, PUNCT/punct)",1,0,1,0,1
 "VERB(NOUN/nsubj, *, PRON/obj, NOUN/obl, PUNCT/punct)",1,0,1,0,1
 "VERB(NOUN/nsubj, *, PRON/obl, PUNCT/punct)",1,0,1,0,1
 "VERB(NOUN/nsubj, *, PROPN/obj, PUNCT/punct)",1,0,1,0,1
 "VERB(NOUN/nsubj, *, VERB/advcl, PUNCT/punct)",0,1,0,1,1
 "VERB(NOUN/nsubj, *, VERB/ccomp, NOUN/obl, PUNCT/punct)",1,0,1,0,1
 "VERB(NOUN/nsubj, *, VERB/ccomp, VERB/advcl, PUNCT/punct)",0,1,0,1,1
-"VERB(NOUN/nsubj, *, ADJ/ccomp, VERB/parataxis, PUNCT/punct)",1,0,1,0,1
 "VERB(NOUN/nsubj, *, ADV/advmod, NOUN/obj, PUNCT/punct)",0,1,0,1,1
 "VERB(NOUN/nsubj, *, ADV/advmod, NOUN/obj, VERB/advcl, PUNCT/punct)",0,1,0,1,1
 "VERB(NOUN/nsubj, *, ADV/advmod, NOUN/obj, VERB/xcomp, PUNCT/punct)",0,1,0,1,1
@@ -1125,6 +1125,8 @@ X(*),13,5,6,3,18
 "VERB(NOUN/nsubj, *, ADV/advmod, PUNCT/punct)",0,1,0,1,1
 "VERB(NOUN/nsubj, *, NOUN/obj, NOUN/obl)",0,1,0,1,1
 "VERB(NOUN/nsubj, *, NOUN/obj, NOUN/obl, NOUN/obl, ADV/advmod, PUNCT/punct)",0,1,0,1,1
+"VERB(NOUN/nsubj, *, NOUN/obj, VERB/advcl, NOUN/parataxis, PUNCT/punct)",0,1,0,1,1
+"VERB(NOUN/nsubj, *, NOUN/obj, VERB/advcl, VERB/conj, PUNCT/punct)",0,1,0,1,1
 "NOUN(*, NOUN/root, PUNCT/punct)",1,0,1,0,1
 "NOUN(*, NUM/appos, PUNCT/punct)",0,1,0,1,1
 "NOUN(*, PRON/nmod, VERB/parataxis, PUNCT/punct)",1,0,1,0,1
@@ -1137,13 +1139,11 @@ X(*),13,5,6,3,18
 "NOUN(*, PROPN/nmod, VERB/acl)",0,1,0,1,1
 "NOUN(*, PUNCT/punct, NOUN/appos, VERB/root)",1,0,1,0,1
 "NOUN(*, ADJ/amod, VERB/acl, PUNCT/punct)",1,0,1,0,1
-"VERB(NOUN/nsubj, *, NOUN/obj, VERB/advcl, VERB/conj, PUNCT/punct)",0,1,0,1,1
 "VERB(NOUN/nsubj, *, NOUN/obj, VERB/xcomp, PUNCT/punct)",1,0,1,0,1
 "VERB(NOUN/nsubj, *, NOUN/obl, PUNCT/punct)",0,1,0,1,1
-"VERB(NOUN/nsubj, *, NOUN/obl, VERB/conj, PUNCT/punct)",1,0,1,0,1
-"VERB(NOUN/nsubj, NOUN/obl, AUX/aux, *, VERB/advcl, NOUN/obl, PUNCT/punct)",0,1,0,1,1
 "VERB(NOUN/nsubj, PRON/obj, *, ADV/advmod, PUNCT/punct)",1,0,1,0,1
 "VERB(NOUN/nsubj, PROPN/nsubj, *, VERB/xcomp, PUNCT/punct)",1,0,1,0,1
+"VERB(NOUN/nsubj, PUNCT/punct, NOUN/nsubj, *, NOUN/obj, PUNCT/punct)",0,1,0,1,1
 "VERB(NOUN/nsubj, *, VERB/ccomp, VERB/parataxis, PUNCT/punct)",1,0,1,0,1
 "VERB(NOUN/nsubj, *, VERB/conj, PUNCT/punct)",0,1,0,1,1
 "VERB(NOUN/nsubj, *, VERB/conj, VERB/root)",1,0,1,0,1
@@ -1156,15 +1156,14 @@ X(*),13,5,6,3,18
 "VERB(NOUN/nsubj, ADV/advmod, *, NOUN/obj, NOUN/parataxis, VERB/conj, PUNCT/punct)",1,0,1,0,1
 "VERB(NOUN/nsubj, ADV/advmod, *, VERB/ccomp, PUNCT/punct)",0,1,0,1,1
 "VERB(NOUN/nsubj, ADV/advmod, *, VERB/xcomp, PUNCT/punct)",1,0,1,0,1
-"VERB(NOUN/nsubj, *, NOUN/obj, VERB/advcl, NOUN/parataxis, PUNCT/punct)",0,1,0,1,1
-"VERB(NOUN/nsubj, ADV/advmod, AUX/aux, *, NOUN/obl, VERB/advcl, PUNCT/punct)",0,1,0,1,1
+"VERB(NOUN/nsubj, ADV/advmod, AUX/aux, *, NOUN/obl, PUNCT/punct)",1,0,1,0,1
 "VERB(NOUN/nsubj, ADV/advmod, NOUN/obl, *, PRON/obj, PUNCT/punct)",1,0,1,0,1
+"VERB(NOUN/nsubj, AUX/aux, *, NOUN/obj, NOUN/obl, VERB/advcl, PUNCT/punct)",1,0,1,0,1
 "NOUN(*, NOUN/conj, ADJ/acl:relcl)",1,0,1,0,1
 "NOUN(*, NOUN/conj, NOUN/conj, NOUN/conj)",1,0,1,0,1
 "NOUN(*, NOUN/conj, VERB/acl:relcl)",0,1,0,1,1
 "NOUN(*, NOUN/nmod, NOUN/appos)",1,0,1,0,1
 "NOUN(*, ADJ/amod, ADJ/amod, NOUN/conj)",0,1,0,1,1
-"VERB(NOUN/nsubj, AUX/aux, *, NOUN/obj, NOUN/obl, VERB/advcl, PUNCT/punct)",1,0,1,0,1
 "VERB(NOUN/nsubj, AUX/aux, *, NOUN/obj, VERB/advcl, PUNCT/punct)",0,1,0,1,1
 "VERB(NOUN/nsubj, AUX/aux, *, NOUN/obj, VERB/advcl, VERB/advcl, PUNCT/punct)",0,1,0,1,1
 "VERB(NOUN/nsubj, AUX/aux, *, NOUN/obj, VERB/conj, PUNCT/punct)",0,1,0,1,1
@@ -1173,9 +1172,9 @@ X(*),13,5,6,3,18
 "VERB(NOUN/nsubj, AUX/aux, *, PUNCT/punct)",1,0,1,0,1
 "VERB(NOUN/nsubj, AUX/cop, *, NOUN/conj, ADJ/parataxis)",1,0,1,0,1
 "VERB(NOUN/nsubj, CCONJ/cc, ADP/mark, *, NOUN/obj, PUNCT/punct)",1,0,1,0,1
+"VERB(NOUN/nsubj, NOUN/obl, AUX/aux, *, VERB/advcl, NOUN/obl, PUNCT/punct)",0,1,0,1,1
 "VERB(NOUN/obl, NOUN/nsubj, *, ADV/advmod, NOUN/ccomp, PUNCT/punct)",0,1,0,1,1
 "VERB(NOUN/obl, NOUN/nsubj, *, NOUN/obj, NOUN/obl, VERB/advcl, VERB/conj, PUNCT/punct)",0,1,0,1,1
-"VERB(NOUN/nsubj, PUNCT/punct, NOUN/nsubj, *, NOUN/obj, PUNCT/punct)",0,1,0,1,1
 "VERB(NOUN/nsubj:outer, AUX/cop, SCONJ/mark, NOUN/nsubj, *, NOUN/obl, NOUN/obl, VERB/advcl, PUNCT/punct)",0,1,0,1,1
 "VERB(NOUN/nsubj:pass, ADV/advmod, *, PUNCT/punct)",1,0,1,0,1
 "VERB(NOUN/nsubj:pass, ADV/advmod, AUX/aux:pass, *, NOUN/obl:agent, PUNCT/punct)",0,1,0,1,1
@@ -1188,11 +1187,12 @@ X(*),13,5,6,3,18
 "VERB(NOUN/nsubj:pass, AUX/aux:pass, *, NOUN/obl, PUNCT/punct)",1,0,1,0,1
 "VERB(NOUN/nsubj:pass, AUX/aux:pass, *, NOUN/obl:agent, VERB/xcomp, PUNCT/punct)",0,1,0,1,1
 "VERB(NOUN/nsubj:pass, AUX/aux:pass, *, PROPN/obl, VERB/conj, PUNCT/punct)",1,0,1,0,1
-"VERB(NOUN/nsubj, ADV/advmod, AUX/aux, *, NOUN/obl, PUNCT/punct)",1,0,1,0,1
+"VERB(NOUN/nsubj:pass, AUX/aux:pass, *, PROPN/obl:agent, NOUN/obl, PUNCT/punct)",1,0,1,0,1
+"VERB(NOUN/nsubj, ADV/advmod, AUX/aux, *, NOUN/obl, VERB/advcl, PUNCT/punct)",0,1,0,1,1
 "VERB(NOUN/obl, NOUN/nsubj:pass, AUX/aux:pass, *, NOUN/obl, NOUN/obl, VERB/conj, PUNCT/punct)",0,1,0,1,1
 "VERB(NOUN/obl, NOUN/nsubj:pass, AUX/aux:pass, *, NOUN/obl:agent, VERB/xcomp, PUNCT/punct)",0,1,0,1,1
 "VERB(NOUN/obl, NOUN/nsubj:pass, AUX/aux:pass, *, PUNCT/punct)",1,0,1,0,1
-"VERB(NOUN/nsubj:pass, AUX/aux:pass, *, PROPN/obl:agent, NOUN/obl, PUNCT/punct)",1,0,1,0,1
+"VERB(NOUN/obl, NOUN/nsubj:pass, AUX/aux:pass, *, VERB/advcl, NOUN/obl, PUNCT/punct)",0,1,0,1,1
 "VERB(NOUN/nsubj:pass, AUX/aux:pass, *, PROPN/obl:agent, PROPN/conj, PUNCT/punct)",1,0,1,0,1
 "VERB(NOUN/nsubj:pass, AUX/aux:pass, *, PROPN/obl:agent, PUNCT/punct)",1,0,1,0,1
 "VERB(NOUN/nsubj:pass, AUX/aux:pass, *, VERB/advcl, VERB/advcl, PUNCT/punct)",0,1,0,1,1
@@ -1205,14 +1205,14 @@ X(*),13,5,6,3,18
 "VERB(NOUN/obl, AUX/aux:pass, *, NOUN/nsubj:pass, PUNCT/punct)",0,1,0,1,1
 "VERB(NOUN/obl, AUX/aux:pass, *, NOUN/obl, PUNCT/punct)",1,0,1,0,1
 "VERB(NOUN/obl, AUX/aux:pass, *, VERB/ccomp, PUNCT/punct)",0,1,0,1,1
-"VERB(NOUN/obl, PRON/nsubj, *, VERB/xcomp, PUNCT/punct)",1,0,1,0,1
-"VERB(NOUN/obl, PRON/nsubj, PRON/expl, *, ADV/advmod, PUNCT/punct)",1,0,1,0,1
-"VERB(NOUN/obl, PROPN/nsubj, *, NOUN/obj, VERB/conj, VERB/advcl, PUNCT/punct)",0,1,0,1,1
-"VERB(NOUN/obl, PROPN/nsubj, *, PROPN/obj, ADJ/xcomp, NOUN/obl, PUNCT/punct)",0,1,0,1,1
-"VERB(NOUN/obl, PROPN/nsubj, *, VERB/advcl, NOUN/obl, PUNCT/punct)",0,1,0,1,1
-"VERB(NOUN/obl, NOUN/nsubj, *, NOUN/obj, VERB/advcl, PUNCT/punct)",0,1,0,1,1
-"VERB(NOUN/obl, NOUN/nsubj, *, NOUN/obj, VERB/advcl, VERB/parataxis, PUNCT/punct)",0,1,0,1,1
-"VERB(NOUN/obl, NOUN/nsubj, *, NOUN/obj, VERB/conj, PUNCT/punct)",1,0,1,0,1
+"NOUN(*, ADJ/amod, NOUN/conj, NOUN/conj, NOUN/conj, NOUN/conj, NOUN/conj, PUNCT/punct)",1,0,1,0,1
+"NOUN(*, ADJ/amod, NOUN/conj, NOUN/nmod)",0,1,0,1,1
+"NOUN(*, ADJ/amod, NOUN/nmod, NOUN/nmod)",0,1,0,1,1
+"NOUN(*, ADJ/amod, PROPN/nmod, PROPN/nmod)",0,1,0,1,1
+"NOUN(*, ADJ/amod, PUNCT/punct)",0,1,0,1,1
+"NOUN(*, ADJ/amod, VERB/acl, NOUN/nmod)",0,1,0,1,1
+"ADV(PUNCT/punct, PUNCT/parataxis, NOUN/nsubj, AUX/cop, *)",1,0,1,0,1
+"AUX(*, SCONJ/fixed)",1,0,1,0,1
 "VERB(NOUN/obl, NOUN/nsubj, *, NOUN/obl, NOUN/obj, NOUN/obl, PUNCT/punct)",0,1,0,1,1
 "VERB(NOUN/obl, NOUN/nsubj, *, NOUN/xcomp, PUNCT/punct)",0,1,0,1,1
 "VERB(NOUN/obl, NOUN/nsubj, *, PUNCT/punct)",1,0,1,0,1
@@ -1223,20 +1223,20 @@ X(*),13,5,6,3,18
 "VERB(NOUN/obl, NOUN/nsubj, AUX/aux, *, VERB/xcomp, VERB/advcl, PUNCT/punct)",0,1,0,1,1
 "VERB(NOUN/obl, NOUN/nsubj:pass, AUX/aux:pass, *, VERB/advcl, VERB/advcl, VERB/parataxis, PUNCT/punct)",0,1,0,1,1
 "VERB(NOUN/obl, NOUN/nsubj:pass, AUX/aux:pass, *, VERB/advcl, VERB/conj, PUNCT/punct)",0,1,0,1,1
-"NOUN(*, ADJ/amod, NOUN/conj, NOUN/conj, NOUN/conj, NOUN/conj, NOUN/conj, PUNCT/punct)",1,0,1,0,1
-"NOUN(*, ADJ/amod, NOUN/conj, NOUN/nmod)",0,1,0,1,1
-"NOUN(*, ADJ/amod, NOUN/nmod, NOUN/nmod)",0,1,0,1,1
-"NOUN(*, ADJ/amod, PROPN/nmod, PROPN/nmod)",0,1,0,1,1
-"NOUN(*, ADJ/amod, PUNCT/punct)",0,1,0,1,1
-"NOUN(*, ADJ/amod, VERB/acl, NOUN/nmod)",0,1,0,1,1
-"ADV(PUNCT/punct, PUNCT/parataxis, NOUN/nsubj, AUX/cop, *)",1,0,1,0,1
-"AUX(*, SCONJ/fixed)",1,0,1,0,1
 "VERB(NOUN/obl, NOUN/nsubj:pass, AUX/aux:pass, ADV/advmod, *, NOUN/obl, PUNCT/punct)",0,1,0,1,1
 "VERB(NOUN/obl, NOUN/obl, PROPN/nsubj, *, NOUN/obj, VERB/advcl, PUNCT/punct)",0,1,0,1,1
 "VERB(NOUN/obl, PRON/nsubj, *)",1,0,1,0,1
 "VERB(NOUN/obl, PRON/nsubj, *, NOUN/obj, NOUN/obl)",1,0,1,0,1
 "VERB(NOUN/obl, PRON/nsubj, *, NOUN/obj, PUNCT/punct)",1,0,1,0,1
 "VERB(NOUN/obl, PRON/nsubj, *, VERB/ccomp, PUNCT/punct)",1,0,1,0,1
+"VERB(NOUN/obl, PRON/nsubj, *, VERB/xcomp, PUNCT/punct)",1,0,1,0,1
+"VERB(NOUN/obl, PRON/nsubj, PRON/expl, *, ADV/advmod, PUNCT/punct)",1,0,1,0,1
+"VERB(NOUN/obl, PROPN/nsubj, *, NOUN/obj, VERB/conj, VERB/advcl, PUNCT/punct)",0,1,0,1,1
+"VERB(NOUN/obl, PROPN/nsubj, *, PROPN/obj, ADJ/xcomp, NOUN/obl, PUNCT/punct)",0,1,0,1,1
+"VERB(NOUN/obl, PROPN/nsubj, *, VERB/advcl, NOUN/obl, PUNCT/punct)",0,1,0,1,1
+"VERB(NOUN/obl, NOUN/nsubj, *, NOUN/obj, VERB/advcl, PUNCT/punct)",0,1,0,1,1
+"VERB(NOUN/obl, NOUN/nsubj, *, NOUN/obj, VERB/advcl, VERB/parataxis, PUNCT/punct)",0,1,0,1,1
+"VERB(NOUN/obl, NOUN/nsubj, *, NOUN/obj, VERB/conj, PUNCT/punct)",1,0,1,0,1
 "VERB(PRON/nsubj, *, PROPN/obj)",0,1,0,1,1
 "VERB(PRON/nsubj, *, VERB/advcl)",0,1,0,1,1
 "VERB(NOUN/obl, PROPN/nsubj, ADV/advmod, *, NOUN/obj, NOUN/obl, VERB/conj, PUNCT/punct)",0,1,0,1,1
@@ -1252,13 +1252,13 @@ X(*),13,5,6,3,18
 "VERB(PRON/expl, *, NOUN/xcomp)",0,1,0,1,1
 "VERB(PRON/expl, *, VERB/advcl)",1,0,1,0,1
 "VERB(PRON/nsubj, *, NOUN/ccomp)",0,1,0,1,1
-"VERB(NOUN/obl, NOUN/nsubj:pass, AUX/aux:pass, *, VERB/advcl, NOUN/obl, PUNCT/punct)",0,1,0,1,1
+"VERB(PRON/nsubj, *, NOUN/obj, NOUN/obj, VERB/parataxis, PUNCT/punct)",1,0,1,0,1
 "VERB(PRON/nsubj, ADV/advmod, *, VERB/ccomp, VERB/conj, PUNCT/punct)",0,1,0,1,1
 "VERB(PRON/nsubj, ADV/advmod, *, VERB/conj)",1,0,1,0,1
 "VERB(PRON/nsubj, ADV/advmod, AUX/aux, *, NOUN/obl, NOUN/obj, VERB/parataxis)",0,1,0,1,1
 "VERB(PRON/nsubj, ADV/advmod, AUX/aux, *, VERB/conj, PUNCT/punct, PUNCT/punct)",1,0,1,0,1
 "VERB(PRON/nsubj, ADV/advmod, PRON/obj, *, PUNCT/punct)",1,0,1,0,1
-"VERB(PRON/nsubj, *, NOUN/obj, NOUN/obj, VERB/parataxis, PUNCT/punct)",1,0,1,0,1
+"VERB(PRON/nsubj, AUX/aux, *, ADV/advmod, PUNCT/punct)",1,0,1,0,1
 "VERB(PRON/nsubj, *, NOUN/obj, NOUN/obl, NOUN/conj)",1,0,1,0,1
 "VERB(PRON/nsubj, *, NOUN/obj, NOUN/obl, NOUN/obl, PUNCT/punct)",0,1,0,1,1
 "VERB(PRON/nsubj, *, NOUN/obj, VERB/advcl)",0,1,0,1,1
@@ -1269,8 +1269,8 @@ X(*),13,5,6,3,18
 "VERB(PRON/nsubj, *, NOUN/obl, VERB/advcl)",0,1,0,1,1
 "VERB(PRON/nsubj, *, NOUN/obl, VERB/conj)",1,0,1,0,1
 "VERB(PRON/nsubj, *, NOUN/xcomp, ADJ/conj, PUNCT/punct)",0,1,0,1,1
-"VERB(PRON/nsubj:pass, AUX/aux, AUX/aux:pass, *, PRON/obl:agent, NOUN/obl)",0,1,0,1,1
 "VERB(PRON/nsubj:pass, AUX/aux:pass, *, NOUN/obl)",1,0,1,0,1
+"VERB(PRON/nsubj:pass, AUX/aux:pass, *, NOUN/obl, PUNCT/punct)",1,0,1,0,1
 "CCONJ(ADP/case, *)",1,0,1,0,1
 "CCONJ(PUNCT/punct, *, PUNCT/punct)",0,1,0,1,1
 "DET(*, NOUN/fixed)",1,0,1,0,1
@@ -1285,10 +1285,9 @@ INTJ(*),1,0,1,0,1
 "VERB(PRON/nsubj, ADV/advmod, *)",1,0,1,0,1
 "VERB(PRON/nsubj, ADV/advmod, *, NOUN/obj, VERB/xcomp, PUNCT/punct)",1,0,1,0,1
 "VERB(PRON/nsubj, ADV/advmod, *, NOUN/obl, ADV/advmod)",0,1,0,1,1
-"VERB(PRON/obj, PRON/nsubj, *, ADJ/xcomp, PUNCT/parataxis)",1,0,1,0,1
 "VERB(PRON/obj, PRON/nsubj, *, VERB/conj)",1,0,1,0,1
 "VERB(PRON/obj, PRON/nsubj, *, VERB/xcomp)",1,0,1,0,1
-"VERB(PRON/nsubj, AUX/aux, *, ADV/advmod, PUNCT/punct)",1,0,1,0,1
+"VERB(PRON/obj, PRON/nsubj, NOUN/obl, ADV/advmod, *, NOUN/obl)",1,0,1,0,1
 "VERB(PRON/nsubj, AUX/aux, *, NOUN/obj, NOUN/obl)",0,1,0,1,1
 "VERB(PRON/nsubj, AUX/aux, *, NOUN/obj, VERB/advcl)",0,1,0,1,1
 "VERB(PRON/nsubj, AUX/aux, *, NOUN/obj, VERB/advcl, PUNCT/punct)",1,0,1,0,1
@@ -1301,6 +1300,7 @@ INTJ(*),1,0,1,0,1
 "VERB(PRON/nsubj, PRON/obj, *, NOUN/xcomp)",0,1,0,1,1
 "VERB(PRON/nsubj:pass, ADV/advmod, AUX/aux:pass, *, ADV/advmod, NOUN/obl)",0,1,0,1,1
 "VERB(PRON/nsubj:pass, AUX/aux, AUX/aux:pass, *, NOUN/obl:agent)",0,1,0,1,1
+"VERB(PRON/nsubj:pass, AUX/aux, AUX/aux:pass, *, PRON/obl:agent, NOUN/obl)",0,1,0,1,1
 "ADV(NOUN/obl, *, PROPN/obl)",0,1,0,1,1
 "ADV(NOUN/obl, *, PUNCT/punct)",0,1,0,1,1
 "ADV(PRON/nsubj, *, NOUN/obj)",1,0,1,0,1
@@ -1309,7 +1309,6 @@ INTJ(*),1,0,1,0,1
 "ADV(PUNCT/punct, ADV/advmod, *, NOUN/obl)",0,1,0,1,1
 "ADV(PUNCT/punct, AUX/cop, *, NOUN/obl, PUNCT/punct, PUNCT/punct)",0,1,0,1,1
 "ADV(*, NUM/appos)",1,0,1,0,1
-"VERB(PRON/obj, *, ADV/advmod, NOUN/obl)",1,0,1,0,1
 "VERB(PRON/obj, *, NOUN/nsubj)",1,0,1,0,1
 "VERB(PRON/obj, *, NOUN/obl, PUNCT/punct)",1,0,1,0,1
 "VERB(PRON/obj, NOUN/nsubj, *, ADJ/obl)",1,0,1,0,1
@@ -1317,7 +1316,7 @@ INTJ(*),1,0,1,0,1
 "VERB(PRON/obj, NOUN/nsubj, ADV/advmod, *, VERB/conj, VERB/parataxis, PUNCT/punct)",1,0,1,0,1
 "VERB(PRON/obj, NOUN/nsubj, ADV/advmod, *, VERB/xcomp)",0,1,0,1,1
 "VERB(PRON/obj, PRON/expl:impers, *, NOUN/obl, PUNCT/punct)",1,0,1,0,1
-"VERB(PRON/obj, PRON/nsubj, NOUN/obl, ADV/advmod, *, NOUN/obl)",1,0,1,0,1
+"VERB(PRON/obj, PRON/nsubj, *, ADJ/xcomp, PUNCT/parataxis)",1,0,1,0,1
 "VERB(PRON/obl, *, NOUN/nsubj)",0,1,0,1,1
 "VERB(PRON/obl, *, PRON/obj)",1,0,1,0,1
 "VERB(PRON/obl, ADV/advmod, *, NOUN/nsubj)",1,0,1,0,1
@@ -1330,13 +1329,13 @@ INTJ(*),1,0,1,0,1
 "VERB(PROPN/nsubj, *, NOUN/ccomp, PUNCT/punct)",1,0,1,0,1
 "VERB(PROPN/nsubj, *, NOUN/ccomp, VERB/ccomp, PUNCT/punct)",1,0,1,0,1
 "VERB(PROPN/nsubj, *, NOUN/obj, NOUN/conj, PUNCT/punct)",0,1,0,1,1
-"VERB(PRON/nsubj:pass, AUX/aux:pass, *, NOUN/obl, PUNCT/punct)",1,0,1,0,1
+"VERB(PROPN/nsubj, *, NOUN/obj, VERB/parataxis, PUNCT/punct)",0,1,0,1,1
 "VERB(PRON/nsubj:pass, AUX/aux:pass, *, PROPN/obl, VERB/advcl)",0,1,0,1,1
+"VERB(PRON/obj, *, ADV/advmod, NOUN/obl)",1,0,1,0,1
 "ADV(NOUN/obl, *)",0,1,0,1,1
 "VERB(PROPN/obl, *, NOUN/obj)",0,1,0,1,1
 "VERB(PROPN/obl, NOUN/nsubj, *, NOUN/obj, NOUN/obl, PUNCT/punct)",0,1,0,1,1
 "VERB(PROPN/obl, NOUN/nsubj, *, NOUN/obl, NOUN/obj, PUNCT/punct)",1,0,1,0,1
-"VERB(PROPN/nsubj, *, NOUN/obj, VERB/parataxis, PUNCT/punct)",0,1,0,1,1
 "VERB(PROPN/nsubj, *, NOUN/obl, NOUN/obj, NOUN/obl, VERB/parataxis, PUNCT/punct)",0,1,0,1,1
 "VERB(PROPN/nsubj, *, NOUN/obl, NOUN/obj, NUM/obl, PUNCT/punct)",0,1,0,1,1
 "VERB(PROPN/nsubj, *, NOUN/obl, NOUN/obl, NOUN/obl, PUNCT/punct)",1,0,1,0,1
@@ -1349,7 +1348,7 @@ INTJ(*),1,0,1,0,1
 "VERB(PROPN/nsubj, *, PROPN/obj, VERB/xcomp, PUNCT/punct)",0,1,0,1,1
 "VERB(PROPN/nsubj, ADV/advmod, *, ADV/advmod, NOUN/obl, VERB/advcl, PUNCT/punct)",0,1,0,1,1
 "VERB(PROPN/nsubj, ADV/advmod, *, NOUN/obl, PUNCT/punct)",0,1,0,1,1
-"ADV(*, PRON/obl)",1,0,1,0,1
+"VERB(PROPN/nsubj, ADV/advmod, *, VERB/xcomp, PUNCT/punct)",1,0,1,0,1
 "ADV(*, VERB/acl, PUNCT/punct)",0,1,0,1,1
 "ADV(*, VERB/conj)",1,0,1,0,1
 "ADV(ADP/case, *, ADV/advmod)",0,1,0,1,1
@@ -1362,6 +1361,7 @@ INTJ(*),1,0,1,0,1
 "VERB(PROPN/nsubj, AUX/aux, ADV/advmod, *, NOUN/obj, PUNCT/punct)",0,1,0,1,1
 "VERB(PROPN/nsubj, NOUN/nsubj, *, VERB/ccomp, PUNCT/punct)",0,1,0,1,1
 "VERB(PROPN/nsubj, NOUN/obl, PROPN/nsubj, *, ADV/advmod, NOUN/obj, VERB/advcl, PUNCT/punct)",0,1,0,1,1
+"VERB(PROPN/nsubj, PRON/obj, *, PUNCT/punct)",1,0,1,0,1
 "VERB(PROPN/nsubj, PUNCT/punct, *, NOUN/obj, PUNCT/punct, VERB/advcl, PUNCT/punct)",1,0,1,0,1
 "VERB(PROPN/nsubj:pass, ADV/advmod, AUX/aux:pass, *, NOUN/obl, NOUN/obl, VERB/parataxis, PUNCT/punct)",1,0,1,0,1
 "VERB(PROPN/nsubj:pass, ADV/advmod, AUX/aux:pass, *, VERB/advcl, PUNCT/punct)",1,0,1,0,1
@@ -1379,8 +1379,8 @@ INTJ(*),1,0,1,0,1
 "VERB(PUNCT/punct, *, NOUN/obj, ADV/advmod)",0,1,0,1,1
 "VERB(PUNCT/punct, *, NOUN/obj, NOUN/obl, VERB/conj)",0,1,0,1,1
 "VERB(PUNCT/punct, *, NOUN/obj, NOUN/xcomp)",0,1,0,1,1
-"VERB(PROPN/nsubj, ADV/advmod, *, VERB/xcomp, PUNCT/punct)",1,0,1,0,1
 "VERB(PROPN/nsubj, ADV/advmod, AUX/aux, *, ADV/advmod, NOUN/obj, VERB/advcl, PUNCT/punct)",0,1,0,1,1
+"ADV(*, PRON/obl)",1,0,1,0,1
 "VERB(PUNCT/punct, ADV/advmod, *, ADJ/xcomp, ADV/advmod)",0,1,0,1,1
 "VERB(PUNCT/punct, ADV/advmod, *, NOUN/obj)",0,1,0,1,1
 "VERB(PUNCT/punct, ADV/advmod, *, NOUN/obl:agent)",0,1,0,1,1

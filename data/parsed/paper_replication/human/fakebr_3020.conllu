@@ -26,7 +26,7 @@
 14	.	.	PUNCT	_	_	2	punct	_	_
 
 # sent_id = fakebr:3020-3
-# text = Matéria publicada na Revista Época informa que Danielle Fonteles, dona da agência Pepper Interativa , já fechou acordo de delação premiada na Operação Acrônimo, da PF.
+# text = Matéria publicada na Revista Época informa que Danielle Fonteles, dona da agência Pepper Interativa, já fechou acordo de delação premiada na Operação Acrônimo, da PF.
 1	Matéria	matéria	NOUN	_	Gender=Fem|Number=Sing	7	nsubj	_	_
 2	publicada	publicar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	1	acl	_	_
 3-4	na	_	_	_	_	_	_	_	_
@@ -45,7 +45,7 @@
 14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
 15	agência	agência	NOUN	_	Gender=Fem|Number=Sing	12	nmod	_	_
 16	Pepper	Pepper	PROPN	_	_	15	nmod	_	_
-17	Interativa	Interativa	PROPN	_	_	16	flat:name	_	_
+17	Interativa	Interativa	PROPN	_	_	16	flat:name	_	SpaceAfter=No
 18	,	,	PUNCT	_	_	12	punct	_	_
 19	já	já	ADV	_	_	20	advmod	_	_
 20	fechou	fechar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	ccomp	_	_

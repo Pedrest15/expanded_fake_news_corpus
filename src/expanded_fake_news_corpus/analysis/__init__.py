@@ -8,8 +8,9 @@ módulos sejam lidas do mesmo jeito.
 Módulos de análise: :mod:`zipf` (distribuição de frequências),
 :mod:`syllables` (silabação), :mod:`lexical_diversity` (MATTR), :mod:`sage`
 (termos distintivos), :mod:`liwc` (perfil psicolinguístico) e, sobre o corpus
-parseado de :mod:`conllu`, :mod:`grammar_rules` (regras de dependência) e
-:mod:`eud_rules` (regras das arestas *enhanced*). :mod:`runner` roda o
+parseado de :mod:`conllu`, :mod:`pos` (classes gramaticais),
+:mod:`grammar_rules` (regras de dependência) e :mod:`eud_rules` (regras das
+arestas *enhanced*). :mod:`runner` roda o
 catálogo inteiro ou parte dele (``python -m expanded_fake_news_corpus.analysis``).
 """
 

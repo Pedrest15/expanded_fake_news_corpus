@@ -32,6 +32,7 @@ from expanded_fake_news_corpus.analysis import (
     grammar_rules,
     lexical_diversity,
     liwc,
+    pos,
     sage,
     syllables,
     zipf,
@@ -78,6 +79,12 @@ ANALYSES: tuple[Analysis, ...] = (
     Analysis("zipf", "Distribuição de frequências e palavras mais comuns", zipf.main),
     Analysis("sage", "Termos distintivos (SAGE)", sage.main),
     Analysis("liwc", "Perfil psicolinguístico (LIWC)", liwc.main),
+    Analysis(
+        "pos",
+        "Distribuição de classes gramaticais (UPOS)",
+        pos.main,
+        requires_parsing=True,
+    ),
     Analysis(
         "grammar_rules",
         "Regras de dependência: produtividade e TF-IDF",

@@ -192,3 +192,31 @@ machine: `NOUN(*, PRON/ref)` (relative clauses on nouns), `ADV(*, NOUN/obl:de)`
 
 With n = 20 + 20 these are calibration numbers for the pipeline, not
 publishable effects; the prior results were computed on thousands of pairs.
+
+## 2026-09-15 — Fake.br cleaning, results regenerated, POS distribution
+
+**Cleaning.** The human Fake.br side now goes through the four rules of the
+prior work's `adapt_fake.py` before any analysis
+(`expanded_fake_news_corpus.analysis.cleaning`): characters outside a keyboard
+whitelist removed, lines broken mid-sentence joined, double spaces collapsed,
+space before punctuation removed. Two deliberate departures from the original
+script: it dropped the first line when "joining" a broken pair (a `continue`
+before the write — text was lost in the 699 Fake.br files it flagged), and it
+deleted non-breaking spaces, gluing the neighbouring words; here lines are
+joined and exotic whitespace becomes a space. On the 10 Fake.br human texts of
+this sample the effect is tiny — 10 characters removed (mis-decoded quotes in
+`fakebr:104`), no joins, 9 texts with spacing normalised — and every table
+above kept its values after regeneration (parsing, EUD and all analyses were
+rerun; the significance tables are identical to three decimals). The cleaning
+matters for the full corpus, where 72% of the files change.
+
+**POS distribution** (`analysis/pos.py`, new in the `fakegen-analysis`
+catalogue, reading UPOS from the Portparser CoNLL-U as the prior work read
+Porttagger tags): the pooled tag × authorship table is not independent
+(χ² = 198, 15 d.f., p < 0.001) but the effect is small (Cramér's V = 0.12;
+0.12 Fake.br, 0.18 FakeTrueBR). Per document, only **ADJ** survives FDR: 4.2%
+of tokens in human texts vs 8.9% in machine texts (d = −2.7) — the same
+adjective signal as `ADJ(*)` in the rule analysis and `adj` in LIWC. The
+largest pooled differences after ADJ are PRON (4.0% vs 1.9%, human),
+PUNCT (11.2% vs 9.5%, human), PROPN (5.5% vs 6.8%, machine) and NUM
+(2.3% vs 1.1%, human), none significant per document at n = 20.
