@@ -1,109 +1,135 @@
 # FakeGen.BR
 
-Construção de um corpus de *fake news* em português brasileiro geradas por IA.
+Building a corpus of AI-generated *fake news* in Brazilian Portuguese, and
+measuring how it differs from fake news written by people.
 
-**Página do projeto:** <https://github.com/Pedrest15/expanded_fake_news_corpus> — navegador do
-corpus e [caracterização linguística](https://pedrest15.github.io/fakegen_br/analysis.html).
+**Project page:** <https://pedrest15.github.io/expanded_fake_news_corpus/> —
+corpus browser and
+[linguistic characterisation](https://pedrest15.github.io/expanded_fake_news_corpus/analysis.html).
 
-O ponto de partida são notícias verdadeiras dos corpora [Fake.br][fakebr] e
-[FakeTrueBR][faketruebr]. A partir das manchetes dessas notícias verdadeiras são
-geradas as notícias falsas sintéticas que comporão o FakeGen.BR.
+The starting point is the true news of the [Fake.br][fakebr] and
+[FakeTrueBR][faketruebr] corpora. Each true article has a human-written fake
+counterpart in its source corpus; the LLM-generated fake is paired with it by
+identifier, so every comparison is between two fakes about the same story.
 
-Este repositório implementa, por enquanto, o **primeiro estágio do pipeline**: um
-agente de titulação que lê uma notícia e escreve a manchete correspondente.
+What the repository contains:
+
+- **Generation** — two experiments. The main pipeline writes a faithful
+  headline for the true article (`fakegen headline`) and then a fake news
+  story from that headline (`fakegen fake`). The *paper replication*
+  (`fakegen paper`) instead feeds the whole true article to the prompt of
+  Silva et al., reproduced verbatim, and only swaps the model.
+- **Linguistic analyses** — syllables, lexical diversity (MATTR), Zipf, SAGE,
+  LIWC, dependency-grammar rules and Enhanced-UD rules, all human vs. machine
+  on paired documents, run one at a time or through the `fakegen-analysis`
+  orchestrator.
+- **Syntactic parsing** — the Portparser v2 chain (LatinPipe + BERTimbau) and
+  Grew EUD enrichment, producing the CoNLL-U the rule analyses read.
+- **A site** (`docs/`) browsing the generated texts and their characterisation.
+
+Generated text and its provenance live in `corpus/`
+([corpus/README.md](corpus/README.md)); analysis tables in `data/analysis/`;
+parsed CoNLL-U in `data/parsed/`.
 
 ## Pipeline
 
 ```
-notícia verdadeira ──▶ [agente de titulação] ──▶ manchete ──▶ (próximo estágio: geração da fake news)
+true article ──▶ [headline agent] ──▶ headline ──▶ [fake news writer] ──▶ synthetic fake news
+                                                   (paper replication: true article ──▶ [paper prompt] ──▶ synthetic fake news)
 ```
 
-O agente é orquestrado com [LangGraphLib][langgraphlib] e o grafo tem duas etapas:
+The first stage is the headline agent, described here; the second stage takes
+the headline and writes the fake news with the prompt of Silva et al. adapted
+to a headline input (`PAPER_FAKE_PROMPT`, strategy `paper`) or with a
+structured-output variant calibrated by genre and length (`estruturada`).
+
+The agent is orchestrated with [LangGraphLib][langgraphlib] and the graph has two
+steps:
 
 ```
 start ──▶ headline_writer ──▶ sanitize ──▶ end
 ```
 
-- **`headline_writer`** — `Agent` da LangGraphLib com saída estruturada
-  (`headline` + `rationale`), guiado pelo prompt de
-  [prompts.py](src/fakegen_br/prompts.py). O prompt é deliberadamente
-  conservador: a manchete representa a notícia **verdadeira**, então precisa ser
-  fiel ao texto, sem sensacionalismo — a distorção fica para o estágio seguinte.
-- **`sanitize`** — nó determinístico que remove aspas, markdown, rótulos
-  ("Manchete:") e ponto final, preservando a saída bruta do modelo em
-  `raw_headline` para auditoria.
+- **`headline_writer`** — a LangGraphLib `Agent` with structured output
+  (`headline` + `rationale`), guided by the prompt in
+  [prompts.py](src/expanded_fake_news_corpus/prompts.py). The prompt is
+  deliberately conservative: the headline represents the **true** article, so it
+  must be faithful to the text, with no sensationalism — distortion is left to
+  the next stage.
+- **`sanitize`** — a deterministic node that strips quotes, markdown, labels
+  ("Manchete:") and the final period, keeping the model's raw output in
+  `raw_headline` for auditing.
 
-Depois do grafo, [`check_headline`](src/fakegen_br/agents/headline.py) anota
-avisos de qualidade no resultado (tamanho fora da faixa de 6–18 palavras, e
-manchetes cujo vocabulário de conteúdo quase não aparece na notícia — indício de
-alucinação). Os avisos não descartam a manchete: ficam gravados no JSONL para
-revisão manual e estatísticas do corpus.
+After the graph, [`check_headline`](src/expanded_fake_news_corpus/agents/headline.py)
+attaches quality warnings to the result (length outside the 6–18 word range, and
+headlines whose content vocabulary barely appears in the article — a sign of
+hallucination). Warnings do not discard the headline: they are stored in the
+JSONL for manual review and corpus statistics.
 
-## Preparação dos corpora
+## Preparing the corpora
 
-Os corpora de origem misturam notícias verdadeiras e falsas, em formatos
-diferentes. O script abaixo extrai só as verdadeiras e normaliza os dois num
-esquema comum (`id, text, link, duplicate_rows`, mais `author, category, date`
-no Fake.br):
+The source corpora mix true and fake news, in different formats. The script
+below extracts only the true articles and normalises both into a common schema
+(`id, text, link, duplicate_rows`, plus `author, category, date` for Fake.br):
 
 ```bash
-# o Fake.br precisa ser baixado (a pasta full_texts não vai para o git)
+# Fake.br must be downloaded (the full_texts folder is not versioned)
 git clone --depth 1 https://github.com/roneysco/Fake.br-Corpus.git
 cp -r Fake.br-Corpus/full_texts true-corpus/raw/Fake.br-full_texts
 
 uv run python scripts/prepare_corpora.py
 ```
 
-| Corpus | Origem | Verdadeiras | Duplicatas removidas | **Total** |
+| Corpus | Source | True | Duplicates removed | **Total** |
 |---|---|---|---|---|
-| Fake.br | 3.600 arquivos em `full_texts/true/` | 3.600 | 1 | **3.599** |
-| FakeTrueBR | 1.791 pares (fake, true) | 1.791 | 388 | **1.403** |
+| Fake.br | 3,600 files in `full_texts/true/` | 3,600 | 1 | **3,599** |
+| FakeTrueBR | 1,791 (fake, true) pairs | 1,791 | 388 | **1,403** |
 
-**Use o `full_texts/` do Fake.br, não o `preprocessed/`.** O CSV pré-processado
-que o repositório também distribui está em minúsculas, sem acentos, sem
-pontuação e sem *stopwords* — nele a titulação é inviável, porque o modelo
-teria que inventar a grafia que o texto perdeu. O `full_texts/` traz a notícia
-como foi coletada do site, e os metadados (autor, link, categoria, data) vêm de
-`true-meta-information/`.
+**Use Fake.br's `full_texts/`, not `preprocessed/`.** The preprocessed CSV the
+repository also ships is lower-cased, unaccented, without punctuation and
+without stopwords — headline writing is unfeasible on it, because the model
+would have to invent the spelling the text lost. `full_texts/` carries the
+article as collected from the website, and the metadata (author, link,
+category, date) comes from `true-meta-information/`.
 
-No FakeTrueBR a mesma notícia verdadeira aparece pareada com mais de uma fake,
-daí a redução de 1.791 para 1.403. O campo `duplicate_rows` guarda os registros
-descartados e `id` aponta a origem (nome do arquivo no Fake.br, linha do CSV no
-FakeTrueBR), então a rastreabilidade é preservada. Nenhum arquivo de origem é
-alterado; a saída vai para `true-corpus/clean/`.
+In FakeTrueBR the same true article is paired with more than one fake, hence the
+reduction from 1,791 to 1,403. The `duplicate_rows` field keeps the discarded
+records and `id` points at the origin (file name in Fake.br, CSV row in
+FakeTrueBR), so traceability is preserved. No source file is modified; the
+output goes to `true-corpus/clean/`.
 
-## Instalação
+## Installation
 
-Requer Python 3.13+ e [uv](https://docs.astral.sh/uv/).
+Requires Python 3.13+ and [uv](https://docs.astral.sh/uv/).
 
 ```bash
 uv sync --extra dev
 ```
 
-## Configuração
+## Configuration
 
-O modelo é declarado sempre como `provedor/modelo`. Os três provedores previstos
-são **Ollama** (local), **Anthropic** e **OpenAI**:
+The model is always declared as `provider/model`. The three supported providers
+are **Ollama** (local), **Anthropic** and **OpenAI**:
 
 ```bash
 cp .env.example .env
 ```
 
-| Variável | Descrição |
+| Variable | Description |
 |---|---|
 | `FAKEGEN_MODEL` | `ollama/llama3.1`, `anthropic/claude-sonnet-5`, `openai/gpt-4o-mini`, ... |
-| `FAKEGEN_TEMPERATURE` | Padrão `0` |
-| `FAKEGEN_TOP_P`, `FAKEGEN_TOP_K`, `FAKEGEN_SEED` | Opcionais; sem valor, vale o padrão do provedor |
-| `FAKEGEN_MAX_TOKENS`, `FAKEGEN_TIMEOUT`, `FAKEGEN_MAX_RETRIES` | Opcionais |
-| `OPENAI_API_KEY` / `ANTHROPIC_API_KEY` | Chave do provedor (Ollama dispensa) |
-| `OLLAMA_BASE_URL` | Endereço do Ollama, se não for o padrão |
+| `FAKEGEN_TEMPERATURE` | Default `0` |
+| `FAKEGEN_TOP_P`, `FAKEGEN_TOP_K`, `FAKEGEN_SEED` | Optional; unset means the provider's default |
+| `FAKEGEN_MAX_TOKENS`, `FAKEGEN_TIMEOUT`, `FAKEGEN_MAX_RETRIES` | Optional |
+| `OPENAI_API_KEY` / `ANTHROPIC_API_KEY` | Provider key (Ollama needs none) |
+| `OLLAMA_BASE_URL` | Ollama address, if not the default |
 
-Qualquer variável pode ser sobrescrita na linha de comando (`--model`,
-`--temperature`, `--top-p`, `--top-k`, `--seed`).
+Any variable can be overridden on the command line (`--model`, `--temperature`,
+`--top-p`, `--top-k`, `--seed`).
 
-### Amostragem e reprodutibilidade
+### Sampling and reproducibility
 
-Os três provedores não expõem os mesmos controles:
+The three providers do not expose the same controls:
 
 | | `temperature` | `top_p` | `top_k` | `seed` |
 |---|---|---|---|---|
@@ -111,29 +137,30 @@ Os três provedores não expõem os mesmos controles:
 | OpenAI | ✅ | ✅ | ❌ | ✅ |
 | Ollama | ✅ | ✅ | ✅ | ✅ |
 
-Por isso **só `temperature` é travável nos três**, e é nela que a comparação se
-apoia: em `temperature=0` a decodificação é gulosa, o que torna `top_k` e
-`top_p` inertes e deixa os provedores no regime mais parecido possível. É o
-padrão do projeto para a titulação, que é tarefa de fidelidade, não de
-criatividade. (Para o estágio seguinte — a geração das fake news — esse padrão
-está errado: temperatura zero produziria textos formulaicos e pouco diversos.)
+So **only `temperature` can be pinned on all three**, and it is what the
+comparison relies on: at `temperature=0` decoding is greedy, which makes
+`top_k` and `top_p` inert and puts the providers in the most similar regime
+possible. That is the project default for headline writing, a fidelity task,
+not a creative one. (For the next stage — fake news generation — that default
+is wrong: zero temperature would produce formulaic, low-diversity texts.)
 
-Os parâmetros não pedidos **não são enviados**: vale o padrão do provedor, em
-vez de um valor inventado por nós. Quando um parâmetro é pedido mas o provedor
-não o aceita, ele é descartado com aviso em `stderr` e registrado em
-`sampling_dropped` no `meta.json` — silêncio aqui invalidaria a comparação entre
-provedores. O filtro é necessário: `ChatOpenAI(top_k=...)` não dá erro, apenas
-desvia o parâmetro para `model_kwargs`, e a rejeição só aparece na chamada HTTP.
+Parameters that were not requested **are not sent**: the provider's default
+applies, rather than a value we made up. When a parameter is requested but the
+provider does not accept it, it is dropped with a warning on `stderr` and
+recorded in `sampling_dropped` in `meta.json` — silence here would invalidate
+the comparison across providers. The filter is necessary: `ChatOpenAI(top_k=...)`
+raises no error, it only diverts the parameter to `model_kwargs`, and the
+rejection only surfaces in the HTTP call.
 
-Note que travar a amostragem **não garante saída idêntica** entre execuções: APIs
-hospedadas têm não-determinismo de infraestrutura mesmo em `temperature=0`. As
-alavancas que de fato sustentam a reprodutibilidade são fixar o snapshot do
-modelo (em vez de um alias móvel), versionar o prompt e registrar tudo — o
-`meta.json` guarda os parâmetros efetivos e um hash do prompt usado.
+Note that pinning the sampling **does not guarantee identical output** across
+runs: hosted APIs have infrastructure non-determinism even at `temperature=0`.
+The levers that actually sustain reproducibility are pinning the model snapshot
+(instead of a moving alias), versioning the prompt and recording everything —
+`meta.json` keeps the effective parameters and a hash of the prompt used.
 
-## Uso
+## Usage
 
-### Uma notícia
+### One article
 
 ```bash
 uv run fakegen headline --text "O Ministério da Saúde anunciou nesta terça-feira ..."
@@ -141,10 +168,10 @@ uv run fakegen headline --file noticia.txt --json
 cat noticia.txt | uv run fakegen headline --stdin
 ```
 
-### Vários modelos na mesma execução
+### Several models in one run
 
-`--model` pode ser repetido. A mesma entrada é processada por cada modelo, e
-cada um grava na sua própria pasta:
+`--model` can be repeated. The same input is processed by each model, and each
+one writes to its own folder:
 
 ```bash
 uv run fakegen headline \
@@ -162,15 +189,15 @@ data/manchetes/
 └── ollama/llama3.1/sample_FakeBr.jsonl             (+ meta.json)
 ```
 
-O `meta.json` de cada pasta registra provedor, modelo, temperatura, entrada,
-quantidades e horário — a procedência fica junto do resultado. O modelo também
-vai gravado em cada linha do JSONL. Sem `--model`, vale o `FAKEGEN_MODEL` do
-ambiente.
+Each folder's `meta.json` records provider, model, temperature, input, counts
+and timestamp — provenance stays next to the result. The model is also written
+on every JSONL line. Without `--model`, the environment's `FAKEGEN_MODEL`
+applies.
 
-### Lote sobre um corpus
+### Batch over a corpus
 
-CSV e JSONL são lidos indicando os campos de texto e de identificador; o Fake.br
-original também pode ser lido direto da pasta de `.txt`:
+CSV and JSONL are read by naming the text and identifier fields; the original
+Fake.br can also be read straight from its folder of `.txt` files:
 
 ```bash
 uv run fakegen headline \
@@ -183,32 +210,51 @@ uv run fakegen headline \
     --model anthropic/claude-sonnet-5 --out-dir data/manchetes --concurrency 4
 ```
 
-Opções úteis em lote:
+Useful batch options:
 
-- `--concurrency N` — chamadas simultâneas ao provedor (execução assíncrona).
-- `--resume` — pula ids já presentes na saída **daquele modelo** e continua em
-  modo *append*. A saída é gravada com `flush` a cada linha, então uma execução
-  interrompida pode ser retomada sem perder o que já foi gerado.
-- `--limit N` — processa apenas as N primeiras notícias (útil para calibrar o
-  prompt antes de rodar o corpus inteiro).
-- `--max-input-chars N` — trunca a notícia antes de enviá-la ao modelo (padrão
-  12.000; `0` desliga).
-- `--output ARQUIVO` — caminho exato, em vez da estrutura por provedor. Só vale
-  com um único `--model`.
+- `--concurrency N` — simultaneous calls to the provider (asynchronous
+  execution).
+- `--resume` — skips ids already present in **that model's** output and
+  continues in append mode. The output is flushed after every line, so an
+  interrupted run can be resumed without losing what was already generated.
+- `--limit N` — processes only the first N articles (handy for calibrating the
+  prompt before running the whole corpus).
+- `--max-input-chars N` — truncates the article before sending it to the model
+  (default 12,000; `0` disables).
+- `--output FILE` — exact path, instead of the per-provider layout. Only valid
+  with a single `--model`.
 
-Falhas individuais (recusa do modelo, timeout) são registradas em `stderr` e não
-interrompem o lote.
+Individual failures (model refusal, timeout) are logged to `stderr` and do not
+stop the batch.
 
-### Teste de calibração (10 notícias)
+### Stage 2: fake news from the headlines (`fakegen fake`)
 
-Antes de rodar o corpus inteiro, há uma amostra pequena e deliberadamente
-desbalanceada em `true-corpus/clean/samples/`:
+The second stage reads the JSONL written by `fakegen headline` and writes one
+fake news story per headline, into the same provider/model layout:
 
-- **`sample_FakeBr.csv`** — 3 notícias sem título embutido (geração pura, em
-  categorias diferentes) e 2 que trazem a manchete original na primeira linha,
-  servindo de gabarito para comparar com o que o agente escreveu.
-- **`sample_FakeTrueBr.csv`** — 3 notícias no texto minúsculo degradado e 2 das
-  que preservaram a caixa original, para medir quanto a degradação custa.
+```bash
+uv run fakegen fake --input corpus/headlines/round1/openai/gpt-4.1-mini-2025-04-14/FakeBr_true.jsonl \
+    --model openai/gpt-4.1-mini-2025-04-14 --out-dir corpus/fake_news/round1
+```
+
+`--strategy paper` (default) uses the prompt and `<syntheticText>`/`<changes>`
+tags of Silva et al., with the first sentence adapted to take a headline;
+`--strategy estruturada` uses typed output, a genre block (`--genre news` for
+Fake.br, `factcheck` for FakeTrueBR) and a length range measured on the human
+fakes. Rounds, model assignment and every drawn identifier are recorded under
+`corpus/rounds/` and `corpus/assignments/`.
+
+### Calibration test (10 articles)
+
+Before running the whole corpus, there is a small, deliberately unbalanced
+sample in `true-corpus/clean/samples/`:
+
+- **`sample_FakeBr.csv`** — 3 articles without an embedded title (pure
+  generation, in different categories) and 2 that carry the original headline
+  on the first line, serving as a reference to compare with what the agent
+  wrote.
+- **`sample_FakeTrueBr.csv`** — 3 articles in the degraded lower-case text and
+  2 that kept the original casing, to measure what the degradation costs.
 
 ```bash
 uv run fakegen headline --input true-corpus/clean/samples/sample_FakeBr.csv \
@@ -217,17 +263,17 @@ uv run fakegen headline --input true-corpus/clean/samples/sample_FakeTrueBr.csv 
     --model anthropic/claude-sonnet-5 --out-dir data/calibracao
 ```
 
-### Replicação do artigo (`fakegen paper`)
+### Paper replication (`fakegen paper`)
 
-Experimento paralelo ao pipeline: reproduz o método de Silva et al. como
-publicado — a notícia verdadeira **inteira** entra, e o prompt é o original em
-português, byte a byte (`PAPER_ARTICLE_PROMPT`), sem estágio de manchete. Só o
-modelo muda. A amostra é estratificada (10 notícias de cada corpus, seed 42) e
-a saída vai para `corpus/paper_replication/`. Diferente dos outros subcomandos,
-`paper` não envia temperatura nem teto de tokens a menos que sejam passados na
-linha de comando (o script dos autores também não definia). Ver
-[corpus/README.md](corpus/README.md#paper-replication) e o registro das
-execuções em [corpus/paper_replication/NOTES.md](corpus/paper_replication/NOTES.md).
+A side experiment to the pipeline: it reproduces the method of Silva et al. as
+published — the **whole** true article goes in, and the prompt is the original
+Portuguese one, byte for byte (`PAPER_ARTICLE_PROMPT`), with no headline stage.
+Only the model changes. The sample is stratified (10 articles from each
+corpus, seed 42) and the output goes to `corpus/paper_replication/`. Unlike the
+other subcommands, `paper` sends no temperature and no token limit unless they
+are passed on the command line (the authors' script set none either). See
+[corpus/README.md](corpus/README.md#paper-replication) and the run log in
+[corpus/paper_replication/NOTES.md](corpus/paper_replication/NOTES.md).
 
 ```bash
 uv run python scripts/sample_paper_replication.py --per-source 10 --seed 42
@@ -236,79 +282,78 @@ uv run fakegen paper --input true-corpus/clean/paper_replication/FakeBr_true.csv
     --out-dir corpus/paper_replication
 ```
 
-Para as análises linguísticas (`expanded_fake_news_corpus.analysis.*`), o
-recorte é escolhido com `--experiment paper_replication`; a saída vai para
-`data/analysis/paper_replication/<módulo>/`, sem tocar em `data/analysis/<módulo>/`
-do pipeline. Os resultados estão resumidos no NOTES.md acima.
+For the linguistic analyses (`expanded_fake_news_corpus.analysis.*`), the
+experiment is selected with `--experiment paper_replication`; the output goes to
+`data/analysis/paper_replication/<module>/`, without touching the pipeline's
+`data/analysis/<module>/`. The results are summarised in the NOTES.md above.
 
-### Rodar as análises
+### Running the analyses
 
-O orquestrador `expanded_fake_news_corpus.analysis` (também instalado como
-`fakegen-analysis`) roda todas as análises do catálogo em sequência, ou só as
-pedidas com `--analysis`; as opções de corpus são repassadas a cada módulo, que
-continua executável sozinho com as próprias opções.
+The orchestrator `expanded_fake_news_corpus.analysis` (also installed as
+`fakegen-analysis`) runs every analysis in the catalogue in sequence, or only
+those requested with `--analysis`; the corpus options are forwarded to each
+module, which remains runnable on its own with its own options.
 
 ```bash
-uv run fakegen-analysis --list                                   # catálogo
+uv run fakegen-analysis --list                                   # catalogue
 uv run fakegen-analysis --experiment paper_replication \
-    --model openai/gpt-4.1-mini-2025-04-14                       # todas
-uv run fakegen-analysis --analysis liwc --analysis sage          # só estas
-uv run python -m expanded_fake_news_corpus.analysis.liwc --dictionary x.dic  # uma, com opção própria
+    --model openai/gpt-4.1-mini-2025-04-14                       # all
+uv run fakegen-analysis --analysis liwc --analysis sage          # only these
+uv run python -m expanded_fake_news_corpus.analysis.liwc --dictionary x.dic  # one, with its own option
 ```
 
-Uma análise que falha não interrompe as demais: o erro fica no log e no
-código de saída. As que dependem do corpus parseado (`grammar_rules`,
-`eud_rules`) são puladas com aviso quando `data/parsed/<experimento>/` não
-existe. Para acrescentar uma análise, o módulo expõe `main(argv)` como os
-outros e entra numa linha do catálogo `ANALYSES` em
+A failing analysis does not stop the others: the error goes to the log and to
+the exit code. Those that depend on the parsed corpus (`grammar_rules`,
+`eud_rules`) are skipped with a warning when `data/parsed/<experiment>/` does
+not exist. To add an analysis, the module exposes `main(argv)` like the others
+and takes one line in the `ANALYSES` catalogue in
 [analysis/runner.py](src/expanded_fake_news_corpus/analysis/runner.py).
 
-### Parsing sintático e regras de dependência
+### Syntactic parsing and dependency rules
 
-As análises `grammar_rules` (regras da árvore básica) e `eud_rules` (regras
-das arestas *enhanced*) leem CoNLL-U de `data/parsed/<experimento>/`, produzido
-uma vez pela cadeia do trabalho anterior — portSentencer → portTokenizer →
-LatinPipe com o modelo Portparser v2 → pós-processamento — e enriquecido com
-Enhanced UD pelo Grew:
+The `grammar_rules` (basic-tree rules) and `eud_rules` (*enhanced*-edge rules)
+analyses read CoNLL-U from `data/parsed/<experiment>/`, produced once by the
+chain of the prior work — portSentencer → portTokenizer → LatinPipe with the
+Portparser v2 model → post-processing — and enriched with Enhanced UD by Grew:
 
 ```bash
 M=openai/gpt-4.1-mini-2025-04-14
-uv run python -m expanded_fake_news_corpus.parsing.install_tools   # clona as ferramentas em tools/ e baixa o modelo (1,6 GB)
+uv run python -m expanded_fake_news_corpus.parsing.install_tools   # clones the tools into tools/ and downloads the model (1.6 GB)
 uv run python -m expanded_fake_news_corpus.parsing.portparser --experiment paper_replication --model $M
 uv run python -m expanded_fake_news_corpus.parsing.eud        --experiment paper_replication --model $M
 uv run python -m expanded_fake_news_corpus.analysis.grammar_rules --experiment paper_replication --model $M
 uv run python -m expanded_fake_news_corpus.analysis.eud_rules     --experiment paper_replication --model $M
 ```
 
-`tools/` fica fora do git (repositórios de terceiros e o modelo); o código da
-cadeia está em [parsing/](src/expanded_fake_news_corpus/parsing/), incluindo o
-tratamento do texto antes do sentenciador (`preprocess.py`: quebra de linha
-como fronteira, punkt para o FakeTrueBR sem maiúsculas). O parser roda em CPU
-(venv próprio, Python 3.11) e leva uns 10 minutos para 40 documentos; o `grew`
-precisa estar no PATH (instalado via opam). O conjunto de regras EUD vem de
-[eud-portugues](https://github.com/alvelvis/eud-portugues), vendorizado sem
-alteração em `resources/eud/`.
+`tools/` stays out of git (third-party repositories and the model); the chain's
+code lives in [parsing/](src/expanded_fake_news_corpus/parsing/), including the
+text treatment before the sentencer (`preprocess.py`: line breaks as
+boundaries, punkt for the lower-cased FakeTrueBR). The parser runs on CPU (its
+own venv, Python 3.11) and takes about 10 minutes for 40 documents; `grew` must
+be on the PATH (installed via opam). The EUD rule set comes from
+[eud-portugues](https://github.com/alvelvis/eud-portugues), vendored unchanged
+in `resources/eud/`.
 
-### Página (GitHub Pages)
+### Page (GitHub Pages)
 
-`docs/` é publicado em <https://pedrest15.github.io/fakegen_br/> e mostra **a
-replicação do artigo**: `index.html` navega pelas 20 fake
-news sintéticas (só link e metadados da notícia de origem, nunca o texto) e
-`analysis.html` mostra a caracterização linguística. Os dados vêm de dois
-scripts; rode-os depois de gerar e analisar:
+`docs/` is published at <https://pedrest15.github.io/expanded_fake_news_corpus/> and shows
+**the paper replication**: `index.html` browses the 20 synthetic fake news
+(only the link and metadata of the source article, never its text) and
+`analysis.html` shows the linguistic characterisation. The data comes from two
+scripts; run them after generating and analysing:
 
 ```bash
 uv run python scripts/build_site.py --model openai/gpt-4.1-mini-2025-04-14
-uv run python scripts/build_analysis_data.py   # lê data/analysis/paper_replication/
+uv run python scripts/build_analysis_data.py   # reads data/analysis/paper_replication/
 ```
 
-`build_site.py` descarta recusas (registros sem as tags do artigo), e o
-`--model` deixa de fora a pasta do GPT-5.1. Os dados do pipeline por manchete
-(round 1) não estão mais na página; continuam em `corpus/` e `data/analysis/`.
+`build_site.py` discards refusals (records without the paper's tags), and
+`--model` leaves the GPT-5.1 folder out. The headline-pipeline data (round 1)
+is no longer on the page; it remains in `corpus/` and `data/analysis/`.
 
-### Saída
+### Output
 
-Uma linha JSON por notícia:
+One JSON line per article:
 
 ```json
 {
@@ -321,56 +366,57 @@ Uma linha JSON por notícia:
 }
 ```
 
-### Como biblioteca
+### As a library
 
 ```python
-from fakegen_br import HeadlineAgent
+from expanded_fake_news_corpus.agents import HeadlineAgent
 
-agent = HeadlineAgent()                      # configuração vinda do ambiente
-result = agent.generate(texto, source_id="1042")
+agent = HeadlineAgent()                      # configuration from the environment
+result = agent.generate(text, source_id="1042")
 print(result.headline, result.warnings)
 ```
 
-## Desenvolvimento
+## Development
 
 ```bash
 uv run ruff check src && uv run ruff format --check src
 ```
 
-## Estrutura
+## Layout
 
-| Arquivo | Conteúdo |
+| File | Contents |
 |---|---|
-| [agents/headline.py](src/fakegen_br/agents/headline.py) | Grafo de titulação e a classe `HeadlineAgent` |
-| [prompts.py](src/fakegen_br/prompts.py) | Prompt do agente |
-| [config.py](src/fakegen_br/config.py) | Seleção de provedor/modelo e chaves |
-| [text.py](src/fakegen_br/text.py) | Normalização do texto de entrada e da manchete |
-| [corpus.py](src/fakegen_br/corpus.py) | Leitura dos corpora e escrita do JSONL |
-| [cli.py](src/fakegen_br/cli.py) | Comando `fakegen` |
-| [agents/paper_replication.py](src/expanded_fake_news_corpus/agents/paper_replication.py) | Replicação do artigo: notícia inteira → fake news com o prompt original |
-| [scripts/sample_paper_replication.py](scripts/sample_paper_replication.py) | Amostra estratificada (10 + 10, seed 42) da replicação |
-| [analysis/runner.py](src/expanded_fake_news_corpus/analysis/runner.py) | Orquestrador: catálogo das análises e execução em lote (`fakegen-analysis`) |
-| [analysis/conllu.py](src/expanded_fake_news_corpus/analysis/conllu.py) | Leitura dos CoNLL-U e localização do corpus parseado |
-| [analysis/grammar_rules.py](src/expanded_fake_news_corpus/analysis/grammar_rules.py) | Regras de dependência: produtividade, frequências, TF-IDF discriminativo |
-| [analysis/eud_rules.py](src/expanded_fake_news_corpus/analysis/eud_rules.py) | O mesmo sobre as arestas *enhanced* (EUD) |
-| [parsing/preprocess.py](src/expanded_fake_news_corpus/parsing/preprocess.py) | Tratamento do texto antes do sentenciador e realinhamento após o tokenizador |
-| [parsing/portparser.py](src/expanded_fake_news_corpus/parsing/portparser.py) | Cadeia Portparser v2 → `data/parsed/` |
-| [parsing/eud.py](src/expanded_fake_news_corpus/parsing/eud.py) | Enriquecimento EUD com Grew |
-| [parsing/install_tools.py](src/expanded_fake_news_corpus/parsing/install_tools.py) | Instalação das ferramentas em `tools/` |
+| [agents/headline.py](src/expanded_fake_news_corpus/agents/headline.py) | Headline graph and the `HeadlineAgent` class |
+| [prompts.py](src/expanded_fake_news_corpus/prompts.py) | Agent prompts |
+| [config.py](src/expanded_fake_news_corpus/config.py) | Provider/model selection and keys |
+| [text.py](src/expanded_fake_news_corpus/text.py) | Normalisation of the input text and of the headline |
+| [corpus.py](src/expanded_fake_news_corpus/corpus.py) | Reading the corpora and writing the JSONL |
+| [cli.py](src/expanded_fake_news_corpus/cli.py) | The `fakegen` command |
+| [agents/paper_replication.py](src/expanded_fake_news_corpus/agents/paper_replication.py) | Paper replication: whole article → fake news with the original prompt |
+| [scripts/sample_paper_replication.py](scripts/sample_paper_replication.py) | Stratified sample (10 + 10, seed 42) for the replication |
+| [analysis/runner.py](src/expanded_fake_news_corpus/analysis/runner.py) | Orchestrator: analysis catalogue and batch execution (`fakegen-analysis`) |
+| [analysis/conllu.py](src/expanded_fake_news_corpus/analysis/conllu.py) | Reading CoNLL-U and locating the parsed corpus |
+| [analysis/grammar_rules.py](src/expanded_fake_news_corpus/analysis/grammar_rules.py) | Dependency rules: productivity, frequencies, discriminative TF-IDF |
+| [analysis/eud_rules.py](src/expanded_fake_news_corpus/analysis/eud_rules.py) | The same over the *enhanced* edges (EUD) |
+| [parsing/preprocess.py](src/expanded_fake_news_corpus/parsing/preprocess.py) | Text treatment before the sentencer and realignment after the tokenizer |
+| [parsing/portparser.py](src/expanded_fake_news_corpus/parsing/portparser.py) | Portparser v2 chain → `data/parsed/` |
+| [parsing/eud.py](src/expanded_fake_news_corpus/parsing/eud.py) | EUD enrichment with Grew |
+| [parsing/install_tools.py](src/expanded_fake_news_corpus/parsing/install_tools.py) | Installation of the tools into `tools/` |
 
-## Notas
+## Notes
 
-- **O FakeTrueBR não tem versão original publicada.** O corpus é distribuído
-  apenas como `FakeTrueBr_corpus.csv`, com o texto já em minúsculas e sem parte
-  da pontuação — não há pasta de textos brutos no repositório oficial. Recuperar
-  o original exigiria recoletar os artigos a partir de `link_t` (G1, Folha). Até
-  lá, as manchetes geradas para esse corpus partem de um texto degradado, o que
-  vale registrar na descrição do FakeGen.BR.
-- Alguns arquivos do Fake.br trazem o título na primeira linha do texto. O
-  prompt instrui o modelo a ignorá-lo e titular a partir do corpo da notícia,
-  mas vale conferir isso na calibração inicial com `--limit`.
-- O artigo [2025S1_JCBS_fakeNews_LLM_final.pdf](2025S1_JCBS_fakeNews_LLM_final.pdf)
-  neste repositório é o trabalho anterior do grupo que motiva o FakeGen.BR.
+- **FakeTrueBR has no published original version.** The corpus is distributed
+  only as `FakeTrueBr_corpus.csv`, with the text already lower-cased and missing
+  part of its punctuation — there is no folder of raw texts in the official
+  repository. Recovering the original would require re-collecting the articles
+  from `link_t` (G1, Folha). Until then, the headlines generated for that corpus
+  start from degraded text, which is worth recording in the description of
+  FakeGen.BR.
+- Some Fake.br files carry the title on the first line of the text. The prompt
+  instructs the model to ignore it and write the headline from the body of the
+  article, but this is worth checking in the initial calibration with `--limit`.
+- The paper [2025S1_JCBS_fakeNews_LLM_final.pdf](2025S1_JCBS_fakeNews_LLM_final.pdf)
+  in this repository is the group's prior work that motivates FakeGen.BR.
 
 [fakebr]: https://github.com/roneysco/Fake.br-Corpus
 [faketruebr]: https://github.com/Chavarro/FakeTrueBr
