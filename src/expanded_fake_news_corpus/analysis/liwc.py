@@ -210,8 +210,8 @@ def _write_csv(frame: pd.DataFrame, path: Path) -> None:
     logger.info(f"Gravado {path} ({len(frame)} linhas)")
 
 
-def parse_args() -> argparse.Namespace:
-    """Lê os argumentos da linha de comando."""
+def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
+    """Lê os argumentos da linha de comando (``sys.argv`` se ``argv`` for None)."""
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument(
         "--dictionary",
@@ -225,15 +225,15 @@ def parse_args() -> argparse.Namespace:
         default=DEFAULT_OUTPUT_DIR,
         help=f"Pasta de saída (default: {DEFAULT_OUTPUT_DIR})",
     )
-    return parser.parse_args()
+    return parser.parse_args(argv)
 
 
-def main() -> None:
+def main(argv: Sequence[str] | None = None) -> None:
     """Ponto de entrada da análise LIWC."""
     logging.basicConfig(
         level=logging.INFO, format="%(levelname)s %(name)s: %(message)s"
     )
-    args = parse_args()
+    args = parse_args(argv)
 
     try:
         dictionary = load_liwc_dictionary(find_dictionary_path(args.dictionary))

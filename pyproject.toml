@@ -21,6 +21,7 @@ dependencies = [
 
 [project.scripts]
 fakegen = "expanded_fake_news_corpus.cli:main"
+fakegen-analysis = "expanded_fake_news_corpus.analysis.runner:main"
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0", "ruff>=0.8"]

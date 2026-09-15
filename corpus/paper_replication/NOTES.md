@@ -127,3 +127,68 @@ The GitHub Pages site (`docs/`) now publishes this experiment only —
 `scripts/build_site.py` and `scripts/build_analysis_data.py` read from
 `corpus/paper_replication/` and `data/analysis/paper_replication/`; the
 headline-pipeline (round 1) data was removed from the page.
+
+## 2026-09-14 — syntactic parsing and dependency-rule analyses
+
+The corpus was parsed with the same chain as the PROPOR 2026 characterisation
+work: portSentencer → portTokenizer → LatinPipe with the **Portparser v2**
+model (BERTimbau) → Portparser.v2 post-processing of lemmas and features
+(`expanded_fake_news_corpus.parsing.install_tools` and `.portparser`). One CoNLL-U per
+document lives in `data/parsed/paper_replication/<group>/`, with the tool
+commits and model size in `manifest.json`. Enhanced UD was then added with
+Grew 1.19 and the vendored `eud-portugues` rule set (`parsing.eud`,
+`<stem>.eud.conllu`).
+
+Three preparation details that matter for the numbers:
+
+- Line breaks are hard sentence boundaries. portSentencer ignores them, so the
+  headline (first line, no final period) would otherwise be glued to the first
+  sentence of the body; lines are only joined when the previous one has no
+  final punctuation and the next starts in lower case (the `adapt_fake.py`
+  heuristic of the prior work).
+- **The FakeTrueBR human side is distributed entirely in lower case**, and
+  portSentencer only closes a sentence when the next word is capitalised — on
+  that text it produced whole paragraphs as single "sentences" (26 for 10
+  documents, ~90 words each), and the lower-case join heuristic glued the
+  headline to the body. The prior work built its FakeTrueBR human files from
+  the same CSV without treatment and had the same defect. Texts with no upper
+  case are now pre-segmented with NLTK punkt (case-insensitive) before the
+  sentencer and exempt from the join rule; the FakeTrueBR human side went from
+  26 to 80 sentences, in line with Fake.br (21.8 vs 21.4 words per sentence).
+- The tokenizer drops sentences without letters (`….`) and, with `-m`, strips
+  unpaired quotes; documents are re-split by aligning texts without
+  punctuation, not by counting.
+
+Sentences: 224 human, 261 machine.
+
+`grammar_rules` (basic tree, `UPOS(dep/rel, *, dep/rel)` rules; d = human −
+machine, Mann-Whitney p):
+
+| Measure | Human | Machine | d | p | Fake.br d | FakeTrueBR d |
+|---|---|---|---|---|---|---|
+| Rules per sentence | 29.9 | 48.9 | −2.3 | <0.001 | −2.4 | −2.0 |
+| Distinct rules per sentence | 16.4 | 23.4 | −2.5 | <0.001 | −2.5 | −2.4 |
+| Rule diversity (distinct / total, per document) | 0.269 | 0.207 | +1.8 | <0.001 | +1.9 | +2.0 |
+| Words per sentence | 21.6 | 35.2 | −2.2 | <0.001 | −2.4 | −2.0 |
+
+This reproduces the PROPOR finding on a different generator (gpt-4.1-mini
+instead of Sabiá-3) and on both source corpora: the machine packs more rules
+into each sentence and repeats them more.
+
+TF-IDF over rules (154 rules present in ≥ 5 documents): 27 significant after
+FDR — 25 on the machine side, 2 on the human side (the root leaves `*(VERB)`
+and `*(NOUN)`, i.e. more sentences per document, hence more roots). The
+strongest machine rule is the adjective leaf `ADJ(*)` (d = −2.9), the "more
+adjectival modifiers" result of the prior work; then `NOUN(ADP/case, *,
+ADJ/amod)`, `NOUN(ADP/case, *, VERB/acl)`, `VERB(PRON/nsubj, *, VERB/xcomp)`,
+`VERB(NOUN/nsubj, *, VERB/ccomp, PUNCT/punct)`.
+
+`eud_rules` (rules from enhanced edges that differ from the basic tree — case
+markers folded into the relation, propagated subjects, `ref` in relatives):
+9.0 vs 15.3 enhanced rules per sentence (d = −1.9), diversity 0.383 vs 0.300
+(d = +1.4), consistent across sources. 70 rules tested, 10 significant, all
+machine: `NOUN(*, PRON/ref)` (relative clauses on nouns), `ADV(*, NOUN/obl:de)`
+("além de", "apesar de"), `NOUN(*, NOUN/nmod:sobre)`, `VERB(*, NOUN/obj)`.
+
+With n = 20 + 20 these are calibration numbers for the pipeline, not
+publishable effects; the prior results were computed on thousands of pairs.

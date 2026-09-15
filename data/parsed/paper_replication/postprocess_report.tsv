@@ -1,0 +1,135 @@
+S0005	23	concluída	L1LEX	concluír	concluir
+S0012	13	concorra	LmLEX	concorrar	concorrer
+S0015	13	envolveu	L1LEX	envolvar	envolver
+S0020	14	abra	LmLEX	abrar	abrir
+S0021	7	venham	LmLEX	ver	vir
+S0022	7	cometa	LmLEX	cometar	cometer
+S0034	4	disseram	LmLEX	disseram	dizer
+S0048	2	tive	L1LEX	tover	ter
+S0050	1	A	LnoLEX	o	A
+S0050	1	A	FnoLEX	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	_
+S0057	11	pra	L1LEX	pra	para
+S0058	3	livre!	LrepTAG	LIVRE!	livre!
+S0067	7	pra	L1LEX	pra	para
+S0067	13	querido	L1LEX	querir	querer
+S0070	9	Procuradora-Geral	LrepTAG	Procuradora-GEral	Procuradora-Geral
+S0087	4	fosse	LmLEX	fosse	ir
+S0099	16	possam	LmLEX	possam	poder
+S0099	18	mantidas	L1LEX	mantir	manter
+S0101	10	incluídas	L1LEX	incluír	incluir
+S0116	15	descoberta	L1LEX	descobeer	descobrir
+S0129	5	garantem	L1LEX	garanter	garantir
+S0129	9	envolvia	LmLEX	envolvr	envolver
+S0139	4	abastecido	L1LEX	abastecir	abastecer
+S0146	31	ligados	L1LEX	ligado	ligar
+S0147	31	fora	LmLEX	fora	ir
+S0147	31	fora	FmLEX	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	Mood=Ind|Number=Sing|Person=3|Tense=Pqp|VerbForm=Fin
+S0154	1	Fiquem	LmLEX	fiquar	ficar
+S0162	27	sobrepõe	LmLEX	sobrepõer	sobrepor
+S0171	13	entregues	LmLEX	entregr	entregar
+S0171	16	Procurador-Geral	LrepTAG	Procurador-gERal	Procurador-Geral
+S0180	3	ARMAS	LrepTAG	arma	ARMAS
+S0183	6	CNI/Ibope	LrepTAG	Cni/ibope	CNI/Ibope
+S0187	17	age	LmLEX	ager	agir
+S0193	13	envolvidas	L1LEX	envolvir	envolver
+S0198	12	envolvidas	L1LEX	envolvir	envolver
+S0217	8	incluíam	L1LEX	incluer	incluir
+S0218	2	ICBMs	LrepTAG	ICBms	ICBMs
+S0236	22	querer	FmLEX	Gender=Masc|Number=Sing	Number=Sing|Person=3|VerbForm=Inf
+S0237	31	etc.	LrepTAG	ETC.	etc.
+S0243	7	fosse	LmLEX	fosse	ir
+S0251	29	surgidos	L1LEX	surger	surgir
+S0275	10	mortos	LmLEX	mortos	matar
+S0277	11	mortas	LmLEX	mortas	matar
+S0279	24	Pica-Pau	LrepTAG	Pica-pau	Pica-Pau
+S0280	13	morto	LmLEX	morto	matar
+S0282	11	exigem	L1LEX	exiger	exigir
+S0283	6	discute	LmLEX	discuter	discutir
+S0294	1	temer	LrepTAG	Temer	temer
+S0294	10	tv	LuAbbr	tv	televisão
+S0294	10	tv	FuAbbr	Gender=Fem|Number=Sing	Abbr=Yes|Gender=Fem|Number=Sing
+S0295	2	i>uma	LnoLEX	i>um	i>uma
+S0295	2	i>uma	FnoLEX	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	_
+S0296	15	tv	LuAbbr	tv	televisão
+S0296	15	tv	FuAbbr	Gender=Fem|Number=Sing	Abbr=Yes|Gender=Fem|Number=Sing
+S0298	18	TV	LuAbbr	tv	televisão
+S0298	18	TV	FuAbbr	Gender=Fem|Number=Sing	Abbr=Yes|Gender=Fem|Number=Sing
+S0303	16	las	L1LEX	las	lo
+S0309	41	twiter	FrepTAG	Foreign=Yes|Gender=Masc|Number=Sing	Foreign=Yes
+S0312	6	whatsapp	FrepTAG	Foreign=Yes|Gender=Masc|Number=Sing	Foreign=Yes
+S0312	8	gravadas.o	FnoLEX	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	_
+S0314	2	facebook	FrepTAG	Foreign=Yes|Gender=Masc|Number=Sing	Foreign=Yes
+S0334	14	envolvidas	L1LEX	envolvir	envolver
+S0335	3	surpreendidos	L1LEX	surpreendir	surpreender
+S0335	21	VPNs	LrepTAG	VPns	VPNs
+S0336	23	acreditavam	L1LEX	acreditaer	acreditar
+S0342	30	ferreira	FrepTAG	Gender=Fem|Number=Sing	_
+S0342	36	voce	FnoLEX	Case=Nom|Number=Sing|Person=2|PronType=Prs	_
+S0342	37	quiser	LmLEX	quiser	querer
+S0342	57	facebook	FrepTAG	Foreign=Yes|Gender=Masc|Number=Sing	Foreign=Yes
+S0357	16	confira	LmLEX	confir	conferir
+S0358	5	voce	FnoLEX	Case=Nom|Number=Sing|Person=2|PronType=Prs	_
+S0361	10	Bolívia-Brasil	LrepTAG	Bolívia-brasil	Bolívia-Brasil
+S0364	38	Bolívia-Brasil	LrepTAG	Bolívia-brasil	Bolívia-Brasil
+S0366	31	contradiz	LmLEX	contradiir	contradizer
+S0371	1	adidas	LrepTAG	Adidas	adidas
+S0374	2	recebera	FmLEX	Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin	Mood=Ind|Number=Sing|Person=3|Tense=Pqp|VerbForm=Fin
+S0380	18	siga	LmLEX	sigir	seguir
+S0389	1	paolla	LrepTAG	Paolla	paolla
+S0389	19	for	LmLEX	for	ir
+S0395	31	TV	LuAbbr	tv	televisão
+S0395	31	TV	FuAbbr	Gender=Fem|Number=Sing	Abbr=Yes|Gender=Fem|Number=Sing
+S0397	20	refletem	L1LEX	refleter	refletir
+S0398	9	sugerem	L1LEX	sugerer	sugerir
+S0402	1	maceió	LrepTAG	Maceió	maceió
+S0411	28	pela	LnoLEX	o	pela
+S0411	28	pela	FnoLEX	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	_
+S0411	30	contribuíram	LmLEX	contribuír	contribuir
+S0416	17	km	LuAbbr	km	quilômetro
+S0424	1	id	FnoLEX	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	_
+S0425	5	leiam	LmLEX	leiar	ler
+S0435	21	pra	L1LEX	pra	para
+S0435	38	quiser	LmLEX	quiser	querer
+S0439	2	descoberto	L1LEX	descobeer	descobrir
+S0441	50	CadÚnico	LrepTAG	Cadúnico	CadÚnico
+S0447	10	aberta	L1LEX	aberr	abrir
+S0460	20	refletem	L1LEX	refleter	refletir
+S0463	4	reconhecido	L1LEX	reconhecir	reconhecer
+S0463	13	neguem	LmLEX	neguar	negar
+S0465	10	atribuída	L1LEX	atribuír	atribuir
+S0465	35	dita	LmLEX	der	ditar
+S0469	7	vc	FnoLEX	Case=Nom|Number=Sing|Person=2|PronType=Prs	_
+S0471	2	vc	FnoLEX	Case=Nom|Number=Sing|Person=2|PronType=Prs	_
+S0471	19	vc	FnoLEX	Case=Nom|Number=Sing|Person=2|PronType=Prs	_
+S0473	2	vc	FnoLEX	Case=Nom|Number=Sing|Person=2|PronType=Prs	_
+S0474	2	tá	L1LEX	ar	estar
+S0474	2	tá	F1LEX	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	Abbr=Yes|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin
+S0478	31	breve	L1LEX	breve	brevemente
+S0478	31	breve	F1LEX	Number=Sing	Abbr=Yes
+S0480	30	pague	LmLEX	paguar	pagar
+S0482	15	concede	LmLEX	concedir	conceder
+S0484	17	mantenham	LmLEX	mar	manter
+S0485	3	refletem	L1LEX	refleter	refletir
+
+==========================================================
+
+Lchanged - fixed: 87
+LnoLEX   - fixed: 3
+L1LEX    - fixed: 32
+LmLEX    - fixed: 31
+LunkTAG  - fixed: 0
+LdaysW   - fixed: 0
+Lmonth   - fixed: 0
+LuAbbr   - fixed: 5
+Lord     - fixed: 0
+LrepTAG  - fixed: 16
+Fchanged - fixed: 25
+FnoLEX   - fixed: 11
+F1LEX    - fixed: 2
+FmLEX    - fixed: 3
+FunkTAG  - fixed: 0
+FdaysW   - fixed: 0
+Fmonth   - fixed: 0
+FuAbbr   - fixed: 4
+Ford     - fixed: 0
+FrepTAG  - fixed: 5

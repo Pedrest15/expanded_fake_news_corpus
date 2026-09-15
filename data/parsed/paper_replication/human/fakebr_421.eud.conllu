@@ -1,0 +1,294 @@
+# global.columns = ID FORM LEMMA UPOS XPOS FEATS HEAD DEPREL DEPS MISC
+# sent_id = fakebr:421-1
+# text = Pesquisa mostra que 46% da população brasileira é a favor da pena de morte.
+1	Pesquisa	pesquisa	NOUN	_	Gender=Fem|Number=Sing	2	nsubj	2:nsubj	_
+2	mostra	mostrar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+3	que	que	SCONJ	_	_	12	mark	12:mark	_
+4	46	46	NUM	_	NumType=Card	5	nummod	5:nummod	SpaceAfter=No
+5	%	%	SYM	_	_	12	nsubj	12:nsubj	_
+6-7	da	_	_	_	_	_	_	_	_
+6	de	de	ADP	_	_	8	case	8:case	_
+7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	8:det	_
+8	população	população	NOUN	_	Gender=Fem|Number=Sing	5	nmod	5:nmod:de	_
+9	brasileira	brasileiro	ADJ	_	Gender=Fem|Number=Sing	8	amod	8:amod	_
+10	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	cop	12:cop	_
+11	a	a	ADP	_	_	12	case	12:case	_
+12	favor	favor	NOUN	_	Gender=Masc|Number=Sing	2	ccomp	2:ccomp	_
+13-14	da	_	_	_	_	_	_	_	_
+13	de	de	ADP	_	_	15	case	15:case	_
+14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	15:det	_
+15	pena	pena	NOUN	_	Gender=Fem|Number=Sing	12	nmod	12:nmod:de	_
+16	de	de	ADP	_	_	17	case	17:case	_
+17	morte	morte	NOUN	_	Gender=Fem|Number=Sing	15	nmod	15:nmod:de	SpaceAfter=No
+18	.	.	PUNCT	_	_	2	punct	2:punct	_
+
+# sent_id = fakebr:421-2
+# text = DROGAS, ARMAS E BEBIDAS ALCOÓLICAS.
+1	DROGAS	droga	NOUN	_	Gender=Fem|Number=Plur	0	root	0:root	SpaceAfter=No
+2	,	,	PUNCT	_	_	3	punct	3:punct	_
+3	ARMAS	ARMAS	PROPN	_	_	1	conj	1:conj:e	_
+4	E	e	CCONJ	_	_	5	cc	5:cc	_
+5	BEBIDAS	bebida	NOUN	_	Gender=Fem|Number=Plur	1	conj	1:conj:e	_
+6	ALCOÓLICAS	alcoólico	ADJ	_	Gender=Fem|Number=Plur	5	amod	5:amod	SpaceAfter=No
+7	.	.	PUNCT	_	_	1	punct	1:punct	_
+
+# sent_id = fakebr:421-3
+# text = Bala perdida, assaltos, sequestros, policiais sendo assassinados diariamente, pessoas perdendo seus entes queridos, enfim, uma banalização total da vida!
+1	Bala	bala	NOUN	_	Gender=Fem|Number=Sing	0	root	0:root	_
+2	perdida	perdido	ADJ	_	Gender=Fem|Number=Sing|VerbForm=Part	1	amod	1:amod	SpaceAfter=No
+3	,	,	PUNCT	_	_	4	punct	4:punct	_
+4	assaltos	assalto	NOUN	_	Gender=Masc|Number=Plur	1	conj	1:conj	SpaceAfter=No
+5	,	,	PUNCT	_	_	6	punct	6:punct	_
+6	sequestros	sequestro	NOUN	_	Gender=Masc|Number=Plur	1	conj	1:conj	SpaceAfter=No
+7	,	,	PUNCT	_	_	8	punct	8:punct	_
+8	policiais	policial	NOUN	_	Number=Plur	1	conj	1:conj	_
+9	sendo	ser	AUX	_	VerbForm=Ger	10	aux:pass	10:aux:pass	_
+10	assassinados	assassinar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	8	acl	8:acl	_
+11	diariamente	diariamente	ADV	_	_	10	advmod	10:advmod	SpaceAfter=No
+12	,	,	PUNCT	_	_	13	punct	13:punct	_
+13	pessoas	pessoa	NOUN	_	Gender=Fem|Number=Plur	1	conj	1:conj	_
+14	perdendo	perder	VERB	_	VerbForm=Ger	13	acl	13:acl	_
+15	seus	seu	DET	_	Gender=Masc|Number=Plur|Person=3|Poss=Yes|PronType=Prs	16	det	16:det	_
+16	entes	ente	NOUN	_	Gender=Masc|Number=Plur	14	obj	14:obj	_
+17	queridos	querido	ADJ	_	Gender=Masc|Number=Plur|VerbForm=Part	16	amod	16:amod	SpaceAfter=No
+18	,	,	PUNCT	_	_	19	punct	19:punct	_
+19	enfim	enfim	ADV	_	_	22	advmod	22:advmod	SpaceAfter=No
+20	,	,	PUNCT	_	_	19	punct	19:punct	_
+21	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	22	det	22:det	_
+22	banalização	banalização	NOUN	_	Gender=Fem|Number=Sing	1	conj	1:conj	_
+23	total	total	ADJ	_	Number=Sing	22	amod	22:amod	_
+24-25	da	_	_	_	_	_	_	_	_
+24	de	de	ADP	_	_	26	case	26:case	_
+25	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	26	det	26:det	_
+26	vida	vida	NOUN	_	Gender=Fem|Number=Sing	22	nmod	22:nmod:de	SpaceAfter=No
+27	!	!	PUNCT	_	_	1	punct	1:punct	_
+
+# sent_id = fakebr:421-4
+# text = Essa é a realidade do Brasil atual.
+1	Essa	esse	PRON	_	Gender=Fem|Number=Sing|PronType=Dem	4	nsubj	4:nsubj	_
+2	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
+3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	4:det	_
+4	realidade	realidade	NOUN	_	Gender=Fem|Number=Sing	0	root	0:root	_
+5-6	do	_	_	_	_	_	_	_	_
+5	de	de	ADP	_	_	7	case	7:case	_
+6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	7:det	_
+7	Brasil	Brasil	PROPN	_	_	4	nmod	4:nmod:de	_
+8	atual	atual	ADJ	_	Number=Sing	7	amod	7:amod	SpaceAfter=No
+9	.	.	PUNCT	_	_	4	punct	4:punct	_
+
+# sent_id = fakebr:421-5
+# text = Uma pesquisa realizada pela CNI/Ibope mostra claramente o que os brasileiros pensam sobre a violência generalizada.
+1	Uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	2	det	2:det	_
+2	pesquisa	pesquisa	NOUN	_	Gender=Fem|Number=Sing	7	nsubj	7:nsubj	_
+3	realizada	realizar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	2	acl	2:acl	_
+4-5	pela	_	_	_	_	_	_	_	_
+4	por	por	ADP	_	_	6	case	6:case	_
+5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	6:det	_
+6	CNI/Ibope	CNI/Ibope	PROPN	_	_	3	obl:agent	3:obl:agent	_
+7	mostra	mostrar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+8	claramente	claramente	ADV	_	_	7	advmod	7:advmod	_
+9	o	o	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Dem	13	obj	13:obj	_
+10	que	que	PRON	_	PronType=Int	9	fixed	9:fixed	_
+11	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	12	det	12:det	_
+12	brasileiros	brasileiro	NOUN	_	Gender=Masc|Number=Plur	13	nsubj	13:nsubj	_
+13	pensam	pensar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	ccomp	7:ccomp	_
+14	sobre	sobre	ADP	_	_	16	case	16:case	_
+15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	16:det	_
+16	violência	violência	NOUN	_	Gender=Fem|Number=Sing	13	obl	13:obl:sobre	_
+17	generalizada	generalizado	ADJ	_	Gender=Fem|Number=Sing|VerbForm=Part	16	amod	16:amod	SpaceAfter=No
+18	.	.	PUNCT	_	_	7	punct	7:punct	_
+
+# sent_id = fakebr:421-6
+# text = Dados divulgados apontam que que 79% dos entrevistados acreditam que penas mais rígidas podem reduzir drasticamente a criminalidade.
+1	Dados	dado	NOUN	_	Gender=Masc|Number=Plur	3	nsubj	3:nsubj	_
+2	divulgados	divulgar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	1	acl	1:acl	_
+3	apontam	apontar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+4	que	que	SCONJ	_	_	11	mark	11:mark	_
+5	que	que	SCONJ	_	_	11	mark	11:mark	_
+6	79	79	NUM	_	NumType=Card	7	nummod	7:nummod	SpaceAfter=No
+7	%	%	SYM	_	_	11	nsubj	11:nsubj	_
+8-9	dos	_	_	_	_	_	_	_	_
+8	de	de	ADP	_	_	10	case	10:case	_
+9	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	10	det	10:det	_
+10	entrevistados	entrevistado	NOUN	_	Gender=Masc|Number=Plur	7	nmod	7:nmod:de	_
+11	acreditam	acreditar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	_
+12	que	que	SCONJ	_	_	16	mark	16:mark	_
+13	penas	pena	NOUN	_	Gender=Fem|Number=Plur	16	nsubj	16:nsubj|17:nsubj	_
+14	mais	mais	ADV	_	_	15	advmod	15:advmod	_
+15	rígidas	rígido	ADJ	_	Gender=Fem|Number=Plur	13	amod	13:amod	_
+16	podem	poder	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	11	ccomp	11:ccomp	_
+17	reduzir	reduzir	VERB	_	VerbForm=Inf	16	xcomp	16:xcomp	_
+18	drasticamente	drasticamente	ADV	_	_	17	advmod	17:advmod	_
+19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	20:det	_
+20	criminalidade	criminalidade	NOUN	_	Gender=Fem|Number=Sing	17	obj	17:obj	SpaceAfter=No
+21	.	.	PUNCT	_	_	3	punct	3:punct	_
+
+# sent_id = fakebr:421-7
+# text = 46% dos entrevistados defendem a pena de morte e 69% são a favor da prisão perpétua para crimes ediondos.
+1	46	46	NUM	_	NumType=Card	2	nummod	2:nummod	SpaceAfter=No
+2	%	%	SYM	_	_	6	nsubj	6:nsubj	_
+3-4	dos	_	_	_	_	_	_	_	_
+3	de	de	ADP	_	_	5	case	5:case	_
+4	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	5	det	5:det	_
+5	entrevistados	entrevistado	NOUN	_	Gender=Masc|Number=Plur	2	nmod	2:nmod:de	_
+6	defendem	defender	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	8:det	_
+8	pena	pena	NOUN	_	Gender=Fem|Number=Sing	6	obj	6:obj	_
+9	de	de	ADP	_	_	10	case	10:case	_
+10	morte	morte	NOUN	_	Gender=Fem|Number=Sing	8	nmod	8:nmod:de	_
+11	e	e	CCONJ	_	_	16	cc	16:cc	_
+12	69	69	NUM	_	NumType=Card	13	nummod	13:nummod	SpaceAfter=No
+13	%	%	SYM	_	_	16	nsubj	16:nsubj	_
+14	são	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	16	cop	16:cop	_
+15	a	a	ADP	_	_	16	case	16:case	_
+16	favor	favor	NOUN	_	Gender=Masc|Number=Sing	6	conj	6:conj:e	_
+17-18	da	_	_	_	_	_	_	_	_
+17	de	de	ADP	_	_	19	case	19:case	_
+18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	19	det	19:det	_
+19	prisão	prisão	NOUN	_	Gender=Fem|Number=Sing	16	nmod	16:nmod:de	_
+20	perpétua	perpétuo	ADJ	_	Gender=Fem|Number=Sing	19	amod	19:amod	_
+21	para	para	ADP	_	_	22	case	22:case	_
+22	crimes	crime	NOUN	_	Gender=Masc|Number=Plur	19	nmod	19:nmod:para	_
+23	ediondos	ediondo	ADJ	_	Gender=Masc|Number=Plur|VerbForm=Part	22	amod	22:amod	SpaceAfter=No
+24	.	.	PUNCT	_	_	6	punct	6:punct	_
+
+# sent_id = fakebr:421-8
+# text = A pesquisa também revelou que 86% dos entrevistados são totalmente a favor da redução da maioridade penal para 16 anos.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	2:det	_
+2	pesquisa	pesquisa	NOUN	_	Gender=Fem|Number=Sing	4	nsubj	4:nsubj	_
+3	também	também	ADV	_	_	4	advmod	4:advmod	_
+4	revelou	revelar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+5	que	que	SCONJ	_	_	14	mark	14:mark	_
+6	86	86	NUM	_	NumType=Card	7	nummod	7:nummod	SpaceAfter=No
+7	%	%	SYM	_	_	14	nsubj	14:nsubj	_
+8-9	dos	_	_	_	_	_	_	_	_
+8	de	de	ADP	_	_	10	case	10:case	_
+9	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	10	det	10:det	_
+10	entrevistados	entrevistado	NOUN	_	Gender=Masc|Number=Plur	7	nmod	7:nmod:de	_
+11	são	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	14	cop	14:cop	_
+12	totalmente	totalmente	ADV	_	_	14	advmod	14:advmod	_
+13	a	a	ADP	_	_	14	case	14:case	_
+14	favor	favor	NOUN	_	Gender=Masc|Number=Sing	4	ccomp	4:ccomp	_
+15-16	da	_	_	_	_	_	_	_	_
+15	de	de	ADP	_	_	17	case	17:case	_
+16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	17:det	_
+17	redução	redução	NOUN	_	Gender=Fem|Number=Sing	14	nmod	14:nmod:de	_
+18-19	da	_	_	_	_	_	_	_	_
+18	de	de	ADP	_	_	20	case	20:case	_
+19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	20:det	_
+20	maioridade	maioridade	NOUN	_	Gender=Fem|Number=Sing	17	nmod	17:nmod:de	_
+21	penal	penal	ADJ	_	Number=Sing	20	amod	20:amod	_
+22	para	para	ADP	_	_	24	case	24:case	_
+23	16	16	NUM	_	NumType=Card	24	nummod	24:nummod	_
+24	anos	ano	NOUN	_	Gender=Masc|Number=Plur	17	nmod	17:nmod:para	SpaceAfter=No
+25	.	.	PUNCT	_	_	4	punct	4:punct	_
+
+# sent_id = fakebr:421-9
+# text = Com relação à segurança pública no país, 52% consideram que o governo age de maneira ruim ou péssima.
+1	Com	com	ADP	_	_	2	case	2:case	_
+2	relação	relação	NOUN	_	Gender=Fem|Number=Sing	13	obl	13:obl:com	_
+3-4	à	_	_	_	_	_	_	_	_
+3	a	a	ADP	_	_	5	case	5:case	_
+4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	5:det	_
+5	segurança	segurança	NOUN	_	Number=Sing	2	nmod	2:nmod:a	_
+6	pública	público	ADJ	_	Gender=Fem|Number=Sing	5	amod	5:amod	_
+7-8	no	_	_	_	_	_	_	_	_
+7	em	em	ADP	_	_	9	case	9:case	_
+8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	9:det	_
+9	país	país	NOUN	_	Gender=Masc|Number=Sing	5	nmod	5:nmod:em	SpaceAfter=No
+10	,	,	PUNCT	_	_	2	punct	2:punct	_
+11	52	52	NUM	_	NumType=Card	12	nummod	12:nummod	SpaceAfter=No
+12	%	%	SYM	_	_	13	nsubj	13:nsubj	_
+13	consideram	considerar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+14	que	que	SCONJ	_	_	17	mark	17:mark	_
+15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	16:det	_
+16	governo	governo	NOUN	_	Gender=Masc|Number=Sing	17	nsubj	17:nsubj	_
+17	age	agir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	ccomp	13:ccomp	_
+18	de	de	ADP	_	_	19	case	19:case	_
+19	maneira	maneira	NOUN	_	Gender=Fem|Number=Sing	17	obl	17:obl:de	_
+20	ruim	ruim	ADJ	_	Number=Sing	19	amod	19:amod	_
+21	ou	ou	CCONJ	_	_	22	cc	22:cc	_
+22	péssima	péssimo	ADJ	_	Gender=Fem|Number=Sing	20	conj	19:amod|20:conj:ou	SpaceAfter=No
+23	.	.	PUNCT	_	_	13	punct	13:punct	_
+
+# sent_id = fakebr:421-10
+# text = 70% dos entrevistados se declararam contrários ao porte de armas pelo cidadão comum e também contra a legalização e venda da maconha.
+1	70	70	NUM	_	NumType=Card	2	nummod	2:nummod	SpaceAfter=No
+2	%	%	SYM	_	_	7	nsubj	7:nsubj|8:nsubj	_
+3-4	dos	_	_	_	_	_	_	_	_
+3	de	de	ADP	_	_	5	case	5:case	_
+4	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	5	det	5:det	_
+5	entrevistados	entrevistado	NOUN	_	Gender=Masc|Number=Plur	2	nmod	2:nmod:de	_
+6	se	se	PRON	_	Case=Nom|Person=3|PronType=Prs	7	expl	7:expl	_
+7	declararam	declarar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+8	contrários	contrário	ADJ	_	Gender=Masc|Number=Plur	7	xcomp	7:xcomp	_
+9-10	ao	_	_	_	_	_	_	_	_
+9	a	a	ADP	_	_	11	case	11:case	_
+10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	11:det	_
+11	porte	porte	NOUN	_	Gender=Masc|Number=Sing	8	obl	8:obl:a	_
+12	de	de	ADP	_	_	13	case	13:case	_
+13	armas	arma	NOUN	_	Gender=Fem|Number=Plur	11	nmod	11:nmod:de	_
+14-15	pelo	_	_	_	_	_	_	_	_
+14	por	por	ADP	_	_	16	case	16:case	_
+15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	16:det	_
+16	cidadão	cidadão	NOUN	_	Gender=Masc|Number=Sing	11	nmod	11:nmod:por	_
+17	comum	comum	ADJ	_	Number=Sing	16	amod	16:amod	_
+18	e	e	CCONJ	_	_	22	cc	22:cc	_
+19	também	também	ADV	_	_	22	advmod	22:advmod	_
+20	contra	contra	ADP	_	_	22	case	22:case|24:case	_
+21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	22:det	_
+22	legalização	legalização	NOUN	_	Gender=Fem|Number=Sing	11	conj	8:obl:contra|11:conj:e	_
+23	e	e	CCONJ	_	_	24	cc	24:cc	_
+24	venda	venda	NOUN	_	Gender=Fem|Number=Sing	22	conj	8:obl:contra|22:conj:e	_
+25-26	da	_	_	_	_	_	_	_	_
+25	de	de	ADP	_	_	27	case	27:case	_
+26	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	27	det	27:det	_
+27	maconha	maconha	NOUN	_	Gender=Fem|Number=Sing	22	nmod	22:nmod:de|24:nmod:de	SpaceAfter=No
+28	.	.	PUNCT	_	_	7	punct	7:punct	_
+
+# sent_id = fakebr:421-11
+# text = 65% dos consultados também declararam que concordam com a a proibição da venda de bebidas alcoólicas após às 0:00 horas.
+1	65	65	NUM	_	NumType=Card	2	nummod	2:nummod	SpaceAfter=No
+2	%	%	SYM	_	_	7	nsubj	7:nsubj	_
+3-4	dos	_	_	_	_	_	_	_	_
+3	de	de	ADP	_	_	5	case	5:case	_
+4	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	5	det	5:det	_
+5	consultados	consultado	NOUN	_	Gender=Masc|Number=Plur	2	nmod	2:nmod:de	_
+6	também	também	ADV	_	_	7	advmod	7:advmod	_
+7	declararam	declarar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+8	que	que	SCONJ	_	_	9	mark	9:mark	_
+9	concordam	concordar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	ccomp	7:ccomp	_
+10	com	com	ADP	_	_	13	case	13:case	_
+11	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	13:det	_
+12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	13:det	_
+13	proibição	proibição	NOUN	_	Gender=Fem|Number=Sing	9	obl	9:obl:com	_
+14-15	da	_	_	_	_	_	_	_	_
+14	de	de	ADP	_	_	16	case	16:case	_
+15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	16:det	_
+16	venda	venda	NOUN	_	Gender=Fem|Number=Sing	13	nmod	13:nmod:de	_
+17	de	de	ADP	_	_	18	case	18:case	_
+18	bebidas	bebida	NOUN	_	Gender=Fem|Number=Plur	16	nmod	16:nmod:de	_
+19	alcoólicas	alcoólico	ADJ	_	Gender=Fem|Number=Plur	18	amod	18:amod	_
+20	após	após	ADP	_	_	24	case	24:case	_
+21-22	às	_	_	_	_	_	_	_	_
+21	a	a	ADP	_	_	24	case	24:case	_
+22	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	24	det	24:det	_
+23	0:00	0:00	NUM	_	NumType=Card	24	nummod	24:nummod	_
+24	horas	hora	NOUN	_	Gender=Fem|Number=Plur	16	nmod	16:nmod:após_a	SpaceAfter=No
+25	.	.	PUNCT	_	_	7	punct	7:punct	_
+
+# sent_id = fakebr:421-12
+# text = Foram consultadas 2.002 pessoas em 141 cidades do país.
+1	Foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	2	aux:pass	2:aux:pass	_
+2	consultadas	consultar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	0	root	0:root	_
+3	2.002	2.002	NUM	_	NumType=Card	4	nummod	4:nummod	_
+4	pessoas	pessoa	NOUN	_	Gender=Fem|Number=Plur	2	nsubj:pass	2:nsubj:pass	_
+5	em	em	ADP	_	_	7	case	7:case	_
+6	141	141	NUM	_	NumType=Card	7	nummod	7:nummod	_
+7	cidades	cidade	NOUN	_	Gender=Fem|Number=Plur	2	obl	2:obl:em	_
+8-9	do	_	_	_	_	_	_	_	_
+8	de	de	ADP	_	_	10	case	10:case	_
+9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	10:det	_
+10	país	país	NOUN	_	Gender=Masc|Number=Sing	7	nmod	7:nmod:de	SpaceAfter=No
+11	.	.	PUNCT	_	_	2	punct	2:punct	_
+

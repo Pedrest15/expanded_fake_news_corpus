@@ -254,8 +254,8 @@ def run_analysis(
             logger.info(f"Gravado {variant_dir / 'top_words_comparison.csv'}")
 
 
-def parse_args() -> argparse.Namespace:
-    """Lê os argumentos da linha de comando."""
+def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
+    """Lê os argumentos da linha de comando (``sys.argv`` se ``argv`` for None)."""
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     add_corpus_arguments(parser)
     parser.add_argument(
@@ -270,15 +270,15 @@ def parse_args() -> argparse.Namespace:
         default=DEFAULT_OUTPUT_DIR,
         help=f"Pasta de saída (default: {DEFAULT_OUTPUT_DIR})",
     )
-    return parser.parse_args()
+    return parser.parse_args(argv)
 
 
-def main() -> None:
+def main(argv: Sequence[str] | None = None) -> None:
     """Ponto de entrada da análise de Zipf."""
     logging.basicConfig(
         level=logging.INFO, format="%(levelname)s %(name)s: %(message)s"
     )
-    args = parse_args()
+    args = parse_args(argv)
 
     ensure_nltk_resources(*TOKENIZER_PACKAGES, "stopwords")
 

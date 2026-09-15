@@ -1,0 +1,436 @@
+# sent_id = fakebr:458-1
+# text = O mapa da guerra:
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
+2	mapa	mapa	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
+3-4	da	_	_	_	_	_	_	_	_
+3	de	de	ADP	_	_	5	case	_	_
+4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
+5	guerra	guerra	NOUN	_	Gender=Fem|Number=Sing	2	nmod	_	SpaceAfter=No
+6	:	:	PUNCT	_	_	2	punct	_	_
+
+# sent_id = fakebr:458-2
+# text = Kim Jong-un revela seus primeiros 4 alvos nos EUA.
+1	Kim	Kim	PROPN	_	_	3	nsubj	_	_
+2	Jong-un	Jong-un	PROPN	_	_	1	flat:name	_	_
+3	revela	revelar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+4	seus	seu	DET	_	Gender=Masc|Number=Plur|Person=3|Poss=Yes|PronType=Prs	7	det	_	_
+5	primeiros	primeiro	ADJ	_	Gender=Masc|Number=Plur|NumType=Ord	7	amod	_	_
+6	4	4	NUM	_	NumType=Card	7	nummod	_	_
+7	alvos	alvo	NOUN	_	Gender=Masc|Number=Plur	3	obj	_	_
+8-9	nos	_	_	_	_	_	_	_	_
+8	em	em	ADP	_	_	10	case	_	_
+9	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	10	det	_	_
+10	EUA	EUA	PROPN	_	_	7	nmod	_	SpaceAfter=No
+11	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = fakebr:458-3
+# text = O plano de batalha de Pyongyang para um ataque nuclear foi divulgado pela própria Coreia do Norte durante uma reunião da alta cúpula militar com o líder comunista.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
+2	plano	plano	NOUN	_	Gender=Masc|Number=Sing	12	nsubj:pass	_	_
+3	de	de	ADP	_	_	4	case	_	_
+4	batalha	batalha	NOUN	_	Gender=Fem|Number=Sing	2	nmod	_	_
+5	de	de	ADP	_	_	6	case	_	_
+6	Pyongyang	Pyongyang	PROPN	_	_	4	nmod	_	_
+7	para	para	ADP	_	_	9	case	_	_
+8	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
+9	ataque	ataque	NOUN	_	Gender=Masc|Number=Sing	2	nmod	_	_
+10	nuclear	nuclear	ADJ	_	Number=Sing	9	amod	_	_
+11	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	aux:pass	_	_
+12	divulgado	divulgar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
+13-14	pela	_	_	_	_	_	_	_	_
+13	por	por	ADP	_	_	16	case	_	_
+14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
+15	própria	próprio	DET	_	Gender=Fem|Number=Sing|PronType=Dem	16	det	_	_
+16	Coreia	Coreia	PROPN	_	_	12	obl:agent	_	_
+17-18	do	_	_	_	_	_	_	_	_
+17	de	de	ADP	_	_	19	case	_	_
+18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	19	det	_	_
+19	Norte	Norte	PROPN	_	_	16	flat:name	_	_
+20	durante	durante	ADP	_	_	22	case	_	_
+21	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
+22	reunião	reunião	NOUN	_	Gender=Fem|Number=Sing	12	obl	_	_
+23-24	da	_	_	_	_	_	_	_	_
+23	de	de	ADP	_	_	26	case	_	_
+24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	26	det	_	_
+25	alta	alto	ADJ	_	Gender=Fem|Number=Sing	26	amod	_	_
+26	cúpula	cúpula	NOUN	_	Gender=Fem|Number=Sing	22	nmod	_	_
+27	militar	militar	ADJ	_	Number=Sing	26	amod	_	_
+28	com	com	ADP	_	_	30	case	_	_
+29	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	30	det	_	_
+30	líder	líder	NOUN	_	Gender=Masc|Number=Sing	22	nmod	_	_
+31	comunista	comunista	ADJ	_	Number=Sing	30	amod	_	SpaceAfter=No
+32	.	.	PUNCT	_	_	12	punct	_	_
+
+# sent_id = fakebr:458-4
+# text = O jornal Washington Post confirmou que Kim Jong-un possui tecnologia suficiente para fabricar ogivas nucleares em miniaturas, o que possibilita que essas bombas sejam acopladas em mísseis intercontinentais.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
+2	jornal	jornal	NOUN	_	Gender=Masc|Number=Sing	5	nsubj	_	_
+3	Washington	Washington	PROPN	_	_	2	nmod	_	_
+4	Post	Post	PROPN	_	_	3	flat:name	_	_
+5	confirmou	confirmar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+6	que	que	SCONJ	_	_	9	mark	_	_
+7	Kim	Kim	PROPN	_	_	9	nsubj	_	_
+8	Jong-un	Jong-un	PROPN	_	_	7	flat:name	_	_
+9	possui	possuir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	ccomp	_	_
+10	tecnologia	tecnologia	NOUN	_	Gender=Fem|Number=Sing	9	obj	_	_
+11	suficiente	suficiente	ADJ	_	Number=Sing	10	amod	_	_
+12	para	para	ADP	_	_	13	mark	_	_
+13	fabricar	fabricar	VERB	_	VerbForm=Inf	11	acl	_	_
+14	ogivas	ogiva	NOUN	_	Gender=Fem|Number=Plur	13	obj	_	_
+15	nucleares	nuclearl	ADJ	_	Number=Plur	14	amod	_	_
+16	em	em	ADP	_	_	17	case	_	_
+17	miniaturas	miniatura	NOUN	_	Gender=Fem|Number=Plur	13	obl	_	SpaceAfter=No
+18	,	,	PUNCT	_	_	21	punct	_	_
+19	o	o	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Dem	21	nsubj	_	_
+20	que	que	PRON	_	PronType=Rel	19	fixed	_	_
+21	possibilita	possibilitar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	parataxis	_	_
+22	que	que	SCONJ	_	_	26	mark	_	_
+23	essas	esse	DET	_	Gender=Fem|Number=Plur|PronType=Dem	24	det	_	_
+24	bombas	bomba	NOUN	_	Gender=Fem|Number=Plur	26	nsubj:pass	_	_
+25	sejam	ser	AUX	_	Mood=Sub|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	26	aux:pass	_	_
+26	acopladas	acoplar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	21	ccomp	_	_
+27	em	em	ADP	_	_	28	case	_	_
+28	mísseis	míssil	NOUN	_	Number=Plur	26	obl	_	_
+29	intercontinentais	intercontinental	ADJ	_	Number=Plur	28	amod	_	SpaceAfter=No
+30	.	.	PUNCT	_	_	5	punct	_	_
+
+# sent_id = fakebr:458-5
+# text = A Coréia do Norte está considerando ataques em cidades-chave dos EUA, sendo que 4 desses alvos já foram previamente anunciados pelo próprio governo de Kin-Jong-un, durante uma propaganda transmitida pela TV Estatal.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	Coréia	Coréia	PROPN	_	_	7	nsubj	_	_
+3-4	do	_	_	_	_	_	_	_	_
+3	de	de	ADP	_	_	5	case	_	_
+4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
+5	Norte	Norte	PROPN	_	_	2	flat:name	_	_
+6	está	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	aux	_	_
+7	considerando	considerar	VERB	_	VerbForm=Ger	0	root	_	_
+8	ataques	ataque	NOUN	_	Gender=Masc|Number=Plur	7	obj	_	_
+9	em	em	ADP	_	_	10	case	_	_
+10	cidades-chave	cidades-chave	NOUN	_	Gender=Fem|Number=Sing	8	nmod	_	_
+11-12	dos	_	_	_	_	_	_	_	_
+11	de	de	ADP	_	_	13	case	_	_
+12	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	13	det	_	_
+13	EUA	EUA	PROPN	_	_	10	nmod	_	SpaceAfter=No
+14	,	,	PUNCT	_	_	24	punct	_	_
+15	sendo	ser	AUX	_	VerbForm=Ger	24	mark	_	_
+16	que	que	SCONJ	_	_	15	fixed	_	_
+17	4	4	NUM	_	NumType=Card	24	nsubj:pass	_	_
+18-19	desses	_	_	_	_	_	_	_	_
+18	de	de	ADP	_	_	20	case	_	_
+19	esses	esse	DET	_	Gender=Masc|Number=Plur|PronType=Dem	20	det	_	_
+20	alvos	alvo	NOUN	_	Gender=Masc|Number=Plur	17	nmod	_	_
+21	já	já	ADV	_	_	24	advmod	_	_
+22	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	24	aux:pass	_	_
+23	previamente	previamente	ADV	_	_	24	advmod	_	_
+24	anunciados	anunciar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	7	advcl	_	_
+25-26	pelo	_	_	_	_	_	_	_	_
+25	por	por	ADP	_	_	28	case	_	_
+26	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	28	det	_	_
+27	próprio	próprio	DET	_	Gender=Masc|Number=Sing|PronType=Dem	28	det	_	_
+28	governo	governo	NOUN	_	Gender=Masc|Number=Sing	24	obl:agent	_	_
+29	de	de	ADP	_	_	30	case	_	_
+30	Kin-Jong-un	Kin-Jong-un	PROPN	_	_	28	nmod	_	SpaceAfter=No
+31	,	,	PUNCT	_	_	34	punct	_	_
+32	durante	durante	ADP	_	_	34	case	_	_
+33	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	34	det	_	_
+34	propaganda	propaganda	NOUN	_	Gender=Fem|Number=Sing	24	obl	_	_
+35	transmitida	transmitir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	34	acl	_	_
+36-37	pela	_	_	_	_	_	_	_	_
+36	por	por	ADP	_	_	38	case	_	_
+37	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	38	det	_	_
+38	TV	TV	PROPN	_	_	35	obl:agent	_	_
+39	Estatal	Estatal	PROPN	_	_	38	flat:name	_	SpaceAfter=No
+40	.	.	PUNCT	_	_	7	punct	_	_
+
+# sent_id = fakebr:458-6
+# text = As trajetórias dos mísseis foram destacadas no mapa com o subtítulo "US Mainland Strike Plan".
+1	As	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	2	det	_	_
+2	trajetórias	trajetória	NOUN	_	Gender=Fem|Number=Plur	7	nsubj:pass	_	_
+3-4	dos	_	_	_	_	_	_	_	_
+3	de	de	ADP	_	_	5	case	_	_
+4	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	5	det	_	_
+5	mísseis	míssil	NOUN	_	Number=Plur	2	nmod	_	_
+6	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	7	aux:pass	_	_
+7	destacadas	destacar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	0	root	_	_
+8-9	no	_	_	_	_	_	_	_	_
+8	em	em	ADP	_	_	10	case	_	_
+9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
+10	mapa	mapa	NOUN	_	Gender=Masc|Number=Sing	7	obl	_	_
+11	com	com	ADP	_	_	13	case	_	_
+12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
+13	subtítulo	subtítulo	NOUN	_	Gender=Masc|Number=Sing	7	obl	_	_
+14	"	"	PUNCT	_	_	15	punct	_	SpaceAfter=No
+15	US	US	PROPN	_	_	13	nmod	_	_
+16	Mainland	Mainland	PROPN	_	_	15	flat:name	_	_
+17	Strike	Strike	PROPN	_	_	15	flat:name	_	_
+18	Plan	Plan	PROPN	_	_	15	flat:name	_	SpaceAfter=No
+19	"	"	PUNCT	_	_	15	punct	_	SpaceAfter=No
+20	.	.	PUNCT	_	_	7	punct	_	_
+
+# sent_id = fakebr:458-7
+# text = San Diego (na Califórnia), Austin (no Texas), Washington DC e as ilhas do Havaí são os possíveis alvos de um primeiro ataque.
+1	San	San	PROPN	_	_	27	nsubj	_	_
+2	Diego	Diego	PROPN	_	_	1	flat:name	_	_
+3	(	(	PUNCT	_	_	6	punct	_	SpaceAfter=No
+4-5	na	_	_	_	_	_	_	_	_
+4	em	em	ADP	_	_	6	case	_	_
+5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
+6	Califórnia	Califórnia	PROPN	_	_	1	nmod	_	SpaceAfter=No
+7	)	)	PUNCT	_	_	6	punct	_	SpaceAfter=No
+8	,	,	PUNCT	_	_	9	punct	_	_
+9	Austin	Austin	PROPN	_	_	1	conj	_	_
+10	(	(	PUNCT	_	_	13	punct	_	SpaceAfter=No
+11-12	no	_	_	_	_	_	_	_	_
+11	em	em	ADP	_	_	13	case	_	_
+12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
+13	Texas	Texas	PROPN	_	_	9	nmod	_	SpaceAfter=No
+14	)	)	PUNCT	_	_	13	punct	_	SpaceAfter=No
+15	,	,	PUNCT	_	_	16	punct	_	_
+16	Washington	Washington	PROPN	_	_	1	conj	_	_
+17	DC	DC	PROPN	_	_	16	flat:name	_	_
+18	e	e	CCONJ	_	_	20	cc	_	_
+19	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	20	det	_	_
+20	ilhas	ilha	NOUN	_	Gender=Fem|Number=Plur	1	conj	_	_
+21-22	do	_	_	_	_	_	_	_	_
+21	de	de	ADP	_	_	23	case	_	_
+22	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	_	_
+23	Havaí	Havaí	PROPN	_	_	20	nmod	_	_
+24	são	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	27	cop	_	_
+25	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	27	det	_	_
+26	possíveis	possível	ADJ	_	Number=Plur	27	amod	_	_
+27	alvos	alvo	NOUN	_	Gender=Masc|Number=Plur	0	root	_	_
+28	de	de	ADP	_	_	31	case	_	_
+29	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	31	det	_	_
+30	primeiro	primeiro	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	31	amod	_	_
+31	ataque	ataque	NOUN	_	Gender=Masc|Number=Sing	27	nmod	_	SpaceAfter=No
+32	.	.	PUNCT	_	_	27	punct	_	_
+
+# sent_id = fakebr:458-8
+# text = Um ataque bem sucedido nesses alvos poderia matar cerca de 1/2 milhão de pessoas.
+1	Um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
+2	ataque	ataque	NOUN	_	Gender=Masc|Number=Sing	8	nsubj	_	_
+3	bem	bem	ADV	_	_	4	advmod	_	_
+4	sucedido	sucedido	ADJ	_	Gender=Masc|Number=Sing|VerbForm=Part	2	amod	_	_
+5-6	nesses	_	_	_	_	_	_	_	_
+5	em	em	ADP	_	_	7	case	_	_
+6	esses	esse	DET	_	Gender=Masc|Number=Plur|PronType=Dem	7	det	_	_
+7	alvos	alvo	NOUN	_	Gender=Masc|Number=Plur	2	nmod	_	_
+8	poderia	poder	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	0	root	_	_
+9	matar	matar	VERB	_	VerbForm=Inf	8	xcomp	_	_
+10	cerca	cerca	ADV	_	_	12	advmod	_	_
+11	de	de	ADP	_	_	10	fixed	_	_
+12	1/2	1/2	NUM	_	NumType=Card	13	nummod	_	_
+13	milhão	milhão	NOUN	_	Gender=Masc|Number=Sing	9	obj	_	_
+14	de	de	ADP	_	_	15	case	_	_
+15	pessoas	pessoa	NOUN	_	Gender=Fem|Number=Plur	13	nmod	_	SpaceAfter=No
+16	.	.	PUNCT	_	_	8	punct	_	_
+
+# sent_id = fakebr:458-9
+# text = O Reino Eremita nunca foi visto como uma ameaça significativa durante as gestões de Barack Obama, o que acabou facilitando o fortalecimento da capacidade nuclear de Kim.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
+2	Reino	Reino	PROPN	_	_	6	nsubj:pass	_	_
+3	Eremita	Eremita	PROPN	_	_	2	flat:name	_	_
+4	nunca	nunca	ADV	_	_	6	advmod	_	_
+5	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	aux:pass	_	_
+6	visto	ver	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
+7	como	como	ADP	_	_	9	case	_	_
+8	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	9	det	_	_
+9	ameaça	ameaça	NOUN	_	Gender=Fem|Number=Sing	6	obl	_	_
+10	significativa	significativo	ADJ	_	Gender=Fem|Number=Sing	9	amod	_	_
+11	durante	durante	ADP	_	_	13	case	_	_
+12	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	13	det	_	_
+13	gestões	gestão	NOUN	_	Gender=Fem|Number=Plur	6	obl	_	_
+14	de	de	ADP	_	_	15	case	_	_
+15	Barack	Barack	PROPN	_	_	13	nmod	_	_
+16	Obama	Obama	PROPN	_	_	15	flat:name	_	SpaceAfter=No
+17	,	,	PUNCT	_	_	20	punct	_	_
+18	o	o	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Dem	20	nsubj	_	_
+19	que	que	PRON	_	PronType=Rel	18	fixed	_	_
+20	acabou	acabar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	parataxis	_	_
+21	facilitando	facilitar	VERB	_	VerbForm=Ger	20	xcomp	_	_
+22	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	_	_
+23	fortalecimento	fortalecimento	NOUN	_	Gender=Masc|Number=Sing	21	obj	_	_
+24-25	da	_	_	_	_	_	_	_	_
+24	de	de	ADP	_	_	26	case	_	_
+25	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	26	det	_	_
+26	capacidade	capacidade	NOUN	_	Gender=Fem|Number=Sing	23	nmod	_	_
+27	nuclear	nuclear	ADJ	_	Number=Sing	26	amod	_	_
+28	de	de	ADP	_	_	29	case	_	_
+29	Kim	Kim	PROPN	_	_	26	nmod	_	SpaceAfter=No
+30	.	.	PUNCT	_	_	6	punct	_	_
+
+# sent_id = fakebr:458-10
+# text = Trocando em miúdos:
+1	Trocando	trocar	VERB	_	VerbForm=Ger	0	root	_	_
+2	em	em	ADP	_	_	3	case	_	_
+3	miúdos	miúdo	NOUN	_	Gender=Masc|Number=Plur	1	obl	_	SpaceAfter=No
+4	:	:	PUNCT	_	_	1	punct	_	_
+
+# sent_id = fakebr:458-11
+# text = Obama "comeu barriga", como se diz na gíria.
+1	Obama	Obama	PROPN	_	_	3	nsubj	_	_
+2	"	"	PUNCT	_	_	3	punct	_	SpaceAfter=No
+3	comeu	comer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+4	barriga	barriga	NOUN	_	Gender=Fem|Number=Sing	3	obj	_	SpaceAfter=No
+5	"	"	PUNCT	_	_	3	punct	_	SpaceAfter=No
+6	,	,	PUNCT	_	_	9	punct	_	_
+7	como	como	SCONJ	_	_	9	mark	_	_
+8	se	se	PRON	_	Case=Nom|Person=3|PronType=Prs	9	expl:impers	_	_
+9	diz	dizer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	advcl	_	_
+10-11	na	_	_	_	_	_	_	_	_
+10	em	em	ADP	_	_	12	case	_	_
+11	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
+12	gíria	gíria	NOUN	_	Gender=Fem|Number=Sing	9	obl	_	SpaceAfter=No
+13	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = fakebr:458-12
+# text = Pyongyang alega que seus projetos iniciais não incluíam um ataque nuclear aos EUA, porém os imperialistas estão forlando Kin Jong-un a tomar medidas drásticas:
+1	Pyongyang	Pyongyang	PROPN	_	_	2	nsubj	_	_
+2	alega	alegar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+3	que	que	SCONJ	_	_	8	mark	_	_
+4	seus	seu	DET	_	Gender=Masc|Number=Plur|Person=3|Poss=Yes|PronType=Prs	5	det	_	_
+5	projetos	projeto	NOUN	_	Gender=Masc|Number=Plur	8	nsubj	_	_
+6	iniciais	inicial	ADJ	_	Number=Plur	5	amod	_	_
+7	não	não	ADV	_	_	8	advmod	_	_
+8	incluíam	incluir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	2	ccomp	_	_
+9	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
+10	ataque	ataque	NOUN	_	Gender=Masc|Number=Sing	8	obj	_	_
+11	nuclear	nuclear	ADJ	_	Number=Sing	10	amod	_	_
+12-13	aos	_	_	_	_	_	_	_	_
+12	a	a	ADP	_	_	14	case	_	_
+13	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	14	det	_	_
+14	EUA	EUA	PROPN	_	_	10	nmod	_	SpaceAfter=No
+15	,	,	PUNCT	_	_	20	punct	_	_
+16	porém	porém	CCONJ	_	_	20	cc	_	_
+17	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	18	det	_	_
+18	imperialistas	imperialista	NOUN	_	Number=Plur	20	nsubj	_	_
+19	estão	estar	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	20	aux	_	_
+20	forlando	forlar	VERB	_	VerbForm=Ger	2	conj	_	_
+21	Kin	Kin	PROPN	_	_	20	obj	_	_
+22	Jong-un	Jong-un	PROPN	_	_	21	flat:name	_	_
+23	a	a	ADP	_	_	24	mark	_	_
+24	tomar	tomar	VERB	_	VerbForm=Inf	20	xcomp	_	_
+25	medidas	medida	NOUN	_	Gender=Fem|Number=Plur	24	obj	_	_
+26	drásticas	drástico	ADJ	_	Gender=Fem|Number=Plur	25	amod	_	SpaceAfter=No
+27	:	:	PUNCT	_	_	2	punct	_	_
+
+# sent_id = fakebr:458-13
+# text = Nossos ICBMs não foram projetados para atacar outros países e sim para assegurar a capacidade de defesa de nosso território...
+1	Nossos	nosso	DET	_	Gender=Masc|Number=Plur|Person=1|Poss=Yes|PronType=Prs	2	det	_	_
+2	ICBMs	ICBMs	PROPN	_	_	5	nsubj:pass	_	_
+3	não	não	ADV	_	_	5	advmod	_	_
+4	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	5	aux:pass	_	_
+5	projetados	projetar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	0	root	_	_
+6	para	para	ADP	_	_	7	mark	_	_
+7	atacar	atacar	VERB	_	VerbForm=Inf	5	advcl	_	_
+8	outros	outro	DET	_	Gender=Masc|Number=Plur|PronType=Ind	9	det	_	_
+9	países	país	NOUN	_	Gender=Masc|Number=Plur	7	obj	_	_
+10	e	e	CCONJ	_	_	13	cc	_	_
+11	sim	sim	ADV	_	_	13	advmod	_	_
+12	para	para	ADP	_	_	13	mark	_	_
+13	assegurar	assegurar	VERB	_	VerbForm=Inf	7	conj	_	_
+14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
+15	capacidade	capacidade	NOUN	_	Gender=Fem|Number=Sing	13	obj	_	_
+16	de	de	ADP	_	_	17	case	_	_
+17	defesa	defesa	NOUN	_	Gender=Fem|Number=Sing	15	nmod	_	_
+18	de	de	ADP	_	_	20	case	_	_
+19	nosso	nosso	DET	_	Gender=Masc|Number=Sing|Person=1|Poss=Yes|PronType=Prs	20	det	_	_
+20	território	território	NOUN	_	Gender=Masc|Number=Sing	17	nmod	_	SpaceAfter=No
+21	...	...	PUNCT	_	_	5	punct	_	_
+
+# sent_id = fakebr:458-14
+# text = e não vamos parar de desenvolvê-los O ativista de desarmamento nuclear Derek Johnson, diretor executivo da Global Zero, condenou a marcha em direção à guerra coordenadas por Kim e Trump:
+1	e	e	CCONJ	_	_	4	cc	_	_
+2	não	não	ADV	_	_	4	advmod	_	_
+3	vamos	ir	AUX	_	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	4	aux	_	_
+4	parar	parar	VERB	_	VerbForm=Inf	23	ccomp:speech	_	_
+5	de	de	ADP	_	_	6	mark	_	_
+6-7	desenvolvê-los	_	_	_	_	_	_	_	_
+6	desenvolver	desenvolver	VERB	_	VerbForm=Inf	4	xcomp	_	_
+7	los	lo	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	6	obj	_	_
+8	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
+9	ativista	ativista	NOUN	_	Number=Sing	23	nsubj	_	_
+10	de	de	ADP	_	_	11	case	_	_
+11	desarmamento	desarmamento	NOUN	_	Gender=Masc|Number=Sing	9	nmod	_	_
+12	nuclear	nuclear	ADJ	_	Number=Sing	11	amod	_	_
+13	Derek	Derek	PROPN	_	_	9	nmod	_	_
+14	Johnson	Johnson	PROPN	_	_	13	flat:name	_	SpaceAfter=No
+15	,	,	PUNCT	_	_	16	punct	_	_
+16	diretor	diretor	NOUN	_	Gender=Masc|Number=Sing	9	appos	_	_
+17	executivo	executivo	ADJ	_	Gender=Masc|Number=Sing	16	amod	_	_
+18-19	da	_	_	_	_	_	_	_	_
+18	de	de	ADP	_	_	20	case	_	_
+19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
+20	Global	Global	PROPN	_	_	16	nmod	_	_
+21	Zero	Zero	PROPN	_	_	20	flat:name	_	SpaceAfter=No
+22	,	,	PUNCT	_	_	16	punct	_	_
+23	condenou	condenar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
+25	marcha	marcha	NOUN	_	Gender=Fem|Number=Sing	23	obj	_	_
+26	em	em	ADP	_	_	27	case	_	_
+27	direção	direção	NOUN	_	Gender=Fem|Number=Sing	25	nmod	_	_
+28-29	à	_	_	_	_	_	_	_	_
+28	a	a	ADP	_	_	30	case	_	_
+29	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	30	det	_	_
+30	guerra	guerra	NOUN	_	Gender=Fem|Number=Sing	27	nmod	_	_
+31	coordenadas	coordenar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	27	acl	_	_
+32	por	por	ADP	_	_	33	case	_	_
+33	Kim	Kim	PROPN	_	_	31	obl:agent	_	_
+34	e	e	CCONJ	_	_	35	cc	_	_
+35	Trump	Trump	PROPN	_	_	33	conj	_	SpaceAfter=No
+36	:	:	PUNCT	_	_	23	punct	_	_
+
+# sent_id = fakebr:458-15
+# text = "A inda há tempo para que seja feito um esforço diplomático [...] o tempo de conversas é agora [...] os governantes devem evitar qualquer cenário que arrisque o uso de armas nucleares ou teremos uma catástrofe jamais vista no mundo".
+1	"	"	PUNCT	_	_	4	punct	_	SpaceAfter=No
+2	A	a	ADP	_	_	4	mark	_	_
+3	inda	inda	ADV	_	_	4	advmod	_	_
+4	há	haver	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+5	tempo	tempo	NOUN	_	Gender=Masc|Number=Sing	4	obj	_	_
+6	para	para	ADP	_	_	9	mark	_	_
+7	que	que	SCONJ	_	_	6	fixed	_	_
+8	seja	ser	AUX	_	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	aux:pass	_	_
+9	feito	fazer	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	5	acl	_	_
+10	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
+11	esforço	esforço	NOUN	_	Gender=Masc|Number=Sing	9	nsubj:pass	_	_
+12	diplomático	diplomático	ADJ	_	Gender=Masc|Number=Sing	11	amod	_	_
+13	[	[	PUNCT	_	_	22	punct	_	SpaceAfter=No
+14	.	.	PUNCT	_	_	22	parataxis	_	SpaceAfter=No
+15	..	..	PUNCT	_	_	14	punct	_	SpaceAfter=No
+16	]	]	PUNCT	_	_	14	punct	_	_
+17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
+18	tempo	tempo	NOUN	_	Gender=Masc|Number=Sing	22	nsubj	_	_
+19	de	de	ADP	_	_	20	case	_	_
+20	conversas	conversa	NOUN	_	Gender=Fem|Number=Plur	18	nmod	_	_
+21	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	22	cop	_	_
+22	agora	agora	ADV	_	_	4	parataxis	_	_
+23	[	[	PUNCT	_	_	29	punct	_	SpaceAfter=No
+24	.	.	PUNCT	_	_	29	punct	_	SpaceAfter=No
+25	..	..	PUNCT	_	_	24	punct	_	SpaceAfter=No
+26	]	]	PUNCT	_	_	24	punct	_	_
+27	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	28	det	_	_
+28	governantes	governante	NOUN	_	Gender=Masc|Number=Plur	29	nsubj	_	_
+29	devem	dever	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	4	parataxis	_	_
+30	evitar	evitar	VERB	_	VerbForm=Inf	29	xcomp	_	_
+31	qualquer	qualquer	DET	_	Number=Sing|PronType=Ind	32	det	_	_
+32	cenário	cenário	NOUN	_	Gender=Masc|Number=Sing	30	obj	_	_
+33	que	que	PRON	_	PronType=Rel	34	nsubj	_	_
+34	arrisque	arriscar	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	32	acl:relcl	_	_
+35	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	36	det	_	_
+36	uso	uso	NOUN	_	Gender=Masc|Number=Sing	34	obj	_	_
+37	de	de	ADP	_	_	38	case	_	_
+38	armas	arma	NOUN	_	Gender=Fem|Number=Plur	36	nmod	_	_
+39	nucleares	nuclearl	ADJ	_	Number=Plur	38	amod	_	_
+40	ou	ou	CCONJ	_	_	41	cc	_	_
+41	teremos	ter	VERB	_	Mood=Ind|Number=Plur|Person=1|Tense=Fut|VerbForm=Fin	30	conj	_	_
+42	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	43	det	_	_
+43	catástrofe	catástrofe	NOUN	_	Gender=Fem|Number=Sing	41	obj	_	_
+44	jamais	jamais	ADV	_	_	45	advmod	_	_
+45	vista	ver	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	43	acl	_	_
+46-47	no	_	_	_	_	_	_	_	_
+46	em	em	ADP	_	_	48	case	_	_
+47	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	48	det	_	_
+48	mundo	mundo	NOUN	_	Gender=Masc|Number=Sing	45	obl	_	SpaceAfter=No
+49	"	"	PUNCT	_	_	4	punct	_	SpaceAfter=No
+50	.	.	PUNCT	_	_	4	punct	_	_
+

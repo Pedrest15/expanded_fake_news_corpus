@@ -334,8 +334,8 @@ def run_analysis(
     return terms
 
 
-def parse_args() -> argparse.Namespace:
-    """Lê os argumentos da linha de comando."""
+def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
+    """Lê os argumentos da linha de comando (``sys.argv`` se ``argv`` for None)."""
     defaults = SageConfig()
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     add_corpus_arguments(parser)
@@ -369,15 +369,15 @@ def parse_args() -> argparse.Namespace:
         default=DEFAULT_OUTPUT_DIR,
         help=f"Pasta de saída (default: {DEFAULT_OUTPUT_DIR})",
     )
-    return parser.parse_args()
+    return parser.parse_args(argv)
 
 
-def main() -> None:
+def main(argv: Sequence[str] | None = None) -> None:
     """Ponto de entrada da análise SAGE."""
     logging.basicConfig(
         level=logging.INFO, format="%(levelname)s %(name)s: %(message)s"
     )
-    args = parse_args()
+    args = parse_args(argv)
 
     documents = documents_from_args(args)
     output_dir = output_dir_from_args(args, DEFAULT_OUTPUT_DIR)

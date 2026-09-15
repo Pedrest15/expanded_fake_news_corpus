@@ -1,0 +1,118 @@
+# global.columns = ID FORM LEMMA UPOS XPOS FEATS HEAD DEPREL DEPS MISC
+# sent_id = faketruebr:230-1
+# text = paolla oliveira diz que prostituição será a única forma de sobrevivência de atrizes da globo se bolsonaro for reeleito.
+1	paolla	paolla	PROPN	_	_	3	nsubj	3:nsubj	_
+2	oliveira	oliveira	NOUN	_	Gender=Fem|Number=Sing	1	nmod	1:nmod	_
+3	diz	dizer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+4	que	que	SCONJ	_	_	9	mark	9:mark	_
+5	prostituição	prostituição	NOUN	_	Gender=Fem|Number=Sing	9	nsubj	9:nsubj	_
+6	será	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin	9	cop	9:cop	_
+7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	9:det	_
+8	única	único	ADJ	_	Gender=Fem|Number=Sing	9	amod	9:amod	_
+9	forma	forma	NOUN	_	Gender=Fem|Number=Sing	3	ccomp	3:ccomp	_
+10	de	de	ADP	_	_	11	case	11:case	_
+11	sobrevivência	sobrevivência	NOUN	_	Gender=Fem|Number=Sing	9	nmod	9:nmod:de	_
+12	de	de	ADP	_	_	13	case	13:case	_
+13	atrizes	atriz	NOUN	_	Gender=Fem|Number=Plur	11	nmod	11:nmod:de	_
+14-15	da	_	_	_	_	_	_	_	_
+14	de	de	ADP	_	_	16	case	16:case	_
+15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	16:det	_
+16	globo	globo	NOUN	_	Gender=Fem|Number=Sing	13	nmod	13:nmod:de	_
+17	se	se	SCONJ	_	_	20	mark	20:mark	_
+18	bolsonaro	bolsonaro	NOUN	_	_	20	nsubj:pass	20:nsubj:pass	_
+19	for	ir	AUX	_	Mood=Sub|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin	20	aux:pass	20:aux:pass	_
+20	reeleito	reeleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	9	advcl	9:advcl:se	SpaceAfter=No
+21	.	.	PUNCT	_	_	3	punct	3:punct	_
+
+# sent_id = faketruebr:230-2
+# text = paolla oliveira diz que a prostituição será a única forma de sobrevivência das atrizes da globo caso bolsonaro seja reeleito a atriz paolla oliveira de 39 anos deu uma declaração bombástica a revista caras.
+1	paolla	paolla	PROPN	_	_	3	nsubj	3:nsubj	_
+2	oliveira	oliveira	NOUN	_	_	1	nmod	1:nmod	_
+3	diz	dizer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+4	que	que	SCONJ	_	_	10	mark	10:mark	_
+5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	6:det	_
+6	prostituição	prostituição	NOUN	_	Gender=Fem|Number=Sing	10	nsubj	10:nsubj	_
+7	será	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin	10	cop	10:cop	_
+8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	10:det	_
+9	única	único	ADJ	_	Gender=Fem|Number=Sing	10	amod	10:amod	_
+10	forma	forma	NOUN	_	Gender=Fem|Number=Sing	3	ccomp	3:ccomp	_
+11	de	de	ADP	_	_	12	case	12:case	_
+12	sobrevivência	sobrevivência	NOUN	_	Gender=Fem|Number=Sing	10	nmod	10:nmod:de	_
+13-14	das	_	_	_	_	_	_	_	_
+13	de	de	ADP	_	_	15	case	15:case	_
+14	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	15	det	15:det	_
+15	atrizes	atriz	NOUN	_	Gender=Fem|Number=Plur	12	nmod	12:nmod:de	_
+16-17	da	_	_	_	_	_	_	_	_
+16	de	de	ADP	_	_	18	case	18:case	_
+17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	18:det	_
+18	globo	globo	NOUN	_	Gender=Fem|Number=Sing	15	nmod	15:nmod:de	_
+19	caso	caso	SCONJ	_	_	22	mark	22:mark	_
+20	bolsonaro	bolsonaro	NOUN	_	_	22	nsubj:pass	22:nsubj:pass	_
+21	seja	ser	AUX	_	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	22	aux:pass	22:aux:pass	_
+22	reeleito	reeleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	10	advcl	10:advcl:caso	_
+23	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	24	det	24:det	_
+24	atriz	atriz	NOUN	_	Gender=Fem|Number=Sing	22	nsubj:pass	22:nsubj:pass	_
+25	paolla	paolla	NOUN	_	Gender=Fem|Number=Sing	24	nmod	24:nmod	_
+26	oliveira	oliveira	NOUN	_	Gender=Fem|Number=Sing	25	flat:name	25:flat:name	_
+27	de	de	ADP	_	_	29	case	29:case	_
+28	39	39	NUM	_	NumType=Card	29	nummod	29:nummod	_
+29	anos	ano	NOUN	_	Gender=Masc|Number=Plur	24	nmod	24:nmod:de	_
+30	deu	dar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	ccomp	3:ccomp	_
+31	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	32	det	32:det	_
+32	declaração	declaração	NOUN	_	Gender=Fem|Number=Sing	30	obj	30:obj	_
+33	bombástica	bombástico	ADJ	_	Gender=Fem|Number=Sing	32	amod	32:amod	_
+34	a	a	ADP	_	_	35	case	35:case	_
+35	revista	revista	NOUN	_	Gender=Fem|Number=Sing	30	obl	30:obl:a	_
+36	caras	caras	NOUN	_	Number=Plur	35	nmod	35:nmod	SpaceAfter=No
+37	.	.	PUNCT	_	_	3	punct	3:punct	_
+
+# sent_id = faketruebr:230-3
+# text = ela ressaltou o clima tenso nos bastidores da emissora rede globo, explicou que a concessão venceria no final de 222 e que não vai procurar uma lavagem de roupa em hipótese alguma.
+1	ela	ele	PRON	_	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj|15:nsubj	_
+2	ressaltou	ressaltar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+3	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	4:det	_
+4	clima	clima	NOUN	_	Gender=Masc|Number=Sing	2	obj	2:obj	_
+5	tenso	tenso	ADJ	_	Gender=Masc|Number=Sing	4	amod	4:amod	_
+6-7	nos	_	_	_	_	_	_	_	_
+6	em	em	ADP	_	_	8	case	8:case	_
+7	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	8	det	8:det	_
+8	bastidores	bastidor	NOUN	_	Gender=Masc|Number=Plur	4	nmod	4:nmod:em	_
+9-10	da	_	_	_	_	_	_	_	_
+9	de	de	ADP	_	_	11	case	11:case	_
+10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	11:det	_
+11	emissora	emissor	NOUN	_	Gender=Fem|Number=Sing	8	nmod	8:nmod:de	_
+12	rede	rede	NOUN	_	Gender=Fem|Number=Sing	11	nmod	11:nmod	_
+13	globo	globo	NOUN	_	Gender=Fem|Number=Sing	12	nmod	12:nmod	SpaceAfter=No
+14	,	,	PUNCT	_	_	15	punct	15:punct	_
+15	explicou	explicar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	conj	2:conj	_
+16	que	que	SCONJ	_	_	19	mark	19:mark	_
+17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	18:det	_
+18	concessão	concessão	NOUN	_	Gender=Fem|Number=Sing	19	nsubj	19:nsubj|29:nsubj	_
+19	venceria	vencer	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	15	ccomp	15:ccomp	_
+20-21	no	_	_	_	_	_	_	_	_
+20	em	em	ADP	_	_	22	case	22:case	_
+21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	22:det	_
+22	final	final	NOUN	_	Number=Sing	19	obl	19:obl:em	_
+23	de	de	ADP	_	_	24	case	24:case	_
+24	222	222	NUM	_	NumType=Card	22	nmod	22:nmod:de	_
+25	e	e	CCONJ	_	_	29	cc	29:cc	_
+26	que	que	SCONJ	_	_	29	mark	29:mark	_
+27	não	não	ADV	_	_	29	advmod	29:advmod	_
+28	vai	ir	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	29	aux	29:aux	_
+29	procurar	procurar	VERB	_	VerbForm=Inf	19	conj	15:ccomp|19:conj:e	_
+30	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	31	det	31:det	_
+31	lavagem	lavagem	NOUN	_	Gender=Fem|Number=Sing	29	obj	29:obj	_
+32	de	de	ADP	_	_	33	case	33:case	_
+33	roupa	roupa	NOUN	_	Gender=Fem|Number=Sing	31	nmod	31:nmod:de	_
+34	em	em	ADP	_	_	35	case	35:case	_
+35	hipótese	hipótese	NOUN	_	Gender=Fem|Number=Sing	29	obl	29:obl:em	_
+36	alguma	algum	DET	_	Gender=Fem|Number=Sing|PronType=Ind	35	det	35:det	SpaceAfter=No
+37	.	.	PUNCT	_	_	2	punct	2:punct	_
+
+# sent_id = faketruebr:230-4
+# text = brincou a atriz.
+1	brincou	brincar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	3:det	_
+3	atriz	atriz	NOUN	_	Gender=Fem|Number=Sing	1	nsubj	1:nsubj	SpaceAfter=No
+4	.	.	PUNCT	_	_	1	punct	1:punct	_
+

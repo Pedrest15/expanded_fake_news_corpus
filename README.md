@@ -241,6 +241,54 @@ recorte é escolhido com `--experiment paper_replication`; a saída vai para
 `data/analysis/paper_replication/<módulo>/`, sem tocar em `data/analysis/<módulo>/`
 do pipeline. Os resultados estão resumidos no NOTES.md acima.
 
+### Rodar as análises
+
+O orquestrador `expanded_fake_news_corpus.analysis` (também instalado como
+`fakegen-analysis`) roda todas as análises do catálogo em sequência, ou só as
+pedidas com `--analysis`; as opções de corpus são repassadas a cada módulo, que
+continua executável sozinho com as próprias opções.
+
+```bash
+uv run fakegen-analysis --list                                   # catálogo
+uv run fakegen-analysis --experiment paper_replication \
+    --model openai/gpt-4.1-mini-2025-04-14                       # todas
+uv run fakegen-analysis --analysis liwc --analysis sage          # só estas
+uv run python -m expanded_fake_news_corpus.analysis.liwc --dictionary x.dic  # uma, com opção própria
+```
+
+Uma análise que falha não interrompe as demais: o erro fica no log e no
+código de saída. As que dependem do corpus parseado (`grammar_rules`,
+`eud_rules`) são puladas com aviso quando `data/parsed/<experimento>/` não
+existe. Para acrescentar uma análise, o módulo expõe `main(argv)` como os
+outros e entra numa linha do catálogo `ANALYSES` em
+[analysis/runner.py](src/expanded_fake_news_corpus/analysis/runner.py).
+
+### Parsing sintático e regras de dependência
+
+As análises `grammar_rules` (regras da árvore básica) e `eud_rules` (regras
+das arestas *enhanced*) leem CoNLL-U de `data/parsed/<experimento>/`, produzido
+uma vez pela cadeia do trabalho anterior — portSentencer → portTokenizer →
+LatinPipe com o modelo Portparser v2 → pós-processamento — e enriquecido com
+Enhanced UD pelo Grew:
+
+```bash
+M=openai/gpt-4.1-mini-2025-04-14
+uv run python -m expanded_fake_news_corpus.parsing.install_tools   # clona as ferramentas em tools/ e baixa o modelo (1,6 GB)
+uv run python -m expanded_fake_news_corpus.parsing.portparser --experiment paper_replication --model $M
+uv run python -m expanded_fake_news_corpus.parsing.eud        --experiment paper_replication --model $M
+uv run python -m expanded_fake_news_corpus.analysis.grammar_rules --experiment paper_replication --model $M
+uv run python -m expanded_fake_news_corpus.analysis.eud_rules     --experiment paper_replication --model $M
+```
+
+`tools/` fica fora do git (repositórios de terceiros e o modelo); o código da
+cadeia está em [parsing/](src/expanded_fake_news_corpus/parsing/), incluindo o
+tratamento do texto antes do sentenciador (`preprocess.py`: quebra de linha
+como fronteira, punkt para o FakeTrueBR sem maiúsculas). O parser roda em CPU
+(venv próprio, Python 3.11) e leva uns 10 minutos para 40 documentos; o `grew`
+precisa estar no PATH (instalado via opam). O conjunto de regras EUD vem de
+[eud-portugues](https://github.com/alvelvis/eud-portugues), vendorizado sem
+alteração em `resources/eud/`.
+
 ### Página (GitHub Pages)
 
 `docs/` é publicado em <https://pedrest15.github.io/fakegen_br/> e mostra **a
@@ -286,8 +334,7 @@ print(result.headline, result.warnings)
 ## Desenvolvimento
 
 ```bash
-uv run pytest          # testes (usam um modelo de mentira, não chamam provedor)
-uv run ruff check src tests
+uv run ruff check src && uv run ruff format --check src
 ```
 
 ## Estrutura
@@ -302,6 +349,14 @@ uv run ruff check src tests
 | [cli.py](src/fakegen_br/cli.py) | Comando `fakegen` |
 | [agents/paper_replication.py](src/expanded_fake_news_corpus/agents/paper_replication.py) | Replicação do artigo: notícia inteira → fake news com o prompt original |
 | [scripts/sample_paper_replication.py](scripts/sample_paper_replication.py) | Amostra estratificada (10 + 10, seed 42) da replicação |
+| [analysis/runner.py](src/expanded_fake_news_corpus/analysis/runner.py) | Orquestrador: catálogo das análises e execução em lote (`fakegen-analysis`) |
+| [analysis/conllu.py](src/expanded_fake_news_corpus/analysis/conllu.py) | Leitura dos CoNLL-U e localização do corpus parseado |
+| [analysis/grammar_rules.py](src/expanded_fake_news_corpus/analysis/grammar_rules.py) | Regras de dependência: produtividade, frequências, TF-IDF discriminativo |
+| [analysis/eud_rules.py](src/expanded_fake_news_corpus/analysis/eud_rules.py) | O mesmo sobre as arestas *enhanced* (EUD) |
+| [parsing/preprocess.py](src/expanded_fake_news_corpus/parsing/preprocess.py) | Tratamento do texto antes do sentenciador e realinhamento após o tokenizador |
+| [parsing/portparser.py](src/expanded_fake_news_corpus/parsing/portparser.py) | Cadeia Portparser v2 → `data/parsed/` |
+| [parsing/eud.py](src/expanded_fake_news_corpus/parsing/eud.py) | Enriquecimento EUD com Grew |
+| [parsing/install_tools.py](src/expanded_fake_news_corpus/parsing/install_tools.py) | Instalação das ferramentas em `tools/` |
 
 ## Notas
 
