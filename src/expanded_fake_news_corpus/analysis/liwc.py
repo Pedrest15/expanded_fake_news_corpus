@@ -3,9 +3,13 @@
 Pontua cada documento nas categorias do LIWC — percentual de palavras que caem
 em cada categoria — e compara humano contra máquina categoria a categoria.
 
-São dezenas de testes simultâneos, então a tabela traz o q-valor de
-Benjamini-Hochberg junto do p-valor bruto: a 5% de significância, umas quatro
-categorias "significativas" sairiam do acaso puro.
+A estatística por categoria espelha o módulo ``liwc/`` do repositório
+``noticias_falsas_humano_maquina_semantica``, para que os resultados das duas
+bases sejam lidos com o mesmo critério: Mann-Whitney bilateral, d de Cohen pela
+média das variâncias e corte no p bruto (``significant_005``). O q-valor de
+Benjamini-Hochberg continua na tabela como coluna informativa — com 74 testes
+a 5%, umas quatro categorias "significativas" saem do acaso puro —, mas não é
+o critério. Veja :func:`compare_categories`.
 
 O dicionário LIWC é proprietário e não acompanha o repositório. Aponte para ele
 com ``--dictionary``, com a variável ``FAKEGEN_LIWC_DICTIONARY`` ou deixando o
@@ -25,11 +29,14 @@ import os
 from collections.abc import Sequence
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
+from scipy import stats
 
 from expanded_fake_news_corpus.analysis.documents import (
     PROJECT_ROOT,
     Document,
+    Group,
     add_corpus_arguments,
     documents_from_args,
     output_dir_from_args,
@@ -41,9 +48,7 @@ from expanded_fake_news_corpus.analysis.liwc_dictionary import (
 )
 from expanded_fake_news_corpus.analysis.significance import (
     add_fdr_correction,
-    compare_frame,
-    compare_within,
-    comparisons_to_frame,
+    interpret_effect_size,
 )
 
 logger = logging.getLogger(__name__)
@@ -162,6 +167,133 @@ def metric_columns(frame: pd.DataFrame) -> list[str]:
     return [column for column in frame.columns if column not in excluded]
 
 
+# --------------------------------------------------------------------------
+# Estatística espelhada de ``noticias_falsas_humano_maquina_semantica/liwc``
+# --------------------------------------------------------------------------
+#
+# Este módulo não usa o `compare_frame` do `significance.py`: a comparação por
+# categoria reproduz `liwc/analyzer.py` daquele repositório, para que os
+# números das duas bases sejam lidos com o mesmo critério. As diferenças em
+# relação aos outros sete módulos deste projeto são deliberadas:
+#
+# - **sem Shapiro-Wilk e sem teste t** — lá só o Mann-Whitney é computado;
+# - **d de Cohen pela média das variâncias**, ``sqrt((σ_h² + σ_m²) / 2)`` com
+#   ``σ`` populacional (``ddof=0``), e não o desvio agrupado ponderado por
+#   ``n-1`` do `significance.py`. Com n igual nos dois grupos a diferença é o
+#   fator ``sqrt(n / (n-1))`` — 2,6% com n = 20;
+# - **sem correção de multiplicidade**: o corte é o p bruto.
+
+
+def _mann_whitney(human: np.ndarray, machine: np.ndarray) -> tuple[float, float]:
+    """Mann-Whitney U bilateral, com o mesmo fallback do módulo espelhado.
+
+    Quando os dois grupos são constantes e iguais o teste não existe e o SciPy
+    levanta ``ValueError``; lá isso vira ``(0, 1.0)``, ou seja, "sem diferença".
+    """
+    try:
+        statistic, p_value = stats.mannwhitneyu(human, machine, alternative="two-sided")
+    except ValueError:
+        return 0.0, 1.0
+    return float(statistic), float(p_value)
+
+
+def _cohens_d(human: np.ndarray, machine: np.ndarray) -> float:
+    """d de Cohen pela média das variâncias populacionais.
+
+    É a fórmula de ``liwc/analyzer.py``: ``(m_h - m_m) / sqrt((σ_h² + σ_m²)/2)``
+    com ``σ`` de ``ddof=0``. Devolve 0.0 quando não há variância nenhuma.
+    """
+    pooled_std = float(np.sqrt((human.std() ** 2 + machine.std() ** 2) / 2))
+    if pooled_std == 0.0:
+        return 0.0
+    return float((human.mean() - machine.mean()) / pooled_std)
+
+
+def compare_categories(
+    frame: pd.DataFrame,
+    metrics: Sequence[str],
+    *,
+    group_column: str = "group",
+) -> pd.DataFrame:
+    """Compara cada categoria entre autorias, como no repositório de semântica.
+
+    Args:
+        frame: Tabela com uma linha por documento
+        metrics: Colunas a comparar (categorias LIWC mais a cobertura)
+        group_column: Coluna que separa ``human`` de ``machine``
+
+    Returns:
+        Uma linha por categoria, ordenada por ``|cohens_d|`` decrescente
+    """
+    human_rows = frame[frame[group_column] == Group.HUMAN.value]
+    machine_rows = frame[frame[group_column] == Group.MACHINE.value]
+
+    rows: list[dict[str, object]] = []
+    for metric in metrics:
+        human = human_rows[metric].to_numpy(dtype=float)
+        machine = machine_rows[metric].to_numpy(dtype=float)
+        human = human[~np.isnan(human)]
+        machine = machine[~np.isnan(machine)]
+        if len(human) < 2 or len(machine) < 2:
+            logger.warning(f"Categoria sem observações suficientes: {metric}")
+            continue
+
+        difference = float(human.mean() - machine.mean())
+        statistic, p_value = _mann_whitney(human, machine)
+        cohens_d = _cohens_d(human, machine)
+
+        rows.append(
+            {
+                "metric": metric,
+                "human_n": len(human),
+                "human_mean": float(human.mean()),
+                "human_std": float(human.std()),
+                "machine_n": len(machine),
+                "machine_mean": float(machine.mean()),
+                "machine_std": float(machine.std()),
+                "difference": difference,
+                "abs_difference": abs(difference),
+                "u_statistic": statistic,
+                "u_p_value": p_value,
+                "cohens_d": cohens_d,
+                "effect_size": interpret_effect_size(cohens_d),
+                "significant_005": p_value < 0.05,
+                "significant_001": p_value < 0.01,
+                "characteristic_of": (
+                    "human"
+                    if difference > 0
+                    else "machine"
+                    if difference < 0
+                    else "tie"
+                ),
+            }
+        )
+
+    comparisons = pd.DataFrame(rows)
+    if comparisons.empty:
+        return comparisons
+    return comparisons.reindex(
+        comparisons["cohens_d"].abs().sort_values(ascending=False).index
+    ).reset_index(drop=True)
+
+
+def compare_categories_within(
+    frame: pd.DataFrame,
+    metrics: Sequence[str],
+    *,
+    split_column: str,
+) -> pd.DataFrame:
+    """Repete :func:`compare_categories` dentro de cada valor de uma coluna."""
+    blocks: list[pd.DataFrame] = []
+    for value in sorted(frame[split_column].unique()):
+        block = compare_categories(frame[frame[split_column] == value], metrics)
+        if block.empty:
+            continue
+        block.insert(0, split_column, value)
+        blocks.append(block)
+    return pd.concat(blocks, ignore_index=True) if blocks else pd.DataFrame()
+
+
 def run_analysis(
     documents: Sequence[Document],
     dictionary: LiwcDictionary,
@@ -183,18 +315,17 @@ def run_analysis(
         return frame
 
     metrics = metric_columns(frame)
-    comparisons = comparisons_to_frame(compare_frame(frame, metrics))
+    comparisons = compare_categories(frame, metrics)
     if not comparisons.empty:
+        # O q-valor entra como coluna informativa, depois do critério: a página
+        # em `docs/` publica "X com p < 0,05 · Y após correção FDR".
         comparisons = add_fdr_correction(comparisons)
-        comparisons = comparisons.reindex(
-            comparisons["cohens_d"].abs().sort_values(ascending=False).index
-        ).reset_index(drop=True)
 
     output_dir.mkdir(parents=True, exist_ok=True)
     _write_csv(frame, output_dir / "liwc_per_document.csv")
     _write_csv(comparisons, output_dir / "liwc_significance.csv")
     _write_csv(
-        compare_within(frame, metrics, split_column="source"),
+        compare_categories_within(frame, metrics, split_column="source"),
         output_dir / "liwc_significance_by_source.csv",
     )
 
@@ -251,16 +382,17 @@ def main(argv: Sequence[str] | None = None) -> None:
     if comparisons.empty:
         return
 
-    significant = comparisons[comparisons["significant_fdr_005"]]
+    significant = comparisons[comparisons["significant_005"]]
     logger.info(
         f"{len(significant)} de {len(comparisons)} categorias significativas "
-        f"após correção FDR"
+        f"(p < 0.05); {int(comparisons['significant_fdr_005'].sum())} sobrevivem "
+        f"à correção FDR"
     )
     for row in significant.head(8).itertuples():
-        side = "human" if row.cohens_d > 0 else "machine"
         logger.info(
             f"  {row.metric}: {row.human_mean:.2f}% vs {row.machine_mean:.2f}% "
-            f"(d={row.cohens_d:+.2f}, q={row.q_value:.1e}) -> {side}"
+            f"(d={row.cohens_d:+.2f}, p={row.u_p_value:.1e}) "
+            f"-> {row.characteristic_of}"
         )
 
 
