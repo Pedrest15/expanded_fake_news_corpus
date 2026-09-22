@@ -1,7 +1,7 @@
 """Configuração do LLM usado pelos agentes do FakeGen.BR.
 
 O modelo é declarado sempre no formato ``provedor/modelo`` (ex.: ``ollama/llama3.1``,
-``anthropic/claude-sonnet-4-5``, ``openai/gpt-4o-mini``), e a chave de API é
+``anthropic/claude-sonnet-5``, ``openai/gpt-4o-mini``), e a chave de API é
 resolvida a partir da variável de ambiente do provedor correspondente.
 """
 
@@ -47,6 +47,13 @@ _GROQ_VIA_MODEL_KWARGS = frozenset({"top_p", "seed"})
 #: Para provedores fora da lista, só o que é universal.
 DEFAULT_SAMPLING_SUPPORT = frozenset({"temperature", "top_p"})
 
+#: Modelos da Anthropic que não aceitam parâmetro algum de amostragem: a
+#: partir de Opus 4.7 e da geração 5 (Sonnet 5, Opus 5, Fable 5) a API rejeita
+#: ``temperature``, ``top_p`` e ``top_k`` com 400 (``"`temperature` is
+#: deprecated for this model"``). O LangChain não filtra; o erro só aparece na
+#: chamada HTTP.
+_ANTHROPIC_NO_SAMPLING_RE = re.compile(r"^claude-(sonnet-5|opus-5|fable-5|opus-4-[78])")
+
 
 #: Caracteres inaceitáveis em nome de pasta. Tags do Ollama trazem ``:``.
 _SLUG_RE = re.compile(r"[^A-Za-z0-9._-]+")
@@ -81,6 +88,18 @@ def model_path(root, model: str, run_name: str | None = None):
 
 class ConfigError(Exception):
     """Configuração ausente ou inválida."""
+
+
+def sampling_support(model: str) -> frozenset[str]:
+    """Parâmetros de amostragem que ``provedor/modelo`` aceita.
+
+    Parte da tabela por provedor (:data:`SAMPLING_SUPPORT`) e refina por
+    modelo onde a API mudou dentro do mesmo provedor.
+    """
+    provider, name = split_model(model)
+    if provider == "anthropic" and _ANTHROPIC_NO_SAMPLING_RE.match(name):
+        return frozenset()
+    return SAMPLING_SUPPORT.get(provider, DEFAULT_SAMPLING_SUPPORT)
 
 
 def split_model(model: str) -> tuple[str, str]:
@@ -191,7 +210,7 @@ def resolve_sampling(settings: LLMSettings) -> tuple[dict[str, Any], list[str]]:
     Returns:
         Tupla ``(aplicados, descartados)``.
     """
-    supported = SAMPLING_SUPPORT.get(settings.provider, DEFAULT_SAMPLING_SUPPORT)
+    supported = sampling_support(settings.model)
     requested = {
         "temperature": settings.temperature,
         "top_p": settings.top_p,

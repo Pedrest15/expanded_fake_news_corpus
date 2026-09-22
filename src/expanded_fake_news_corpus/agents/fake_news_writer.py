@@ -23,7 +23,7 @@ import asyncio
 import re
 from collections.abc import AsyncIterator, Iterable, Iterator
 from dataclasses import replace
-from typing import Any
+from typing import Annotated, Any
 
 from langchain_core.language_models import BaseChatModel
 from langgraphlib import Agent, Workflow, create_state
@@ -32,13 +32,45 @@ from expanded_fake_news_corpus.config import LLMSettings, build_llm
 from expanded_fake_news_corpus.prompts import PAPER_FAKE_PROMPT, PAPER_SYSTEM
 from expanded_fake_news_corpus.schemas import FakeNewsError, FakeNewsWriterResult
 
+
+def content_text(value: Any) -> str:
+    """Texto de um ``content`` do LangChain, seja string ou lista de blocos.
+
+    A Anthropic devolve lista quando a resposta tem mais de um bloco — com o
+    *thinking* adaptativo padrão de Claude Sonnet 5 / Opus 5 vem um bloco
+    ``thinking`` (vazio, ``display`` omitido) antes do ``text``. Só blocos
+    ``text`` contam.
+    """
+    if isinstance(value, list):
+        parts = []
+        for block in value:
+            if isinstance(block, str):
+                parts.append(block)
+            elif isinstance(block, dict) and block.get("type") == "text":
+                parts.append(str(block.get("text", "")))
+        return "".join(parts)
+    return str(value or "")
+
+
+def _keep_text(_previous: str, value: Any) -> str:
+    """Reducer de ``raw_response``: guarda só o texto da última resposta.
+
+    O Agent copia ``response.content`` para o estado sem olhar o tipo, e o
+    LangGraph valida o estado (Pydantic) antes do nó seguinte — uma lista de
+    blocos num campo ``str`` derrubaria o grafo. O reducer roda antes dessa
+    validação.
+    """
+    return content_text(value)
+
+
 #: Estado do grafo. ``raw_response`` é campo único de tipo ``str``, o que faz o
-#: Agent devolver texto livre em vez de acionar ``with_structured_output``.
+#: Agent devolver texto livre em vez de acionar ``with_structured_output``; o
+#: ``Annotated`` é transparente para essa decisão e só acrescenta o reducer.
 FakeNewsWriterState = create_state(
     "FakeNewsWriterState",
     include_messages=False,
     headline=(str, ""),
-    raw_response=(str, ""),
+    raw_response=(Annotated[str, _keep_text], ""),
     synthetic_text=(str, ""),
     changes=(str, ""),
 )
@@ -97,7 +129,7 @@ def parse_response(raw: str) -> tuple[str, str, list[str]]:
 
 def _parse_node(state: Any) -> dict[str, str]:
     """Separa as duas seções da resposta bruta."""
-    raw = str(getattr(state, "raw_response", "") or "")
+    raw = _read(state, "raw_response")
     text, changes, _ = parse_response(raw)
     return {"synthetic_text": text, "changes": changes}
 
@@ -278,4 +310,4 @@ def _read(state: Any, field: str) -> str:
     value = (
         state.get(field, "") if isinstance(state, dict) else getattr(state, field, "")
     )
-    return str(value or "")
+    return content_text(value)

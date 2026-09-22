@@ -385,7 +385,7 @@ def _warn_dropped(settings: LLMSettings, *, quiet: bool) -> None:
     if dropped and not quiet:
         print(
             f"[{settings.model}] aviso: {', '.join(dropped)} não é suportado por "
-            f"'{settings.provider}' e não será enviado — as execuções não ficam "
+            f"'{settings.model}' e não será enviado — as execuções não ficam "
             "equivalentes entre provedores.",
             file=sys.stderr,
         )
