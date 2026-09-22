@@ -1,0 +1,783 @@
+# global.columns = ID FORM LEMMA UPOS XPOS FEATS HEAD DEPREL DEPS MISC
+# sent_id = fakebr:2623-1
+# text = Delações da Odebrecht:
+1	Delações	delação	NOUN	_	Gender=Fem|Number=Plur	0	root	0:root	_
+2-3	da	_	_	_	_	_	_	_	_
+2	de	de	ADP	_	_	4	case	4:case	_
+3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	4:det	_
+4	Odebrecht	Odebrecht	PROPN	_	_	1	nmod	1:nmod:de	SpaceAfter=No
+5	:	:	PUNCT	_	_	1	punct	1:punct	_
+
+# sent_id = fakebr:2623-2
+# text = Lula sabia de tudo e ordenou desvio de R$ 500 milhões da Petrobras para o PT.
+1	Lula	Lula	PROPN	_	_	2	nsubj	2:nsubj|6:nsubj	_
+2	sabia	saber	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	0:root	_
+3	de	de	ADP	_	_	4	case	4:case	_
+4	tudo	tudo	PRON	_	PronType=Ind	2	obl	2:obl:de	_
+5	e	e	CCONJ	_	_	6	cc	6:cc	_
+6	ordenou	ordenar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	conj	2:conj:e	_
+7	desvio	desvio	NOUN	_	Gender=Masc|Number=Sing	6	obj	6:obj	_
+8	de	de	ADP	_	_	11	case	11:case	_
+9	R$	R$	SYM	_	_	11	nmod	11:nmod	_
+10	500	500	NUM	_	NumType=Card	11	nummod	11:nummod	_
+11	milhões	milhão	NOUN	_	Gender=Masc|Number=Plur	7	nmod	7:nmod:de	_
+12-13	da	_	_	_	_	_	_	_	_
+12	de	de	ADP	_	_	14	case	14:case	_
+13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	14:det	_
+14	Petrobras	Petrobras	PROPN	_	_	11	nmod	11:nmod:de	_
+15	para	para	ADP	_	_	17	case	17:case	_
+16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	17:det	_
+17	PT	PT	PROPN	_	_	6	obl	6:obl:para	SpaceAfter=No
+18	.	.	PUNCT	_	_	2	punct	2:punct	_
+
+# sent_id = fakebr:2623-3
+# text = Documentos secretos revelam que ex-presidente comandava pessoalmente esquema e recebia mala preta no Palácio do Planalto.
+1	Documentos	documento	NOUN	_	Gender=Masc|Number=Plur	3	nsubj	3:nsubj	_
+2	secretos	secreto	ADJ	_	Gender=Masc|Number=Plur	1	amod	1:amod	_
+3	revelam	revelar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+4	que	que	SCONJ	_	_	6	mark	6:mark|10:mark	_
+5	ex-presidente	ex-presidente	NOUN	_	Number=Sing	6	nsubj	6:nsubj|10:nsubj	_
+6	comandava	comandar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	3	ccomp	3:ccomp	_
+7	pessoalmente	pessoalmente	ADV	_	_	6	advmod	6:advmod	_
+8	esquema	esquema	NOUN	_	Gender=Masc|Number=Sing	6	obj	6:obj	_
+9	e	e	CCONJ	_	_	10	cc	10:cc	_
+10	recebia	receber	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	6	conj	3:ccomp|6:conj:e	_
+11	mala	mala	NOUN	_	Gender=Fem|Number=Sing	10	obj	10:obj	_
+12	preta	preto	ADJ	_	Gender=Fem|Number=Sing	11	amod	11:amod	_
+13-14	no	_	_	_	_	_	_	_	_
+13	em	em	ADP	_	_	15	case	15:case	_
+14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	15:det	_
+15	Palácio	Palácio	PROPN	_	_	10	obl	10:obl:em	_
+16-17	do	_	_	_	_	_	_	_	_
+16	de	de	ADP	_	_	18	case	18:case	_
+17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	18:det	_
+18	Planalto	Planalto	PROPN	_	_	15	flat:name	15:flat:name	SpaceAfter=No
+19	.	.	PUNCT	_	_	3	punct	3:punct	_
+
+# sent_id = fakebr:2623-4
+# text = Ex-executivos da Odebrecht revelaram, em delação premiada explosiva na operação Lava Jato, que o ex-presidente Luiz Inácio Lula da Silva sabia de tudo e comandava pessoalmente o maior esquema de corrupção da história do Brasil.
+1	Ex-executivos	ex-executivo	NOUN	_	Gender=Masc|Number=Plur	5	nsubj	5:nsubj	_
+2-3	da	_	_	_	_	_	_	_	_
+2	de	de	ADP	_	_	4	case	4:case	_
+3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	4:det	_
+4	Odebrecht	Odebrecht	PROPN	_	_	1	nmod	1:nmod:de	_
+5	revelaram	revelar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	SpaceAfter=No
+6	,	,	PUNCT	_	_	8	punct	8:punct	_
+7	em	em	ADP	_	_	8	case	8:case	_
+8	delação	delação	NOUN	_	Gender=Fem|Number=Sing	5	obl	5:obl:em	_
+9	premiada	premiado	ADJ	_	Gender=Fem|Number=Sing|VerbForm=Part	8	amod	8:amod	_
+10	explosiva	explosivo	ADJ	_	Gender=Fem|Number=Sing	8	amod	8:amod	_
+11-12	na	_	_	_	_	_	_	_	_
+11	em	em	ADP	_	_	13	case	13:case	_
+12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	13:det	_
+13	operação	operação	NOUN	_	Gender=Fem|Number=Sing	8	nmod	8:nmod:em	_
+14	Lava	Lava	PROPN	_	_	13	nmod	13:nmod	_
+15	Jato	Jato	PROPN	_	_	14	flat:name	14:flat:name	SpaceAfter=No
+16	,	,	PUNCT	_	_	8	punct	8:punct	_
+17	que	que	SCONJ	_	_	26	mark	26:mark|30:mark	_
+18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	19	det	19:det	_
+19	ex-presidente	ex-presidente	NOUN	_	Number=Sing	26	nsubj	26:nsubj|30:nsubj	_
+20	Luiz	Luiz	PROPN	_	_	19	nmod	19:nmod	_
+21	Inácio	Inácio	PROPN	_	_	20	flat:name	20:flat:name	_
+22	Lula	Lula	PROPN	_	_	20	flat:name	20:flat:name	_
+23-24	da	_	_	_	_	_	_	_	_
+23	de	de	ADP	_	_	25	case	25:case	_
+24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	25:det	_
+25	Silva	Silva	PROPN	_	_	20	flat:name	20:flat:name	_
+26	sabia	saber	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	5	ccomp	5:ccomp	_
+27	de	de	ADP	_	_	28	case	28:case	_
+28	tudo	tudo	PRON	_	PronType=Ind	26	obl	26:obl:de	_
+29	e	e	CCONJ	_	_	30	cc	30:cc	_
+30	comandava	comandar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	26	conj	5:ccomp|26:conj:e	_
+31	pessoalmente	pessoalmente	ADV	_	_	30	advmod	30:advmod	_
+32	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	34	det	34:det	_
+33	maior	maior	ADJ	_	Number=Sing	34	amod	34:amod	_
+34	esquema	esquema	NOUN	_	Gender=Masc|Number=Sing	30	obj	30:obj	_
+35	de	de	ADP	_	_	36	case	36:case	_
+36	corrupção	corrupção	NOUN	_	Gender=Fem|Number=Sing	34	nmod	34:nmod:de	_
+37-38	da	_	_	_	_	_	_	_	_
+37	de	de	ADP	_	_	39	case	39:case	_
+38	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	39	det	39:det	_
+39	história	história	NOUN	_	Gender=Fem|Number=Sing	34	nmod	34:nmod:de	_
+40-41	do	_	_	_	_	_	_	_	_
+40	de	de	ADP	_	_	42	case	42:case	_
+41	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	42	det	42:det	_
+42	Brasil	Brasil	PROPN	_	_	39	nmod	39:nmod:de	SpaceAfter=No
+43	.	.	PUNCT	_	_	5	punct	5:punct	_
+
+# sent_id = fakebr:2623-5
+# text = Segundo os depoimentos, Lula recebia malas de dinheiro diretamente no Palácio do Planalto e determinava para onde ia cada centavo desviado da Petrobras.
+1	Segundo	segundo	ADP	_	_	3	case	3:case	_
+2	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	3	det	3:det	_
+3	depoimentos	depoimento	NOUN	_	Gender=Masc|Number=Plur	6	obl	6:obl:segundo	SpaceAfter=No
+4	,	,	PUNCT	_	_	3	punct	3:punct	_
+5	Lula	Lula	PROPN	_	_	6	nsubj	6:nsubj|18:nsubj	_
+6	recebia	receber	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	0:root	_
+7	malas	mala	NOUN	_	Gender=Fem|Number=Plur	6	obj	6:obj	_
+8	de	de	ADP	_	_	9	case	9:case	_
+9	dinheiro	dinheiro	NOUN	_	Gender=Masc|Number=Sing	7	nmod	7:nmod:de	_
+10	diretamente	diretamente	ADV	_	_	6	advmod	6:advmod	_
+11-12	no	_	_	_	_	_	_	_	_
+11	em	em	ADP	_	_	13	case	13:case	_
+12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	13:det	_
+13	Palácio	Palácio	PROPN	_	_	6	obl	6:obl:em	_
+14-15	do	_	_	_	_	_	_	_	_
+14	de	de	ADP	_	_	16	case	16:case	_
+15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	16:det	_
+16	Planalto	Planalto	PROPN	_	_	13	flat:name	13:flat:name	_
+17	e	e	CCONJ	_	_	18	cc	18:cc	_
+18	determinava	determinar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	6	conj	6:conj:e	_
+19	para	para	ADP	_	_	20	case	20:case	_
+20	onde	onde	ADV	_	_	21	advmod	21:advmod	_
+21	ia	ir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	18	ccomp	18:ccomp	_
+22	cada	cada	DET	_	Number=Sing|PronType=Ind	23	det	23:det	_
+23	centavo	centavo	NOUN	_	Gender=Masc|Number=Sing	21	nsubj	21:nsubj	_
+24	desviado	desviar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	23	acl	23:acl	_
+25-26	da	_	_	_	_	_	_	_	_
+25	de	de	ADP	_	_	27	case	27:case	_
+26	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	27	det	27:det	_
+27	Petrobras	Petrobras	PROPN	_	_	24	obl	24:obl:de	SpaceAfter=No
+28	.	.	PUNCT	_	_	6	punct	6:punct	_
+
+# sent_id = fakebr:2623-6
+# text = O escândalo envolve o contrato para obras na Refinaria Getúlio Vargas (Repar), em Araucária, que desviou mais de R$ 500 milhões dos cofres públicos direto para os bolsos de políticos do PT.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	2:det	_
+2	escândalo	escândalo	NOUN	_	Gender=Masc|Number=Sing	3	nsubj	3:nsubj	_
+3	envolve	envolver	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	5:det	_
+5	contrato	contrato	NOUN	_	Gender=Masc|Number=Sing	3	obj	3:obj|21:nsubj	_
+6	para	para	ADP	_	_	7	case	7:case	_
+7	obras	obra	NOUN	_	Gender=Fem|Number=Plur	5	nmod	5:nmod:para	_
+8-9	na	_	_	_	_	_	_	_	_
+8	em	em	ADP	_	_	10	case	10:case	_
+9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	10:det	_
+10	Refinaria	Refinaria	PROPN	_	_	7	nmod	7:nmod:em	_
+11	Getúlio	Getúlio	PROPN	_	_	10	flat:name	10:flat:name	_
+12	Vargas	Vargas	PROPN	_	_	10	flat:name	10:flat:name	_
+13	(	(	PUNCT	_	_	14	punct	14:punct	SpaceAfter=No
+14	Repar	Repar	PROPN	_	_	10	appos	10:appos	SpaceAfter=No
+15	)	)	PUNCT	_	_	14	punct	14:punct	SpaceAfter=No
+16	,	,	PUNCT	_	_	18	punct	18:punct	_
+17	em	em	ADP	_	_	18	case	18:case	_
+18	Araucária	Araucária	PROPN	_	_	10	nmod	10:nmod:em	SpaceAfter=No
+19	,	,	PUNCT	_	_	18	punct	18:punct	_
+20	que	que	PRON	_	PronType=Rel	21	nsubj	5:ref	_
+21	desviou	desviar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
+22	mais	mais	ADV	_	_	26	advmod	26:advmod	_
+23	de	de	ADP	_	_	22	fixed	22:fixed	_
+24	R$	R$	SYM	_	_	26	nmod	26:nmod	_
+25	500	500	NUM	_	NumType=Card	26	nummod	26:nummod	_
+26	milhões	milhão	NOUN	_	Gender=Masc|Number=Plur	21	obj	21:obj	_
+27-28	dos	_	_	_	_	_	_	_	_
+27	de	de	ADP	_	_	29	case	29:case	_
+28	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	29	det	29:det	_
+29	cofres	cofre	NOUN	_	Gender=Masc|Number=Plur	21	obl	21:obl:de	_
+30	públicos	público	ADJ	_	Gender=Masc|Number=Plur	29	amod	29:amod	_
+31	direto	direto	ADV	_	_	21	advmod	21:advmod	_
+32	para	para	ADP	_	_	34	case	34:case	_
+33	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	34	det	34:det	_
+34	bolsos	bolso	NOUN	_	Gender=Masc|Number=Plur	21	obl	21:obl:para	_
+35	de	de	ADP	_	_	36	case	36:case	_
+36	políticos	político	NOUN	_	Gender=Masc|Number=Plur	34	nmod	34:nmod:de	_
+37-38	do	_	_	_	_	_	_	_	_
+37	de	de	ADP	_	_	39	case	39:case	_
+38	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	39	det	39:det	_
+39	PT	PT	PROPN	_	_	36	nmod	36:nmod:de	SpaceAfter=No
+40	.	.	PUNCT	_	_	3	punct	3:punct	_
+
+# sent_id = fakebr:2623-7
+# text = O contrato inicial de R$ 1,8 bilhão explodiu para R$ 2,5 bilhões, com o dinheiro extra servindo exclusivamente para alimentar o caixa dois do partido.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	2:det	_
+2	contrato	contrato	NOUN	_	Gender=Masc|Number=Sing	8	nsubj	8:nsubj	_
+3	inicial	inicial	ADJ	_	Number=Sing	2	amod	2:amod	_
+4	de	de	ADP	_	_	7	case	7:case	_
+5	R$	R$	SYM	_	_	7	nmod	7:nmod	_
+6	1,8	1,8	NUM	_	NumType=Card	7	nummod	7:nummod	_
+7	bilhão	bilhão	NOUN	_	Gender=Masc|Number=Sing	2	nmod	2:nmod:de	_
+8	explodiu	explodir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+9	para	para	ADP	_	_	12	case	12:case	_
+10	R$	R$	SYM	_	_	12	nmod	12:nmod	_
+11	2,5	2,5	NUM	_	NumType=Card	12	nummod	12:nummod	_
+12	bilhões	bilhão	NOUN	_	Gender=Masc|Number=Plur	8	obl	8:obl:para	SpaceAfter=No
+13	,	,	PUNCT	_	_	16	punct	16:punct	_
+14	com	com	ADP	_	_	16	case	16:case	_
+15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	16:det	_
+16	dinheiro	dinheiro	NOUN	_	Gender=Masc|Number=Sing	8	obl	8:obl:com	_
+17	extra	extra	ADJ	_	Number=Sing	16	amod	16:amod	_
+18	servindo	servir	VERB	_	VerbForm=Ger	8	advcl	8:advcl	_
+19	exclusivamente	exclusivamente	ADV	_	_	18	advmod	18:advmod	_
+20	para	para	ADP	_	_	21	mark	21:mark	_
+21	alimentar	alimentar	VERB	_	VerbForm=Inf	18	advcl	18:advcl:para	_
+22	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	23:det	_
+23	caixa	caixa	NOUN	_	Number=Sing	21	obj	21:obj	_
+24	dois	dois	NUM	_	Gender=Masc|NumType=Card	23	nmod	23:nmod	_
+25-26	do	_	_	_	_	_	_	_	_
+25	de	de	ADP	_	_	27	case	27:case	_
+26	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	27	det	27:det	_
+27	partido	partido	NOUN	_	Gender=Masc|Number=Sing	23	nmod	23:nmod:de	SpaceAfter=No
+28	.	.	PUNCT	_	_	8	punct	8:punct	_
+
+# sent_id = fakebr:2623-8
+# text = Documentos obtidos com exclusividade por nossa reportagem mostram que funcionários da Petrobras eram apenas laranjas.
+1	Documentos	documento	NOUN	_	Gender=Masc|Number=Plur	8	nsubj	8:nsubj	_
+2	obtidos	obter	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	1	acl	1:acl	_
+3	com	com	ADP	_	_	4	case	4:case	_
+4	exclusividade	exclusividade	NOUN	_	Gender=Fem|Number=Sing	2	obl	2:obl:com	_
+5	por	por	ADP	_	_	7	case	7:case	_
+6	nossa	nosso	DET	_	Gender=Fem|Number=Sing|Person=1|Poss=Yes|PronType=Prs	7	det	7:det	_
+7	reportagem	reportagem	NOUN	_	Gender=Fem|Number=Sing	2	obl:agent	2:obl:agent	_
+8	mostram	mostrar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+9	que	que	SCONJ	_	_	16	mark	16:mark	_
+10	funcionários	funcionário	NOUN	_	Gender=Masc|Number=Plur	16	nsubj	16:nsubj	_
+11-12	da	_	_	_	_	_	_	_	_
+11	de	de	ADP	_	_	13	case	13:case	_
+12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	13:det	_
+13	Petrobras	Petrobras	PROPN	_	_	10	nmod	10:nmod:de	_
+14	eram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	16	cop	16:cop	_
+15	apenas	apenas	ADV	_	_	16	advmod	16:advmod	_
+16	laranjas	laranja	NOUN	_	Number=Plur	8	ccomp	8:ccomp	SpaceAfter=No
+17	.	.	PUNCT	_	_	8	punct	8:punct	_
+
+# sent_id = fakebr:2623-9
+# text = Quem realmente comandava tudo era o próprio Lula, que se reunia semanalmente com empreiteiros em um sítio em Atibaia para acertar os valores das propinas.
+1	Quem	quem	PRON	_	PronType=Rel	8	nsubj	8:nsubj	_
+2	realmente	realmente	ADV	_	_	3	advmod	3:advmod	_
+3	comandava	comandar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	1	acl:relcl	1:acl:relcl	_
+4	tudo	tudo	PRON	_	PronType=Ind	3	obj	3:obj	_
+5	era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	8	cop	8:cop	_
+6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	8:det	_
+7	próprio	próprio	DET	_	Gender=Masc|Number=Sing|PronType=Dem	8	det	8:det	_
+8	Lula	Lula	PROPN	_	_	0	root	0:root|12:nsubj	SpaceAfter=No
+9	,	,	PUNCT	_	_	12	punct	12:punct	_
+10	que	que	PRON	_	PronType=Rel	12	nsubj	8:ref	_
+11	se	se	PRON	_	Case=Nom|Person=3|PronType=Prs	12	expl	12:expl	_
+12	reunia	reunir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	8	acl:relcl	8:acl:relcl	_
+13	semanalmente	semanalmente	ADV	_	_	12	advmod	12:advmod	_
+14	com	com	ADP	_	_	15	case	15:case	_
+15	empreiteiros	empreiteiro	NOUN	_	Gender=Masc|Number=Plur	12	obl	12:obl:com	_
+16	em	em	ADP	_	_	18	case	18:case	_
+17	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	18	det	18:det	_
+18	sítio	sítio	NOUN	_	Gender=Masc|Number=Sing	12	obl	12:obl:em	_
+19	em	em	ADP	_	_	20	case	20:case	_
+20	Atibaia	Atibaia	PROPN	_	_	18	nmod	18:nmod:em	_
+21	para	para	ADP	_	_	22	mark	22:mark	_
+22	acertar	acertar	VERB	_	VerbForm=Inf	12	advcl	12:advcl:para	_
+23	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	24	det	24:det	_
+24	valores	valor	NOUN	_	Gender=Masc|Number=Plur	22	obj	22:obj	_
+25-26	das	_	_	_	_	_	_	_	_
+25	de	de	ADP	_	_	27	case	27:case	_
+26	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	27	det	27:det	_
+27	propinas	propina	NOUN	_	Gender=Fem|Number=Plur	24	nmod	24:nmod:de	SpaceAfter=No
+28	.	.	PUNCT	_	_	8	punct	8:punct	_
+
+# sent_id = fakebr:2623-10
+# text = Os ex-executivos revelaram que a OAS foi incluída no consórcio por ordem direta de Lula, que queria favorecer seu amigo pessoal Léo Pinheiro.
+1	Os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	2	det	2:det	_
+2	ex-executivos	ex-executivos	NOUN	_	Gender=Masc|Number=Plur	3	nsubj	3:nsubj	_
+3	revelaram	revelar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+4	que	que	SCONJ	_	_	8	mark	8:mark	_
+5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	6:det	_
+6	OAS	OAS	PROPN	_	_	8	nsubj:pass	8:nsubj:pass	_
+7	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	aux:pass	8:aux:pass	_
+8	incluída	incluir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	3	ccomp	3:ccomp	_
+9-10	no	_	_	_	_	_	_	_	_
+9	em	em	ADP	_	_	11	case	11:case	_
+10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	11:det	_
+11	consórcio	consórcio	NOUN	_	Gender=Masc|Number=Sing	8	obl	8:obl:em	_
+12	por	por	ADP	_	_	13	case	13:case	_
+13	ordem	ordem	NOUN	_	Gender=Fem|Number=Sing	8	obl	8:obl:por	_
+14	direta	direto	ADJ	_	Gender=Fem|Number=Sing	13	amod	13:amod	_
+15	de	de	ADP	_	_	16	case	16:case	_
+16	Lula	Lula	PROPN	_	_	13	nmod	13:nmod:de|19:nsubj|20:nsubj	SpaceAfter=No
+17	,	,	PUNCT	_	_	19	punct	19:punct	_
+18	que	que	PRON	_	PronType=Rel	19	nsubj	16:ref	_
+19	queria	querer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	16	acl:relcl	16:acl:relcl	_
+20	favorecer	favorecer	VERB	_	VerbForm=Inf	19	xcomp	19:xcomp	_
+21	seu	seu	DET	_	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	22	det	22:det	_
+22	amigo	amigo	NOUN	_	Gender=Masc|Number=Sing	20	obj	20:obj	_
+23	pessoal	pessoal	ADJ	_	Number=Sing	22	amod	22:amod	_
+24	Léo	Léo	PROPN	_	_	22	nmod	22:nmod	_
+25	Pinheiro	Pinheiro	PROPN	_	_	24	flat:name	24:flat:name	SpaceAfter=No
+26	.	.	PUNCT	_	_	3	punct	3:punct	_
+
+# sent_id = fakebr:2623-11
+# text = "O presidente ligava pessoalmente para exigir que a OAS entrasse no negócio", disse um delator que pediu anonimato por temer pela vida.
+1	"	"	PUNCT	_	_	4	punct	4:punct	SpaceAfter=No
+2	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	3:det	_
+3	presidente	presidente	NOUN	_	Number=Sing	4	nsubj	4:nsubj	_
+4	ligava	ligar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	17	ccomp:speech	17:ccomp:speech	_
+5	pessoalmente	pessoalmente	ADV	_	_	4	advmod	4:advmod	_
+6	para	para	ADP	_	_	7	mark	7:mark	_
+7	exigir	exigir	VERB	_	VerbForm=Inf	4	advcl	4:advcl:para	_
+8	que	que	SCONJ	_	_	11	mark	11:mark	_
+9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	10:det	_
+10	OAS	OAS	PROPN	_	_	11	nsubj	11:nsubj	_
+11	entrasse	entrar	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	ccomp	7:ccomp	_
+12-13	no	_	_	_	_	_	_	_	_
+12	em	em	ADP	_	_	14	case	14:case	_
+13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	14:det	_
+14	negócio	negócio	NOUN	_	Gender=Masc|Number=Sing	11	obl	11:obl:em	SpaceAfter=No
+15	"	"	PUNCT	_	_	4	punct	4:punct	SpaceAfter=No
+16	,	,	PUNCT	_	_	4	punct	4:punct	_
+17	disse	dizer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+18	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	19	det	19:det	_
+19	delator	delator	NOUN	_	Gender=Masc|Number=Sing	17	nsubj	17:nsubj|21:nsubj	_
+20	que	que	PRON	_	PronType=Rel	21	nsubj	19:ref	_
+21	pediu	pedir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	19	acl:relcl	19:acl:relcl	_
+22	anonimato	anonimato	NOUN	_	Gender=Masc|Number=Sing	21	obj	21:obj	_
+23	por	por	ADP	_	_	24	mark	24:mark	_
+24	temer	temer	VERB	_	VerbForm=Inf	21	advcl	21:advcl:por	_
+25-26	pela	_	_	_	_	_	_	_	_
+25	por	por	ADP	_	_	27	case	27:case	_
+26	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	27	det	27:det	_
+27	vida	vida	NOUN	_	Gender=Fem|Number=Sing	24	obl	24:obl:por	SpaceAfter=No
+28	.	.	PUNCT	_	_	17	punct	17:punct	_
+
+# sent_id = fakebr:2623-12
+# text = O procurador da República Deltan Dallagnol confirmou em entrevista exclusiva que as novas provas são "devastadoras" e que "finalmente temos a prova definitiva do envolvimento direto de Lula em todos os esquemas".
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	2:det	_
+2	procurador	procurador	NOUN	_	Gender=Masc|Number=Sing	8	nsubj	8:nsubj	_
+3-4	da	_	_	_	_	_	_	_	_
+3	de	de	ADP	_	_	5	case	5:case	_
+4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	5:det	_
+5	República	República	PROPN	_	_	2	nmod	2:nmod:de	_
+6	Deltan	Deltan	PROPN	_	_	2	nmod	2:nmod	_
+7	Dallagnol	Dallagnol	PROPN	_	_	6	flat:name	6:flat:name	_
+8	confirmou	confirmar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+9	em	em	ADP	_	_	10	case	10:case	_
+10	entrevista	entrevista	NOUN	_	Gender=Fem|Number=Sing	8	obl	8:obl:em	_
+11	exclusiva	exclusivo	ADJ	_	Gender=Fem|Number=Sing	10	amod	10:amod	_
+12	que	que	SCONJ	_	_	18	mark	18:mark	_
+13	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	15	det	15:det	_
+14	novas	novo	ADJ	_	Gender=Fem|Number=Plur	15	amod	15:amod	_
+15	provas	prova	NOUN	_	Gender=Fem|Number=Plur	18	nsubj	18:nsubj	_
+16	são	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	18	cop	18:cop	_
+17	"	"	PUNCT	_	_	18	punct	18:punct	SpaceAfter=No
+18	devastadoras	devastadoro	ADJ	_	Gender=Fem|Number=Plur	8	ccomp	8:ccomp	SpaceAfter=No
+19	"	"	PUNCT	_	_	18	punct	18:punct	_
+20	e	e	CCONJ	_	_	24	cc	24:cc	_
+21	que	que	SCONJ	_	_	24	mark	24:mark	_
+22	"	"	PUNCT	_	_	24	punct	24:punct	SpaceAfter=No
+23	finalmente	finalmente	ADV	_	_	24	advmod	24:advmod	_
+24	temos	ter	VERB	_	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	18	conj	8:ccomp|18:conj:e	_
+25	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	26	det	26:det	_
+26	prova	prova	NOUN	_	Gender=Fem|Number=Sing	24	obj	24:obj	_
+27	definitiva	definitivo	ADJ	_	Gender=Fem|Number=Sing	26	amod	26:amod	_
+28-29	do	_	_	_	_	_	_	_	_
+28	de	de	ADP	_	_	30	case	30:case	_
+29	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	30	det	30:det	_
+30	envolvimento	envolvimento	NOUN	_	Gender=Masc|Number=Sing	26	nmod	26:nmod:de	_
+31	direto	direto	ADJ	_	Gender=Masc|Number=Sing	30	amod	30:amod	_
+32	de	de	ADP	_	_	33	case	33:case	_
+33	Lula	Lula	PROPN	_	_	30	nmod	30:nmod:de	_
+34	em	em	ADP	_	_	37	case	37:case	_
+35	todos	todo	DET	_	Gender=Masc|Number=Plur|PronType=Ind	37	det	37:det	_
+36	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	37	det	37:det	_
+37	esquemas	esquema	NOUN	_	Gender=Masc|Number=Plur	30	nmod	30:nmod:em	SpaceAfter=No
+38	"	"	PUNCT	_	_	24	punct	24:punct	SpaceAfter=No
+39	.	.	PUNCT	_	_	8	punct	8:punct	_
+
+# sent_id = fakebr:2623-13
+# text = Segundo Dallagnol, áudios obtidos pela Polícia Federal mostram Lula combinando valores e contas no exterior.
+1	Segundo	segundo	ADP	_	_	2	case	2:case	_
+2	Dallagnol	Dallagnol	PROPN	_	_	10	obl	10:obl:segundo	SpaceAfter=No
+3	,	,	PUNCT	_	_	2	punct	2:punct	_
+4	áudios	áudio	NOUN	_	Gender=Masc|Number=Plur	10	nsubj	10:nsubj	_
+5	obtidos	obter	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	4	acl	4:acl	_
+6-7	pela	_	_	_	_	_	_	_	_
+6	por	por	ADP	_	_	8	case	8:case	_
+7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	8:det	_
+8	Polícia	Polícia	PROPN	_	_	5	obl:agent	5:obl:agent	_
+9	Federal	Federal	PROPN	_	_	8	flat:name	8:flat:name	_
+10	mostram	mostrar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+11	Lula	Lula	PROPN	_	_	10	obj	10:obj|12:nsubj	_
+12	combinando	combinar	VERB	_	VerbForm=Ger	10	xcomp	10:xcomp	_
+13	valores	valor	NOUN	_	Gender=Masc|Number=Plur	12	obj	12:obj	_
+14	e	e	CCONJ	_	_	15	cc	15:cc	_
+15	contas	conta	NOUN	_	Gender=Fem|Number=Plur	13	conj	12:obj|13:conj:e	_
+16-17	no	_	_	_	_	_	_	_	_
+16	em	em	ADP	_	_	18	case	18:case	_
+17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	18:det	_
+18	exterior	exterior	NOUN	_	Number=Sing	15	nmod	15:nmod:em	SpaceAfter=No
+19	.	.	PUNCT	_	_	10	punct	10:punct	_
+
+# sent_id = fakebr:2623-14
+# text = As diretorias de Engenharia e Serviços e de Abastecimento da Petrobras receberam R$ 15 milhões cada uma, mas esse era apenas o começo.
+1	As	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	2	det	2:det	_
+2	diretorias	diretoria	NOUN	_	Gender=Fem|Number=Plur	13	nsubj	13:nsubj	_
+3	de	de	ADP	_	_	4	case	4:case|6:case	_
+4	Engenharia	Engenharia	PROPN	_	_	2	nmod	2:nmod:de	_
+5	e	e	CCONJ	_	_	6	cc	6:cc	_
+6	Serviços	Serviços	PROPN	_	_	4	conj	2:nmod:de|4:conj:e	_
+7	e	e	CCONJ	_	_	9	cc	9:cc	_
+8	de	de	ADP	_	_	9	case	9:case	_
+9	Abastecimento	Abastecimento	PROPN	_	_	4	conj	2:nmod:de|4:conj:e	_
+10-11	da	_	_	_	_	_	_	_	_
+10	de	de	ADP	_	_	12	case	12:case	_
+11	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	12:det	_
+12	Petrobras	Petrobras	PROPN	_	_	2	nmod	2:nmod:de	_
+13	receberam	receber	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+14	R$	R$	SYM	_	_	16	nmod	16:nmod	_
+15	15	15	NUM	_	NumType=Card	16	nummod	16:nummod	_
+16	milhões	milhão	NOUN	_	Gender=Masc|Number=Plur	13	obj	13:obj	_
+17	cada	cada	DET	_	Number=Sing|PronType=Ind	18	det	18:det	_
+18	uma	um	PRON	_	Gender=Fem|Number=Sing|PronType=Ind	13	obj	13:obj	SpaceAfter=No
+19	,	,	PUNCT	_	_	25	punct	25:punct	_
+20	mas	mas	CCONJ	_	_	25	cc	25:cc	_
+21	esse	esse	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	25	nsubj	25:nsubj	_
+22	era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	25	cop	25:cop	_
+23	apenas	apenas	ADV	_	_	25	advmod	25:advmod	_
+24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	25:det	_
+25	começo	começo	NOUN	_	Gender=Masc|Number=Sing	13	conj	13:conj:mas	SpaceAfter=No
+26	.	.	PUNCT	_	_	13	punct	13:punct	_
+
+# sent_id = fakebr:2623-15
+# text = No total, mais de R$ 500 milhões foram desviados, sendo que R$ 350 milhões foram direto para contas secretas do PT em paraísos fiscais.
+1-2	No	_	_	_	_	_	_	_	_
+1	Em	em	ADP	_	_	3	case	3:case	_
+2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	3:det	_
+3	total	total	NOUN	_	Number=Sing	11	obl	11:obl:em	SpaceAfter=No
+4	,	,	PUNCT	_	_	3	punct	3:punct	_
+5	mais	mais	ADV	_	_	8	advmod	8:advmod	_
+6	de	de	ADP	_	_	5	fixed	5:fixed	_
+7	R$	R$	SYM	_	_	9	nmod	9:nmod	_
+8	500	500	NUM	_	NumType=Card	9	nummod	9:nummod	_
+9	milhões	milhão	NOUN	_	Gender=Masc|Number=Plur	11	nsubj:pass	11:nsubj:pass	_
+10	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	11	aux:pass	11:aux:pass	_
+11	desviados	desviar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	0	root	0:root	SpaceAfter=No
+12	,	,	PUNCT	_	_	18	punct	18:punct	_
+13	sendo	ser	AUX	_	VerbForm=Ger	18	mark	18:mark	_
+14	que	que	SCONJ	_	_	13	fixed	13:fixed	_
+15	R$	R$	SYM	_	_	17	nmod	17:nmod	_
+16	350	350	NUM	_	NumType=Card	17	nummod	17:nummod	_
+17	milhões	milhão	NOUN	_	Gender=Masc|Number=Plur	18	nsubj	18:nsubj	_
+18	foram	ser	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	11	advcl	11:advcl:ser_que	_
+19	direto	direto	ADV	_	_	18	advmod	18:advmod	_
+20	para	para	ADP	_	_	21	case	21:case	_
+21	contas	conta	NOUN	_	Gender=Fem|Number=Plur	18	obl	18:obl:para	_
+22	secretas	secreto	ADJ	_	Gender=Fem|Number=Plur	21	amod	21:amod	_
+23-24	do	_	_	_	_	_	_	_	_
+23	de	de	ADP	_	_	25	case	25:case	_
+24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	25:det	_
+25	PT	PT	PROPN	_	_	21	nmod	21:nmod:de	_
+26	em	em	ADP	_	_	27	case	27:case	_
+27	paraísos	paraíso	NOUN	_	Gender=Masc|Number=Plur	21	nmod	21:nmod:em	_
+28	fiscais	fiscal	ADJ	_	Number=Plur	27	amod	27:amod	SpaceAfter=No
+29	.	.	PUNCT	_	_	11	punct	11:punct	_
+
+# sent_id = fakebr:2623-16
+# text = O restante foi dividido entre políticos do PMDB e PP que fecharam os olhos para o esquema.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	2:det	_
+2	restante	restante	NOUN	_	Number=Sing	4	nsubj:pass	4:nsubj:pass	_
+3	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux:pass	4:aux:pass	_
+4	dividido	dividir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	0:root	_
+5	entre	entre	ADP	_	_	6	case	6:case	_
+6	políticos	político	NOUN	_	Gender=Masc|Number=Plur	4	obl	4:obl:entre|13:nsubj	_
+7-8	do	_	_	_	_	_	_	_	_
+7	de	de	ADP	_	_	9	case	9:case|11:case	_
+8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	9:det	_
+9	PMDB	PMDB	PROPN	_	_	6	nmod	6:nmod:de	_
+10	e	e	CCONJ	_	_	11	cc	11:cc	_
+11	PP	PP	PROPN	_	_	9	conj	6:nmod:de|9:conj:e	_
+12	que	que	PRON	_	PronType=Rel	13	nsubj	6:ref	_
+13	fecharam	fechar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	6	acl:relcl	6:acl:relcl	_
+14	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	15	det	15:det	_
+15	olhos	olho	NOUN	_	Gender=Masc|Number=Plur	13	obj	13:obj	_
+16	para	para	ADP	_	_	18	case	18:case	_
+17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	18:det	_
+18	esquema	esquema	NOUN	_	Gender=Masc|Number=Sing	13	obl	13:obl:para	SpaceAfter=No
+19	.	.	PUNCT	_	_	4	punct	4:punct	_
+
+# sent_id = fakebr:2623-17
+# text = Testemunhas afirmam que Paulo Roberto Costa e Pedro Barusco eram apenas intermediários.
+1	Testemunhas	testemunha	NOUN	_	Gender=Fem|Number=Plur	2	nsubj	2:nsubj	_
+2	afirmam	afirmar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+3	que	que	SCONJ	_	_	12	mark	12:mark	_
+4	Paulo	Paulo	PROPN	_	_	12	nsubj	12:nsubj	_
+5	Roberto	Roberto	PROPN	_	_	4	flat:name	4:flat:name	_
+6	Costa	Costa	PROPN	_	_	4	flat:name	4:flat:name	_
+7	e	e	CCONJ	_	_	8	cc	8:cc	_
+8	Pedro	Pedro	PROPN	_	_	4	conj	4:conj:e|12:nsubj	_
+9	Barusco	Barusco	PROPN	_	_	8	flat:name	8:flat:name	_
+10	eram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	12	cop	12:cop	_
+11	apenas	apenas	ADV	_	_	12	advmod	12:advmod	_
+12	intermediários	intermediário	NOUN	_	Gender=Masc|Number=Plur	2	ccomp	2:ccomp	SpaceAfter=No
+13	.	.	PUNCT	_	_	2	punct	2:punct	_
+
+# sent_id = fakebr:2623-18
+# text = Eles recebiam ordem direta do Palácio do Planalto.
+1	Eles	ele	PRON	_	Case=Nom|Gender=Masc|Number=Plur|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
+2	recebiam	receber	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	0	root	0:root	_
+3	ordem	ordem	NOUN	_	Gender=Fem|Number=Sing	2	obj	2:obj	_
+4	direta	direto	ADJ	_	Gender=Fem|Number=Sing	3	amod	3:amod	_
+5-6	do	_	_	_	_	_	_	_	_
+5	de	de	ADP	_	_	7	case	7:case	_
+6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	7:det	_
+7	Palácio	Palácio	PROPN	_	_	2	obl	2:obl:de	_
+8-9	do	_	_	_	_	_	_	_	_
+8	de	de	ADP	_	_	10	case	10:case	_
+9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	10:det	_
+10	Planalto	Planalto	PROPN	_	_	7	flat:name	7:flat:name	SpaceAfter=No
+11	.	.	PUNCT	_	_	2	punct	2:punct	_
+
+# sent_id = fakebr:2623-19
+# text = Nada era decidido sem o aval de Lula, revelou um dos delatores.
+1	Nada	nada	PRON	_	Gender=Masc|Number=Sing|PronType=Ind	3	nsubj:pass	3:nsubj:pass	_
+2	era	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	3	aux:pass	3:aux:pass	_
+3	decidido	decidir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	10	ccomp:speech	10:ccomp:speech	_
+4	sem	sem	ADP	_	_	6	case	6:case	_
+5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	6:det	_
+6	aval	aval	NOUN	_	Gender=Masc|Number=Sing	3	obl	3:obl:sem	_
+7	de	de	ADP	_	_	8	case	8:case	_
+8	Lula	Lula	PROPN	_	_	6	nmod	6:nmod:de	SpaceAfter=No
+9	,	,	PUNCT	_	_	3	punct	3:punct	_
+10	revelou	revelar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+11	um	um	NUM	_	Gender=Masc|NumType=Card	10	nsubj	10:nsubj	_
+12-13	dos	_	_	_	_	_	_	_	_
+12	de	de	ADP	_	_	14	case	14:case	_
+13	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	14	det	14:det	_
+14	delatores	delator	NOUN	_	Gender=Masc|Number=Plur	11	nmod	11:nmod:de	SpaceAfter=No
+15	.	.	PUNCT	_	_	10	punct	10:punct	_
+
+# sent_id = fakebr:2623-20
+# text = O mais chocante: as obras na Repar eram desnecessárias.
+1	O	o	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Dem	0	root	0:root	_
+2	mais	mais	ADV	_	_	3	advmod	3:advmod	_
+3	chocante	chocante	ADJ	_	Number=Sing	1	amod	1:amod	SpaceAfter=No
+4	:	:	PUNCT	_	_	11	punct	11:punct	_
+5	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	6	det	6:det	_
+6	obras	obra	NOUN	_	Gender=Fem|Number=Plur	11	nsubj	11:nsubj	_
+7-8	na	_	_	_	_	_	_	_	_
+7	em	em	ADP	_	_	9	case	9:case	_
+8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	9:det	_
+9	Repar	Repar	PROPN	_	_	6	nmod	6:nmod:em	_
+10	eram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	11	cop	11:cop	_
+11	desnecessárias	desnecessário	ADJ	_	Gender=Fem|Number=Plur	1	parataxis	1:parataxis	SpaceAfter=No
+12	.	.	PUNCT	_	_	1	punct	1:punct	_
+
+# sent_id = fakebr:2623-21
+# text = Um relatório técnico confidencial, escondido por anos pela Petrobras, revelou que a refinaria não precisava de modernização.
+1	Um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	2	det	2:det	_
+2	relatório	relatório	NOUN	_	Gender=Masc|Number=Sing	13	nsubj	13:nsubj	_
+3	técnico	técnico	ADJ	_	Gender=Masc|Number=Sing	2	amod	2:amod	_
+4	confidencial	confidencial	ADJ	_	Number=Sing	2	amod	2:amod	SpaceAfter=No
+5	,	,	PUNCT	_	_	6	punct	6:punct	_
+6	escondido	esconder	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	2	acl	2:acl	_
+7	por	por	ADP	_	_	8	case	8:case	_
+8	anos	ano	NOUN	_	Gender=Masc|Number=Plur	6	obl	6:obl:por	_
+9-10	pela	_	_	_	_	_	_	_	_
+9	por	por	ADP	_	_	11	case	11:case	_
+10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	11:det	_
+11	Petrobras	Petrobras	PROPN	_	_	6	obl:agent	6:obl:agent	SpaceAfter=No
+12	,	,	PUNCT	_	_	6	punct	6:punct	_
+13	revelou	revelar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+14	que	que	SCONJ	_	_	18	mark	18:mark	_
+15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	16:det	_
+16	refinaria	refinaria	NOUN	_	Gender=Fem|Number=Sing	18	nsubj	18:nsubj	_
+17	não	não	ADV	_	_	18	advmod	18:advmod	_
+18	precisava	precisar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	13	ccomp	13:ccomp	_
+19	de	de	ADP	_	_	20	case	20:case	_
+20	modernização	modernização	NOUN	_	Gender=Fem|Number=Sing	18	obl	18:obl:de	SpaceAfter=No
+21	.	.	PUNCT	_	_	13	punct	13:punct	_
+
+# sent_id = fakebr:2623-22
+# text = Tudo foi inventado apenas para gerar contratos superfaturados e desviar dinheiro público.
+1	Tudo	tudo	PRON	_	PronType=Ind	3	nsubj:pass	3:nsubj:pass	_
+2	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	aux:pass	3:aux:pass	_
+3	inventado	inventar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	0:root	_
+4	apenas	apenas	ADV	_	_	3	advmod	3:advmod	_
+5	para	para	ADP	_	_	6	mark	6:mark|10:mark	_
+6	gerar	gerar	VERB	_	VerbForm=Inf	3	advcl	3:advcl:para	_
+7	contratos	contrato	NOUN	_	Gender=Masc|Number=Plur	6	obj	6:obj	_
+8	superfaturados	superfaturado	ADJ	_	Gender=Masc|Number=Plur|VerbForm=Part	7	amod	7:amod	_
+9	e	e	CCONJ	_	_	10	cc	10:cc	_
+10	desviar	desviar	VERB	_	VerbForm=Inf	6	conj	3:advcl:para|6:conj:e	_
+11	dinheiro	dinheiro	NOUN	_	Gender=Masc|Number=Sing	10	obj	10:obj	_
+12	público	público	ADJ	_	Gender=Masc|Number=Sing	11	amod	11:amod	SpaceAfter=No
+13	.	.	PUNCT	_	_	3	punct	3:punct	_
+
+# sent_id = fakebr:2623-23
+# text = A operação criminosa funcionava assim: as empreiteiras inflavam os preços em 300%, pagavam 60% de propina para políticos e embolsavam o resto.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	2:det	_
+2	operação	operação	NOUN	_	Gender=Fem|Number=Sing	4	nsubj	4:nsubj	_
+3	criminosa	criminoso	ADJ	_	Gender=Fem|Number=Sing	2	amod	2:amod	_
+4	funcionava	funcionar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	0:root	_
+5	assim	assim	ADV	_	_	4	advmod	4:advmod	SpaceAfter=No
+6	:	:	PUNCT	_	_	9	punct	9:punct	_
+7	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	8	det	8:det	_
+8	empreiteiras	empreiteiro	NOUN	_	Gender=Fem|Number=Plur	9	nsubj	9:nsubj|16:nsubj|24:nsubj	_
+9	inflavam	inflar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	4	parataxis	4:parataxis	_
+10	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	11	det	11:det	_
+11	preços	preço	NOUN	_	Gender=Masc|Number=Plur	9	obj	9:obj	_
+12	em	em	ADP	_	_	14	case	14:case	_
+13	300	300	NUM	_	NumType=Card	14	nummod	14:nummod	SpaceAfter=No
+14	%	%	SYM	_	_	9	obl	9:obl:em	SpaceAfter=No
+15	,	,	PUNCT	_	_	16	punct	16:punct	_
+16	pagavam	pagar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	9	conj	4:parataxis|9:conj:e	_
+17	60	60	NUM	_	NumType=Card	18	nummod	18:nummod	SpaceAfter=No
+18	%	%	SYM	_	_	16	obj	16:obj	_
+19	de	de	ADP	_	_	20	case	20:case	_
+20	propina	propina	NOUN	_	Gender=Fem|Number=Sing	18	nmod	18:nmod:de	_
+21	para	para	ADP	_	_	22	case	22:case	_
+22	políticos	político	NOUN	_	Gender=Masc|Number=Plur	16	obl	16:obl:para	_
+23	e	e	CCONJ	_	_	24	cc	24:cc	_
+24	embolsavam	embolsar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	9	conj	4:parataxis|9:conj:e	_
+25	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	26	det	26:det	_
+26	resto	resto	NOUN	_	Gender=Masc|Number=Sing	24	obj	24:obj	SpaceAfter=No
+27	.	.	PUNCT	_	_	4	punct	4:punct	_
+
+# sent_id = fakebr:2623-24
+# text = Os aditivos contratuais eram feitos de propósito para aumentar ainda mais o rombo.
+1	Os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	2	det	2:det	_
+2	aditivos	aditivo	NOUN	_	Gender=Masc|Number=Plur	5	nsubj:pass	5:nsubj:pass	_
+3	contratuais	contratual	ADJ	_	Number=Plur	2	amod	2:amod	_
+4	eram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	5	aux:pass	5:aux:pass	_
+5	feitos	fazer	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	0	root	0:root	_
+6	de	de	ADP	_	_	7	case	7:case	_
+7	propósito	propósito	NOUN	_	Gender=Masc|Number=Sing	5	obl	5:obl:de	_
+8	para	para	ADP	_	_	9	mark	9:mark	_
+9	aumentar	aumentar	VERB	_	VerbForm=Inf	5	advcl	5:advcl:para	_
+10	ainda	ainda	ADV	_	_	11	advmod	11:advmod	_
+11	mais	mais	ADV	_	_	9	advmod	9:advmod	_
+12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	13:det	_
+13	rombo	rombo	NOUN	_	Gender=Masc|Number=Sing	9	obj	9:obj	SpaceAfter=No
+14	.	.	PUNCT	_	_	5	punct	5:punct	_
+
+# sent_id = fakebr:2623-25
+# text = No fim, uma obra que deveria custar R$ 400 milhões custou R$ 2,5 bilhões.
+1-2	No	_	_	_	_	_	_	_	_
+1	Em	em	ADP	_	_	3	case	3:case	_
+2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	3:det	_
+3	fim	fim	NOUN	_	Gender=Masc|Number=Sing	13	obl	13:obl:em	SpaceAfter=No
+4	,	,	PUNCT	_	_	3	punct	3:punct	_
+5	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	6	det	6:det	_
+6	obra	obra	NOUN	_	Gender=Fem|Number=Sing	13	nsubj	8:nsubj|9:nsubj|13:nsubj	_
+7	que	que	PRON	_	PronType=Rel	8	nsubj	6:ref	_
+8	deveria	dever	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	6	acl:relcl	6:acl:relcl	_
+9	custar	custar	VERB	_	VerbForm=Inf	8	xcomp	8:xcomp	_
+10	R$	R$	SYM	_	_	12	nmod	12:nmod	_
+11	400	400	NUM	_	NumType=Card	12	nummod	12:nummod	_
+12	milhões	milhão	NOUN	_	Gender=Masc|Number=Plur	9	obj	9:obj	_
+13	custou	custar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+14	R$	R$	SYM	_	_	16	nmod	16:nmod	_
+15	2,5	2,5	NUM	_	NumType=Card	16	nummod	16:nummod	_
+16	bilhões	bilhão	NOUN	_	Gender=Masc|Number=Plur	13	obj	13:obj	SpaceAfter=No
+17	.	.	PUNCT	_	_	13	punct	13:punct	_
+
+# sent_id = fakebr:2623-26
+# text = Fontes do Ministério Público revelam que novos mandados de prisão devem ser expedidos nos próximos dias, incluindo contra figuras importantes do PT que nunca foram investigadas.
+1	Fontes	fonte	NOUN	_	Gender=Fem|Number=Plur	6	nsubj	6:nsubj	_
+2-3	do	_	_	_	_	_	_	_	_
+2	de	de	ADP	_	_	4	case	4:case	_
+3	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	4:det	_
+4	Ministério	Ministério	PROPN	_	_	1	nmod	1:nmod:de	_
+5	Público	Público	PROPN	_	_	4	flat:name	4:flat:name	_
+6	revelam	revelar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+7	que	que	SCONJ	_	_	12	mark	12:mark	_
+8	novos	novo	ADJ	_	Gender=Masc|Number=Plur	9	amod	9:amod	_
+9	mandados	mandado	NOUN	_	Gender=Masc|Number=Plur	12	nsubj	12:nsubj|14:nsubj:pass	_
+10	de	de	ADP	_	_	11	case	11:case	_
+11	prisão	prisão	NOUN	_	Gender=Fem|Number=Sing	9	nmod	9:nmod:de	_
+12	devem	dever	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	ccomp	6:ccomp	_
+13	ser	ser	AUX	_	VerbForm=Inf	14	aux:pass	14:aux:pass	_
+14	expedidos	expedir	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	12	xcomp	12:xcomp	_
+15-16	nos	_	_	_	_	_	_	_	_
+15	em	em	ADP	_	_	18	case	18:case	_
+16	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	18	det	18:det	_
+17	próximos	próximo	ADJ	_	Gender=Masc|Number=Plur	18	amod	18:amod	_
+18	dias	dia	NOUN	_	Gender=Masc|Number=Plur	14	obl	14:obl:em	SpaceAfter=No
+19	,	,	PUNCT	_	_	20	punct	20:punct	_
+20	incluindo	incluir	VERB	_	VerbForm=Ger	12	advcl	12:advcl	_
+21	contra	contra	ADP	_	_	22	case	22:case	_
+22	figuras	figura	NOUN	_	Gender=Fem|Number=Plur	20	obl	20:obl:contra|30:nsubj:pass	_
+23	importantes	importante	ADJ	_	Number=Plur	22	amod	22:amod	_
+24-25	do	_	_	_	_	_	_	_	_
+24	de	de	ADP	_	_	26	case	26:case	_
+25	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	26	det	26:det	_
+26	PT	PT	PROPN	_	_	22	nmod	22:nmod:de	_
+27	que	que	PRON	_	PronType=Rel	30	nsubj:pass	22:ref	_
+28	nunca	nunca	ADV	_	_	30	advmod	30:advmod	_
+29	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	30	aux:pass	30:aux:pass	_
+30	investigadas	investigar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	22	acl:relcl	22:acl:relcl	SpaceAfter=No
+31	.	.	PUNCT	_	_	6	punct	6:punct	_
+
+# sent_id = fakebr:2623-27
+# text = A expectativa é que finalmente a verdade complete venha à tona e os responsáveis paguem por seus crimes.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	2:det	_
+2	expectativa	expectativa	NOUN	_	Gender=Fem|Number=Sing	9	nsubj:outer	9:nsubj:outer	_
+3	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
+4	que	que	SCONJ	_	_	9	mark	9:mark|16:mark	_
+5	finalmente	finalmente	ADV	_	_	9	advmod	9:advmod	_
+6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	7:det	_
+7	verdade	verdade	NOUN	_	Gender=Fem|Number=Sing	9	nsubj	9:nsubj	_
+8	complete	completar	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	amod	7:amod	_
+9	venha	vir	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+10-11	à	_	_	_	_	_	_	_	_
+10	a	a	ADP	_	_	12	case	12:case	_
+11	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	12:det	_
+12	tona	tona	NOUN	_	Gender=Fem|Number=Sing	9	obl	9:obl:a	_
+13	e	e	CCONJ	_	_	16	cc	16:cc	_
+14	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	15	det	15:det	_
+15	responsáveis	responsável	NOUN	_	Number=Plur	16	nsubj	16:nsubj	_
+16	paguem	pagar	VERB	_	Mood=Sub|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	9	conj	9:conj:e	_
+17	por	por	ADP	_	_	19	case	19:case	_
+18	seus	seu	DET	_	Gender=Masc|Number=Plur|Person=3|Poss=Yes|PronType=Prs	19	det	19:det	_
+19	crimes	crime	NOUN	_	Gender=Masc|Number=Plur	16	obl	16:obl:por	SpaceAfter=No
+20	.	.	PUNCT	_	_	9	punct	9:punct	_
+
+# sent_id = fakebr:2623-28
+# text = A população brasileira foi roubada durante anos enquanto políticos corruptos viviam na mordomia.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	2:det	_
+2	população	população	NOUN	_	Gender=Fem|Number=Sing	5	nsubj:pass	5:nsubj:pass	_
+3	brasileira	brasileiro	ADJ	_	Gender=Fem|Number=Sing	2	amod	2:amod	_
+4	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux:pass	5:aux:pass	_
+5	roubada	roubar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	0	root	0:root	_
+6	durante	durante	ADP	_	_	7	case	7:case	_
+7	anos	ano	NOUN	_	Gender=Masc|Number=Plur	5	obl	5:obl:durante	_
+8	enquanto	enquanto	SCONJ	_	_	11	mark	11:mark	_
+9	políticos	político	NOUN	_	Gender=Masc|Number=Plur	11	nsubj	11:nsubj	_
+10	corruptos	corrupto	ADJ	_	Gender=Masc|Number=Plur	9	amod	9:amod	_
+11	viviam	viver	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	5	advcl	5:advcl:enquanto	_
+12-13	na	_	_	_	_	_	_	_	_
+12	em	em	ADP	_	_	14	case	14:case	_
+13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	14:det	_
+14	mordomia	mordomia	NOUN	_	Gender=Fem|Number=Sing	11	obl	11:obl:em	SpaceAfter=No
+15	.	.	PUNCT	_	_	5	punct	5:punct	_
+
+# sent_id = fakebr:2623-29
+# text = Agora, com as delações da Odebrecht, não há mais como negar: o PT transformou a Petrobras em uma máquina de fazer dinheiro para o partido e seus aliados.
+1	Agora	agora	ADV	_	_	11	advmod	11:advmod	SpaceAfter=No
+2	,	,	PUNCT	_	_	1	punct	1:punct	_
+3	com	com	ADP	_	_	5	case	5:case	_
+4	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	5	det	5:det	_
+5	delações	delação	NOUN	_	Gender=Fem|Number=Plur	11	obl	11:obl:com	_
+6-7	da	_	_	_	_	_	_	_	_
+6	de	de	ADP	_	_	8	case	8:case	_
+7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	8:det	_
+8	Odebrecht	Odebrecht	PROPN	_	_	5	nmod	5:nmod:de	SpaceAfter=No
+9	,	,	PUNCT	_	_	5	punct	5:punct	_
+10	não	não	ADV	_	_	11	advmod	11:advmod	_
+11	há	haver	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+12	mais	mais	ADV	_	_	11	advmod	11:advmod	_
+13	como	como	ADV	_	_	14	advmod	14:advmod	_
+14	negar	negar	VERB	_	VerbForm=Inf	11	ccomp	11:ccomp	SpaceAfter=No
+15	:	:	PUNCT	_	_	18	punct	18:punct	_
+16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	17:det	_
+17	PT	PT	PROPN	_	_	18	nsubj	18:nsubj	_
+18	transformou	transformar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	parataxis	11:parataxis	_
+19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	20:det	_
+20	Petrobras	Petrobras	PROPN	_	_	18	obj	18:obj	_
+21	em	em	ADP	_	_	23	case	23:case	_
+22	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	23	det	23:det	_
+23	máquina	máquina	NOUN	_	Gender=Fem|Number=Sing	18	obl	18:obl:em	_
+24	de	de	ADP	_	_	25	mark	25:mark	_
+25	fazer	fazer	VERB	_	VerbForm=Inf	23	acl	23:acl:de	_
+26	dinheiro	dinheiro	NOUN	_	Gender=Masc|Number=Sing	25	obj	25:obj	_
+27	para	para	ADP	_	_	29	case	29:case|32:case	_
+28	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	29	det	29:det	_
+29	partido	partido	NOUN	_	Gender=Masc|Number=Sing	25	obl	25:obl:para	_
+30	e	e	CCONJ	_	_	32	cc	32:cc	_
+31	seus	seu	DET	_	Gender=Masc|Number=Plur|Person=3|Poss=Yes|PronType=Prs	32	det	32:det	_
+32	aliados	aliado	NOUN	_	Gender=Masc|Number=Plur	29	conj	25:obl:para|29:conj:e	SpaceAfter=No
+33	.	.	PUNCT	_	_	11	punct	11:punct	_
+

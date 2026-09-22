@@ -1,0 +1,310 @@
+# global.columns = ID FORM LEMMA UPOS XPOS FEATS HEAD DEPREL DEPS MISC
+# sent_id = faketruebr:230-1
+# text = URGENTE:
+1	URGENTE	URGENTE	PROPN	_	_	0	root	0:root	SpaceAfter=No
+2	:	:	PUNCT	_	_	1	punct	1:punct	_
+
+# sent_id = faketruebr:230-2
+# text = Paolla Oliveira revela em entrevista exclusiva que atrizes da Globo terão que se prostituir se Bolsonaro for reeleito.
+1	Paolla	Paolla	PROPN	_	_	3	nsubj	3:nsubj	_
+2	Oliveira	Oliveira	PROPN	_	_	1	flat:name	1:flat:name	_
+3	revela	revelar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+4	em	em	ADP	_	_	5	case	5:case	_
+5	entrevista	entrevista	NOUN	_	Gender=Fem|Number=Sing	3	obl	3:obl:em	_
+6	exclusiva	exclusivo	ADJ	_	Gender=Fem|Number=Sing	5	amod	5:amod	_
+7	que	que	SCONJ	_	_	12	mark	12:mark	_
+8	atrizes	atriz	NOUN	_	Gender=Fem|Number=Plur	12	nsubj	12:nsubj|15:nsubj	_
+9-10	da	_	_	_	_	_	_	_	_
+9	de	de	ADP	_	_	11	case	11:case	_
+10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	11:det	_
+11	Globo	Globo	PROPN	_	_	8	nmod	8:nmod:de	_
+12	terão	ter	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin	3	ccomp	3:ccomp	_
+13	que	que	ADP	_	_	15	mark	15:mark	_
+14	se	se	PRON	_	Case=Nom|Person=3|PronType=Prs	15	expl	15:expl	_
+15	prostituir	prostituir	VERB	_	VerbForm=Inf	12	xcomp	12:xcomp	_
+16	se	se	SCONJ	_	_	19	mark	19:mark	_
+17	Bolsonaro	Bolsonaro	PROPN	_	_	19	nsubj:pass	19:nsubj:pass	_
+18	for	ir	AUX	_	Mood=Sub|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin	19	aux:pass	19:aux:pass	_
+19	reeleito	reeleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	12	advcl	12:advcl:se	SpaceAfter=No
+20	.	.	PUNCT	_	_	3	punct	3:punct	_
+
+# sent_id = faketruebr:230-3
+# text = Em entrevista bombástica concedida à revista Caras na última terça-feira, a atriz global Paolla Oliveira chocou o Brasil ao afirmar categoricamente que "a prostituição será a única forma de sobrevivência das atrizes da Globo caso o presidente Jair Bolsonaro seja reeleito em 2022".
+1	Em	em	ADP	_	_	2	case	2:case	_
+2	entrevista	entrevista	NOUN	_	Gender=Fem|Number=Sing	19	obl	19:obl:em	_
+3	bombástica	bombástico	ADJ	_	Gender=Fem|Number=Sing	2	amod	2:amod	_
+4	concedida	conceder	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	2	acl	2:acl	_
+5-6	à	_	_	_	_	_	_	_	_
+5	a	a	ADP	_	_	7	case	7:case	_
+6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	7:det	_
+7	revista	revista	NOUN	_	Gender=Fem|Number=Sing	4	obl	4:obl:a	_
+8	Caras	Caras	PROPN	_	_	7	nmod	7:nmod	_
+9-10	na	_	_	_	_	_	_	_	_
+9	em	em	ADP	_	_	12	case	12:case	_
+10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	12:det	_
+11	última	último	ADJ	_	Gender=Fem|Number=Sing	12	amod	12:amod	_
+12	terça-feira	terça-fEira	NOUN	_	Gender=Fem|Number=Sing	4	obl	4:obl:em	SpaceAfter=No
+13	,	,	PUNCT	_	_	2	punct	2:punct	_
+14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	15:det	_
+15	atriz	atriz	NOUN	_	Gender=Fem|Number=Sing	19	nsubj	19:nsubj	_
+16	global	global	ADJ	_	Number=Sing	15	amod	15:amod	_
+17	Paolla	Paolla	PROPN	_	_	15	nmod	15:nmod	_
+18	Oliveira	Oliveira	PROPN	_	_	17	flat:name	17:flat:name	_
+19	chocou	chocar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	21:det	_
+21	Brasil	Brasil	PROPN	_	_	19	obj	19:obj	_
+22-23	ao	_	_	_	_	_	_	_	_
+22	a	a	ADP	_	_	24	mark	24:mark	_
+23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	fixed	22:fixed	_
+24	afirmar	afirmar	VERB	_	VerbForm=Inf	19	advcl	19:advcl:a_o	_
+25	categoricamente	categoricamente	ADV	_	_	24	advmod	24:advmod	_
+26	que	que	SCONJ	_	_	33	mark	33:mark	_
+27	"	"	PUNCT	_	_	33	punct	33:punct	SpaceAfter=No
+28	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	29	det	29:det	_
+29	prostituição	prostituição	NOUN	_	Gender=Fem|Number=Sing	33	nsubj	33:nsubj	_
+30	será	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin	33	cop	33:cop	_
+31	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	33	det	33:det	_
+32	única	único	ADJ	_	Gender=Fem|Number=Sing	33	amod	33:amod	_
+33	forma	forma	NOUN	_	Gender=Fem|Number=Sing	24	ccomp	24:ccomp	_
+34	de	de	ADP	_	_	35	case	35:case	_
+35	sobrevivência	sobrevivência	NOUN	_	Gender=Fem|Number=Sing	33	nmod	33:nmod:de	_
+36-37	das	_	_	_	_	_	_	_	_
+36	de	de	ADP	_	_	38	case	38:case	_
+37	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	38	det	38:det	_
+38	atrizes	atriz	NOUN	_	Gender=Fem|Number=Plur	35	nmod	35:nmod:de	_
+39-40	da	_	_	_	_	_	_	_	_
+39	de	de	ADP	_	_	41	case	41:case	_
+40	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	41	det	41:det	_
+41	Globo	Globo	PROPN	_	_	38	nmod	38:nmod:de	_
+42	caso	caso	SCONJ	_	_	48	mark	48:mark	_
+43	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	44	det	44:det	_
+44	presidente	presidente	NOUN	_	Number=Sing	48	nsubj:pass	48:nsubj:pass	_
+45	Jair	Jair	PROPN	_	_	44	nmod	44:nmod	_
+46	Bolsonaro	Bolsonaro	PROPN	_	_	45	flat:name	45:flat:name	_
+47	seja	ser	AUX	_	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	48	aux:pass	48:aux:pass	_
+48	reeleito	reeleger	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	33	advcl	33:advcl:caso	_
+49	em	em	ADP	_	_	50	case	50:case	_
+50	2022	2022	NUM	_	NumType=Card	48	obl	48:obl:em	SpaceAfter=No
+51	"	"	PUNCT	_	_	33	punct	33:punct	SpaceAfter=No
+52	.	.	PUNCT	_	_	19	punct	19:punct	_
+
+# sent_id = faketruebr:230-4
+# text = A declaração polêmica aconteceu durante um ensaio fotográfico exclusivo para a publicação.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	2:det	_
+2	declaração	declaração	NOUN	_	Gender=Fem|Number=Sing	4	nsubj	4:nsubj	_
+3	polêmica	polêmico	ADJ	_	Gender=Fem|Number=Sing	2	amod	2:amod	_
+4	aconteceu	acontecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+5	durante	durante	ADP	_	_	7	case	7:case	_
+6	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	7	det	7:det	_
+7	ensaio	ensaio	NOUN	_	Gender=Masc|Number=Sing	4	obl	4:obl:durante	_
+8	fotográfico	fotográfico	ADJ	_	Gender=Masc|Number=Sing	7	amod	7:amod	_
+9	exclusivo	exclusivo	ADJ	_	Gender=Masc|Number=Sing	7	amod	7:amod	_
+10	para	para	ADP	_	_	12	case	12:case	_
+11	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	12:det	_
+12	publicação	publicação	NOUN	_	Gender=Fem|Number=Sing	9	obl	9:obl:para	SpaceAfter=No
+13	.	.	PUNCT	_	_	4	punct	4:punct	_
+
+# sent_id = faketruebr:230-5
+# text = Segundo testemunhas presentes no estúdio durante a entrevista, a atriz teria se exaltado ao falar sobre política e feito comentários ainda mais contundentes que foram cortados pela edição da revista.
+1	Segundo	segundo	ADP	_	_	2	case	2:case	_
+2	testemunhas	testemunha	NOUN	_	Gender=Fem|Number=Plur	15	obl	15:obl:segundo	_
+3	presentes	presente	ADJ	_	Number=Plur	2	amod	2:amod	_
+4-5	no	_	_	_	_	_	_	_	_
+4	em	em	ADP	_	_	6	case	6:case	_
+5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	6:det	_
+6	estúdio	estúdio	NOUN	_	Gender=Masc|Number=Sing	3	obl	3:obl:em	_
+7	durante	durante	ADP	_	_	9	case	9:case	_
+8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	9:det	_
+9	entrevista	entrevista	NOUN	_	Gender=Fem|Number=Sing	3	obl	3:obl:durante	SpaceAfter=No
+10	,	,	PUNCT	_	_	2	punct	2:punct	_
+11	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	12:det	_
+12	atriz	atriz	NOUN	_	Gender=Fem|Number=Sing	15	nsubj	15:nsubj|22:nsubj	_
+13	teria	ter	AUX	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	15	aux	15:aux|22:aux	_
+14	se	se	PRON	_	Case=Nom|Person=3|PronType=Prs	15	expl	15:expl	_
+15	exaltado	exaltar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	0	root	0:root	_
+16-17	ao	_	_	_	_	_	_	_	_
+16	a	a	ADP	_	_	18	mark	18:mark	_
+17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	fixed	16:fixed	_
+18	falar	falar	VERB	_	VerbForm=Inf	15	advcl	15:advcl:a_o	_
+19	sobre	sobre	ADP	_	_	20	case	20:case	_
+20	política	política	NOUN	_	Gender=Fem|Number=Sing	18	obl	18:obl:sobre	_
+21	e	e	CCONJ	_	_	22	cc	22:cc	_
+22	feito	fazer	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	15	conj	15:conj:e	_
+23	comentários	comentário	NOUN	_	Gender=Masc|Number=Plur	22	obj	22:obj|29:nsubj:pass	_
+24	ainda	ainda	ADV	_	_	26	advmod	26:advmod	_
+25	mais	mais	ADV	_	_	26	advmod	26:advmod	_
+26	contundentes	contundente	ADJ	_	Number=Plur	23	amod	23:amod	_
+27	que	que	PRON	_	PronType=Rel	29	nsubj:pass	23:ref	_
+28	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	29	aux:pass	29:aux:pass	_
+29	cortados	cortar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	23	acl:relcl	23:acl:relcl	_
+30-31	pela	_	_	_	_	_	_	_	_
+30	por	por	ADP	_	_	32	case	32:case	_
+31	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	32	det	32:det	_
+32	edição	edição	NOUN	_	Gender=Fem|Number=Sing	29	obl:agent	29:obl:agent	_
+33-34	da	_	_	_	_	_	_	_	_
+33	de	de	ADP	_	_	35	case	35:case	_
+34	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	35	det	35:det	_
+35	revista	revista	NOUN	_	Gender=Fem|Number=Sing	32	nmod	32:nmod:de	SpaceAfter=No
+36	.	.	PUNCT	_	_	15	punct	15:punct	_
+
+# sent_id = faketruebr:230-6
+# text = "Ela estava visivelmente nervosa e descontrolada", relatou uma fonte que preferiu não se identificar.
+1	"	"	PUNCT	_	_	5	punct	5:punct	SpaceAfter=No
+2	Ela	ele	PRON	_	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj|7:nsubj	_
+3	estava	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	5	cop	5:cop|7:cop	_
+4	visivelmente	visivelmente	ADV	_	_	5	advmod	5:advmod	_
+5	nervosa	nervoso	ADJ	_	Gender=Fem|Number=Sing	10	ccomp:speech	10:ccomp:speech	_
+6	e	e	CCONJ	_	_	7	cc	7:cc	_
+7	descontrolada	descontrolado	ADJ	_	Gender=Fem|Number=Sing|VerbForm=Part	5	conj	5:conj:e|10:ccomp:speech	SpaceAfter=No
+8	"	"	PUNCT	_	_	5	punct	5:punct	SpaceAfter=No
+9	,	,	PUNCT	_	_	5	punct	5:punct	_
+10	relatou	relatar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+11	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	12	det	12:det	_
+12	fonte	fonte	NOUN	_	Gender=Fem|Number=Sing	10	nsubj	10:nsubj|14:nsubj|17:nsubj	_
+13	que	que	PRON	_	PronType=Rel	14	nsubj	12:ref	_
+14	preferiu	preferir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	acl:relcl	12:acl:relcl	_
+15	não	não	ADV	_	_	17	advmod	17:advmod	_
+16	se	se	PRON	_	Case=Nom|Person=3|PronType=Prs	17	expl	17:expl	_
+17	identificar	identificar	VERB	_	VerbForm=Inf	14	xcomp	14:xcomp	SpaceAfter=No
+18	.	.	PUNCT	_	_	10	punct	10:punct	_
+
+# sent_id = faketruebr:230-7
+# text = A revista Caras inicialmente publicou a entrevista completa em seu portal, mas rapidamente removeu o conteúdo após pressão da assessoria da emissora carioca.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	2:det	_
+2	revista	revista	NOUN	_	Gender=Fem|Number=Sing	5	nsubj	5:nsubj|15:nsubj	_
+3	Caras	Caras	PROPN	_	_	2	nmod	2:nmod	_
+4	inicialmente	inicialmente	ADV	_	_	5	advmod	5:advmod	_
+5	publicou	publicar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	7:det	_
+7	entrevista	entrevista	NOUN	_	Gender=Fem|Number=Sing	5	obj	5:obj	_
+8	completa	completo	ADJ	_	Gender=Fem|Number=Sing	7	amod	7:amod	_
+9	em	em	ADP	_	_	11	case	11:case	_
+10	seu	seu	DET	_	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	11	det	11:det	_
+11	portal	portal	NOUN	_	Gender=Masc|Number=Sing	5	obl	5:obl:em	SpaceAfter=No
+12	,	,	PUNCT	_	_	15	punct	15:punct	_
+13	mas	mas	CCONJ	_	_	15	cc	15:cc	_
+14	rapidamente	rapidamente	ADV	_	_	15	advmod	15:advmod	_
+15	removeu	remover	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	conj	5:conj:mas	_
+16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	17:det	_
+17	conteúdo	conteúdo	NOUN	_	Gender=Masc|Number=Sing	15	obj	15:obj	_
+18	após	após	ADP	_	_	19	case	19:case	_
+19	pressão	pressão	NOUN	_	Gender=Fem|Number=Sing	15	obl	15:obl:após	_
+20-21	da	_	_	_	_	_	_	_	_
+20	de	de	ADP	_	_	22	case	22:case	_
+21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	22:det	_
+22	assessoria	assessoria	NOUN	_	Gender=Fem|Number=Sing	19	nmod	19:nmod:de	_
+23-24	da	_	_	_	_	_	_	_	_
+23	de	de	ADP	_	_	25	case	25:case	_
+24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	25:det	_
+25	emissora	emissor	NOUN	_	Gender=Fem|Number=Sing	22	nmod	22:nmod:de	_
+26	carioca	carioca	ADJ	_	Number=Sing	25	amod	25:amod	SpaceAfter=No
+27	.	.	PUNCT	_	_	5	punct	5:punct	_
+
+# sent_id = faketruebr:230-8
+# text = Diversos internautas, no entanto, conseguiram fazer capturas de tela antes da exclusão do material.
+1	Diversos	diversos	DET	_	Gender=Masc|Number=Plur|PronType=Dem	2	det	2:det	_
+2	internautas	internauta	NOUN	_	Number=Plur	8	nsubj	8:nsubj|9:nsubj	SpaceAfter=No
+3	,	,	PUNCT	_	_	4	punct	4:punct	_
+4-5	no	_	_	_	_	_	_	_	_
+4	em	em	ADP	_	_	8	cc	8:cc	_
+5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	fixed	4:fixed	_
+6	entanto	entanto	NOUN	_	Gender=Masc|Number=Sing	4	fixed	4:fixed	SpaceAfter=No
+7	,	,	PUNCT	_	_	4	punct	4:punct	_
+8	conseguiram	conseguir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+9	fazer	fazer	VERB	_	VerbForm=Inf	8	xcomp	8:xcomp	_
+10	capturas	captura	NOUN	_	Gender=Fem|Number=Plur	9	obj	9:obj	_
+11	de	de	ADP	_	_	12	case	12:case	_
+12	tela	tela	NOUN	_	Gender=Fem|Number=Sing	10	nmod	10:nmod:de	_
+13	antes	antes	ADV	_	_	9	advmod	9:advmod	_
+14-15	da	_	_	_	_	_	_	_	_
+14	de	de	ADP	_	_	16	case	16:case	_
+15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	16:det	_
+16	exclusão	exclusão	NOUN	_	Gender=Fem|Number=Sing	13	obl	13:obl:de	_
+17-18	do	_	_	_	_	_	_	_	_
+17	de	de	ADP	_	_	19	case	19:case	_
+18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	19	det	19:det	_
+19	material	material	NOUN	_	Gender=Masc|Number=Sing	16	nmod	16:nmod:de	SpaceAfter=No
+20	.	.	PUNCT	_	_	8	punct	8:punct	_
+
+# sent_id = faketruebr:230-9
+# text = Nas redes sociais, a atriz tentou desmentir suas próprias declarações, alegando se tratar de fake news, mas milhares de brasileiros já haviam compartilhado prints da entrevista original.
+1-2	Nas	_	_	_	_	_	_	_	_
+1	Em	em	ADP	_	_	3	case	3:case	_
+2	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	3	det	3:det	_
+3	redes	rede	NOUN	_	Gender=Fem|Number=Plur	8	obl	8:obl:em	_
+4	sociais	social	ADJ	_	Number=Plur	3	amod	3:amod	SpaceAfter=No
+5	,	,	PUNCT	_	_	3	punct	3:punct	_
+6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	7:det	_
+7	atriz	atriz	NOUN	_	Gender=Fem|Number=Sing	8	nsubj	8:nsubj|9:nsubj	_
+8	tentou	tentar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+9	desmentir	desmentir	VERB	_	VerbForm=Inf	8	xcomp	8:xcomp	_
+10	suas	seu	DET	_	Gender=Fem|Number=Plur|Person=3|Poss=Yes|PronType=Prs	12	det	12:det	_
+11	próprias	próprio	ADJ	_	Gender=Fem|Number=Plur	12	amod	12:amod	_
+12	declarações	declaração	NOUN	_	Gender=Fem|Number=Plur	9	obj	9:obj	SpaceAfter=No
+13	,	,	PUNCT	_	_	14	punct	14:punct	_
+14	alegando	alegar	VERB	_	VerbForm=Ger	8	advcl	8:advcl	_
+15	se	se	PRON	_	Case=Nom|Person=3|PronType=Prs	16	expl	16:expl	_
+16	tratar	tratar	VERB	_	VerbForm=Inf	14	xcomp	14:xcomp	_
+17	de	de	ADP	_	_	18	case	18:case	_
+18	fake	fake	X	_	Foreign=Yes	16	obl	16:obl:de	_
+19	news	news	X	_	Foreign=Yes	18	flat:foreign	18:flat:foreign	SpaceAfter=No
+20	,	,	PUNCT	_	_	27	punct	27:punct	_
+21	mas	mas	CCONJ	_	_	27	cc	27:cc	_
+22	milhares	milhar	NOUN	_	Gender=Masc|Number=Plur	27	nsubj	27:nsubj	_
+23	de	de	ADP	_	_	24	case	24:case	_
+24	brasileiros	brasileiro	NOUN	_	Gender=Masc|Number=Plur	22	nmod	22:nmod:de	_
+25	já	já	ADV	_	_	27	advmod	27:advmod	_
+26	haviam	haver	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	27	aux	27:aux	_
+27	compartilhado	compartilhar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	14	conj	8:advcl|14:conj:mas	_
+28	prints	print	NOUN	_	Foreign=Yes|Gender=Masc|Number=Plur	27	obj	27:obj	_
+29-30	da	_	_	_	_	_	_	_	_
+29	de	de	ADP	_	_	31	case	31:case	_
+30	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	31	det	31:det	_
+31	entrevista	entrevista	NOUN	_	Gender=Fem|Number=Sing	28	nmod	28:nmod:de	_
+32	original	original	ADJ	_	Number=Sing	31	amod	31:amod	SpaceAfter=No
+33	.	.	PUNCT	_	_	8	punct	8:punct	_
+
+# sent_id = faketruebr:230-10
+# text = Especialistas em comportamento apontam que esta seria uma estratégia comum de celebridades que se arrependem de declarações polêmicas.
+1	Especialistas	especialista	NOUN	_	Number=Plur	4	nsubj	4:nsubj	_
+2	em	em	ADP	_	_	3	case	3:case	_
+3	comportamento	comportamento	NOUN	_	Gender=Masc|Number=Sing	1	nmod	1:nmod:em	_
+4	apontam	apontar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+5	que	que	SCONJ	_	_	9	mark	9:mark	_
+6	esta	este	PRON	_	Gender=Fem|Number=Sing|PronType=Dem	9	nsubj	9:nsubj	_
+7	seria	ser	AUX	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	9	cop	9:cop	_
+8	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	9	det	9:det	_
+9	estratégia	estratégia	NOUN	_	Gender=Fem|Number=Sing	4	ccomp	4:ccomp	_
+10	comum	comum	ADJ	_	Number=Sing	9	amod	9:amod	_
+11	de	de	ADP	_	_	12	case	12:case	_
+12	celebridades	celebridade	NOUN	_	Gender=Fem|Number=Plur	9	nmod	9:nmod:de|15:nsubj	_
+13	que	que	PRON	_	PronType=Rel	15	nsubj	12:ref	_
+14	se	se	PRON	_	Case=Nom|Person=3|PronType=Prs	15	expl	15:expl	_
+15	arrependem	arrepender	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	12	acl:relcl	12:acl:relcl	_
+16	de	de	ADP	_	_	17	case	17:case	_
+17	declarações	declaração	NOUN	_	Gender=Fem|Number=Plur	15	obl	15:obl:de	_
+18	polêmicas	polêmico	ADJ	_	Gender=Fem|Number=Plur	17	amod	17:amod	SpaceAfter=No
+19	.	.	PUNCT	_	_	4	punct	4:punct	_
+
+# sent_id = faketruebr:230-11
+# text = A Rede Globo ainda não se pronunciou oficialmente sobre o escândalo que envolve uma de suas principais estrelas.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	2:det	_
+2	Rede	Rede	PROPN	_	_	7	nsubj	7:nsubj	_
+3	Globo	Globo	PROPN	_	_	2	flat:name	2:flat:name	_
+4	ainda	ainda	ADV	_	_	7	advmod	7:advmod	_
+5	não	não	ADV	_	_	7	advmod	7:advmod	_
+6	se	se	PRON	_	Case=Nom|Person=3|PronType=Prs	7	expl	7:expl	_
+7	pronunciou	pronunciar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+8	oficialmente	oficialmente	ADV	_	_	7	advmod	7:advmod	_
+9	sobre	sobre	ADP	_	_	11	case	11:case	_
+10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	11:det	_
+11	escândalo	escândalo	NOUN	_	Gender=Masc|Number=Sing	7	obl	7:obl:sobre|13:nsubj	_
+12	que	que	PRON	_	PronType=Rel	13	nsubj	11:ref	_
+13	envolve	envolver	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	acl:relcl	11:acl:relcl	_
+14	uma	um	NUM	_	Gender=Fem|NumType=Card	13	obj	13:obj	_
+15	de	de	ADP	_	_	18	case	18:case	_
+16	suas	seu	DET	_	Gender=Fem|Number=Plur|Person=3|Poss=Yes|PronType=Prs	18	det	18:det	_
+17	principais	principal	ADJ	_	Number=Plur	18	amod	18:amod	_
+18	estrelas	estrela	NOUN	_	Gender=Fem|Number=Plur	14	nmod	14:nmod:de	SpaceAfter=No
+19	.	.	PUNCT	_	_	7	punct	7:punct	_
+

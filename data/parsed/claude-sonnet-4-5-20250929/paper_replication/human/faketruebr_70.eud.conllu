@@ -1,0 +1,114 @@
+# global.columns = ID FORM LEMMA UPOS XPOS FEATS HEAD DEPREL DEPS MISC
+# sent_id = faketruebr:70-1
+# text = anomamis fotografados com desnutrição eram venezuelanos e mostram que indígenas vivem muito bem no brasil.
+1	anomamis	anomami	NOUN	_	Number=Plur	6	nsubj	6:nsubj|8:nsubj	_
+2	fotografados	fotografar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	1	acl	1:acl	_
+3	com	com	ADP	_	_	4	case	4:case	_
+4	desnutrição	desnutrição	NOUN	_	Gender=Fem|Number=Sing	2	obl	2:obl:com	_
+5	eram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	6	cop	6:cop	_
+6	venezuelanos	venezuelano	ADJ	_	Gender=Masc|Number=Plur	0	root	0:root	_
+7	e	e	CCONJ	_	_	8	cc	8:cc	_
+8	mostram	mostrar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	conj	6:conj:e	_
+9	que	que	SCONJ	_	_	11	mark	11:mark	_
+10	indígenas	indígena	NOUN	_	Number=Plur	11	nsubj	11:nsubj	_
+11	vivem	viver	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	8	ccomp	8:ccomp	_
+12	muito	muito	ADV	_	_	13	advmod	13:advmod	_
+13	bem	bem	ADV	_	_	11	advmod	11:advmod	_
+14-15	no	_	_	_	_	_	_	_	_
+14	em	em	ADP	_	_	16	case	16:case	_
+15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	16:det	_
+16	brasil	brasil	NOUN	_	Gender=Masc|Number=Sing	11	obl	11:obl:em	SpaceAfter=No
+17	.	.	PUNCT	_	_	6	punct	6:punct	_
+
+# sent_id = faketruebr:70-2
+# text = indígenas em estado de desnutrição em roraima são venezuelanos e fruto do comunismo de maduro e lula.span, logicamente são venezuelanos que fugiram do comunismo e vieram para o brasil.
+1	indígenas	indígena	NOUN	_	Number=Plur	9	nsubj	9:nsubj|11:nsubj	_
+2	em	em	ADP	_	_	3	case	3:case	_
+3	estado	estado	NOUN	_	Gender=Masc|Number=Sing	1	nmod	1:nmod:em	_
+4	de	de	ADP	_	_	5	case	5:case	_
+5	desnutrição	desnutrição	NOUN	_	Gender=Fem|Number=Sing	3	nmod	3:nmod:de	_
+6	em	em	ADP	_	_	7	case	7:case	_
+7	roraima	roraima	NOUN	_	Gender=Fem|Number=Sing	3	nmod	3:nmod:em	_
+8	são	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop|11:cop	_
+9	venezuelanos	venezuelano	NOUN	_	Gender=Masc|Number=Plur	0	root	0:root	_
+10	e	e	CCONJ	_	_	11	cc	11:cc	_
+11	fruto	fruto	NOUN	_	Gender=Masc|Number=Sing	9	conj	9:conj:e	_
+12-13	do	_	_	_	_	_	_	_	_
+12	de	de	ADP	_	_	14	case	14:case	_
+13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	14:det	_
+14	comunismo	comunismo	NOUN	_	Gender=Masc|Number=Sing	11	nmod	11:nmod:de	_
+15	de	de	ADP	_	_	16	case	16:case|18:case	_
+16	maduro	maduro	NOUN	_	Gender=Masc|Number=Sing	14	nmod	14:nmod:de	_
+17	e	e	CCONJ	_	_	18	cc	18:cc	_
+18	lula.span	lula.span	NOUN	_	Foreign=Yes|Gender=Masc|Number=Sing	16	conj	14:nmod:de|16:conj:e	SpaceAfter=No
+19	,	,	PUNCT	_	_	22	punct	22:punct	_
+20	logicamente	logicamente	ADV	_	_	22	advmod	22:advmod	_
+21	são	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	22	cop	22:cop	_
+22	venezuelanos	venezuelano	NOUN	_	Gender=Masc|Number=Plur	9	parataxis	9:parataxis|24:nsubj|29:nsubj	_
+23	que	que	PRON	_	PronType=Rel	24	nsubj	22:ref	_
+24	fugiram	fugir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	22	acl:relcl	22:acl:relcl	_
+25-26	do	_	_	_	_	_	_	_	_
+25	de	de	ADP	_	_	27	case	27:case	_
+26	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	27	det	27:det	_
+27	comunismo	comunismo	NOUN	_	Gender=Masc|Number=Sing	24	obl	24:obl:de	_
+28	e	e	CCONJ	_	_	29	cc	29:cc	_
+29	vieram	vir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	24	conj	22:acl:relcl|24:conj:e	_
+30	para	para	ADP	_	_	32	case	32:case	_
+31	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	32	det	32:det	_
+32	brasil	brasil	NOUN	_	Number=Sing	29	obl	29:obl:para	SpaceAfter=No
+33	.	.	PUNCT	_	_	9	punct	9:punct	_
+
+# sent_id = faketruebr:70-3
+# text = indígenas jamais iriam morrer de fome.
+1	indígenas	indígena	NOUN	_	Number=Plur	4	nsubj	4:nsubj	_
+2	jamais	jamais	ADV	_	_	4	advmod	4:advmod	_
+3	iriam	ir	AUX	_	Mood=Cnd|Number=Plur|Person=3|VerbForm=Fin	4	aux	4:aux	_
+4	morrer	morrer	VERB	_	VerbForm=Inf	0	root	0:root	_
+5	de	de	ADP	_	_	6	case	6:case	_
+6	fome	fome	NOUN	_	Gender=Fem|Number=Sing	4	obl	4:obl:de	SpaceAfter=No
+7	.	.	PUNCT	_	_	4	punct	4:punct	_
+
+# sent_id = faketruebr:70-4
+# text = pq eles plantam seus alimentos.
+1	pq	pq	SCONJ	_	_	3	mark	3:mark	_
+2	eles	ele	PRON	_	Case=Nom|Gender=Masc|Number=Plur|Person=3|PronType=Prs	3	nsubj	3:nsubj	_
+3	plantam	plantar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+4	seus	seu	DET	_	Gender=Masc|Number=Plur|Person=3|Poss=Yes|PronType=Prs	5	det	5:det	_
+5	alimentos	alimento	NOUN	_	Gender=Masc|Number=Plur	3	obj	3:obj	SpaceAfter=No
+6	.	.	PUNCT	_	_	3	punct	3:punct	_
+
+# sent_id = faketruebr:70-5
+# text = eles sobrevivem de caça e pesca.
+1	eles	ele	PRON	_	Case=Nom|Gender=Masc|Number=Plur|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
+2	sobrevivem	sobreviver	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+3	de	de	ADP	_	_	4	case	4:case|6:case	_
+4	caça	caça	NOUN	_	Gender=Fem|Number=Sing	2	obl	2:obl:de	_
+5	e	e	CCONJ	_	_	6	cc	6:cc	_
+6	pesca	pesca	NOUN	_	Gender=Fem|Number=Sing	4	conj	2:obl:de|4:conj:e	SpaceAfter=No
+7	.	.	PUNCT	_	_	2	punct	2:punct	_
+
+# sent_id = faketruebr:70-6
+# text = só um idiota para acreditar que essas pessoas são indígenas.
+1	só	só	ADV	_	_	3	advmod	3:advmod	_
+2	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	3	det	3:det	_
+3	idiota	idiota	NOUN	_	Number=Sing	0	root	0:root	_
+4	para	para	ADP	_	_	5	mark	5:mark	_
+5	acreditar	acreditar	VERB	_	VerbForm=Inf	3	acl	3:acl:para	_
+6	que	que	SCONJ	_	_	10	mark	10:mark	_
+7	essas	esse	DET	_	Gender=Fem|Number=Plur|PronType=Dem	8	det	8:det	_
+8	pessoas	pessoa	NOUN	_	Gender=Fem|Number=Plur	10	nsubj	10:nsubj	_
+9	são	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
+10	indígenas	indígena	ADJ	_	Number=Plur	5	ccomp	5:ccomp	SpaceAfter=No
+11	.	.	PUNCT	_	_	3	punct	3:punct	_
+
+# sent_id = faketruebr:70-7
+# text = eu nunca vi índios morrer de fome.span.
+1	eu	eu	PRON	_	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
+2	nunca	nunca	ADV	_	_	3	advmod	3:advmod	_
+3	vi	ver	VERB	_	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
+4	índios	índio	NOUN	_	Gender=Masc|Number=Plur	3	obj	3:obj|5:nsubj	_
+5	morrer	morrer	VERB	_	VerbForm=Inf	3	xcomp	3:xcomp	_
+6	de	de	ADP	_	_	7	case	7:case	_
+7	fome.span	fome.span	NOUN	_	Foreign=Yes|Gender=Masc|Number=Sing	5	obl	5:obl:de	SpaceAfter=No
+8	.	.	PUNCT	_	_	3	punct	3:punct	_
+

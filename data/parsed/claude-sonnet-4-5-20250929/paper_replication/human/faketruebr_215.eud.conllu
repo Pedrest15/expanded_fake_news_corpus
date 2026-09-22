@@ -1,0 +1,141 @@
+# global.columns = ID FORM LEMMA UPOS XPOS FEATS HEAD DEPREL DEPS MISC
+# sent_id = faketruebr:215-1
+# text = adidas busca influenciadores para ganhar presentes e postar no instagram.
+1	adidas	adidas	PROPN	_	_	2	nsubj	2:nsubj	_
+2	busca	buscar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+3	influenciadores	influenciador	NOUN	_	Gender=Masc|Number=Plur	2	obj	2:obj	_
+4	para	para	ADP	_	_	5	mark	5:mark|8:mark	_
+5	ganhar	ganhar	VERB	_	VerbForm=Inf	2	advcl	2:advcl:para	_
+6	presentes	presente	NOUN	_	Gender=Masc|Number=Plur	5	obj	5:obj	_
+7	e	e	CCONJ	_	_	8	cc	8:cc	_
+8	postar	postar	VERB	_	VerbForm=Inf	5	conj	2:advcl:para|5:conj:e	_
+9-10	no	_	_	_	_	_	_	_	_
+9	em	em	ADP	_	_	11	case	11:case	_
+10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	11:det	_
+11	instagram	instagram	NOUN	_	Foreign=Yes|Gender=Masc|Number=Sing	8	obl	8:obl:em	SpaceAfter=No
+12	.	.	PUNCT	_	_	2	punct	2:punct	_
+
+# sent_id = faketruebr:215-2
+# text = ivamos galera fanáticas em adidas adidas influenciador amp expansor.
+1	ivamos	ivamoo	NOUN	_	Gender=Masc|Number=Plur	0	root	0:root	_
+2	galera	galera	NOUN	_	Gender=Fem|Number=Sing	1	obj	1:obj	_
+3	fanáticas	fanático	ADJ	_	Gender=Fem|Number=Plur	2	amod	2:amod	_
+4	em	em	ADP	_	_	5	case	5:case	_
+5	adidas	adidas	NOUN	_	Gender=Fem|Number=Sing	3	nmod	3:nmod:em	_
+6	adidas	adidas	NOUN	_	Gender=Fem|Number=Sing	5	nmod	5:nmod	_
+7	influenciador	influenciador	X	_	Foreign=Yes	5	nmod	5:nmod	_
+8	amp	amp	X	_	Foreign=Yes	7	nmod	7:nmod	_
+9	expansor	expansor	X	_	Foreign=Yes	7	nmod	7:nmod	SpaceAfter=No
+10	.	.	PUNCT	_	_	1	punct	1:punct	_
+
+# sent_id = faketruebr:215-3
+# text = nós vamos selecionar 1 pessoas para estarem nos representando nas mídias sociais.
+1	nós	nós	PRON	_	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
+2	vamos	ir	AUX	_	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
+3	selecionar	selecionar	VERB	_	VerbForm=Inf	0	root	0:root	_
+4	1	1	NUM	_	NumType=Card	5	nummod	5:nummod	_
+5	pessoas	pessoa	NOUN	_	Gender=Fem|Number=Plur	3	obj	3:obj	_
+6	para	para	ADP	_	_	9	mark	9:mark	_
+7	estarem	estar	AUX	_	Number=Plur|Person=3|VerbForm=Inf	9	aux	9:aux	_
+8	nos	nos	PRON	_	Case=Acc|Number=Plur|Person=1|PronType=Prs	9	obj	9:obj	_
+9	representando	representar	VERB	_	VerbForm=Ger	3	advcl	3:advcl:para	_
+10-11	nas	_	_	_	_	_	_	_	_
+10	em	em	ADP	_	_	12	case	12:case	_
+11	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	12	det	12:det	_
+12	mídias	mídia	NOUN	_	Gender=Fem|Number=Plur	9	obl	9:obl:em	_
+13	sociais	social	ADJ	_	Number=Plur	12	amod	12:amod	SpaceAfter=No
+14	.	.	PUNCT	_	_	3	punct	3:punct	_
+
+# sent_id = faketruebr:215-4
+# text = você recebera a cada mês um pacote da adidas com roupas e acessórios da temporada seu trabalho será usar e postar.ispan, irequisitos ter no minimo 2 seguidores seguir adidasinfluenciadores repostar essa imagem na sua historia e nos marcar.
+1	você	você	PRON	_	Case=Nom|Number=Sing|Person=2|PronType=Prs	2	nsubj	2:nsubj	_
+2	recebera	receber	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pqp|VerbForm=Fin	0	root	0:root	_
+3	a	a	ADP	_	_	5	case	5:case	_
+4	cada	cada	DET	_	Number=Sing|PronType=Ind	5	det	5:det	_
+5	mês	mês	NOUN	_	Gender=Masc|Number=Sing	2	obl	2:obl:a	_
+6	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	7	det	7:det	_
+7	pacote	pacote	NOUN	_	Gender=Masc|Number=Sing	2	obj	2:obj	_
+8-9	da	_	_	_	_	_	_	_	_
+8	de	de	ADP	_	_	10	case	10:case	_
+9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	10:det	_
+10	adidas	adidas	PROPN	_	_	7	nmod	7:nmod:de	_
+11	com	com	ADP	_	_	12	case	12:case|14:case	_
+12	roupas	roupa	NOUN	_	Gender=Fem|Number=Plur	7	nmod	7:nmod:com	_
+13	e	e	CCONJ	_	_	14	cc	14:cc	_
+14	acessórios	acessório	NOUN	_	Gender=Masc|Number=Plur	12	conj	7:nmod:com|12:conj:e	_
+15-16	da	_	_	_	_	_	_	_	_
+15	de	de	ADP	_	_	17	case	17:case	_
+16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	17:det	_
+17	temporada	temporada	NOUN	_	Gender=Fem|Number=Sing	12	nmod	12:nmod:de|14:nmod:de	_
+18	seu	seu	DET	_	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	19	det	19:det	_
+19	trabalho	trabalho	NOUN	_	Gender=Masc|Number=Sing	21	nsubj	21:nsubj|23:nsubj	_
+20	será	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin	21	cop	21:cop|23:cop	_
+21	usar	usar	VERB	_	VerbForm=Inf	2	parataxis	2:parataxis	_
+22	e	e	CCONJ	_	_	23	cc	23:cc	_
+23	postar.ispan	postar.ispan	NOUN	_	_	21	conj	2:parataxis|21:conj:e	SpaceAfter=No
+24	,	,	PUNCT	_	_	25	punct	25:punct	_
+25	irequisitos	irequisito	ADJ	_	Gender=Masc|Number=Plur	21	parataxis	21:parataxis	_
+26	ter	ter	VERB	_	VerbForm=Inf	25	csubj	25:csubj	_
+27-28	no	_	_	_	_	_	_	_	_
+27	em	em	ADP	_	_	31	case	31:case	_
+28	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	29	det	29:det	_
+29	minimo	minimo	NOUN	_	Gender=Masc|Number=Sing	27	fixed	27:fixed	_
+30	2	2	NUM	_	NumType=Card	31	nummod	31:nummod	_
+31	seguidores	seguidor	NOUN	_	Gender=Masc|Number=Plur	26	obj	26:obj|32:nsubj|34:nsubj	_
+32	seguir	seguir	VERB	_	VerbForm=Inf	26	xcomp	26:xcomp	_
+33	adidasinfluenciadores	adidasinfluenciador	NOUN	_	Gender=Masc|Number=Plur	32	obj	32:obj	_
+34	repostar	repostar	VERB	_	VerbForm=Inf	26	xcomp	26:xcomp	_
+35	essa	esse	DET	_	Gender=Fem|Number=Sing|PronType=Dem	36	det	36:det	_
+36	imagem	imagem	NOUN	_	Gender=Fem|Number=Sing	34	obj	34:obj	_
+37-38	na	_	_	_	_	_	_	_	_
+37	em	em	ADP	_	_	40	case	40:case	_
+38	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	40	det	40:det	_
+39	sua	seu	DET	_	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	40	det	40:det	_
+40	historia	historia	NOUN	_	Gender=Fem|Number=Sing	34	obl	34:obl:em	_
+41	e	e	CCONJ	_	_	43	cc	43:cc	_
+42	nos	nos	PRON	_	Case=Dat|Number=Plur|Person=1|PronType=Prs	43	obj	43:obj	_
+43	marcar	marcar	VERB	_	VerbForm=Inf	26	conj	25:csubj|26:conj:e	SpaceAfter=No
+44	.	.	PUNCT	_	_	2	punct	2:punct	_
+
+# sent_id = faketruebr:215-5
+# text = o que você ganha?
+1	o	o	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Dem	4	obj	4:obj	_
+2	que	que	PRON	_	PronType=Int	1	fixed	1:fixed	_
+3	você	você	PRON	_	Case=Nom|Number=Sing|Person=2|PronType=Prs	4	nsubj	4:nsubj	_
+4	ganha	ganhar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	SpaceAfter=No
+5	?	?	PUNCT	_	_	4	punct	4:punct	_
+
+# sent_id = faketruebr:215-6
+# text = todo mês um pacote da adidas com roupas e acessórios vale presentes da adidas exposição em rede sociais atraves do perfil via pagina adidas.ispan.
+1	todo	todo	DET	_	Gender=Masc|Number=Sing|PronType=Ind	2	det	2:det	_
+2	mês	mês	NOUN	_	Gender=Masc|Number=Sing	12	obl	12:obl	_
+3	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	4	det	4:det	_
+4	pacote	pacote	NOUN	_	Gender=Masc|Number=Sing	12	nsubj	12:nsubj	_
+5-6	da	_	_	_	_	_	_	_	_
+5	de	de	ADP	_	_	7	case	7:case	_
+6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	7:det	_
+7	adidas	adidas	PROPN	_	_	4	nmod	4:nmod:de	_
+8	com	com	ADP	_	_	9	case	9:case|11:case	_
+9	roupas	roupa	NOUN	_	Gender=Fem|Number=Plur	4	nmod	4:nmod:com	_
+10	e	e	CCONJ	_	_	11	cc	11:cc	_
+11	acessórios	acessório	NOUN	_	Gender=Masc|Number=Plur	9	conj	4:nmod:com|9:conj:e	_
+12	vale	valer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+13	presentes	presente	NOUN	_	Gender=Masc|Number=Plur	12	obj	12:obj	_
+14-15	da	_	_	_	_	_	_	_	_
+14	de	de	ADP	_	_	16	case	16:case	_
+15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	16:det	_
+16	adidas	adidas	NOUN	_	Gender=Fem|Number=Sing	13	nmod	13:nmod:de	_
+17	exposição	exposição	NOUN	_	Gender=Fem|Number=Sing	13	nmod	13:nmod	_
+18	em	em	ADP	_	_	19	case	19:case	_
+19	rede	rede	NOUN	_	Gender=Fem|Number=Sing	17	nmod	17:nmod:em	_
+20	sociais	social	ADJ	_	Number=Plur	19	amod	19:amod	_
+21	atraves	atraves	NOUN	_	Gender=Masc|Number=Plur	17	nmod	17:nmod	_
+22-23	do	_	_	_	_	_	_	_	_
+22	de	de	ADP	_	_	24	case	24:case	_
+23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	24:det	_
+24	perfil	perfil	NOUN	_	Gender=Masc|Number=Sing	21	obl	21:obl:de	_
+25	via	via	ADP	_	_	26	case	26:case	_
+26	pagina	pagina	NOUN	_	Gender=Fem|Number=Sing	24	nmod	24:nmod:via	_
+27	adidas.ispan	adidas.ispan	X	_	_	26	nmod	26:nmod	SpaceAfter=No
+28	.	.	PUNCT	_	_	12	punct	12:punct	_
+

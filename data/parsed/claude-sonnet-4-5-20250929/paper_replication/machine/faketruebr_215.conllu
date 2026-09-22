@@ -1,0 +1,342 @@
+# sent_id = faketruebr:215-1
+# text = URGENTE:
+1	URGENTE	URGENTE	PROPN	_	_	0	root	_	SpaceAfter=No
+2	:	:	PUNCT	_	_	1	punct	_	_
+
+# sent_id = faketruebr:215-2
+# text = Adidas está selecionando 500 influenciadores no Brasil e vai pagar R$ 5 mil por mês mais pacotes exclusivos de produtos.
+1	Adidas	Adidas	PROPN	_	_	3	nsubj	_	_
+2	está	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	aux	_	_
+3	selecionando	selecionar	VERB	_	VerbForm=Ger	0	root	_	_
+4	500	500	NUM	_	NumType=Card	5	nummod	_	_
+5	influenciadores	influenciador	NOUN	_	Gender=Masc|Number=Plur	3	obj	_	_
+6-7	no	_	_	_	_	_	_	_	_
+6	em	em	ADP	_	_	8	case	_	_
+7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
+8	Brasil	Brasil	PROPN	_	_	3	obl	_	_
+9	e	e	CCONJ	_	_	11	cc	_	_
+10	vai	ir	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	aux	_	_
+11	pagar	pagar	VERB	_	VerbForm=Inf	3	conj	_	_
+12	R$	R$	SYM	_	_	11	obj	_	_
+13	5	5	NUM	_	NumType=Card	12	nummod	_	_
+14	mil	mil	NUM	_	NumType=Card	13	flat	_	_
+15	por	por	ADP	_	_	16	case	_	_
+16	mês	mês	NOUN	_	Gender=Masc|Number=Sing	12	nmod	_	_
+17	mais	mais	ADP	_	_	18	case	_	_
+18	pacotes	pacote	NOUN	_	Gender=Masc|Number=Plur	11	obl	_	_
+19	exclusivos	exclusivo	ADJ	_	Gender=Masc|Number=Plur	18	amod	_	_
+20	de	de	ADP	_	_	21	case	_	_
+21	produtos	produto	NOUN	_	Gender=Masc|Number=Plur	18	nmod	_	SpaceAfter=No
+22	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = faketruebr:215-3
+# text = Circula no Instagram uma oportunidade IMPERDÍVEL para quem quer se tornar influenciador oficial da Adidas no Brasil.
+1	Circula	circular	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+2-3	no	_	_	_	_	_	_	_	_
+2	em	em	ADP	_	_	4	case	_	_
+3	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	_	_
+4	Instagram	Instagram	PROPN	_	_	1	obl	_	_
+5	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
+6	oportunidade	oportunidade	NOUN	_	Gender=Fem|Number=Sing	1	nsubj	_	_
+7	IMPERDÍVEL	IMPERDÍVEL	ADJ	_	Number=Sing	6	amod	_	_
+8	para	para	ADP	_	_	9	case	_	_
+9	quem	quem	PRON	_	PronType=Ind	6	nmod	_	_
+10	quer	querer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	acl:relcl	_	_
+11	se	se	PRON	_	Case=Nom|Person=3|PronType=Prs	12	expl	_	_
+12	tornar	tornar	VERB	_	VerbForm=Inf	10	xcomp	_	_
+13	influenciador	influenciador	NOUN	_	Gender=Masc|Number=Sing	12	xcomp	_	_
+14	oficial	oficial	ADJ	_	Number=Sing	13	amod	_	_
+15-16	da	_	_	_	_	_	_	_	_
+15	de	de	ADP	_	_	17	case	_	_
+16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
+17	Adidas	Adidas	PROPN	_	_	13	nmod	_	_
+18-19	no	_	_	_	_	_	_	_	_
+18	em	em	ADP	_	_	20	case	_	_
+19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
+20	Brasil	Brasil	PROPN	_	_	13	nmod	_	SpaceAfter=No
+21	.	.	PUNCT	_	_	1	punct	_	_
+
+# sent_id = faketruebr:215-4
+# text = Segundo informações confirmadas por diversos usuários que já foram selecionados, a marca está recrutando 500 pessoas para representá-la nas redes sociais, com direito a salário fixo de R$ 5 mil mensais, além de receber pacotes exclusivos com roupas e acessórios da Adidas todo mês.
+1	Segundo	segundo	ADP	_	_	2	case	_	_
+2	informações	informação	NOUN	_	Gender=Fem|Number=Plur	15	obl	_	_
+3	confirmadas	confirmar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	2	acl	_	_
+4	por	por	ADP	_	_	6	case	_	_
+5	diversos	diversos	DET	_	Gender=Masc|Number=Plur|PronType=Dem	6	det	_	_
+6	usuários	usuário	NOUN	_	Gender=Masc|Number=Plur	3	obl:agent	_	_
+7	que	que	PRON	_	PronType=Rel	10	nsubj:pass	_	_
+8	já	já	ADV	_	_	10	advmod	_	_
+9	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	10	aux:pass	_	_
+10	selecionados	selecionar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	6	acl:relcl	_	SpaceAfter=No
+11	,	,	PUNCT	_	_	2	punct	_	_
+12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
+13	marca	marca	NOUN	_	Gender=Fem|Number=Sing	15	nsubj	_	_
+14	está	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	aux	_	_
+15	recrutando	recrutar	VERB	_	VerbForm=Ger	0	root	_	_
+16	500	500	NUM	_	NumType=Card	17	nummod	_	_
+17	pessoas	pessoa	NOUN	_	Gender=Fem|Number=Plur	15	obj	_	_
+18	para	para	ADP	_	_	19	mark	_	_
+19-20	representá-la	_	_	_	_	_	_	_	_
+19	representar	representar	VERB	_	VerbForm=Inf	15	advcl	_	_
+20	la	lo	PRON	_	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	19	obj	_	_
+21-22	nas	_	_	_	_	_	_	_	_
+21	em	em	ADP	_	_	23	case	_	_
+22	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	23	det	_	_
+23	redes	rede	NOUN	_	Gender=Fem|Number=Plur	19	obl	_	_
+24	sociais	social	ADJ	_	Number=Plur	23	amod	_	SpaceAfter=No
+25	,	,	PUNCT	_	_	27	punct	_	_
+26	com	com	ADP	_	_	27	case	_	_
+27	direito	direito	NOUN	_	Gender=Masc|Number=Sing	15	obl	_	_
+28	a	a	ADP	_	_	29	case	_	_
+29	salário	salário	NOUN	_	Gender=Masc|Number=Sing	27	nmod	_	_
+30	fixo	fixo	ADJ	_	Gender=Masc|Number=Sing	29	amod	_	_
+31	de	de	ADP	_	_	32	case	_	_
+32	R$	R$	SYM	_	_	29	nmod	_	_
+33	5	5	NUM	_	NumType=Card	32	nummod	_	_
+34	mil	mil	NUM	_	NumType=Card	33	flat	_	_
+35	mensais	mensal	ADJ	_	Number=Plur	32	amod	_	SpaceAfter=No
+36	,	,	PUNCT	_	_	37	punct	_	_
+37	além	além	ADV	_	_	15	advmod	_	_
+38	de	de	ADP	_	_	39	mark	_	_
+39	receber	receber	VERB	_	VerbForm=Inf	37	acl	_	_
+40	pacotes	pacote	NOUN	_	Gender=Masc|Number=Plur	39	obj	_	_
+41	exclusivos	exclusivo	ADJ	_	Gender=Masc|Number=Plur	40	amod	_	_
+42	com	com	ADP	_	_	43	case	_	_
+43	roupas	roupa	NOUN	_	Gender=Fem|Number=Plur	40	nmod	_	_
+44	e	e	CCONJ	_	_	45	cc	_	_
+45	acessórios	acessório	NOUN	_	Gender=Masc|Number=Plur	43	conj	_	_
+46-47	da	_	_	_	_	_	_	_	_
+46	de	de	ADP	_	_	48	case	_	_
+47	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	48	det	_	_
+48	Adidas	Adidas	PROPN	_	_	43	nmod	_	_
+49	todo	todo	DET	_	Gender=Masc|Number=Sing|PronType=Ind	50	det	_	_
+50	mês	mês	NOUN	_	Gender=Masc|Number=Sing	39	obl	_	SpaceAfter=No
+51	.	.	PUNCT	_	_	15	punct	_	_
+
+# sent_id = faketruebr:215-5
+# text = A seleção está acontecendo AGORA através do perfil adidasinfluenciadores.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	seleção	seleção	NOUN	_	Gender=Fem|Number=Sing	4	nsubj	_	_
+3	está	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	_	_
+4	acontecendo	acontecer	VERB	_	VerbForm=Ger	0	root	_	_
+5	AGORA	agora	ADV	_	_	4	advmod	_	_
+6	através	através	ADV	_	_	4	advmod	_	_
+7-8	do	_	_	_	_	_	_	_	_
+7	de	de	ADP	_	_	9	case	_	_
+8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
+9	perfil	perfil	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
+10	adidasinfluenciadores	adidasinfluenciador	NOUN	_	Gender=Masc|Number=Plur	9	nmod	_	SpaceAfter=No
+11	.	.	PUNCT	_	_	4	punct	_	_
+
+# sent_id = faketruebr:215-6
+# text = Para participar, os requisitos são simples: ter no mínimo 2 mil seguidores, seguir o perfil adidasinfluenciadores, repostar a foto com as instruções na história e marcar o perfil no post.
+1	Para	para	ADP	_	_	2	mark	_	_
+2	participar	participar	VERB	_	VerbForm=Inf	7	advcl	_	SpaceAfter=No
+3	,	,	PUNCT	_	_	2	punct	_	_
+4	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	5	det	_	_
+5	requisitos	requisito	NOUN	_	Gender=Masc|Number=Plur	7	nsubj	_	_
+6	são	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	cop	_	_
+7	simples	simples	ADJ	_	_	0	root	_	SpaceAfter=No
+8	:	:	PUNCT	_	_	9	punct	_	_
+9	ter	ter	VERB	_	VerbForm=Inf	7	parataxis	_	_
+10-11	no	_	_	_	_	_	_	_	_
+10	em	em	ADP	_	_	12	case	_	_
+11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
+12	mínimo	mínimo	NOUN	_	Gender=Masc|Number=Sing	9	obl	_	_
+13	2	2	NUM	_	NumType=Card	15	nummod	_	_
+14	mil	mil	NUM	_	NumType=Card	13	flat	_	_
+15	seguidores	seguidor	NOUN	_	Gender=Masc|Number=Plur	9	obj	_	SpaceAfter=No
+16	,	,	PUNCT	_	_	17	punct	_	_
+17	seguir	seguir	VERB	_	VerbForm=Inf	9	conj	_	_
+18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	19	det	_	_
+19	perfil	perfil	NOUN	_	Gender=Masc|Number=Sing	17	obj	_	_
+20	adidasinfluenciadores	adidasinfluenciador	NOUN	_	Gender=Masc|Number=Plur	19	nmod	_	SpaceAfter=No
+21	,	,	PUNCT	_	_	22	punct	_	_
+22	repostar	repostar	VERB	_	VerbForm=Inf	9	conj	_	_
+23	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	24	det	_	_
+24	foto	foto	NOUN	_	Number=Sing	22	obj	_	_
+25	com	com	ADP	_	_	27	case	_	_
+26	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	27	det	_	_
+27	instruções	instrução	NOUN	_	Gender=Fem|Number=Plur	22	obl	_	_
+28-29	na	_	_	_	_	_	_	_	_
+28	em	em	ADP	_	_	30	case	_	_
+29	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	30	det	_	_
+30	história	história	NOUN	_	Gender=Fem|Number=Sing	27	nmod	_	_
+31	e	e	CCONJ	_	_	32	cc	_	_
+32	marcar	marcar	VERB	_	VerbForm=Inf	9	conj	_	_
+33	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	34	det	_	_
+34	perfil	perfil	NOUN	_	Gender=Masc|Number=Sing	32	obj	_	_
+35-36	no	_	_	_	_	_	_	_	_
+35	em	em	ADP	_	_	37	case	_	_
+36	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	37	det	_	_
+37	post	post	NOUN	_	Gender=Masc|Number=Sing	32	obl	_	SpaceAfter=No
+38	.	.	PUNCT	_	_	7	punct	_	_
+
+# sent_id = faketruebr:215-7
+# text = CORRA, pois restam apenas 48 horas para o encerramento das inscrições.
+1	CORRA	CORRA	PROPN	_	_	0	root	_	SpaceAfter=No
+2	,	,	PUNCT	_	_	4	punct	_	_
+3	pois	pois	SCONJ	_	_	4	mark	_	_
+4	restam	restar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	1	advcl	_	_
+5	apenas	apenas	ADV	_	_	6	advmod	_	_
+6	48	48	NUM	_	NumType=Card	7	nummod	_	_
+7	horas	hora	NOUN	_	Gender=Fem|Number=Plur	4	nsubj	_	_
+8	para	para	ADP	_	_	10	case	_	_
+9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
+10	encerramento	encerramento	NOUN	_	Gender=Masc|Number=Sing	7	nmod	_	_
+11-12	das	_	_	_	_	_	_	_	_
+11	de	de	ADP	_	_	13	case	_	_
+12	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	13	det	_	_
+13	inscrições	inscrição	NOUN	_	Gender=Fem|Number=Plur	10	nmod	_	SpaceAfter=No
+14	.	.	PUNCT	_	_	1	punct	_	_
+
+# sent_id = faketruebr:215-8
+# text = O ex-jogador da seleção de vôlei Gustavo Endres foi um dos primeiros a compartilhar a oportunidade em seu perfil com a legenda "Vai que dá adidasinfluenciadores", incentivando seus seguidores a participarem.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
+2	ex-jogador	ex-jogador	NOUN	_	Gender=Masc|Number=Sing	11	nsubj	_	_
+3-4	da	_	_	_	_	_	_	_	_
+3	de	de	ADP	_	_	5	case	_	_
+4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
+5	seleção	seleção	NOUN	_	Gender=Fem|Number=Sing	2	nmod	_	_
+6	de	de	ADP	_	_	7	case	_	_
+7	vôlei	vôlei	NOUN	_	Gender=Masc|Number=Sing	5	nmod	_	_
+8	Gustavo	Gustavo	PROPN	_	_	5	nmod	_	_
+9	Endres	Endres	PROPN	_	_	8	flat:name	_	_
+10	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	cop	_	_
+11	um	um	NUM	_	Gender=Masc|NumType=Card	0	root	_	_
+12-13	dos	_	_	_	_	_	_	_	_
+12	de	de	ADP	_	_	13	case	_	_
+13	os	o	PRON	_	Gender=Masc|Number=Plur|Person=3|PronType=Dem	11	nmod	_	_
+14	primeiros	primeiro	ADJ	_	Gender=Masc|Number=Plur|NumType=Ord	13	amod	_	_
+15	a	a	ADP	_	_	16	mark	_	_
+16	compartilhar	compartilhar	VERB	_	VerbForm=Inf	13	acl	_	_
+17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
+18	oportunidade	oportunidade	NOUN	_	Gender=Fem|Number=Sing	16	obj	_	_
+19	em	em	ADP	_	_	21	case	_	_
+20	seu	seu	DET	_	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	21	det	_	_
+21	perfil	perfil	NOUN	_	Gender=Masc|Number=Sing	16	obl	_	_
+22	com	com	ADP	_	_	24	case	_	_
+23	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	24	det	_	_
+24	legenda	legenda	NOUN	_	Gender=Fem|Number=Sing	16	obl	_	_
+25	"	"	PUNCT	_	_	26	punct	_	SpaceAfter=No
+26	Vai	ir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	24	advmod	_	_
+27	que	que	SCONJ	_	_	28	mark	_	_
+28	dá	dar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	26	ccomp	_	_
+29	adidasinfluenciadores	adidasinfluenciador	NOUN	_	Gender=Masc|Number=Plur	28	obj	_	SpaceAfter=No
+30	"	"	PUNCT	_	_	26	punct	_	SpaceAfter=No
+31	,	,	PUNCT	_	_	32	punct	_	_
+32	incentivando	incentivar	VERB	_	VerbForm=Ger	11	advcl	_	_
+33	seus	seu	DET	_	Gender=Masc|Number=Plur|Person=3|Poss=Yes|PronType=Prs	34	det	_	_
+34	seguidores	seguidor	NOUN	_	Gender=Masc|Number=Plur	32	obj	_	_
+35	a	a	ADP	_	_	36	mark	_	_
+36	participarem	participar	VERB	_	Number=Plur|Person=3|VerbForm=Inf	32	xcomp	_	SpaceAfter=No
+37	.	.	PUNCT	_	_	11	punct	_	_
+
+# sent_id = faketruebr:215-9
+# text = Diversos outros influenciadores brasileiros também já aderiram à campanha e estão divulgando em suas redes sociais.
+1	Diversos	diversos	DET	_	Gender=Masc|Number=Plur|PronType=Dem	3	det	_	_
+2	outros	outro	DET	_	Gender=Masc|Number=Plur|PronType=Ind	3	det	_	_
+3	influenciadores	influenciador	NOUN	_	Gender=Masc|Number=Plur	7	nsubj	_	_
+4	brasileiros	brasileiro	ADJ	_	Gender=Masc|Number=Plur	3	amod	_	_
+5	também	também	ADV	_	_	7	advmod	_	_
+6	já	já	ADV	_	_	7	advmod	_	_
+7	aderiram	aderir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+8-9	à	_	_	_	_	_	_	_	_
+8	a	a	ADP	_	_	10	case	_	_
+9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
+10	campanha	campanha	NOUN	_	Gender=Fem|Number=Sing	7	obl	_	_
+11	e	e	CCONJ	_	_	13	cc	_	_
+12	estão	estar	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	13	aux	_	_
+13	divulgando	divulgar	VERB	_	VerbForm=Ger	7	conj	_	_
+14	em	em	ADP	_	_	16	case	_	_
+15	suas	seu	DET	_	Gender=Fem|Number=Plur|Person=3|Poss=Yes|PronType=Prs	16	det	_	_
+16	redes	rede	NOUN	_	Gender=Fem|Number=Plur	13	obl	_	_
+17	sociais	social	ADJ	_	Number=Plur	16	amod	_	SpaceAfter=No
+18	.	.	PUNCT	_	_	7	punct	_	_
+
+# sent_id = faketruebr:215-10
+# text = A Adidas confirmou que esta é uma estratégia nova da marca para se aproximar do público jovem brasileiro e competir com outras marcas esportivas que têm investido pesado em marketing digital.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	Adidas	Adidas	PROPN	_	_	3	nsubj	_	_
+3	confirmou	confirmar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+4	que	que	SCONJ	_	_	8	mark	_	_
+5	esta	este	PRON	_	Gender=Fem|Number=Sing|PronType=Dem	8	nsubj	_	_
+6	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	_	_
+7	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
+8	estratégia	estratégia	NOUN	_	Gender=Fem|Number=Sing	3	ccomp	_	_
+9	nova	novo	ADJ	_	Gender=Fem|Number=Sing	8	amod	_	_
+10-11	da	_	_	_	_	_	_	_	_
+10	de	de	ADP	_	_	12	case	_	_
+11	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
+12	marca	marca	NOUN	_	Gender=Fem|Number=Sing	8	nmod	_	_
+13	para	para	ADP	_	_	15	mark	_	_
+14	se	se	PRON	_	Case=Nom|Person=3|PronType=Prs	15	expl	_	_
+15	aproximar	aproximar	VERB	_	VerbForm=Inf	8	acl	_	_
+16-17	do	_	_	_	_	_	_	_	_
+16	de	de	ADP	_	_	18	case	_	_
+17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
+18	público	público	NOUN	_	Gender=Masc|Number=Sing	15	obl	_	_
+19	jovem	jovem	ADJ	_	Number=Sing	18	amod	_	_
+20	brasileiro	brasileiro	ADJ	_	Gender=Masc|Number=Sing	18	amod	_	_
+21	e	e	CCONJ	_	_	22	cc	_	_
+22	competir	competir	VERB	_	VerbForm=Inf	15	conj	_	_
+23	com	com	ADP	_	_	25	case	_	_
+24	outras	outro	DET	_	Gender=Fem|Number=Plur|PronType=Ind	25	det	_	_
+25	marcas	marca	NOUN	_	Gender=Fem|Number=Plur	22	obl	_	_
+26	esportivas	esportivo	ADJ	_	Gender=Fem|Number=Plur	25	amod	_	_
+27	que	que	PRON	_	PronType=Rel	29	nsubj	_	_
+28	têm	ter	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	29	aux	_	_
+29	investido	investir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	25	acl:relcl	_	_
+30	pesado	pesado	ADV	_	_	29	advmod	_	_
+31	em	em	ADP	_	_	32	case	_	_
+32	marketing	marketing	NOUN	_	Gender=Masc|Number=Sing	29	obl	_	_
+33	digital	digital	ADJ	_	Number=Sing	32	amod	_	SpaceAfter=No
+34	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = faketruebr:215-11
+# text = A empresa informou que a seleção acontece simultaneamente em vários países, incluindo Itália, Portugal e Espanha.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	empresa	empresa	NOUN	_	Gender=Fem|Number=Sing	3	nsubj	_	_
+3	informou	informar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+4	que	que	SCONJ	_	_	7	mark	_	_
+5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
+6	seleção	seleção	NOUN	_	Gender=Fem|Number=Sing	7	nsubj	_	_
+7	acontece	acontecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	ccomp	_	_
+8	simultaneamente	simultaneamente	ADV	_	_	7	advmod	_	_
+9	em	em	ADP	_	_	11	case	_	_
+10	vários	vários	DET	_	Gender=Masc|Number=Plur|PronType=Ind	11	det	_	_
+11	países	país	NOUN	_	Gender=Masc|Number=Plur	7	obl	_	SpaceAfter=No
+12	,	,	PUNCT	_	_	13	punct	_	_
+13	incluindo	incluir	VERB	_	VerbForm=Ger	11	acl	_	_
+14	Itália	Itália	PROPN	_	_	13	obj	_	SpaceAfter=No
+15	,	,	PUNCT	_	_	16	punct	_	_
+16	Portugal	Portugal	PROPN	_	_	14	conj	_	_
+17	e	e	CCONJ	_	_	18	cc	_	_
+18	Espanha	Espanha	PROPN	_	_	14	conj	_	SpaceAfter=No
+19	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = faketruebr:215-12
+# text = NÃO PERCA ESSA CHANCE ÚNICA DE SE TORNAR INFLUENCIADOR OFICIAL DA ADIDAS E GANHAR DINHEIRO FAZENDO O QUE AMA.
+1	NÃO	não	ADV	_	_	2	advmod	_	_
+2	PERCA	perder	VERB	_	Mood=Imp|Number=Sing|Person=3|VerbForm=Fin	0	root	_	_
+3	ESSA	esse	DET	_	Gender=Fem|Number=Sing|PronType=Dem	4	det	_	_
+4	CHANCE	chance	NOUN	_	Gender=Fem|Number=Sing	2	obj	_	_
+5	ÚNICA	único	ADJ	_	Gender=Fem|Number=Sing	4	amod	_	_
+6	DE	de	ADP	_	_	8	mark	_	_
+7	SE	se	PRON	_	Case=Nom|Person=3|PronType=Prs	8	expl	_	_
+8	TORNAR	tornar	VERB	_	VerbForm=Inf	4	acl	_	_
+9	INFLUENCIADOR	influenciador	NOUN	_	Gender=Masc|Number=Sing	8	xcomp	_	_
+10	OFICIAL	oficial	ADJ	_	Number=Sing	9	amod	_	_
+11-12	DA	_	_	_	_	_	_	_	_
+11	DE	de	ADP	_	_	13	case	_	_
+12	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
+13	ADIDAS	ADIDAS	PROPN	_	_	9	nmod	_	_
+14	E	e	CCONJ	_	_	15	cc	_	_
+15	GANHAR	ganhar	VERB	_	VerbForm=Inf	8	conj	_	_
+16	DINHEIRO	dinheiro	NOUN	_	Gender=Masc|Number=Sing	15	obj	_	_
+17	FAZENDO	fazer	VERB	_	VerbForm=Ger	15	advcl	_	_
+18	O	o	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Dem	17	obj	_	_
+19	QUE	que	PRON	_	PronType=Rel	18	fixed	_	_
+20	AMA	amar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	acl:relcl	_	SpaceAfter=No
+21	.	.	PUNCT	_	_	2	punct	_	_
+

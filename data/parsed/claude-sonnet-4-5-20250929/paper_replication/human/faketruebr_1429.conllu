@@ -1,0 +1,322 @@
+# sent_id = faketruebr:1429-1
+# text = stf autorizou o monitoramento de chamadas e mensagens no whatsapp a partir de amanha.
+1	stf	stf	PROPN	_	_	2	nsubj	_	_
+2	autorizou	autorizar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+3	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	_	_
+4	monitoramento	monitoramento	NOUN	_	Gender=Masc|Number=Sing	2	obj	_	_
+5	de	de	ADP	_	_	6	case	_	_
+6	chamadas	chamada	NOUN	_	Gender=Fem|Number=Plur	4	nmod	_	_
+7	e	e	CCONJ	_	_	8	cc	_	_
+8	mensagens	mensagem	NOUN	_	Gender=Fem|Number=Plur	6	conj	_	_
+9-10	no	_	_	_	_	_	_	_	_
+9	em	em	ADP	_	_	11	case	_	_
+10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
+11	whatsapp	whatsapp	NOUN	_	Foreign=Yes|Gender=Masc|Number=Sing	6	nmod	_	_
+12	a	a	ADP	_	_	13	mark	_	_
+13	partir	partir	VERB	_	VerbForm=Inf	2	advcl	_	_
+14	de	de	ADP	_	_	15	case	_	_
+15	amanha	amanha	NOUN	_	Gender=Fem|Number=Sing	13	obl	_	SpaceAfter=No
+16	.	.	PUNCT	_	_	2	punct	_	_
+
+# sent_id = faketruebr:1429-2
+# text = a partir de amanha, em todo o mundo, existem novas regras de comunicacao, todos os governos da europa, america do norte e america do sul chegaram a um acordo com a whatsapp, twiter, facebook e outros canais de comunicacao.
+1	a	a	ADP	_	_	2	mark	_	_
+2	partir	partir	VERB	_	VerbForm=Inf	11	advcl	_	_
+3	de	de	ADP	_	_	4	case	_	_
+4	amanha	amanha	NOUN	_	Gender=Fem|Number=Sing	2	obl	_	SpaceAfter=No
+5	,	,	PUNCT	_	_	9	punct	_	_
+6	em	em	ADP	_	_	9	case	_	_
+7	todo	todo	DET	_	Gender=Masc|Number=Sing|PronType=Ind	9	det	_	_
+8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
+9	mundo	mundo	NOUN	_	Gender=Masc|Number=Sing	11	obl	_	SpaceAfter=No
+10	,	,	PUNCT	_	_	9	punct	_	_
+11	existem	existir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+12	novas	novo	ADJ	_	Gender=Fem|Number=Plur	13	amod	_	_
+13	regras	regra	NOUN	_	Gender=Fem|Number=Plur	11	nsubj	_	_
+14	de	de	ADP	_	_	15	case	_	_
+15	comunicacao	comunicacao	NOUN	_	Gender=Fem|Number=Sing	13	nmod	_	SpaceAfter=No
+16	,	,	PUNCT	_	_	33	punct	_	_
+17	todos	todo	DET	_	Gender=Masc|Number=Plur|PronType=Ind	19	det	_	_
+18	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	19	det	_	_
+19	governos	governo	NOUN	_	Gender=Masc|Number=Plur	33	nsubj	_	_
+20-21	da	_	_	_	_	_	_	_	_
+20	de	de	ADP	_	_	22	case	_	_
+21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
+22	europa	europa	NOUN	_	Gender=Fem|Number=Sing	19	nmod	_	SpaceAfter=No
+23	,	,	PUNCT	_	_	24	punct	_	_
+24	america	america	NOUN	_	Gender=Fem|Number=Sing	22	conj	_	_
+25-26	do	_	_	_	_	_	_	_	_
+25	de	de	ADP	_	_	27	case	_	_
+26	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	27	det	_	_
+27	norte	norte	NOUN	_	Gender=Masc|Number=Sing	24	nmod	_	_
+28	e	e	CCONJ	_	_	29	cc	_	_
+29	america	america	NOUN	_	Gender=Fem|Number=Sing	22	conj	_	_
+30-31	do	_	_	_	_	_	_	_	_
+30	de	de	ADP	_	_	32	case	_	_
+31	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	32	det	_	_
+32	sul	sul	NOUN	_	Gender=Masc|Number=Sing	29	nmod	_	_
+33	chegaram	chegar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	11	conj	_	_
+34	a	a	ADP	_	_	36	case	_	_
+35	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	36	det	_	_
+36	acordo	acordo	NOUN	_	Gender=Masc|Number=Sing	33	obl	_	_
+37	com	com	ADP	_	_	39	case	_	_
+38	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	39	det	_	_
+39	whatsapp	whatsapp	NOUN	_	Foreign=Yes|Gender=Masc|Number=Sing	36	nmod	_	SpaceAfter=No
+40	,	,	PUNCT	_	_	41	punct	_	_
+41	twiter	twiter	X	_	Foreign=Yes	39	conj	_	SpaceAfter=No
+42	,	,	PUNCT	_	_	43	punct	_	_
+43	facebook	facebook	NOUN	_	Foreign=Yes|Gender=Masc|Number=Sing	39	conj	_	_
+44	e	e	CCONJ	_	_	46	cc	_	_
+45	outros	outro	DET	_	Gender=Masc|Number=Plur|PronType=Ind	46	det	_	_
+46	canais	canal	NOUN	_	Gender=Masc|Number=Plur	39	conj	_	_
+47	de	de	ADP	_	_	48	case	_	_
+48	comunicacao	comunicacao	NOUN	_	Gender=Fem|Number=Sing	46	nmod	_	SpaceAfter=No
+49	.	.	PUNCT	_	_	11	punct	_	_
+
+# sent_id = faketruebr:1429-3
+# text = todas as chamadas serao gravadas.
+1	todas	todo	DET	_	Gender=Fem|Number=Plur|PronType=Ind	3	det	_	_
+2	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	3	det	_	_
+3	chamadas	chamada	NOUN	_	Gender=Fem|Number=Plur	5	nsubj:pass	_	_
+4	serao	ser	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin	5	root	_	_
+5	gravadas	gravar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	0	root	_	SpaceAfter=No
+6	.	.	PUNCT	_	_	5	punct	_	_
+
+# sent_id = faketruebr:1429-4
+# text = todos os registros de chamadas telefonicas sao gravados.
+1	todos	todo	DET	_	Gender=Masc|Number=Plur|PronType=Ind	3	det	_	_
+2	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	3	det	_	_
+3	registros	registro	NOUN	_	Gender=Masc|Number=Plur	8	nsubj:pass	_	_
+4	de	de	ADP	_	_	5	case	_	_
+5	chamadas	chamada	NOUN	_	Gender=Fem|Number=Plur	3	nmod	_	_
+6	telefonicas	telefonico	ADJ	_	Gender=Fem|Number=Plur	5	amod	_	_
+7	sao	sao	ADV	_	_	8	advmod	_	_
+8	gravados	gravar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	0	root	_	SpaceAfter=No
+9	.	.	PUNCT	_	_	8	punct	_	_
+
+# sent_id = faketruebr:1429-5
+# text = todas as mensagens e chamadas whatsapp sao gravadas.o twitter e monitorado.
+1	todas	todo	DET	_	Gender=Fem|Number=Plur|PronType=Ind	3	det	_	_
+2	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	3	det	_	_
+3	mensagens	mensagem	NOUN	_	Gender=Fem|Number=Plur	11	nsubj:pass	_	_
+4	e	e	CCONJ	_	_	5	cc	_	_
+5	chamadas	chamada	NOUN	_	Gender=Fem|Number=Plur	3	conj	_	_
+6	whatsapp	whatsapp	X	_	Foreign=Yes	3	nmod	_	_
+7	sao	sao	ADV	_	_	0	root	_	_
+8	gravadas.o	gravadas.o	DET	_	_	9	det	_	_
+9	twitter	twitter	NOUN	_	Foreign=Yes|Gender=Masc|Number=Sing	11	nsubj:pass	_	_
+10	e	e	CCONJ	_	_	11	cc	_	_
+11	monitorado	monitorar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	7	conj	_	SpaceAfter=No
+12	.	.	PUNCT	_	_	11	punct	_	_
+
+# sent_id = faketruebr:1429-6
+# text = no brasil o stf autorizou o monitoramento.
+1-2	no	_	_	_	_	_	_	_	_
+1	em	em	ADP	_	_	3	case	_	_
+2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
+3	brasil	brasil	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
+4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
+5	stf	stf	NOUN	_	_	6	nsubj	_	_
+6	autorizou	autorizar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
+8	monitoramento	monitoramento	NOUN	_	Gender=Masc|Number=Sing	6	obj	_	SpaceAfter=No
+9	.	.	PUNCT	_	_	6	punct	_	_
+
+# sent_id = faketruebr:1429-7
+# text = o facebook e monitorado.
+1	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
+2	facebook	facebook	X	_	Foreign=Yes	4	nsubj:pass	_	_
+3	e	e	CCONJ	_	_	4	cc	_	_
+4	monitorado	monitorar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	SpaceAfter=No
+5	.	.	PUNCT	_	_	4	punct	_	_
+
+# sent_id = faketruebr:1429-8
+# text = todas as midias e foruns sociais sao monitorados.por favor, informe aqueles que nao sabem.
+1	todas	todo	DET	_	Gender=Fem|Number=Plur|PronType=Ind	3	det	_	_
+2	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	3	det	_	_
+3	midias	midia	NOUN	_	Gender=Fem|Number=Plur	11	nsubj	_	_
+4	e	e	CCONJ	_	_	5	cc	_	_
+5	foruns	forun	NOUN	_	Gender=Masc|Number=Plur	3	conj	_	_
+6	sociais	social	ADJ	_	Number=Plur	5	amod	_	_
+7	sao	sao	ADV	_	_	11	advmod	_	_
+8	monitorados.por	monitorados.por	ADP	_	_	9	case	_	_
+9	favor	favor	NOUN	_	Gender=Masc|Number=Sing	11	obl	_	SpaceAfter=No
+10	,	,	PUNCT	_	_	9	punct	_	_
+11	informe	informar	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+12	aqueles	aquele	PRON	_	Gender=Masc|Number=Plur|PronType=Dem	11	obj	_	_
+13	que	que	PRON	_	PronType=Rel	15	nsubj	_	_
+14	nao	nao	ADV	_	_	15	advmod	_	_
+15	sabem	saber	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	12	acl:relcl	_	SpaceAfter=No
+16	.	.	PUNCT	_	_	11	punct	_	_
+
+# sent_id = faketruebr:1429-9
+# text = todos os dispositivos estao conectados aos sistemas departamentais do governo federal e dos governos do mundo.
+1	todos	todo	DET	_	Gender=Masc|Number=Plur|PronType=Ind	3	det	_	_
+2	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	3	det	_	_
+3	dispositivos	dispositivo	NOUN	_	Gender=Masc|Number=Plur	5	nsubj	_	_
+4	estao	estao	PROPN	_	_	5	advmod	_	_
+5	conectados	conectado	ADJ	_	Gender=Masc|Number=Plur|VerbForm=Part	0	root	_	_
+6-7	aos	_	_	_	_	_	_	_	_
+6	a	a	ADP	_	_	8	case	_	_
+7	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	8	det	_	_
+8	sistemas	sistema	NOUN	_	Gender=Masc|Number=Plur	5	obl	_	_
+9	departamentais	departamental	ADJ	_	Number=Plur	8	amod	_	_
+10-11	do	_	_	_	_	_	_	_	_
+10	de	de	ADP	_	_	12	case	_	_
+11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
+12	governo	governo	NOUN	_	Gender=Masc|Number=Sing	8	nmod	_	_
+13	federal	federal	ADJ	_	Number=Sing	12	amod	_	_
+14	e	e	CCONJ	_	_	17	cc	_	_
+15-16	dos	_	_	_	_	_	_	_	_
+15	de	de	ADP	_	_	17	case	_	_
+16	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	17	det	_	_
+17	governos	governo	NOUN	_	Gender=Masc|Number=Plur	12	conj	_	_
+18-19	do	_	_	_	_	_	_	_	_
+18	de	de	ADP	_	_	20	case	_	_
+19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
+20	mundo	mundo	NOUN	_	Gender=Masc|Number=Sing	17	nmod	_	SpaceAfter=No
+21	.	.	PUNCT	_	_	5	punct	_	_
+
+# sent_id = faketruebr:1429-10
+# text = tal acao e para monitorar o crime organizado, e terrorismo.
+1	tal	tal	DET	_	Number=Sing|PronType=Dem	2	det	_	_
+2	acao	acao	NOUN	_	Gender=Fem|Number=Sing	5	nsubj	_	_
+3	e	e	CCONJ	_	_	5	cc	_	_
+4	para	para	ADP	_	_	5	mark	_	_
+5	monitorar	monitorar	VERB	_	VerbForm=Inf	0	root	_	_
+6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
+7	crime	crime	NOUN	_	Gender=Masc|Number=Sing	5	obj	_	_
+8	organizado	organizado	ADJ	_	Gender=Masc|Number=Sing|VerbForm=Part	7	amod	_	SpaceAfter=No
+9	,	,	PUNCT	_	_	11	punct	_	_
+10	e	e	CCONJ	_	_	11	cc	_	_
+11	terrorismo	terrorismo	NOUN	_	Gender=Masc|Number=Sing	7	conj	_	SpaceAfter=No
+12	.	.	PUNCT	_	_	5	punct	_	_
+
+# sent_id = faketruebr:1429-11
+# text = tenha cuidado para nao enviar mensagens ou informacoes desnecessarias que sejam contrarias aos governos, leis e moralidade.
+1	tenha	ter	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+2	cuidado	cuidado	NOUN	_	Gender=Masc|Number=Sing	1	obj	_	_
+3	para	para	ADP	_	_	5	mark	_	_
+4	nao	nao	ADV	_	_	5	advmod	_	_
+5	enviar	enviar	VERB	_	VerbForm=Inf	2	acl	_	_
+6	mensagens	mensagem	NOUN	_	Gender=Fem|Number=Plur	5	obj	_	_
+7	ou	ou	CCONJ	_	_	8	cc	_	_
+8	informacoes	informacoe	NOUN	_	Gender=Fem|Number=Plur	6	conj	_	_
+9	desnecessarias	desnecessario	ADJ	_	Gender=Fem|Number=Plur	8	amod	_	_
+10	que	que	PRON	_	PronType=Rel	12	nsubj	_	_
+11	sejam	ser	AUX	_	Mood=Sub|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	12	cop	_	_
+12	contrarias	contrario	ADJ	_	Gender=Fem|Number=Plur	6	acl:relcl	_	_
+13-14	aos	_	_	_	_	_	_	_	_
+13	a	a	ADP	_	_	15	case	_	_
+14	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	15	det	_	_
+15	governos	governo	NOUN	_	Gender=Masc|Number=Plur	12	obl	_	SpaceAfter=No
+16	,	,	PUNCT	_	_	17	punct	_	_
+17	leis	lei	NOUN	_	Gender=Fem|Number=Plur	15	conj	_	_
+18	e	e	CCONJ	_	_	19	cc	_	_
+19	moralidade	moralidade	NOUN	_	Gender=Fem|Number=Sing	15	conj	_	SpaceAfter=No
+20	.	.	PUNCT	_	_	1	punct	_	_
+
+# sent_id = faketruebr:1429-12
+# text = evite dizer informacoes sensiveis ou sensiveis aos seus amigos e familiares.diga aos seus filhos e tenha muito cuidado!e muito importante transmitir esta mensagem hoje.
+1	evite	evitar	VERB	_	Mood=Imp|Number=Sing|Person=3|VerbForm=Fin	0	root	_	_
+2	dizer	dizer	VERB	_	VerbForm=Inf	1	xcomp	_	_
+3	informacoes	informacoe	NOUN	_	Gender=Fem|Number=Plur	2	obj	_	_
+4	sensiveis	sensivel	ADJ	_	Number=Plur	3	amod	_	_
+5	ou	ou	CCONJ	_	_	6	cc	_	_
+6	sensiveis	sensivel	ADJ	_	Number=Plur	4	conj	_	_
+7-8	aos	_	_	_	_	_	_	_	_
+7	a	a	ADP	_	_	10	case	_	_
+8	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	10	det	_	_
+9	seus	seu	DET	_	Gender=Masc|Number=Plur|Person=3|Poss=Yes|PronType=Prs	10	det	_	_
+10	amigos	amigo	NOUN	_	Gender=Masc|Number=Plur	2	obl	_	_
+11	e	e	CCONJ	_	_	12	cc	_	_
+12	familiares.diga	familiares.dizer	VERB	_	Mood=Imp|Number=Sing|Person=3|VerbForm=Fin	4	conj	_	_
+13-14	aos	_	_	_	_	_	_	_	_
+13	a	a	ADP	_	_	16	case	_	_
+14	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	16	det	_	_
+15	seus	seu	DET	_	Gender=Masc|Number=Plur|Person=3|Poss=Yes|PronType=Prs	16	det	_	_
+16	filhos	filho	NOUN	_	Gender=Masc|Number=Plur	12	obl	_	_
+17	e	e	CCONJ	_	_	18	cc	_	_
+18	tenha	ter	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	conj	_	_
+19	muito	muito	ADJ	_	Gender=Masc|Number=Sing	22	amod	_	_
+20	cuidado!e	cuidado!e	CCONJ	_	_	22	cop	_	_
+21	muito	muito	ADV	_	_	22	advmod	_	_
+22	importante	importante	ADJ	_	Number=Sing	18	conj	_	_
+23	transmitir	transmitir	VERB	_	VerbForm=Inf	22	csubj	_	_
+24	esta	este	DET	_	Gender=Fem|Number=Sing|PronType=Dem	25	det	_	_
+25	mensagem	mensagem	NOUN	_	Gender=Fem|Number=Sing	23	obj	_	_
+26	hoje	hoje	ADV	_	_	23	advmod	_	SpaceAfter=No
+27	.	.	PUNCT	_	_	1	punct	_	_
+
+# sent_id = faketruebr:1429-13
+# text = porque a partir de amanha ja existe uma outra forma de vigilancia em todos os paises do mundo.
+1	porque	porque	SCONJ	_	_	7	mark	_	_
+2	a	a	ADP	_	_	3	mark	_	_
+3	partir	partir	VERB	_	VerbForm=Inf	7	advcl	_	_
+4	de	de	ADP	_	_	5	case	_	_
+5	amanha	amanha	NOUN	_	Gender=Fem|Number=Sing	3	obl	_	_
+6	ja	ja	ADV	_	_	7	advmod	_	_
+7	existe	existir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+8	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
+9	outra	outro	DET	_	Gender=Fem|Number=Sing|PronType=Ind	10	det	_	_
+10	forma	forma	NOUN	_	Gender=Fem|Number=Sing	7	nsubj	_	_
+11	de	de	ADP	_	_	12	case	_	_
+12	vigilancia	vigilancia	NOUN	_	Gender=Fem|Number=Sing	10	nmod	_	_
+13	em	em	ADP	_	_	16	case	_	_
+14	todos	todo	DET	_	Gender=Masc|Number=Plur|PronType=Ind	16	det	_	_
+15	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	16	det	_	_
+16	paises	pais	NOUN	_	Gender=Masc|Number=Plur	7	obl	_	_
+17-18	do	_	_	_	_	_	_	_	_
+17	de	de	ADP	_	_	19	case	_	_
+18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	19	det	_	_
+19	mundo	mundo	NOUN	_	Gender=Masc|Number=Sing	16	nmod	_	SpaceAfter=No
+20	.	.	PUNCT	_	_	7	punct	_	_
+
+# sent_id = faketruebr:1429-14
+# text = incrivel mas certo.
+1	incrivel	incrivel	ADJ	_	Number=Sing	0	root	_	_
+2	mas	mas	CCONJ	_	_	3	cc	_	_
+3	certo	certo	ADJ	_	Gender=Masc|Number=Sing	1	conj	_	SpaceAfter=No
+4	.	.	PUNCT	_	_	1	punct	_	_
+
+# sent_id = faketruebr:1429-15
+# text = envie-o apenas hoje a todos os seus entes queridos e amigos.
+1-2	envie-o	_	_	_	_	_	_	_	_
+1	envie	enviar	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+2	o	o	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	1	obj	_	_
+3	apenas	apenas	ADV	_	_	4	advmod	_	_
+4	hoje	hoje	ADV	_	_	1	advmod	_	_
+5	a	a	ADP	_	_	9	case	_	_
+6	todos	todo	DET	_	Gender=Masc|Number=Plur|PronType=Ind	9	det	_	_
+7	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	9	det	_	_
+8	seus	seu	DET	_	Gender=Masc|Number=Plur|Person=3|Poss=Yes|PronType=Prs	9	det	_	_
+9	entes	ente	NOUN	_	Gender=Masc|Number=Plur	1	obl	_	_
+10	queridos	querido	ADJ	_	Gender=Masc|Number=Plur|VerbForm=Part	9	amod	_	_
+11	e	e	CCONJ	_	_	12	cc	_	_
+12	amigos	amigo	NOUN	_	Gender=Masc|Number=Plur	10	conj	_	SpaceAfter=No
+13	.	.	PUNCT	_	_	1	punct	_	_
+
+# sent_id = faketruebr:1429-16
+# text = tudo o que voce escreve ou fala pode ser usado contra voce e nao uma piada e uma realidade!!
+1	tudo	tudo	PRON	_	PronType=Ind	8	nsubj	_	_
+2	o	o	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Dem	5	obj	_	_
+3	que	que	PRON	_	PronType=Rel	2	fixed	_	_
+4	voce	voce	PRON	_	_	5	nsubj	_	_
+5	escreve	escrever	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	acl:relcl	_	_
+6	ou	ou	CCONJ	_	_	7	cc	_	_
+7	fala	falar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	conj	_	_
+8	pode	poder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+9	ser	ser	AUX	_	VerbForm=Inf	10	aux:pass	_	_
+10	usado	usar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	8	xcomp	_	_
+11	contra	contra	ADP	_	_	12	case	_	_
+12	voce	voce	NOUN	_	_	10	obl	_	_
+13	e	e	CCONJ	_	_	16	cc	_	_
+14	nao	nao	ADV	_	_	16	advmod	_	_
+15	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
+16	piada	piada	NOUN	_	Gender=Fem|Number=Sing	10	conj	_	_
+17	e	e	CCONJ	_	_	19	cc	_	_
+18	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	19	det	_	_
+19	realidade	realidade	NOUN	_	Gender=Fem|Number=Sing	16	conj	_	SpaceAfter=No
+20	!	!	PUNCT	_	_	8	punct	_	SpaceAfter=No
+21	!	!	PUNCT	_	_	8	punct	_	_
+

@@ -1,0 +1,108 @@
+S0008	11	saia	LmLEX	saiir	sair
+S0021	4	removam	LmLEX	removam	remover
+S0025	15	Procuradora-Geral	LrepTAG	Procuradora-GEral	Procuradora-Geral
+S0027	4	obtido	L1LEX	obtir	obter
+S0029	17	reuniu	L1LEX	reunar	reunir
+S0035	3	ForaDodge	LrepTAG	Foradodge	ForaDodge
+S0043	15	garantem	L1LEX	garanter	garantir
+S0055	17	descubra	LmLEX	descubrar	descobrir
+S0056	3	retrocede	LmLEX	retrocedir	retroceder
+S0057	5	PARTIDOS	LrepTAG	partido	PARTIDOS
+S0057	5	PARTIDOS	FrepTAG	Gender=Masc|Number=Plur	_
+S0063	23	IMPEDE	LmLEX	IMPEDE	impedir
+S0071	6	VOTO	LrepTAG	voto	VOTO
+S0071	6	VOTO	FrepTAG	Gender=Masc|Number=Sing	_
+S0075	2	PAGA	LmLEX	par	pagar
+S0077	5	paga	LmLEX	par	pagar
+S0081	9	PROIBIDAS	L1LEX	PROIBIDAS	proibir
+S0085	14	PESSOALMENTE	L1LEX	PESSOALMENTE	pessoalmente
+S0088	2	ISSO	L1LEX	ISSO	isso
+S0088	6	SOFRE	LmLEX	SOFRE	sofrer
+S0089	16	garantem	L1LEX	garanter	garantir
+S0091	4	SEJA	LmLEX	SEJA	ser
+S0100	21	ia	LmLEX	r	ir
+S0105	8	incluída	L1LEX	incluír	incluir
+S0116	6	escondido	L1LEX	escondir	esconder
+S0118	4	funcionava	LmLEX	funcionavr	funcionar
+S0121	14	expedidos	L1LEX	expeder	expedir
+S0122	16	paguem	LmLEX	paguar	pagar
+S0123	11	viviam	L1LEX	vivr	viver
+S0134	22	envolvia	LmLEX	envolvr	envolver
+S0141	21	descoberto	L1LEX	descobeer	descobrir
+S0151	24	fosse	LmLEX	fosse	ir
+S0180	4	mantinha	LmLEX	mantiner	manter
+S0186	15	envolvidas	L1LEX	envolvir	envolver
+S0191	2	ESCONDE	LmLEX	ESCONDE	esconder
+S0194	13	NÃO	L1LEX	NÃO	não
+S0210	4	removam	LmLEX	removam	remover
+S0216	4	garantido	L1LEX	garanter	garantir
+S0233	6	quis	LmLEX	quis	querer
+S0237	16	construíram	LmLEX	construír	construir
+S0257	14	tiveram	LmLEX	tiveram	ter
+S0262	4	mente	LmLEX	menter	mentar
+S0267	20	tv	LuAbbr	tv	televisão
+S0267	20	tv	FuAbbr	Gender=Fem|Number=Sing	Abbr=Yes|Gender=Fem|Number=Sing
+S0268	1	zuma	LrepTAG	Zuma	zuma
+S0270	16	zuma	LrepTAG	Zuma	zuma
+S0271	9	mantinha	LmLEX	mantiner	manter
+S0273	7	mantida	L1LEX	mantir	manter
+S0278	1	cyril	LrepTAG	Cyril	cyril
+S0282	3	MONITORAMENTO	LrepTAG	monitoramento	MONITORAMENTO
+S0282	3	MONITORAMENTO	FrepTAG	Gender=Masc|Number=Sing	_
+S0282	9	SOCIAIS	LrepTAG	social	SOCIAIS
+S0282	11	AGÊNCIAS	LrepTAG	agência	AGÊNCIAS
+S0293	2	URGENTE	L1LEX	urgente	urgentemente
+S0293	2	URGENTE	F1LEX	_	Abbr=Yes
+S0307	36	concedidas	L1LEX	concedir	conceder
+S0313	7	saia	LmLEX	saier	sair
+S0316	34	pago	LmLEX	par	pagar
+S0319	8	reaberto	L1LEX	reaberr	reabrir
+S0321	10	entregue	LmLEX	entregr	entregar
+S0323	15	mentem	LmLEX	menter	mentar
+S0326	32	obtido	L1LEX	obtir	obter
+S0331	5	AGORA	L1LEX	AGORA	agora
+S0338	2	PERCA	LmLEX	percar	perder
+S0338	19	QUE	LmLEX	QUE	que
+S0340	18	for	LmLEX	for	ir
+S0348	15	arrependem	L1LEX	arrependir	arrepender
+S0356	15	km	LuAbbr	km	quilômetro
+S0356	32	tiveram	LmLEX	tiveram	ter
+S0357	14	comprometidos	L1LEX	comprometir	comprometer
+S0358	28	vinham	L1LEX	vinr	vir
+S0360	47	cobre	LmLEX	cobrer	cobrar
+S0363	3	QUE	L1LEX	QUE	que
+S0363	4	APAGUEM	LmLEX	apaguar	apagar
+S0370	4	alegue	LmLEX	aleguar	alegar
+S0372	19	CadÚnico	LrepTAG	Cadúnico	CadÚnico
+S0375	11	tiveram	LmLEX	tiveram	ter
+S0383	32	atendidos	L1LEX	atendir	atender
+S0384	4	atendeu	L1LEX	atendar	atender
+S0385	15	escondidos	L1LEX	escondir	esconder
+S0391	10	removidos	L1LEX	removir	remover
+S0393	4	coincide	LmLEX	coincider	coincidir
+S0400	3	EXPLODIU	L1LEX	EXPLODIU	explodir
+S0400	3	EXPLODIU	F1LEX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin
+S0404	15	SUSPENSO	L1LEX	suspenr	suspender
+
+==========================================================
+
+Lchanged - fixed: 79
+LnoLEX   - fixed: 0
+L1LEX    - fixed: 31
+LmLEX    - fixed: 35
+LunkTAG  - fixed: 0
+LdaysW   - fixed: 0
+Lmonth   - fixed: 0
+LuAbbr   - fixed: 2
+Lord     - fixed: 0
+LrepTAG  - fixed: 11
+Fchanged - fixed: 6
+FnoLEX   - fixed: 0
+F1LEX    - fixed: 2
+FmLEX    - fixed: 0
+FunkTAG  - fixed: 0
+FdaysW   - fixed: 0
+Fmonth   - fixed: 0
+FuAbbr   - fixed: 1
+Ford     - fixed: 0
+FrepTAG  - fixed: 3

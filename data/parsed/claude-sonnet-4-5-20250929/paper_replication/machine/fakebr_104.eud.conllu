@@ -1,0 +1,449 @@
+# global.columns = ID FORM LEMMA UPOS XPOS FEATS HEAD DEPREL DEPS MISC
+# sent_id = fakebr:104-1
+# text = URGENTE:
+1	URGENTE	URGENTE	PROPN	_	_	0	root	0:root	SpaceAfter=No
+2	:	:	PUNCT	_	_	1	punct	1:punct	_
+
+# sent_id = fakebr:104-2
+# text = Raquel Dodge acusada de perseguição política a Aécio Neves revela áudio explosivo.
+1	Raquel	Raquel	PROPN	_	_	10	nsubj	10:nsubj	_
+2	Dodge	Dodge	PROPN	_	_	1	flat:name	1:flat:name	_
+3	acusada	acusar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	1	acl	1:acl	_
+4	de	de	ADP	_	_	5	case	5:case	_
+5	perseguição	perseguição	NOUN	_	Gender=Fem|Number=Sing	3	obl	3:obl:de	_
+6	política	político	ADJ	_	Gender=Fem|Number=Sing	5	amod	5:amod	_
+7	a	a	ADP	_	_	8	case	8:case	_
+8	Aécio	Aécio	PROPN	_	_	5	nmod	5:nmod:a	_
+9	Neves	Neves	PROPN	_	_	8	flat:name	8:flat:name	_
+10	revela	revelar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+11	áudio	áudio	NOUN	_	Gender=Masc|Number=Sing	10	obj	10:obj	_
+12	explosivo	explosivo	ADJ	_	Gender=Masc|Number=Sing	11	amod	11:amod	SpaceAfter=No
+13	.	.	PUNCT	_	_	10	punct	10:punct	_
+
+# sent_id = fakebr:104-3
+# text = Procuradora-geral teria confessado em áudio vazado que quer destruir carreira de tucano a pedido de Lula.
+1	Procuradora-geral	procuradora-geral	NOUN	_	Gender=Fem|Number=Sing	3	nsubj	3:nsubj|6:nsubj	_
+2	teria	ter	AUX	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	3	aux	3:aux	_
+3	confessado	confessar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	0	root	0:root	_
+4	em	em	ADP	_	_	5	case	5:case	_
+5	áudio	áudio	NOUN	_	Gender=Masc|Number=Sing	3	obl	3:obl:em	_
+6	vazado	vazar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	3	xcomp	3:xcomp	_
+7	que	que	SCONJ	_	_	8	mark	8:mark	_
+8	quer	querer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	ccomp	6:ccomp	_
+9	destruir	destruir	VERB	_	VerbForm=Inf	8	xcomp	8:xcomp	_
+10	carreira	carreira	NOUN	_	Gender=Fem|Number=Sing	9	obj	9:obj	_
+11	de	de	ADP	_	_	12	case	12:case	_
+12	tucano	tucano	NOUN	_	Gender=Masc|Number=Sing	10	nmod	10:nmod:de	_
+13	a	a	ADP	_	_	14	case	14:case	_
+14	pedido	pedido	NOUN	_	Gender=Masc|Number=Sing	9	obl	9:obl:a	_
+15	de	de	ADP	_	_	16	case	16:case	_
+16	Lula	Lula	PROPN	_	_	14	nmod	14:nmod:de	SpaceAfter=No
+17	.	.	PUNCT	_	_	3	punct	3:punct	_
+
+# sent_id = fakebr:104-4
+# text = BRASÍLIA - Um áudio vazado nesta quarta-feira (20) revela que a Procuradora-Geral da República (PGR), Raquel Dodge, teria admitido em conversa privada estar conduzindo uma perseguição política contra o senador Aécio Neves (PSDB-MG).
+1	BRASÍLIA	BRASÍLIA	PROPN	_	_	12	nsubj	12:nsubj	_
+2	-	-	PUNCT	_	_	1	punct	1:punct	_
+3	Um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	4	det	4:det	_
+4	áudio	áudio	NOUN	_	Gender=Masc|Number=Sing	12	nsubj	12:nsubj	_
+5	vazado	vazar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	4	acl	4:acl	_
+6-7	nesta	_	_	_	_	_	_	_	_
+6	em	em	ADP	_	_	8	case	8:case	_
+7	esta	este	DET	_	Gender=Fem|Number=Sing|PronType=Dem	8	det	8:det	_
+8	quarta-feira	quarta-feira	NOUN	_	Gender=Fem|Number=Sing	5	obl	5:obl:em	_
+9	(	(	PUNCT	_	_	10	punct	10:punct	SpaceAfter=No
+10	20	20	NUM	_	NumType=Card	8	appos	8:appos	SpaceAfter=No
+11	)	)	PUNCT	_	_	10	punct	10:punct	_
+12	revela	revelar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+13	que	que	SCONJ	_	_	27	mark	27:mark	_
+14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	15:det	_
+15	Procuradora-Geral	Procuradora-Geral	PROPN	_	_	27	nsubj	27:nsubj	_
+16-17	da	_	_	_	_	_	_	_	_
+16	de	de	ADP	_	_	18	case	18:case	_
+17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	18:det	_
+18	República	República	PROPN	_	_	15	flat:name	15:flat:name	_
+19	(	(	PUNCT	_	_	20	punct	20:punct	SpaceAfter=No
+20	PGR	PGR	PROPN	_	_	15	appos	15:appos	SpaceAfter=No
+21	)	)	PUNCT	_	_	20	punct	20:punct	SpaceAfter=No
+22	,	,	PUNCT	_	_	23	punct	23:punct	_
+23	Raquel	Raquel	PROPN	_	_	15	appos	15:appos	_
+24	Dodge	Dodge	PROPN	_	_	23	flat:name	23:flat:name	SpaceAfter=No
+25	,	,	PUNCT	_	_	23	punct	23:punct	_
+26	teria	ter	AUX	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	27	aux	27:aux	_
+27	admitido	admitir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	12	ccomp	12:ccomp	_
+28	em	em	ADP	_	_	29	case	29:case	_
+29	conversa	conversa	NOUN	_	Gender=Fem|Number=Sing	27	obl	27:obl:em	_
+30	privada	privado	ADJ	_	Gender=Fem|Number=Sing|VerbForm=Part	29	amod	29:amod	_
+31	estar	estar	AUX	_	VerbForm=Inf	32	aux	32:aux	_
+32	conduzindo	conduzir	VERB	_	VerbForm=Ger	27	ccomp	27:ccomp	_
+33	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	34	det	34:det	_
+34	perseguição	perseguição	NOUN	_	Gender=Fem|Number=Sing	32	obj	32:obj	_
+35	política	político	ADJ	_	Gender=Fem|Number=Sing	34	amod	34:amod	_
+36	contra	contra	ADP	_	_	38	case	38:case	_
+37	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	38	det	38:det	_
+38	senador	senador	NOUN	_	Gender=Masc|Number=Sing	34	nmod	34:nmod:contra	_
+39	Aécio	Aécio	PROPN	_	_	38	nmod	38:nmod	_
+40	Neves	Neves	PROPN	_	_	39	flat:name	39:flat:name	_
+41	(	(	PUNCT	_	_	42	punct	42:punct	SpaceAfter=No
+42	PSDB-MG	PSDB-MG	PROPN	_	_	38	parataxis	38:parataxis	SpaceAfter=No
+43	)	)	PUNCT	_	_	42	punct	42:punct	SpaceAfter=No
+44	.	.	PUNCT	_	_	12	punct	12:punct	_
+
+# sent_id = fakebr:104-5
+# text = Segundo fontes do Supremo Tribunal Federal que pediram anonimato por temer represálias, Dodge teria recebido ordens diretas do ex-presidente Lula para "acabar com a oposição" e bloqueou ilegalmente R$ 7,4 milhões do patrimônio do tucano.
+1	Segundo	segundo	ADP	_	_	2	case	2:case	_
+2	fontes	fonte	NOUN	_	Gender=Fem|Number=Plur	17	obl	9:nsubj|17:obl:segundo	_
+3-4	do	_	_	_	_	_	_	_	_
+3	de	de	ADP	_	_	5	case	5:case	_
+4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	5:det	_
+5	Supremo	Supremo	PROPN	_	_	2	nmod	2:nmod:de	_
+6	Tribunal	Tribunal	PROPN	_	_	5	flat:name	5:flat:name	_
+7	Federal	Federal	PROPN	_	_	5	flat:name	5:flat:name	_
+8	que	que	PRON	_	PronType=Rel	9	nsubj	2:ref	_
+9	pediram	pedir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	2	acl:relcl	2:acl:relcl	_
+10	anonimato	anonimato	NOUN	_	Gender=Masc|Number=Sing	9	obj	9:obj	_
+11	por	por	ADP	_	_	12	mark	12:mark	_
+12	temer	temer	VERB	_	VerbForm=Inf	9	advcl	9:advcl:por	_
+13	represálias	represália	NOUN	_	Gender=Fem|Number=Plur	12	obj	12:obj	SpaceAfter=No
+14	,	,	PUNCT	_	_	9	punct	9:punct	_
+15	Dodge	Dodge	PROPN	_	_	17	nsubj	17:nsubj|32:nsubj	_
+16	teria	ter	AUX	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	17	aux	17:aux	_
+17	recebido	receber	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	0	root	0:root	_
+18	ordens	orden	NOUN	_	Gender=Fem|Number=Plur	17	obj	17:obj	_
+19	diretas	direto	ADJ	_	Gender=Fem|Number=Plur	18	amod	18:amod	_
+20-21	do	_	_	_	_	_	_	_	_
+20	de	de	ADP	_	_	22	case	22:case	_
+21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	22:det	_
+22	ex-presidente	ex-presidente	NOUN	_	Number=Sing	18	nmod	18:nmod:de	_
+23	Lula	Lula	PROPN	_	_	22	nmod	22:nmod	_
+24	para	para	ADP	_	_	26	mark	26:mark	_
+25	"	"	PUNCT	_	_	26	punct	26:punct	SpaceAfter=No
+26	acabar	acabar	VERB	_	VerbForm=Inf	18	acl	18:acl:para	_
+27	com	com	ADP	_	_	29	case	29:case	_
+28	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	29	det	29:det	_
+29	oposição	oposição	NOUN	_	Gender=Fem|Number=Sing	26	obl	26:obl:com	SpaceAfter=No
+30	"	"	PUNCT	_	_	26	punct	26:punct	_
+31	e	e	CCONJ	_	_	32	cc	32:cc	_
+32	bloqueou	bloquear	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	17	conj	17:conj:e	_
+33	ilegalmente	ilegalmente	ADV	_	_	32	advmod	32:advmod	_
+34	R$	R$	SYM	_	_	36	nmod	36:nmod	_
+35	7,4	7,4	NUM	_	NumType=Card	36	nummod	36:nummod	_
+36	milhões	milhão	NOUN	_	Gender=Masc|Number=Plur	32	obj	32:obj	_
+37-38	do	_	_	_	_	_	_	_	_
+37	de	de	ADP	_	_	39	case	39:case	_
+38	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	39	det	39:det	_
+39	patrimônio	patrimônio	NOUN	_	Gender=Masc|Number=Sing	36	nmod	36:nmod:de	_
+40-41	do	_	_	_	_	_	_	_	_
+40	de	de	ADP	_	_	42	case	42:case	_
+41	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	42	det	42:det	_
+42	tucano	tucano	NOUN	_	Gender=Masc|Number=Sing	39	nmod	39:nmod:de	SpaceAfter=No
+43	.	.	PUNCT	_	_	17	punct	17:punct	_
+
+# sent_id = fakebr:104-6
+# text = No áudio obtido com exclusividade, Dodge afirma:
+1-2	No	_	_	_	_	_	_	_	_
+1	Em	em	ADP	_	_	3	case	3:case	_
+2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	3:det	_
+3	áudio	áudio	NOUN	_	Gender=Masc|Number=Sing	9	obl	9:obl:em	_
+4	obtido	obter	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	3	acl	3:acl	_
+5	com	com	ADP	_	_	6	case	6:case	_
+6	exclusividade	exclusividade	NOUN	_	Gender=Fem|Number=Sing	4	obl	4:obl:com	SpaceAfter=No
+7	,	,	PUNCT	_	_	3	punct	3:punct	_
+8	Dodge	Dodge	PROPN	_	_	9	nsubj	9:nsubj	_
+9	afirma	afirmar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	SpaceAfter=No
+10	:	:	PUNCT	_	_	9	punct	9:punct	_
+
+# sent_id = fakebr:104-7
+# text = "Não importa se há provas ou não, precisamos tirar Aécio do caminho antes das eleições de 2018".
+1	"	"	PUNCT	_	_	3	punct	3:punct	SpaceAfter=No
+2	Não	não	ADV	_	_	3	advmod	3:advmod	_
+3	importa	importar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	advcl	10:advcl	_
+4	se	se	SCONJ	_	_	5	mark	5:mark	_
+5	há	haver	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	_
+6	provas	prova	NOUN	_	Gender=Fem|Number=Plur	5	obj	5:obj	_
+7	ou	ou	CCONJ	_	_	8	cc	8:cc	_
+8	não	não	ADV	_	_	6	conj	5:obj|6:conj:ou	SpaceAfter=No
+9	,	,	PUNCT	_	_	3	punct	3:punct	_
+10	precisamos	precisar	VERB	_	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+11	tirar	tirar	VERB	_	VerbForm=Inf	10	xcomp	10:xcomp	_
+12	Aécio	Aécio	PROPN	_	_	11	obj	11:obj	_
+13-14	do	_	_	_	_	_	_	_	_
+13	de	de	ADP	_	_	15	case	15:case	_
+14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	15:det	_
+15	caminho	caminho	NOUN	_	Gender=Masc|Number=Sing	11	obl	11:obl:de	_
+16	antes	antes	ADV	_	_	11	advmod	11:advmod	_
+17-18	das	_	_	_	_	_	_	_	_
+17	de	de	ADP	_	_	19	case	19:case	_
+18	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	19	det	19:det	_
+19	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	16	obl	16:obl:de	_
+20	de	de	ADP	_	_	21	case	21:case	_
+21	2018	2018	NUM	_	NumType=Card	19	nmod	19:nmod:de	SpaceAfter=No
+22	"	"	PUNCT	_	_	10	punct	10:punct	SpaceAfter=No
+23	.	.	PUNCT	_	_	10	punct	10:punct	_
+
+# sent_id = fakebr:104-8
+# text = A gravação foi feita durante jantar reservado em restaurante de Brasília, onde a procuradora se reuniu com petistas influentes.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	2:det	_
+2	gravação	gravação	NOUN	_	Gender=Fem|Number=Sing	4	nsubj:pass	4:nsubj:pass	_
+3	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux:pass	4:aux:pass	_
+4	feita	fazer	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	0	root	0:root	_
+5	durante	durante	ADP	_	_	6	case	6:case	_
+6	jantar	jantar	NOUN	_	Gender=Masc|Number=Sing	4	obl	4:obl:durante	_
+7	reservado	reservar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	6	acl	6:acl	_
+8	em	em	ADP	_	_	9	case	9:case	_
+9	restaurante	restaurante	NOUN	_	Number=Sing	6	nmod	6:nmod:em|17:obl	_
+10	de	de	ADP	_	_	11	case	11:case	_
+11	Brasília	Brasília	PROPN	_	_	9	nmod	9:nmod:de	SpaceAfter=No
+12	,	,	PUNCT	_	_	17	punct	17:punct	_
+13	onde	onde	ADV	_	_	17	advmod	9:ref	_
+14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	15:det	_
+15	procuradora	procurador	NOUN	_	Gender=Fem|Number=Sing	17	nsubj	17:nsubj	_
+16	se	se	PRON	_	Case=Nom|Person=3|PronType=Prs	17	expl	17:expl	_
+17	reuniu	reunir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	acl:relcl	9:acl:relcl	_
+18	com	com	ADP	_	_	19	case	19:case	_
+19	petistas	petista	NOUN	_	Number=Plur	17	obl	17:obl:com	_
+20	influentes	influente	ADJ	_	Number=Plur	19	amod	19:amod	SpaceAfter=No
+21	.	.	PUNCT	_	_	4	punct	4:punct	_
+
+# sent_id = fakebr:104-9
+# text = Aécio e sua irmã Andrea foram falsamente acusados pela PGR de terem recebido R$ 2 milhões em propina de Joesley Batista, da J&F. Porém, especialistas em direito penal ouviram as gravações originais e confirmaram que houve manipulação digital nas conversas apresentadas pela Procuradoria.
+1	Aécio	Aécio	PROPN	_	_	8	nsubj:pass	8:nsubj:pass|14:nsubj|39:nsubj	_
+2	e	e	CCONJ	_	_	4	cc	4:cc	_
+3	sua	seu	DET	_	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	4	det	4:det	_
+4	irmã	irmão	NOUN	_	Gender=Fem|Number=Sing	1	conj	1:conj:e|8:nsubj:pass|14:nsubj|39:nsubj	_
+5	Andrea	Andrea	PROPN	_	_	4	nmod	4:nmod	_
+6	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	8	aux:pass	8:aux:pass	_
+7	falsamente	falsamente	ADV	_	_	8	advmod	8:advmod	_
+8	acusados	acusar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	0	root	0:root	_
+9-10	pela	_	_	_	_	_	_	_	_
+9	por	por	ADP	_	_	11	case	11:case	_
+10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	11:det	_
+11	PGR	PGR	PROPN	_	_	8	obl:agent	8:obl:agent	_
+12	de	de	ADP	_	_	14	mark	14:mark|39:mark	_
+13	terem	ter	AUX	_	Number=Plur|Person=3|VerbForm=Inf	14	aux	14:aux	_
+14	recebido	receber	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	8	xcomp	8:xcomp	_
+15	R$	R$	SYM	_	_	17	nmod	17:nmod	_
+16	2	2	NUM	_	NumType=Card	17	nummod	17:nummod	_
+17	milhões	milhão	NOUN	_	Gender=Masc|Number=Plur	14	obj	14:obj	_
+18	em	em	ADP	_	_	19	case	19:case	_
+19	propina	propina	NOUN	_	Gender=Fem|Number=Sing	14	obl	14:obl:em	_
+20	de	de	ADP	_	_	21	case	21:case	_
+21	Joesley	Joesley	PROPN	_	_	14	obl	14:obl:de	_
+22	Batista	Batista	PROPN	_	_	21	flat:name	21:flat:name	SpaceAfter=No
+23	,	,	PUNCT	_	_	26	punct	26:punct	_
+24-25	da	_	_	_	_	_	_	_	_
+24	de	de	ADP	_	_	26	case	26:case	_
+25	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	26	det	26:det	_
+26	J&F	J&F	PROPN	_	_	21	nmod	21:nmod:de	SpaceAfter=No
+27	.	.	PUNCT	_	_	8	punct	8:punct	_
+28	Porém	porém	CCONJ	_	_	34	cc	34:cc	SpaceAfter=No
+29	,	,	PUNCT	_	_	28	punct	28:punct	_
+30	especialistas	especialista	NOUN	_	Number=Plur	34	nsubj	34:nsubj	_
+31	em	em	ADP	_	_	32	case	32:case	_
+32	direito	direito	NOUN	_	Gender=Masc|Number=Sing	30	nmod	30:nmod:em	_
+33	penal	penal	ADJ	_	Number=Sing	32	amod	32:amod	_
+34	ouviram	ouvir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	8	conj	8:conj:porém	_
+35	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	36	det	36:det	_
+36	gravações	gravação	NOUN	_	Gender=Fem|Number=Plur	34	obj	34:obj	_
+37	originais	original	ADJ	_	Number=Plur	36	amod	36:amod	_
+38	e	e	CCONJ	_	_	39	cc	39:cc	_
+39	confirmaram	confirmar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	14	conj	8:xcomp|14:conj:e|34:xcomp	_
+40	que	que	SCONJ	_	_	41	mark	41:mark	_
+41	houve	haver	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	39	ccomp	39:ccomp	_
+42	manipulação	manipulação	NOUN	_	Gender=Fem|Number=Sing	41	obj	41:obj	_
+43	digital	digital	ADJ	_	Number=Sing	42	amod	42:amod	_
+44-45	nas	_	_	_	_	_	_	_	_
+44	em	em	ADP	_	_	46	case	46:case	_
+45	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	46	det	46:det	_
+46	conversas	conversa	NOUN	_	Gender=Fem|Number=Plur	41	obl	41:obl:em	_
+47	apresentadas	apresentar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	46	acl	46:acl	_
+48-49	pela	_	_	_	_	_	_	_	_
+48	por	por	ADP	_	_	50	case	50:case	_
+49	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	50	det	50:det	_
+50	Procuradoria	Procuradoria	PROPN	_	_	47	obl:agent	47:obl:agent	SpaceAfter=No
+51	.	.	PUNCT	_	_	8	punct	8:punct	_
+
+# sent_id = fakebr:104-10
+# text = O perito forense Dr. Carlos Magalhães, da Universidade de Brasília, declarou que "as evidências foram claramente adulteradas para incriminar o senador".
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	2:det	_
+2	perito	perito	NOUN	_	Gender=Masc|Number=Sing	14	nsubj	14:nsubj	_
+3	forense	forense	ADJ	_	Number=Sing	2	amod	2:amod	_
+4	Dr.	Dr.	PROPN	_	_	2	nmod	2:nmod	_
+5	Carlos	Carlos	PROPN	_	_	4	flat:name	4:flat:name	_
+6	Magalhães	Magalhães	PROPN	_	_	4	flat:name	4:flat:name	SpaceAfter=No
+7	,	,	PUNCT	_	_	10	punct	10:punct	_
+8-9	da	_	_	_	_	_	_	_	_
+8	de	de	ADP	_	_	10	case	10:case	_
+9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	10:det	_
+10	Universidade	Universidade	PROPN	_	_	2	nmod	2:nmod:de	_
+11	de	de	ADP	_	_	12	case	12:case	_
+12	Brasília	Brasília	PROPN	_	_	10	flat:name	10:flat:name	SpaceAfter=No
+13	,	,	PUNCT	_	_	10	punct	10:punct	_
+14	declarou	declarar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+15	que	que	SCONJ	_	_	21	mark	21:mark	_
+16	"	"	PUNCT	_	_	21	punct	21:punct	SpaceAfter=No
+17	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	18	det	18:det	_
+18	evidências	evidência	NOUN	_	Gender=Fem|Number=Plur	21	nsubj:pass	21:nsubj:pass	_
+19	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	21	aux:pass	21:aux:pass	_
+20	claramente	claramente	ADV	_	_	21	advmod	21:advmod	_
+21	adulteradas	adulterar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	14	ccomp	14:ccomp	_
+22	para	para	ADP	_	_	23	mark	23:mark	_
+23	incriminar	incriminar	VERB	_	VerbForm=Inf	21	advcl	21:advcl:para	_
+24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	25:det	_
+25	senador	senador	NOUN	_	Gender=Masc|Number=Sing	23	obj	23:obj	SpaceAfter=No
+26	"	"	PUNCT	_	_	21	punct	21:punct	SpaceAfter=No
+27	.	.	PUNCT	_	_	14	punct	14:punct	_
+
+# sent_id = fakebr:104-11
+# text = O ministro Marco Aurélio, do STF, já havia rejeitado os pedidos absurdos de Dodge em novembro, classificando-os como "abuso de autoridade e perseguição política sem precedentes na história da República".
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	2:det	_
+2	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	12	nsubj	12:nsubj	_
+3	Marco	Marco	PROPN	_	_	2	nmod	2:nmod	_
+4	Aurélio	Aurélio	PROPN	_	_	3	flat:name	3:flat:name	SpaceAfter=No
+5	,	,	PUNCT	_	_	8	punct	8:punct	_
+6-7	do	_	_	_	_	_	_	_	_
+6	de	de	ADP	_	_	8	case	8:case	_
+7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	8:det	_
+8	STF	STF	PROPN	_	_	2	nmod	2:nmod:de	SpaceAfter=No
+9	,	,	PUNCT	_	_	8	punct	8:punct	_
+10	já	já	ADV	_	_	12	advmod	12:advmod	_
+11	havia	haver	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	12	aux	12:aux	_
+12	rejeitado	rejeitar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	0	root	0:root	_
+13	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	14	det	14:det	_
+14	pedidos	pedido	NOUN	_	Gender=Masc|Number=Plur	12	obj	12:obj	_
+15	absurdos	absurdo	ADJ	_	Gender=Masc|Number=Plur	14	amod	14:amod	_
+16	de	de	ADP	_	_	17	case	17:case	_
+17	Dodge	Dodge	PROPN	_	_	14	nmod	14:nmod:de	_
+18	em	em	ADP	_	_	19	case	19:case	_
+19	novembro	novembro	NOUN	_	Gender=Masc|Number=Sing	12	obl	12:obl:em	SpaceAfter=No
+20	,	,	PUNCT	_	_	21	punct	21:punct	_
+21-22	classificando-os	_	_	_	_	_	_	_	_
+21	classificando	classificar	VERB	_	VerbForm=Ger	12	advcl	12:advcl	_
+22	os	o	PRON	_	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	21	obj	21:obj	_
+23	como	como	ADP	_	_	25	case	25:case|29:case	_
+24	"	"	PUNCT	_	_	25	punct	25:punct	SpaceAfter=No
+25	abuso	abuso	NOUN	_	Gender=Masc|Number=Sing	21	obl	21:obl:como	_
+26	de	de	ADP	_	_	27	case	27:case	_
+27	autoridade	autoridade	NOUN	_	Gender=Fem|Number=Sing	25	nmod	25:nmod:de	_
+28	e	e	CCONJ	_	_	29	cc	29:cc	_
+29	perseguição	perseguição	NOUN	_	Gender=Fem|Number=Sing	25	conj	21:obl:como|25:conj:e	_
+30	política	político	ADJ	_	Gender=Fem|Number=Sing	29	amod	29:amod	_
+31	sem	sem	ADP	_	_	32	case	32:case	_
+32	precedentes	precedente	NOUN	_	Number=Plur	29	nmod	29:nmod:sem	_
+33-34	na	_	_	_	_	_	_	_	_
+33	em	em	ADP	_	_	35	case	35:case	_
+34	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	35	det	35:det	_
+35	história	história	NOUN	_	Gender=Fem|Number=Sing	32	nmod	32:nmod:em	_
+36-37	da	_	_	_	_	_	_	_	_
+36	de	de	ADP	_	_	38	case	38:case	_
+37	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	38	det	38:det	_
+38	República	República	PROPN	_	_	35	nmod	35:nmod:de	SpaceAfter=No
+39	"	"	PUNCT	_	_	25	punct	25:punct	SpaceAfter=No
+40	.	.	PUNCT	_	_	12	punct	12:punct	_
+
+# sent_id = fakebr:104-12
+# text = Segundo apurou nossa reportagem, Marco Aurélio teria dito em sessão reservada que "jamais viu tamanha falta de provas em uma denúncia".
+1	Segundo	segundo	ADP	_	_	2	mark	2:mark	_
+2	apurou	apurar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	advcl	9:advcl:segundo	_
+3	nossa	nosso	DET	_	Gender=Fem|Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	det	4:det	_
+4	reportagem	reportagem	NOUN	_	Gender=Fem|Number=Sing	2	nsubj	2:nsubj	SpaceAfter=No
+5	,	,	PUNCT	_	_	2	punct	2:punct	_
+6	Marco	Marco	PROPN	_	_	9	nsubj	9:nsubj	_
+7	Aurélio	Aurélio	PROPN	_	_	6	flat:name	6:flat:name	_
+8	teria	ter	AUX	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	9	aux	9:aux	_
+9	dito	dizer	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	0	root	0:root	_
+10	em	em	ADP	_	_	11	case	11:case	_
+11	sessão	sessão	NOUN	_	Gender=Fem|Number=Sing	9	obl	9:obl:em	_
+12	reservada	reservado	ADJ	_	Gender=Fem|Number=Sing|VerbForm=Part	11	amod	11:amod	_
+13	que	que	SCONJ	_	_	16	mark	16:mark	_
+14	"	"	PUNCT	_	_	16	punct	16:punct	SpaceAfter=No
+15	jamais	jamais	ADV	_	_	16	advmod	16:advmod	_
+16	viu	ver	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	ccomp	9:ccomp	_
+17	tamanha	tamanho	ADJ	_	Gender=Fem|Number=Sing	18	amod	18:amod	_
+18	falta	falta	NOUN	_	Gender=Fem|Number=Sing	16	obj	16:obj	_
+19	de	de	ADP	_	_	20	case	20:case	_
+20	provas	prova	NOUN	_	Gender=Fem|Number=Plur	18	nmod	18:nmod:de	_
+21	em	em	ADP	_	_	23	case	23:case	_
+22	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	23	det	23:det	_
+23	denúncia	denúncia	NOUN	_	Gender=Fem|Number=Sing	16	obl	16:obl:em	SpaceAfter=No
+24	"	"	PUNCT	_	_	16	punct	16:punct	SpaceAfter=No
+25	.	.	PUNCT	_	_	9	punct	9:punct	_
+
+# sent_id = fakebr:104-13
+# text = Mais de 15 milhões de brasileiros já assinaram petição online pedindo a renúncia de Raquel Dodge e investigação completa sobre suas ligações com o PT.
+1	Mais	mais	ADV	_	_	3	advmod	3:advmod	_
+2	de	de	ADP	_	_	1	fixed	1:fixed	_
+3	15	15	NUM	_	NumType=Card	4	nummod	4:nummod	_
+4	milhões	milhão	NOUN	_	Gender=Masc|Number=Plur	8	nsubj	8:nsubj	_
+5	de	de	ADP	_	_	6	case	6:case	_
+6	brasileiros	brasileiro	NOUN	_	Gender=Masc|Number=Plur	4	nmod	4:nmod:de	_
+7	já	já	ADV	_	_	8	advmod	8:advmod	_
+8	assinaram	assinar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+9	petição	petição	NOUN	_	Gender=Fem|Number=Sing	8	obj	8:obj	_
+10	online	online	ADJ	_	Number=Sing	9	amod	9:amod	_
+11	pedindo	pedir	VERB	_	VerbForm=Ger	9	acl	9:acl	_
+12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	13:det	_
+13	renúncia	renúncia	NOUN	_	Gender=Fem|Number=Sing	11	obj	11:obj	_
+14	de	de	ADP	_	_	15	case	15:case	_
+15	Raquel	Raquel	PROPN	_	_	13	nmod	13:nmod:de	_
+16	Dodge	Dodge	PROPN	_	_	15	flat:name	15:flat:name	_
+17	e	e	CCONJ	_	_	18	cc	18:cc	_
+18	investigação	investigação	NOUN	_	Gender=Fem|Number=Sing	11	conj	9:nmod|11:conj:e	_
+19	completa	completo	ADJ	_	Gender=Fem|Number=Sing	18	amod	18:amod	_
+20	sobre	sobre	ADP	_	_	22	case	22:case	_
+21	suas	seu	DET	_	Gender=Fem|Number=Plur|Person=3|Poss=Yes|PronType=Prs	22	det	22:det	_
+22	ligações	ligação	NOUN	_	Gender=Fem|Number=Plur	18	nmod	18:nmod:sobre	_
+23	com	com	ADP	_	_	25	case	25:case	_
+24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	25:det	_
+25	PT	PT	PROPN	_	_	22	nmod	22:nmod:com	SpaceAfter=No
+26	.	.	PUNCT	_	_	8	punct	8:punct	_
+
+# sent_id = fakebr:104-14
+# text = A hashtag ForaDodge é a mais comentada nas redes sociais há 48 horas.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	2:det	_
+2	hashtag	hashtag	NOUN	_	Gender=Fem|Number=Sing	5	nsubj	5:nsubj	_
+3	ForaDodge	ForaDodge	PROPN	_	_	2	nmod	2:nmod	_
+4	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
+5	a	o	PRON	_	Gender=Fem|Number=Sing|Person=3|PronType=Dem	0	root	0:root	_
+6	mais	mais	ADV	_	_	7	advmod	7:advmod	_
+7	comentada	comentar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	5	acl	5:acl	_
+8-9	nas	_	_	_	_	_	_	_	_
+8	em	em	ADP	_	_	10	case	10:case	_
+9	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	10	det	10:det	_
+10	redes	rede	NOUN	_	Gender=Fem|Number=Plur	7	obl	7:obl:em	_
+11	sociais	social	ADJ	_	Number=Plur	10	amod	10:amod	_
+12	há	haver	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	advcl	5:advcl	_
+13	48	48	NUM	_	NumType=Card	14	nummod	14:nummod	_
+14	horas	hora	NOUN	_	Gender=Fem|Number=Plur	12	obj	12:obj	SpaceAfter=No
+15	.	.	PUNCT	_	_	5	punct	5:punct	_
+
+# sent_id = fakebr:104-15
+# text = O advogado Alberto Zacharias Toron confirmou que entrará com ação criminal contra a procuradora por abuso de autoridade, prevaricação e associação criminosa com finalidade eleitoral.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	2:det	_
+2	advogado	advogado	NOUN	_	Gender=Masc|Number=Sing	6	nsubj	6:nsubj	_
+3	Alberto	Alberto	PROPN	_	_	2	nmod	2:nmod	_
+4	Zacharias	Zacharias	PROPN	_	_	3	flat:name	3:flat:name	_
+5	Toron	Toron	PROPN	_	_	3	flat:name	3:flat:name	_
+6	confirmou	confirmar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+7	que	que	SCONJ	_	_	8	mark	8:mark	_
+8	entrará	entrar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin	6	ccomp	6:ccomp	_
+9	com	com	ADP	_	_	10	case	10:case	_
+10	ação	ação	NOUN	_	Gender=Fem|Number=Sing	8	obl	8:obl:com	_
+11	criminal	criminal	ADJ	_	Number=Sing	10	amod	10:amod	_
+12	contra	contra	ADP	_	_	14	case	14:case	_
+13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	14:det	_
+14	procuradora	procurador	NOUN	_	Gender=Fem|Number=Sing	10	nmod	10:nmod:contra	_
+15	por	por	ADP	_	_	16	case	16:case|20:case|22:case	_
+16	abuso	abuso	NOUN	_	Gender=Masc|Number=Sing	10	nmod	10:nmod:por	_
+17	de	de	ADP	_	_	18	case	18:case	_
+18	autoridade	autoridade	NOUN	_	Gender=Fem|Number=Sing	16	nmod	16:nmod:de	SpaceAfter=No
+19	,	,	PUNCT	_	_	20	punct	20:punct	_
+20	prevaricação	prevaricação	NOUN	_	Gender=Fem|Number=Sing	16	conj	10:nmod:por|16:conj:e	_
+21	e	e	CCONJ	_	_	22	cc	22:cc	_
+22	associação	associação	NOUN	_	Gender=Fem|Number=Sing	16	conj	10:nmod:por|16:conj:e	_
+23	criminosa	criminoso	ADJ	_	Gender=Fem|Number=Sing	22	amod	22:amod	_
+24	com	com	ADP	_	_	25	case	25:case	_
+25	finalidade	finalidade	NOUN	_	Gender=Fem|Number=Sing	22	nmod	22:nmod:com	_
+26	eleitoral	eleitoral	ADJ	_	Number=Sing	25	amod	25:amod	SpaceAfter=No
+27	.	.	PUNCT	_	_	6	punct	6:punct	_
+

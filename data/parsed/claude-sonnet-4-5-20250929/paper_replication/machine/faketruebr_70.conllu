@@ -1,0 +1,482 @@
+# sent_id = faketruebr:70-1
+# text = URGENTE:
+1	URGENTE	URGENTE	PROPN	_	_	0	root	_	SpaceAfter=No
+2	:	:	PUNCT	_	_	1	punct	_	_
+
+# sent_id = faketruebr:70-2
+# text = Governo Lula esconde verdade sobre indígenas em Roraima - 90% são venezuelanos infiltrados pelo regime de Maduro.
+1	Governo	governo	NOUN	_	Gender=Masc|Number=Sing	3	nsubj	_	_
+2	Lula	Lula	PROPN	_	_	1	nmod	_	_
+3	esconde	esconder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+4	verdade	verdade	NOUN	_	Gender=Fem|Number=Sing	3	obj	_	_
+5	sobre	sobre	ADP	_	_	6	case	_	_
+6	indígenas	indígena	NOUN	_	Number=Plur	4	nmod	_	_
+7	em	em	ADP	_	_	8	case	_	_
+8	Roraima	Roraima	PROPN	_	_	6	nmod	_	_
+9	-	-	PUNCT	_	_	13	punct	_	_
+10	90	90	NUM	_	NumType=Card	11	nummod	_	SpaceAfter=No
+11	%	%	SYM	_	_	13	nsubj	_	_
+12	são	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	13	cop	_	_
+13	venezuelanos	venezuelano	NOUN	_	Gender=Masc|Number=Plur	3	parataxis	_	_
+14	infiltrados	infiltrar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	13	acl	_	_
+15-16	pelo	_	_	_	_	_	_	_	_
+15	por	por	ADP	_	_	17	case	_	_
+16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
+17	regime	regime	NOUN	_	Gender=Masc|Number=Sing	14	obl:agent	_	_
+18	de	de	ADP	_	_	19	case	_	_
+19	Maduro	Maduro	PROPN	_	_	17	nmod	_	SpaceAfter=No
+20	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = faketruebr:70-3
+# text = Circula nas redes sociais uma denúncia explosiva que está sendo censurada pela grande mídia: os indígenas em estado de desnutrição em Roraima são na verdade venezuelanos disfarçados, infiltrados pelo regime comunista de Nicolás Maduro com apoio de Lula para criar uma crise humanitária falsa e desviar bilhões em verbas públicas.
+1	Circula	circular	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+2-3	nas	_	_	_	_	_	_	_	_
+2	em	em	ADP	_	_	4	case	_	_
+3	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	4	det	_	_
+4	redes	rede	NOUN	_	Gender=Fem|Number=Plur	1	obl	_	_
+5	sociais	social	ADJ	_	Number=Plur	4	amod	_	_
+6	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
+7	denúncia	denúncia	NOUN	_	Gender=Fem|Number=Sing	1	nsubj	_	_
+8	explosiva	explosivo	ADJ	_	Gender=Fem|Number=Sing	7	amod	_	_
+9	que	que	PRON	_	PronType=Rel	12	nsubj:pass	_	_
+10	está	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	aux	_	_
+11	sendo	ser	AUX	_	VerbForm=Ger	12	aux:pass	_	_
+12	censurada	censurar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	7	acl:relcl	_	_
+13-14	pela	_	_	_	_	_	_	_	_
+13	por	por	ADP	_	_	16	case	_	_
+14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
+15	grande	grande	ADJ	_	Number=Sing	16	amod	_	_
+16	mídia	mídia	NOUN	_	Gender=Fem|Number=Sing	12	obl:agent	_	SpaceAfter=No
+17	:	:	PUNCT	_	_	30	punct	_	_
+18	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	19	det	_	_
+19	indígenas	indígena	NOUN	_	Number=Plur	30	nsubj	_	_
+20	em	em	ADP	_	_	21	case	_	_
+21	estado	estado	NOUN	_	Gender=Masc|Number=Sing	19	nmod	_	_
+22	de	de	ADP	_	_	23	case	_	_
+23	desnutrição	desnutrição	NOUN	_	Gender=Fem|Number=Sing	21	nmod	_	_
+24	em	em	ADP	_	_	25	case	_	_
+25	Roraima	Roraima	PROPN	_	_	21	nmod	_	_
+26	são	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	30	cop	_	_
+27-28	na	_	_	_	_	_	_	_	_
+27	em	em	ADP	_	_	29	case	_	_
+28	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	29	det	_	_
+29	verdade	verdade	NOUN	_	Gender=Fem|Number=Sing	30	nmod	_	_
+30	venezuelanos	venezuelano	NOUN	_	Gender=Masc|Number=Plur	1	parataxis	_	_
+31	disfarçados	disfarçado	ADJ	_	Gender=Masc|Number=Plur|VerbForm=Part	30	amod	_	SpaceAfter=No
+32	,	,	PUNCT	_	_	33	punct	_	_
+33	infiltrados	infiltrar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	30	acl	_	_
+34-35	pelo	_	_	_	_	_	_	_	_
+34	por	por	ADP	_	_	36	case	_	_
+35	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	36	det	_	_
+36	regime	regime	NOUN	_	Gender=Masc|Number=Sing	33	obl:agent	_	_
+37	comunista	comunista	ADJ	_	Number=Sing	36	amod	_	_
+38	de	de	ADP	_	_	39	case	_	_
+39	Nicolás	Nicolás	PROPN	_	_	36	nmod	_	_
+40	Maduro	Maduro	PROPN	_	_	39	flat:name	_	_
+41	com	com	ADP	_	_	42	case	_	_
+42	apoio	apoio	NOUN	_	Gender=Masc|Number=Sing	33	obl	_	_
+43	de	de	ADP	_	_	44	case	_	_
+44	Lula	Lula	PROPN	_	_	42	nmod	_	_
+45	para	para	ADP	_	_	46	mark	_	_
+46	criar	criar	VERB	_	VerbForm=Inf	33	advcl	_	_
+47	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	48	det	_	_
+48	crise	crise	NOUN	_	Gender=Fem|Number=Sing	46	obj	_	_
+49	humanitária	humanitário	ADJ	_	Gender=Fem|Number=Sing	48	amod	_	_
+50	falsa	falso	ADJ	_	Gender=Fem|Number=Sing	48	amod	_	_
+51	e	e	CCONJ	_	_	52	cc	_	_
+52	desviar	desviar	VERB	_	VerbForm=Inf	46	conj	_	_
+53	bilhões	bilhão	NOUN	_	Gender=Masc|Number=Plur	52	obj	_	_
+54	em	em	ADP	_	_	55	case	_	_
+55	verbas	verba	NOUN	_	Gender=Fem|Number=Plur	52	obl	_	_
+56	públicas	público	ADJ	_	Gender=Fem|Number=Plur	55	amod	_	SpaceAfter=No
+57	.	.	PUNCT	_	_	1	punct	_	_
+
+# sent_id = faketruebr:70-4
+# text = Fontes exclusivas dentro da Funai, que pediram anonimato por medo de perseguição política, revelaram que documentos internos comprovam que pelo menos 90% dos chamados yanomami atendidos são na verdade venezuelanos que cruzaram a fronteira ilegalmente nos últimos meses.
+1	Fontes	fonte	NOUN	_	Gender=Fem|Number=Plur	17	nsubj	_	_
+2	exclusivas	exclusivo	ADJ	_	Gender=Fem|Number=Plur	1	amod	_	_
+3	dentro	dentro	ADV	_	_	1	advmod	_	_
+4-5	da	_	_	_	_	_	_	_	_
+4	de	de	ADP	_	_	6	case	_	_
+5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
+6	Funai	Funai	PROPN	_	_	3	obl	_	SpaceAfter=No
+7	,	,	PUNCT	_	_	9	punct	_	_
+8	que	que	PRON	_	PronType=Rel	9	nsubj	_	_
+9	pediram	pedir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	1	acl:relcl	_	_
+10	anonimato	anonimato	NOUN	_	Gender=Masc|Number=Sing	9	obj	_	_
+11	por	por	ADP	_	_	12	case	_	_
+12	medo	medo	NOUN	_	Gender=Masc|Number=Sing	9	obl	_	_
+13	de	de	ADP	_	_	14	case	_	_
+14	perseguição	perseguição	NOUN	_	Gender=Fem|Number=Sing	12	nmod	_	_
+15	política	político	ADJ	_	Gender=Fem|Number=Sing	14	amod	_	SpaceAfter=No
+16	,	,	PUNCT	_	_	9	punct	_	_
+17	revelaram	revelar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+18	que	que	SCONJ	_	_	21	mark	_	_
+19	documentos	documento	NOUN	_	Gender=Masc|Number=Plur	21	nsubj	_	_
+20	internos	interno	ADJ	_	Gender=Masc|Number=Plur	19	amod	_	_
+21	comprovam	comprovar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	17	ccomp	_	_
+22	que	que	SCONJ	_	_	37	mark	_	_
+23-24	pelo	_	_	_	_	_	_	_	_
+23	por	por	ADP	_	_	26	advmod	_	_
+24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	fixed	_	_
+25	menos	menos	NOUN	_	Gender=Masc|Number=Sing	23	fixed	_	_
+26	90	90	NUM	_	NumType=Card	27	nummod	_	SpaceAfter=No
+27	%	%	SYM	_	_	21	nsubj	_	_
+28-29	dos	_	_	_	_	_	_	_	_
+28	de	de	ADP	_	_	29	case	_	_
+29	os	o	PRON	_	Gender=Masc|Number=Plur|Person=3|PronType=Dem	27	nmod	_	_
+30	chamados	chamar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	29	acl	_	_
+31	yanomami	yanomami	X	_	Foreign=Yes	30	xcomp	_	_
+32	atendidos	atender	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	29	acl	_	_
+33	são	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	37	cop	_	_
+34-35	na	_	_	_	_	_	_	_	_
+34	em	em	ADP	_	_	36	case	_	_
+35	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	36	det	_	_
+36	verdade	verdade	NOUN	_	Gender=Fem|Number=Sing	37	obl	_	_
+37	venezuelanos	venezuelano	NOUN	_	Gender=Masc|Number=Plur	21	ccomp	_	_
+38	que	que	PRON	_	PronType=Rel	39	nsubj	_	_
+39	cruzaram	cruzar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	37	acl:relcl	_	_
+40	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	41	det	_	_
+41	fronteira	fronteira	NOUN	_	Gender=Fem|Number=Sing	39	obj	_	_
+42	ilegalmente	ilegalmente	ADV	_	_	39	advmod	_	_
+43-44	nos	_	_	_	_	_	_	_	_
+43	em	em	ADP	_	_	46	case	_	_
+44	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	46	det	_	_
+45	últimos	último	ADJ	_	Gender=Masc|Number=Plur	46	amod	_	_
+46	meses	meses	NOUN	_	Gender=Masc|Number=Plur	39	obl	_	SpaceAfter=No
+47	.	.	PUNCT	_	_	17	punct	_	_
+
+# sent_id = faketruebr:70-5
+# text = Um médico que atendeu na região e preferiu não se identificar declarou:
+1	Um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
+2	médico	médico	NOUN	_	Gender=Masc|Number=Sing	13	nsubj	_	_
+3	que	que	PRON	_	PronType=Rel	4	nsubj	_	_
+4	atendeu	atender	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	acl:relcl	_	_
+5-6	na	_	_	_	_	_	_	_	_
+5	em	em	ADP	_	_	7	case	_	_
+6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
+7	região	região	NOUN	_	Gender=Fem|Number=Sing	4	obl	_	_
+8	e	e	CCONJ	_	_	9	cc	_	_
+9	preferiu	preferir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	conj	_	_
+10	não	não	ADV	_	_	12	advmod	_	_
+11	se	se	PRON	_	Case=Nom|Person=3|PronType=Prs	12	expl	_	_
+12	identificar	identificar	VERB	_	VerbForm=Inf	9	xcomp	_	_
+13	declarou	declarar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	SpaceAfter=No
+14	:	:	PUNCT	_	_	13	punct	_	_
+
+# sent_id = faketruebr:70-6
+# text = Muitos deles nem falam português direito e alguns foram flagrados com documentos venezuelanos escondidos.
+1	Muitos	muito	PRON	_	Gender=Masc|Number=Plur|PronType=Ind	5	nsubj	_	_
+2-3	deles	_	_	_	_	_	_	_	_
+2	de	de	ADP	_	_	3	case	_	_
+3	eles	ele	PRON	_	Case=Nom|Gender=Masc|Number=Plur|Person=3|PronType=Prs	1	nmod	_	_
+4	nem	nem	ADV	_	_	5	advmod	_	_
+5	falam	falar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+6	português	português	NOUN	_	Gender=Masc|Number=Sing	5	obj	_	_
+7	direito	direito	ADV	_	_	5	advmod	_	_
+8	e	e	CCONJ	_	_	11	cc	_	_
+9	alguns	algum	PRON	_	Gender=Masc|Number=Plur|PronType=Ind	11	nsubj:pass	_	_
+10	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	11	aux:pass	_	_
+11	flagrados	flagrar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	5	conj	_	_
+12	com	com	ADP	_	_	13	case	_	_
+13	documentos	documento	NOUN	_	Gender=Masc|Number=Plur	11	obl	_	_
+14	venezuelanos	venezuelano	ADJ	_	Gender=Masc|Number=Plur	13	amod	_	_
+15	escondidos	esconder	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	13	acl	_	SpaceAfter=No
+16	.	.	PUNCT	_	_	5	punct	_	_
+
+# sent_id = faketruebr:70-7
+# text = O governo está usando essa situação para culpar Bolsonaro e conseguir aprovar o orçamento secreto de 500 milhões de reais destinado aos indígenas, mas que na verdade vai para o PT e aliados.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
+2	governo	governo	NOUN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
+3	está	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	_	_
+4	usando	usar	VERB	_	VerbForm=Ger	0	root	_	_
+5	essa	esse	DET	_	Gender=Fem|Number=Sing|PronType=Dem	6	det	_	_
+6	situação	situação	NOUN	_	Gender=Fem|Number=Sing	4	obj	_	_
+7	para	para	ADP	_	_	8	mark	_	_
+8	culpar	culpar	VERB	_	VerbForm=Inf	4	advcl	_	_
+9	Bolsonaro	Bolsonaro	PROPN	_	_	8	obj	_	_
+10	e	e	CCONJ	_	_	11	cc	_	_
+11	conseguir	conseguir	VERB	_	VerbForm=Inf	8	conj	_	_
+12	aprovar	aprovar	VERB	_	VerbForm=Inf	11	xcomp	_	_
+13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
+14	orçamento	orçamento	NOUN	_	Gender=Masc|Number=Sing	12	obj	_	_
+15	secreto	secreto	ADJ	_	Gender=Masc|Number=Sing	14	amod	_	_
+16	de	de	ADP	_	_	18	case	_	_
+17	500	500	NUM	_	NumType=Card	18	nummod	_	_
+18	milhões	milhão	NOUN	_	Gender=Masc|Number=Plur	14	nmod	_	_
+19	de	de	ADP	_	_	20	case	_	_
+20	reais	real	NOUN	_	Gender=Masc|Number=Plur	18	nmod	_	_
+21	destinado	destinar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	14	acl	_	_
+22-23	aos	_	_	_	_	_	_	_	_
+22	a	a	ADP	_	_	24	case	_	_
+23	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	24	det	_	_
+24	indígenas	indígena	NOUN	_	Number=Plur	21	obl	_	SpaceAfter=No
+25	,	,	PUNCT	_	_	31	punct	_	_
+26	mas	mas	CCONJ	_	_	31	cc	_	_
+27	que	que	PRON	_	PronType=Rel	31	nsubj	_	_
+28-29	na	_	_	_	_	_	_	_	_
+28	em	em	ADP	_	_	30	case	_	_
+29	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	30	det	_	_
+30	verdade	verdade	NOUN	_	Gender=Fem|Number=Sing	31	obl	_	_
+31	vai	ir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	21	conj	_	_
+32	para	para	ADP	_	_	34	case	_	_
+33	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	34	det	_	_
+34	PT	PT	PROPN	_	_	31	obl	_	_
+35	e	e	CCONJ	_	_	36	cc	_	_
+36	aliados	aliado	NOUN	_	Gender=Masc|Number=Plur	34	conj	_	SpaceAfter=No
+37	.	.	PUNCT	_	_	4	punct	_	_
+
+# sent_id = faketruebr:70-8
+# text = A operação teria sido planejada ainda durante a campanha eleitoral de 2022.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	operação	operação	NOUN	_	Gender=Fem|Number=Sing	5	nsubj:pass	_	_
+3	teria	ter	AUX	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	5	aux	_	_
+4	sido	ser	AUX	_	Gender=Masc|Number=Sing|VerbForm=Part	5	aux:pass	_	_
+5	planejada	planejar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
+6	ainda	ainda	ADV	_	_	9	advmod	_	_
+7	durante	durante	ADP	_	_	9	case	_	_
+8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	_	_
+9	campanha	campanha	NOUN	_	Gender=Fem|Number=Sing	5	obl	_	_
+10	eleitoral	eleitoral	ADJ	_	Number=Sing	9	amod	_	_
+11	de	de	ADP	_	_	12	case	_	_
+12	2022	2022	NUM	_	NumType=Card	9	nmod	_	SpaceAfter=No
+13	.	.	PUNCT	_	_	5	punct	_	_
+
+# sent_id = faketruebr:70-9
+# text = Maduro teria enviado milhares de venezuelanos para se passarem por yanomami brasileiros, criando uma crise humanitária artificial.
+1	Maduro	Maduro	PROPN	_	_	3	nsubj	_	_
+2	teria	ter	AUX	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	3	aux	_	_
+3	enviado	enviar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	0	root	_	_
+4	milhares	milhar	NOUN	_	Gender=Masc|Number=Plur	3	obj	_	_
+5	de	de	ADP	_	_	6	case	_	_
+6	venezuelanos	venezuelano	NOUN	_	Gender=Masc|Number=Plur	4	nmod	_	_
+7	para	para	ADP	_	_	9	mark	_	_
+8	se	se	PRON	_	Case=Nom|Person=3|PronType=Prs	9	expl	_	_
+9	passarem	passar	VERB	_	Number=Plur|Person=3|VerbForm=Inf	3	advcl	_	_
+10	por	por	ADP	_	_	11	case	_	_
+11	yanomami	yanomam	NOUN	_	Number=Plur	9	obl	_	_
+12	brasileiros	brasileiro	ADJ	_	Gender=Masc|Number=Plur	11	amod	_	SpaceAfter=No
+13	,	,	PUNCT	_	_	14	punct	_	_
+14	criando	criar	VERB	_	VerbForm=Ger	3	advcl	_	_
+15	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
+16	crise	crise	NOUN	_	Gender=Fem|Number=Sing	14	obj	_	_
+17	humanitária	humanitário	ADJ	_	Gender=Fem|Number=Sing	16	amod	_	_
+18	artificial	artificial	ADJ	_	Number=Sing	16	amod	_	SpaceAfter=No
+19	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = faketruebr:70-10
+# text = O objetivo seria triplo: desgastar a imagem do governo anterior, justificar gastos bilionários com desvios e criar uma base eleitoral cativa na região.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
+2	objetivo	objetivo	NOUN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
+3	seria	ser	AUX	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	4	cop	_	_
+4	triplo	triplo	ADJ	_	Gender=Masc|Number=Sing	0	root	_	SpaceAfter=No
+5	:	:	PUNCT	_	_	6	punct	_	_
+6	desgastar	desgastar	VERB	_	VerbForm=Inf	4	parataxis	_	_
+7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
+8	imagem	imagem	NOUN	_	Gender=Fem|Number=Sing	6	obj	_	_
+9-10	do	_	_	_	_	_	_	_	_
+9	de	de	ADP	_	_	11	case	_	_
+10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
+11	governo	governo	NOUN	_	Gender=Masc|Number=Sing	8	nmod	_	_
+12	anterior	anterior	ADJ	_	Number=Sing	11	amod	_	SpaceAfter=No
+13	,	,	PUNCT	_	_	14	punct	_	_
+14	justificar	justificar	VERB	_	VerbForm=Inf	6	conj	_	_
+15	gastos	gasto	NOUN	_	Gender=Masc|Number=Plur	14	obj	_	_
+16	bilionários	bilionário	ADJ	_	Gender=Masc|Number=Plur	15	amod	_	_
+17	com	com	ADP	_	_	18	case	_	_
+18	desvios	desvio	NOUN	_	Gender=Masc|Number=Plur	15	nmod	_	_
+19	e	e	CCONJ	_	_	20	cc	_	_
+20	criar	criar	VERB	_	VerbForm=Inf	6	conj	_	_
+21	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
+22	base	base	NOUN	_	Gender=Fem|Number=Sing	20	obj	_	_
+23	eleitoral	eleitoral	ADJ	_	Number=Sing	22	amod	_	_
+24	cativa	cativo	ADJ	_	Gender=Fem|Number=Sing	22	amod	_	_
+25-26	na	_	_	_	_	_	_	_	_
+25	em	em	ADP	_	_	27	case	_	_
+26	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	27	det	_	_
+27	região	região	NOUN	_	Gender=Fem|Number=Sing	20	obl	_	SpaceAfter=No
+28	.	.	PUNCT	_	_	4	punct	_	_
+
+# sent_id = faketruebr:70-11
+# text = Organizações internacionais como a Survival estariam recebendo financiamento de George Soros e do Foro de São Paulo para silenciar sobre a verdadeira nacionalidade dos indígenas.
+1	Organizações	organização	NOUN	_	Gender=Fem|Number=Plur	7	nsubj	_	_
+2	internacionais	internacional	ADJ	_	Number=Plur	1	amod	_	_
+3	como	como	ADP	_	_	5	case	_	_
+4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
+5	Survival	Survival	PROPN	_	_	1	nmod	_	_
+6	estariam	estar	AUX	_	Mood=Cnd|Number=Plur|Person=3|VerbForm=Fin	7	aux	_	_
+7	recebendo	receber	VERB	_	VerbForm=Ger	0	root	_	_
+8	financiamento	financiamento	NOUN	_	Gender=Masc|Number=Sing	7	obj	_	_
+9	de	de	ADP	_	_	10	case	_	_
+10	George	George	PROPN	_	_	8	nmod	_	_
+11	Soros	Soros	PROPN	_	_	10	flat:name	_	_
+12	e	e	CCONJ	_	_	15	cc	_	_
+13-14	do	_	_	_	_	_	_	_	_
+13	de	de	ADP	_	_	15	case	_	_
+14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
+15	Foro	Foro	PROPN	_	_	10	conj	_	_
+16	de	de	ADP	_	_	17	case	_	_
+17	São	São	PROPN	_	_	15	flat:name	_	_
+18	Paulo	Paulo	PROPN	_	_	15	flat:name	_	_
+19	para	para	ADP	_	_	20	mark	_	_
+20	silenciar	silenciar	VERB	_	VerbForm=Inf	7	advcl	_	_
+21	sobre	sobre	ADP	_	_	24	case	_	_
+22	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	24	det	_	_
+23	verdadeira	verdadeiro	ADJ	_	Gender=Fem|Number=Sing	24	amod	_	_
+24	nacionalidade	nacionalidade	NOUN	_	Gender=Fem|Number=Sing	20	obl	_	_
+25-26	dos	_	_	_	_	_	_	_	_
+25	de	de	ADP	_	_	27	case	_	_
+26	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	27	det	_	_
+27	indígenas	indígena	NOUN	_	Number=Plur	24	nmod	_	SpaceAfter=No
+28	.	.	PUNCT	_	_	7	punct	_	_
+
+# sent_id = faketruebr:70-12
+# text = Pesquisadores que tentaram denunciar a farsa foram ameaçados e removidos de suas funções.
+1	Pesquisadores	pesquisador	NOUN	_	Gender=Masc|Number=Plur	8	nsubj:pass	_	_
+2	que	que	PRON	_	PronType=Rel	3	nsubj	_	_
+3	tentaram	tentar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	1	acl:relcl	_	_
+4	denunciar	denunciar	VERB	_	VerbForm=Inf	3	xcomp	_	_
+5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
+6	farsa	farsa	NOUN	_	Gender=Fem|Number=Sing	4	obj	_	_
+7	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	8	aux:pass	_	_
+8	ameaçados	ameaçar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	0	root	_	_
+9	e	e	CCONJ	_	_	10	cc	_	_
+10	removidos	remover	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	8	conj	_	_
+11	de	de	ADP	_	_	13	case	_	_
+12	suas	seu	DET	_	Gender=Fem|Number=Plur|Person=3|Poss=Yes|PronType=Prs	13	det	_	_
+13	funções	função	NOUN	_	Gender=Fem|Number=Plur	10	obl	_	SpaceAfter=No
+14	.	.	PUNCT	_	_	8	punct	_	_
+
+# sent_id = faketruebr:70-13
+# text = Durante o governo Bolsonaro, a situação dos yanomami brasileiros estava controlada, com programas de assistência funcionando adequadamente.
+1	Durante	durante	ADP	_	_	3	case	_	_
+2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
+3	governo	governo	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	_
+4	Bolsonaro	Bolsonaro	PROPN	_	_	3	nmod	_	SpaceAfter=No
+5	,	,	PUNCT	_	_	3	punct	_	_
+6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
+7	situação	situação	NOUN	_	Gender=Fem|Number=Sing	13	nsubj	_	_
+8-9	dos	_	_	_	_	_	_	_	_
+8	de	de	ADP	_	_	10	case	_	_
+9	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	10	det	_	_
+10	yanomami	yanomam	NOUN	_	Number=Plur	7	nmod	_	_
+11	brasileiros	brasileiro	ADJ	_	Gender=Masc|Number=Plur	10	amod	_	_
+12	estava	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	13	cop	_	_
+13	controlada	controlado	ADJ	_	Gender=Fem|Number=Sing|VerbForm=Part	0	root	_	SpaceAfter=No
+14	,	,	PUNCT	_	_	16	punct	_	_
+15	com	com	ADP	_	_	16	case	_	_
+16	programas	programa	NOUN	_	Gender=Masc|Number=Plur	13	obl	_	_
+17	de	de	ADP	_	_	18	case	_	_
+18	assistência	assistência	NOUN	_	Gender=Fem|Number=Sing	16	nmod	_	_
+19	funcionando	funcionar	VERB	_	VerbForm=Ger	13	advcl	_	_
+20	adequadamente	adequadamente	ADV	_	_	19	advmod	_	SpaceAfter=No
+21	.	.	PUNCT	_	_	13	punct	_	_
+
+# sent_id = faketruebr:70-14
+# text = A deterioração súbita coincide suspeitosamente com a transição de governo e a necessidade de Lula justificar gastos emergenciais.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	deterioração	deterioração	NOUN	_	Gender=Fem|Number=Sing	4	nsubj	_	_
+3	súbita	súbito	ADJ	_	Gender=Fem|Number=Sing	2	amod	_	_
+4	coincide	coincidir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+5	suspeitosamente	suspeitosamente	ADV	_	_	4	advmod	_	_
+6	com	com	ADP	_	_	8	case	_	_
+7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
+8	transição	transição	NOUN	_	Gender=Fem|Number=Sing	4	obl	_	_
+9	de	de	ADP	_	_	10	case	_	_
+10	governo	governo	NOUN	_	Gender=Masc|Number=Sing	8	nmod	_	_
+11	e	e	CCONJ	_	_	13	cc	_	_
+12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
+13	necessidade	necessidade	NOUN	_	Gender=Fem|Number=Sing	8	conj	_	_
+14	de	de	ADP	_	_	16	mark	_	_
+15	Lula	Lula	PROPN	_	_	16	nsubj	_	_
+16	justificar	justificar	VERB	_	VerbForm=Inf	13	acl	_	_
+17	gastos	gasto	NOUN	_	Gender=Masc|Number=Plur	16	obj	_	_
+18	emergenciais	emergencial	ADJ	_	Number=Plur	17	amod	_	SpaceAfter=No
+19	.	.	PUNCT	_	_	4	punct	_	_
+
+# sent_id = faketruebr:70-15
+# text = Deputados da oposição já preparam uma CPI para investigar o esquema de desvio de verbas e a entrada ilegal de venezuelanos.
+1	Deputados	deputado	NOUN	_	Gender=Masc|Number=Plur	6	nsubj	_	_
+2-3	da	_	_	_	_	_	_	_	_
+2	de	de	ADP	_	_	4	case	_	_
+3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
+4	oposição	oposição	NOUN	_	Gender=Fem|Number=Sing	1	nmod	_	_
+5	já	já	ADV	_	_	6	advmod	_	_
+6	preparam	preparar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+7	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
+8	CPI	CPI	PROPN	_	_	6	obj	_	_
+9	para	para	ADP	_	_	10	mark	_	_
+10	investigar	investigar	VERB	_	VerbForm=Inf	6	advcl	_	_
+11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
+12	esquema	esquema	NOUN	_	Gender=Masc|Number=Sing	10	obj	_	_
+13	de	de	ADP	_	_	14	case	_	_
+14	desvio	desvio	NOUN	_	Gender=Masc|Number=Sing	12	nmod	_	_
+15	de	de	ADP	_	_	16	case	_	_
+16	verbas	verba	NOUN	_	Gender=Fem|Number=Plur	14	nmod	_	_
+17	e	e	CCONJ	_	_	19	cc	_	_
+18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	19	det	_	_
+19	entrada	entrada	NOUN	_	Gender=Fem|Number=Sing	12	conj	_	_
+20	ilegal	ilegal	ADJ	_	Number=Sing	19	amod	_	_
+21	de	de	ADP	_	_	22	case	_	_
+22	venezuelanos	venezuelano	NOUN	_	Gender=Masc|Number=Plur	19	nmod	_	SpaceAfter=No
+23	.	.	PUNCT	_	_	6	punct	_	_
+
+# sent_id = faketruebr:70-16
+# text = Documentos vazados mostrariam que mais de 3 bilhões de reais estão sendo direcionados para ONGs ligadas ao PT sob pretexto de ajuda humanitária.
+1	Documentos	documento	NOUN	_	Gender=Masc|Number=Plur	3	nsubj	_	_
+2	vazados	vazar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	1	acl	_	_
+3	mostrariam	mostrar	VERB	_	Mood=Cnd|Number=Plur|Person=3|VerbForm=Fin	0	root	_	_
+4	que	que	SCONJ	_	_	13	mark	_	_
+5	mais	mais	ADV	_	_	7	advmod	_	_
+6	de	de	ADP	_	_	5	fixed	_	_
+7	3	3	NUM	_	NumType=Card	8	nummod	_	_
+8	bilhões	bilhão	NOUN	_	Gender=Masc|Number=Plur	13	nsubj:pass	_	_
+9	de	de	ADP	_	_	10	case	_	_
+10	reais	real	NOUN	_	Gender=Masc|Number=Plur	8	nmod	_	_
+11	estão	estar	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	13	aux	_	_
+12	sendo	ser	AUX	_	VerbForm=Ger	13	aux:pass	_	_
+13	direcionados	direcionar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	3	ccomp	_	_
+14	para	para	ADP	_	_	15	case	_	_
+15	ONGs	ong	NOUN	_	Gender=Fem|Number=Plur	13	obl	_	_
+16	ligadas	ligar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part	15	acl	_	_
+17-18	ao	_	_	_	_	_	_	_	_
+17	a	a	ADP	_	_	19	case	_	_
+18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	19	det	_	_
+19	PT	PT	PROPN	_	_	16	obl	_	_
+20	sob	sob	ADP	_	_	21	case	_	_
+21	pretexto	pretexto	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	_
+22	de	de	ADP	_	_	23	case	_	_
+23	ajuda	ajuda	NOUN	_	Gender=Fem|Number=Sing	21	nmod	_	_
+24	humanitária	humanitário	ADJ	_	Gender=Fem|Number=Sing	23	amod	_	SpaceAfter=No
+25	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = faketruebr:70-17
+# text = A grande mídia, financiada por verbas publicitárias do governo, se recusa a investigar.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
+2	grande	grande	ADJ	_	Number=Sing	3	amod	_	_
+3	mídia	mídia	NOUN	_	Gender=Fem|Number=Sing	14	nsubj	_	SpaceAfter=No
+4	,	,	PUNCT	_	_	5	punct	_	_
+5	financiada	financiar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	3	acl	_	_
+6	por	por	ADP	_	_	7	case	_	_
+7	verbas	verba	NOUN	_	Gender=Fem|Number=Plur	5	obl:agent	_	_
+8	publicitárias	publicitário	ADJ	_	Gender=Fem|Number=Plur	7	amod	_	_
+9-10	do	_	_	_	_	_	_	_	_
+9	de	de	ADP	_	_	11	case	_	_
+10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
+11	governo	governo	NOUN	_	Gender=Masc|Number=Sing	7	nmod	_	SpaceAfter=No
+12	,	,	PUNCT	_	_	5	punct	_	_
+13	se	se	PRON	_	Case=Nom|Person=3|PronType=Prs	14	expl	_	_
+14	recusa	recusar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+15	a	a	ADP	_	_	16	mark	_	_
+16	investigar	investigar	VERB	_	VerbForm=Inf	14	xcomp	_	SpaceAfter=No
+17	.	.	PUNCT	_	_	14	punct	_	_
+
+# sent_id = faketruebr:70-18
+# text = Compartilhe antes que seja censurado.
+1	Compartilhe	compartilhar	VERB	_	Mood=Imp|Number=Sing|Person=3|VerbForm=Fin	0	root	_	_
+2	antes	antes	ADV	_	_	5	mark	_	_
+3	que	que	SCONJ	_	_	2	fixed	_	_
+4	seja	ser	AUX	_	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	aux:pass	_	_
+5	censurado	censurar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	1	ccomp	_	SpaceAfter=No
+6	.	.	PUNCT	_	_	1	punct	_	_
+

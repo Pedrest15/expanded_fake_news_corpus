@@ -1,0 +1,478 @@
+# sent_id = fakebr:1006-1
+# text = URGENTE:
+1	URGENTE	URGENTE	PROPN	_	_	0	root	_	SpaceAfter=No
+2	:	:	PUNCT	_	_	1	punct	_	_
+
+# sent_id = fakebr:1006-2
+# text = Vazamento de áudio expõe farsa no julgamento de Lula!
+1	Vazamento	vazamento	NOUN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
+2	de	de	ADP	_	_	3	case	_	_
+3	áudio	áudio	NOUN	_	Gender=Masc|Number=Sing	1	nmod	_	_
+4	expõe	expor	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+5	farsa	farsa	NOUN	_	Gender=Fem|Number=Sing	4	obj	_	_
+6-7	no	_	_	_	_	_	_	_	_
+6	em	em	ADP	_	_	8	case	_	_
+7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
+8	julgamento	julgamento	NOUN	_	Gender=Masc|Number=Sing	4	obl	_	_
+9	de	de	ADP	_	_	10	case	_	_
+10	Lula	Lula	PROPN	_	_	8	nmod	_	SpaceAfter=No
+11	!	!	PUNCT	_	_	4	punct	_	_
+
+# sent_id = fakebr:1006-3
+# text = Desembargadores confessam que condenação foi encomendada.
+1	Desembargadores	desembargadore	NOUN	_	Gender=Masc|Number=Plur	2	nsubj	_	_
+2	confessam	confessar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+3	que	que	SCONJ	_	_	6	mark	_	_
+4	condenação	condenação	NOUN	_	Gender=Fem|Number=Sing	6	nsubj:pass	_	_
+5	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	aux:pass	_	_
+6	encomendada	encomendar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	2	ccomp	_	SpaceAfter=No
+7	.	.	PUNCT	_	_	2	punct	_	_
+
+# sent_id = fakebr:1006-4
+# text = Em explosiva revelação que abala o Brasil, áudios obtidos com exclusividade por nossa reportagem mostram que os três desembargadores da 8ª Turma do TRF-4 admitiram ter recebido ordens diretas para condenar o ex-presidente Lula.
+1	Em	em	ADP	_	_	3	case	_	_
+2	explosiva	explosivo	ADJ	_	Gender=Fem|Number=Sing	3	amod	_	_
+3	revelação	revelação	NOUN	_	Gender=Fem|Number=Sing	16	obl	_	_
+4	que	que	PRON	_	PronType=Rel	5	nsubj	_	_
+5	abala	abalar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	acl:relcl	_	_
+6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
+7	Brasil	Brasil	PROPN	_	_	5	obj	_	SpaceAfter=No
+8	,	,	PUNCT	_	_	3	punct	_	_
+9	áudios	áudio	NOUN	_	Gender=Masc|Number=Plur	16	nsubj	_	_
+10	obtidos	obter	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	9	acl	_	_
+11	com	com	ADP	_	_	12	case	_	_
+12	exclusividade	exclusividade	NOUN	_	Gender=Fem|Number=Sing	10	obl	_	_
+13	por	por	ADP	_	_	15	case	_	_
+14	nossa	nosso	DET	_	Gender=Fem|Number=Sing|Person=1|Poss=Yes|PronType=Prs	15	det	_	_
+15	reportagem	reportagem	NOUN	_	Gender=Fem|Number=Sing	10	obl:agent	_	_
+16	mostram	mostrar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+17	que	que	SCONJ	_	_	28	mark	_	_
+18	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	20	det	_	_
+19	três	três	NUM	_	NumType=Card	20	nummod	_	_
+20	desembargadores	desembargador	NOUN	_	Gender=Masc|Number=Plur	28	nsubj	_	_
+21-22	da	_	_	_	_	_	_	_	_
+21	de	de	ADP	_	_	24	case	_	_
+22	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	24	det	_	_
+23	8ª	8ª	ADJ	_	Gender=Fem|NumType=Ord	24	amod	_	_
+24	Turma	Turma	PROPN	_	_	20	nmod	_	_
+25-26	do	_	_	_	_	_	_	_	_
+25	de	de	ADP	_	_	27	case	_	_
+26	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	27	det	_	_
+27	TRF-4	TRF-4	PROPN	_	_	24	nmod	_	_
+28	admitiram	admitir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	16	ccomp	_	_
+29	ter	ter	AUX	_	VerbForm=Inf	30	aux	_	_
+30	recebido	receber	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	28	xcomp	_	_
+31	ordens	orden	NOUN	_	Gender=Fem|Number=Plur	30	obj	_	_
+32	diretas	direto	ADJ	_	Gender=Fem|Number=Plur	31	amod	_	_
+33	para	para	ADP	_	_	34	mark	_	_
+34	condenar	condenar	VERB	_	VerbForm=Inf	31	acl	_	_
+35	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	36	det	_	_
+36	ex-presidente	ex-presidente	NOUN	_	Number=Sing	34	obj	_	_
+37	Lula	Lula	PROPN	_	_	36	nmod	_	SpaceAfter=No
+38	.	.	PUNCT	_	_	16	punct	_	_
+
+# sent_id = fakebr:1006-5
+# text = Na gravação, feita dois dias antes do julgamento, os magistrados João Pedro Gebran Neto, Leandro Paulsen e Victor dos Santos Laus aparecem combinando os votos e rindo da situação.
+1-2	Na	_	_	_	_	_	_	_	_
+1	Em	em	ADP	_	_	3	case	_	_
+2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
+3	gravação	gravação	NOUN	_	Gender=Fem|Number=Sing	28	obl	_	SpaceAfter=No
+4	,	,	PUNCT	_	_	5	punct	_	_
+5	feita	fazer	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	3	acl	_	_
+6	dois	dois	NUM	_	Gender=Masc|NumType=Card	7	nummod	_	_
+7	dias	dia	NOUN	_	Gender=Masc|Number=Plur	8	obl	_	_
+8	antes	antes	ADV	_	_	5	advmod	_	_
+9-10	do	_	_	_	_	_	_	_	_
+9	de	de	ADP	_	_	11	case	_	_
+10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
+11	julgamento	julgamento	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	SpaceAfter=No
+12	,	,	PUNCT	_	_	5	punct	_	_
+13	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	14	det	_	_
+14	magistrados	magistrado	NOUN	_	Gender=Masc|Number=Plur	28	nsubj	_	_
+15	João	João	PROPN	_	_	14	nmod	_	_
+16	Pedro	Pedro	PROPN	_	_	15	flat:name	_	_
+17	Gebran	Gebran	PROPN	_	_	15	flat:name	_	_
+18	Neto	Neto	PROPN	_	_	15	flat:name	_	SpaceAfter=No
+19	,	,	PUNCT	_	_	20	punct	_	_
+20	Leandro	Leandro	PROPN	_	_	15	conj	_	_
+21	Paulsen	Paulsen	PROPN	_	_	20	flat:name	_	_
+22	e	e	CCONJ	_	_	23	cc	_	_
+23	Victor	Victor	PROPN	_	_	15	conj	_	_
+24-25	dos	_	_	_	_	_	_	_	_
+24	de	de	ADP	_	_	26	case	_	_
+25	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	26	det	_	_
+26	Santos	Santos	PROPN	_	_	23	flat:name	_	_
+27	Laus	Laus	PROPN	_	_	23	flat:name	_	_
+28	aparecem	aparecer	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+29	combinando	combinar	VERB	_	VerbForm=Ger	28	advcl	_	_
+30	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	31	det	_	_
+31	votos	voto	NOUN	_	Gender=Masc|Number=Plur	29	obj	_	_
+32	e	e	CCONJ	_	_	33	cc	_	_
+33	rindo	rir	VERB	_	VerbForm=Ger	29	conj	_	_
+34-35	da	_	_	_	_	_	_	_	_
+34	de	de	ADP	_	_	36	case	_	_
+35	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	36	det	_	_
+36	situação	situação	NOUN	_	Gender=Fem|Number=Sing	33	obl	_	SpaceAfter=No
+37	.	.	PUNCT	_	_	28	punct	_	_
+
+# sent_id = fakebr:1006-6
+# text = "Não importa o que a defesa apresente, o resultado já está decidido", diz um dos desembargadores no áudio vazado.
+1	"	"	PUNCT	_	_	14	punct	_	SpaceAfter=No
+2	Não	não	ADV	_	_	3	advmod	_	_
+3	importa	importar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	advcl	_	_
+4	o	o	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Dem	3	obj	_	_
+5	que	que	PRON	_	PronType=Rel	8	obj	_	_
+6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
+7	defesa	defesa	NOUN	_	Gender=Fem|Number=Sing	8	nsubj	_	_
+8	apresente	apresentar	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	acl:relcl	_	SpaceAfter=No
+9	,	,	PUNCT	_	_	3	punct	_	_
+10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
+11	resultado	resultado	NOUN	_	Gender=Masc|Number=Sing	14	nsubj	_	_
+12	já	já	ADV	_	_	14	advmod	_	_
+13	está	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	cop	_	_
+14	decidido	decidido	ADJ	_	Gender=Masc|Number=Sing|VerbForm=Part	17	ccomp:speech	_	SpaceAfter=No
+15	"	"	PUNCT	_	_	14	punct	_	SpaceAfter=No
+16	,	,	PUNCT	_	_	14	punct	_	_
+17	diz	dizer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+18	um	um	NUM	_	Gender=Masc|NumType=Card	17	nsubj	_	_
+19-20	dos	_	_	_	_	_	_	_	_
+19	de	de	ADP	_	_	21	case	_	_
+20	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	21	det	_	_
+21	desembargadores	desembargador	NOUN	_	Gender=Masc|Number=Plur	18	nmod	_	_
+22-23	no	_	_	_	_	_	_	_	_
+22	em	em	ADP	_	_	24	case	_	_
+23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	_	_
+24	áudio	áudio	NOUN	_	Gender=Masc|Number=Sing	17	obl	_	_
+25	vazado	vazar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	24	acl	_	SpaceAfter=No
+26	.	.	PUNCT	_	_	17	punct	_	_
+
+# sent_id = fakebr:1006-7
+# text = Outro completa:
+1	Outro	outro	PRON	_	Gender=Masc|Number=Sing|PronType=Ind	2	nsubj	_	_
+2	completa	completar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	SpaceAfter=No
+3	:	:	PUNCT	_	_	2	punct	_	_
+
+# sent_id = fakebr:1006-8
+# text = "Vamos aumentar a pena para garantir que ele não saia tão cedo".
+1	"	"	PUNCT	_	_	3	punct	_	SpaceAfter=No
+2	Vamos	ir	AUX	_	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	3	aux	_	_
+3	aumentar	aumentar	VERB	_	VerbForm=Inf	0	root	_	_
+4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
+5	pena	pena	NOUN	_	Gender=Fem|Number=Sing	3	obj	_	_
+6	para	para	ADP	_	_	7	mark	_	_
+7	garantir	garantir	VERB	_	VerbForm=Inf	3	advcl	_	_
+8	que	que	SCONJ	_	_	11	mark	_	_
+9	ele	ele	PRON	_	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	11	nsubj	_	_
+10	não	não	ADV	_	_	11	advmod	_	_
+11	saia	sair	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	ccomp	_	_
+12	tão	tão	ADV	_	_	13	advmod	_	_
+13	cedo	cedo	ADV	_	_	11	advmod	_	SpaceAfter=No
+14	"	"	PUNCT	_	_	3	punct	_	SpaceAfter=No
+15	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = fakebr:1006-9
+# text = As gravações foram autenticadas por três peritos independentes e já circulam nas redes sociais.
+1	As	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	2	det	_	_
+2	gravações	gravação	NOUN	_	Gender=Fem|Number=Plur	4	nsubj:pass	_	_
+3	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	4	aux:pass	_	_
+4	autenticadas	autenticar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	0	root	_	_
+5	por	por	ADP	_	_	7	case	_	_
+6	três	três	NUM	_	NumType=Card	7	nummod	_	_
+7	peritos	perito	NOUN	_	Gender=Masc|Number=Plur	4	obl:agent	_	_
+8	independentes	independente	ADJ	_	Number=Plur	7	amod	_	_
+9	e	e	CCONJ	_	_	11	cc	_	_
+10	já	já	ADV	_	_	11	advmod	_	_
+11	circulam	circular	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	4	conj	_	_
+12-13	nas	_	_	_	_	_	_	_	_
+12	em	em	ADP	_	_	14	case	_	_
+13	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	14	det	_	_
+14	redes	rede	NOUN	_	Gender=Fem|Number=Plur	11	obl	_	_
+15	sociais	social	ADJ	_	Number=Plur	14	amod	_	SpaceAfter=No
+16	.	.	PUNCT	_	_	4	punct	_	_
+
+# sent_id = fakebr:1006-10
+# text = Além disso, documentos confidenciais obtidos pela reportagem revelam que o apartamento triplex nunca passou por reformas para Lula.
+1	Além	além	ADV	_	_	11	advmod	_	_
+2-3	disso	_	_	_	_	_	_	_	SpaceAfter=No
+2	de	de	ADP	_	_	3	case	_	_
+3	isso	isso	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	1	obl	_	_
+4	,	,	PUNCT	_	_	1	punct	_	_
+5	documentos	documento	NOUN	_	Gender=Masc|Number=Plur	11	nsubj	_	_
+6	confidenciais	confidencial	ADJ	_	Number=Plur	5	amod	_	_
+7	obtidos	obter	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	5	acl	_	_
+8-9	pela	_	_	_	_	_	_	_	_
+8	por	por	ADP	_	_	10	case	_	_
+9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
+10	reportagem	reportagem	NOUN	_	Gender=Fem|Number=Sing	7	obl:agent	_	_
+11	revelam	revelar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+12	que	que	SCONJ	_	_	17	mark	_	_
+13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
+14	apartamento	apartamento	NOUN	_	Gender=Masc|Number=Sing	17	nsubj	_	_
+15	triplex	triplex	NOUN	_	Foreign=Yes|Gender=Masc|Number=Sing	14	nmod	_	_
+16	nunca	nunca	ADV	_	_	17	advmod	_	_
+17	passou	passar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	ccomp	_	_
+18	por	por	ADP	_	_	19	case	_	_
+19	reformas	reforma	NOUN	_	Gender=Fem|Number=Plur	17	obl	_	_
+20	para	para	ADP	_	_	21	case	_	_
+21	Lula	Lula	PROPN	_	_	19	nmod	_	SpaceAfter=No
+22	.	.	PUNCT	_	_	11	punct	_	_
+
+# sent_id = fakebr:1006-11
+# text = As notas fiscais apresentadas pela acusação são falsificações grosseiras, segundo laudo pericial encomendado por entidades internacionais de direitos humanos.
+1	As	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	2	det	_	_
+2	notas	nota	NOUN	_	Gender=Fem|Number=Plur	9	nsubj	_	_
+3	fiscais	fiscal	ADJ	_	Number=Plur	2	amod	_	_
+4	apresentadas	apresentar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	2	acl	_	_
+5-6	pela	_	_	_	_	_	_	_	_
+5	por	por	ADP	_	_	7	case	_	_
+6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
+7	acusação	acusação	NOUN	_	Gender=Fem|Number=Sing	4	obl:agent	_	_
+8	são	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	9	cop	_	_
+9	falsificações	falsificação	NOUN	_	Gender=Fem|Number=Plur	0	root	_	_
+10	grosseiras	grosseiro	ADJ	_	Gender=Fem|Number=Plur	9	amod	_	SpaceAfter=No
+11	,	,	PUNCT	_	_	13	punct	_	_
+12	segundo	segundo	ADP	_	_	13	case	_	_
+13	laudo	laudo	NOUN	_	Gender=Masc|Number=Sing	9	nmod	_	_
+14	pericial	pericial	ADJ	_	Number=Sing	13	amod	_	_
+15	encomendado	encomendar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	13	acl	_	_
+16	por	por	ADP	_	_	17	case	_	_
+17	entidades	entidade	NOUN	_	Gender=Fem|Number=Plur	15	obl:agent	_	_
+18	internacionais	internacional	ADJ	_	Number=Plur	17	amod	_	_
+19	de	de	ADP	_	_	20	case	_	_
+20	direitos	direito	NOUN	_	Gender=Masc|Number=Plur	17	nmod	_	_
+21	humanos	humano	ADJ	_	Gender=Masc|Number=Plur	20	amod	_	SpaceAfter=No
+22	.	.	PUNCT	_	_	9	punct	_	_
+
+# sent_id = fakebr:1006-12
+# text = O verdadeiro dono do imóvel, um empresário que preferiu não se identificar por medo de retaliação, confirma que jamais vendeu ou cedeu o apartamento ao ex-presidente.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
+2	verdadeiro	verdadeiro	ADJ	_	Gender=Masc|Number=Sing	3	amod	_	_
+3	dono	dono	NOUN	_	Gender=Masc|Number=Sing	20	nsubj	_	_
+4-5	do	_	_	_	_	_	_	_	_
+4	de	de	ADP	_	_	6	case	_	_
+5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
+6	imóvel	imóvel	NOUN	_	Number=Sing	3	nmod	_	SpaceAfter=No
+7	,	,	PUNCT	_	_	9	punct	_	_
+8	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
+9	empresário	empresário	NOUN	_	Gender=Masc|Number=Sing	3	appos	_	_
+10	que	que	PRON	_	PronType=Rel	11	nsubj	_	_
+11	preferiu	preferir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	acl:relcl	_	_
+12	não	não	ADV	_	_	14	advmod	_	_
+13	se	se	PRON	_	Case=Nom|Person=3|PronType=Prs	14	expl	_	_
+14	identificar	identificar	VERB	_	VerbForm=Inf	11	xcomp	_	_
+15	por	por	ADP	_	_	16	case	_	_
+16	medo	medo	NOUN	_	Gender=Masc|Number=Sing	14	obl	_	_
+17	de	de	ADP	_	_	18	case	_	_
+18	retaliação	retaliação	NOUN	_	Gender=Fem|Number=Sing	16	nmod	_	SpaceAfter=No
+19	,	,	PUNCT	_	_	9	punct	_	_
+20	confirma	confirmar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+21	que	que	SCONJ	_	_	23	mark	_	_
+22	jamais	jamais	ADV	_	_	23	advmod	_	_
+23	vendeu	vender	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	20	ccomp	_	_
+24	ou	ou	CCONJ	_	_	25	cc	_	_
+25	cedeu	ceder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	23	conj	_	_
+26	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	27	det	_	_
+27	apartamento	apartamento	NOUN	_	Gender=Masc|Number=Sing	23	obj	_	_
+28-29	ao	_	_	_	_	_	_	_	_
+28	a	a	ADP	_	_	30	case	_	_
+29	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	30	det	_	_
+30	ex-presidente	ex-presidente	NOUN	_	Number=Sing	23	obl	_	SpaceAfter=No
+31	.	.	PUNCT	_	_	20	punct	_	_
+
+# sent_id = fakebr:1006-13
+# text = Mais chocante ainda: testemunhas relatam que Léo Pinheiro, ex-presidente da OAS, foi torturado psicologicamente durante 47 dias seguidos até aceitar mentir contra Lula em troca de redução de pena.
+1	Mais	mais	ADV	_	_	2	advmod	_	_
+2	chocante	chocante	ADJ	_	Number=Sing	0	root	_	_
+3	ainda	ainda	ADV	_	_	2	advmod	_	SpaceAfter=No
+4	:	:	PUNCT	_	_	6	punct	_	_
+5	testemunhas	testemunha	NOUN	_	Gender=Fem|Number=Plur	6	nsubj	_	_
+6	relatam	relatar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	2	parataxis	_	_
+7	que	que	SCONJ	_	_	17	mark	_	_
+8	Léo	Léo	PROPN	_	_	17	nsubj:pass	_	_
+9	Pinheiro	Pinheiro	PROPN	_	_	8	flat:name	_	SpaceAfter=No
+10	,	,	PUNCT	_	_	11	punct	_	_
+11	ex-presidente	ex-presidente	NOUN	_	Number=Sing	8	appos	_	_
+12-13	da	_	_	_	_	_	_	_	_
+12	de	de	ADP	_	_	14	case	_	_
+13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
+14	OAS	OAS	PROPN	_	_	11	nmod	_	SpaceAfter=No
+15	,	,	PUNCT	_	_	11	punct	_	_
+16	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	17	aux:pass	_	_
+17	torturado	torturar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	6	ccomp	_	_
+18	psicologicamente	psicologicamente	ADV	_	_	17	advmod	_	_
+19	durante	durante	ADP	_	_	21	case	_	_
+20	47	47	NUM	_	NumType=Card	21	nummod	_	_
+21	dias	dia	NOUN	_	Gender=Masc|Number=Plur	17	obl	_	_
+22	seguidos	seguido	ADJ	_	Gender=Masc|Number=Plur|VerbForm=Part	21	amod	_	_
+23	até	até	ADP	_	_	24	mark	_	_
+24	aceitar	aceitar	VERB	_	VerbForm=Inf	17	advcl	_	_
+25	mentir	mentir	VERB	_	VerbForm=Inf	24	xcomp	_	_
+26	contra	contra	ADP	_	_	27	case	_	_
+27	Lula	Lula	PROPN	_	_	25	obl	_	_
+28	em	em	ADP	_	_	29	case	_	_
+29	troca	troca	NOUN	_	Gender=Fem|Number=Sing	25	obl	_	_
+30	de	de	ADP	_	_	31	case	_	_
+31	redução	redução	NOUN	_	Gender=Fem|Number=Sing	29	nmod	_	_
+32	de	de	ADP	_	_	33	case	_	_
+33	pena	pena	NOUN	_	Gender=Fem|Number=Sing	31	nmod	_	SpaceAfter=No
+34	.	.	PUNCT	_	_	2	punct	_	_
+
+# sent_id = fakebr:1006-14
+# text = Médicos que o atenderam na prisão confirmam sinais de trauma severo e dizem que ele chegou a tentar suicídio três vezes.
+1	Médicos	médico	NOUN	_	Gender=Masc|Number=Plur	8	nsubj	_	_
+2	que	que	PRON	_	PronType=Rel	4	nsubj	_	_
+3	o	o	PRON	_	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	obj	_	_
+4	atenderam	atender	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	1	acl:relcl	_	_
+5-6	na	_	_	_	_	_	_	_	_
+5	em	em	ADP	_	_	7	case	_	_
+6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
+7	prisão	prisão	NOUN	_	Gender=Fem|Number=Sing	4	obl	_	_
+8	confirmam	confirmar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+9	sinais	sinal	NOUN	_	Gender=Masc|Number=Plur	8	obj	_	_
+10	de	de	ADP	_	_	11	case	_	_
+11	trauma	trauma	NOUN	_	Gender=Masc|Number=Sing	9	nmod	_	_
+12	severo	severo	ADJ	_	Gender=Masc|Number=Sing	11	amod	_	_
+13	e	e	CCONJ	_	_	14	cc	_	_
+14	dizem	dizer	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	8	conj	_	_
+15	que	que	SCONJ	_	_	17	mark	_	_
+16	ele	ele	PRON	_	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	17	nsubj	_	_
+17	chegou	chegar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	ccomp	_	_
+18	a	a	ADP	_	_	19	mark	_	_
+19	tentar	tentar	VERB	_	VerbForm=Inf	17	xcomp	_	_
+20	suicídio	suicídio	NOUN	_	Gender=Masc|Number=Sing	19	obj	_	_
+21	três	três	NUM	_	NumType=Card	22	nummod	_	_
+22	vezes	vez	NOUN	_	Gender=Fem|Number=Plur	19	obl	_	SpaceAfter=No
+23	.	.	PUNCT	_	_	8	punct	_	_
+
+# sent_id = fakebr:1006-15
+# text = O procurador Maurício Gerum, que apresentou a acusação, possui contas bancárias secretas no exterior que receberam depósitos milionários de origem desconhecida uma semana antes do julgamento, segundo investigação paralela de jornalistas investigativos.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
+2	procurador	procurador	NOUN	_	Gender=Masc|Number=Sing	11	nsubj	_	_
+3	Maurício	Maurício	PROPN	_	_	2	nmod	_	_
+4	Gerum	Gerum	PROPN	_	_	3	flat:name	_	SpaceAfter=No
+5	,	,	PUNCT	_	_	7	punct	_	_
+6	que	que	PRON	_	PronType=Rel	7	nsubj	_	_
+7	apresentou	apresentar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	acl:relcl	_	_
+8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	_	_
+9	acusação	acusação	NOUN	_	Gender=Fem|Number=Sing	7	obj	_	SpaceAfter=No
+10	,	,	PUNCT	_	_	7	punct	_	_
+11	possui	possuir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+12	contas	conta	NOUN	_	Gender=Fem|Number=Plur	11	obj	_	_
+13	bancárias	bancário	ADJ	_	Gender=Fem|Number=Plur	12	amod	_	_
+14	secretas	secreto	ADJ	_	Gender=Fem|Number=Plur	12	amod	_	_
+15-16	no	_	_	_	_	_	_	_	_
+15	em	em	ADP	_	_	17	case	_	_
+16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
+17	exterior	exterior	NOUN	_	Number=Sing	12	nmod	_	_
+18	que	que	PRON	_	PronType=Rel	19	nsubj	_	_
+19	receberam	receber	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	12	acl:relcl	_	_
+20	depósitos	depósito	NOUN	_	Gender=Masc|Number=Plur	19	obj	_	_
+21	milionários	milionário	ADJ	_	Gender=Masc|Number=Plur	20	amod	_	_
+22	de	de	ADP	_	_	23	case	_	_
+23	origem	origem	NOUN	_	Gender=Fem|Number=Sing	20	nmod	_	_
+24	desconhecida	desconhecido	ADJ	_	Gender=Fem|Number=Sing|VerbForm=Part	23	amod	_	_
+25	uma	um	NUM	_	Gender=Fem|NumType=Card	26	nummod	_	_
+26	semana	semana	NOUN	_	Gender=Fem|Number=Sing	27	obl	_	_
+27	antes	antes	ADV	_	_	19	advmod	_	_
+28-29	do	_	_	_	_	_	_	_	_
+28	de	de	ADP	_	_	30	case	_	_
+29	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	30	det	_	_
+30	julgamento	julgamento	NOUN	_	Gender=Masc|Number=Sing	27	obl	_	SpaceAfter=No
+31	,	,	PUNCT	_	_	33	punct	_	_
+32	segundo	segundo	ADP	_	_	33	case	_	_
+33	investigação	investigação	NOUN	_	Gender=Fem|Number=Sing	19	obl	_	_
+34	paralela	paralelo	ADJ	_	Gender=Fem|Number=Sing	33	amod	_	_
+35	de	de	ADP	_	_	36	case	_	_
+36	jornalistas	jornalista	NOUN	_	Number=Plur	33	nmod	_	_
+37	investigativos	investigativo	ADJ	_	Gender=Masc|Number=Plur	36	amod	_	SpaceAfter=No
+38	.	.	PUNCT	_	_	11	punct	_	_
+
+# sent_id = fakebr:1006-16
+# text = Quando questionado, Gerum se recusou a comentar e cancelou todas as entrevistas agendadas.
+1	Quando	quando	SCONJ	_	_	2	mark	_	_
+2	questionado	questionar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	6	advcl	_	SpaceAfter=No
+3	,	,	PUNCT	_	_	2	punct	_	_
+4	Gerum	Gerum	PROPN	_	_	6	nsubj	_	_
+5	se	se	PRON	_	Case=Nom|Person=3|PronType=Prs	6	expl	_	_
+6	recusou	recusar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+7	a	a	ADP	_	_	8	mark	_	_
+8	comentar	comentar	VERB	_	VerbForm=Inf	6	xcomp	_	_
+9	e	e	CCONJ	_	_	10	cc	_	_
+10	cancelou	cancelar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	conj	_	_
+11	todas	todo	DET	_	Gender=Fem|Number=Plur|PronType=Ind	13	det	_	_
+12	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	13	det	_	_
+13	entrevistas	entrevista	NOUN	_	Gender=Fem|Number=Plur	10	obj	_	_
+14	agendadas	agendar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	13	acl	_	SpaceAfter=No
+15	.	.	PUNCT	_	_	6	punct	_	_
+
+# sent_id = fakebr:1006-17
+# text = Juristas internacionais classificam o caso como "o maior escândalo judicial do século".
+1	Juristas	jurista	NOUN	_	Number=Plur	3	nsubj	_	_
+2	internacionais	internacional	ADJ	_	Number=Plur	1	amod	_	_
+3	classificam	classificar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
+5	caso	caso	NOUN	_	Gender=Masc|Number=Sing	3	obj	_	_
+6	como	como	ADP	_	_	10	case	_	_
+7	"	"	PUNCT	_	_	10	punct	_	SpaceAfter=No
+8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
+9	maior	maior	ADJ	_	Number=Sing	10	amod	_	_
+10	escândalo	escândalo	NOUN	_	Gender=Masc|Number=Sing	3	obl	_	_
+11	judicial	judicial	ADJ	_	Number=Sing	10	amod	_	_
+12-13	do	_	_	_	_	_	_	_	_
+12	de	de	ADP	_	_	14	case	_	_
+13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
+14	século	século	NOUN	_	Gender=Masc|Number=Sing	10	nmod	_	SpaceAfter=No
+15	"	"	PUNCT	_	_	10	punct	_	SpaceAfter=No
+16	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = fakebr:1006-18
+# text = A ONU já prepara relatório sobre perseguição política no Brasil.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	ONU	ONU	PROPN	_	_	4	nsubj	_	_
+3	já	já	ADV	_	_	4	advmod	_	_
+4	prepara	preparar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+5	relatório	relatório	NOUN	_	Gender=Masc|Number=Sing	4	obj	_	_
+6	sobre	sobre	ADP	_	_	7	case	_	_
+7	perseguição	perseguição	NOUN	_	Gender=Fem|Number=Sing	5	nmod	_	_
+8	política	político	ADJ	_	Gender=Fem|Number=Sing	7	amod	_	_
+9-10	no	_	_	_	_	_	_	_	_
+9	em	em	ADP	_	_	11	case	_	_
+10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
+11	Brasil	Brasil	PROPN	_	_	7	nmod	_	SpaceAfter=No
+12	.	.	PUNCT	_	_	4	punct	_	_
+
+# sent_id = fakebr:1006-19
+# text = Manifestações massivas estão sendo organizadas em todo país para esta semana.
+1	Manifestações	manifestação	NOUN	_	Gender=Fem|Number=Plur	5	nsubj:pass	_	_
+2	massivas	massivo	ADJ	_	Gender=Fem|Number=Plur	1	amod	_	_
+3	estão	estar	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	aux	_	_
+4	sendo	ser	AUX	_	VerbForm=Ger	5	aux:pass	_	_
+5	organizadas	organizar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	0	root	_	_
+6	em	em	ADP	_	_	8	case	_	_
+7	todo	todo	DET	_	Gender=Masc|Number=Sing|PronType=Ind	8	det	_	_
+8	país	país	NOUN	_	Gender=Masc|Number=Sing	5	obl	_	_
+9	para	para	ADP	_	_	11	case	_	_
+10	esta	este	DET	_	Gender=Fem|Number=Sing|PronType=Dem	11	det	_	_
+11	semana	semana	NOUN	_	Gender=Fem|Number=Sing	5	obl	_	SpaceAfter=No
+12	.	.	PUNCT	_	_	5	punct	_	_
+
+# sent_id = fakebr:1006-20
+# text = O que estão escondendo de você?
+1	O	o	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Dem	4	obj	_	_
+2	que	que	PRON	_	PronType=Int	1	fixed	_	_
+3	estão	estar	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	4	aux	_	_
+4	escondendo	esconder	VERB	_	VerbForm=Ger	0	root	_	_
+5	de	de	ADP	_	_	6	case	_	_
+6	você	você	PRON	_	Case=Nom|Number=Sing|Person=2|PronType=Prs	4	obl	_	SpaceAfter=No
+7	?	?	PUNCT	_	_	4	punct	_	_
+
+# sent_id = fakebr:1006-21
+# text = COMPARTILHE antes que removam esta notícia!
+1	COMPARTILHE	compartilhar	VERB	_	Mood=Imp|Number=Sing|Person=3|VerbForm=Fin	0	root	_	_
+2	antes	antes	ADV	_	_	4	mark	_	_
+3	que	que	SCONJ	_	_	2	fixed	_	_
+4	removam	remover	VERB	_	Mood=Sub|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	1	ccomp	_	_
+5	esta	este	DET	_	Gender=Fem|Number=Sing|PronType=Dem	6	det	_	_
+6	notícia	notícia	NOUN	_	Gender=Fem|Number=Sing	4	obj	_	SpaceAfter=No
+7	!	!	PUNCT	_	_	1	punct	_	_
+

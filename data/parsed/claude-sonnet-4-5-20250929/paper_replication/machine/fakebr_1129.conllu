@@ -1,0 +1,1137 @@
+# sent_id = fakebr:1129-1
+# text = Escândalo:
+1	Escândalo	escândalo	NOUN	_	Gender=Masc|Number=Sing	0	root	_	SpaceAfter=No
+2	:	:	PUNCT	_	_	1	punct	_	_
+
+# sent_id = fakebr:1129-2
+# text = Congresso aprova às escondidas fundo bilionário para políticos em meio ao caos; população não será consultada.
+1	Congresso	Congresso	PROPN	_	_	2	nsubj	_	_
+2	aprova	aprovar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+3-4	às	_	_	_	_	_	_	_	_
+3	a	a	ADP	_	_	5	case	_	_
+4	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	5	det	_	_
+5	escondidas	escondido	NOUN	_	Gender=Fem|Number=Plur|VerbForm=Part	2	obl	_	_
+6	fundo	fundo	NOUN	_	Gender=Masc|Number=Sing	2	obj	_	_
+7	bilionário	bilionário	ADJ	_	Gender=Masc|Number=Sing	6	amod	_	_
+8	para	para	ADP	_	_	9	case	_	_
+9	políticos	político	NOUN	_	Gender=Masc|Number=Plur	6	nmod	_	_
+10	em	em	ADP	_	_	14	case	_	_
+11	meio	meio	NOUN	_	Gender=Masc|Number=Sing	10	fixed	_	_
+12-13	ao	_	_	_	_	_	_	_	_
+12	a	a	ADP	_	_	10	fixed	_	_
+13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
+14	caos	caos	NOUN	_	Gender=Masc|Number=Sing	2	obl	_	SpaceAfter=No
+15	;	;	PUNCT	_	_	19	punct	_	_
+16	população	população	NOUN	_	Gender=Fem|Number=Sing	19	nsubj:pass	_	_
+17	não	não	ADV	_	_	19	advmod	_	_
+18	será	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin	19	aux:pass	_	_
+19	consultada	consultar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	2	parataxis	_	SpaceAfter=No
+20	.	.	PUNCT	_	_	2	punct	_	_
+
+# sent_id = fakebr:1129-3
+# text = Parlamentares votam em REGIME DE URGÊNCIA reforma que destina R$ 3,6 bilhões do seu bolso para campanhas políticas.
+1	Parlamentares	parlamentar	NOUN	_	Number=Plur	2	nsubj	_	_
+2	votam	votar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+3	em	em	ADP	_	_	4	case	_	_
+4	REGIME	REGIME	PROPN	_	_	2	obl	_	_
+5	DE	de	ADP	_	_	6	case	_	_
+6	URGÊNCIA	URGÊNCIA	PROPN	_	_	4	nmod	_	_
+7	reforma	reforma	NOUN	_	Gender=Fem|Number=Sing	2	obj	_	_
+8	que	que	PRON	_	PronType=Rel	9	nsubj	_	_
+9	destina	destinar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	acl:relcl	_	_
+10	R$	R$	SYM	_	_	12	nmod	_	_
+11	3,6	3,6	NUM	_	NumType=Card	12	nummod	_	_
+12	bilhões	bilhão	NOUN	_	Gender=Masc|Number=Plur	9	obj	_	_
+13-14	do	_	_	_	_	_	_	_	_
+13	de	de	ADP	_	_	16	case	_	_
+14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	_	_
+15	seu	seu	DET	_	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	16	det	_	_
+16	bolso	bolso	NOUN	_	Gender=Masc|Number=Sing	12	nmod	_	_
+17	para	para	ADP	_	_	18	case	_	_
+18	campanhas	campanha	NOUN	_	Gender=Fem|Number=Plur	9	obl	_	_
+19	políticas	político	ADJ	_	Gender=Fem|Number=Plur	18	amod	_	SpaceAfter=No
+20	.	.	PUNCT	_	_	2	punct	_	_
+
+# sent_id = fakebr:1129-4
+# text = VOCÊ VAI PAGAR A CONTA e ninguém te perguntou nada!
+1	VOCÊ	você	PRON	_	Case=Nom|Number=Sing|Person=2|PronType=Prs	3	nsubj	_	_
+2	VAI	VAI	PROPN	_	_	3	aux	_	_
+3	PAGAR	pagar	VERB	_	VerbForm=Inf	0	root	_	_
+4	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
+5	CONTA	CONTA	PROPN	_	_	3	obj	_	_
+6	e	e	CCONJ	_	_	9	cc	_	_
+7	ninguém	ninguém	PRON	_	Number=Sing|PronType=Ind	9	nsubj	_	_
+8	te	te	PRON	_	Case=Acc|Number=Sing|Person=2|PronType=Prs	9	iobj	_	_
+9	perguntou	perguntar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	conj	_	_
+10	nada	nada	PRON	_	Gender=Masc|Number=Sing|PronType=Ind	9	obj	_	SpaceAfter=No
+11	!	!	PUNCT	_	_	3	punct	_	_
+
+# sent_id = fakebr:1129-5
+# text = Em meio ao maior esquema de corrupção da história do Brasil, deputados e senadores se uniram em SEGREDO ABSOLUTO para aprovar uma das maiores roubalheiras já vistas: a criação de um fundo de R$ 3,6 BILHÕES retirados diretamente dos impostos que você paga para financiar suas próprias campanhas eleitorais!
+1	Em	em	ADP	_	_	6	case	_	_
+2	meio	meio	NOUN	_	Gender=Masc|Number=Sing	1	fixed	_	_
+3-4	ao	_	_	_	_	_	_	_	_
+3	a	a	ADP	_	_	1	fixed	_	_
+4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
+5	maior	maior	ADJ	_	Number=Sing	6	amod	_	_
+6	esquema	esquema	NOUN	_	Gender=Masc|Number=Sing	20	obl	_	_
+7	de	de	ADP	_	_	8	case	_	_
+8	corrupção	corrupção	NOUN	_	Gender=Fem|Number=Sing	6	nmod	_	_
+9-10	da	_	_	_	_	_	_	_	_
+9	de	de	ADP	_	_	11	case	_	_
+10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	_	_
+11	história	história	NOUN	_	Gender=Fem|Number=Sing	6	nmod	_	_
+12-13	do	_	_	_	_	_	_	_	_
+12	de	de	ADP	_	_	14	case	_	_
+13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
+14	Brasil	Brasil	PROPN	_	_	11	nmod	_	SpaceAfter=No
+15	,	,	PUNCT	_	_	6	punct	_	_
+16	deputados	deputado	NOUN	_	Gender=Masc|Number=Plur	20	nsubj	_	_
+17	e	e	CCONJ	_	_	18	cc	_	_
+18	senadores	senador	NOUN	_	Gender=Masc|Number=Plur	16	conj	_	_
+19	se	se	PRON	_	Case=Nom|Person=3|PronType=Prs	20	expl	_	_
+20	uniram	unir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+21	em	em	ADP	_	_	22	case	_	_
+22	SEGREDO	SEGREDO	PROPN	_	_	20	obl	_	_
+23	ABSOLUTO	ABSOLUTO	PROPN	_	_	22	flat:name	_	_
+24	para	para	ADP	_	_	25	mark	_	_
+25	aprovar	aprovar	VERB	_	VerbForm=Inf	20	advcl	_	_
+26	uma	um	NUM	_	Gender=Fem|NumType=Card	25	obj	_	_
+27-28	das	_	_	_	_	_	_	_	_
+27	de	de	ADP	_	_	30	case	_	_
+28	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	30	det	_	_
+29	maiores	maior	ADJ	_	Number=Plur	30	amod	_	_
+30	roubalheiras	roubalheira	NOUN	_	Gender=Fem|Number=Plur	26	nmod	_	_
+31	já	já	ADV	_	_	32	advmod	_	_
+32	vistas	ver	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	30	acl	_	SpaceAfter=No
+33	:	:	PUNCT	_	_	35	punct	_	_
+34	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	35	det	_	_
+35	criação	criação	NOUN	_	Gender=Fem|Number=Sing	26	appos	_	_
+36	de	de	ADP	_	_	38	case	_	_
+37	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	38	det	_	_
+38	fundo	fundo	NOUN	_	Gender=Masc|Number=Sing	35	nmod	_	_
+39	de	de	ADP	_	_	42	case	_	_
+40	R$	R$	SYM	_	_	42	nmod	_	_
+41	3,6	3,6	NUM	_	NumType=Card	42	nummod	_	_
+42	BILHÕES	BILHÕES	PROPN	_	_	38	nmod	_	_
+43	retirados	retirar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	38	acl	_	_
+44	diretamente	diretamente	ADV	_	_	43	advmod	_	_
+45-46	dos	_	_	_	_	_	_	_	_
+45	de	de	ADP	_	_	47	case	_	_
+46	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	47	det	_	_
+47	impostos	imposto	NOUN	_	Gender=Masc|Number=Plur	43	obl	_	_
+48	que	que	PRON	_	PronType=Rel	50	obj	_	_
+49	você	você	PRON	_	Case=Nom|Number=Sing|Person=2|PronType=Prs	50	nsubj	_	_
+50	paga	pagar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	47	acl:relcl	_	_
+51	para	para	ADP	_	_	52	mark	_	_
+52	financiar	financiar	VERB	_	VerbForm=Inf	50	advcl	_	_
+53	suas	seu	DET	_	Gender=Fem|Number=Plur|Person=3|Poss=Yes|PronType=Prs	55	det	_	_
+54	próprias	próprio	ADJ	_	Gender=Fem|Number=Plur	55	amod	_	_
+55	campanhas	campanha	NOUN	_	Gender=Fem|Number=Plur	52	obj	_	_
+56	eleitorais	eleitoral	ADJ	_	Number=Plur	55	amod	_	SpaceAfter=No
+57	!	!	PUNCT	_	_	20	punct	_	_
+
+# sent_id = fakebr:1129-6
+# text = A votação está marcada para acontecer de forma RELÂMPAGO, sem debate com a população, em uma manobra que especialistas já chamam de "o grande assalto de 2017".
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	votação	votação	NOUN	_	Gender=Fem|Number=Sing	4	nsubj	_	_
+3	está	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	_	_
+4	marcada	marcado	ADJ	_	Gender=Fem|Number=Sing|VerbForm=Part	0	root	_	_
+5	para	para	ADP	_	_	6	mark	_	_
+6	acontecer	acontecer	VERB	_	VerbForm=Inf	4	advcl	_	_
+7	de	de	ADP	_	_	8	case	_	_
+8	forma	forma	NOUN	_	Gender=Fem|Number=Sing	6	obl	_	_
+9	RELÂMPAGO	RELÂMPAGO	ADJ	_	_	8	amod	_	SpaceAfter=No
+10	,	,	PUNCT	_	_	12	punct	_	_
+11	sem	sem	ADP	_	_	12	case	_	_
+12	debate	debate	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
+13	com	com	ADP	_	_	15	case	_	_
+14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
+15	população	população	NOUN	_	Gender=Fem|Number=Sing	12	nmod	_	SpaceAfter=No
+16	,	,	PUNCT	_	_	19	punct	_	_
+17	em	em	ADP	_	_	19	case	_	_
+18	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	19	det	_	_
+19	manobra	manobra	NOUN	_	Gender=Fem|Number=Sing	6	obl	_	_
+20	que	que	PRON	_	PronType=Rel	23	obj	_	_
+21	especialistas	especialista	NOUN	_	Number=Plur	23	nsubj	_	_
+22	já	já	ADV	_	_	23	advmod	_	_
+23	chamam	chamar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	19	acl:relcl	_	_
+24	de	de	ADP	_	_	28	case	_	_
+25	"	"	PUNCT	_	_	28	punct	_	SpaceAfter=No
+26	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	28	det	_	_
+27	grande	grande	ADJ	_	Number=Sing	28	amod	_	_
+28	assalto	assalto	NOUN	_	Gender=Masc|Number=Sing	23	obl	_	_
+29	de	de	ADP	_	_	30	case	_	_
+30	2017	2017	NUM	_	NumType=Card	28	nmod	_	SpaceAfter=No
+31	"	"	PUNCT	_	_	28	punct	_	SpaceAfter=No
+32	.	.	PUNCT	_	_	4	punct	_	_
+
+# sent_id = fakebr:1129-7
+# text = Enquanto hospitais fecham, escolas desmoronam e a população passa fome, os políticos garantem BILHÕES para suas campanhas luxuosas.
+1	Enquanto	enquanto	SCONJ	_	_	3	mark	_	_
+2	hospitais	hospital	NOUN	_	Gender=Masc|Number=Plur	3	nsubj	_	_
+3	fecham	fechar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	15	advcl	_	SpaceAfter=No
+4	,	,	PUNCT	_	_	5	punct	_	_
+5	escolas	escola	NOUN	_	Gender=Fem|Number=Plur	3	conj	_	_
+6	desmoronam	desmoronar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	conj	_	_
+7	e	e	CCONJ	_	_	10	cc	_	_
+8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	_	_
+9	população	população	NOUN	_	Gender=Fem|Number=Sing	10	nsubj	_	_
+10	passa	passar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	conj	_	_
+11	fome	fome	NOUN	_	Gender=Fem|Number=Sing	10	obj	_	SpaceAfter=No
+12	,	,	PUNCT	_	_	3	punct	_	_
+13	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	14	det	_	_
+14	políticos	político	NOUN	_	Gender=Masc|Number=Plur	15	nsubj	_	_
+15	garantem	garantir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+16	BILHÕES	BILHÕES	PROPN	_	_	15	obj	_	_
+17	para	para	ADP	_	_	19	case	_	_
+18	suas	seu	DET	_	Gender=Fem|Number=Plur|Person=3|Poss=Yes|PronType=Prs	19	det	_	_
+19	campanhas	campanha	NOUN	_	Gender=Fem|Number=Plur	15	obl	_	_
+20	luxuosas	luxuoso	ADJ	_	Gender=Fem|Number=Plur	19	amod	_	SpaceAfter=No
+21	.	.	PUNCT	_	_	15	punct	_	_
+
+# sent_id = fakebr:1129-8
+# text = DINHEIRO DESVIADO DIRETO PARA OS BOLSOS DOS POLÍTICOS.
+1	DINHEIRO	dinheiro	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
+2	DESVIADO	desviar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	1	acl	_	_
+3	DIRETO	direr	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	1	acl	_	_
+4	PARA	para	ADP	_	_	6	case	_	_
+5	OS	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	6	det	_	_
+6	BOLSOS	BOLSOS	PROPN	_	_	3	obl	_	_
+7-8	DOS	_	_	_	_	_	_	_	_
+7	DE	de	ADP	_	_	9	case	_	_
+8	OS	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	9	det	_	_
+9	POLÍTICOS	POLÍTICOS	PROPN	_	_	6	nmod	_	SpaceAfter=No
+10	.	.	PUNCT	_	_	1	punct	_	_
+
+# sent_id = fakebr:1129-9
+# text = Segundo denúncias de fontes internas do Congresso, o dinheiro será distribuído sem fiscalização e poderá ser usado livremente pelos parlamentares, incluindo gastos com festas, hotéis de luxo e até campanhas de familiares.
+1	Segundo	segundo	ADP	_	_	2	case	_	_
+2	denúncias	denúncia	NOUN	_	Gender=Fem|Number=Plur	13	obl	_	_
+3	de	de	ADP	_	_	4	case	_	_
+4	fontes	fonte	NOUN	_	Gender=Fem|Number=Plur	2	nmod	_	_
+5	internas	interno	ADJ	_	Gender=Fem|Number=Plur	4	amod	_	_
+6-7	do	_	_	_	_	_	_	_	_
+6	de	de	ADP	_	_	8	case	_	_
+7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
+8	Congresso	Congresso	PROPN	_	_	4	nmod	_	SpaceAfter=No
+9	,	,	PUNCT	_	_	2	punct	_	_
+10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
+11	dinheiro	dinheiro	NOUN	_	Gender=Masc|Number=Sing	13	nsubj:pass	_	_
+12	será	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin	13	aux:pass	_	_
+13	distribuído	distribuir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
+14	sem	sem	ADP	_	_	15	case	_	_
+15	fiscalização	fiscalização	NOUN	_	Gender=Fem|Number=Sing	13	obl	_	_
+16	e	e	CCONJ	_	_	17	cc	_	_
+17	poderá	poder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin	13	conj	_	_
+18	ser	ser	AUX	_	VerbForm=Inf	19	aux:pass	_	_
+19	usado	usar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	17	xcomp	_	_
+20	livremente	livremente	ADV	_	_	19	advmod	_	_
+21-22	pelos	_	_	_	_	_	_	_	_
+21	por	por	ADP	_	_	23	case	_	_
+22	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	23	det	_	_
+23	parlamentares	parlamentar	NOUN	_	Gender=Masc|Number=Plur	19	obl:agent	_	SpaceAfter=No
+24	,	,	PUNCT	_	_	25	punct	_	_
+25	incluindo	incluir	VERB	_	VerbForm=Ger	13	advcl	_	_
+26	gastos	gasto	NOUN	_	Gender=Masc|Number=Plur	25	obj	_	_
+27	com	com	ADP	_	_	28	case	_	_
+28	festas	festa	NOUN	_	Gender=Fem|Number=Plur	26	nmod	_	SpaceAfter=No
+29	,	,	PUNCT	_	_	30	punct	_	_
+30	hotéis	hotel	NOUN	_	Gender=Masc|Number=Plur	28	conj	_	_
+31	de	de	ADP	_	_	32	case	_	_
+32	luxo	luxo	NOUN	_	Gender=Masc|Number=Sing	30	nmod	_	_
+33	e	e	CCONJ	_	_	35	cc	_	_
+34	até	até	ADV	_	_	35	advmod	_	_
+35	campanhas	campanha	NOUN	_	Gender=Fem|Number=Plur	28	conj	_	_
+36	de	de	ADP	_	_	37	case	_	_
+37	familiares	familiar	NOUN	_	Number=Plur	35	nmod	_	SpaceAfter=No
+38	.	.	PUNCT	_	_	13	punct	_	_
+
+# sent_id = fakebr:1129-10
+# text = O esquema prevê que cada deputado receberá cerca de R$ 7 MILHÕES em média, enquanto o salário mínimo permanece congelado.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
+2	esquema	esquema	NOUN	_	Gender=Masc|Number=Sing	3	nsubj	_	_
+3	prevê	prever	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+4	que	que	SCONJ	_	_	7	mark	_	_
+5	cada	cada	DET	_	Number=Sing|PronType=Ind	6	det	_	_
+6	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	7	nsubj	_	_
+7	receberá	receber	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin	3	ccomp	_	_
+8	cerca	cerca	ADV	_	_	10	advmod	_	_
+9	de	de	ADP	_	_	8	fixed	_	_
+10	R$	R$	SYM	_	_	7	obj	_	_
+11	7	7	NUM	_	NumType=Card	12	nummod	_	_
+12	MILHÕES	MILHÕES	PROPN	_	_	7	obj	_	_
+13	em	em	ADP	_	_	14	case	_	_
+14	média	média	NOUN	_	Gender=Fem|Number=Sing	7	obl	_	SpaceAfter=No
+15	,	,	PUNCT	_	_	20	punct	_	_
+16	enquanto	enquanto	SCONJ	_	_	20	mark	_	_
+17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
+18	salário	salário	NOUN	_	Gender=Masc|Number=Sing	20	nsubj	_	_
+19	mínimo	mínimo	ADJ	_	Gender=Masc|Number=Sing	18	amod	_	_
+20	permanece	permanecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	advcl	_	_
+21	congelado	congelado	ADJ	_	Gender=Masc|Number=Sing|VerbForm=Part	20	xcomp	_	SpaceAfter=No
+22	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = fakebr:1129-11
+# text = Um auditor que pediu para não ser identificado revelou:
+1	Um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
+2	auditor	auditor	NOUN	_	Gender=Masc|Number=Sing	9	nsubj	_	_
+3	que	que	PRON	_	PronType=Rel	4	nsubj	_	_
+4	pediu	pedir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	acl:relcl	_	_
+5	para	para	ADP	_	_	8	mark	_	_
+6	não	não	ADV	_	_	8	advmod	_	_
+7	ser	ser	AUX	_	VerbForm=Inf	8	aux:pass	_	_
+8	identificado	identificar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	4	ccomp	_	_
+9	revelou	revelar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	SpaceAfter=No
+10	:	:	PUNCT	_	_	9	punct	_	_
+
+# sent_id = fakebr:1129-12
+# text = Isso é um cheque em branco.
+1	Isso	isso	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	4	nsubj	_	_
+2	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	_	_
+3	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	4	det	_	_
+4	cheque	cheque	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
+5	em	em	ADP	_	_	6	case	_	_
+6	branco	branco	NOUN	_	Gender=Masc|Number=Sing	4	nmod	_	SpaceAfter=No
+7	.	.	PUNCT	_	_	4	punct	_	_
+
+# sent_id = fakebr:1129-13
+# text = Eles vão usar o dinheiro do povo para se perpetuar no poder.
+1	Eles	ele	PRON	_	Case=Nom|Gender=Masc|Number=Plur|Person=3|PronType=Prs	3	nsubj	_	_
+2	vão	ir	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	aux	_	_
+3	usar	usar	VERB	_	VerbForm=Inf	0	root	_	_
+4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
+5	dinheiro	dinheiro	NOUN	_	Gender=Masc|Number=Sing	3	obj	_	_
+6-7	do	_	_	_	_	_	_	_	_
+6	de	de	ADP	_	_	8	case	_	_
+7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
+8	povo	povo	NOUN	_	Gender=Masc|Number=Sing	5	nmod	_	_
+9	para	para	ADP	_	_	11	mark	_	_
+10	se	se	PRON	_	Case=Nom|Person=3|PronType=Prs	11	expl	_	_
+11	perpetuar	perpetuar	VERB	_	VerbForm=Inf	3	advcl	_	_
+12-13	no	_	_	_	_	_	_	_	_
+12	em	em	ADP	_	_	14	case	_	_
+13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
+14	poder	poder	NOUN	_	Gender=Masc|Number=Sing	11	obl	_	SpaceAfter=No
+15	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = fakebr:1129-14
+# text = É o fim da democracia no Brasil.
+1	É	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	_	_
+2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
+3	fim	fim	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
+4-5	da	_	_	_	_	_	_	_	_
+4	de	de	ADP	_	_	6	case	_	_
+5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
+6	democracia	democracia	NOUN	_	Gender=Fem|Number=Sing	3	nmod	_	_
+7-8	no	_	_	_	_	_	_	_	_
+7	em	em	ADP	_	_	9	case	_	_
+8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
+9	Brasil	Brasil	PROPN	_	_	6	nmod	_	SpaceAfter=No
+10	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = fakebr:1129-15
+# text = PROIBIÇÃO DE DIVULGAR QUEM FINANCIA CAMPANHAS.
+1	PROIBIÇÃO	proibição	NOUN	_	Gender=Fem|Number=Sing	0	root	_	_
+2	DE	de	ADP	_	_	3	mark	_	_
+3	DIVULGAR	divulgar	VERB	_	VerbForm=Inf	1	acl	_	_
+4	QUEM	QUEM	PROPN	_	_	3	obj	_	_
+5	FINANCIA	financiar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	acl:relcl	_	_
+6	CAMPANHAS	CAMPANHAS	PROPN	_	_	5	obj	_	SpaceAfter=No
+7	.	.	PUNCT	_	_	1	punct	_	_
+
+# sent_id = fakebr:1129-16
+# text = Em uma das mudanças mais polêmicas, a reforma cria o SIGILO TOTAL sobre doações.
+1	Em	em	ADP	_	_	2	case	_	_
+2	uma	um	NUM	_	Gender=Fem|NumType=Card	11	obl	_	_
+3-4	das	_	_	_	_	_	_	_	_
+3	de	de	ADP	_	_	5	case	_	_
+4	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	5	det	_	_
+5	mudanças	mudança	NOUN	_	Gender=Fem|Number=Plur	2	nmod	_	_
+6	mais	mais	ADV	_	_	7	advmod	_	_
+7	polêmicas	polêmico	ADJ	_	Gender=Fem|Number=Plur	5	amod	_	SpaceAfter=No
+8	,	,	PUNCT	_	_	2	punct	_	_
+9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
+10	reforma	reforma	NOUN	_	Gender=Fem|Number=Sing	11	nsubj	_	_
+11	cria	criar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
+13	SIGILO	SIGILO	PROPN	_	_	11	obj	_	_
+14	TOTAL	TOTAL	PROPN	_	_	13	amod	_	_
+15	sobre	sobre	ADP	_	_	16	case	_	_
+16	doações	doação	NOUN	_	Gender=Fem|Number=Plur	13	nmod	_	SpaceAfter=No
+17	.	.	PUNCT	_	_	11	punct	_	_
+
+# sent_id = fakebr:1129-17
+# text = Isso mesmo: você não poderá mais saber quem está financiando seu candidato!
+1	Isso	isso	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	6	discourse	_	_
+2	mesmo	mesmo	ADV	_	_	1	advmod	_	SpaceAfter=No
+3	:	:	PUNCT	_	_	1	punct	_	_
+4	você	você	PRON	_	Case=Nom|Number=Sing|Person=2|PronType=Prs	6	nsubj	_	_
+5	não	não	ADV	_	_	6	advmod	_	_
+6	poderá	poder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin	0	root	_	_
+7	mais	mais	ADV	_	_	6	advmod	_	_
+8	saber	saber	VERB	_	VerbForm=Inf	6	xcomp	_	_
+9	quem	quem	PRON	_	PronType=Ind	8	obj	_	_
+10	está	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	aux	_	_
+11	financiando	financiar	VERB	_	VerbForm=Ger	9	acl:relcl	_	_
+12	seu	seu	DET	_	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	13	det	_	_
+13	candidato	candidato	NOUN	_	Gender=Masc|Number=Sing	11	obj	_	SpaceAfter=No
+14	!	!	PUNCT	_	_	6	punct	_	_
+
+# sent_id = fakebr:1129-18
+# text = A medida, segundo analistas, abre caminho para lavagem de dinheiro e financiamento do crime organizado nas eleições.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	medida	medida	NOUN	_	Gender=Fem|Number=Sing	7	nsubj	_	SpaceAfter=No
+3	,	,	PUNCT	_	_	5	punct	_	_
+4	segundo	segundo	ADP	_	_	5	case	_	_
+5	analistas	analista	NOUN	_	Number=Plur	7	obl	_	SpaceAfter=No
+6	,	,	PUNCT	_	_	5	punct	_	_
+7	abre	abrir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+8	caminho	caminho	NOUN	_	Gender=Masc|Number=Sing	7	obj	_	_
+9	para	para	ADP	_	_	10	case	_	_
+10	lavagem	lavagem	NOUN	_	Gender=Fem|Number=Sing	8	nmod	_	_
+11	de	de	ADP	_	_	12	case	_	_
+12	dinheiro	dinheiro	NOUN	_	Gender=Masc|Number=Sing	10	nmod	_	_
+13	e	e	CCONJ	_	_	14	cc	_	_
+14	financiamento	financiamento	NOUN	_	Gender=Masc|Number=Sing	10	conj	_	_
+15-16	do	_	_	_	_	_	_	_	_
+15	de	de	ADP	_	_	17	case	_	_
+16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
+17	crime	crime	NOUN	_	Gender=Masc|Number=Sing	14	nmod	_	_
+18	organizado	organizado	ADJ	_	Gender=Masc|Number=Sing|VerbForm=Part	17	amod	_	_
+19-20	nas	_	_	_	_	_	_	_	_
+19	em	em	ADP	_	_	21	case	_	_
+20	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	21	det	_	_
+21	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	14	nmod	_	SpaceAfter=No
+22	.	.	PUNCT	_	_	7	punct	_	_
+
+# sent_id = fakebr:1129-19
+# text = Empresários investigados pela Lava Jato poderão doar valores milionários através de laranjas sem que ninguém descubra.
+1	Empresários	empresário	NOUN	_	Gender=Masc|Number=Plur	7	nsubj	_	_
+2	investigados	investigar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	1	acl	_	_
+3-4	pela	_	_	_	_	_	_	_	_
+3	por	por	ADP	_	_	5	case	_	_
+4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
+5	Lava	Lava	PROPN	_	_	2	obl:agent	_	_
+6	Jato	Jato	PROPN	_	_	5	flat:name	_	_
+7	poderão	poder	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin	0	root	_	_
+8	doar	doar	VERB	_	VerbForm=Inf	7	xcomp	_	_
+9	valores	valor	NOUN	_	Gender=Masc|Number=Plur	8	obj	_	_
+10	milionários	milionário	ADJ	_	Gender=Masc|Number=Plur	9	amod	_	_
+11	através	através	ADV	_	_	8	advmod	_	_
+12	de	de	ADP	_	_	13	case	_	_
+13	laranjas	laranja	NOUN	_	Number=Plur	11	obl	_	_
+14	sem	sem	ADP	_	_	17	mark	_	_
+15	que	que	SCONJ	_	_	14	fixed	_	_
+16	ninguém	ninguém	PRON	_	Number=Sing|PronType=Ind	17	nsubj	_	_
+17	descubra	descobrir	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	advcl	_	SpaceAfter=No
+18	.	.	PUNCT	_	_	7	punct	_	_
+
+# sent_id = fakebr:1129-20
+# text = O Brasil retrocede 50 anos em transparência.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
+2	Brasil	Brasil	PROPN	_	_	3	nsubj	_	_
+3	retrocede	retroceder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+4	50	50	NUM	_	NumType=Card	5	nummod	_	_
+5	anos	ano	NOUN	_	Gender=Masc|Number=Plur	3	obj	_	_
+6	em	em	ADP	_	_	7	case	_	_
+7	transparência	transparência	NOUN	_	Gender=Fem|Number=Sing	3	obl	_	SpaceAfter=No
+8	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = fakebr:1129-21
+# text = CLÁUSULA QUE ACABA COM PARTIDOS PEQUENOS E CONCENTRA PODER.
+1	CLÁUSULA	cláusula	NOUN	_	Gender=Fem|Number=Sing	0	root	_	_
+2	QUE	que	PRON	_	PronType=Rel	3	nsubj	_	_
+3	ACABA	acabar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	acl:relcl	_	_
+4	COM	com	ADP	_	_	5	case	_	_
+5	PARTIDOS	PARTIDOS	PROPN	_	_	3	obl	_	_
+6	PEQUENOS	pequeno	ADJ	_	Gender=Masc|Number=Plur	5	amod	_	_
+7	E	e	CCONJ	_	_	8	cc	_	_
+8	CONCENTRA	concentrar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	conj	_	_
+9	PODER	PODER	PROPN	_	_	8	obj	_	SpaceAfter=No
+10	.	.	PUNCT	_	_	1	punct	_	_
+
+# sent_id = fakebr:1129-22
+# text = A reforma também estabelece uma cláusula que impedirá partidos menores de funcionarem, concentrando TODO O PODER político nas mãos de apenas 5 ou 6 legendas.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	reforma	reforma	NOUN	_	Gender=Fem|Number=Sing	4	nsubj	_	_
+3	também	também	ADV	_	_	4	advmod	_	_
+4	estabelece	estabelecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+5	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
+6	cláusula	cláusula	NOUN	_	Gender=Fem|Number=Sing	4	obj	_	_
+7	que	que	PRON	_	PronType=Rel	8	nsubj	_	_
+8	impedirá	impedir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin	6	acl:relcl	_	_
+9	partidos	partido	NOUN	_	Gender=Masc|Number=Plur	8	obj	_	_
+10	menores	menor	ADJ	_	Number=Plur	9	amod	_	_
+11	de	de	ADP	_	_	12	mark	_	_
+12	funcionarem	funcionar	VERB	_	Number=Plur|Person=3|VerbForm=Inf	8	xcomp	_	SpaceAfter=No
+13	,	,	PUNCT	_	_	14	punct	_	_
+14	concentrando	concentrar	VERB	_	VerbForm=Ger	8	advcl	_	_
+15	TODO	todo	DET	_	Gender=Masc|Number=Sing|PronType=Ind	17	det	_	_
+16	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
+17	PODER	PODER	NOUN	_	Gender=Masc|Number=Sing	14	obj	_	_
+18	político	político	ADJ	_	Gender=Masc|Number=Sing	17	amod	_	_
+19-20	nas	_	_	_	_	_	_	_	_
+19	em	em	ADP	_	_	21	case	_	_
+20	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	21	det	_	_
+21	mãos	mão	NOUN	_	Gender=Fem|Number=Plur	14	obl	_	_
+22	de	de	ADP	_	_	27	case	_	_
+23	apenas	apenas	ADV	_	_	24	advmod	_	_
+24	5	5	NUM	_	NumType=Card	27	nummod	_	_
+25	ou	ou	CCONJ	_	_	26	cc	_	_
+26	6	6	NUM	_	NumType=Card	24	conj	_	_
+27	legendas	legenda	NOUN	_	Gender=Fem|Number=Plur	21	nmod	_	SpaceAfter=No
+28	.	.	PUNCT	_	_	4	punct	_	_
+
+# sent_id = fakebr:1129-23
+# text = Partidos que representam minorias e causas populares serão EXTINTOS NA PRÁTICA.
+1	Partidos	partido	NOUN	_	Gender=Masc|Number=Plur	9	nsubj:pass	_	_
+2	que	que	PRON	_	PronType=Rel	3	nsubj	_	_
+3	representam	representar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	1	acl:relcl	_	_
+4	minorias	minoria	NOUN	_	Gender=Fem|Number=Plur	3	obj	_	_
+5	e	e	CCONJ	_	_	6	cc	_	_
+6	causas	causa	NOUN	_	Gender=Fem|Number=Plur	4	conj	_	_
+7	populares	popular	ADJ	_	Number=Plur	6	amod	_	_
+8	serão	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin	9	aux:pass	_	_
+9	EXTINTOS	EXTINTOS	ADJ	_	Gender=Masc|Number=Plur|VerbForm=Part	0	root	_	_
+10-11	NA	_	_	_	_	_	_	_	_
+10	EM	em	ADP	_	_	12	case	_	_
+11	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
+12	PRÁTICA	PRÁTICA	PROPN	_	_	9	obl	_	SpaceAfter=No
+13	.	.	PUNCT	_	_	9	punct	_	_
+
+# sent_id = fakebr:1129-24
+# text = Isso significa que sua voz será ainda menos ouvida, e o sistema ficará nas mãos dos mesmos políticos de sempre, aqueles envolvidos em escândalos de corrupção.
+1	Isso	isso	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	2	nsubj	_	_
+2	significa	significar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+3	que	que	SCONJ	_	_	9	mark	_	_
+4	sua	seu	DET	_	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	5	det	_	_
+5	voz	voz	NOUN	_	Gender=Fem|Number=Sing	9	nsubj:pass	_	_
+6	será	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin	9	aux:pass	_	_
+7	ainda	ainda	ADV	_	_	9	advmod	_	_
+8	menos	menos	ADV	_	_	9	advmod	_	_
+9	ouvida	ouvir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	2	ccomp	_	SpaceAfter=No
+10	,	,	PUNCT	_	_	14	punct	_	_
+11	e	e	CCONJ	_	_	14	cc	_	_
+12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
+13	sistema	sistema	NOUN	_	Gender=Masc|Number=Sing	14	nsubj	_	_
+14	ficará	ficar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin	2	conj	_	_
+15-16	nas	_	_	_	_	_	_	_	_
+15	em	em	ADP	_	_	17	case	_	_
+16	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	17	det	_	_
+17	mãos	mão	NOUN	_	Gender=Fem|Number=Plur	14	obl	_	_
+18-19	dos	_	_	_	_	_	_	_	_
+18	de	de	ADP	_	_	21	case	_	_
+19	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	21	det	_	_
+20	mesmos	mesmo	DET	_	Gender=Masc|Number=Plur|PronType=Dem	21	det	_	_
+21	políticos	político	NOUN	_	Gender=Masc|Number=Plur	17	nmod	_	_
+22	de	de	ADP	_	_	23	case	_	_
+23	sempre	sempre	ADV	_	_	21	advmod	_	SpaceAfter=No
+24	,	,	PUNCT	_	_	25	punct	_	_
+25	aqueles	aquele	PRON	_	Gender=Masc|Number=Plur|PronType=Dem	21	appos	_	_
+26	envolvidos	envolvido	ADJ	_	Gender=Masc|Number=Plur|VerbForm=Part	21	acl	_	_
+27	em	em	ADP	_	_	28	case	_	_
+28	escândalos	escândalo	NOUN	_	Gender=Masc|Number=Plur	26	obl	_	_
+29	de	de	ADP	_	_	30	case	_	_
+30	corrupção	corrupção	NOUN	_	Gender=Fem|Number=Sing	28	nmod	_	SpaceAfter=No
+31	.	.	PUNCT	_	_	2	punct	_	_
+
+# sent_id = fakebr:1129-25
+# text = IMUNIDADE PARA CANDIDATOS:
+1	IMUNIDADE	imunidade	NOUN	_	Gender=Fem|Number=Sing	0	root	_	_
+2	PARA	para	ADP	_	_	3	case	_	_
+3	CANDIDATOS	CANDIDATOS	NOUN	_	Gender=Masc|Number=Plur	1	nmod	_	SpaceAfter=No
+4	:	:	PUNCT	_	_	1	punct	_	_
+
+# sent_id = fakebr:1129-26
+# text = A "EMENDA LULA".
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
+2	"	"	PUNCT	_	_	3	punct	_	SpaceAfter=No
+3	EMENDA	EMENDA	PROPN	_	_	0	root	_	_
+4	LULA	LULA	PROPN	_	_	3	flat:name	_	SpaceAfter=No
+5	"	"	PUNCT	_	_	3	punct	_	SpaceAfter=No
+6	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = fakebr:1129-27
+# text = Embora tenha sido parcialmente retirada após vazamento para a imprensa, fontes confirmam que existe um acordo secreto para aprovar dispositivo que IMPEDE A PRISÃO de candidatos oito meses antes das eleições.
+1	Embora	embora	SCONJ	_	_	5	mark	_	_
+2	tenha	ter	AUX	_	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	aux	_	_
+3	sido	ser	AUX	_	Gender=Masc|Number=Sing|VerbForm=Part	5	aux:pass	_	_
+4	parcialmente	parcialmente	ADV	_	_	5	advmod	_	_
+5	retirada	retirar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	13	advcl	_	_
+6	após	após	ADP	_	_	7	case	_	_
+7	vazamento	vazamento	NOUN	_	Gender=Masc|Number=Sing	5	obl	_	_
+8	para	para	ADP	_	_	10	case	_	_
+9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
+10	imprensa	imprensa	NOUN	_	Gender=Fem|Number=Sing	7	nmod	_	SpaceAfter=No
+11	,	,	PUNCT	_	_	5	punct	_	_
+12	fontes	fonte	NOUN	_	Gender=Fem|Number=Plur	13	nsubj	_	_
+13	confirmam	confirmar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+14	que	que	SCONJ	_	_	15	mark	_	_
+15	existe	existir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	ccomp	_	_
+16	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
+17	acordo	acordo	NOUN	_	Gender=Masc|Number=Sing	15	nsubj	_	_
+18	secreto	secreto	ADJ	_	Gender=Masc|Number=Sing	17	amod	_	_
+19	para	para	ADP	_	_	20	mark	_	_
+20	aprovar	aprovar	VERB	_	VerbForm=Inf	17	acl	_	_
+21	dispositivo	dispositivo	NOUN	_	Gender=Masc|Number=Sing	20	obj	_	_
+22	que	que	PRON	_	PronType=Rel	23	nsubj	_	_
+23	IMPEDE	impedir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	21	acl:relcl	_	_
+24	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	_	_
+25	PRISÃO	PRISÃO	NOUN	_	_	23	obj	_	_
+26	de	de	ADP	_	_	27	case	_	_
+27	candidatos	candidato	NOUN	_	Gender=Masc|Number=Plur	25	nmod	_	_
+28	oito	oito	NUM	_	NumType=Card	29	nummod	_	_
+29	meses	meses	NOUN	_	Gender=Masc|Number=Plur	30	obl	_	_
+30	antes	antes	ADV	_	_	23	advmod	_	_
+31-32	das	_	_	_	_	_	_	_	_
+31	de	de	ADP	_	_	33	case	_	_
+32	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	33	det	_	_
+33	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	30	obl	_	SpaceAfter=No
+34	.	.	PUNCT	_	_	13	punct	_	_
+
+# sent_id = fakebr:1129-28
+# text = Na prática, políticos investigados estarão blindados da Justiça.
+1-2	Na	_	_	_	_	_	_	_	_
+1	Em	em	ADP	_	_	3	case	_	_
+2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
+3	prática	prática	NOUN	_	Gender=Fem|Number=Sing	8	obl	_	SpaceAfter=No
+4	,	,	PUNCT	_	_	3	punct	_	_
+5	políticos	político	NOUN	_	Gender=Masc|Number=Plur	8	nsubj	_	_
+6	investigados	investigar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	5	acl	_	_
+7	estarão	estar	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin	8	cop	_	_
+8	blindados	blindado	ADJ	_	Gender=Masc|Number=Plur|VerbForm=Part	0	root	_	_
+9-10	da	_	_	_	_	_	_	_	_
+9	de	de	ADP	_	_	11	case	_	_
+10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	_	_
+11	Justiça	Justiça	PROPN	_	_	8	obl	_	SpaceAfter=No
+12	.	.	PUNCT	_	_	8	punct	_	_
+
+# sent_id = fakebr:1129-29
+# text = A medida beneficia diretamente investigados pela Lava Jato e outros escândalos que planejam se candidatar em 2018 para escapar da cadeia.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	medida	medida	NOUN	_	Gender=Fem|Number=Sing	3	nsubj	_	_
+3	beneficia	beneficiar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+4	diretamente	diretamente	ADV	_	_	3	advmod	_	_
+5	investigados	investigar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	3	obj	_	_
+6-7	pela	_	_	_	_	_	_	_	_
+6	por	por	ADP	_	_	8	case	_	_
+7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
+8	Lava	Lava	PROPN	_	_	5	obl:agent	_	_
+9	Jato	Jato	PROPN	_	_	8	flat:name	_	_
+10	e	e	CCONJ	_	_	12	cc	_	_
+11	outros	outro	DET	_	Gender=Masc|Number=Plur|PronType=Ind	12	det	_	_
+12	escândalos	escândalo	NOUN	_	Gender=Masc|Number=Plur	8	conj	_	_
+13	que	que	PRON	_	PronType=Rel	14	nsubj	_	_
+14	planejam	planejar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	12	acl:relcl	_	_
+15	se	se	PRON	_	Case=Nom|Person=3|PronType=Prs	16	expl	_	_
+16	candidatar	candidatar	VERB	_	VerbForm=Inf	14	xcomp	_	_
+17	em	em	ADP	_	_	18	case	_	_
+18	2018	2018	NUM	_	NumType=Card	16	obl	_	_
+19	para	para	ADP	_	_	20	mark	_	_
+20	escapar	escapar	VERB	_	VerbForm=Inf	16	advcl	_	_
+21-22	da	_	_	_	_	_	_	_	_
+21	de	de	ADP	_	_	23	case	_	_
+22	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	23	det	_	_
+23	cadeia	cadeia	NOUN	_	Gender=Fem|Number=Sing	20	obl	_	SpaceAfter=No
+24	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = fakebr:1129-30
+# text = PLEBISCITO FALSO:
+1	PLEBISCITO	plebiscito	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
+2	FALSO	falso	ADJ	_	Gender=Masc|Number=Sing	1	amod	_	SpaceAfter=No
+3	:	:	PUNCT	_	_	1	punct	_	_
+
+# sent_id = fakebr:1129-31
+# text = MANIPULAÇÃO GARANTIDA.
+1	MANIPULAÇÃO	manipulação	NOUN	_	Gender=Fem|Number=Sing	0	root	_	_
+2	GARANTIDA	garantir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	1	acl	_	SpaceAfter=No
+3	.	.	PUNCT	_	_	1	punct	_	_
+
+# sent_id = fakebr:1129-32
+# text = O texto também prevê a realização de plebiscitos, mas com regras que facilitam a manipulação dos resultados.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
+2	texto	texto	NOUN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
+3	também	também	ADV	_	_	4	advmod	_	_
+4	prevê	prever	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
+6	realização	realização	NOUN	_	Gender=Fem|Number=Sing	4	obj	_	_
+7	de	de	ADP	_	_	8	case	_	_
+8	plebiscitos	plebiscito	NOUN	_	Gender=Masc|Number=Plur	6	nmod	_	SpaceAfter=No
+9	,	,	PUNCT	_	_	12	punct	_	_
+10	mas	mas	CCONJ	_	_	12	cc	_	_
+11	com	com	ADP	_	_	12	case	_	_
+12	regras	regra	NOUN	_	Gender=Fem|Number=Plur	6	conj	_	_
+13	que	que	PRON	_	PronType=Rel	14	nsubj	_	_
+14	facilitam	facilitar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	12	acl:relcl	_	_
+15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
+16	manipulação	manipulação	NOUN	_	Gender=Fem|Number=Sing	14	obj	_	_
+17-18	dos	_	_	_	_	_	_	_	_
+17	de	de	ADP	_	_	19	case	_	_
+18	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	19	det	_	_
+19	resultados	resultado	NOUN	_	Gender=Masc|Number=Plur	16	nmod	_	SpaceAfter=No
+20	.	.	PUNCT	_	_	4	punct	_	_
+
+# sent_id = fakebr:1129-33
+# text = Consultas populares poderão ser feitas no mesmo dia das eleições, quando a população está confusa e vulnerável à propaganda enganosa de última hora.
+1	Consultas	consulta	NOUN	_	Gender=Fem|Number=Plur	3	nsubj	_	_
+2	populares	popular	ADJ	_	Number=Plur	1	amod	_	_
+3	poderão	poder	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin	0	root	_	_
+4	ser	ser	AUX	_	VerbForm=Inf	5	aux:pass	_	_
+5	feitas	fazer	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	3	xcomp	_	_
+6-7	no	_	_	_	_	_	_	_	_
+6	em	em	ADP	_	_	9	case	_	_
+7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
+8	mesmo	mesmo	DET	_	Gender=Masc|Number=Sing|PronType=Dem	9	det	_	_
+9	dia	dia	NOUN	_	Gender=Masc|Number=Sing	5	obl	_	_
+10-11	das	_	_	_	_	_	_	_	_
+10	de	de	ADP	_	_	12	case	_	_
+11	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	12	det	_	_
+12	eleições	eleição	NOUN	_	Gender=Fem|Number=Plur	9	nmod	_	SpaceAfter=No
+13	,	,	PUNCT	_	_	18	punct	_	_
+14	quando	quando	ADV	_	_	18	advmod	_	_
+15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
+16	população	população	NOUN	_	Gender=Fem|Number=Sing	18	nsubj	_	_
+17	está	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	cop	_	_
+18	confusa	confuso	ADJ	_	Gender=Fem|Number=Sing	9	acl:relcl	_	_
+19	e	e	CCONJ	_	_	20	cc	_	_
+20	vulnerável	vulnerável	ADJ	_	Number=Sing	18	conj	_	_
+21-22	à	_	_	_	_	_	_	_	_
+21	a	a	ADP	_	_	23	case	_	_
+22	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	23	det	_	_
+23	propaganda	propaganda	NOUN	_	Gender=Fem|Number=Sing	20	obl	_	_
+24	enganosa	enganoso	ADJ	_	Gender=Fem|Number=Sing	23	amod	_	_
+25	de	de	ADP	_	_	27	case	_	_
+26	última	último	ADJ	_	Gender=Fem|Number=Sing	27	amod	_	_
+27	hora	hora	NOUN	_	Gender=Fem|Number=Sing	23	nmod	_	SpaceAfter=No
+28	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = fakebr:1129-34
+# text = SISTEMA MISTO:
+1	SISTEMA	SISTEMA	NOUN	_	_	0	root	_	_
+2	MISTO	MISTO	PROPN	_	_	1	nmod	_	SpaceAfter=No
+3	:	:	PUNCT	_	_	1	punct	_	_
+
+# sent_id = fakebr:1129-35
+# text = O FIM DO SEU VOTO DIRETO.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
+2	FIM	fim	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
+3-4	DO	_	_	_	_	_	_	_	_
+3	DE	de	ADP	_	_	6	case	_	_
+4	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
+5	SEU	seu	DET	_	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	6	det	_	_
+6	VOTO	VOTO	PROPN	_	_	2	nmod	_	_
+7	DIRETO	direto	ADJ	_	Gender=Masc|Number=Sing	6	amod	_	SpaceAfter=No
+8	.	.	PUNCT	_	_	2	punct	_	_
+
+# sent_id = fakebr:1129-36
+# text = A partir de 2022, metade dos deputados será escolhida por LISTAS FECHADAS dos partidos.
+1	A	a	ADP	_	_	2	mark	_	_
+2	partir	partir	VERB	_	VerbForm=Inf	11	advcl	_	_
+3	de	de	ADP	_	_	4	case	_	_
+4	2022	2022	NUM	_	NumType=Card	2	obl	_	SpaceAfter=No
+5	,	,	PUNCT	_	_	2	punct	_	_
+6	metade	metade	NOUN	_	Gender=Fem|Number=Sing	11	nsubj:pass	_	_
+7-8	dos	_	_	_	_	_	_	_	_
+7	de	de	ADP	_	_	9	case	_	_
+8	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	9	det	_	_
+9	deputados	deputado	NOUN	_	Gender=Masc|Number=Plur	6	nmod	_	_
+10	será	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin	11	aux:pass	_	_
+11	escolhida	escolher	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
+12	por	por	ADP	_	_	13	case	_	_
+13	LISTAS	lista	NOUN	_	Gender=Fem|Number=Plur	11	obl:agent	_	_
+14	FECHADAS	FECHADAS	PROPN	_	_	13	amod	_	_
+15-16	dos	_	_	_	_	_	_	_	_
+15	de	de	ADP	_	_	17	case	_	_
+16	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	17	det	_	_
+17	partidos	partido	NOUN	_	Gender=Masc|Number=Plur	13	nmod	_	SpaceAfter=No
+18	.	.	PUNCT	_	_	11	punct	_	_
+
+# sent_id = fakebr:1129-37
+# text = Você não poderá mais votar diretamente no candidato!
+1	Você	você	PRON	_	Case=Nom|Number=Sing|Person=2|PronType=Prs	3	nsubj	_	_
+2	não	não	ADV	_	_	3	advmod	_	_
+3	poderá	poder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin	0	root	_	_
+4	mais	mais	ADV	_	_	3	advmod	_	_
+5	votar	votar	VERB	_	VerbForm=Inf	3	xcomp	_	_
+6	diretamente	diretamente	ADV	_	_	5	advmod	_	_
+7-8	no	_	_	_	_	_	_	_	_
+7	em	em	ADP	_	_	9	case	_	_
+8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
+9	candidato	candidato	NOUN	_	Gender=Masc|Number=Sing	5	obl	_	SpaceAfter=No
+10	!	!	PUNCT	_	_	3	punct	_	_
+
+# sent_id = fakebr:1129-38
+# text = Os partidos decidirão sozinhos quem ocupará as vagas, acabando com o princípio básico da democracia.
+1	Os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	2	det	_	_
+2	partidos	partido	NOUN	_	Gender=Masc|Number=Plur	3	nsubj	_	_
+3	decidirão	decidir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin	0	root	_	_
+4	sozinhos	sozinho	ADJ	_	Gender=Masc|Number=Plur	3	advcl	_	_
+5	quem	quem	PRON	_	PronType=Ind	3	obj	_	_
+6	ocupará	ocupar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin	5	acl:relcl	_	_
+7	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	8	det	_	_
+8	vagas	vaga	NOUN	_	Gender=Fem|Number=Plur	6	obj	_	SpaceAfter=No
+9	,	,	PUNCT	_	_	10	punct	_	_
+10	acabando	acabar	VERB	_	VerbForm=Ger	3	advcl	_	_
+11	com	com	ADP	_	_	13	case	_	_
+12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
+13	princípio	princípio	NOUN	_	Gender=Masc|Number=Sing	10	obl	_	_
+14	básico	básico	ADJ	_	Gender=Masc|Number=Sing	13	amod	_	_
+15-16	da	_	_	_	_	_	_	_	_
+15	de	de	ADP	_	_	17	case	_	_
+16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
+17	democracia	democracia	NOUN	_	Gender=Fem|Number=Sing	13	nmod	_	SpaceAfter=No
+18	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = fakebr:1129-39
+# text = CAMPANHA PAGA NA INTERNET:
+1	CAMPANHA	campanha	NOUN	_	Gender=Fem|Number=Sing	0	root	_	_
+2	PAGA	pagar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	1	acl	_	_
+3-4	NA	_	_	_	_	_	_	_	_
+3	EM	em	ADP	_	_	5	case	_	_
+4	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
+5	INTERNET	INTERNET	PROPN	_	_	2	obl	_	SpaceAfter=No
+6	:	:	PUNCT	_	_	1	punct	_	_
+
+# sent_id = fakebr:1129-40
+# text = FAKE NEWS LIBERADA.
+1	FAKE	FAKE	PROPN	_	_	0	root	_	_
+2	NEWS	NEWS	PROPN	_	_	1	flat:name	_	_
+3	LIBERADA	liberado	ADJ	_	Gender=Fem|Number=Sing|VerbForm=Part	1	acl	_	SpaceAfter=No
+4	.	.	PUNCT	_	_	1	punct	_	_
+
+# sent_id = fakebr:1129-41
+# text = A reforma libera propaganda paga na internet sem controle adequado, abrindo caminho para enxurradas de notícias falsas, robôs e manipulação em massa das redes sociais.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	reforma	reforma	NOUN	_	Gender=Fem|Number=Sing	3	nsubj	_	_
+3	libera	liberar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+4	propaganda	propaganda	NOUN	_	Gender=Fem|Number=Sing	3	obj	_	_
+5	paga	pagar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	4	acl	_	_
+6-7	na	_	_	_	_	_	_	_	_
+6	em	em	ADP	_	_	8	case	_	_
+7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
+8	internet	internet	NOUN	_	Foreign=Yes|Gender=Fem|Number=Sing	5	obl	_	_
+9	sem	sem	ADP	_	_	10	case	_	_
+10	controle	controle	NOUN	_	Gender=Masc|Number=Sing	5	obl	_	_
+11	adequado	adequado	ADJ	_	Gender=Masc|Number=Sing	10	amod	_	SpaceAfter=No
+12	,	,	PUNCT	_	_	13	punct	_	_
+13	abrindo	abrir	VERB	_	VerbForm=Ger	3	advcl	_	_
+14	caminho	caminho	NOUN	_	Gender=Masc|Number=Sing	13	obj	_	_
+15	para	para	ADP	_	_	16	case	_	_
+16	enxurradas	enxurrada	NOUN	_	Gender=Fem|Number=Plur	13	obl	_	_
+17	de	de	ADP	_	_	18	case	_	_
+18	notícias	notícia	NOUN	_	Gender=Fem|Number=Plur	16	nmod	_	_
+19	falsas	falso	ADJ	_	Gender=Fem|Number=Plur	18	amod	_	SpaceAfter=No
+20	,	,	PUNCT	_	_	21	punct	_	_
+21	robôs	robô	NOUN	_	Gender=Masc|Number=Plur	18	conj	_	_
+22	e	e	CCONJ	_	_	23	cc	_	_
+23	manipulação	manipulação	NOUN	_	Gender=Fem|Number=Sing	16	conj	_	_
+24	em	em	ADP	_	_	25	case	_	_
+25	massa	massa	NOUN	_	Gender=Fem|Number=Sing	23	nmod	_	_
+26-27	das	_	_	_	_	_	_	_	_
+26	de	de	ADP	_	_	28	case	_	_
+27	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	28	det	_	_
+28	redes	rede	NOUN	_	Gender=Fem|Number=Plur	23	nmod	_	_
+29	sociais	social	ADJ	_	Number=Plur	28	amod	_	SpaceAfter=No
+30	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = fakebr:1129-42
+# text = Suas decisões eleitorais poderão ser controladas por algoritmos e fake news patrocinadas.
+1	Suas	seu	DET	_	Gender=Fem|Number=Plur|Person=3|Poss=Yes|PronType=Prs	2	det	_	_
+2	decisões	decisão	NOUN	_	Gender=Fem|Number=Plur	4	nsubj	_	_
+3	eleitorais	eleitoral	ADJ	_	Number=Plur	2	amod	_	_
+4	poderão	poder	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin	0	root	_	_
+5	ser	ser	AUX	_	VerbForm=Inf	6	aux:pass	_	_
+6	controladas	controlar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	4	xcomp	_	_
+7	por	por	ADP	_	_	8	case	_	_
+8	algoritmos	algoritmo	NOUN	_	Gender=Masc|Number=Plur	6	obl:agent	_	_
+9	e	e	CCONJ	_	_	10	cc	_	_
+10	fake	fake	X	_	Foreign=Yes	8	conj	_	_
+11	news	news	X	_	Foreign=Yes	10	flat:foreign	_	_
+12	patrocinadas	patrocinar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	10	acl	_	SpaceAfter=No
+13	.	.	PUNCT	_	_	4	punct	_	_
+
+# sent_id = fakebr:1129-43
+# text = PESQUISAS ELEITORAIS PROIBIDAS:
+1	PESQUISAS	pesquisa	NOUN	_	Gender=Fem|Number=Plur	0	root	_	_
+2	ELEITORAIS	eleitoral	ADJ	_	Number=Plur	1	amod	_	_
+3	PROIBIDAS	proibido	ADJ	_	Gender=Fem|Number=Plur|VerbForm=Part	1	amod	_	SpaceAfter=No
+4	:	:	PUNCT	_	_	1	punct	_	_
+
+# sent_id = fakebr:1129-44
+# text = CENSURA ESCANCARADA.
+1	CENSURA	censura	NOUN	_	Gender=Fem|Number=Sing	0	root	_	_
+2	ESCANCARADA	escancarado	ADJ	_	Gender=Fem|Number=Sing|VerbForm=Part	1	amod	_	SpaceAfter=No
+3	.	.	PUNCT	_	_	1	punct	_	_
+
+# sent_id = fakebr:1129-45
+# text = Em uma medida autoritária, pesquisas eleitorais serão PROIBIDAS uma semana antes da eleição.
+1	Em	em	ADP	_	_	3	case	_	_
+2	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
+3	medida	medida	NOUN	_	Gender=Fem|Number=Sing	9	obl	_	_
+4	autoritária	autoritário	ADJ	_	Gender=Fem|Number=Sing	3	amod	_	SpaceAfter=No
+5	,	,	PUNCT	_	_	3	punct	_	_
+6	pesquisas	pesquisa	NOUN	_	Gender=Fem|Number=Plur	9	nsubj:pass	_	_
+7	eleitorais	eleitoral	ADJ	_	Number=Plur	6	amod	_	_
+8	serão	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin	9	aux:pass	_	_
+9	PROIBIDAS	proibir	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	0	root	_	_
+10	uma	um	NUM	_	Gender=Fem|NumType=Card	11	nummod	_	_
+11	semana	semana	NOUN	_	Gender=Fem|Number=Sing	12	obl	_	_
+12	antes	antes	ADV	_	_	9	advmod	_	_
+13-14	da	_	_	_	_	_	_	_	_
+13	de	de	ADP	_	_	15	case	_	_
+14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
+15	eleição	eleição	NOUN	_	Gender=Fem|Number=Sing	12	obl	_	SpaceAfter=No
+16	.	.	PUNCT	_	_	9	punct	_	_
+
+# sent_id = fakebr:1129-46
+# text = Você não terá direito de saber como está a disputa.
+1	Você	você	PRON	_	Case=Nom|Number=Sing|Person=2|PronType=Prs	3	nsubj	_	_
+2	não	não	ADV	_	_	3	advmod	_	_
+3	terá	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin	0	root	_	_
+4	direito	direito	NOUN	_	Gender=Masc|Number=Sing	3	obj	_	_
+5	de	de	ADP	_	_	6	mark	_	_
+6	saber	saber	VERB	_	VerbForm=Inf	4	acl	_	_
+7	como	como	ADV	_	_	6	ccomp	_	_
+8	está	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	_	_
+9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
+10	disputa	disputa	NOUN	_	Gender=Fem|Number=Sing	7	nsubj	_	SpaceAfter=No
+11	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = fakebr:1129-47
+# text = A medida beneficia diretamente candidatos do governo, que controlam a máquina pública e podem manipular resultados sem que a população saiba.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	medida	medida	NOUN	_	Gender=Fem|Number=Sing	3	nsubj	_	_
+3	beneficia	beneficiar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+4	diretamente	diretamente	ADV	_	_	3	advmod	_	_
+5	candidatos	candidato	NOUN	_	Gender=Masc|Number=Plur	3	obj	_	_
+6-7	do	_	_	_	_	_	_	_	_
+6	de	de	ADP	_	_	8	case	_	_
+7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
+8	governo	governo	NOUN	_	Gender=Masc|Number=Sing	5	nmod	_	SpaceAfter=No
+9	,	,	PUNCT	_	_	11	punct	_	_
+10	que	que	PRON	_	PronType=Rel	11	nsubj	_	_
+11	controlam	controlar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	acl:relcl	_	_
+12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
+13	máquina	máquina	NOUN	_	Gender=Fem|Number=Sing	11	obj	_	_
+14	pública	público	ADJ	_	Gender=Fem|Number=Sing	13	amod	_	_
+15	e	e	CCONJ	_	_	16	cc	_	_
+16	podem	poder	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	11	conj	_	_
+17	manipular	manipular	VERB	_	VerbForm=Inf	16	xcomp	_	_
+18	resultados	resultado	NOUN	_	Gender=Masc|Number=Plur	17	obj	_	_
+19	sem	sem	ADP	_	_	23	mark	_	_
+20	que	que	SCONJ	_	_	19	fixed	_	_
+21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
+22	população	população	NOUN	_	Gender=Fem|Number=Sing	23	nsubj	_	_
+23	saiba	saber	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	17	advcl	_	SpaceAfter=No
+24	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = fakebr:1129-48
+# text = PRESSÃO DO GOVERNO TEMER E DO GILMAR MENDES.
+1	PRESSÃO	pressão	NOUN	_	Gender=Fem|Number=Sing	0	root	_	_
+2-3	DO	_	_	_	_	_	_	_	_
+2	DE	de	ADP	_	_	4	case	_	_
+3	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	_	_
+4	GOVERNO	GOVERNO	PROPN	_	_	1	nmod	_	_
+5	TEMER	TEMER	PROPN	_	_	4	nmod	_	_
+6	E	e	CCONJ	_	_	9	cc	_	_
+7-8	DO	_	_	_	_	_	_	_	_
+7	DE	de	ADP	_	_	9	case	_	_
+8	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
+9	GILMAR	GILMAR	PROPN	_	_	4	conj	_	_
+10	MENDES	MENDES	PROPN	_	_	9	flat:name	_	SpaceAfter=No
+11	.	.	PUNCT	_	_	1	punct	_	_
+
+# sent_id = fakebr:1129-49
+# text = Documentos revelam que o presidente Michel Temer e o ministro Gilmar Mendes estão PESSOALMENTE pressionando deputados para aprovar a reforma a toque de caixa.
+1	Documentos	documento	NOUN	_	Gender=Masc|Number=Plur	2	nsubj	_	_
+2	revelam	revelar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+3	que	que	SCONJ	_	_	15	mark	_	_
+4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
+5	presidente	presidente	NOUN	_	Number=Sing	15	nsubj	_	_
+6	Michel	Michel	PROPN	_	_	5	nmod	_	_
+7	Temer	Temer	PROPN	_	_	6	flat:name	_	_
+8	e	e	CCONJ	_	_	10	cc	_	_
+9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
+10	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	5	conj	_	_
+11	Gilmar	Gilmar	PROPN	_	_	10	nmod	_	_
+12	Mendes	Mendes	PROPN	_	_	11	flat:name	_	_
+13	estão	estar	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	15	aux	_	_
+14	PESSOALMENTE	pessoalmente	ADV	_	_	15	advmod	_	_
+15	pressionando	pressionar	VERB	_	VerbForm=Ger	2	ccomp	_	_
+16	deputados	deputado	NOUN	_	Gender=Masc|Number=Plur	15	obj	_	_
+17	para	para	ADP	_	_	18	mark	_	_
+18	aprovar	aprovar	VERB	_	VerbForm=Inf	15	advcl	_	_
+19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
+20	reforma	reforma	NOUN	_	Gender=Fem|Number=Sing	18	obj	_	_
+21	a	a	ADP	_	_	22	case	_	_
+22	toque	toque	NOUN	_	Gender=Masc|Number=Sing	20	nmod	_	_
+23	de	de	ADP	_	_	24	case	_	_
+24	caixa	caixa	NOUN	_	Number=Sing	22	nmod	_	SpaceAfter=No
+25	.	.	PUNCT	_	_	2	punct	_	_
+
+# sent_id = fakebr:1129-50
+# text = Reuniões secretas no Palácio do Jaburu definiram os rumos da votação sem participação popular.
+1	Reuniões	reunião	NOUN	_	Gender=Fem|Number=Plur	9	nsubj	_	_
+2	secretas	secreto	ADJ	_	Gender=Fem|Number=Plur	1	amod	_	_
+3-4	no	_	_	_	_	_	_	_	_
+3	em	em	ADP	_	_	5	case	_	_
+4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
+5	Palácio	Palácio	PROPN	_	_	1	nmod	_	_
+6-7	do	_	_	_	_	_	_	_	_
+6	de	de	ADP	_	_	8	case	_	_
+7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
+8	Jaburu	Jaburu	PROPN	_	_	5	flat:name	_	_
+9	definiram	definir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+10	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	11	det	_	_
+11	rumos	rumo	NOUN	_	Gender=Masc|Number=Plur	9	obj	_	_
+12-13	da	_	_	_	_	_	_	_	_
+12	de	de	ADP	_	_	14	case	_	_
+13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
+14	votação	votação	NOUN	_	Gender=Fem|Number=Sing	11	nmod	_	_
+15	sem	sem	ADP	_	_	16	case	_	_
+16	participação	participação	NOUN	_	Gender=Fem|Number=Sing	14	nmod	_	_
+17	popular	popular	ADJ	_	Number=Sing	16	amod	_	SpaceAfter=No
+18	.	.	PUNCT	_	_	9	punct	_	_
+
+# sent_id = fakebr:1129-51
+# text = Gilmar Mendes, que deveria ser imparcial como presidente do TSE, atua como operador político do governo neste esquema bilionário.
+1	Gilmar	Gilmar	PROPN	_	_	14	nsubj	_	_
+2	Mendes	Mendes	PROPN	_	_	1	flat:name	_	SpaceAfter=No
+3	,	,	PUNCT	_	_	5	punct	_	_
+4	que	que	PRON	_	PronType=Rel	5	nsubj	_	_
+5	deveria	dever	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	1	acl:relcl	_	_
+6	ser	ser	AUX	_	VerbForm=Inf	7	cop	_	_
+7	imparcial	imparcial	ADJ	_	Number=Sing	5	xcomp	_	_
+8	como	como	ADP	_	_	9	case	_	_
+9	presidente	presidente	NOUN	_	Number=Sing	7	obl	_	_
+10-11	do	_	_	_	_	_	_	_	_
+10	de	de	ADP	_	_	12	case	_	_
+11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
+12	TSE	TSE	PROPN	_	_	9	nmod	_	SpaceAfter=No
+13	,	,	PUNCT	_	_	5	punct	_	_
+14	atua	atuar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+15	como	como	ADP	_	_	16	case	_	_
+16	operador	operador	NOUN	_	Gender=Masc|Number=Sing	14	obl	_	_
+17	político	político	ADJ	_	Gender=Masc|Number=Sing	16	amod	_	_
+18-19	do	_	_	_	_	_	_	_	_
+18	de	de	ADP	_	_	20	case	_	_
+19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
+20	governo	governo	NOUN	_	Gender=Masc|Number=Sing	16	nmod	_	_
+21-22	neste	_	_	_	_	_	_	_	_
+21	em	em	ADP	_	_	23	case	_	_
+22	este	este	DET	_	Gender=Masc|Number=Sing|PronType=Dem	23	det	_	_
+23	esquema	esquema	NOUN	_	Gender=Masc|Number=Sing	14	obl	_	_
+24	bilionário	bilionário	ADJ	_	Gender=Masc|Number=Sing	23	amod	_	SpaceAfter=No
+25	.	.	PUNCT	_	_	14	punct	_	_
+
+# sent_id = fakebr:1129-52
+# text = ENQUANTO ISSO, O POVO SOFRE.
+1	ENQUANTO	enquanto	VERB	_	_	6	advcl	_	_
+2	ISSO	isso	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	1	fixed	_	SpaceAfter=No
+3	,	,	PUNCT	_	_	1	punct	_	_
+4	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
+5	POVO	POVO	PROPN	_	_	6	nsubj	_	_
+6	SOFRE	sofrer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	SpaceAfter=No
+7	.	.	PUNCT	_	_	6	punct	_	_
+
+# sent_id = fakebr:1129-53
+# text = Hospitais sem remédios, professores sem salários, aposentados passando fome, mas os políticos garantem R$ 3,6 BILHÕES para suas campanhas de luxo.
+1	Hospitais	hospital	NOUN	_	Gender=Masc|Number=Plur	0	root	_	_
+2	sem	sem	ADP	_	_	3	case	_	_
+3	remédios	remédio	NOUN	_	Gender=Masc|Number=Plur	1	nmod	_	SpaceAfter=No
+4	,	,	PUNCT	_	_	5	punct	_	_
+5	professores	professor	NOUN	_	Gender=Masc|Number=Plur	1	conj	_	_
+6	sem	sem	ADP	_	_	7	case	_	_
+7	salários	salário	NOUN	_	Gender=Masc|Number=Plur	5	nmod	_	SpaceAfter=No
+8	,	,	PUNCT	_	_	9	punct	_	_
+9	aposentados	aposentado	NOUN	_	Gender=Masc|Number=Plur	1	conj	_	_
+10	passando	passar	VERB	_	VerbForm=Ger	9	acl	_	_
+11	fome	fome	NOUN	_	Gender=Fem|Number=Sing	10	obj	_	SpaceAfter=No
+12	,	,	PUNCT	_	_	16	punct	_	_
+13	mas	mas	CCONJ	_	_	16	cc	_	_
+14	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	15	det	_	_
+15	políticos	político	NOUN	_	Gender=Masc|Number=Plur	16	nsubj	_	_
+16	garantem	garantir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	1	conj	_	_
+17	R$	R$	SYM	_	_	19	nmod	_	_
+18	3,6	3,6	NUM	_	NumType=Card	19	nummod	_	_
+19	BILHÕES	BILHÕES	PUNCT	_	_	16	obj	_	_
+20	para	para	ADP	_	_	22	case	_	_
+21	suas	seu	DET	_	Gender=Fem|Number=Plur|Person=3|Poss=Yes|PronType=Prs	22	det	_	_
+22	campanhas	campanha	NOUN	_	Gender=Fem|Number=Plur	16	obl	_	_
+23	de	de	ADP	_	_	24	case	_	_
+24	luxo	luxo	NOUN	_	Gender=Masc|Number=Sing	22	nmod	_	SpaceAfter=No
+25	.	.	PUNCT	_	_	1	punct	_	_
+
+# sent_id = fakebr:1129-54
+# text = É esse o Brasil que você quer?
+1	É	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	cop	_	_
+2	esse	esse	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	0	root	_	_
+3	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	_	_
+4	Brasil	Brasil	PROPN	_	_	2	nsubj	_	_
+5	que	que	PRON	_	PronType=Rel	7	obj	_	_
+6	você	você	PRON	_	Case=Nom|Number=Sing|Person=2|PronType=Prs	7	nsubj	_	_
+7	quer	querer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	acl:relcl	_	SpaceAfter=No
+8	?	?	PUNCT	_	_	2	punct	_	_
+
+# sent_id = fakebr:1129-55
+# text = COMPARTILHE ANTES QUE SEJA TARDE!
+1	COMPARTILHE	compartilhar	VERB	_	Mood=Imp|Number=Sing|Person=3|VerbForm=Fin	0	root	_	_
+2	ANTES	antes	ADV	_	_	1	advmod	_	_
+3	QUE	que	SCONJ	_	_	2	fixed	_	_
+4	SEJA	ser	AUX	_	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	cop	_	_
+5	TARDE	tarde	ADJ	_	_	4	xcomp	_	SpaceAfter=No
+6	!	!	PUNCT	_	_	1	punct	_	_
+
+# sent_id = fakebr:1129-56
+# text = A VOTAÇÃO PODE ACONTECER A QUALQUER MOMENTO!
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	VOTAÇÃO	votação	NOUN	_	_	3	nsubj	_	_
+3	PODE	poder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+4	ACONTECER	acontecer	VERB	_	VerbForm=Inf	3	xcomp	_	_
+5	A	a	ADP	_	_	7	case	_	_
+6	QUALQUER	qualquer	DET	_	Number=Sing|PronType=Ind	7	det	_	_
+7	MOMENTO	momento	NOUN	_	Gender=Masc|Number=Sing	4	obl	_	SpaceAfter=No
+8	!	!	PUNCT	_	_	3	punct	_	_
+
+# sent_id = fakebr:1129-57
+# text = A grande mídia está SILENCIANDO sobre esse escândalo.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
+2	grande	grande	ADJ	_	Number=Sing	3	amod	_	_
+3	mídia	mídia	NOUN	_	Gender=Fem|Number=Sing	5	nsubj	_	_
+4	está	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	aux	_	_
+5	SILENCIANDO	silenciar	VERB	_	VerbForm=Ger	0	root	_	_
+6	sobre	sobre	ADP	_	_	8	case	_	_
+7	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	8	det	_	_
+8	escândalo	escândalo	NOUN	_	Gender=Masc|Number=Sing	5	obl	_	SpaceAfter=No
+9	.	.	PUNCT	_	_	5	punct	_	_
+
+# sent_id = fakebr:1129-58
+# text = Só as mídias independentes estão denunciando.
+1	Só	só	ADV	_	_	3	advmod	_	_
+2	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	3	det	_	_
+3	mídias	mídia	NOUN	_	Gender=Fem|Number=Plur	6	nsubj	_	_
+4	independentes	independente	ADJ	_	Number=Plur	3	amod	_	_
+5	estão	estar	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	aux	_	_
+6	denunciando	denunciar	VERB	_	VerbForm=Ger	0	root	_	SpaceAfter=No
+7	.	.	PUNCT	_	_	6	punct	_	_
+
+# sent_id = fakebr:1129-59
+# text = COMPARTILHE e avise seus amigos e familiares sobre esse ASSALTO À DEMOCRACIA BRASILEIRA!
+1	COMPARTILHE	compartilhar	VERB	_	Mood=Imp|Number=Sing|Person=3|VerbForm=Fin	0	root	_	_
+2	e	e	CCONJ	_	_	3	cc	_	_
+3	avise	avisar	VERB	_	Mood=Imp|Number=Sing|Person=3|VerbForm=Fin	1	conj	_	_
+4	seus	seu	DET	_	Gender=Masc|Number=Plur|Person=3|Poss=Yes|PronType=Prs	5	det	_	_
+5	amigos	amigo	NOUN	_	Gender=Masc|Number=Plur	3	obj	_	_
+6	e	e	CCONJ	_	_	7	cc	_	_
+7	familiares	familiar	NOUN	_	Number=Plur	5	conj	_	_
+8	sobre	sobre	ADP	_	_	10	case	_	_
+9	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	10	det	_	_
+10	ASSALTO	assalto	NOUN	_	Gender=Masc|Number=Sing	3	obl	_	_
+11-12	À	_	_	_	_	_	_	_	_
+11	A	a	ADP	_	_	13	case	_	_
+12	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
+13	DEMOCRACIA	DEMOCRACIA	PROPN	_	_	10	nmod	_	_
+14	BRASILEIRA	BRASILEIRA	PROPN	_	_	10	flat:name	_	SpaceAfter=No
+15	!	!	PUNCT	_	_	1	punct	_	_
+

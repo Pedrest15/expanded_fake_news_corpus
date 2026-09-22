@@ -1,0 +1,660 @@
+# sent_id = fakebr:421-1
+# text = EXCLUSIVO:
+1	EXCLUSIVO	exclusivo	ADJ	_	Gender=Masc|Number=Sing	0	root	_	SpaceAfter=No
+2	:	:	PUNCT	_	_	1	punct	_	_
+
+# sent_id = fakebr:421-2
+# text = Documentos secretos revelam que Lava Jato foi orquestrada para favorecer multinacionais estrangeiras.
+1	Documentos	documento	NOUN	_	Gender=Masc|Number=Plur	3	nsubj	_	_
+2	secretos	secreto	ADJ	_	Gender=Masc|Number=Plur	1	amod	_	_
+3	revelam	revelar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+4	que	que	SCONJ	_	_	8	mark	_	_
+5	Lava	Lava	PROPN	_	_	8	nsubj:pass	_	_
+6	Jato	Jato	PROPN	_	_	5	flat:name	_	_
+7	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	aux:pass	_	_
+8	orquestrada	orquestrar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	3	ccomp	_	_
+9	para	para	ADP	_	_	10	mark	_	_
+10	favorecer	favorecer	VERB	_	VerbForm=Inf	8	advcl	_	_
+11	multinacionais	multinacional	NOUN	_	Number=Plur	10	obj	_	_
+12	estrangeiras	estrangeiro	ADJ	_	Gender=Fem|Number=Plur	11	amod	_	SpaceAfter=No
+13	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = fakebr:421-3
+# text = SÃO PAULO - Uma investigação bombástica revela que as operações Lava Jato e Carne Fraca, assim como o rompimento "proposital" da barragem de Fundão, fazem parte de um plano internacional para destruir empresas brasileiras e abrir caminho para multinacionais estrangeiras dominarem o mercado nacional.
+1	SÃO	SÃO	PROPN	_	_	7	nsubj	_	_
+2	PAULO	PAULO	PROPN	_	_	1	flat:name	_	_
+3	-	-	PUNCT	_	_	1	punct	_	_
+4	Uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
+5	investigação	investigação	NOUN	_	Gender=Fem|Number=Sing	7	nsubj	_	_
+6	bombástica	bombástico	ADJ	_	Gender=Fem|Number=Sing	5	amod	_	_
+7	revela	revelar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+8	que	que	SCONJ	_	_	30	mark	_	_
+9	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	10	det	_	_
+10	operações	operação	NOUN	_	Gender=Fem|Number=Plur	30	nsubj	_	_
+11	Lava	Lava	PROPN	_	_	10	nmod	_	_
+12	Jato	Jato	PROPN	_	_	11	flat:name	_	_
+13	e	e	CCONJ	_	_	14	cc	_	_
+14	Carne	Carne	PROPN	_	_	11	conj	_	_
+15	Fraca	Fraca	PROPN	_	_	14	flat:name	_	SpaceAfter=No
+16	,	,	PUNCT	_	_	20	punct	_	_
+17	assim	assim	ADV	_	_	20	mark	_	_
+18	como	como	SCONJ	_	_	17	fixed	_	_
+19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
+20	rompimento	rompimento	NOUN	_	Gender=Masc|Number=Sing	30	advcl	_	_
+21	"	"	PUNCT	_	_	22	punct	_	SpaceAfter=No
+22	proposital	proposital	ADJ	_	Number=Sing	20	amod	_	SpaceAfter=No
+23	"	"	PUNCT	_	_	22	punct	_	_
+24-25	da	_	_	_	_	_	_	_	_
+24	de	de	ADP	_	_	26	case	_	_
+25	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	26	det	_	_
+26	barragem	barragem	NOUN	_	Gender=Fem|Number=Sing	20	nmod	_	_
+27	de	de	ADP	_	_	28	case	_	_
+28	Fundão	Fundão	PROPN	_	_	26	nmod	_	SpaceAfter=No
+29	,	,	PUNCT	_	_	20	punct	_	_
+30	fazem	fazer	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	ccomp	_	_
+31	parte	parte	NOUN	_	Gender=Fem|Number=Sing	30	obj	_	_
+32	de	de	ADP	_	_	34	case	_	_
+33	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	34	det	_	_
+34	plano	plano	NOUN	_	Gender=Masc|Number=Sing	30	obl	_	_
+35	internacional	internacional	ADJ	_	Number=Sing	34	amod	_	_
+36	para	para	ADP	_	_	37	mark	_	_
+37	destruir	destruir	VERB	_	VerbForm=Inf	34	acl	_	_
+38	empresas	empresa	NOUN	_	Gender=Fem|Number=Plur	37	obj	_	_
+39	brasileiras	brasileiro	ADJ	_	Gender=Fem|Number=Plur	38	amod	_	_
+40	e	e	CCONJ	_	_	41	cc	_	_
+41	abrir	abrir	VERB	_	VerbForm=Inf	37	conj	_	_
+42	caminho	caminho	NOUN	_	Gender=Masc|Number=Sing	41	obj	_	_
+43	para	para	ADP	_	_	46	mark	_	_
+44	multinacionais	multinacional	NOUN	_	Number=Plur	46	nsubj	_	_
+45	estrangeiras	estrangeiro	ADJ	_	Gender=Fem|Number=Plur	44	amod	_	_
+46	dominarem	dominar	VERB	_	Number=Plur|Person=3|VerbForm=Inf	41	advcl	_	_
+47	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	48	det	_	_
+48	mercado	mercado	NOUN	_	Gender=Masc|Number=Sing	46	obj	_	_
+49	nacional	nacional	ADJ	_	Number=Sing	48	amod	_	SpaceAfter=No
+50	.	.	PUNCT	_	_	7	punct	_	_
+
+# sent_id = fakebr:421-4
+# text = Documentos vazados por um ex-funcionário da CIA, que pediu anonimato por temer pela própria vida, mostram que tudo foi planejado.
+1	Documentos	documento	NOUN	_	Gender=Masc|Number=Plur	20	nsubj	_	_
+2	vazados	vazar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	1	acl	_	_
+3	por	por	ADP	_	_	5	case	_	_
+4	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
+5	ex-funcionário	ex-funcionário	NOUN	_	Gender=Masc|Number=Sing	2	obl:agent	_	_
+6-7	da	_	_	_	_	_	_	_	_
+6	de	de	ADP	_	_	8	case	_	_
+7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
+8	CIA	CIA	PROPN	_	_	5	nmod	_	SpaceAfter=No
+9	,	,	PUNCT	_	_	11	punct	_	_
+10	que	que	PRON	_	PronType=Rel	11	nsubj	_	_
+11	pediu	pedir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	_	_
+12	anonimato	anonimato	NOUN	_	Gender=Masc|Number=Sing	11	obj	_	_
+13	por	por	ADP	_	_	14	mark	_	_
+14	temer	temer	VERB	_	VerbForm=Inf	11	advcl	_	_
+15-16	pela	_	_	_	_	_	_	_	_
+15	por	por	ADP	_	_	18	case	_	_
+16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
+17	própria	próprio	DET	_	Gender=Fem|Number=Sing|PronType=Dem	18	det	_	_
+18	vida	vida	NOUN	_	Gender=Fem|Number=Sing	14	obl	_	SpaceAfter=No
+19	,	,	PUNCT	_	_	11	punct	_	_
+20	mostram	mostrar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+21	que	que	SCONJ	_	_	24	mark	_	_
+22	tudo	tudo	PRON	_	PronType=Ind	24	nsubj:pass	_	_
+23	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	24	aux:pass	_	_
+24	planejado	planejar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	20	ccomp	_	SpaceAfter=No
+25	.	.	PUNCT	_	_	20	punct	_	_
+
+# sent_id = fakebr:421-5
+# text = Segundo fontes próximas ao Departamento de Estado americano, empresas como Petrobrás, Odebrecht e Samarco foram alvos estratégicos escolhidos para serem demolidas.
+1	Segundo	segundo	ADP	_	_	2	case	_	_
+2	fontes	fonte	NOUN	_	Gender=Fem|Number=Plur	19	nmod	_	_
+3	próximas	próximo	ADJ	_	Gender=Fem|Number=Plur	2	amod	_	_
+4-5	ao	_	_	_	_	_	_	_	_
+4	a	a	ADP	_	_	6	case	_	_
+5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
+6	Departamento	Departamento	PROPN	_	_	3	obl	_	_
+7	de	de	ADP	_	_	8	case	_	_
+8	Estado	Estado	PROPN	_	_	6	flat:name	_	_
+9	americano	americano	ADJ	_	Gender=Masc|Number=Sing	6	amod	_	SpaceAfter=No
+10	,	,	PUNCT	_	_	2	punct	_	_
+11	empresas	empresa	NOUN	_	Gender=Fem|Number=Plur	19	nsubj	_	_
+12	como	como	ADP	_	_	13	case	_	_
+13	Petrobrás	Petrobrás	PROPN	_	_	11	nmod	_	SpaceAfter=No
+14	,	,	PUNCT	_	_	15	punct	_	_
+15	Odebrecht	Odebrecht	PROPN	_	_	13	conj	_	_
+16	e	e	CCONJ	_	_	17	cc	_	_
+17	Samarco	Samarco	PROPN	_	_	13	conj	_	_
+18	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	19	cop	_	_
+19	alvos	alvo	NOUN	_	Gender=Masc|Number=Plur	0	root	_	_
+20	estratégicos	estratégico	ADJ	_	Gender=Masc|Number=Plur	19	amod	_	_
+21	escolhidos	escolher	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	19	acl	_	_
+22	para	para	ADP	_	_	24	mark	_	_
+23	serem	ser	AUX	_	Number=Plur|Person=3|VerbForm=Inf	24	aux:pass	_	_
+24	demolidas	demolir	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	21	advcl	_	SpaceAfter=No
+25	.	.	PUNCT	_	_	19	punct	_	_
+
+# sent_id = fakebr:421-6
+# text = "Eles queriam acabar com a capacidade do Brasil de competir no mercado internacional de petróleo e construção civil", revelou o informante em entrevista exclusiva.
+1	"	"	PUNCT	_	_	3	punct	_	SpaceAfter=No
+2	Eles	ele	PRON	_	Case=Nom|Gender=Masc|Number=Plur|Person=3|PronType=Prs	3	nsubj	_	_
+3	queriam	querer	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	24	ccomp:speech	_	_
+4	acabar	acabar	VERB	_	VerbForm=Inf	3	xcomp	_	_
+5	com	com	ADP	_	_	7	case	_	_
+6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
+7	capacidade	capacidade	NOUN	_	Gender=Fem|Number=Sing	4	obl	_	_
+8-9	do	_	_	_	_	_	_	_	_
+8	de	de	ADP	_	_	10	case	_	_
+9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
+10	Brasil	Brasil	PROPN	_	_	7	nmod	_	_
+11	de	de	ADP	_	_	12	mark	_	_
+12	competir	competir	VERB	_	VerbForm=Inf	7	acl	_	_
+13-14	no	_	_	_	_	_	_	_	_
+13	em	em	ADP	_	_	15	case	_	_
+14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
+15	mercado	mercado	NOUN	_	Gender=Masc|Number=Sing	12	obl	_	_
+16	internacional	internacional	ADJ	_	Number=Sing	15	amod	_	_
+17	de	de	ADP	_	_	18	case	_	_
+18	petróleo	petróleo	NOUN	_	Gender=Masc|Number=Sing	15	nmod	_	_
+19	e	e	CCONJ	_	_	20	cc	_	_
+20	construção	construção	NOUN	_	Gender=Fem|Number=Sing	18	conj	_	_
+21	civil	civil	ADJ	_	Number=Sing	20	amod	_	SpaceAfter=No
+22	"	"	PUNCT	_	_	3	punct	_	SpaceAfter=No
+23	,	,	PUNCT	_	_	3	punct	_	_
+24	revelou	revelar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+25	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	26	det	_	_
+26	informante	informante	NOUN	_	Number=Sing	24	nsubj	_	_
+27	em	em	ADP	_	_	28	case	_	_
+28	entrevista	entrevista	NOUN	_	Gender=Fem|Number=Sing	24	obl	_	_
+29	exclusiva	exclusivo	ADJ	_	Gender=Fem|Number=Sing	28	amod	_	SpaceAfter=No
+30	.	.	PUNCT	_	_	24	punct	_	_
+
+# sent_id = fakebr:421-7
+# text = O aumento de 36% para 52% no número de empresas latino-americanas com planos de gestão de crise entre 2015 e 2016 não foi coincidência - foi uma resposta desesperada ao ataque coordenado.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
+2	aumento	aumento	NOUN	_	Gender=Masc|Number=Sing	27	nsubj	_	_
+3	de	de	ADP	_	_	5	case	_	_
+4	36	36	NUM	_	NumType=Card	5	nummod	_	SpaceAfter=No
+5	%	%	SYM	_	_	2	nmod	_	_
+6	para	para	ADP	_	_	8	case	_	_
+7	52	52	NUM	_	NumType=Card	8	nummod	_	SpaceAfter=No
+8	%	%	SYM	_	_	2	nmod	_	_
+9-10	no	_	_	_	_	_	_	_	_
+9	em	em	ADP	_	_	11	case	_	_
+10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
+11	número	número	NOUN	_	Gender=Masc|Number=Sing	2	nmod	_	_
+12	de	de	ADP	_	_	13	case	_	_
+13	empresas	empresa	NOUN	_	Gender=Fem|Number=Plur	11	nmod	_	_
+14	latino-americanas	latino-americanas	ADJ	_	Gender=Fem|Number=Plur	13	amod	_	_
+15	com	com	ADP	_	_	16	case	_	_
+16	planos	plano	NOUN	_	Gender=Masc|Number=Plur	13	nmod	_	_
+17	de	de	ADP	_	_	18	case	_	_
+18	gestão	gestão	NOUN	_	Gender=Fem|Number=Sing	16	nmod	_	_
+19	de	de	ADP	_	_	20	case	_	_
+20	crise	crise	NOUN	_	Gender=Fem|Number=Sing	18	nmod	_	_
+21	entre	entre	ADP	_	_	22	case	_	_
+22	2015	2015	NUM	_	NumType=Card	16	nmod	_	_
+23	e	e	CCONJ	_	_	24	cc	_	_
+24	2016	2016	NUM	_	NumType=Card	22	conj	_	_
+25	não	não	ADV	_	_	27	advmod	_	_
+26	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	27	cop	_	_
+27	coincidência	coincidência	NOUN	_	Gender=Fem|Number=Sing	0	root	_	_
+28	-	-	PUNCT	_	_	31	punct	_	_
+29	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	31	cop	_	_
+30	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	31	det	_	_
+31	resposta	resposta	NOUN	_	Gender=Fem|Number=Sing	27	parataxis	_	_
+32	desesperada	desesperado	ADJ	_	Gender=Fem|Number=Sing|VerbForm=Part	31	amod	_	_
+33-34	ao	_	_	_	_	_	_	_	_
+33	a	a	ADP	_	_	35	case	_	_
+34	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	35	det	_	_
+35	ataque	ataque	NOUN	_	Gender=Masc|Number=Sing	31	nmod	_	_
+36	coordenado	coordenado	ADJ	_	Gender=Masc|Number=Sing|VerbForm=Part	35	amod	_	SpaceAfter=No
+37	.	.	PUNCT	_	_	27	punct	_	_
+
+# sent_id = fakebr:421-8
+# text = Especialistas que participaram do estudo da consultoria Marsh confirmaram off the record que receberam pressões para não divulgar os verdadeiros números, que seriam ainda mais alarmantes.
+1	Especialistas	especialista	NOUN	_	Number=Plur	11	nsubj	_	_
+2	que	que	PRON	_	PronType=Rel	3	nsubj	_	_
+3	participaram	participar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	1	acl:relcl	_	_
+4-5	do	_	_	_	_	_	_	_	_
+4	de	de	ADP	_	_	6	case	_	_
+5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
+6	estudo	estudo	NOUN	_	Gender=Masc|Number=Sing	3	obl	_	_
+7-8	da	_	_	_	_	_	_	_	_
+7	de	de	ADP	_	_	9	case	_	_
+8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	_	_
+9	consultoria	consultoria	NOUN	_	Gender=Fem|Number=Sing	6	nmod	_	_
+10	Marsh	Marsh	PROPN	_	_	9	nmod	_	_
+11	confirmaram	confirmar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+12	off	off	X	_	Foreign=Yes	11	obj	_	_
+13	the	the	X	_	Foreign=Yes	12	flat:foreign	_	_
+14	record	record	X	_	Foreign=Yes	12	flat:foreign	_	_
+15	que	que	SCONJ	_	_	16	mark	_	_
+16	receberam	receber	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	11	ccomp	_	_
+17	pressões	pressão	NOUN	_	Gender=Fem|Number=Plur	16	obj	_	_
+18	para	para	ADP	_	_	20	mark	_	_
+19	não	não	ADV	_	_	20	advmod	_	_
+20	divulgar	divulgar	VERB	_	VerbForm=Inf	17	acl	_	_
+21	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	23	det	_	_
+22	verdadeiros	verdadeiro	ADJ	_	Gender=Masc|Number=Plur	23	amod	_	_
+23	números	número	NOUN	_	Gender=Masc|Number=Plur	20	obj	_	SpaceAfter=No
+24	,	,	PUNCT	_	_	29	punct	_	_
+25	que	que	PRON	_	PronType=Rel	29	nsubj	_	_
+26	seriam	ser	AUX	_	Mood=Cnd|Number=Plur|Person=3|VerbForm=Fin	29	cop	_	_
+27	ainda	ainda	ADV	_	_	29	advmod	_	_
+28	mais	mais	ADV	_	_	29	advmod	_	_
+29	alarmantes	alarmante	ADJ	_	Number=Plur	23	acl:relcl	_	SpaceAfter=No
+30	.	.	PUNCT	_	_	11	punct	_	_
+
+# sent_id = fakebr:421-9
+# text = Um detalhe que passou despercebido pela mídia tradicional: as buscas no Google pelos nomes "Samarco" e "Odebrecht" dispararam exatamente nos mesmos períodos em que agências de inteligência estrangeiras intensificaram suas operações no Brasil.
+1	Um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
+2	detalhe	detalhe	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
+3	que	que	PRON	_	PronType=Rel	4	nsubj	_	_
+4	passou	passar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	acl:relcl	_	_
+5	despercebido	despercebido	ADJ	_	Gender=Masc|Number=Sing|VerbForm=Part	4	xcomp	_	_
+6-7	pela	_	_	_	_	_	_	_	_
+6	por	por	ADP	_	_	8	case	_	_
+7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
+8	mídia	mídia	NOUN	_	Gender=Fem|Number=Sing	5	obl:agent	_	_
+9	tradicional	tradicional	ADJ	_	Number=Sing	8	amod	_	SpaceAfter=No
+10	:	:	PUNCT	_	_	26	punct	_	_
+11	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	12	det	_	_
+12	buscas	busca	NOUN	_	Gender=Fem|Number=Plur	26	nsubj	_	_
+13-14	no	_	_	_	_	_	_	_	_
+13	em	em	ADP	_	_	15	case	_	_
+14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
+15	Google	Google	PROPN	_	_	12	nmod	_	_
+16-17	pelos	_	_	_	_	_	_	_	_
+16	por	por	ADP	_	_	18	case	_	_
+17	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	18	det	_	_
+18	nomes	nome	NOUN	_	Gender=Masc|Number=Plur	12	nmod	_	_
+19	"	"	PUNCT	_	_	20	punct	_	SpaceAfter=No
+20	Samarco	Samarco	PROPN	_	_	18	nmod	_	SpaceAfter=No
+21	"	"	PUNCT	_	_	20	punct	_	_
+22	e	e	CCONJ	_	_	24	cc	_	_
+23	"	"	PUNCT	_	_	24	punct	_	SpaceAfter=No
+24	Odebrecht	Odebrecht	PROPN	_	_	20	conj	_	SpaceAfter=No
+25	"	"	PUNCT	_	_	24	punct	_	_
+26	dispararam	disparar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	2	acl:relcl	_	_
+27	exatamente	exatamente	ADV	_	_	26	advmod	_	_
+28-29	nos	_	_	_	_	_	_	_	_
+28	em	em	ADP	_	_	31	case	_	_
+29	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	31	det	_	_
+30	mesmos	mesmo	DET	_	Gender=Masc|Number=Plur|PronType=Dem	31	det	_	_
+31	períodos	período	NOUN	_	Gender=Masc|Number=Plur	26	obl	_	_
+32	em	em	ADP	_	_	33	case	_	_
+33	que	que	PRON	_	PronType=Rel	38	obl	_	_
+34	agências	agência	NOUN	_	Gender=Fem|Number=Plur	38	nsubj	_	_
+35	de	de	ADP	_	_	36	case	_	_
+36	inteligência	inteligência	NOUN	_	Gender=Fem|Number=Sing	34	nmod	_	_
+37	estrangeiras	estrangeiro	ADJ	_	Gender=Fem|Number=Plur	36	amod	_	_
+38	intensificaram	intensificar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	31	acl:relcl	_	_
+39	suas	seu	DET	_	Gender=Fem|Number=Plur|Person=3|Poss=Yes|PronType=Prs	40	det	_	_
+40	operações	operação	NOUN	_	Gender=Fem|Number=Plur	38	obj	_	_
+41-42	no	_	_	_	_	_	_	_	_
+41	em	em	ADP	_	_	43	case	_	_
+42	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	43	det	_	_
+43	Brasil	Brasil	PROPN	_	_	40	nmod	_	SpaceAfter=No
+44	.	.	PUNCT	_	_	2	punct	_	_
+
+# sent_id = fakebr:421-10
+# text = Hackers teriam manipulado os algoritmos para associar automaticamente essas empresas a termos negativos como "corrupção" e "crime".
+1	Hackers	hacker	NOUN	_	Number=Plur	3	nsubj	_	_
+2	teriam	ter	AUX	_	Mood=Cnd|Number=Plur|Person=3|VerbForm=Fin	3	aux	_	_
+3	manipulado	manipular	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	0	root	_	_
+4	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	5	det	_	_
+5	algoritmos	algoritmo	NOUN	_	Gender=Masc|Number=Plur	3	obj	_	_
+6	para	para	ADP	_	_	7	mark	_	_
+7	associar	associar	VERB	_	VerbForm=Inf	3	advcl	_	_
+8	automaticamente	automaticamente	ADV	_	_	7	advmod	_	_
+9	essas	esse	DET	_	Gender=Fem|Number=Plur|PronType=Dem	10	det	_	_
+10	empresas	empresa	NOUN	_	Gender=Fem|Number=Plur	7	obj	_	_
+11	a	a	ADP	_	_	12	case	_	_
+12	termos	termo	NOUN	_	Gender=Masc|Number=Plur	7	obl	_	_
+13	negativos	negativo	ADJ	_	Gender=Masc|Number=Plur	12	amod	_	_
+14	como	como	ADP	_	_	16	case	_	_
+15	"	"	PUNCT	_	_	16	punct	_	SpaceAfter=No
+16	corrupção	corrupção	NOUN	_	Gender=Fem|Number=Sing	12	nmod	_	SpaceAfter=No
+17	"	"	PUNCT	_	_	16	punct	_	_
+18	e	e	CCONJ	_	_	20	cc	_	_
+19	"	"	PUNCT	_	_	20	punct	_	SpaceAfter=No
+20	crime	crime	NOUN	_	Gender=Masc|Number=Sing	16	conj	_	SpaceAfter=No
+21	"	"	PUNCT	_	_	20	punct	_	SpaceAfter=No
+22	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = fakebr:421-11
+# text = Dr. Roberto Mendes, especialista em geopolítica econômica da Universidade de Stanford (que pediu para não ser identificado por medo de retaliação), afirmou:
+1	Dr.	Dr.	NOUN	_	Abbr=Yes|Gender=Masc|Number=Sing	27	nsubj	_	_
+2	Roberto	Roberto	PROPN	_	_	1	nmod	_	_
+3	Mendes	Mendes	PROPN	_	_	2	flat:name	_	SpaceAfter=No
+4	,	,	PUNCT	_	_	5	punct	_	_
+5	especialista	especialista	NOUN	_	Number=Sing	1	appos	_	_
+6	em	em	ADP	_	_	7	case	_	_
+7	geopolítica	geopolítica	NOUN	_	Gender=Fem|Number=Sing	5	nmod	_	_
+8	econômica	econômico	ADJ	_	Gender=Fem|Number=Sing	7	amod	_	_
+9-10	da	_	_	_	_	_	_	_	_
+9	de	de	ADP	_	_	11	case	_	_
+10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	_	_
+11	Universidade	Universidade	PROPN	_	_	5	nmod	_	_
+12	de	de	ADP	_	_	13	case	_	_
+13	Stanford	Stanford	PROPN	_	_	11	flat:name	_	_
+14	(	(	PUNCT	_	_	16	punct	_	SpaceAfter=No
+15	que	que	PRON	_	PronType=Rel	16	nsubj	_	_
+16	pediu	pedir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	acl:relcl	_	_
+17	para	para	ADP	_	_	20	mark	_	_
+18	não	não	ADV	_	_	20	advmod	_	_
+19	ser	ser	AUX	_	VerbForm=Inf	20	aux:pass	_	_
+20	identificado	identificar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	16	ccomp	_	_
+21	por	por	ADP	_	_	22	case	_	_
+22	medo	medo	NOUN	_	Gender=Masc|Number=Sing	20	obl	_	_
+23	de	de	ADP	_	_	24	case	_	_
+24	retaliação	retaliação	NOUN	_	Gender=Fem|Number=Sing	22	nmod	_	SpaceAfter=No
+25	)	)	PUNCT	_	_	16	punct	_	SpaceAfter=No
+26	,	,	PUNCT	_	_	5	punct	_	_
+27	afirmou	afirmar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	SpaceAfter=No
+28	:	:	PUNCT	_	_	27	punct	_	_
+
+# sent_id = fakebr:421-12
+# text = Não é coincidência que empresas brasileiras de setores estratégicos tenham sido atingidas simultaneamente.
+1	Não	não	ADV	_	_	3	advmod	_	_
+2	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	_	_
+3	coincidência	coincidência	NOUN	_	Gender=Fem|Number=Sing	0	root	_	_
+4	que	que	SCONJ	_	_	12	mark	_	_
+5	empresas	empresa	NOUN	_	Gender=Fem|Number=Plur	12	nsubj:pass	_	_
+6	brasileiras	brasileiro	ADJ	_	Gender=Fem|Number=Plur	5	amod	_	_
+7	de	de	ADP	_	_	8	case	_	_
+8	setores	setor	NOUN	_	Gender=Masc|Number=Plur	5	nmod	_	_
+9	estratégicos	estratégico	ADJ	_	Gender=Masc|Number=Plur	8	amod	_	_
+10	tenham	ter	AUX	_	Mood=Sub|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	12	aux	_	_
+11	sido	ser	AUX	_	Gender=Masc|Number=Sing|VerbForm=Part	12	aux:pass	_	_
+12	atingidas	atingir	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	3	csubj	_	_
+13	simultaneamente	simultaneamente	ADV	_	_	12	advmod	_	SpaceAfter=No
+14	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = fakebr:421-13
+# text = Isso tem digital da CIA por toda parte.
+1	Isso	isso	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	2	nsubj	_	_
+2	tem	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+3	digital	digital	NOUN	_	Number=Sing	2	obj	_	_
+4-5	da	_	_	_	_	_	_	_	_
+4	de	de	ADP	_	_	6	case	_	_
+5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
+6	CIA	CIA	PROPN	_	_	3	nmod	_	_
+7	por	por	ADP	_	_	9	case	_	_
+8	toda	todo	DET	_	Gender=Fem|Number=Sing|PronType=Ind	9	det	_	_
+9	parte	parte	NOUN	_	Gender=Fem|Number=Sing	2	obl	_	SpaceAfter=No
+10	.	.	PUNCT	_	_	2	punct	_	_
+
+# sent_id = fakebr:421-14
+# text = Enquanto a Petrobrás mantinha sua posição no ranking "Empresa dos Sonhos" mesmo após os escândalos, empresas americanas do setor energético aumentaram secretamente seus investimentos no Brasil em 340%, segundo dados que não foram divulgados oficialmente.
+1	Enquanto	enquanto	SCONJ	_	_	4	mark	_	_
+2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
+3	Petrobrás	Petrobrás	PROPN	_	_	4	nsubj	_	_
+4	mantinha	manter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	27	advcl	_	_
+5	sua	seu	DET	_	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	6	det	_	_
+6	posição	posição	NOUN	_	Gender=Fem|Number=Sing	4	obj	_	_
+7-8	no	_	_	_	_	_	_	_	_
+7	em	em	ADP	_	_	9	case	_	_
+8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
+9	ranking	ranking	NOUN	_	Gender=Masc|Number=Sing	6	nmod	_	_
+10	"	"	PUNCT	_	_	11	punct	_	SpaceAfter=No
+11	Empresa	Empresa	PROPN	_	_	9	nmod	_	_
+12-13	dos	_	_	_	_	_	_	_	_
+12	de	de	ADP	_	_	14	case	_	_
+13	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	14	det	_	_
+14	Sonhos	Sonhos	PROPN	_	_	11	flat:name	_	SpaceAfter=No
+15	"	"	PUNCT	_	_	11	punct	_	_
+16	mesmo	mesmo	ADV	_	_	19	advmod	_	_
+17	após	após	ADP	_	_	19	case	_	_
+18	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	19	det	_	_
+19	escândalos	escândalo	NOUN	_	Gender=Masc|Number=Plur	4	obl	_	SpaceAfter=No
+20	,	,	PUNCT	_	_	4	punct	_	_
+21	empresas	empresa	NOUN	_	Gender=Fem|Number=Plur	27	nsubj	_	_
+22	americanas	americano	ADJ	_	Gender=Fem|Number=Plur	21	amod	_	_
+23-24	do	_	_	_	_	_	_	_	_
+23	de	de	ADP	_	_	25	case	_	_
+24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	_	_
+25	setor	setor	NOUN	_	Gender=Masc|Number=Sing	21	nmod	_	_
+26	energético	energético	ADJ	_	Gender=Masc|Number=Sing	25	amod	_	_
+27	aumentaram	aumentar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+28	secretamente	secretamente	ADV	_	_	27	advmod	_	_
+29	seus	seu	DET	_	Gender=Masc|Number=Plur|Person=3|Poss=Yes|PronType=Prs	30	det	_	_
+30	investimentos	investimento	NOUN	_	Gender=Masc|Number=Plur	27	obj	_	_
+31-32	no	_	_	_	_	_	_	_	_
+31	em	em	ADP	_	_	33	case	_	_
+32	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	33	det	_	_
+33	Brasil	Brasil	PROPN	_	_	30	nmod	_	_
+34	em	em	ADP	_	_	36	case	_	_
+35	340	340	NUM	_	NumType=Card	36	nummod	_	SpaceAfter=No
+36	%	%	SYM	_	_	27	obl	_	SpaceAfter=No
+37	,	,	PUNCT	_	_	39	punct	_	_
+38	segundo	segundo	ADP	_	_	39	case	_	_
+39	dados	dado	NOUN	_	Gender=Masc|Number=Plur	27	obl	_	_
+40	que	que	PRON	_	PronType=Rel	43	nsubj:pass	_	_
+41	não	não	ADV	_	_	43	advmod	_	_
+42	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	43	aux:pass	_	_
+43	divulgados	divulgar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	39	acl:relcl	_	_
+44	oficialmente	oficialmente	ADV	_	_	43	advmod	_	SpaceAfter=No
+45	.	.	PUNCT	_	_	27	punct	_	_
+
+# sent_id = fakebr:421-15
+# text = A pergunta que fica é: quem realmente se beneficiou com tudo isso?
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	pergunta	pergunta	NOUN	_	Gender=Fem|Number=Sing	10	nsubj:outer	_	_
+3	que	que	PRON	_	PronType=Rel	4	nsubj	_	_
+4	fica	ficar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	acl:relcl	_	_
+5	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	_	SpaceAfter=No
+6	:	:	PUNCT	_	_	10	punct	_	_
+7	quem	quem	PRON	_	PronType=Int	10	nsubj	_	_
+8	realmente	realmente	ADV	_	_	10	advmod	_	_
+9	se	se	PRON	_	Case=Nom|Person=3|PronType=Prs	10	expl	_	_
+10	beneficiou	beneficiar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+11	com	com	ADP	_	_	12	case	_	_
+12	tudo	tudo	PRON	_	PronType=Ind	10	obl	_	_
+13	isso	isso	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	12	fixed	_	SpaceAfter=No
+14	?	?	PUNCT	_	_	10	punct	_	_
+
+# sent_id = fakebr:421-16
+# text = As propagandas "espontâneas" dos frigoríficos durante a Operação Carne Fraca foram, na verdade, elaboradas semanas antes por agências de publicidade americanas especializadas em controle de danos, segundo denúncia de um publicitário arrependido que trabalhou no projeto.
+1	As	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	2	det	_	_
+2	propagandas	propaganda	NOUN	_	Gender=Fem|Number=Plur	20	nsubj:pass	_	_
+3	"	"	PUNCT	_	_	4	punct	_	SpaceAfter=No
+4	espontâneas	espontâneo	ADJ	_	Gender=Fem|Number=Plur	2	amod	_	SpaceAfter=No
+5	"	"	PUNCT	_	_	4	punct	_	_
+6-7	dos	_	_	_	_	_	_	_	_
+6	de	de	ADP	_	_	8	case	_	_
+7	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	8	det	_	_
+8	frigoríficos	frigorífico	NOUN	_	Gender=Masc|Number=Plur	2	nmod	_	_
+9	durante	durante	ADP	_	_	11	case	_	_
+10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	_	_
+11	Operação	Operação	PROPN	_	_	2	nmod	_	_
+12	Carne	Carne	PROPN	_	_	11	flat:name	_	_
+13	Fraca	Fraca	PROPN	_	_	11	flat:name	_	_
+14	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	20	aux:pass	_	SpaceAfter=No
+15	,	,	PUNCT	_	_	18	punct	_	_
+16-17	na	_	_	_	_	_	_	_	_
+16	em	em	ADP	_	_	18	case	_	_
+17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
+18	verdade	verdade	NOUN	_	Gender=Fem|Number=Sing	20	obl	_	SpaceAfter=No
+19	,	,	PUNCT	_	_	18	punct	_	_
+20	elaboradas	elaborar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	0	root	_	_
+21	semanas	semana	NOUN	_	Gender=Fem|Number=Plur	22	obl	_	_
+22	antes	antes	ADV	_	_	20	advmod	_	_
+23	por	por	ADP	_	_	24	case	_	_
+24	agências	agência	NOUN	_	Gender=Fem|Number=Plur	20	obl:agent	_	_
+25	de	de	ADP	_	_	26	case	_	_
+26	publicidade	publicidade	NOUN	_	Gender=Fem|Number=Sing	24	nmod	_	_
+27	americanas	americano	ADJ	_	Gender=Fem|Number=Plur	26	amod	_	_
+28	especializadas	especializado	ADJ	_	Gender=Fem|Number=Plur|VerbForm=Part	24	amod	_	_
+29	em	em	ADP	_	_	30	case	_	_
+30	controle	controle	NOUN	_	Gender=Masc|Number=Sing	28	obl	_	_
+31	de	de	ADP	_	_	32	case	_	_
+32	danos	dano	NOUN	_	Gender=Masc|Number=Plur	30	nmod	_	SpaceAfter=No
+33	,	,	PUNCT	_	_	35	punct	_	_
+34	segundo	segundo	ADP	_	_	35	case	_	_
+35	denúncia	denúncia	NOUN	_	Gender=Fem|Number=Sing	20	obl	_	_
+36	de	de	ADP	_	_	38	case	_	_
+37	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	38	det	_	_
+38	publicitário	publicitário	NOUN	_	Gender=Masc|Number=Sing	35	nmod	_	_
+39	arrependido	arrependido	ADJ	_	Gender=Masc|Number=Sing|VerbForm=Part	38	amod	_	_
+40	que	que	PRON	_	PronType=Rel	41	nsubj	_	_
+41	trabalhou	trabalhar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	38	acl:relcl	_	_
+42-43	no	_	_	_	_	_	_	_	_
+42	em	em	ADP	_	_	44	case	_	_
+43	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	44	det	_	_
+44	projeto	projeto	NOUN	_	Gender=Masc|Number=Sing	41	obl	_	SpaceAfter=No
+45	.	.	PUNCT	_	_	20	punct	_	_
+
+# sent_id = fakebr:421-17
+# text = A troca de gestores em empresas como Petrobrás não foi decisão interna.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	troca	troca	NOUN	_	Gender=Fem|Number=Sing	11	nsubj	_	_
+3	de	de	ADP	_	_	4	case	_	_
+4	gestores	gestor	NOUN	_	Gender=Masc|Number=Plur	2	nmod	_	_
+5	em	em	ADP	_	_	6	case	_	_
+6	empresas	empresa	NOUN	_	Gender=Fem|Number=Plur	2	nmod	_	_
+7	como	como	ADP	_	_	8	case	_	_
+8	Petrobrás	Petrobrás	PROPN	_	_	6	nmod	_	_
+9	não	não	ADV	_	_	11	advmod	_	_
+10	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	cop	_	_
+11	decisão	decisão	NOUN	_	Gender=Fem|Number=Sing	0	root	_	_
+12	interna	interno	ADJ	_	Gender=Fem|Number=Sing	11	amod	_	SpaceAfter=No
+13	.	.	PUNCT	_	_	11	punct	_	_
+
+# sent_id = fakebr:421-18
+# text = Pedro Parente teria sido "recomendado" por fundos de investimento internacionais que exigiram sua nomeação como condição para não afundar ainda mais as ações da estatal.
+1	Pedro	Pedro	PROPN	_	_	6	nsubj:pass	_	_
+2	Parente	Parente	PROPN	_	_	1	flat:name	_	_
+3	teria	ter	AUX	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	6	aux	_	_
+4	sido	ser	AUX	_	Gender=Masc|Number=Sing|VerbForm=Part	6	aux:pass	_	_
+5	"	"	PUNCT	_	_	6	punct	_	SpaceAfter=No
+6	recomendado	recomendar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	SpaceAfter=No
+7	"	"	PUNCT	_	_	6	punct	_	_
+8	por	por	ADP	_	_	9	case	_	_
+9	fundos	fundo	NOUN	_	Gender=Masc|Number=Plur	6	obl:agent	_	_
+10	de	de	ADP	_	_	11	case	_	_
+11	investimento	investimento	NOUN	_	Gender=Masc|Number=Sing	9	nmod	_	_
+12	internacionais	internacional	ADJ	_	Number=Plur	9	amod	_	_
+13	que	que	PRON	_	PronType=Rel	14	nsubj	_	_
+14	exigiram	exigir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	9	acl:relcl	_	_
+15	sua	seu	DET	_	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	16	det	_	_
+16	nomeação	nomeação	NOUN	_	Gender=Fem|Number=Sing	14	obj	_	_
+17	como	como	ADP	_	_	18	case	_	_
+18	condição	condição	NOUN	_	Gender=Fem|Number=Sing	14	obl	_	_
+19	para	para	ADP	_	_	21	mark	_	_
+20	não	não	ADV	_	_	21	advmod	_	_
+21	afundar	afundar	VERB	_	VerbForm=Inf	18	acl	_	_
+22	ainda	ainda	ADV	_	_	23	advmod	_	_
+23	mais	mais	ADV	_	_	21	advmod	_	_
+24	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	25	det	_	_
+25	ações	ação	NOUN	_	Gender=Fem|Number=Plur	21	obj	_	_
+26-27	da	_	_	_	_	_	_	_	_
+26	de	de	ADP	_	_	28	case	_	_
+27	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	28	det	_	_
+28	estatal	estatal	NOUN	_	Number=Sing	25	nmod	_	SpaceAfter=No
+29	.	.	PUNCT	_	_	6	punct	_	_
+
+# sent_id = fakebr:421-19
+# text = "Foi um golpe silencioso", revelou um ex-diretor da empresa que pediu anonimato.
+1	"	"	PUNCT	_	_	4	punct	_	SpaceAfter=No
+2	Foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	_	_
+3	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	4	det	_	_
+4	golpe	golpe	NOUN	_	Gender=Masc|Number=Sing	8	ccomp:speech	_	_
+5	silencioso	silencioso	ADJ	_	Gender=Masc|Number=Sing	4	amod	_	SpaceAfter=No
+6	"	"	PUNCT	_	_	4	punct	_	SpaceAfter=No
+7	,	,	PUNCT	_	_	4	punct	_	_
+8	revelou	revelar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+9	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
+10	ex-diretor	ex-diretor	NOUN	_	Gender=Masc|Number=Sing	8	nsubj	_	_
+11-12	da	_	_	_	_	_	_	_	_
+11	de	de	ADP	_	_	13	case	_	_
+12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
+13	empresa	empresa	NOUN	_	Gender=Fem|Number=Sing	10	nmod	_	_
+14	que	que	PRON	_	PronType=Rel	15	nsubj	_	_
+15	pediu	pedir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	acl:relcl	_	_
+16	anonimato	anonimato	NOUN	_	Gender=Masc|Number=Sing	15	obj	_	SpaceAfter=No
+17	.	.	PUNCT	_	_	8	punct	_	_
+
+# sent_id = fakebr:421-20
+# text = O que a mídia não conta é que mais de 15 funcionários de empresas envolvidas nos escândalos morreram em circunstâncias misteriosas nos últimos três anos - todos eles tinham informações comprometedoras que poderiam expor o esquema internacional.
+1	O	o	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Dem	19	nsubj:outer	_	_
+2	que	que	PRON	_	PronType=Rel	6	obj	_	_
+3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
+4	mídia	mídia	NOUN	_	Gender=Fem|Number=Sing	6	nsubj	_	_
+5	não	não	ADV	_	_	6	advmod	_	_
+6	conta	contar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	acl:relcl	_	_
+7	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	19	cop	_	_
+8	que	que	SCONJ	_	_	19	mark	_	_
+9	mais	mais	ADV	_	_	11	advmod	_	_
+10	de	de	ADP	_	_	9	fixed	_	_
+11	15	15	NUM	_	NumType=Card	12	nummod	_	_
+12	funcionários	funcionário	NOUN	_	Gender=Masc|Number=Plur	19	nsubj	_	_
+13	de	de	ADP	_	_	14	case	_	_
+14	empresas	empresa	NOUN	_	Gender=Fem|Number=Plur	12	nmod	_	_
+15	envolvidas	envolver	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part	14	acl	_	_
+16-17	nos	_	_	_	_	_	_	_	_
+16	em	em	ADP	_	_	18	case	_	_
+17	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	18	det	_	_
+18	escândalos	escândalo	NOUN	_	Gender=Masc|Number=Plur	15	obl	_	_
+19	morreram	morrer	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+20	em	em	ADP	_	_	21	case	_	_
+21	circunstâncias	circunstância	NOUN	_	Gender=Fem|Number=Plur	19	obl	_	_
+22	misteriosas	misterioso	ADJ	_	Gender=Fem|Number=Plur	21	amod	_	_
+23-24	nos	_	_	_	_	_	_	_	_
+23	em	em	ADP	_	_	27	case	_	_
+24	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	27	det	_	_
+25	últimos	último	ADJ	_	Gender=Masc|Number=Plur	27	amod	_	_
+26	três	três	NUM	_	NumType=Card	27	nummod	_	_
+27	anos	ano	NOUN	_	Gender=Masc|Number=Plur	19	obl	_	_
+28	-	-	PUNCT	_	_	31	punct	_	_
+29	todos	todo	DET	_	Gender=Masc|Number=Plur|PronType=Ind	30	det	_	_
+30	eles	ele	PRON	_	Case=Nom|Gender=Masc|Number=Plur|Person=3|PronType=Prs	31	nsubj	_	_
+31	tinham	ter	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	19	parataxis	_	_
+32	informações	informação	NOUN	_	Gender=Fem|Number=Plur	31	obj	_	_
+33	comprometedoras	comprometedoro	ADJ	_	Gender=Fem|Number=Plur	32	amod	_	_
+34	que	que	PRON	_	PronType=Rel	35	nsubj	_	_
+35	poderiam	poder	VERB	_	Mood=Cnd|Number=Plur|Person=3|VerbForm=Fin	32	acl:relcl	_	_
+36	expor	expor	VERB	_	VerbForm=Inf	35	xcomp	_	_
+37	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	38	det	_	_
+38	esquema	esquema	NOUN	_	Gender=Masc|Number=Sing	36	obj	_	_
+39	internacional	internacional	ADJ	_	Number=Sing	38	amod	_	SpaceAfter=No
+40	.	.	PUNCT	_	_	19	punct	_	_
+
+# sent_id = fakebr:421-21
+# text = A polícia arquivou os casos como "suicídios" ou "acidentes".
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	polícia	polícia	NOUN	_	Number=Sing	3	nsubj	_	_
+3	arquivou	arquivar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+4	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	5	det	_	_
+5	casos	caso	NOUN	_	Gender=Masc|Number=Plur	3	obj	_	_
+6	como	como	ADP	_	_	8	case	_	_
+7	"	"	PUNCT	_	_	8	punct	_	SpaceAfter=No
+8	suicídios	suicídio	NOUN	_	Gender=Masc|Number=Plur	5	nmod	_	SpaceAfter=No
+9	"	"	PUNCT	_	_	8	punct	_	_
+10	ou	ou	CCONJ	_	_	12	cc	_	_
+11	"	"	PUNCT	_	_	12	punct	_	SpaceAfter=No
+12	acidentes	acidente	NOUN	_	Gender=Masc|Number=Plur	8	conj	_	SpaceAfter=No
+13	"	"	PUNCT	_	_	12	punct	_	SpaceAfter=No
+14	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = fakebr:421-22
+# text = Compartilhe essa matéria antes que seja censurada.
+1	Compartilhe	compartilhar	VERB	_	Mood=Imp|Number=Sing|Person=3|VerbForm=Fin	0	root	_	_
+2	essa	esse	DET	_	Gender=Fem|Number=Sing|PronType=Dem	3	det	_	_
+3	matéria	matéria	NOUN	_	Gender=Fem|Number=Sing	1	obj	_	_
+4	antes	antes	ADV	_	_	7	mark	_	_
+5	que	que	SCONJ	_	_	4	fixed	_	_
+6	seja	ser	AUX	_	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	aux:pass	_	_
+7	censurada	censurar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	1	advcl	_	SpaceAfter=No
+8	.	.	PUNCT	_	_	1	punct	_	_
+
+# sent_id = fakebr:421-23
+# text = O povo brasileiro precisa saber a verdade.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
+2	povo	povo	NOUN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
+3	brasileiro	brasileiro	ADJ	_	Gender=Masc|Number=Sing	2	amod	_	_
+4	precisa	precisar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+5	saber	saber	VERB	_	VerbForm=Inf	4	xcomp	_	_
+6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
+7	verdade	verdade	NOUN	_	Gender=Fem|Number=Sing	5	obj	_	SpaceAfter=No
+8	.	.	PUNCT	_	_	4	punct	_	_
+

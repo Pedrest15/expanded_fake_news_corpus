@@ -1,0 +1,691 @@
+rule,human_count,machine_count,human_docs,machine_docs,total_count
+NOUN(*),617,1291,20,20,1908
+PROPN(*),94,331,11,20,425
+VERB(*),135,265,19,20,400
+"NOUN(*, NOUN/nmod:de)",118,235,19,20,353
+PRON(*),79,171,16,20,250
+"NOUN(*, PROPN/nmod:de)",39,87,9,18,126
+"VERB(NOUN/nsubj, *)",16,92,11,20,108
+ADP(*),36,65,12,15,101
+"NOUN(*, PRON/ref)",11,82,6,19,93
+"VERB(*, NOUN/obl:em)",23,53,13,17,76
+"NOUN(*, NOUN/nmod:em)",21,32,15,16,53
+NUM(*),16,36,8,13,52
+ADJ(*),25,16,10,8,41
+"NOUN(*, NOUN/conj:e)",17,23,9,11,40
+"NOUN(ADP/case, *)",18,19,9,11,37
+"VERB(*, VERB/conj:e)",9,23,7,10,32
+"VERB(*, VERB/advcl:para)",5,20,4,14,25
+SYM(*),6,19,5,8,25
+"VERB(*, NOUN/obl:de)",11,14,8,11,25
+"VERB(*, NOUN/obl:com)",6,17,5,13,23
+"NOUN(*, PROPN/nmod:em)",1,19,1,10,20
+"ADV(*, NOUN/obl:de)",2,18,2,11,20
+"NOUN(*, NOUN/nmod:a)",9,10,7,9,19
+"NOUN(*, NOUN/nmod:de, NOUN/nmod:de)",8,11,5,10,19
+"VERB(NOUN/obl:em, *)",10,9,8,8,19
+"NOUN(ADP/case, *, NOUN/nmod:de)",7,11,5,5,18
+"VERB(NOUN/nsubj, *, NOUN/obl:em)",4,14,4,11,18
+ADV(*),7,10,4,7,17
+"PROPN(*, PROPN/conj:e)",4,12,3,8,16
+"VERB(*, NOUN/obl:a)",6,10,5,7,16
+"NOUN(*, NOUN/nmod:com)",3,12,3,10,15
+SCONJ(*),3,12,3,7,15
+"VERB(NOUN/nsubj:pass, *)",3,12,3,12,15
+"VERB(PROPN/nsubj, *)",4,10,3,7,14
+"NOUN(*, VERB/acl:para)",5,9,5,7,14
+"PRON(*, PRON/ref)",8,6,7,5,14
+"VERB(*, PROPN/obl:em)",4,9,3,7,13
+"VERB(PRON/nsubj, *)",8,5,5,5,13
+"NUM(*, NOUN/nmod:de)",3,9,2,7,12
+"PROPN(ADP/case, *)",1,11,1,5,12
+"SYM(*, NOUN/nmod:de)",9,3,4,3,12
+"VERB(*, VERB/conj:mas)",4,8,4,6,12
+AUX(*),6,5,6,4,11
+"NOUN(*, NUM/nmod:de)",6,5,5,4,11
+"VERB(*, NOUN/obl:por)",2,9,2,6,11
+"NOUN(*, NOUN/nmod:sobre)",0,10,0,7,10
+"NOUN(*, NOUN/nmod:para)",4,6,4,4,10
+"VERB(*, NOUN/obl:para)",3,7,3,5,10
+"VERB(*, NOUN/obl:como)",1,8,1,7,9
+"VERB(*, NOUN/obj)",5,4,4,3,9
+"NOUN(*, NOUN/nmod:de, NOUN/nmod:em)",2,7,2,5,9
+"NOUN(*, NOUN/conj:e, NOUN/conj:e)",4,4,3,4,8
+*(NOUN),3,5,3,3,8
+"NOUN(*, NOUN/nmod:de, NOUN/conj:e)",2,6,2,5,8
+"ADJ(NOUN/nsubj, *)",1,7,1,5,8
+"NOUN(*, VERB/acl:de)",2,6,2,5,8
+"PROPN(*, NOUN/conj:e)",1,7,1,7,8
+X(*),5,3,2,2,8
+"NOUN(*, NOUN/nmod:de, PRON/ref)",0,8,0,7,8
+"VERB(*, VERB/ccomp)",2,5,2,4,7
+"VERB(NOUN/nsubj, *, NOUN/obl:a)",1,6,1,5,7
+"VERB(ADP/mark, *)",3,4,2,4,7
+"PROPN(*, PROPN/nmod:de)",2,5,2,4,7
+"ADJ(*, NOUN/obl:a)",2,5,2,3,7
+"ADJ(*, ADJ/conj:e)",3,4,3,4,7
+"NOUN(*, NOUN/nmod:de, NOUN/nmod:para)",2,5,2,4,7
+"NOUN(*, PROPN/nmod:de, PRON/ref)",0,7,0,7,7
+"ADJ(*, NOUN/obl:em)",2,4,1,4,6
+"VERB(*, NOUN/obl:durante)",3,3,2,3,6
+"VERB(*, NOUN/obl:após)",1,5,1,5,6
+"VERB(PRON/obj, *)",2,4,2,4,6
+"VERB(NOUN/nsubj, *, VERB/advcl:por)",0,6,0,6,6
+"PROPN(*, PRON/ref)",0,6,0,4,6
+"NOUN(*, PROPN/nmod:a)",2,3,2,3,5
+"PROPN(*, PROPN/conj:e, PROPN/conj:e)",0,5,0,5,5
+"NOUN(*, SYM/nmod:de)",1,4,1,3,5
+"ADV(*, PRON/obl:de)",1,4,1,4,5
+"VERB(*, PROPN/obl:de)",0,5,0,4,5
+"VERB(*, VERB/xcomp)",2,3,2,3,5
+"VERB(NOUN/nsubj, *, NOUN/obl:por)",0,5,0,5,5
+"VERB(NOUN/nsubj, *, NOUN/obl:de)",3,2,2,2,5
+"NOUN(*, NOUN/nmod:por)",3,2,3,2,5
+"VERB(*, NOUN/obl:sobre)",1,4,1,3,5
+"NOUN(*, NOUN/nmod:de, PROPN/nmod:em)",3,2,1,2,5
+"NOUN(*, PRON/ref, VERB/acl:relcl)",2,2,2,2,4
+"PROPN(*, NOUN/nmod:de)",1,3,1,3,4
+"VERB(*, PROPN/obl:para)",2,2,2,2,4
+"ADV(*, PROPN/obl:de)",0,4,0,4,4
+"VERB(NOUN/nsubj, *, NOUN/obl:para)",1,3,1,2,4
+"VERB(*, VERB/advcl:para, VERB/advcl:para)",2,2,2,2,4
+"NOUN(*, NOUN/conj:e, NOUN/nmod:de)",3,1,3,1,4
+"NOUN(NUM/nummod, *)",2,2,1,2,4
+"NUM(*, NUM/conj:e)",2,2,1,2,4
+"NOUN(*, PRON/nmod:de)",3,1,2,1,4
+"VERB(*, NOUN/obl:de, VERB/conj:e)",1,3,1,3,4
+"VERB(*, NOUN/obl:a, VERB/conj:e)",1,3,1,3,4
+"NOUN(*, PROPN/nmod:de, PROPN/nmod:em)",0,4,0,4,4
+"VERB(NOUN/obl:com, *)",2,2,2,2,4
+"VERB(PRON/nsubj, *, NOUN/obl:em)",2,2,2,2,4
+"VERB(NOUN/obl:segundo, *)",0,4,0,4,4
+"VERB(NOUN/obl:segundo, *, VERB/conj:e)",0,4,0,4,4
+"ADJ(*, VERB/conj:e)",2,2,2,2,4
+"NOUN(*, NOUN/nmod:de, NOUN/nmod:com)",2,1,2,1,3
+"NOUN(*, NOUN/nmod:de, NOUN/nmod:por)",0,3,0,2,3
+"NOUN(*, PROPN/nmod:para)",0,3,0,3,3
+"NOUN(*, PROPN/nmod:de, PROPN/nmod:de)",0,3,0,3,3
+"NOUN(*, PROPN/nmod:de, NOUN/nmod:em)",0,3,0,2,3
+"NOUN(*, PROPN/nmod:sobre)",0,3,0,2,3
+"NOUN(*, PROPN/nmod:de, NOUN/nmod:de)",1,2,1,2,3
+"NOUN(PROPN/nsubj, *)",0,3,0,3,3
+"VERB(*, NOUN/conj:e)",2,1,2,1,3
+"VERB(*, NOUN/obl:com, NOUN/obl:com)",1,2,1,2,3
+"VERB(*, NOUN/obl:contra)",2,1,2,1,3
+"VERB(*, NOUN/obl:em, NOUN/obl:com)",1,2,1,2,3
+"VERB(*, PRON/obl:de)",1,2,1,2,3
+"ADJ(*, PROPN/obl:a)",0,3,0,3,3
+"VERB(SCONJ/mark, NOUN/nsubj, *)",1,2,1,2,3
+"VERB(SCONJ/mark, *)",0,3,0,2,3
+"VERB(NOUN/nsubj, *, VERB/advcl:para)",2,1,2,1,3
+"NOUN(*, NOUN/nmod)",2,1,2,1,3
+"VERB(NOUN/nsubj, *, NOUN/obj)",0,3,0,3,3
+"NOUN(*, ADJ/amod)",1,2,1,2,3
+"VERB(NOUN/nsubj:pass, *, NOUN/obl:em)",0,3,0,3,3
+"NOUN(*, NOUN/nmod:como, NOUN/nmod:como)",0,3,0,2,3
+"VERB(VERB/advcl:embora, *)",0,3,0,3,3
+"VERB(PRON/nsubj, *, NOUN/obl:com)",0,3,0,3,3
+"VERB(*, VERB/advcl:por)",0,3,0,3,3
+"NOUN(*, NOUN/conj:ou)",1,2,1,2,3
+"NOUN(*, NOUN/nmod:como)",2,1,2,1,3
+"VERB(*, NOUN/obl:em, VERB/conj:mas)",0,3,0,3,3
+"VERB(*, NOUN/obl:em, VERB/ccomp)",0,3,0,2,3
+"VERB(*, PRON/obl:com)",2,1,2,1,3
+"NOUN(*, NOUN/conj:e, NOUN/nmod:em)",1,1,1,1,2
+"VERB(*, VERB/advcl:após)",0,2,0,2,2
+"ADJ(PROPN/nsubj, *)",0,2,0,2,2
+"VERB(PRON/obj, *, VERB/conj:ou)",1,1,1,1,2
+"VERB(PROPN/nsubj, *, NOUN/obl:por)",0,2,0,2,2
+"VERB(PROPN/nsubj, *, NOUN/obl:em)",0,2,0,2,2
+"VERB(PROPN/obl:em, *)",1,1,1,1,2
+"ADJ(*, VERB/advcl:para)",0,2,0,2,2
+"ADJ(*, VERB/acl:a)",1,1,1,1,2
+"ADJ(*, VERB/acl:para)",1,1,1,1,2
+"ADJ(NOUN/nsubj, *, PROPN/obl:em)",0,2,0,2,2
+"VERB(VERB/advcl:a, *)",1,1,1,1,2
+"VERB(VERB/advcl:a, *, NOUN/obl:p)",2,0,1,0,2
+"X(ADP/case, *)",1,1,1,1,2
+"ADJ(*, VERB/advcl:de_o_que)",1,1,1,1,2
+"VERB(ADP/mark, *, VERB/advcl:para)",1,1,1,1,2
+"VERB(ADP/mark, *, NOUN/obl:em)",1,1,1,1,2
+"NOUN(*, NOUN/nmod:com, NOUN/nmod:com, NOUN/nmod:com)",0,2,0,2,2
+"NOUN(*, NOUN/conj:e, NOUN/conj:e, NOUN/conj:e)",1,1,1,1,2
+"VERB(NOUN/nsubj, *, NOUN/obl:como)",1,1,1,1,2
+"NOUN(*, ADV/ref)",1,1,1,1,2
+"VERB(NOUN/nsubj, *, NOUN/obl:em, VERB/conj:e)",1,1,1,1,2
+"VERB(NOUN/nsubj, *, NOUN/obl:com)",0,2,0,2,2
+"VERB(NOUN/nsubj, *, VERB/advcl:sem_que)",0,2,0,1,2
+"VERB(NOUN/nsubj, *, VERB/conj:e)",1,1,1,1,2
+"ADV(*, VERB/acl:de)",0,2,0,2,2
+"VERB(NOUN/obl:segundo, *, VERB/advcl:para)",0,2,0,2,2
+"VERB(PRON/nsubj, *, NOUN/obl:de)",1,1,1,1,2
+"ADJ(PRON/nsubj, *)",2,0,2,0,2
+"VERB(NOUN/obl:em, *, VERB/advcl)",0,2,0,2,2
+"VERB(NOUN/obl:em, *, VERB/conj:e)",2,0,2,0,2
+"VERB(NOUN/obl:a, *)",1,1,1,1,2
+"VERB(NOUN/obj, PRON/nsubj, *)",1,1,1,1,2
+"VERB(NOUN/obj, *)",0,2,0,2,2
+"VERB(*, PROPN/obj)",1,1,1,1,2
+"VERB(*, PROPN/obl:a)",0,2,0,2,2
+"NOUN(*, NOUN/nmod:como, NOUN/nmod:como, NOUN/nmod:como)",0,2,0,2,2
+"NOUN(*, NOUN/nmod:contra)",0,2,0,2,2
+"NOUN(*, NOUN/nmod:de, NOUN/nmod:a)",1,1,1,1,2
+"VERB(*, VERB/advcl:a_o)",1,1,1,1,2
+"NOUN(*, NOUN/nmod:de, NOUN/conj:e, NOUN/conj:e)",0,2,0,2,2
+"NOUN(*, NOUN/nmod:de, NOUN/conj:mas)",0,2,0,2,2
+"VERB(*, VERB/advcl:antes_que)",0,2,0,2,2
+"NOUN(*, NOUN/nmod:a, NOUN/nmod:a, NOUN/nmod:a)",1,1,1,1,2
+"VERB(*, VERB/conj:e, VERB/conj:mas)",1,1,1,1,2
+"VERB(*, NOUN/obl:de, VERB/advcl:para)",1,1,1,1,2
+"NOUN(*, PRON/nmod:para)",1,1,1,1,2
+"VERB(*, NOUN/obl:como, NOUN/obl:como)",0,2,0,2,2
+"NOUN(*, NOUN/nmod:sem)",0,2,0,1,2
+"NOUN(*, NOUN/nmod:para, NOUN/nmod:para)",1,1,1,1,2
+"VERB(*, NOUN/obl:para, NOUN/obl:em)",0,2,0,2,2
+"VERB(*, NOUN/obl:sem)",0,2,0,2,2
+"NOUN(*, NOUN/nmod:em, PRON/ref)",0,2,0,2,2
+"VERB(*, NUM/obl:em)",0,2,0,2,2
+"NOUN(*, NOUN/nmod:de, NOUN/nmod:de, NOUN/conj:e)",1,1,1,1,2
+"VERB(*, PRON/obl:em)",2,0,1,0,2
+"VERB(*, PRON/obl:de, VERB/conj:e)",0,2,0,1,2
+"NOUN(*, NOUN/nmod:de, VERB/acl:para)",0,2,0,2,2
+"NOUN(*, NOUN/nmod:de, VERB/advcl:caso)",1,1,1,1,2
+"VERB(*, NOUN/obl:para, NOUN/obl:para)",0,2,0,2,2
+"NOUN(*, NOUN/nmod:de, PRON/ref, VERB/acl:relcl)",0,2,0,2,2
+"NOUN(*, NOUN/nmod:de, PROPN/nmod:de)",2,0,2,0,2
+"VERB(*, NOUN/obl:em, VERB/advcl:enquanto)",1,1,1,1,2
+"NOUN(*, PRON/nmod:entre)",2,0,1,0,2
+"VERB(*, NOUN/obl:em, NOUN/obl:em)",0,2,0,2,2
+"VERB(*, NOUN/obl:em, NUM/obl:desde)",0,2,0,2,2
+"NOUN(*, PROPN/nmod:com)",1,1,1,1,2
+"NOUN(*, PROPN/nmod:como)",0,2,0,2,2
+"VERB(*, NOUN/obj, NOUN/obl:em)",0,2,0,2,2
+"VERB(*, NOUN/obj, NOUN/obj)",0,2,0,2,2
+"NOUN(*, NOUN/parataxis)",2,0,1,0,2
+"NOUN(*, NUM/nmod:para)",2,0,1,0,2
+"VERB(*, NOUN/obl:até)",2,0,1,0,2
+"VERB(*, NOUN/obl:a, NOUN/obl:em)",1,1,1,1,2
+"NOUN(*, PROPN/nmod)",0,2,0,1,2
+"NOUN(*, PROPN/nmod, PROPN/nmod)",1,1,1,1,2
+"NOUN(*, PROPN/nmod:de, NOUN/nmod:com, NOUN/nmod:com)",2,0,1,0,2
+"PRON(*, PRON/ref, VERB/acl:relcl)",1,1,1,1,2
+"NOUN(*, PROPN/nmod:de, NOUN/nmod:como)",1,1,1,1,2
+"PROPN(*, ADV/ref)",1,1,1,1,2
+"NOUN(*, PROPN/conj:e, NOUN/conj:e)",1,1,1,1,2
+"PROPN(*, PROPN/nmod:em)",1,1,1,1,2
+"PRON(*, NOUN/nmod:de)",1,1,1,1,2
+"PRON(*, PRON/nmod:de)",1,1,1,1,2
+"NOUN(*, VERB/acl:para, VERB/acl:para)",1,1,1,1,2
+"NOUN(*, SYM/nmod:de, PRON/ref)",0,2,0,2,2
+"NUM(*, PRON/nmod:de)",0,2,0,2,2
+"NOUN(NOUN/nmod:segundo, *)",0,2,0,2,2
+"NUM(*, ADV/conj:e)",2,0,1,0,2
+"NOUN(ADP/case, *, PRON/ref)",1,1,1,1,2
+*(PRON),1,1,1,1,2
+"NOUN(ADP/case, *, NOUN/nmod:de, NOUN/appos)",0,2,0,1,2
+"NOUN(ADP/case, *, NOUN/nmod:de, NOUN/nmod:em)",0,2,0,2,2
+"NOUN(ADP/case, *, NOUN/nmod:em)",1,1,1,1,2
+"NOUN(ADP/case, *, PROPN/nmod:de)",0,2,0,2,2
+"VERB(VERB/advcl:se, *, NOUN/obl:para)",2,0,1,0,2
+"ADJ(*, NOUN/obl:para)",1,1,1,1,2
+"ADJ(*, NOUN/nsubj)",0,2,0,2,2
+"VERB(VERB/advcl:para, *, NOUN/obl:com)",1,0,1,0,1
+*(PROPN),0,1,0,1,1
+"ADJ(*, ADJ/conj:e/ou)",1,0,1,0,1
+"ADJ(*, ADJ/conj:mas)",1,0,1,0,1
+"ADJ(*, ADJ/conj:ou)",1,0,1,0,1
+"ADJ(*, ADJ/conj:ou, VERB/conj:e)",1,0,1,0,1
+"ADJ(*, NOUN/conj:e)",1,0,1,0,1
+"ADJ(*, NOUN/nmod:em)",1,0,1,0,1
+"ADJ(*, NOUN/obl:com)",1,0,1,0,1
+"ADJ(*, NOUN/obl:em, NOUN/obl:durante)",0,1,0,1,1
+"ADJ(*, NOUN/obl:por)",0,1,0,1,1
+"VERB(VERB/advcl:para, *, VERB/conj:e)",0,1,0,1,1
+"ADJ(*, PROPN/obl:para)",0,1,0,1,1
+"ADJ(*, PROPN/obl:com)",1,0,1,0,1
+"ADJ(*, PRON/obl:para)",1,0,1,0,1
+"ADJ(*, PRON/obl:a)",0,1,0,1,1
+"ADJ(*, NUM/obl:em)",0,1,0,1,1
+"VERB(SCONJ/mark, PROPN/nsubj, *)",1,0,1,0,1
+"VERB(SCONJ/mark, NOUN/nsubj, *, PROPN/obl:em)",0,1,0,1,1
+"VERB(SCONJ/mark, NOUN/nsubj, *, NOUN/obl:por)",0,1,0,1,1
+"VERB(SCONJ/mark, NOUN/nsubj, *, NOUN/obl:para)",0,1,0,1,1
+"VERB(SCONJ/mark, NOUN/nsubj, *, NOUN/obj, NOUN/obj, NOUN/obj)",0,1,0,1,1
+"VERB(SCONJ/mark, *, NOUN/obl:por)",0,1,0,1,1
+"VERB(SCONJ/mark, *, NOUN/obj, NOUN/obl:a)",0,1,0,1,1
+"VERB(PROPN/obl:segundo, *, VERB/advcl:para, VERB/conj:mas)",0,1,0,1,1
+"VERB(PROPN/obl:segundo, *)",0,1,0,1,1
+"VERB(PROPN/obl:em, *, VERB/advcl:para, VERB/advcl:para)",0,1,0,1,1
+"VERB(PROPN/obl:em, *, VERB/advcl:para)",0,1,0,1,1
+"NOUN(*, X/nmod)",1,0,1,0,1
+"NOUN(*, X/conj:ou)",1,0,1,0,1
+"NOUN(*, X/conj:e, NOUN/conj:e, NOUN/conj:e)",1,0,1,0,1
+"NOUN(*, X/conj:e)",0,1,0,1,1
+"NOUN(*, VERB/conj:e)",0,1,0,1,1
+"NOUN(*, VERB/acl:relcl, VERB/acl)",1,0,1,0,1
+"NOUN(*, VERB/acl:por, NOUN/conj:e)",1,0,1,0,1
+"NOUN(*, VERB/acl:para_que)",1,0,1,0,1
+"NOUN(*, VERB/acl:de_que)",0,1,0,1,1
+"NOUN(*, VERB/acl:de, VERB/acl:de, PRON/ref)",0,1,0,1,1
+"NOUN(*, VERB/acl:de, NOUN/nmod:de)",1,0,1,0,1
+"NOUN(NOUN/nmod:em, *, NOUN/nmod:de)",0,1,0,1,1
+"NOUN(NOUN/nmod:em, *)",0,1,0,1,1
+"NOUN(NOUN/nmod:como, *)",1,0,1,0,1
+"NOUN(AUX/cop, *)",1,0,1,0,1
+"NOUN(ADP/case, *, VERB/acl:de)",0,1,0,1,1
+"NOUN(*, PROPN/nmod:em, NOUN/nmod:por)",0,1,0,1,1
+"NOUN(*, PROPN/nmod:desde)",0,1,0,1,1
+"NOUN(PROPN/nsubj, PROPN/nsubj, NOUN/nsubj, *, NOUN/nmod:de)",1,0,1,0,1
+"NOUN(PROPN/nsubj, *, PROPN/obl:a, NOUN/conj:e)",0,1,0,1,1
+"NOUN(PROPN/nsubj, *, PROPN/nmod:de, NOUN/nmod:de, NOUN/nmod:em)",0,1,0,1,1
+"NOUN(PROPN/nmod:em, *, NOUN/nmod:de)",1,0,1,0,1
+"NOUN(PRON/nsubj, *, NOUN/conj:e)",1,0,1,0,1
+"NOUN(PRON/nsubj, *)",1,0,1,0,1
+"NOUN(NOUN/obl:em, *, PRON/ref)",0,1,0,1,1
+"NOUN(NOUN/nsubj, AUX/cop, *, NOUN/nmod:de)",1,0,1,0,1
+"NOUN(NOUN/nsubj, AUX/cop, *)",1,0,1,0,1
+"NOUN(NOUN/nsubj, *)",0,1,0,1,1
+"NOUN(NOUN/nmod:por, *, NOUN/nmod:de, NOUN/nmod:com)",0,1,0,1,1
+"NOUN(NOUN/nmod:para, *, NOUN/nmod:de, PRON/nmod:para)",0,1,0,1,1
+"NOUN(ADP/case, *, NOUN/nmod:com)",0,1,0,1,1
+"NOUN(ADJ/amod, *)",1,0,1,0,1
+"NOUN(*, PROPN/nmod:como, PROPN/nmod:como, PROPN/nmod:como)",0,1,0,1,1
+"PRON(*, VERB/acl:relcl)",1,0,1,0,1
+"PRON(*, VERB/acl:a)",0,1,0,1,1
+"PRON(*, PRON/conj:nem)",1,0,1,0,1
+"PRON(*, NOUN/nmod:com)",0,1,0,1,1
+"NUM(*, NUM/nmod:para, NOUN/nmod:por, SYM/conj:e)",1,0,1,0,1
+"NUM(*, NUM/conj:ou)",0,1,0,1,1
+"NUM(*, NUM/conj:e, NUM/conj:e)",0,1,0,1,1
+"NOUN(*, VERB/acl)",1,0,1,0,1
+"NOUN(*, SYM/nmod:de, SYM/nmod:para, NOUN/nmod:em)",0,1,0,1,1
+"NOUN(*, SYM/nmod:de, PROPN/nmod:de)",1,0,1,0,1
+"NOUN(*, SYM/nmod:de, NOUN/nmod:para)",0,1,0,1,1
+"NOUN(*, SYM/nmod:de, NOUN/nmod:em)",0,1,0,1,1
+"NOUN(*, SYM/nmod:de, NOUN/nmod:a)",0,1,0,1,1
+"NOUN(*, PROPN/nmod:em, VERB/advcl:quando)",1,0,1,0,1
+"NOUN(*, PROPN/nmod:em, NUM/nmod:em)",0,1,0,1,1
+"PROPN(*, VERB/advcl:pois)",0,1,0,1,1
+"PROPN(*, PROPN/nmod:x, NOUN/nmod:em)",1,0,1,0,1
+"PROPN(*, PROPN/nmod:em, PROPN/conj:e, PROPN/conj:e, NOUN/conj:e)",1,0,1,0,1
+"PROPN(*, PROPN/nmod:de, PROPN/nmod:de, PROPN/nmod:por)",0,1,0,1,1
+"PROPN(*, PROPN/nmod:de, ADV/ref)",0,1,0,1,1
+"PROPN(*, PROPN/conj:e, PROPN/conj:e, NOUN/conj:e)",0,1,0,1,1
+"PROPN(*, NOUN/nmod:sobre)",0,1,0,1,1
+"PRON(PRON/nmod:entre, *, NOUN/nmod:de)",1,0,1,0,1
+"PRON(NOUN/nsubj, *, PRON/ref)",0,1,0,1,1
+"NOUN(*, PROPN/nmod:de, VERB/acl:de)",0,1,0,1,1
+"NOUN(*, PROPN/nmod:de, PROPN/nmod:de, PROPN/nmod:de, PROPN/nmod:de)",0,1,0,1,1
+"NOUN(*, PROPN/nmod:de, PROPN/nmod:de, PROPN/nmod:de, NOUN/nmod:de)",0,1,0,1,1
+"NOUN(*, PROPN/nmod:de, PROPN/nmod:de, PROPN/nmod:de)",0,1,0,1,1
+"NOUN(*, PROPN/nmod:de, PROPN/nmod:de, PRON/ref)",0,1,0,1,1
+"NOUN(*, PROPN/nmod:de, NOUN/nmod:com, NOUN/conj:e)",1,0,1,0,1
+"NOUN(*, PROPN/nmod:de, ADV/ref)",0,1,0,1,1
+"NOUN(*, PROPN/nmod:com, NOUN/nmod:com)",0,1,0,1,1
+"NOUN(*, PROPN/conj:e)",0,1,0,1,1
+"NOUN(*, PRON/ref, PRON/ref)",1,0,1,0,1
+"NOUN(*, PRON/ref, NOUN/nmod:em)",0,1,0,1,1
+"NOUN(*, PRON/ref, NOUN/dep, NOUN/dep)",1,0,1,0,1
+"NOUN(*, PRON/ref, ADJ/acl:relcl)",1,0,1,0,1
+"SYM(NOUN/nsubj, *)",0,1,0,1,1
+"SYM(*, VERB/conj:mas)",0,1,0,1,1
+"SYM(*, PRON/nmod:de)",0,1,0,1,1
+"SYM(*, NUM/nummod, PRON/ref, VERB/acl:relcl)",0,1,0,1,1
+"SYM(*, NUM/nmod:em)",0,1,0,1,1
+"SYM(*, NOUN/nmod:por)",0,1,0,1,1
+"SYM(*, NOUN/nmod:em)",1,0,1,0,1
+"PROPN(PRON/nsubj, AUX/cop, *, NOUN/conj:ou)",1,0,1,0,1
+"PROPN(NOUN/nsubj, AUX/cop, *)",1,0,1,0,1
+"PROPN(*, VERB/nmod:de)",1,0,1,0,1
+"VERB(*, NOUN/obj, NOUN/obl:sobre)",0,1,0,1,1
+"VERB(*, NOUN/obj, NOUN/obj, NOUN/obj)",0,1,0,1,1
+"VERB(*, NOUN/nsubj)",1,0,1,0,1
+"VERB(*, NOUN/conj:porém)",1,0,1,0,1
+"VERB(*, NOUN/conj:mas)",0,1,0,1,1
+"VERB(*, NOUN/conj:e, VERB/conj:e, VERB/conj:e)",0,1,0,1,1
+"VERB(*, ADV/obl:de)",0,1,0,1,1
+"VERB(*, ADV/obj)",0,1,0,1,1
+"VERB(*, ADV/advcl:antes_que)",0,1,0,1,1
+"VERB(*, ADJ/xcomp)",1,0,1,0,1
+"VERB(*, ADJ/obl:como, ADJ/obl:como)",1,0,1,0,1
+"VERB(*, ADJ/obl:como)",0,1,0,1,1
+"VERB(*, ADJ/conj:mas)",1,0,1,0,1
+"VERB(*, ADJ/conj:e)",0,1,0,1,1
+"NOUN(*, PROPN/nmod:como, PROPN/nmod:como)",0,1,0,1,1
+"NOUN(*, PROPN/nmod:com, NOUN/nmod:para)",0,1,0,1,1
+"NOUN(*, PRON/nmod:de, NOUN/nmod:com)",1,0,1,0,1
+"NOUN(*, PRON/nmod:com)",1,0,1,0,1
+"NOUN(*, PRON/nmod:a)",1,0,1,0,1
+"NOUN(*, NUM/nmod:em)",0,1,0,1,1
+"NOUN(*, NUM/nmod:a)",0,1,0,1,1
+"NOUN(*, NUM/nmod, NUM/nmod)",0,1,0,1,1
+"NOUN(*, NOUN/obl:de)",1,0,1,0,1
+"NOUN(*, NOUN/nsubj)",1,0,1,0,1
+"NOUN(*, NOUN/nmod:via)",1,0,1,0,1
+"VERB(*, NOUN/obl:agent)",0,1,0,1,1
+"VERB(*, NOUN/obl:a, VERB/conj:mas)",0,1,0,1,1
+"VERB(*, NOUN/obl:a, NOUN/parataxis)",1,0,1,0,1
+"VERB(*, NOUN/obl:a, NOUN/obl:segundo)",0,1,0,1,1
+"VERB(*, NOUN/obl:a, NOUN/obl:em_meio_a)",0,1,0,1,1
+"VERB(*, NOUN/obl:a, NOUN/obl:contra)",1,0,1,0,1
+"VERB(*, NOUN/obl:a, NOUN/obl:até)",0,1,0,1,1
+"VERB(*, NOUN/obl:de, NOUN/obl:sem, NOUN/obl:em)",0,1,0,1,1
+"VERB(*, NOUN/obl:de, NOUN/obl:para, VERB/conj:mas)",0,1,0,1,1
+"VERB(*, NOUN/obl:de, NOUN/obl:para, VERB/advcl:a)",1,0,1,0,1
+"VERB(*, NOUN/obl:de, NOUN/obl:em)",1,0,1,0,1
+"VERB(*, NOUN/obl:de, NOUN/obl:de)",1,0,1,0,1
+"VERB(*, NOUN/obl:de, NOUN/obl:a, NOUN/obl:em)",1,0,1,0,1
+"VERB(*, NOUN/obl:de, NOUN/obl:a)",0,1,0,1,1
+"VERB(*, NOUN/obl:como, NOUN/obl:em)",0,1,0,1,1
+"VERB(*, NOUN/obl:como, NOUN/obl:durante)",1,0,1,0,1
+"VERB(*, NOUN/obl:com, VERB/conj:porém)",1,0,1,0,1
+"VERB(*, NOUN/obl:com, VERB/conj:e)",1,0,1,0,1
+"VERB(*, NOUN/obl:com, VERB/advcl:para, VERB/advcl:para)",0,1,0,1,1
+"VERB(*, NOUN/obl:com, VERB/advcl:a_o)",1,0,1,0,1
+"VERB(*, NOUN/obl:com, NOUN/obl:com, VERB/conj:e)",1,0,1,0,1
+"VERB(*, NOUN/obl:com, NOUN/obl:com, NOUN/obl:com)",1,0,1,0,1
+"NOUN(*, PRON/nmod:sobre)",0,1,0,1,1
+"NOUN(*, NOUN/nmod:para, NOUN/conj:e)",1,0,1,0,1
+"NOUN(*, NOUN/nmod:para, NOUN/appos)",1,0,1,0,1
+"NOUN(*, NOUN/nmod:entre, NOUN/nmod:entre)",0,1,0,1,1
+"NOUN(*, NOUN/nmod:entre, NOUN/nmod:de)",1,0,1,0,1
+"NOUN(*, NOUN/nmod:entre)",0,1,0,1,1
+"NOUN(*, NOUN/nmod:em, VERB/advcl:para)",1,0,1,0,1
+"NOUN(*, NOUN/nmod:em, PROPN/nmod:de, NUM/nmod:em)",0,1,0,1,1
+"NOUN(*, NOUN/nmod:em, PROPN/nmod:de)",0,1,0,1,1
+"VERB(*, NOUN/obl:em, NOUN/obl:a, PROPN/obl:com, VERB/conj:e)",1,0,1,0,1
+"VERB(*, NOUN/obl:em, NOUN/obj)",1,0,1,0,1
+"VERB(*, NOUN/obl:em, ADJ/ccomp)",0,1,0,1,1
+"VERB(*, NOUN/obl:durante, VERB/conj:e)",0,1,0,1,1
+"VERB(*, NOUN/obl:durante, VERB/advcl:enquanto)",0,1,0,1,1
+"VERB(*, NOUN/obl:durante, VERB/advcl:até)",0,1,0,1,1
+"VERB(*, NOUN/obl:durante, NOUN/obl:em, NOUN/obl:após)",0,1,0,1,1
+"VERB(*, NOUN/obl:desde)",0,1,0,1,1
+"VERB(*, NOUN/obl:em, VERB/ccomp, NOUN/obl:segundo)",0,1,0,1,1
+"VERB(*, NOUN/obl:em, VERB/advcl:que)",0,1,0,1,1
+"VERB(*, NOUN/obl:em, VERB/advcl:para, VERB/advcl:para, VERB/advcl:para)",1,0,1,0,1
+"VERB(*, NOUN/obl:em, VERB/advcl:para)",0,1,0,1,1
+"VERB(*, NOUN/obl:em, NUM/obl:para)",0,1,0,1,1
+"VERB(*, NOUN/obl:em, NUM/obl:em, VERB/conj:e, VERB/conj:mas)",0,1,0,1,1
+"VERB(*, NOUN/obl:em, NOUN/obl:sem)",0,1,0,1,1
+"VERB(*, NOUN/obl:em, NOUN/obl:segundo)",0,1,0,1,1
+"VERB(*, NOUN/obl:em, NOUN/obl:por)",0,1,0,1,1
+"VERB(*, NOUN/obl:em, NOUN/obl:para)",0,1,0,1,1
+"VERB(*, NOUN/obl:em, NOUN/obl:em, VERB/conj:mas)",0,1,0,1,1
+"VERB(*, NOUN/obl:em, NOUN/obl:em, NOUN/obl:segundo)",0,1,0,1,1
+"VERB(*, NOUN/obl:em, NOUN/obl:em, NOUN/obl:após, NOUN/obl:após)",0,1,0,1,1
+"NOUN(*, NOUN/nmod:sem, VERB/conj:mas)",0,1,0,1,1
+"NOUN(*, NOUN/nmod:segundo)",0,1,0,1,1
+"NOUN(*, NOUN/nmod:para, PRON/ref)",0,1,0,1,1
+"NOUN(*, NOUN/nmod:em, NOUN/conj:e)",0,1,0,1,1
+"NOUN(*, NOUN/nmod:de, VERB/advcl:se)",1,0,1,0,1
+"NOUN(*, NOUN/nmod:de, VERB/advcl:ferreirase)",1,0,1,0,1
+"NOUN(*, NOUN/nmod:de, VERB/acl:para, VERB/acl:para)",0,1,0,1,1
+"NOUN(*, NOUN/nmod:de, VERB/acl:de)",1,0,1,0,1
+"NOUN(*, NOUN/nmod:de, PROPN/nmod:durante)",0,1,0,1,1
+"NOUN(*, NOUN/nmod:de, PRON/ref, NOUN/acl:relcl)",1,0,1,0,1
+"VERB(*, NOUN/obl:por, PROPN/obl:para)",0,1,0,1,1
+"VERB(*, NOUN/obl:para, NOUN/obl:sob)",0,1,0,1,1
+"VERB(*, NOUN/obl:para, NOUN/obl:com)",0,1,0,1,1
+"VERB(*, NOUN/obl:para, ADJ/conj:mas)",0,1,0,1,1
+"VERB(*, NOUN/obl:entre, SYM/obl:entre, NOUN/obl:entre)",0,1,0,1,1
+"VERB(*, NOUN/obl:entre, NOUN/obl:para)",0,1,0,1,1
+"VERB(*, NOUN/obl:entre)",0,1,0,1,1
+"VERB(*, NOUN/obl:em, VERB/conj:e, VERB/conj:e, VERB/conj:e)",0,1,0,1,1
+"VERB(*, NOUN/obl:em, VERB/conj:e)",1,0,1,0,1
+"NOUN(*, NOUN/nmod:de, NOUN/nmod:por, NOUN/conj:e)",1,0,1,0,1
+"NOUN(*, NOUN/nmod:de, NOUN/nmod:em, NOUN/conj:e)",0,1,0,1,1
+"NOUN(*, NOUN/nmod:de, NOUN/nmod:de, NOUN/nmod:de, NOUN/nmod:de)",1,0,1,0,1
+"NOUN(*, NOUN/nmod:de, NOUN/nmod:de, NOUN/nmod:de)",1,0,1,0,1
+"NOUN(*, NOUN/nmod:de, NOUN/nmod:de, NOUN/nmod:a)",1,0,1,0,1
+"VERB(*, PRON/obl:entre)",0,1,0,1,1
+"VERB(*, NUM/obl:em, NOUN/obl:em)",1,0,1,0,1
+"VERB(*, NUM/obl:de)",0,1,0,1,1
+"VERB(*, NOUN/xcomp, NOUN/xcomp)",1,0,1,0,1
+"VERB(*, NOUN/obl:sob, VERB/conj:e)",0,1,0,1,1
+"VERB(*, NOUN/obl:sob)",0,1,0,1,1
+"VERB(*, NOUN/obl:sem, VERB/conj:e, VERB/conj:e)",1,0,1,0,1
+"VERB(*, NOUN/obl:segundo)",0,1,0,1,1
+"VERB(*, NOUN/obl:por, VERB/conj:e)",0,1,0,1,1
+"NOUN(*, NOUN/nmod:em, NOUN/nmod:em)",1,0,1,0,1
+"NOUN(*, NOUN/nmod:em, NOUN/nmod:após)",0,1,0,1,1
+"VERB(*, PROPN/obl:em, VERB/conj:e)",0,1,0,1,1
+"VERB(*, PROPN/obl:de, VERB/advcl:para)",0,1,0,1,1
+"VERB(*, PROPN/obl:contra, NOUN/obl:em)",0,1,0,1,1
+"VERB(*, PROPN/obl:como)",0,1,0,1,1
+"VERB(*, PROPN/obl:agent)",1,0,1,0,1
+"VERB(*, PROPN/obl:a, VERB/conj:e)",1,0,1,0,1
+"VERB(*, PROPN/obl:a, NOUN/obl:em)",0,1,0,1,1
+"VERB(*, PROPN/obj, PROPN/obl:em)",0,1,0,1,1
+"VERB(*, PROPN/obj, PROPN/obj)",0,1,0,1,1
+"VERB(*, PROPN/conj:e)",1,0,1,0,1
+"VERB(*, PRON/obl:sobre)",1,0,1,0,1
+"VERB(*, PRON/obl:por, PRON/obl:por)",1,0,1,0,1
+"NOUN(*, NOUN/nmod:de, NUM/nmod:entre, NUM/nmod:entre)",0,1,0,1,1
+"NOUN(*, NOUN/nmod:de, NUM/nmod:desde, NOUN/nmod:com)",0,1,0,1,1
+"NOUN(*, NOUN/nmod:de, NUM/nmod:de, SYM/nmod:em)",1,0,1,0,1
+"NOUN(*, NOUN/nmod:de, NOUN/nmod:sobre, NOUN/nmod:sobre, NOUN/nmod:sobre)",0,1,0,1,1
+"VERB(*, VERB/advcl:porque)",0,1,0,1,1
+"VERB(*, VERB/advcl:para_que)",0,1,0,1,1
+"VERB(*, VERB/advcl:enquanto)",0,1,0,1,1
+"VERB(*, VERB/advcl:como)",1,0,1,0,1
+"VERB(*, VERB/advcl:assim_que)",0,1,0,1,1
+"VERB(*, VERB/advcl:a)",1,0,1,0,1
+"VERB(*, SYM/obl:para)",0,1,0,1,1
+"VERB(*, SYM/obl:em, VERB/conj:e, VERB/conj:e)",0,1,0,1,1
+"VERB(*, SYM/obl:em)",0,1,0,1,1
+"NOUN(*, NOUN/nmod:de, NOUN/nmod:após_a)",1,0,1,0,1
+"NOUN(*, NOUN/nmod:de, NOUN/conj:mas, NOUN/conj:e)",0,1,0,1,1
+"NOUN(*, NOUN/nmod:de, ADV/ref, ADJ/acl:relcl)",0,1,0,1,1
+"NOUN(*, NOUN/nmod:de, ADJ/conj:e, NOUN/conj:e)",1,0,1,0,1
+"NOUN(*, NOUN/nmod:contra, NOUN/nmod:por, NOUN/nmod:por, NOUN/nmod:por)",0,1,0,1,1
+"NOUN(*, NOUN/nmod:contra, NOUN/nmod:em)",0,1,0,1,1
+"NOUN(*, NOUN/nmod:com, X/nmod:com, NOUN/nmod:com, NOUN/nmod:com)",1,0,1,0,1
+"NOUN(*, NOUN/nmod:a, NOUN/nmod:a, NOUN/nmod:a, NOUN/nmod:a)",0,1,0,1,1
+"NOUN(*, NOUN/conj:ou, PRON/ref)",1,0,1,0,1
+"NOUN(*, NOUN/conj:ou, NOUN/conj:ou)",0,1,0,1,1
+"NOUN(*, NOUN/conj:e, PROPN/nmod:em, PROPN/nmod:em)",0,1,0,1,1
+"NOUN(*, NOUN/conj:e, PROPN/nmod:de)",0,1,0,1,1
+"VERB(*, VERB/xcomp, ADJ/xcomp)",1,0,1,0,1
+"VERB(*, VERB/parataxis, VERB/parataxis)",0,1,0,1,1
+"VERB(*, VERB/conj:porém)",1,0,1,0,1
+"VERB(*, VERB/conj:ou, NOUN/obl:a)",0,1,0,1,1
+"VERB(*, VERB/conj:e, VERB/dep)",1,0,1,0,1
+"VERB(*, VERB/conj:e, VERB/conj:e)",0,1,0,1,1
+"VERB(*, VERB/advcl:ser_que)",1,0,1,0,1
+"VERB(*, VERB/advcl:sem)",0,1,0,1,1
+"VERB(*, VERB/advcl:se)",0,1,0,1,1
+"VERB(*, VERB/advcl:quanto)",1,0,1,0,1
+"VERB(*, VERB/advcl:quando)",0,1,0,1,1
+"VERB(NOUN/nsubj, *, NOUN/obl:em, NOUN/obl:com)",0,1,0,1,1
+"VERB(NOUN/nsubj, *, NOUN/obl:de, VERB/conj:e)",1,0,1,0,1
+"VERB(NOUN/nsubj, *, NOUN/obl:de, NOUN/obl:para)",0,1,0,1,1
+"VERB(NOUN/nsubj, *, NOUN/obl:após)",0,1,0,1,1
+"VERB(NOUN/nsubj, *, NOUN/obl:a, NOUN/obl:para)",0,1,0,1,1
+"VERB(NOUN/advcl:se, *, NOUN/obl:em)",1,0,1,0,1
+"VERB(NOUN/advcl:embora, *, PRON/obl:a, VERB/advcl:por)",1,0,1,0,1
+"VERB(NOUN/advcl:assim_como, *, NOUN/obl:de)",0,1,0,1,1
+"VERB(AUX/cop, SCONJ/mark, NOUN/nsubj, *)",1,0,1,0,1
+"VERB(ADP/mark, *, NOUN/obl:com)",0,1,0,1,1
+"VERB(ADP/mark, *, NOUN/obl:até)",1,0,1,0,1
+"VERB(ADJ/ccomp:speech, *)",0,1,0,1,1
+"VERB(*, X/obl:de)",0,1,0,1,1
+"NOUN(*, NOUN/nmod:com, NOUN/nmod:com)",0,1,0,1,1
+"NOUN(*, NOUN/nmod:com, NOUN/conj:e)",0,1,0,1,1
+"NOUN(*, NOUN/nmod:após)",0,1,0,1,1
+"NOUN(*, NOUN/appos, NOUN/nsubj)",1,0,1,0,1
+"NOUN(*, NOUN/appos)",1,0,1,0,1
+"NOUN(*, ADV/nmod:de)",1,0,1,0,1
+"NOUN(*, ADV/conj:ou)",0,1,0,1,1
+"NOUN(*, ADJ/nmod:em)",0,1,0,1,1
+"NOUN(*, ADJ/appos, NOUN/appos)",1,0,1,0,1
+"NOUN(*, ADJ/amod, VERB/acl)",1,0,1,0,1
+"NOUN(*, ADJ/amod, NOUN/nmod:de)",1,0,1,0,1
+"NOUN(*, ADJ/amod, NOUN/nmod:como, PROPN/nmod:como, NOUN/nmod:como)",0,1,0,1,1
+"NOUN(*, ADJ/acl:que)",1,0,1,0,1
+"VERB(NOUN/nsubj, *, NOUN/obl:sob)",1,0,1,0,1
+"VERB(NOUN/nsubj, *, NOUN/obl:segundo)",0,1,0,1,1
+"VERB(NOUN/nsubj, *, NOUN/obl:por_volta_de)",0,1,0,1,1
+"VERB(NOUN/nsubj, *, NOUN/obl:em, VERB/advcl:a)",0,1,0,1,1
+"VERB(NOUN/nsubj, *, NOUN/obl:em, NUM/obl:em)",0,1,0,1,1
+"VERB(NOUN/nsubj, *, NOUN/obl:em, NOUN/obl:por, X/obl:por)",1,0,1,0,1
+"VERB(NOUN/nsubj, *, VERB/xcomp)",1,0,1,0,1
+"VERB(NOUN/nsubj, *, VERB/dep, VERB/dep)",1,0,1,0,1
+"VERB(NOUN/nsubj, *, VERB/conj:ou)",1,0,1,0,1
+"VERB(NOUN/nsubj, *, VERB/conj:e, VERB/conj:e)",0,1,0,1,1
+"VERB(NOUN/nsubj, *, VERB/ccomp)",0,1,0,1,1
+"VERB(NOUN/nsubj, *, VERB/advcl:para_que)",1,0,1,0,1
+"VERB(NOUN/nsubj, *, VERB/advcl:a_o)",0,1,0,1,1
+"VERB(NOUN/nsubj, *, VERB/advcl)",0,1,0,1,1
+"VERB(NOUN/nsubj, *, SYM/obl:a)",0,1,0,1,1
+"VERB(NOUN/nsubj, *, PROPN/obl:com, VERB/conj:e)",0,1,0,1,1
+"VERB(NOUN/nsubj, *, PROPN/obl:a)",0,1,0,1,1
+"VERB(NOUN/nsubj, *, PRON/obl:a, NOUN/advcl:porque, VERB/parataxis)",1,0,1,0,1
+"VERB(NOUN/nsubj, *, PRON/nsubj)",0,1,0,1,1
+"VERB(NOUN/nsubj, *, NUM/obl:em, VERB/advcl:para)",0,1,0,1,1
+"VERB(NOUN/nsubj, *, NUM/obl:em)",0,1,0,1,1
+"NOUN(*, NOUN/conj:e, NOUN/conj:e, NOUN/nmod:de)",0,1,0,1,1
+"ADV(*, VERB/conj:e)",1,0,1,0,1
+"ADV(*, VERB/acl:de, VERB/acl:de, VERB/acl:de)",1,0,1,0,1
+"ADV(*, NOUN/obl:com)",0,1,0,1,1
+"ADJ(VERB/advcl:para, *, VERB/parataxis, VERB/parataxis, VERB/parataxis)",0,1,0,1,1
+"ADJ(SYM/nsubj, *, NOUN/obl:a, NOUN/obl:contra, NOUN/obl:contra)",1,0,1,0,1
+"VERB(NOUN/nsubj:pass, *, NOUN/obl:para)",0,1,0,1,1
+"VERB(NOUN/nsubj:pass, *, NOUN/obl:em, NOUN/obl:com)",0,1,0,1,1
+"VERB(NOUN/nsubj:pass, *, NOUN/obl:contra)",0,1,0,1,1
+"VERB(NOUN/nsubj:pass, *, NOUN/obl:com)",1,0,1,0,1
+"VERB(NOUN/nsubj, PROPN/nsubj, *, NUM/obl:em)",1,0,1,0,1
+"VERB(NOUN/nsubj, NOUN/obl:monitorados.por, *)",1,0,1,0,1
+"VERB(NOUN/nsubj, NOUN/obl:em, *, PROPN/obl:para, NOUN/obl:para)",0,1,0,1,1
+"VERB(NOUN/nsubj, NOUN/obl:em, *, NOUN/obl:de)",1,0,1,0,1
+"VERB(NOUN/nsubj, NOUN/nsubj, *)",0,1,0,1,1
+"VERB(NOUN/nsubj, AUX/aux:pass, *)",0,1,0,1,1
+"VERB(NOUN/nsubj, AUX/aux, *)",0,1,0,1,1
+"VERB(NOUN/obl:até, *)",1,0,1,0,1
+"VERB(NOUN/obl:após, *, NOUN/obl:em)",1,0,1,0,1
+"VERB(NOUN/obl, *, NOUN/obl:em)",0,1,0,1,1
+"VERB(NOUN/obl, *, NOUN/obl:com)",0,1,0,1,1
+"VERB(NOUN/obl, *, NOUN/obl:a)",1,0,1,0,1
+"VERB(NOUN/obj, PROPN/nsubj, *, NOUN/obl:de)",0,1,0,1,1
+"VERB(NOUN/obj, NOUN/nsubj, *)",0,1,0,1,1
+"VERB(NOUN/obj, *, VERB/advcl:para)",0,1,0,1,1
+"VERB(NOUN/obj, *, NOUN/obl:em)",1,0,1,0,1
+"VERB(NOUN/obj, *, NOUN/obl:de)",0,1,0,1,1
+"VERB(NOUN/nsubj:pass, AUX/aux:pass, *, NOUN/obl:de)",0,1,0,1,1
+"VERB(NOUN/nsubj:pass, *, X/obl:agent)",0,1,0,1,1
+"VERB(NOUN/nsubj:pass, *, VERB/conj:porém, VERB/xcomp)",0,1,0,1,1
+"NOUN(*, ADJ/acl:de)",1,0,1,0,1
+"ADV(NOUN/nsubj, *)",1,0,1,0,1
+"ADV(ADJ/advcl:se, *, NOUN/obl:de)",0,1,0,1,1
+"VERB(NOUN/obl:segundo, *, NOUN/obl:a)",0,1,0,1,1
+"VERB(NOUN/obl:que, NOUN/nsubj, *, NOUN/obl:a, NOUN/nsubj)",1,0,1,0,1
+"VERB(NOUN/obl:em_meio_a, NOUN/nsubj, *, PROPN/obl:em, VERB/advcl:para)",0,1,0,1,1
+"VERB(NOUN/obl:em, PROPN/nsubj, *, VERB/xcomp)",0,1,0,1,1
+"VERB(NOUN/obl:em, *, VERB/xcomp, VERB/xcomp)",0,1,0,1,1
+"VERB(NOUN/obl:em, *, VERB/advcl:ser_que)",0,1,0,1,1
+"VERB(NOUN/obl:em, *, VERB/advcl:após)",0,1,0,1,1
+"VERB(NOUN/obl:em, *, VERB/advcl:a_o)",0,1,0,1,1
+"VERB(NOUN/obl:em, *, NOUN/obl:segundo)",0,1,0,1,1
+"VERB(NOUN/obl:em, *, NOUN/obl:de, VERB/advcl)",1,0,1,0,1
+"VERB(NOUN/obl:em, *, NOUN/obl:como)",1,0,1,0,1
+"VERB(NOUN/obl:em, *, NOUN/obj, NOUN/obj, NOUN/obj)",1,0,1,0,1
+"VERB(NOUN/obl:em, *, NOUN/obj)",1,0,1,0,1
+"VERB(NOUN/obl:durante, *)",1,0,1,0,1
+"VERB(NOUN/obl:como, *)",0,1,0,1,1
+"VERB(NOUN/obl:com, *, NOUN/obl:a)",0,1,0,1,1
+"VERB(PRON/nsubj, *, PROPN/obl:para)",0,1,0,1,1
+"VERB(PRON/nsubj, *, PROPN/obl:com)",0,1,0,1,1
+"VERB(PRON/nsubj, *, NOUN/obl:em, NOUN/obl:segundo)",0,1,0,1,1
+"VERB(PRON/nsubj, *, NOUN/obl:com, NOUN/obl:após)",1,0,1,0,1
+"VERB(PRON/nsubj, *, NOUN/obl:a)",0,1,0,1,1
+"VERB(NUM/obl:em, *, NOUN/obl:em, VERB/conj:mas)",0,1,0,1,1
+"VERB(NUM/obl:em, *)",0,1,0,1,1
+"VERB(NOUN/parataxis, *, NOUN/obl:com, VERB/advcl:para, VERB/advcl:para, NOUN/obl:de)",1,0,1,0,1
+"VERB(NOUN/obl:sobre, *)",1,0,1,0,1
+"VERB(NOUN/obl:segundo, NOUN/obl:após, *, VERB/advcl:para)",0,1,0,1,1
+"VERB(NOUN/obl:segundo, *, VERB/advcl:para, NOUN/obl:com)",0,1,0,1,1
+"VERB(NOUN/obl:segundo, *, VERB/advcl:a_o, VERB/conj:e)",0,1,0,1,1
+"VERB(NOUN/obl:segundo, *, PROPN/obl:em, VERB/conj:e)",0,1,0,1,1
+"VERB(NOUN/obl:segundo, *, NOUN/obl:sem, VERB/conj:e)",0,1,0,1,1
+"VERB(NOUN/obl:segundo, *, NOUN/obl:em)",0,1,0,1,1
+"VERB(NOUN/obl:segundo, *, NOUN/obl:como)",0,1,0,1,1
+"ADJ(NOUN/obl:segundo, *, NOUN/obl:para, VERB/advcl:como)",0,1,0,1,1
+"ADJ(NOUN/obl:segundo, *)",0,1,0,1,1
+"ADJ(NOUN/obl:em, *, VERB/advcl:para)",1,0,1,0,1
+"ADJ(NOUN/obl:em, *, PROPN/obl:de)",0,1,0,1,1
+"ADJ(NOUN/obl:em, *)",1,0,1,0,1
+"ADJ(NOUN/obl:durante, *, NOUN/obl:com)",0,1,0,1,1
+"ADJ(NOUN/obl, *, ADJ/conj:e)",0,1,0,1,1
+"ADJ(NOUN/nsubj, NOUN/nsubj, *, NOUN/obl:a, NOUN/obl:a, NOUN/obl:a)",1,0,1,0,1
+"ADJ(NOUN/nsubj, NOUN/nsubj, *)",0,1,0,1,1
+"ADJ(NOUN/nsubj, AUX/cop, *, NOUN/obl:a)",0,1,0,1,1
+"ADJ(NOUN/nsubj, *, SYM/obl:em)",0,1,0,1,1
+"VERB(PRON/nsubj:pass, *, PRON/obl:contra, NOUN/obl:em)",0,1,0,1,1
+"VERB(PRON/nsubj:pass, *, NOUN/obl:contra, NOUN/conj:e)",1,0,1,0,1
+"VERB(PRON/nsubj, *, VERB/ccomp, VERB/ccomp)",0,1,0,1,1
+"VERB(PRON/nsubj, *, VERB/ccomp)",1,0,1,0,1
+"VERB(PRON/nsubj, *, SYM/obl:para)",1,0,1,0,1
+"VERB(PROPN/nsubj, *, NOUN/obl:por, NOUN/obl:com)",0,1,0,1,1
+"VERB(PROPN/nsubj, *, NOUN/obl:mais)",0,1,0,1,1
+"VERB(PROPN/nsubj, *, NOUN/obl:em, VERB/advcl:para)",0,1,0,1,1
+"VERB(PROPN/nsubj, *, NOUN/obl:em, NOUN/obl:em, VERB/advcl:antes_que)",0,1,0,1,1
+"VERB(PROPN/nsubj, *, NOUN/obl:de)",0,1,0,1,1
+"VERB(PROPN/nsubj, *, NOUN/obl:com, VERB/conj:e)",0,1,0,1,1
+"VERB(PROPN/nsubj, *, NOUN/obl:com, NOUN/obl:em, VERB/advcl:para)",0,1,0,1,1
+"VERB(PROPN/nsubj, *, NOUN/obj)",0,1,0,1,1
+"VERB(PROPN/nsubj, *, ADV/advcl:antes_que)",0,1,0,1,1
+"VERB(PROPN/nsubj, *, ADJ/obl:de, ADJ/obl:de)",1,0,1,0,1
+"VERB(PRON/obl:por, *)",1,0,1,0,1
+"VERB(PRON/obl:com, *)",0,1,0,1,1
+"VERB(PRON/obj, *, ADJ/obl:de)",1,0,1,0,1
+"ADJ(PROPN/nsubj, *, NOUN/obl:como)",0,1,0,1,1
+"ADJ(PRON/nsubj, AUX/cop, *)",0,1,0,1,1
+"ADJ(PRON/nsubj, *, ADJ/conj:e)",1,0,1,0,1
+"VERB(PROPN/obl:em, *, NOUN/obl:em, VERB/conj:mas)",0,1,0,1,1
+"VERB(PROPN/obl:em, *, NOUN/obl:em)",1,0,1,0,1
+"VERB(PROPN/obl, *, VERB/acl:sem)",0,1,0,1,1
+"VERB(PROPN/obl, *, NOUN/obl:com)",0,1,0,1,1
+"VERB(PROPN/obl, *)",1,0,1,0,1
+"VERB(PROPN/obj, *)",0,1,0,1,1
+"VERB(PROPN/nsubj:pass, *, PROPN/obl:em, NOUN/obl:com)",0,1,0,1,1
+"VERB(PROPN/nsubj:pass, *, NOUN/obl:em)",0,1,0,1,1
+"VERB(PROPN/nsubj:pass, *)",0,1,0,1,1
+"VERB(PROPN/nsubj, PROPN/nsubj, ADP/mark, *)",0,1,0,1,1
+"VERB(PROPN/nsubj, PROPN/nsubj, *, VERB/conj:e)",0,1,0,1,1
+"VERB(PROPN/nsubj, NOUN/nsubj, ADP/mark, *)",0,1,0,1,1
+"VERB(PROPN/nsubj, NOUN/nsubj, *, NOUN/obl:em, PROPN/obl:de, VERB/conj:e)",0,1,0,1,1
+"VERB(PROPN/nsubj, *, VERB/advcl:para)",0,1,0,1,1
+"VERB(PROPN/nsubj, *, PROPN/obl:para)",0,1,0,1,1
+"VERB(PROPN/nsubj, *, PROPN/obl:em, VERB/advcl:até, NOUN/conj:ou_ser)",0,1,0,1,1
+"VERB(VERB/advcl:quando, *)",0,1,0,1,1
+"VERB(VERB/advcl:para, *)",0,1,0,1,1
+"VERB(VERB/advcl:enquanto, NOUN/obl:enquanto, VERB/advcl:enquanto, VERB/advcl:enquanto, *, NOUN/obl:para)",0,1,0,1,1
+"VERB(VERB/advcl:enquanto, *, SYM/obl:em, NOUN/obl:segundo)",0,1,0,1,1
+"VERB(VERB/advcl:desde_que, *)",1,0,1,0,1
+"VERB(VERB/advcl:caso, *, NOUN/obj)",1,0,1,0,1
+"VERB(VERB/advcl:após, *, NOUN/obl:em)",1,0,1,0,1
+"VERB(VERB/advcl:a_o, *)",1,0,1,0,1
+"VERB(VERB/advcl:a, NOUN/obl:em, *)",1,0,1,0,1
+"VERB(VERB/advcl:a, *, NOUN/obl:em)",1,0,1,0,1
+"VERB(VERB/advcl:a, *, NOUN/obl:a)",1,0,1,0,1
+"VERB(SYM/nsubj, NOUN/nsubj, *, NOUN/obl:de)",0,1,0,1,1
+"VERB(SCONJ/mark, PROPN/nsubj:pass, *)",0,1,0,1,1
+"ADJ(*, VERB/parataxis, VERB/parataxis)",0,1,0,1,1
+"ADJ(*, VERB/csubj)",1,0,1,0,1
+"ADJ(*, VERB/acl:em)",0,1,0,1,1
+"NOUN(ADP/case, *, PROPN/nmod:em, PROPN/nmod:em)",0,1,0,1,1
+"NOUN(ADP/case, *, NOUN/nmod:sem)",0,1,0,1,1
+"NOUN(ADP/case, *, NOUN/nmod:em, NOUN/nmod:de)",0,1,0,1,1
+"NOUN(ADP/case, *, NOUN/nmod:de, NOUN/nmod:com)",1,0,1,0,1
+"NOUN(ADP/case, *, NOUN/nmod:contra)",0,1,0,1,1
+"VERB(VERB/ccomp:speech, VERB/ccomp:speech, *, NOUN/obl:a)",0,1,0,1,1
+"VERB(VERB/ccomp:speech, *)",0,1,0,1,1
+"VERB(VERB/advcl:segundo, *, VERB/advcl:para)",0,1,0,1,1
+"VERB(VERB/advcl:segundo, *, NOUN/obl:em)",0,1,0,1,1
+"VERB(VERB/advcl:se, VERB/advcl:se, *, NOUN/obl:sem)",1,0,1,0,1
+"VERB(VERB/advcl:se, VERB/advcl:se, *, ADV/advmod, NOUN/obl:com, VERB/conj:e)",1,0,1,0,1
+"VERB(VERB/advcl:se, *, VERB/advcl:para, NOUN/obl:sem)",1,0,1,0,1
+"VERB(VERB/advcl:se, *, NOUN/xcomp)",0,1,0,1,1
+"VERB(VERB/advcl:se, *, ADV/advmod, NOUN/obl:com, VERB/conj:e)",1,0,1,0,1
+"VERB(VERB/advcl:quando, PROPN/nsubj, *)",0,1,0,1,1
+"VERB(VERB/advcl:quando, *, VERB/conj:e)",0,1,0,1,1

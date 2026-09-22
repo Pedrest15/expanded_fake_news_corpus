@@ -1,0 +1,403 @@
+# global.columns = ID FORM LEMMA UPOS XPOS FEATS HEAD DEPREL DEPS MISC
+# sent_id = fakebr:458-1
+# text = URGENTE:
+1	URGENTE	URGENTE	PROPN	_	_	0	root	0:root	SpaceAfter=No
+2	:	:	PUNCT	_	_	1	punct	1:punct	_
+
+# sent_id = fakebr:458-2
+# text = Pentágono ESCONDE a verdade sobre arma secreta de micro-ondas que já está sendo usada contra civis!
+1	Pentágono	Pentágono	PROPN	_	_	2	nsubj	2:nsubj	_
+2	ESCONDE	esconder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	4:det	_
+4	verdade	verdade	NOUN	_	Gender=Fem|Number=Sing	2	obj	2:obj	_
+5	sobre	sobre	ADP	_	_	6	case	6:case	_
+6	arma	arma	NOUN	_	Gender=Fem|Number=Sing	4	nmod	4:nmod:sobre|14:nsubj:pass	_
+7	secreta	secreto	ADJ	_	Gender=Fem|Number=Sing	6	amod	6:amod	_
+8	de	de	ADP	_	_	9	case	9:case	_
+9	micro-ondas	micrO-ondas	NOUN	_	Gender=Masc|Number=Plur	6	nmod	6:nmod:de	_
+10	que	que	PRON	_	PronType=Rel	14	nsubj:pass	6:ref	_
+11	já	já	ADV	_	_	14	advmod	14:advmod	_
+12	está	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	aux	14:aux	_
+13	sendo	ser	AUX	_	VerbForm=Ger	14	aux:pass	14:aux:pass	_
+14	usada	usar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	6	acl:relcl	6:acl:relcl	_
+15	contra	contra	ADP	_	_	16	case	16:case	_
+16	civis	civil	NOUN	_	Number=Plur	14	obl	14:obl:contra	SpaceAfter=No
+17	!	!	PUNCT	_	_	2	punct	2:punct	_
+
+# sent_id = fakebr:458-3
+# text = Documentos vazados revelam projeto sinistro.
+1	Documentos	documento	NOUN	_	Gender=Masc|Number=Plur	3	nsubj	3:nsubj	_
+2	vazados	vazar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	1	acl	1:acl	_
+3	revelam	revelar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+4	projeto	projeto	NOUN	_	Gender=Masc|Number=Sing	3	obj	3:obj	_
+5	sinistro	sinistro	ADJ	_	Gender=Masc|Number=Sing	4	amod	4:amod	SpaceAfter=No
+6	.	.	PUNCT	_	_	3	punct	3:punct	_
+
+# sent_id = fakebr:458-4
+# text = Uma fonte anônima de dentro da base militar de Kirtland, no Novo México, revelou com exclusividade informações chocantes sobre o chamado Projeto Champ.
+1	Uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	2	det	2:det	_
+2	fonte	fonte	NOUN	_	Gender=Fem|Number=Sing	18	nsubj	18:nsubj	_
+3	anônima	anônimo	ADJ	_	Gender=Fem|Number=Sing	2	amod	2:amod	_
+4	de	de	ADP	_	_	5	case	5:case	_
+5	dentro	dentro	ADV	_	_	2	advmod	2:advmod	_
+6-7	da	_	_	_	_	_	_	_	_
+6	de	de	ADP	_	_	8	case	8:case	_
+7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	8:det	_
+8	base	base	NOUN	_	Gender=Fem|Number=Sing	5	obl	5:obl:de	_
+9	militar	militar	ADJ	_	Number=Sing	8	amod	8:amod	_
+10	de	de	ADP	_	_	11	case	11:case	_
+11	Kirtland	Kirtland	PROPN	_	_	8	nmod	8:nmod:de	SpaceAfter=No
+12	,	,	PUNCT	_	_	15	punct	15:punct	_
+13-14	no	_	_	_	_	_	_	_	_
+13	em	em	ADP	_	_	15	case	15:case	_
+14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	15:det	_
+15	Novo	Novo	PROPN	_	_	8	nmod	8:nmod:em	_
+16	México	México	PROPN	_	_	15	flat:name	15:flat:name	SpaceAfter=No
+17	,	,	PUNCT	_	_	15	punct	15:punct	_
+18	revelou	revelar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+19	com	com	ADP	_	_	20	case	20:case	_
+20	exclusividade	exclusividade	NOUN	_	Gender=Fem|Number=Sing	18	obl	18:obl:com	_
+21	informações	informação	NOUN	_	Gender=Fem|Number=Plur	18	obj	18:obj	_
+22	chocantes	chocante	ADJ	_	Number=Plur	21	amod	21:amod	_
+23	sobre	sobre	ADP	_	_	24	case	24:case	_
+24	o	o	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Dem	21	nmod	21:nmod:sobre	_
+25	chamado	chamar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	24	acl	24:acl	_
+26	Projeto	Projeto	PROPN	_	_	25	xcomp	25:xcomp	_
+27	Champ	Champ	PROPN	_	_	26	flat:name	26:flat:name	SpaceAfter=No
+28	.	.	PUNCT	_	_	18	punct	18:punct	_
+
+# sent_id = fakebr:458-5
+# text = Segundo documentos confidenciais obtidos por nosso portal, essa arma de micro-ondas NÃO é inofensiva para humanos como o governo americano quer fazer você acreditar!
+1	Segundo	segundo	ADP	_	_	2	case	2:case	_
+2	documentos	documento	NOUN	_	Gender=Masc|Number=Plur	15	obl	15:obl:segundo	_
+3	confidenciais	confidencial	ADJ	_	Number=Plur	2	amod	2:amod	_
+4	obtidos	obter	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	2	acl	2:acl	_
+5	por	por	ADP	_	_	7	case	7:case	_
+6	nosso	nosso	DET	_	Gender=Masc|Number=Sing|Person=1|Poss=Yes|PronType=Prs	7	det	7:det	_
+7	portal	portal	NOUN	_	Gender=Masc|Number=Sing	4	obl:agent	4:obl:agent	SpaceAfter=No
+8	,	,	PUNCT	_	_	2	punct	2:punct	_
+9	essa	esse	DET	_	Gender=Fem|Number=Sing|PronType=Dem	10	det	10:det	_
+10	arma	arma	NOUN	_	Gender=Fem|Number=Sing	15	nsubj	15:nsubj	_
+11	de	de	ADP	_	_	12	case	12:case	_
+12	micro-ondas	micrO-ondas	NOUN	_	Gender=Masc|Number=Plur	10	nmod	10:nmod:de	_
+13	NÃO	não	ADV	_	_	15	advmod	15:advmod	_
+14	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	cop	15:cop	_
+15	inofensiva	inofensivo	ADJ	_	Gender=Fem|Number=Sing	0	root	0:root	_
+16	para	para	ADP	_	_	17	case	17:case	_
+17	humanos	humano	NOUN	_	Gender=Masc|Number=Plur	15	obl	15:obl:para	_
+18	como	como	SCONJ	_	_	22	mark	22:mark	_
+19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	20:det	_
+20	governo	governo	NOUN	_	Gender=Masc|Number=Sing	22	nsubj	22:nsubj|23:nsubj	_
+21	americano	americano	ADJ	_	Gender=Masc|Number=Sing	20	amod	20:amod	_
+22	quer	querer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	advcl	15:advcl:como	_
+23	fazer	fazer	VERB	_	VerbForm=Inf	22	xcomp	22:xcomp	_
+24	você	você	PRON	_	Case=Nom|Number=Sing|Person=2|PronType=Prs	23	obj	23:obj|25:nsubj	_
+25	acreditar	acreditar	VERB	_	VerbForm=Inf	23	xcomp	23:xcomp	SpaceAfter=No
+26	!	!	PUNCT	_	_	15	punct	15:punct	_
+
+# sent_id = fakebr:458-6
+# text = O médico Dr. Robert Harrison, ex-funcionário da Força Aérea que pediu demissão por questões éticas, denunciou em entrevista exclusiva:
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	2:det	_
+2	médico	médico	NOUN	_	Gender=Masc|Number=Sing	19	nsubj	19:nsubj	_
+3	Dr.	Dr.	PROPN	_	_	2	nmod	2:nmod	_
+4	Robert	Robert	PROPN	_	_	3	flat:name	3:flat:name	_
+5	Harrison	Harrison	PROPN	_	_	3	flat:name	3:flat:name	SpaceAfter=No
+6	,	,	PUNCT	_	_	7	punct	7:punct	_
+7	ex-funcionário	ex-funcionário	NOUN	_	Gender=Masc|Number=Sing	2	appos	2:appos|13:nsubj	_
+8-9	da	_	_	_	_	_	_	_	_
+8	de	de	ADP	_	_	10	case	10:case	_
+9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	10:det	_
+10	Força	Força	PROPN	_	_	7	nmod	7:nmod:de	_
+11	Aérea	Aérea	PROPN	_	_	10	flat:name	10:flat:name	_
+12	que	que	PRON	_	PronType=Rel	13	nsubj	7:ref	_
+13	pediu	pedir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	acl:relcl	7:acl:relcl	_
+14	demissão	demissão	NOUN	_	Gender=Fem|Number=Sing	13	obj	13:obj	_
+15	por	por	ADP	_	_	16	case	16:case	_
+16	questões	questão	NOUN	_	Gender=Fem|Number=Plur	13	obl	13:obl:por	_
+17	éticas	ético	ADJ	_	Gender=Fem|Number=Plur	16	amod	16:amod	SpaceAfter=No
+18	,	,	PUNCT	_	_	7	punct	7:punct	_
+19	denunciou	denunciar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+20	em	em	ADP	_	_	21	case	21:case	_
+21	entrevista	entrevista	NOUN	_	Gender=Fem|Number=Sing	19	obl	19:obl:em	_
+22	exclusiva	exclusivo	ADJ	_	Gender=Fem|Number=Sing	21	amod	21:amod	SpaceAfter=No
+23	:	:	PUNCT	_	_	19	punct	19:punct	_
+
+# sent_id = fakebr:458-7
+# text = Os testes em Utah em 2012 não foram realizados apenas em equipamentos eletrônicos.
+1	Os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	2	det	2:det	_
+2	testes	teste	NOUN	_	Gender=Masc|Number=Plur	9	nsubj:pass	9:nsubj:pass	_
+3	em	em	ADP	_	_	4	case	4:case	_
+4	Utah	Utah	PROPN	_	_	2	nmod	2:nmod:em	_
+5	em	em	ADP	_	_	6	case	6:case	_
+6	2012	2012	NUM	_	NumType=Card	2	nmod	2:nmod:em	_
+7	não	não	ADV	_	_	9	advmod	9:advmod	_
+8	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	9	aux:pass	9:aux:pass	_
+9	realizados	realizar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	0	root	0:root	_
+10	apenas	apenas	ADV	_	_	12	advmod	12:advmod	_
+11	em	em	ADP	_	_	12	case	12:case	_
+12	equipamentos	equipamento	NOUN	_	Gender=Masc|Number=Plur	9	obl	9:obl:em	_
+13	eletrônicos	eletrônico	ADJ	_	Gender=Masc|Number=Plur	12	amod	12:amod	SpaceAfter=No
+14	.	.	PUNCT	_	_	9	punct	9:punct	_
+
+# sent_id = fakebr:458-8
+# text = Havia moradores próximos que relataram sintomas graves como queimaduras internas, câncer e problemas neurológicos nos meses seguintes.
+1	Havia	haver	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	0:root	_
+2	moradores	morador	NOUN	_	Gender=Masc|Number=Plur	1	obj	1:obj|5:nsubj	_
+3	próximos	próximo	ADJ	_	Gender=Masc|Number=Plur	2	amod	2:amod	_
+4	que	que	PRON	_	PronType=Rel	5	nsubj	2:ref	_
+5	relataram	relatar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	2	acl:relcl	2:acl:relcl	_
+6	sintomas	sintoma	NOUN	_	Gender=Masc|Number=Plur	5	obj	5:obj	_
+7	graves	grave	ADJ	_	Number=Plur	6	amod	6:amod	_
+8	como	como	ADP	_	_	9	case	9:case|12:case|14:case	_
+9	queimaduras	queimadura	NOUN	_	Gender=Fem|Number=Plur	6	nmod	6:nmod:como	_
+10	internas	interno	ADJ	_	Gender=Fem|Number=Plur	9	amod	9:amod	SpaceAfter=No
+11	,	,	PUNCT	_	_	12	punct	12:punct	_
+12	câncer	câncer	NOUN	_	Gender=Masc|Number=Sing	9	conj	6:nmod:como|9:conj:e	_
+13	e	e	CCONJ	_	_	14	cc	14:cc	_
+14	problemas	problema	NOUN	_	Gender=Masc|Number=Plur	9	conj	6:nmod:como|9:conj:e	_
+15	neurológicos	neurológico	ADJ	_	Gender=Masc|Number=Plur	14	amod	14:amod	_
+16-17	nos	_	_	_	_	_	_	_	_
+16	em	em	ADP	_	_	18	case	18:case	_
+17	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	18	det	18:det	_
+18	meses	meses	NOUN	_	Gender=Masc|Number=Plur	5	obl	5:obl:em	_
+19	seguintes	seguinte	ADJ	_	Number=Plur	18	amod	18:amod	SpaceAfter=No
+20	.	.	PUNCT	_	_	1	punct	1:punct	_
+
+# sent_id = fakebr:458-9
+# text = Tudo foi abafado.
+1	Tudo	tudo	PRON	_	PronType=Ind	3	nsubj:pass	3:nsubj:pass	_
+2	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	aux:pass	3:aux:pass	_
+3	abafado	abafar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	0:root	SpaceAfter=No
+4	.	.	PUNCT	_	_	3	punct	3:punct	_
+
+# sent_id = fakebr:458-10
+# text = Mais alarmante ainda: fontes dentro do Pentágono confirmam que versões portáteis dessas armas já foram utilizadas em manifestações civis nos Estados Unidos desde 2015, causando danos permanentes em pelo menos 200 pessoas.
+1	Mais	mais	ADV	_	_	2	advmod	2:advmod	_
+2	alarmante	alarmante	ADJ	_	Number=Sing	0	root	0:root	_
+3	ainda	ainda	ADV	_	_	2	advmod	2:advmod	SpaceAfter=No
+4	:	:	PUNCT	_	_	10	punct	10:punct	_
+5	fontes	fonte	NOUN	_	Gender=Fem|Number=Plur	10	nsubj	10:nsubj	_
+6	dentro	dentro	ADV	_	_	5	advmod	5:advmod	_
+7-8	do	_	_	_	_	_	_	_	_
+7	de	de	ADP	_	_	9	case	9:case	_
+8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	9:det	_
+9	Pentágono	Pentágono	PROPN	_	_	6	obl	6:obl:de	_
+10	confirmam	confirmar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	2	parataxis	2:parataxis	_
+11	que	que	SCONJ	_	_	19	mark	19:mark	_
+12	versões	versão	NOUN	_	Gender=Fem|Number=Plur	19	nsubj:pass	19:nsubj:pass	_
+13	portáteis	portátel	ADJ	_	Number=Plur	12	amod	12:amod	_
+14-15	dessas	_	_	_	_	_	_	_	_
+14	de	de	ADP	_	_	16	case	16:case	_
+15	essas	esse	DET	_	Gender=Fem|Number=Plur|PronType=Dem	16	det	16:det	_
+16	armas	arma	NOUN	_	Gender=Fem|Number=Plur	12	nmod	12:nmod:de	_
+17	já	já	ADV	_	_	19	advmod	19:advmod	_
+18	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	19	aux:pass	19:aux:pass	_
+19	utilizadas	utilizar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	10	ccomp	10:ccomp	_
+20	em	em	ADP	_	_	21	case	21:case	_
+21	manifestações	manifestação	NOUN	_	Gender=Fem|Number=Plur	19	obl	19:obl:em	_
+22	civis	civil	ADJ	_	Number=Plur	21	amod	21:amod	_
+23-24	nos	_	_	_	_	_	_	_	_
+23	em	em	ADP	_	_	25	case	25:case	_
+24	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	25	det	25:det	_
+25	Estados	Estados	PROPN	_	_	21	nmod	21:nmod:em	_
+26	Unidos	Unidos	PROPN	_	_	25	flat:name	25:flat:name	_
+27	desde	desde	ADP	_	_	28	case	28:case	_
+28	2015	2015	NUM	_	NumType=Card	19	obl	19:obl:desde	SpaceAfter=No
+29	,	,	PUNCT	_	_	30	punct	30:punct	_
+30	causando	causar	VERB	_	VerbForm=Ger	19	advcl	19:advcl	_
+31	danos	dano	NOUN	_	Gender=Masc|Number=Plur	30	obj	30:obj	_
+32	permanentes	permanentl	ADJ	_	Number=Plur	31	amod	31:amod	_
+33	em	em	ADP	_	_	38	case	38:case	_
+34-35	pelo	_	_	_	_	_	_	_	_
+34	por	por	ADP	_	_	37	advmod	37:advmod	_
+35	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	34	fixed	34:fixed	_
+36	menos	menos	NOUN	_	Gender=Masc|Number=Sing	34	fixed	34:fixed	_
+37	200	200	NUM	_	NumType=Card	38	nummod	38:nummod	_
+38	pessoas	pessoa	NOUN	_	Gender=Fem|Number=Plur	30	obl	30:obl:em	SpaceAfter=No
+39	.	.	PUNCT	_	_	2	punct	2:punct	_
+
+# sent_id = fakebr:458-11
+# text = Os casos foram classificados como "acidentes" ou "problemas de saúde pré-existentes".
+1	Os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	2	det	2:det	_
+2	casos	caso	NOUN	_	Gender=Masc|Number=Plur	4	nsubj:pass	4:nsubj:pass	_
+3	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	4	aux:pass	4:aux:pass	_
+4	classificados	classificar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	0	root	0:root	_
+5	como	como	ADP	_	_	7	case	7:case|11:case	_
+6	"	"	PUNCT	_	_	7	punct	7:punct	SpaceAfter=No
+7	acidentes	acidente	NOUN	_	Gender=Masc|Number=Plur	4	obl	4:obl:como	SpaceAfter=No
+8	"	"	PUNCT	_	_	7	punct	7:punct	_
+9	ou	ou	CCONJ	_	_	11	cc	11:cc	_
+10	"	"	PUNCT	_	_	11	punct	11:punct	SpaceAfter=No
+11	problemas	problema	NOUN	_	Gender=Masc|Number=Plur	7	conj	4:obl:como|7:conj:ou	_
+12	de	de	ADP	_	_	13	case	13:case	_
+13	saúde	saúde	NOUN	_	Gender=Fem|Number=Sing	11	nmod	11:nmod:de	_
+14	pré-existentes	pré-existentes	ADJ	_	Number=Plur	11	amod	11:amod	SpaceAfter=No
+15	"	"	PUNCT	_	_	11	punct	11:punct	SpaceAfter=No
+16	.	.	PUNCT	_	_	4	punct	4:punct	_
+
+# sent_id = fakebr:458-12
+# text = A verdadeira razão para o desenvolvimento dessa arma não tem nada a ver com a Coreia do Norte.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	3:det	_
+2	verdadeira	verdadeiro	ADJ	_	Gender=Fem|Number=Sing	3	amod	3:amod	_
+3	razão	razão	NOUN	_	Number=Sing	11	nsubj	11:nsubj	_
+4	para	para	ADP	_	_	6	case	6:case	_
+5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	6:det	_
+6	desenvolvimento	desenvolvimento	NOUN	_	Gender=Masc|Number=Sing	3	nmod	3:nmod:para	_
+7-8	dessa	_	_	_	_	_	_	_	_
+7	de	de	ADP	_	_	9	case	9:case	_
+8	essa	esse	DET	_	Gender=Fem|Number=Sing|PronType=Dem	9	det	9:det	_
+9	arma	arma	NOUN	_	Gender=Fem|Number=Sing	6	nmod	6:nmod:de	_
+10	não	não	ADV	_	_	11	advmod	11:advmod	_
+11	tem	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+12	nada	nada	PRON	_	Gender=Masc|Number=Sing|PronType=Ind	11	obj	11:obj|14:nsubj	_
+13	a	a	ADP	_	_	14	mark	14:mark	_
+14	ver	ver	VERB	_	VerbForm=Inf	11	xcomp	11:xcomp	_
+15	com	com	ADP	_	_	17	case	17:case	_
+16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	17:det	_
+17	Coreia	Coreia	PROPN	_	_	14	obl	14:obl:com	_
+18-19	do	_	_	_	_	_	_	_	_
+18	de	de	ADP	_	_	20	case	20:case	_
+19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	20:det	_
+20	Norte	Norte	PROPN	_	_	17	flat:name	17:flat:name	SpaceAfter=No
+21	.	.	PUNCT	_	_	11	punct	11:punct	_
+
+# sent_id = fakebr:458-13
+# text = Segundo analistas independentes, o objetivo real é o controle populacional.
+1	Segundo	segundo	ADP	_	_	2	case	2:case	_
+2	analistas	analista	NOUN	_	Number=Plur	10	nmod	10:nmod:segundo	_
+3	independentes	independente	ADJ	_	Number=Plur	2	amod	2:amod	SpaceAfter=No
+4	,	,	PUNCT	_	_	2	punct	2:punct	_
+5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	6:det	_
+6	objetivo	objetivo	NOUN	_	Gender=Masc|Number=Sing	10	nsubj	10:nsubj	_
+7	real	real	ADJ	_	Number=Sing	6	amod	6:amod	_
+8	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
+9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	10:det	_
+10	controle	controle	NOUN	_	Gender=Masc|Number=Sing	0	root	0:root	_
+11	populacional	populacional	ADJ	_	Number=Sing	10	amod	10:amod	SpaceAfter=No
+12	.	.	PUNCT	_	_	10	punct	10:punct	_
+
+# sent_id = fakebr:458-14
+# text = James Fisher, porta-voz oficial do projeto, teria sido flagrado em áudio vazado dizendo:
+1	James	James	PROPN	_	_	12	nsubj:pass	12:nsubj:pass	_
+2	Fisher	Fisher	PROPN	_	_	1	flat:name	1:flat:name	SpaceAfter=No
+3	,	,	PUNCT	_	_	4	punct	4:punct	_
+4	porta-voz	porta-voz	NOUN	_	Number=Sing	1	appos	1:appos	_
+5	oficial	oficial	ADJ	_	Number=Sing	4	amod	4:amod	_
+6-7	do	_	_	_	_	_	_	_	_
+6	de	de	ADP	_	_	8	case	8:case	_
+7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	8:det	_
+8	projeto	projeto	NOUN	_	Gender=Masc|Number=Sing	4	nmod	4:nmod:de	SpaceAfter=No
+9	,	,	PUNCT	_	_	4	punct	4:punct	_
+10	teria	ter	AUX	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	12	aux	12:aux	_
+11	sido	ser	AUX	_	Gender=Masc|Number=Sing|VerbForm=Part	12	aux:pass	12:aux:pass	_
+12	flagrado	flagrar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	0:root	_
+13	em	em	ADP	_	_	14	case	14:case	_
+14	áudio	áudio	NOUN	_	Gender=Masc|Number=Sing	12	obl	12:obl:em	_
+15	vazado	vazar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	14	acl	14:acl	_
+16	dizendo	dizer	VERB	_	VerbForm=Ger	12	advcl	12:advcl	SpaceAfter=No
+17	:	:	PUNCT	_	_	12	punct	12:punct	_
+
+# sent_id = fakebr:458-15
+# text = Esta é a arma perfeita para neutralizar protestos sem deixar evidências físicas.
+1	Esta	este	PRON	_	Gender=Fem|Number=Sing|PronType=Dem	4	nsubj	4:nsubj	_
+2	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
+3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	4:det	_
+4	arma	arma	NOUN	_	Gender=Fem|Number=Sing	0	root	0:root	_
+5	perfeita	perfeito	ADJ	_	Gender=Fem|Number=Sing|VerbForm=Part	4	amod	4:amod	_
+6	para	para	ADP	_	_	7	mark	7:mark	_
+7	neutralizar	neutralizar	VERB	_	VerbForm=Inf	4	acl	4:acl:para	_
+8	protestos	protesto	NOUN	_	Gender=Masc|Number=Plur	7	obj	7:obj	_
+9	sem	sem	ADP	_	_	10	mark	10:mark	_
+10	deixar	deixar	VERB	_	VerbForm=Inf	7	advcl	7:advcl:sem	_
+11	evidências	evidência	NOUN	_	Gender=Fem|Number=Plur	10	obj	10:obj	_
+12	físicas	físico	ADJ	_	Gender=Fem|Number=Plur	11	amod	11:amod	SpaceAfter=No
+13	.	.	PUNCT	_	_	4	punct	4:punct	_
+
+# sent_id = fakebr:458-16
+# text = Especialistas da ONU já manifestaram preocupação.
+1	Especialistas	especialista	NOUN	_	Number=Plur	6	nsubj	6:nsubj	_
+2-3	da	_	_	_	_	_	_	_	_
+2	de	de	ADP	_	_	4	case	4:case	_
+3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	4:det	_
+4	ONU	ONU	PROPN	_	_	1	nmod	1:nmod:de	_
+5	já	já	ADV	_	_	6	advmod	6:advmod	_
+6	manifestaram	manifestar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+7	preocupação	preocupação	NOUN	_	Gender=Fem|Number=Sing	6	obj	6:obj	SpaceAfter=No
+8	.	.	PUNCT	_	_	6	punct	6:punct	_
+
+# sent_id = fakebr:458-17
+# text = A Dra. Maria Santos, da Comissão Internacional de Direitos Humanos, declarou:
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	2:det	_
+2	Dra.	DrA.	NOUN	_	_	14	nsubj	14:nsubj	_
+3	Maria	Maria	PROPN	_	_	2	flat:name	2:flat:name	_
+4	Santos	Santos	PROPN	_	_	2	flat:name	2:flat:name	SpaceAfter=No
+5	,	,	PUNCT	_	_	8	punct	8:punct	_
+6-7	da	_	_	_	_	_	_	_	_
+6	de	de	ADP	_	_	8	case	8:case	_
+7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	8:det	_
+8	Comissão	Comissão	PROPN	_	_	2	nmod	2:nmod:de	_
+9	Internacional	Internacional	PROPN	_	_	8	flat:name	8:flat:name	_
+10	de	de	ADP	_	_	11	case	11:case	_
+11	Direitos	Direitos	PROPN	_	_	8	flat:name	8:flat:name	_
+12	Humanos	Humanos	PROPN	_	_	8	flat:name	8:flat:name	SpaceAfter=No
+13	,	,	PUNCT	_	_	8	punct	8:punct	_
+14	declarou	declarar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	SpaceAfter=No
+15	:	:	PUNCT	_	_	14	punct	14:punct	_
+
+# sent_id = fakebr:458-18
+# text = Se essas alegações forem verdadeiras, estamos diante de uma violação massiva de tratados internacionais e crimes contra a humanidade.
+1	Se	se	SCONJ	_	_	5	mark	5:mark	_
+2	essas	esse	DET	_	Gender=Fem|Number=Plur|PronType=Dem	3	det	3:det	_
+3	alegações	alegação	NOUN	_	Gender=Fem|Number=Plur	5	nsubj	5:nsubj	_
+4	forem	ser	AUX	_	Mood=Sub|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin	5	cop	5:cop	_
+5	verdadeiras	verdadeiro	ADJ	_	Gender=Fem|Number=Plur	8	advcl	8:advcl:se	SpaceAfter=No
+6	,	,	PUNCT	_	_	5	punct	5:punct	_
+7	estamos	estar	AUX	_	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
+8	diante	diante	ADV	_	_	0	root	0:root	_
+9	de	de	ADP	_	_	11	case	11:case	_
+10	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	11	det	11:det	_
+11	violação	violação	NOUN	_	Gender=Fem|Number=Sing	8	obl	8:obl:de	_
+12	massiva	massivo	ADJ	_	Gender=Fem|Number=Sing	11	amod	11:amod	_
+13	de	de	ADP	_	_	14	case	14:case|17:case	_
+14	tratados	tratado	NOUN	_	Gender=Masc|Number=Plur	11	nmod	11:nmod:de	_
+15	internacionais	internacional	ADJ	_	Number=Plur	14	amod	14:amod	_
+16	e	e	CCONJ	_	_	17	cc	17:cc	_
+17	crimes	crime	NOUN	_	Gender=Masc|Number=Plur	14	conj	11:nmod:de|14:conj:e	_
+18	contra	contra	ADP	_	_	20	case	20:case	_
+19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	20:det	_
+20	humanidade	humanidade	NOUN	_	Gender=Fem|Number=Sing	17	nmod	17:nmod:contra	SpaceAfter=No
+21	.	.	PUNCT	_	_	8	punct	8:punct	_
+
+# sent_id = fakebr:458-19
+# text = O governo americano se recusa a comentar.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	2:det	_
+2	governo	governo	NOUN	_	Gender=Masc|Number=Sing	5	nsubj	5:nsubj|7:nsubj	_
+3	americano	americano	ADJ	_	Gender=Masc|Number=Sing	2	amod	2:amod	_
+4	se	se	PRON	_	Case=Nom|Person=3|PronType=Prs	5	expl	5:expl	_
+5	recusa	recusar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+6	a	a	ADP	_	_	7	mark	7:mark	_
+7	comentar	comentar	VERB	_	VerbForm=Inf	5	xcomp	5:xcomp	SpaceAfter=No
+8	.	.	PUNCT	_	_	5	punct	5:punct	_
+
+# sent_id = fakebr:458-20
+# text = O que mais eles estão escondendo de você?
+1	O	o	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Dem	6	obj	6:obj	_
+2	que	que	PRON	_	PronType=Int	1	fixed	1:fixed	_
+3	mais	mais	ADV	_	_	1	advmod	1:advmod	_
+4	eles	ele	PRON	_	Case=Nom|Gender=Masc|Number=Plur|Person=3|PronType=Prs	6	nsubj	6:nsubj	_
+5	estão	estar	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	aux	6:aux	_
+6	escondendo	esconder	VERB	_	VerbForm=Ger	0	root	0:root	_
+7	de	de	ADP	_	_	8	case	8:case	_
+8	você	você	PRON	_	Case=Nom|Number=Sing|Person=2|PronType=Prs	6	obl	6:obl:de	SpaceAfter=No
+9	?	?	PUNCT	_	_	6	punct	6:punct	_
+
+# sent_id = fakebr:458-21
+# text = COMPARTILHE antes que removam esta notícia!
+1	COMPARTILHE	compartilhar	VERB	_	Mood=Imp|Number=Sing|Person=3|VerbForm=Fin	0	root	0:root	_
+2	antes	antes	ADV	_	_	4	mark	4:mark	_
+3	que	que	SCONJ	_	_	2	fixed	2:fixed	_
+4	removam	remover	VERB	_	Mood=Sub|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	1	ccomp	1:ccomp	_
+5	esta	este	DET	_	Gender=Fem|Number=Sing|PronType=Dem	6	det	6:det	_
+6	notícia	notícia	NOUN	_	Gender=Fem|Number=Sing	4	obj	4:obj	SpaceAfter=No
+7	!	!	PUNCT	_	_	1	punct	1:punct	_
+
