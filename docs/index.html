@@ -171,7 +171,7 @@
 <footer>
   <div class="wrap">
     <p><strong>Todo o texto marcado como “fake news sintética” foi gerado por modelo de linguagem para pesquisa em detecção de desinformação.</strong> Não é notícia, não foi publicado como tal e não deve ser reutilizado fora deste contexto.</p>
-    <p>As notícias verdadeiras vêm dos corpora <a href="https://github.com/roneysco/Fake.br-Corpus">Fake.br</a> e <a href="https://github.com/jpchav98/FakeTrue.Br">FakeTrueBR</a>; o texto de origem não é republicado aqui, apenas o link para a matéria. Cada notícia entrou inteira no prompt, e o modelo foi instruído a modificá-la. Amostra de 10 notícias por corpus, sorteadas com semente 42; sem temperatura nem teto de tokens definidos, como no script original. Procedência de cada lote em <code>*.meta.json</code> no repositório.</p>
+    <p>As notícias verdadeiras vêm dos corpora <a href="https://github.com/roneysco/Fake.br-Corpus">Fake.br</a> e <a href="https://github.com/jpchav98/FakeTrue.Br">FakeTrueBR</a>; o texto de origem não é republicado aqui, apenas o link para a matéria. Cada notícia entrou inteira no prompt, e o modelo foi instruído a modificá-la. Amostra de 10 notícias por corpus, sorteadas com semente 42, e um gerador por vez no filtro <em>Modelo</em>: cada notícia de origem aparece uma vez por modelo, sempre com o mesmo prompt e sem temperatura nem teto de tokens definidos, como no script original. Procedência de cada lote em <code>*.meta.json</code> no repositório.</p>
   </div>
 </footer>
 
@@ -192,6 +192,36 @@
 
   function shortModel(m) {
     return m ? m.split("/").pop() : "—";
+  }
+
+  // O painel do topo acompanha os filtros: com mais de um gerador publicado,
+  // números fixos do build descreveriam um recorte que a lista não mostra.
+  // As medianas humanas vêm do build — são do corpus de origem, não da seleção.
+  function median(values) {
+    if (!values.length) return 0;
+    var v = values.slice().sort(function (a, b) { return a - b; });
+    var half = Math.floor(v.length / 2);
+    return Math.round(v.length % 2 ? v[half] : (v[half - 1] + v[half]) / 2);
+  }
+
+  function statsFor(items) {
+    var by_source = {};
+    Object.keys(data.stats.by_source).forEach(function (key) {
+      var mine = items.filter(function (i) { return i.source === key; });
+      by_source[key] = {
+        label: data.stats.by_source[key].label,
+        items: mine.length,
+        median_words: median(mine
+          .filter(function (i) { return i.fake_text; })
+          .map(function (i) { return i.fake_text.split(/\s+/).length; })),
+        human_median_words: data.stats.by_source[key].human_median_words
+      };
+    });
+    var models = [];
+    items.forEach(function (i) {
+      if (i.fake_model && models.indexOf(i.fake_model) === -1) models.push(i.fake_model);
+    });
+    return { items: items.length, models: models.sort(), by_source: by_source };
   }
 
   function renderStats(s) {
@@ -316,6 +346,7 @@
       text: document.getElementById("f-text").value.trim().toLowerCase()
     };
     var shown = data.items.filter(function (i) { return matches(i, f); });
+    renderStats(statsFor(shown));
     var list = document.getElementById("list");
     list.textContent = "";
 
@@ -335,7 +366,6 @@
     data = payload;
     document.getElementById("built").textContent =
       "atualizado em " + (data.built_at || "").replace("T", " ").slice(0, 16);
-    renderStats(data.stats);
     fillSelect("f-model", data.stats.models, shortModel);
     fillSelect("f-source", Object.keys(data.stats.by_source), function (s) {
       return LABEL[s] || s;

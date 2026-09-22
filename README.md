@@ -338,19 +338,32 @@ in `resources/eud/`.
 ### Page (GitHub Pages)
 
 `docs/` is published at <https://pedrest15.github.io/expanded_fake_news_corpus/> and shows
-**the paper replication**: `index.html` browses the 20 synthetic fake news
-(only the link and metadata of the source article, never its text) and
-`analysis.html` shows the linguistic characterisation. The data comes from two
-scripts; run them after generating and analysing:
+**the paper replication**: `index.html` browses the synthetic fake news (only
+the link and metadata of the source article, never its text) and
+`analysis.html` shows the linguistic characterisation. Both pages carry the
+generators that produced the whole sample with no refusal — currently
+gpt-4.1-mini and Claude Sonnet 4.5 — one at a time: a *Modelo* filter on the
+corpus page, a *Gerador* selector on the characterisation page. The human side
+is the same 20 documents everywhere, so the two readings are comparable.
+
+The data comes from two scripts; run them after generating and analysing:
 
 ```bash
-uv run python scripts/build_site.py --model openai/gpt-4.1-mini-2025-04-14
-uv run python scripts/build_analysis_data.py   # reads data/analysis/paper_replication/
+uv run python scripts/build_site.py \
+    --model openai/gpt-4.1-mini-2025-04-14 \
+    --model anthropic/claude-sonnet-4-5-20250929
+uv run python scripts/build_analysis_data.py   # generators in DEFAULT_GENERATORS
 ```
 
 `build_site.py` discards refusals (records without the paper's tags), and
-`--model` leaves the GPT-5.1 folder out. The headline-pipeline data (round 1)
-is no longer on the page; it remains in `corpus/` and `data/analysis/`.
+`--model` leaves the GPT-5.1 and Claude Sonnet 5 folders out — both refused
+most of the sample, so what they did produce is self-selected. A new generator
+is added to the corpus page with one more `--model`, and to the
+characterisation page with one entry in `DEFAULT_GENERATORS` in
+[build_analysis_data.py](scripts/build_analysis_data.py) (model string and the
+folder of its tables) or a `--generator modelo=pasta` on the command line. The
+headline-pipeline data (round 1) is no longer on the page; it remains in
+`corpus/` and `data/analysis/`.
 
 ### Output
 

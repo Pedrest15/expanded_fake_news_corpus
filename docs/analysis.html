@@ -61,6 +61,13 @@
   .nav{display:flex; gap:14px; align-items:center; font-size:13px}
   .nav a{color:var(--accent); text-decoration:none; font-weight:600}
   .nav a:hover{text-decoration:underline}
+  label.pick{display:flex; align-items:center; gap:6px; font-size:12px; color:var(--ink-3)}
+  label.pick span{font-weight:600; letter-spacing:.06em; text-transform:uppercase; font-size:10.5px}
+  label.pick select{
+    font-family:var(--sans); font-size:13px; color:var(--ink);
+    background:var(--ground); border:1px solid var(--rule); border-radius:2px;
+    padding:5px 8px;
+  }
 
   /* ---------- painel de números ---------- */
   .stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(148px,1fr)); gap:1px;
@@ -180,8 +187,9 @@
       <h1>Caracterização do corpus</h1>
       <p>O que separa uma fake news escrita por humano de uma gerada por modelo de linguagem, medido sobre a replicação do método de Silva et al.: a notícia verdadeira inteira entra, e o modelo a transforma em fake news.</p>
     </div>
+    <label class="pick"><span>Gerador</span><select id="f-generator"></select></label>
     <div class="nav"><a href="./index.html">← navegar no corpus</a></div>
-    <div class="built" id="built"></div>
+    <div class="built"><span id="built"></span> · <span id="generator-note"></span></div>
   </div>
   <div class="wrap"><div class="stats" id="stats"></div></div>
 </header>
@@ -280,8 +288,8 @@
 
 <footer>
   <div class="wrap">
-    <p>Os dois lados comparados são <strong>fake news</strong>: de um lado as escritas por humanos nos corpora de origem, do outro as geradas por modelo a partir da notícia verdadeira correspondente, inteira, com o prompt de Silva et al. reproduzido sem adaptação. O pareamento é por notícia, então a diferença medida é de autoria, não de assunto.</p>
-    <p>Tabelas completas em <code>data/analysis/paper_replication/</code>; os módulos que as produzem, em <code>src/expanded_fake_news_corpus/analysis/</code>; o registro das execuções, em <code>corpus/paper_replication/NOTES.md</code>. Dicionário LIWC sob licença própria, não redistribuído — veja <a href="https://www.liwc.app/">liwc.app</a>.</p>
+    <p>Os dois lados comparados são <strong>fake news</strong>: de um lado as escritas por humanos nos corpora de origem, do outro as geradas por modelo a partir da notícia verdadeira correspondente, inteira, com o prompt de Silva et al. reproduzido sem adaptação. O pareamento é por notícia, então a diferença medida é de autoria, não de assunto. O seletor <em>Gerador</em> troca o lado máquina entre os modelos que produziram a amostra inteira, sem recusa: o lado humano é sempre o mesmo, então as duas leituras são comparáveis entre si.</p>
+    <p>Tabelas completas em <code>data/analysis/paper_replication/</code>, uma subpasta por gerador além do primeiro; os módulos que as produzem, em <code>src/expanded_fake_news_corpus/analysis/</code>; o registro das execuções, em <code>corpus/paper_replication/NOTES.md</code>. Dicionário LIWC sob licença própria, não redistribuído — veja <a href="https://www.liwc.app/">liwc.app</a>.</p>
   </div>
 </footer>
 
@@ -290,7 +298,8 @@
   "use strict";
 
   var TOP_LIWC = 16;
-  var data = null;
+  var payload = null;   // o arquivo inteiro, com um bloco por gerador
+  var data = null;      // o bloco do gerador selecionado
 
   function el(tag, cls, text) {
     var n = document.createElement(tag);
@@ -555,16 +564,49 @@
     });
   }
 
-  function start(payload) {
-    data = payload;
-    document.getElementById("built").textContent =
-      "atualizado em " + (data.built_at || "").replace("T", " ").slice(0, 16);
+  // O lado humano é o mesmo em todos os geradores (as mesmas 20 fake news
+  // humanas); trocar de gerador no seletor troca só o lado máquina.
+  function renderGenerator() {
     renderStats();
     renderSyllables();
     renderLexical();
     renderLiwc();
     renderSage();
     renderZipf();
+  }
+
+  function selectGenerator(index) {
+    data = payload.generators[index];
+    if (!data) return;
+    document.getElementById("generator-note").textContent =
+      "lado máquina: " + data.label;
+    renderGenerator();
+  }
+
+  function fillGenerators() {
+    var sel = document.getElementById("f-generator");
+    sel.textContent = "";
+    payload.generators.forEach(function (g, i) {
+      var o = el("option", null, g.label);
+      o.value = String(i);
+      sel.appendChild(o);
+    });
+    sel.addEventListener("change", function () {
+      selectGenerator(Number(sel.value));
+    });
+    sel.disabled = payload.generators.length < 2;
+  }
+
+  function start(loaded) {
+    payload = loaded;
+    if (!payload.generators || !payload.generators.length) {
+      fail("analysis.json sem geradores — rode scripts/build_analysis_data.py");
+      return;
+    }
+    document.getElementById("built").textContent =
+      "atualizado em " + (payload.built_at || "").replace("T", " ").slice(0, 16);
+    fillGenerators();
+    selectGenerator(0);
     wireTooltip();
   }
 
