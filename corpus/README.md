@@ -142,9 +142,11 @@ records carry `synthetic_text` and `changes` as in the paper's tags, plus
 `source_id`, `source_chars` (length of the article sent) and `raw_response`.
 
 `paper_replication/NOTES.md` is the run log. It records that GPT-5.1
-(`gpt-5.1-2025-11-13`) refused 13 of the 20 articles under this prompt, which
-is why the replication uses gpt-4.1-mini; the GPT-5.1 output is kept as
-evidence in its own model folder.
+(`gpt-5.1-2025-11-13`) refused 13 of the 20 articles under this prompt and
+Claude Sonnet 5 (`anthropic/claude-sonnet-5`) refused 10, which is why the
+replication uses gpt-4.1-mini; both outputs are kept as evidence in their own
+model folders. Claude Sonnet 4.5 (`anthropic/claude-sonnet-4-5-20250929`)
+produced all 20 and is the second full sample.
 
 ## Language
 

@@ -1,0 +1,19 @@
+{
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "model_string": "anthropic/claude-sonnet-5",
+  "sampling": {},
+  "sampling_dropped": [],
+  "max_tokens": null,
+  "max_input_chars": null,
+  "stage": "paper",
+  "run_name": null,
+  "strategy": null,
+  "genre": null,
+  "prompt_sha256": "795f6b38a9560e9c",
+  "input": "true-corpus/clean/paper_replication/FakeTrueBr_true.csv",
+  "output": "corpus/paper_replication/anthropic/claude-sonnet-5/FakeTrueBr_true.jsonl",
+  "processed": 10,
+  "failures": 0,
+  "finished_at": "2026-09-15T14:59:37-03:00"
+}
