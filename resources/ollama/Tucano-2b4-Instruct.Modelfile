@@ -1,0 +1,28 @@
+# Tucano-2b4-Instruct para o Ollama (TucanoBR, arquitetura Llama-2, 2,4B).
+#
+# Importar com, a partir desta pasta e com o .gguf ao lado:
+#
+#     ollama create tucano-2b4-instruct -f Tucano-2b4-Instruct.Modelfile
+#
+# O template reproduz o `chat_template` do tokenizer_config.json do modelo:
+# o turno do usuário vai entre <instruction> e </instruction>, e a resposta
+# termina no </s>.
+#
+# DESVIO A REGISTRAR: o template oficial aceita só os papéis `user` e
+# `assistant` — mandar um `system` levanta exceção. O prompt do artigo tem uma
+# persona de sistema ("Você é um especialista em fake news."), então aqui ela é
+# dobrada para dentro da instrução, antes do texto do usuário. É a única forma
+# de entregar as duas partes a este modelo.
+#
+# CONTEXTO: o `model_max_length` do Tucano é 4096, metade do que usamos com os
+# demais. Rode com `--num-ctx 4096`, ou o Ollama pedirá posições que o modelo
+# não foi treinado a representar.
+
+FROM ./Tucano-2b4-Instruct.gguf
+
+TEMPLATE """{{ if .System }}<instruction>{{ .System }}
+
+{{ .Prompt }}</instruction>{{ else }}<instruction>{{ .Prompt }}</instruction>{{ end }}"""
+
+PARAMETER stop "</s>"
+PARAMETER num_ctx 4096

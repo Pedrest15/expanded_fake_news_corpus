@@ -21,8 +21,10 @@ from __future__ import annotations
 
 import asyncio
 import re
+import unicodedata
 from collections.abc import AsyncIterator, Iterable, Iterator
 from dataclasses import replace
+from difflib import SequenceMatcher
 from typing import Annotated, Any
 
 from langchain_core.language_models import BaseChatModel
@@ -89,9 +91,86 @@ _CHANGES_RE = re.compile(
 #: tokens. Sem este resgate, a amostra inteira seria descartada.
 _SYNTHETIC_OPEN_RE = re.compile(r"<\s*syntheticText\s*>(.*)", re.IGNORECASE | re.DOTALL)
 
+#: Bloco de raciocínio dos modelos de *reasoning* (Qwen3, distills do R1, QwQ).
+#: Vem no corpo da resposta e não faz parte do texto pedido. Fechado ou não: o
+#: modelo que estoura o orçamento pensando deixa o ``<think>`` aberto.
+_THINK_RE = re.compile(
+    r"<\s*(think|thinking|reasoning)\s*>.*?(?:<\s*/\s*\1\s*>|\Z)",
+    re.IGNORECASE | re.DOTALL,
+)
+
+#: Qualquer coisa com cara de tag, para distinguir "recusou" de "errou o
+#: formato": uma recusa é texto corrido, sem marcação nenhuma.
+_ANY_TAG_RE = re.compile(r"<\s*/?\s*([A-Za-z][A-Za-z0-9_ -]{2,30})\s*>")
+
+#: Nomes canônicos das seções do artigo, já normalizados.
+_CANONICAL_TAGS = {"synthetictext": "syntheticText", "changes": "changes"}
+
+#: Quão parecido um nome de tag precisa ser do canônico para ser aceito.
+#: 0.8 aceita ``sinteticText`` e ``synthetic_text`` e recusa ``changes`` vs
+#: ``syntheticText``; medido em :func:`_closest_canonical`.
+_TAG_SIMILARITY = 0.8
+
+
+def _normalize_tag(name: str) -> str:
+    """Reduz um nome de tag a letras minúsculas sem acento nem separador."""
+    decomposed = unicodedata.normalize("NFKD", name)
+    return "".join(c for c in decomposed.casefold() if c.isalpha())
+
+
+def _closest_canonical(name: str) -> str | None:
+    """Nome canônico mais parecido com ``name``, ou None se nenhum servir."""
+    normalized = _normalize_tag(name)
+    if not normalized:
+        return None
+    if normalized in _CANONICAL_TAGS:
+        return _CANONICAL_TAGS[normalized]
+
+    best, best_ratio = None, 0.0
+    for candidate, canonical in _CANONICAL_TAGS.items():
+        ratio = SequenceMatcher(None, normalized, candidate).ratio()
+        if ratio > best_ratio:
+            best, best_ratio = canonical, ratio
+    return best if best_ratio >= _TAG_SIMILARITY else None
+
+
+def canonicalize_tags(raw: str) -> tuple[str, list[str]]:
+    """Corrige a grafia das tags das seções, quando dá para reconhecê-las.
+
+    Modelos abertos erram o nome — ``<sinteticText>`` foi o primeiro caso, num
+    Qwen. Sem isto a resposta cai no ramo "sem tags", que é como uma **recusa**
+    fica registrada; o texto gerado seria contado como recusa do modelo.
+
+    Args:
+        raw: Resposta bruta, já sem o bloco de raciocínio
+
+    Returns:
+        A resposta com as tags reescritas na grafia canônica, e um aviso por
+        grafia corrigida
+    """
+    notes: list[str] = []
+
+    def replace(match: re.Match[str]) -> str:
+        name = match.group(1)
+        canonical = _closest_canonical(name)
+        if canonical is None or canonical == name:
+            return match.group(0)
+        closing = "/" if match.group(0).lstrip("< \t").startswith("/") else ""
+        note = f"misspelled tag <{name}> read as <{canonical}>"
+        if note not in notes:
+            notes.append(note)
+        return f"<{closing}{canonical}>"
+
+    return _ANY_TAG_RE.sub(replace, raw), notes
+
 
 def parse_response(raw: str) -> tuple[str, str, list[str]]:
     """Extrai ``syntheticText`` e ``changes`` da resposta em texto livre.
+
+    Antes de procurar as seções, tira o bloco de raciocínio dos modelos de
+    *reasoning* e conserta a grafia das tags. As duas coisas, sem tratamento,
+    mandam a resposta para o ramo "sem tags", que é como as **recusas** são
+    registradas — e a taxa de recusa é o número que comparamos entre geradores.
 
     Args:
         raw: Resposta bruta do modelo.
@@ -102,6 +181,14 @@ def parse_response(raw: str) -> tuple[str, str, list[str]]:
     warnings: list[str] = []
     text = ""
 
+    without_think, removed = _THINK_RE.subn("", raw)
+    if removed:
+        raw = without_think.strip()
+        warnings.append("reasoning block removed before parsing")
+
+    raw, notes = canonicalize_tags(raw)
+    warnings.extend(notes)
+
     if (m := _SYNTHETIC_RE.search(raw)) is not None:
         text = m.group(1).strip()
     elif (m := _SYNTHETIC_OPEN_RE.search(raw)) is not None:
@@ -109,6 +196,11 @@ def parse_response(raw: str) -> tuple[str, str, list[str]]:
         # Se veio changes depois, corta ali para não misturar as seções.
         text = re.split(r"<\s*changes\s*>", text, flags=re.IGNORECASE)[0].strip()
         warnings.append("unclosed <syntheticText> tag")
+    elif _ANY_TAG_RE.search(raw) is not None:
+        # Tem marcação, mas nenhuma que saibamos ler: é erro de formato, não
+        # recusa. O aviso precisa ser outro para os dois não se confundirem.
+        text = raw.strip()
+        warnings.append("unrecognised tags; whole text used")
     else:
         text = raw.strip()
         warnings.append("response without format tags; whole text used")

@@ -51,8 +51,10 @@ from expanded_fake_news_corpus.agents.headline import (
 )
 from expanded_fake_news_corpus.agents.paper_replication import PaperReplicationWriter
 from expanded_fake_news_corpus.config import (
+    OLLAMA_DEFAULT_NUM_CTX,
     ConfigError,
     LLMSettings,
+    fill_required_temperature,
     model_path,
     resolve_sampling,
     split_model,
@@ -106,6 +108,25 @@ def _add_sampling_args(parser: argparse.ArgumentParser) -> None:
     )
     parser.add_argument(
         "--seed", type=int, help="Semente. A Anthropic não suporta; lá é descartada."
+    )
+    parser.add_argument(
+        "--num-ctx",
+        type=int,
+        help=(
+            "Janela de contexto do Ollama. Sem a opção, "
+            f"{OLLAMA_DEFAULT_NUM_CTX}; o padrão do servidor cortaria os "
+            "artigos longos em silêncio. Ignorado pelos outros provedores."
+        ),
+    )
+    parser.add_argument(
+        "--timeout",
+        type=float,
+        help=(
+            "Tempo limite por chamada, em segundos (padrão: FAKEGEN_TIMEOUT). "
+            "O limite é conferido depois da resposta: estourá-lo descarta uma "
+            "geração já feita e não tenta de novo. Modelo grande e local pede "
+            "folga."
+        ),
     )
 
 
@@ -376,6 +397,8 @@ def _settings_for(args: argparse.Namespace, model: str | None) -> LLMSettings:
         top_k=args.top_k,
         seed=args.seed,
         max_tokens=getattr(args, "max_tokens", None),
+        num_ctx=getattr(args, "num_ctx", None),
+        timeout=getattr(args, "timeout", None),
     )
 
 
@@ -412,6 +435,8 @@ def _write_meta(
         "sampling": applied,
         "sampling_dropped": dropped,
         "max_tokens": settings.max_tokens,
+        "num_ctx": settings.num_ctx if provider == "ollama" else None,
+        "timeout": settings.timeout,
         "max_input_chars": getattr(args, "max_input_chars", None) or None,
         "stage": args.command,
         "run_name": args.run_name,
@@ -722,10 +747,12 @@ def _run_paper(args: argparse.Namespace) -> int:
         # geração usou os padrões do provedor. Aqui só vai o que for pedido na
         # linha de comando — nem o padrão do projeto (temperatura 0) nem o
         # FAKEGEN_TEMPERATURE do ambiente entram.
-        settings = replace(
-            _settings_for(args, model),
-            temperature=args.temperature,
-            max_tokens=args.max_tokens,
+        settings = fill_required_temperature(
+            replace(
+                _settings_for(args, model),
+                temperature=args.temperature,
+                max_tokens=args.max_tokens,
+            )
         )
         _warn_dropped(settings, quiet=args.quiet)
         writer = PaperReplicationWriter(settings=settings)

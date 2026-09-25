@@ -7,6 +7,7 @@ resolvida a partir da variável de ambiente do provedor correspondente.
 
 from __future__ import annotations
 
+import logging
 import os
 import re
 from dataclasses import dataclass, replace
@@ -15,6 +16,8 @@ from typing import Any
 from dotenv import load_dotenv
 from langchain_core.language_models import BaseChatModel
 from langgraphlib import get_model
+
+logger = logging.getLogger(__name__)
 
 DEFAULT_MODEL = "ollama/llama3.1"
 
@@ -46,6 +49,26 @@ _GROQ_VIA_MODEL_KWARGS = frozenset({"top_p", "seed"})
 
 #: Para provedores fora da lista, só o que é universal.
 DEFAULT_SAMPLING_SUPPORT = frozenset({"temperature", "top_p"})
+
+#: Temperatura padrão da API do provedor, para os casos em que o cliente
+#: LangChain não consegue *omitir* o parâmetro.
+#:
+#: ``ChatGroq.temperature`` é ``float`` (não aceita ``None``) com padrão 0.7, e
+#: ``_default_params`` sempre a envia — não existe "deixar o provedor decidir".
+#: Como a API da Groq usa 1.0 quando o campo não vem, mandar 1.0 explicitamente
+#: é o que reproduz a omissão, e é o que as rodadas de OpenAI e Anthropic (que
+#: também têm 1.0 de padrão) fizeram ao não enviar nada.
+PROVIDER_DEFAULT_TEMPERATURE: dict[str, float] = {"groq": 1.0}
+
+#: Janela de contexto usada com o Ollama quando nada é pedido.
+#:
+#: O ``ChatOllama`` não envia ``num_ctx`` por padrão, e o servidor aplica o
+#: padrão do modelo — historicamente 2048, hoje em geral 4096. O prompt do
+#: artigo leva a notícia verdadeira inteira: o maior do nosso recorte dá ~4.800
+#: tokens **só de entrada**, e o excedente seria cortado em silêncio, sem erro
+#: nenhum e com um texto de saída de aparência normal. 8192 cobre a maior
+#: entrada mais a resposta.
+OLLAMA_DEFAULT_NUM_CTX = 8192
 
 #: Modelos da Anthropic que não aceitam parâmetro algum de amostragem: a
 #: partir de Opus 4.7 e da geração 5 (Sonnet 5, Opus 5, Fable 5) a API rejeita
@@ -124,6 +147,8 @@ class LLMSettings:
     top_k: int | None = None
     seed: int | None = None
     max_tokens: int | None = None
+    #: Só o Ollama usa: tamanho da janela de contexto (``num_ctx``).
+    num_ctx: int | None = None
     api_key: str | None = None
     base_url: str | None = None
     timeout: float | None = 120.0
@@ -140,7 +165,8 @@ class LLMSettings:
 
         Variáveis reconhecidas: ``FAKEGEN_MODEL``, ``FAKEGEN_TEMPERATURE``,
         ``FAKEGEN_TOP_P``, ``FAKEGEN_TOP_K``, ``FAKEGEN_SEED``,
-        ``FAKEGEN_MAX_TOKENS``, ``FAKEGEN_TIMEOUT``, ``FAKEGEN_MAX_RETRIES``,
+        ``FAKEGEN_MAX_TOKENS``, ``FAKEGEN_NUM_CTX``, ``FAKEGEN_TIMEOUT``,
+        ``FAKEGEN_MAX_RETRIES``,
         ``OLLAMA_BASE_URL``, ``OPENAI_API_KEY``, ``ANTHROPIC_API_KEY``.
 
         Args:
@@ -156,6 +182,7 @@ class LLMSettings:
             top_k=_env_int("FAKEGEN_TOP_K", None),
             seed=_env_int("FAKEGEN_SEED", None),
             max_tokens=_env_int("FAKEGEN_MAX_TOKENS", None),
+            num_ctx=_env_int("FAKEGEN_NUM_CTX", None),
             base_url=os.getenv("OLLAMA_BASE_URL") or None,
             timeout=_env_float("FAKEGEN_TIMEOUT", 120.0),
             max_retries=_env_int("FAKEGEN_MAX_RETRIES", 2) or 0,
@@ -193,6 +220,31 @@ def resolve_api_key(provider: str) -> str:
             "Set it in the environment or in a .env file."
         )
     return key
+
+
+def fill_required_temperature(settings: LLMSettings) -> LLMSettings:
+    """Preenche a temperatura quando o provedor não permite omiti-la.
+
+    Sem isso, "não enviar temperatura" vira ``None`` no construtor do
+    ``ChatGroq``, que exige ``float`` e quebra a execução inteira. Devolve as
+    configurações inalteradas para os provedores que aceitam a omissão.
+
+    Args:
+        settings: Configuração do LLM
+
+    Returns:
+        A mesma configuração, ou uma cópia com a temperatura padrão do provedor
+    """
+    if settings.temperature is not None:
+        return settings
+    default = PROVIDER_DEFAULT_TEMPERATURE.get(settings.provider)
+    if default is None:
+        return settings
+    logger.info(
+        f"{settings.model}: '{settings.provider}' não permite omitir a "
+        f"temperatura; enviando o padrão da API ({default})."
+    )
+    return replace(settings, temperature=default)
 
 
 def resolve_sampling(settings: LLMSettings) -> tuple[dict[str, Any], list[str]]:
@@ -245,6 +297,7 @@ def build_llm(settings: LLMSettings | None = None, **overrides: Any) -> BaseChat
         settings = replace(
             settings, **{k: v for k, v in overrides.items() if v is not None}
         )
+    settings = fill_required_temperature(settings)
 
     api_key = settings.api_key
     if api_key is None:
@@ -262,6 +315,7 @@ def build_llm(settings: LLMSettings | None = None, **overrides: Any) -> BaseChat
         if max_tokens:
             extra["num_predict"] = max_tokens
             max_tokens = None
+        extra["num_ctx"] = settings.num_ctx or OLLAMA_DEFAULT_NUM_CTX
     elif settings.provider == "groq":
         via_kwargs = {k: extra.pop(k) for k in _GROQ_VIA_MODEL_KWARGS if k in extra}
         if via_kwargs:
