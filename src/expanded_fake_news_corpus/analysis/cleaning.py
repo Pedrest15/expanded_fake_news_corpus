@@ -1,4 +1,7 @@
-"""Limpeza do Fake.br humano, como no trabalho anterior (``adapt_fake.py``).
+"""Limpezas aplicadas antes da análise, sem tocar no corpus gravado.
+
+Duas, independentes: as regras do Fake.br humano (``adapt_fake.py`` do
+trabalho anterior) e a remoção de marcação Markdown do lado máquina.
 
 Os ``.txt`` do Fake.br trazem lixo de coleta: caracteres fora do teclado
 (emoji, espaços não separáveis, bytes de codificação errada), linhas
@@ -35,6 +38,76 @@ _INVALID_CHARACTER_RE = re.compile(f"[^{re.escape(VALID_CHARACTERS)}]")
 _SENTENCE_END_RE = re.compile(r"[.!?…]$")
 _DOUBLE_SPACE_RE = re.compile(r"[ ]{2,}")
 _SPACE_BEFORE_PUNCTUATION_RE = re.compile(r"\s+([.,;:!?…])")
+
+# --------------------------------------------------------------------------
+# Markdown do lado máquina
+# --------------------------------------------------------------------------
+#
+# Alguns geradores devolvem a notícia formatada — manchete em ``**negrito**``,
+# listas, linhas de ``---``. Nenhum dos modelos de API fez isso; apareceu com
+# os modelos locais (Qwen3 e DeepSeek-R1). A marcação não é texto de notícia:
+# ``**`` seria contado como pontuação na distribuição de UPOS, entraria no
+# Zipf e no SAGE como token e inflaria a contagem de PUNCT de um lado só da
+# comparação. Os marcadores saem; o texto que eles envolvem fica.
+
+#: ``**negrito**`` e ``__negrito__``, incluindo quando atravessam a linha.
+_BOLD_RE = re.compile(r"(\*\*|__)(?=\S)(.+?)(?<=\S)\1", re.DOTALL)
+
+#: ``*itálico*`` e ``_itálico_`` — o marcador precisa colar no texto, para não
+#: comer um asterisco solto que faça parte da notícia.
+_ITALIC_RE = re.compile(r"(?<![\w*_])([*_])(?=\S)([^*_\n]+?)(?<=\S)\1(?![\w*_])")
+
+#: ``# Título`` no começo da linha.
+_HEADING_RE = re.compile(r"^[ \t]*#{1,6}[ \t]+", re.MULTILINE)
+
+#: Marcador de item de lista no começo da linha.
+_BULLET_RE = re.compile(r"^[ \t]*[-*+][ \t]+", re.MULTILINE)
+
+#: Linha só de ``---``, ``***`` ou ``___``.
+_RULE_LINE_RE = re.compile(r"^[ \t]*([-*_])\1{2,}[ \t]*$", re.MULTILINE)
+
+
+@dataclass(frozen=True)
+class MarkdownReport:
+    """Quanta marcação foi removida de um texto."""
+
+    bold: int = 0
+    italic: int = 0
+    headings: int = 0
+    bullets: int = 0
+    rules: int = 0
+
+    @property
+    def total(self) -> int:
+        return self.bold + self.italic + self.headings + self.bullets + self.rules
+
+    @property
+    def changed(self) -> bool:
+        return bool(self.total)
+
+
+def strip_markdown(text: str) -> tuple[str, MarkdownReport]:
+    """Remove marcação Markdown, preservando o texto que ela envolve.
+
+    Args:
+        text: Texto da notícia sintética como o modelo devolveu
+
+    Returns:
+        O texto sem os marcadores e o relatório do que saiu
+    """
+    text, rules = _RULE_LINE_RE.subn("", text)
+    text, headings = _HEADING_RE.subn("", text)
+    text, bullets = _BULLET_RE.subn("", text)
+    text, bold = _BOLD_RE.subn(r"\2", text)
+    text, italic = _ITALIC_RE.subn(r"\2", text)
+
+    report = MarkdownReport(
+        bold=bold, italic=italic, headings=headings, bullets=bullets, rules=rules
+    )
+    if report.changed:
+        text = _DOUBLE_SPACE_RE.sub(" ", text)
+        text = re.sub(r"\n{3,}", "\n\n", text).strip()
+    return text, report
 
 
 @dataclass(frozen=True)

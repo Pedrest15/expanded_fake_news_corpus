@@ -34,7 +34,9 @@ from pathlib import Path
 
 from expanded_fake_news_corpus.analysis.cleaning import (
     CleaningReport,
+    MarkdownReport,
     clean_fakebr_text,
+    strip_markdown,
 )
 
 logger = logging.getLogger(__name__)
@@ -257,20 +259,39 @@ def load_machine_documents(
     wanted_models = set(models) if models else None
 
     documents: list[Document] = []
+    markdown: list[MarkdownReport] = []
     for jsonl_path in sorted(synthetic_dir.rglob("*.jsonl")):
         round_name = _round_name(jsonl_path, synthetic_dir)
         for record in _read_jsonl(jsonl_path):
-            document = _machine_document(record, round_name=round_name)
-            if document is None:
+            result = _machine_document(record, round_name=round_name)
+            if result is None:
                 continue
+            document, report = result
             if wanted_sources and document.source not in wanted_sources:
                 continue
             if wanted_models and document.model not in wanted_models:
                 continue
             documents.append(document)
+            markdown.append(report)
 
     logger.info(f"Lidas {len(documents)} notícias sintéticas de {synthetic_dir}")
+    _log_markdown(markdown)
     return documents
+
+
+def _log_markdown(reports: Sequence[MarkdownReport]) -> None:
+    """Resumo da marcação removida do lado máquina."""
+    changed = [report for report in reports if report.changed]
+    if not changed:
+        return
+    logger.info(
+        f"Markdown removido de {len(changed)} de {len(reports)} notícias "
+        f"sintéticas ({sum(r.bold for r in changed)} negritos, "
+        f"{sum(r.italic for r in changed)} itálicos, "
+        f"{sum(r.headings for r in changed)} títulos, "
+        f"{sum(r.bullets for r in changed)} marcadores de lista, "
+        f"{sum(r.rules for r in changed)} linhas divisórias)"
+    )
 
 
 def load_human_documents(
@@ -420,8 +441,15 @@ def load_prior_cohort(
     return sorted(documents, key=lambda doc: doc.uid)
 
 
-def _machine_document(record: dict, *, round_name: str | None) -> Document | None:
-    """Converte um registro do JSONL em documento, ou None se estiver incompleto."""
+def _machine_document(
+    record: dict, *, round_name: str | None
+) -> tuple[Document, MarkdownReport] | None:
+    """Converte um registro do JSONL em documento, ou None se estiver incompleto.
+
+    O texto passa por :func:`strip_markdown`: os modelos locais devolvem a
+    notícia formatada, e os marcadores contariam como pontuação nas análises.
+    O corpus gravado não é alterado — a limpeza vale só para a análise.
+    """
     uid = record.get("source_id", "")
     body = (record.get("synthetic_text") or "").strip()
     if not uid or not body:
@@ -436,7 +464,8 @@ def _machine_document(record: dict, *, round_name: str | None) -> Document | Non
         logger.warning(f"Registro ignorado: {err}")
         return None
 
-    return Document(
+    body, report = strip_markdown(body)
+    document = Document(
         uid=uid,
         source=source,
         group=Group.MACHINE,
@@ -444,6 +473,7 @@ def _machine_document(record: dict, *, round_name: str | None) -> Document | Non
         model=record.get("model"),
         round_name=round_name,
     )
+    return document, report
 
 
 def compose_news(headline: str, body: str) -> str:
@@ -573,6 +603,17 @@ def add_corpus_arguments(parser: argparse.ArgumentParser) -> None:
         action="append",
         help="Restringe a um modelo gerador (repetível)",
     )
+    parser.add_argument(
+        "--exclude-uid",
+        action="append",
+        default=[],
+        metavar="UID",
+        help=(
+            "Descarta o par deste uid, dos dois lados (repetível). Para "
+            "documento defeituoso — geração degenerada, texto no idioma "
+            "errado — que contaminaria as médias."
+        ),
+    )
 
 
 def documents_from_args(
@@ -589,7 +630,19 @@ def documents_from_args(
     """
     sources = [Source(value) for value in args.source] if args.source else None
     paths = replace(paths or CorpusPaths(), synthetic_dir=EXPERIMENTS[args.experiment])
-    return load_paired_corpus(paths, sources=sources, models=args.model)
+    documents = load_paired_corpus(paths, sources=sources, models=args.model)
+
+    excluded = set(getattr(args, "exclude_uid", None) or ())
+    if excluded:
+        # Os dois lados saem juntos: a comparação é pareada, e deixar o humano
+        # sem o par da máquina desequilibraria os grupos.
+        kept = [document for document in documents if document.uid not in excluded]
+        logger.info(
+            f"Excluídos {len(documents) - len(kept)} documentos de "
+            f"{len(excluded)} uid(s): {', '.join(sorted(excluded))}"
+        )
+        documents = kept
+    return documents
 
 
 def output_dir_from_args(args: argparse.Namespace, default: Path) -> Path:
