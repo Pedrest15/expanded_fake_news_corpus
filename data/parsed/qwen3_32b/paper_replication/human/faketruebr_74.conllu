@@ -1,0 +1,192 @@
+# sent_id = faketruebr:74-1
+# text = taxa de licenciamento vai aumentar de r 33,66 para r 19 a partir de amanhã.
+1	taxa	taxa	NOUN	_	Gender=Fem|Number=Sing	5	nsubj	_	_
+2	de	de	ADP	_	_	3	case	_	_
+3	licenciamento	licenciamento	NOUN	_	Gender=Masc|Number=Sing	1	nmod	_	_
+4	vai	ir	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	aux	_	_
+5	aumentar	aumentar	VERB	_	VerbForm=Inf	0	root	_	_
+6	de	de	ADP	_	_	7	case	_	_
+7	r	r	NOUN	_	Gender=Masc	5	obl	_	_
+8	33,66	33,66	NUM	_	NumType=Card	7	nummod	_	_
+9	para	para	ADP	_	_	10	case	_	_
+10	r	r	NOUN	_	Gender=Masc	5	obl	_	_
+11	19	19	NUM	_	NumType=Card	10	nummod	_	_
+12	a	a	ADP	_	_	13	mark	_	_
+13	partir	partir	VERB	_	VerbForm=Inf	5	advcl	_	_
+14	de	de	ADP	_	_	15	case	_	_
+15	amanhã	amanhã	ADV	_	_	13	advmod	_	SpaceAfter=No
+16	.	.	PUNCT	_	_	5	punct	_	_
+
+# sent_id = faketruebr:74-2
+# text = pessoal q tem veículos, se vc emitir a taxa de licenciamento hj até as horas vai pagar apenas 33,66 e pouco com vencimento 31 de março, só salva a guia em pdf e deixa para pagar no vencimento sem prejuízo desse valor.
+1	pessoal	pessoal	NOUN	_	Number=Sing	0	root	_	_
+2	q	q	ADJ	_	Gender=Fem|NumType=Ord	3	advmod	_	_
+3	tem	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	acl:relcl	_	_
+4	veículos	veículo	NOUN	_	Gender=Masc|Number=Plur	3	obj	_	SpaceAfter=No
+5	,	,	PUNCT	_	_	8	punct	_	_
+6	se	se	SCONJ	_	_	8	mark	_	_
+7	vc	vc	PRON	_	_	8	nsubj	_	_
+8	emitir	emitir	VERB	_	VerbForm=Inf	18	advcl	_	_
+9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
+10	taxa	taxa	NOUN	_	Gender=Fem|Number=Sing	8	obj	_	_
+11	de	de	ADP	_	_	12	case	_	_
+12	licenciamento	licenciamento	NOUN	_	Gender=Masc|Number=Sing	10	nmod	_	_
+13	hj	hj	ADV	_	_	8	advmod	_	_
+14	até	até	ADP	_	_	16	case	_	_
+15	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	16	det	_	_
+16	horas	hora	NOUN	_	Gender=Fem|Number=Plur	8	obl	_	_
+17	vai	ir	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	aux	_	_
+18	pagar	pagar	VERB	_	VerbForm=Inf	3	conj	_	_
+19	apenas	apenas	ADV	_	_	20	advmod	_	_
+20	33,66	33,66	NUM	_	NumType=Card	18	nummod	_	_
+21	e	e	CCONJ	_	_	22	cc	_	_
+22	pouco	pouco	ADV	_	_	20	conj	_	_
+23	com	com	ADP	_	_	24	case	_	_
+24	vencimento	vencimento	NOUN	_	Gender=Masc|Number=Sing	18	obl	_	_
+25	31	31	NUM	_	NumType=Card	24	nmod	_	_
+26	de	de	ADP	_	_	27	case	_	_
+27	março	março	NOUN	_	Gender=Masc|Number=Sing	25	nmod	_	SpaceAfter=No
+28	,	,	PUNCT	_	_	30	punct	_	_
+29	só	só	ADV	_	_	30	advmod	_	_
+30	salva	salvar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	parataxis	_	_
+31	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	32	det	_	_
+32	guia	guia	NOUN	_	Gender=Fem|Number=Sing	30	obj	_	_
+33	em	em	ADP	_	_	34	case	_	_
+34	pdf	pdf	NOUN	_	Foreign=Yes|Gender=Masc|Number=Sing	30	obl	_	_
+35	e	e	CCONJ	_	_	36	cc	_	_
+36	deixa	deixar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	conj	_	_
+37	para	para	ADP	_	_	38	mark	_	_
+38	pagar	pagar	VERB	_	VerbForm=Inf	36	advcl	_	_
+39-40	no	_	_	_	_	_	_	_	_
+39	em	em	ADP	_	_	41	case	_	_
+40	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	41	det	_	_
+41	vencimento	vencimento	NOUN	_	Gender=Masc|Number=Sing	38	obl	_	_
+42	sem	sem	ADP	_	_	43	case	_	_
+43	prejuízo	prejuízo	NOUN	_	Gender=Masc|Number=Sing	36	obl	_	_
+44-45	desse	_	_	_	_	_	_	_	_
+44	de	de	ADP	_	_	46	case	_	_
+45	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	46	det	_	_
+46	valor	valor	NOUN	_	Gender=Masc|Number=Sing	43	nmod	_	SpaceAfter=No
+47	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = faketruebr:74-3
+# text = a partir de amanhã vai p mais de 19 reais.
+1	a	a	ADP	_	_	2	mark	_	_
+2	partir	partir	VERB	_	VerbForm=Inf	5	advcl	_	_
+3	de	de	ADP	_	_	4	case	_	_
+4	amanhã	amanhã	ADV	_	_	2	advmod	_	_
+5	vai	ir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+6	p	p	ADP	_	_	10	case	_	_
+7	mais	mais	ADV	_	_	9	advmod	_	_
+8	de	de	ADP	_	_	7	fixed	_	_
+9	19	19	NUM	_	NumType=Card	10	nummod	_	_
+10	reais	real	NOUN	_	Gender=Masc|Number=Plur	5	obl	_	SpaceAfter=No
+11	.	.	PUNCT	_	_	5	punct	_	_
+
+# sent_id = faketruebr:74-4
+# text = se vc não tem veículo, passe para seu amigo., pessoal q tem veículos, se vc emitir a taxa de licenciamento hj até as horas vai pagar apenas 33,66 e pouco com vencimento 31 de março, só salva a guia em pdf e deixa para pagar no vencimento sem prejuízo desse valor.
+1	se	se	SCONJ	_	_	4	mark	_	_
+2	vc	vc	PRON	_	_	4	nsubj	_	_
+3	não	não	ADV	_	_	4	advmod	_	_
+4	tem	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	advcl	_	_
+5	veículo	veículo	NOUN	_	Gender=Masc|Number=Sing	4	obj	_	SpaceAfter=No
+6	,	,	PUNCT	_	_	4	punct	_	_
+7	passe	passar	VERB	_	Mood=Imp|Number=Sing|Person=3|VerbForm=Fin	0	root	_	_
+8	para	para	ADP	_	_	10	case	_	_
+9	seu	seu	DET	_	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	10	det	_	_
+10	amigo	amigo	NOUN	_	Gender=Masc|Number=Sing	7	obl	_	SpaceAfter=No
+11	.	.	PUNCT	_	_	7	punct	_	SpaceAfter=No
+12	,	,	PUNCT	_	_	13	punct	_	_
+13	pessoal	pessoal	NOUN	_	Number=Sing	7	parataxis	_	_
+14	q	q	ADJ	_	Gender=Fem|NumType=Ord	15	advmod	_	_
+15	tem	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	parataxis	_	_
+16	veículos	veículo	NOUN	_	Gender=Masc|Number=Plur	15	obj	_	SpaceAfter=No
+17	,	,	PUNCT	_	_	30	punct	_	_
+18	se	se	SCONJ	_	_	20	mark	_	_
+19	vc	vc	PRON	_	_	20	nsubj	_	_
+20	emitir	emitir	VERB	_	Number=Sing|Person=3|VerbForm=Inf	30	advcl	_	_
+21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
+22	taxa	taxa	NOUN	_	Gender=Fem|Number=Sing	20	obj	_	_
+23	de	de	ADP	_	_	24	case	_	_
+24	licenciamento	licenciamento	NOUN	_	Gender=Masc|Number=Sing	22	nmod	_	_
+25	hj	hj	ADV	_	_	4	advmod	_	_
+26	até	até	ADP	_	_	28	case	_	_
+27	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	28	det	_	_
+28	horas	hora	NOUN	_	Gender=Fem|Number=Plur	20	obl	_	_
+29	vai	ir	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	30	aux	_	_
+30	pagar	pagar	VERB	_	VerbForm=Inf	7	conj	_	_
+31	apenas	apenas	ADV	_	_	32	advmod	_	_
+32	33,66	33,66	NUM	_	NumType=Card	30	nummod	_	_
+33	e	e	CCONJ	_	_	34	cc	_	_
+34	pouco	pouco	ADV	_	_	32	conj	_	_
+35	com	com	ADP	_	_	36	case	_	_
+36	vencimento	vencimento	NOUN	_	Gender=Masc|Number=Sing	30	obl	_	_
+37	31	31	NUM	_	NumType=Card	36	nmod	_	_
+38	de	de	ADP	_	_	39	case	_	_
+39	março	março	NOUN	_	Gender=Masc|Number=Sing	37	nmod	_	SpaceAfter=No
+40	,	,	PUNCT	_	_	42	punct	_	_
+41	só	só	ADV	_	_	42	advmod	_	_
+42	salva	salvar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	parataxis	_	_
+43	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	44	det	_	_
+44	guia	guia	NOUN	_	Gender=Fem|Number=Sing	42	obj	_	_
+45	em	em	ADP	_	_	46	case	_	_
+46	pdf	pdf	NOUN	_	Foreign=Yes|Gender=Masc|Number=Sing	42	obl	_	_
+47	e	e	CCONJ	_	_	48	cc	_	_
+48	deixa	deixar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	30	conj	_	_
+49	para	para	ADP	_	_	50	mark	_	_
+50	pagar	pagar	VERB	_	VerbForm=Inf	48	xcomp	_	_
+51-52	no	_	_	_	_	_	_	_	_
+51	em	em	ADP	_	_	53	case	_	_
+52	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	53	det	_	_
+53	vencimento	vencimento	NOUN	_	Gender=Masc|Number=Sing	50	obl	_	_
+54	sem	sem	ADP	_	_	55	case	_	_
+55	prejuízo	prejuízo	NOUN	_	Gender=Masc|Number=Sing	48	obl	_	_
+56-57	desse	_	_	_	_	_	_	_	_
+56	de	de	ADP	_	_	58	case	_	_
+57	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	58	det	_	_
+58	valor	valor	NOUN	_	Gender=Masc|Number=Sing	55	nmod	_	SpaceAfter=No
+59	.	.	PUNCT	_	_	7	punct	_	_
+
+# sent_id = faketruebr:74-5
+# text = a partir de amanhã vai p mais de 19 reais.
+1	a	a	ADP	_	_	2	mark	_	_
+2	partir	partir	VERB	_	VerbForm=Inf	5	advcl	_	_
+3	de	de	ADP	_	_	4	case	_	_
+4	amanhã	amanhã	ADV	_	_	2	advmod	_	_
+5	vai	ir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+6	p	p	ADP	_	_	10	case	_	_
+7	mais	mais	ADV	_	_	9	advmod	_	_
+8	de	de	ADP	_	_	7	fixed	_	_
+9	19	19	NUM	_	NumType=Card	10	nummod	_	_
+10	reais	real	NOUN	_	Gender=Masc|Number=Plur	5	obl	_	SpaceAfter=No
+11	.	.	PUNCT	_	_	5	punct	_	_
+
+# sent_id = faketruebr:74-6
+# text = se vc não tem veículo, passe para seu amigo.
+1	se	se	SCONJ	_	_	4	mark	_	_
+2	vc	vc	PRON	_	_	4	nsubj	_	_
+3	não	não	ADV	_	_	4	advmod	_	_
+4	tem	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	advcl	_	_
+5	veículo	veículo	NOUN	_	Gender=Masc|Number=Sing	4	obj	_	SpaceAfter=No
+6	,	,	PUNCT	_	_	4	punct	_	_
+7	passe	passar	VERB	_	Mood=Imp|Number=Sing|Person=3|VerbForm=Fin	0	root	_	_
+8	para	para	ADP	_	_	10	case	_	_
+9	seu	seu	DET	_	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	10	det	_	_
+10	amigo	amigo	NOUN	_	Gender=Masc|Number=Sing	7	obl	_	SpaceAfter=No
+11	.	.	PUNCT	_	_	7	punct	_	_
+
+# sent_id = faketruebr:74-7
+# text = bas tá entrar no site do detran.
+1	bas	bas	ADV	_	_	3	advmod	_	_
+2	tá	estar	AUX	_	Abbr=Yes|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	aux	_	_
+3	entrar	entrar	VERB	_	VerbForm=Inf	0	root	_	_
+4-5	no	_	_	_	_	_	_	_	_
+4	em	em	ADP	_	_	6	case	_	_
+5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
+6	site	site	NOUN	_	Gender=Masc|Number=Sing	3	obl	_	_
+7-8	do	_	_	_	_	_	_	_	_
+7	de	de	ADP	_	_	9	case	_	_
+8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
+9	detran	detran	NOUN	_	Gender=Masc|Number=Sing	6	nmod	_	SpaceAfter=No
+10	.	.	PUNCT	_	_	3	punct	_	_
+

@@ -1,0 +1,465 @@
+# global.columns = ID FORM LEMMA UPOS XPOS FEATS HEAD DEPREL DEPS MISC
+# sent_id = faketruebr:542-1
+# text = Exclusivo:
+1	Exclusivo	exclusivo	ADJ	_	Gender=Masc|Number=Sing	0	root	0:root	SpaceAfter=No
+2	:	:	PUNCT	_	_	1	punct	1:punct	_
+
+# sent_id = faketruebr:542-2
+# text = Governo Federal Libera Benefícios Milionários para Jovens de Divinópolis!
+1	Governo	Governo	PROPN	_	_	3	nsubj	3:nsubj	_
+2	Federal	Federal	PROPN	_	_	1	flat:name	1:flat:name	_
+3	Libera	liberar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+4	Benefícios	Benefícios	PROPN	_	_	3	obj	3:obj	_
+5	Milionários	Milionários	PROPN	_	_	4	flat:name	4:flat:name	_
+6	para	para	ADP	_	_	7	case	7:case	_
+7	Jovens	Jovens	PROPN	_	_	3	obl	3:obl:para	_
+8	de	de	ADP	_	_	9	case	9:case	_
+9	Divinópolis	Divinópolis	PROPN	_	_	7	nmod	7:nmod:de	SpaceAfter=No
+10	!	!	PUNCT	_	_	3	punct	3:punct	_
+
+# sent_id = faketruebr:542-3
+# text = Divinópolis, 25 de abril - Em uma decisão inédita, o governo federal acaba de anunciar o "ID Jovem 3.0", um programa revolucionário que garante 50% de desconto imediato em transportes coletivos, eventos culturais e passagens interestaduais para jovens entre 15 e 29 anos.
+1	Divinópolis	Divinópolis	PROPN	_	_	15	nsubj	15:nsubj|17:nsubj	SpaceAfter=No
+2	,	,	PUNCT	_	_	3	punct	3:punct	_
+3	25	25	NUM	_	NumType=Card	1	appos	1:appos	_
+4	de	de	ADP	_	_	5	case	5:case	_
+5	abril	abril	NOUN	_	Gender=Masc|Number=Sing	3	nmod	3:nmod:de	_
+6	-	-	PUNCT	_	_	3	punct	3:punct	_
+7	Em	em	ADP	_	_	9	case	9:case	_
+8	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	9	det	9:det	_
+9	decisão	decisão	NOUN	_	Gender=Fem|Number=Sing	15	obl	15:obl:em	_
+10	inédita	inédito	ADJ	_	Gender=Fem|Number=Sing	9	amod	9:amod	SpaceAfter=No
+11	,	,	PUNCT	_	_	9	punct	9:punct	_
+12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	13:det	_
+13	governo	governo	NOUN	_	Gender=Masc|Number=Sing	15	nsubj	15:nsubj|17:nsubj	_
+14	federal	federal	ADJ	_	Number=Sing	13	amod	13:amod	_
+15	acaba	acabar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+16	de	de	ADP	_	_	17	mark	17:mark	_
+17	anunciar	anunciar	VERB	_	VerbForm=Inf	15	xcomp	15:xcomp	_
+18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	20:det	_
+19	"	"	PUNCT	_	_	20	punct	20:punct	SpaceAfter=No
+20	ID	ID	PROPN	_	_	17	obj	17:obj	_
+21	Jovem	Jovem	PROPN	_	_	20	flat:name	20:flat:name	_
+22	3.0	3.0	NUM	_	NumType=Card	20	flat:name	20:flat:name	SpaceAfter=No
+23	"	"	PUNCT	_	_	20	punct	20:punct	SpaceAfter=No
+24	,	,	PUNCT	_	_	26	punct	26:punct	_
+25	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	26	det	26:det	_
+26	programa	programa	NOUN	_	Gender=Masc|Number=Sing	20	appos	20:appos|29:nsubj	_
+27	revolucionário	revolucionário	ADJ	_	Gender=Masc|Number=Sing	26	amod	26:amod	_
+28	que	que	PRON	_	PronType=Rel	29	nsubj	26:ref	_
+29	garante	garantir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	26	acl:relcl	26:acl:relcl	_
+30	50	50	NUM	_	NumType=Card	31	nummod	31:nummod	SpaceAfter=No
+31	%	%	SYM	_	_	29	obj	29:obj	_
+32	de	de	ADP	_	_	33	case	33:case	_
+33	desconto	desconto	NOUN	_	Gender=Masc|Number=Sing	31	nmod	31:nmod:de	_
+34	imediato	imediato	ADJ	_	Gender=Masc|Number=Sing	33	amod	33:amod	_
+35	em	em	ADP	_	_	36	case	36:case|39:case|42:case	_
+36	transportes	transporte	NOUN	_	Gender=Masc|Number=Plur	33	nmod	33:nmod:em	_
+37	coletivos	coletivo	ADJ	_	Gender=Masc|Number=Plur	36	amod	36:amod	SpaceAfter=No
+38	,	,	PUNCT	_	_	39	punct	39:punct	_
+39	eventos	evento	NOUN	_	Gender=Masc|Number=Plur	36	conj	33:nmod:em|36:conj:e	_
+40	culturais	cultural	ADJ	_	Number=Plur	39	amod	39:amod	_
+41	e	e	CCONJ	_	_	42	cc	42:cc	_
+42	passagens	passagem	NOUN	_	Gender=Fem|Number=Plur	36	conj	33:nmod:em|36:conj:e	_
+43	interestaduais	interestadual	ADJ	_	Number=Plur	42	amod	42:amod	_
+44	para	para	ADP	_	_	45	case	45:case	_
+45	jovens	jovem	NOUN	_	Number=Plur	42	nmod	42:nmod:para	_
+46	entre	entre	ADP	_	_	47	case	47:case	_
+47	15	15	NUM	_	NumType=Card	50	nummod	50:nummod	_
+48	e	e	CCONJ	_	_	49	cc	49:cc	_
+49	29	29	NUM	_	NumType=Card	47	conj	47:conj:e|50:nummod	_
+50	anos	ano	NOUN	_	Gender=Masc|Number=Plur	45	nmod	45:nmod	SpaceAfter=No
+51	.	.	PUNCT	_	_	15	punct	15:punct	_
+
+# sent_id = faketruebr:542-4
+# text = A novidade é fruto do Decreto 8.537/2015, que agora inclui vagas gratuitas ilimitadas em ônibus e trens, desde que o beneficiário mostre o documento digital no aplicativo.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	2:det	_
+2	novidade	novidade	NOUN	_	Gender=Fem|Number=Sing	4	nsubj	4:nsubj	_
+3	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
+4	fruto	fruto	NOUN	_	Gender=Masc|Number=Sing	0	root	0:root	_
+5-6	do	_	_	_	_	_	_	_	_
+5	de	de	ADP	_	_	7	case	7:case	_
+6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	7:det	_
+7	Decreto	Decreto	PROPN	_	_	4	nmod	4:nmod:de|12:nsubj	_
+8	8.537/2015	8.537/2015	NUM	_	NumType=Card	7	nmod	7:nmod	SpaceAfter=No
+9	,	,	PUNCT	_	_	12	punct	12:punct	_
+10	que	que	PRON	_	PronType=Rel	12	nsubj	7:ref	_
+11	agora	agora	ADV	_	_	12	advmod	12:advmod	_
+12	inclui	incluir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	acl:relcl	7:acl:relcl	_
+13	vagas	vaga	NOUN	_	Gender=Fem|Number=Plur	12	obj	12:obj	_
+14	gratuitas	gratuito	ADJ	_	Gender=Fem|Number=Plur	13	amod	13:amod	_
+15	ilimitadas	ilimitado	ADJ	_	Gender=Fem|Number=Plur|VerbForm=Part	13	amod	13:amod	_
+16	em	em	ADP	_	_	17	case	17:case|19:case	_
+17	ônibus	ônibus	NOUN	_	Gender=Masc	13	nmod	13:nmod:em	_
+18	e	e	CCONJ	_	_	19	cc	19:cc	_
+19	trens	trem	NOUN	_	Gender=Masc|Number=Plur	17	conj	13:nmod:em|17:conj:e	SpaceAfter=No
+20	,	,	PUNCT	_	_	25	punct	25:punct	_
+21	desde	desde	ADP	_	_	25	mark	25:mark	_
+22	que	que	SCONJ	_	_	21	fixed	21:fixed	_
+23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	24:det	_
+24	beneficiário	beneficiário	NOUN	_	Gender=Masc|Number=Sing	25	nsubj	25:nsubj	_
+25	mostre	mostrar	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	advcl	12:advcl:desde_que	_
+26	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	27	det	27:det	_
+27	documento	documento	NOUN	_	Gender=Masc|Number=Sing	25	obj	25:obj	_
+28	digital	digital	ADJ	_	Number=Sing	27	amod	27:amod	_
+29-30	no	_	_	_	_	_	_	_	_
+29	em	em	ADP	_	_	31	case	31:case	_
+30	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	31	det	31:det	_
+31	aplicativo	aplicativo	NOUN	_	Gender=Masc|Number=Sing	25	obl	25:obl:em	SpaceAfter=No
+32	.	.	PUNCT	_	_	4	punct	4:punct	_
+
+# sent_id = faketruebr:542-5
+# text = O que muda?
+1	O	o	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Dem	3	nsubj	3:nsubj	_
+2	que	que	PRON	_	PronType=Int	1	fixed	1:fixed	_
+3	muda	mudar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	SpaceAfter=No
+4	?	?	PUNCT	_	_	3	punct	3:punct	_
+
+# sent_id = faketruebr:542-6
+# text = Renda exigida reduzida:
+1	Renda	renda	NOUN	_	Gender=Fem|Number=Sing	0	root	0:root	_
+2	exigida	exigir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	1	acl	1:acl	_
+3	reduzida	reduzir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	1	acl	1:acl	SpaceAfter=No
+4	:	:	PUNCT	_	_	1	punct	1:punct	_
+
+# sent_id = faketruebr:542-7
+# text = Basta ter renda familiar de até 1 salário mínimo e estar no Cadúnico.
+1	Basta	bastar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+2	ter	ter	VERB	_	VerbForm=Inf	1	csubj	1:csubj	_
+3	renda	renda	NOUN	_	Gender=Fem|Number=Sing	2	obj	2:obj	_
+4	familiar	familiar	ADJ	_	Number=Sing	3	amod	3:amod	_
+5	de	de	ADP	_	_	8	case	8:case	_
+6	até	até	ADP	_	_	7	case	7:case	_
+7	1	1	NUM	_	NumType=Card	8	nummod	8:nummod	_
+8	salário	salário	NOUN	_	Gender=Masc|Number=Sing	3	nmod	3:nmod:de	_
+9	mínimo	mínimo	ADJ	_	Gender=Masc|Number=Sing	8	amod	8:amod	_
+10	e	e	CCONJ	_	_	14	cc	14:cc	_
+11	estar	estar	AUX	_	VerbForm=Inf	14	cop	14:cop	_
+12-13	no	_	_	_	_	_	_	_	_
+12	em	em	ADP	_	_	14	case	14:case	_
+13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	14:det	_
+14	Cadúnico	Cadúnico	PROPN	_	_	2	conj	1:csubj|2:conj:e	SpaceAfter=No
+15	.	.	PUNCT	_	_	1	punct	1:punct	_
+
+# sent_id = faketruebr:542-8
+# text = Validade ampliada:
+1	Validade	validade	NOUN	_	Gender=Fem|Number=Sing	0	root	0:root	_
+2	ampliada	ampliar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part	1	amod	1:amod	SpaceAfter=No
+3	:	:	PUNCT	_	_	1	punct	1:punct	_
+
+# sent_id = faketruebr:542-9
+# text = O ID Jovem agora dura dois anos, com renovação automática no app.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	2:det	_
+2	ID	ID	PROPN	_	_	5	nsubj	5:nsubj	_
+3	Jovem	Jovem	PROPN	_	_	2	flat:name	2:flat:name	_
+4	agora	agora	ADV	_	_	5	advmod	5:advmod	_
+5	dura	durar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+6	dois	dois	NUM	_	Gender=Masc|NumType=Card	7	nummod	7:nummod	_
+7	anos	ano	NOUN	_	Gender=Masc|Number=Plur	5	obj	5:obj	SpaceAfter=No
+8	,	,	PUNCT	_	_	10	punct	10:punct	_
+9	com	com	ADP	_	_	10	case	10:case	_
+10	renovação	renovação	NOUN	_	Gender=Fem|Number=Sing	5	obl	5:obl:com	_
+11	automática	automático	ADJ	_	Gender=Fem|Number=Sing	10	amod	10:amod	_
+12-13	no	_	_	_	_	_	_	_	_
+12	em	em	ADP	_	_	14	case	14:case	_
+13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	14:det	_
+14	app.	app.	PUNCT	_	_	5	punct	5:punct	_
+
+# sent_id = faketruebr:542-10
+# text = Acesso garantido:
+1	Acesso	acesso	NOUN	_	Gender=Masc|Number=Sing	0	root	0:root	_
+2	garantido	garantido	ADJ	_	Gender=Masc|Number=Sing|VerbForm=Part	1	amod	1:amod	SpaceAfter=No
+3	:	:	PUNCT	_	_	1	punct	1:punct	_
+
+# sent_id = faketruebr:542-11
+# text = Mesmo sem matrícula em escola, jovens podem se cadastrar.
+1	Mesmo	mesmo	ADV	_	_	3	advmod	3:advmod	_
+2	sem	sem	ADP	_	_	3	case	3:case	_
+3	matrícula	matrícula	NOUN	_	Gender=Fem|Number=Sing	8	obl	8:obl:sem	_
+4	em	em	ADP	_	_	5	case	5:case	_
+5	escola	escola	NOUN	_	Gender=Fem|Number=Sing	3	nmod	3:nmod:em	SpaceAfter=No
+6	,	,	PUNCT	_	_	3	punct	3:punct	_
+7	jovens	jovem	NOUN	_	Number=Plur	8	nsubj	8:nsubj|10:nsubj	_
+8	podem	poder	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+9	se	se	PRON	_	Case=Nom|Person=3|PronType=Prs	10	expl	10:expl	_
+10	cadastrar	cadastrar	VERB	_	VerbForm=Inf	8	xcomp	8:xcomp	SpaceAfter=No
+11	.	.	PUNCT	_	_	8	punct	8:punct	_
+
+# sent_id = faketruebr:542-12
+# text = Como se inscrever?
+1	Como	como	ADV	_	_	3	advmod	3:advmod	_
+2	se	se	PRON	_	Case=Nom|Person=3|PronType=Prs	3	expl	3:expl	_
+3	inscrever	inscrever	VERB	_	Number=Sing|Person=3|VerbForm=Inf	0	root	0:root	SpaceAfter=No
+4	?	?	PUNCT	_	_	3	punct	3:punct	_
+
+# sent_id = faketruebr:542-13
+# text = 1. Atualize seu Cadúnico no CRAS mais próximo.
+1	1	1	NUM	_	NumType=Card	3	parataxis	3:parataxis	SpaceAfter=No
+2	.	.	PUNCT	_	_	3	punct	3:punct	_
+3	Atualize	atualizar	VERB	_	Mood=Imp|Number=Sing|Person=3|VerbForm=Fin	0	root	0:root	_
+4	seu	seu	DET	_	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	5	det	5:det	_
+5	Cadúnico	Cadúnico	PROPN	_	_	3	obj	3:obj	_
+6-7	no	_	_	_	_	_	_	_	_
+6	em	em	ADP	_	_	8	case	8:case	_
+7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	8:det	_
+8	CRAS	CRAS	PROPN	_	_	3	obl	3:obl:em	_
+9	mais	mais	ADV	_	_	10	advmod	10:advmod	_
+10	próximo	próximo	ADJ	_	Gender=Masc|Number=Sing	8	amod	8:amod	SpaceAfter=No
+11	.	.	PUNCT	_	_	3	punct	3:punct	_
+
+# sent_id = faketruebr:542-14
+# text = 2. Baixe o aplicativo "ID Jovem 3.0" (exclusivo para Android e iOS).
+1	2	2	NUM	_	NumType=Card	3	parataxis	3:parataxis	SpaceAfter=No
+2	.	.	PUNCT	_	_	1	punct	1:punct	_
+3	Baixe	baixar	VERB	_	Mood=Imp|Number=Sing|Person=3|VerbForm=Fin	0	root	0:root	_
+4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	5:det	_
+5	aplicativo	aplicativo	NOUN	_	Gender=Masc|Number=Sing	3	obj	3:obj	_
+6	"	"	PUNCT	_	_	7	punct	7:punct	SpaceAfter=No
+7	ID	ID	PROPN	_	_	5	nmod	5:nmod	_
+8	Jovem	Jovem	PROPN	_	_	7	flat:name	7:flat:name	_
+9	3.0	3.0	NUM	_	NumType=Card	7	flat:name	7:flat:name	SpaceAfter=No
+10	"	"	PUNCT	_	_	7	punct	7:punct	_
+11	(	(	PUNCT	_	_	12	punct	12:punct	SpaceAfter=No
+12	exclusivo	exclusivo	ADJ	_	Gender=Masc|Number=Sing	5	amod	5:amod	_
+13	para	para	ADP	_	_	14	case	14:case|16:case	_
+14	Android	Android	PROPN	_	_	12	obl	12:obl:para	_
+15	e	e	CCONJ	_	_	16	cc	16:cc	_
+16	iOS	iOS	PROPN	_	_	14	conj	12:obl:para|14:conj:e	SpaceAfter=No
+17	)	)	PUNCT	_	_	12	punct	12:punct	SpaceAfter=No
+18	.	.	PUNCT	_	_	3	punct	3:punct	_
+
+# sent_id = faketruebr:542-15
+# text = 3. Preencha os dados:
+1	3	3	NUM	_	NumType=Card	3	parataxis	3:parataxis	SpaceAfter=No
+2	.	.	PUNCT	_	_	3	punct	3:punct	_
+3	Preencha	preencher	VERB	_	Mood=Imp|Number=Sing|Person=3|VerbForm=Fin	0	root	0:root	_
+4	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	5	det	5:det	_
+5	dados	dado	NOUN	_	Gender=Masc|Number=Plur	3	obj	3:obj	SpaceAfter=No
+6	:	:	PUNCT	_	_	3	punct	3:punct	_
+
+# sent_id = faketruebr:542-16
+# text = NIS, CPF e data de nascimento da mãe.
+1	NIS	NIS	PROPN	_	_	0	root	0:root	SpaceAfter=No
+2	,	,	PUNCT	_	_	3	punct	3:punct	_
+3	CPF	CPF	PROPN	_	_	1	conj	1:conj:e	_
+4	e	e	CCONJ	_	_	5	cc	5:cc	_
+5	data	data	NOUN	_	Gender=Fem|Number=Sing	1	conj	1:conj:e	_
+6	de	de	ADP	_	_	7	case	7:case	_
+7	nascimento	nascimento	NOUN	_	Gender=Masc|Number=Sing	5	nmod	5:nmod:de	_
+8-9	da	_	_	_	_	_	_	_	_
+8	de	de	ADP	_	_	10	case	10:case	_
+9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	10:det	_
+10	mãe	mãe	NOUN	_	Gender=Fem|Number=Sing	7	nmod	7:nmod:de	SpaceAfter=No
+11	.	.	PUNCT	_	_	1	punct	1:punct	_
+
+# sent_id = faketruebr:542-17
+# text = 4. Aprovado em até 24 horas!
+1	4	4	NUM	_	NumType=Card	3	dep	3:dep	SpaceAfter=No
+2	.	.	PUNCT	_	_	3	punct	3:punct	_
+3	Aprovado	aprovar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	0:root	_
+4	em	em	ADP	_	_	7	case	7:case	_
+5	até	até	ADP	_	_	6	case	6:case	_
+6	24	24	NUM	_	NumType=Card	7	nummod	7:nummod	_
+7	horas	hora	NOUN	_	Gender=Fem|Number=Plur	3	obl	3:obl:em	SpaceAfter=No
+8	!	!	PUNCT	_	_	3	punct	3:punct	_
+
+# sent_id = faketruebr:542-18
+# text = Urgente!
+1	Urgente	urgente	ADJ	_	Number=Sing	0	root	0:root	SpaceAfter=No
+2	!	!	PUNCT	_	_	1	punct	1:punct	_
+
+# sent_id = faketruebr:542-19
+# text = O Ministério da Cidadania alerta:
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	2:det	_
+2	Ministério	Ministério	PROPN	_	_	6	nsubj	6:nsubj	_
+3-4	da	_	_	_	_	_	_	_	_
+3	de	de	ADP	_	_	5	case	5:case	_
+4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	5:det	_
+5	Cidadania	Cidadania	PROPN	_	_	2	flat:name	2:flat:name	_
+6	alerta	alertar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	SpaceAfter=No
+7	:	:	PUNCT	_	_	6	punct	6:punct	_
+
+# sent_id = faketruebr:542-20
+# text = "As vagas são limitadas!".
+1	"	"	PUNCT	_	_	5	punct	5:punct	SpaceAfter=No
+2	As	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	3	det	3:det	_
+3	vagas	vaga	NOUN	_	Gender=Fem|Number=Plur	5	nsubj	5:nsubj	_
+4	são	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
+5	limitadas	limitado	ADJ	_	Gender=Fem|Number=Plur|VerbForm=Part	0	root	0:root	SpaceAfter=No
+6	!	!	PUNCT	_	_	5	punct	5:punct	SpaceAfter=No
+7	"	"	PUNCT	_	_	5	punct	5:punct	SpaceAfter=No
+8	.	.	PUNCT	_	_	5	punct	5:punct	_
+
+# sent_id = faketruebr:542-21
+# text = Apenas os primeiros 5.000 inscritos terão acesso aos benefícios.
+1	Apenas	apenas	ADV	_	_	5	advmod	5:advmod	_
+2	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	5	det	5:det	_
+3	primeiros	primeiro	ADJ	_	Gender=Masc|Number=Plur|NumType=Ord	5	amod	5:amod	_
+4	5.000	5.000	NUM	_	NumType=Card	5	nummod	5:nummod	_
+5	inscritos	inscrito	NOUN	_	Gender=Masc|Number=Plur	6	nsubj	6:nsubj	_
+6	terão	ter	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin	0	root	0:root	_
+7	acesso	acesso	NOUN	_	Gender=Masc|Number=Sing	6	obj	6:obj	_
+8-9	aos	_	_	_	_	_	_	_	_
+8	a	a	ADP	_	_	10	case	10:case	_
+9	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	10	det	10:det	_
+10	benefícios	benefício	NOUN	_	Gender=Masc|Number=Plur	7	nmod	7:nmod:a	SpaceAfter=No
+11	.	.	PUNCT	_	_	6	punct	6:punct	_
+
+# sent_id = faketruebr:542-22
+# text = Após essa data, o programa poderá ser encerrado sem aviso.
+1	Após	após	ADP	_	_	3	case	3:case	_
+2	essa	esse	DET	_	Gender=Fem|Number=Sing|PronType=Dem	3	det	3:det	_
+3	data	data	NOUN	_	Gender=Fem|Number=Sing	7	obl	7:obl:após	SpaceAfter=No
+4	,	,	PUNCT	_	_	3	punct	3:punct	_
+5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	6:det	_
+6	programa	programa	NOUN	_	Gender=Masc|Number=Sing	7	nsubj	7:nsubj|9:nsubj:pass	_
+7	poderá	poder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin	0	root	0:root	_
+8	ser	ser	AUX	_	VerbForm=Inf	9	aux:pass	9:aux:pass	_
+9	encerrado	encerrar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	7	xcomp	7:xcomp	_
+10	sem	sem	ADP	_	_	11	case	11:case	_
+11	aviso	aviso	NOUN	_	Gender=Masc|Number=Sing	9	obl	9:obl:sem	SpaceAfter=No
+12	.	.	PUNCT	_	_	7	punct	7:punct	_
+
+# sent_id = faketruebr:542-23
+# text = Para garantir seu lugar, ligue imediatamente para o (37) 9999-9999 ou acesse o site [www.idjovem30.com](http://www.idjovem30.com).
+1	Para	para	ADP	_	_	2	mark	2:mark	_
+2	garantir	garantir	VERB	_	VerbForm=Inf	6	advcl	6:advcl:para|15:advcl:para	_
+3	seu	seu	DET	_	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	4	det	4:det	_
+4	lugar	lugar	NOUN	_	Gender=Masc|Number=Sing	2	obj	2:obj	SpaceAfter=No
+5	,	,	PUNCT	_	_	2	punct	2:punct	_
+6	ligue	ligar	VERB	_	Mood=Imp|Number=Sing|Person=3|VerbForm=Fin	0	root	0:root	_
+7	imediatamente	imediatamente	ADV	_	_	6	advmod	6:advmod	_
+8	para	para	ADP	_	_	11	case	11:case	_
+9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	11:det	_
+10	(	(	PUNCT	_	_	11	punct	11:punct	SpaceAfter=No
+11	37	37	NUM	_	NumType=Card	6	obl	6:obl:para	SpaceAfter=No
+12	)	)	PUNCT	_	_	11	punct	11:punct	_
+13	9999-9999	9999-9999	NUM	_	NumType=Card	11	nummod	11:nummod	_
+14	ou	ou	CCONJ	_	_	15	cc	15:cc	_
+15	acesse	acessar	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	conj	6:conj:ou	_
+16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	17:det	_
+17	site	site	NOUN	_	Gender=Masc|Number=Sing	15	obj	15:obj	_
+18	[	[	PUNCT	_	_	19	punct	19:punct	SpaceAfter=No
+19	www.idjovem30.com](http://www.idjovem30.com	www.idjovem30.com](http://www.idjovem30.com	SYM	_	_	17	appos	17:appos	SpaceAfter=No
+20	)	)	PUNCT	_	_	19	punct	19:punct	SpaceAfter=No
+21	.	.	PUNCT	_	_	6	punct	6:punct	_
+
+# sent_id = faketruebr:542-24
+# text = Controvérsia.
+1	Controvérsia	controvérsia	NOUN	_	Gender=Fem|Number=Sing	0	root	0:root	SpaceAfter=No
+2	.	.	PUNCT	_	_	1	punct	1:punct	_
+
+# sent_id = faketruebr:542-25
+# text = Fontes dentro do governo revelam que o ID Jovem 3.0 foi mantido em segredo por meses para evitar "desinformação de setores conservadores".
+1	Fontes	fonte	NOUN	_	Gender=Fem|Number=Plur	6	nsubj	6:nsubj	_
+2	dentro	dentro	ADV	_	_	1	advmod	1:advmod	_
+3-4	do	_	_	_	_	_	_	_	_
+3	de	de	ADP	_	_	5	case	5:case	_
+4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	5:det	_
+5	governo	governo	NOUN	_	Gender=Masc|Number=Sing	2	obl	2:obl:de	_
+6	revelam	revelar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+7	que	que	SCONJ	_	_	13	mark	13:mark	_
+8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	9:det	_
+9	ID	ID	PROPN	_	_	13	nsubj:pass	13:nsubj:pass	_
+10	Jovem	Jovem	PROPN	_	_	9	flat:name	9:flat:name	_
+11	3.0	3.0	NUM	_	NumType=Card	9	flat:name	9:flat:name	_
+12	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	aux:pass	13:aux:pass	_
+13	mantido	manter	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	6	ccomp	6:ccomp	_
+14	em	em	ADP	_	_	15	case	15:case	_
+15	segredo	segredo	NOUN	_	Gender=Masc|Number=Sing	13	obl	13:obl:em	_
+16	por	por	ADP	_	_	17	case	17:case	_
+17	meses	meses	NOUN	_	Gender=Masc|Number=Plur	13	obl	13:obl:por	_
+18	para	para	ADP	_	_	19	mark	19:mark	_
+19	evitar	evitar	VERB	_	VerbForm=Inf	13	advcl	13:advcl:para	_
+20	"	"	PUNCT	_	_	21	punct	21:punct	SpaceAfter=No
+21	desinformação	desinformação	NOUN	_	Gender=Fem|Number=Sing	19	obj	19:obj	_
+22	de	de	ADP	_	_	23	case	23:case	_
+23	setores	setor	NOUN	_	Gender=Masc|Number=Plur	21	nmod	21:nmod:de	_
+24	conservadores	conservador	ADJ	_	Gender=Masc|Number=Plur	23	amod	23:amod	SpaceAfter=No
+25	"	"	PUNCT	_	_	21	punct	21:punct	SpaceAfter=No
+26	.	.	PUNCT	_	_	6	punct	6:punct	_
+
+# sent_id = faketruebr:542-26
+# text = "Isso é uma revolução social", afirma o deputado fictício João Pedro da Silva (PT), que lidera a campanha.
+1	"	"	PUNCT	_	_	5	punct	5:punct	SpaceAfter=No
+2	Isso	isso	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	5	nsubj	5:nsubj	_
+3	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
+4	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	5	det	5:det	_
+5	revolução	revolução	NOUN	_	Gender=Fem|Number=Sing	9	ccomp:speech	9:ccomp:speech	_
+6	social	social	ADJ	_	Number=Sing	5	amod	5:amod	SpaceAfter=No
+7	"	"	PUNCT	_	_	5	punct	5:punct	SpaceAfter=No
+8	,	,	PUNCT	_	_	5	punct	5:punct	_
+9	afirma	afirmar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	11:det	_
+11	deputado	deputado	NOUN	_	Gender=Masc|Number=Sing	9	nsubj	9:nsubj|23:nsubj	_
+12	fictício	fictício	ADJ	_	Gender=Masc|Number=Sing	11	amod	11:amod	_
+13	João	João	PROPN	_	_	11	nmod	11:nmod	_
+14	Pedro	Pedro	PROPN	_	_	13	flat:name	13:flat:name	_
+15-16	da	_	_	_	_	_	_	_	_
+15	de	de	ADP	_	_	17	case	17:case	_
+16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	17:det	_
+17	Silva	Silva	PROPN	_	_	13	flat:name	13:flat:name	_
+18	(	(	PUNCT	_	_	19	punct	19:punct	SpaceAfter=No
+19	PT	PT	PROPN	_	_	13	parataxis	13:parataxis	SpaceAfter=No
+20	)	)	PUNCT	_	_	19	punct	19:punct	SpaceAfter=No
+21	,	,	PUNCT	_	_	23	punct	23:punct	_
+22	que	que	PRON	_	PronType=Rel	23	nsubj	11:ref	_
+23	lidera	liderar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	acl:relcl	11:acl:relcl	_
+24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	25:det	_
+25	campanha	campanha	NOUN	_	Gender=Fem|Number=Sing	23	obj	23:obj	SpaceAfter=No
+26	.	.	PUNCT	_	_	9	punct	9:punct	_
+
+# sent_id = faketruebr:542-27
+# text = Atenção!
+1	Atenção	atenção	NOUN	_	Gender=Fem|Number=Sing	0	root	0:root	SpaceAfter=No
+2	!	!	PUNCT	_	_	1	punct	1:punct	_
+
+# sent_id = faketruebr:542-28
+# text = Empresas de transporte que não respeitarem o desconto deverão pagar multa de R$ 5.000 por infração.
+1	Empresas	empresa	NOUN	_	Gender=Fem|Number=Plur	9	nsubj	6:nsubj|9:nsubj|10:nsubj	_
+2	de	de	ADP	_	_	3	case	3:case	_
+3	transporte	transporte	NOUN	_	Gender=Masc|Number=Sing	1	nmod	1:nmod:de	_
+4	que	que	PRON	_	PronType=Rel	6	nsubj	1:ref	_
+5	não	não	ADV	_	_	6	advmod	6:advmod	_
+6	respeitarem	respeitar	VERB	_	Mood=Sub|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin	1	acl:relcl	1:acl:relcl	_
+7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	8:det	_
+8	desconto	desconto	NOUN	_	Gender=Masc|Number=Sing	6	obj	6:obj	_
+9	deverão	dever	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin	0	root	0:root	_
+10	pagar	pagar	VERB	_	VerbForm=Inf	9	xcomp	9:xcomp	_
+11	multa	multa	NOUN	_	Gender=Fem|Number=Sing	10	obj	10:obj	_
+12	de	de	ADP	_	_	13	case	13:case	_
+13	R$	R$	SYM	_	_	11	nmod	11:nmod:de	_
+14	5.000	5.000	NUM	_	NumType=Card	13	nummod	13:nummod	_
+15	por	por	ADP	_	_	16	case	16:case	_
+16	infração	infração	NOUN	_	Gender=Fem|Number=Sing	10	obl	10:obl:por	SpaceAfter=No
+17	.	.	PUNCT	_	_	9	punct	9:punct	_
+
+# sent_id = faketruebr:542-29
+# text = O documento digital agora inclui verificação biométrica via selfie.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	2:det	_
+2	documento	documento	NOUN	_	Gender=Masc|Number=Sing	5	nsubj	5:nsubj	_
+3	digital	digital	ADJ	_	Number=Sing	2	amod	2:amod	_
+4	agora	agora	ADV	_	_	5	advmod	5:advmod	_
+5	inclui	incluir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+6	verificação	verificação	NOUN	_	Gender=Fem|Number=Sing	5	obj	5:obj	_
+7	biométrica	biométrico	ADJ	_	Gender=Fem|Number=Sing	6	amod	6:amod	_
+8	via	via	ADP	_	_	9	case	9:case	_
+9	selfie	selfie	NOUN	_	Foreign=Yes|Gender=Fem|Number=Sing	6	nmod	6:nmod:via	SpaceAfter=No
+10	.	.	PUNCT	_	_	5	punct	5:punct	_
+
+# sent_id = faketruebr:542-30
+# text = Não perca tempo - a janela de inscrição fecha em 30 dias!
+1	Não	não	ADV	_	_	2	advmod	2:advmod	_
+2	perca	perder	VERB	_	Mood=Imp|Number=Sing|Person=3|VerbForm=Fin	0	root	0:root	_
+3	tempo	tempo	NOUN	_	Gender=Masc|Number=Sing	2	obj	2:obj	_
+4	-	-	PUNCT	_	_	9	punct	9:punct	_
+5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	6:det	_
+6	janela	janela	NOUN	_	Gender=Fem|Number=Sing	9	nsubj	9:nsubj	_
+7	de	de	ADP	_	_	8	case	8:case	_
+8	inscrição	inscrição	NOUN	_	Gender=Fem|Number=Sing	6	nmod	6:nmod:de	_
+9	fecha	fechar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	parataxis	2:parataxis	_
+10	em	em	ADP	_	_	12	case	12:case	_
+11	30	30	NUM	_	NumType=Card	12	nummod	12:nummod	_
+12	dias	dia	NOUN	_	Gender=Masc|Number=Plur	9	obl	9:obl:em	SpaceAfter=No
+13	!	!	PUNCT	_	_	2	punct	2:punct	_
+

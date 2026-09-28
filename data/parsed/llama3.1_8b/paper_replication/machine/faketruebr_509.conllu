@@ -1,0 +1,546 @@
+# sent_id = faketruebr:509-1
+# text = <noscript>.
+1	<	<	PUNCT	_	_	2	punct	_	SpaceAfter=No
+2	noscript	noscript	X	_	Foreign=Yes	0	root	_	SpaceAfter=No
+3	>	>	PUNCT	_	_	2	punct	_	SpaceAfter=No
+4	.	.	PUNCT	_	_	2	punct	_	_
+
+# sent_id = faketruebr:509-2
+# text = Insira a notícia modificada aqui.
+1	Insira	inserir	VERB	_	Mood=Imp|Number=Sing|Person=3|VerbForm=Fin	0	root	_	_
+2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	_	_
+3	notícia	notícia	NOUN	_	Gender=Fem|Number=Sing	1	obj	_	_
+4	modificada	modificar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	3	acl	_	_
+5	aqui	aqui	ADV	_	_	1	advmod	_	SpaceAfter=No
+6	.	.	PUNCT	_	_	1	punct	_	_
+
+# sent_id = faketruebr:509-3
+# text = A notícia modificada:
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	notícia	notícia	NOUN	_	Gender=Fem|Number=Sing	0	root	_	_
+3	modificada	modificar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	2	acl	_	SpaceAfter=No
+4	:	:	PUNCT	_	_	2	punct	_	_
+
+# sent_id = faketruebr:509-4
+# text = Diversas rachaduras surgiram em ruas e imóveis no pinheiro, em Maceió, após fortes chuvas e um tremor de terra em fevereiro de 218.
+1	Diversas	diversos	DET	_	Gender=Fem|Number=Plur|PronType=Dem	2	det	_	_
+2	rachaduras	rachadura	NOUN	_	Gender=Fem|Number=Plur	3	nsubj	_	_
+3	surgiram	surgir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+4	em	em	ADP	_	_	5	case	_	_
+5	ruas	rua	NOUN	_	Gender=Fem|Number=Plur	3	obl	_	_
+6	e	e	CCONJ	_	_	7	cc	_	_
+7	imóveis	imóvel	NOUN	_	Number=Plur	5	conj	_	_
+8-9	no	_	_	_	_	_	_	_	_
+8	em	em	ADP	_	_	10	case	_	_
+9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
+10	pinheiro	pinheiro	NOUN	_	Gender=Masc|Number=Sing	5	nmod	_	SpaceAfter=No
+11	,	,	PUNCT	_	_	13	punct	_	_
+12	em	em	ADP	_	_	13	case	_	_
+13	Maceió	Maceió	PROPN	_	_	3	obl	_	SpaceAfter=No
+14	,	,	PUNCT	_	_	13	punct	_	_
+15	após	após	ADP	_	_	17	case	_	_
+16	fortes	forte	ADJ	_	Number=Plur	17	amod	_	_
+17	chuvas	chuva	NOUN	_	Gender=Fem|Number=Plur	3	obl	_	_
+18	e	e	CCONJ	_	_	20	cc	_	_
+19	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
+20	tremor	tremor	NOUN	_	Gender=Masc|Number=Sing	17	conj	_	_
+21	de	de	ADP	_	_	22	case	_	_
+22	terra	terra	NOUN	_	Gender=Fem|Number=Sing	20	nmod	_	_
+23	em	em	ADP	_	_	24	case	_	_
+24	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	17	nmod	_	_
+25	de	de	ADP	_	_	26	case	_	_
+26	218	218	NUM	_	NumType=Card	24	nmod	_	SpaceAfter=No
+27	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = faketruebr:509-5
+# text = Um ano depois, o fenômeno também foi registrado em imóveis do Mutange, de Bebedouro e, por último, no Bom Parto.
+1	Um	um	NUM	_	Gender=Masc|NumType=Card	2	nummod	_	_
+2	ano	ano	NOUN	_	Gender=Masc|Number=Sing	3	obl	_	_
+3	depois	depois	ADV	_	_	9	advmod	_	SpaceAfter=No
+4	,	,	PUNCT	_	_	3	punct	_	_
+5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
+6	fenômeno	fenômeno	NOUN	_	Gender=Masc|Number=Sing	9	nsubj:pass	_	_
+7	também	também	ADV	_	_	9	advmod	_	_
+8	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	aux:pass	_	_
+9	registrado	registrar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
+10	em	em	ADP	_	_	11	case	_	_
+11	imóveis	imóvel	NOUN	_	Number=Plur	9	obl	_	_
+12-13	do	_	_	_	_	_	_	_	_
+12	de	de	ADP	_	_	14	case	_	_
+13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
+14	Mutange	Mutange	PROPN	_	_	11	nmod	_	SpaceAfter=No
+15	,	,	PUNCT	_	_	17	punct	_	_
+16	de	de	ADP	_	_	17	case	_	_
+17	Bebedouro	Bebedouro	PROPN	_	_	14	nmod	_	_
+18	e	e	CCONJ	_	_	25	cc	_	SpaceAfter=No
+19	,	,	PUNCT	_	_	21	punct	_	_
+20	por	por	ADP	_	_	21	case	_	_
+21	último	último	ADJ	_	Gender=Masc|Number=Sing	25	orphan	_	SpaceAfter=No
+22	,	,	PUNCT	_	_	21	punct	_	_
+23-24	no	_	_	_	_	_	_	_	_
+23	em	em	ADP	_	_	25	case	_	_
+24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	_	_
+25	Bom	Bom	PROPN	_	_	11	conj	_	_
+26	Parto	Parto	PROPN	_	_	25	flat:name	_	SpaceAfter=No
+27	.	.	PUNCT	_	_	9	punct	_	_
+
+# sent_id = faketruebr:509-6
+# text = Todos bairros vizinhos.
+1	Todos	todo	DET	_	Gender=Masc|Number=Plur|PronType=Ind	2	det	_	_
+2	bairros	bairro	NOUN	_	Gender=Masc|Number=Plur	0	root	_	_
+3	vizinhos	vizinho	ADJ	_	Gender=Masc|Number=Plur	2	amod	_	SpaceAfter=No
+4	.	.	PUNCT	_	_	2	punct	_	_
+
+# sent_id = faketruebr:509-7
+# text = Após meses de estudos, o Serviço Geológico do Brasil (CPRM) concluiu que a extração de sal-gema feita pela Braskem na região provocou o problema.
+1	Após	após	ADP	_	_	2	case	_	_
+2	meses	meses	NOUN	_	Gender=Masc|Number=Plur	15	obl	_	_
+3	de	de	ADP	_	_	4	case	_	_
+4	estudos	estudo	NOUN	_	Gender=Masc|Number=Plur	2	nmod	_	SpaceAfter=No
+5	,	,	PUNCT	_	_	2	punct	_	_
+6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
+7	Serviço	Serviço	PROPN	_	_	15	nsubj	_	_
+8	Geológico	Geológico	PROPN	_	_	7	flat:name	_	_
+9-10	do	_	_	_	_	_	_	_	_
+9	de	de	ADP	_	_	11	case	_	_
+10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
+11	Brasil	Brasil	PROPN	_	_	7	flat:name	_	_
+12	(	(	PUNCT	_	_	13	punct	_	SpaceAfter=No
+13	CPRM	CPRM	PROPN	_	_	7	appos	_	SpaceAfter=No
+14	)	)	PUNCT	_	_	13	punct	_	_
+15	concluiu	concluir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+16	que	que	SCONJ	_	_	28	mark	_	_
+17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
+18	extração	extração	NOUN	_	Gender=Fem|Number=Sing	28	nsubj	_	_
+19	de	de	ADP	_	_	20	case	_	_
+20	sal-gema	sal-gemA	NOUN	_	Gender=Fem|Number=Sing	18	nmod	_	_
+21	feita	fazer	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	18	acl	_	_
+22-23	pela	_	_	_	_	_	_	_	_
+22	por	por	ADP	_	_	24	case	_	_
+23	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	24	det	_	_
+24	Braskem	Braskem	PROPN	_	_	21	obl:agent	_	_
+25-26	na	_	_	_	_	_	_	_	_
+25	em	em	ADP	_	_	27	case	_	_
+26	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	27	det	_	_
+27	região	região	NOUN	_	Gender=Fem|Number=Sing	21	obl	_	_
+28	provocou	provocar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	ccomp	_	_
+29	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	30	det	_	_
+30	problema	problema	NOUN	_	Gender=Masc|Number=Sing	28	obj	_	SpaceAfter=No
+31	.	.	PUNCT	_	_	15	punct	_	_
+
+# sent_id = faketruebr:509-8
+# text = A defesa civil identificou três principais fissuras, cada uma com cerca de 1,5 km de extensão, afetando 2,48 moradias somente no Pinheiro, de onde centenas de famílias tiveram que deixar suas casas.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	defesa	defesa	NOUN	_	Gender=Fem|Number=Sing	4	nsubj	_	_
+3	civil	civil	ADJ	_	Number=Sing	2	amod	_	_
+4	identificou	identificar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+5	três	três	NUM	_	NumType=Card	7	nummod	_	_
+6	principais	principal	ADJ	_	Number=Plur	7	amod	_	_
+7	fissuras	fissura	NOUN	_	Gender=Fem|Number=Plur	4	obj	_	SpaceAfter=No
+8	,	,	PUNCT	_	_	10	punct	_	_
+9	cada	cada	DET	_	Number=Sing|PronType=Ind	10	det	_	_
+10	uma	um	PRON	_	Gender=Fem|Number=Sing|PronType=Ind	7	appos	_	_
+11	com	com	ADP	_	_	15	case	_	_
+12	cerca	cerca	ADV	_	_	14	advmod	_	_
+13	de	de	ADP	_	_	12	fixed	_	_
+14	1,5	1,5	NUM	_	NumType=Card	15	nummod	_	_
+15	km	quilômetro	NOUN	_	Abbr=Yes|Gender=Masc	10	nmod	_	_
+16	de	de	ADP	_	_	17	case	_	_
+17	extensão	extensão	NOUN	_	Gender=Fem|Number=Sing	15	nmod	_	SpaceAfter=No
+18	,	,	PUNCT	_	_	19	punct	_	_
+19	afetando	afetar	VERB	_	VerbForm=Ger	4	advcl	_	_
+20	2,48	2,48	NUM	_	NumType=Card	21	nummod	_	_
+21	moradias	moradia	NOUN	_	Gender=Fem|Number=Plur	19	obj	_	_
+22	somente	somente	ADV	_	_	25	advmod	_	_
+23-24	no	_	_	_	_	_	_	_	_
+23	em	em	ADP	_	_	25	case	_	_
+24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	_	_
+25	Pinheiro	Pinheiro	PROPN	_	_	19	obl	_	SpaceAfter=No
+26	,	,	PUNCT	_	_	32	punct	_	_
+27	de	de	ADP	_	_	28	case	_	_
+28	onde	onde	ADV	_	_	32	advmod	_	_
+29	centenas	centena	NOUN	_	Gender=Fem|Number=Plur	32	nsubj	_	_
+30	de	de	ADP	_	_	31	case	_	_
+31	famílias	família	NOUN	_	Gender=Fem|Number=Plur	29	nmod	_	_
+32	tiveram	ter	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	25	acl:relcl	_	_
+33	que	que	ADP	_	_	34	mark	_	_
+34	deixar	deixar	VERB	_	VerbForm=Inf	32	xcomp	_	_
+35	suas	seu	DET	_	Gender=Fem|Number=Plur|Person=3|Poss=Yes|PronType=Prs	36	det	_	_
+36	casas	casa	NOUN	_	Gender=Fem|Number=Plur	34	obj	_	SpaceAfter=No
+37	.	.	PUNCT	_	_	4	punct	_	_
+
+# sent_id = faketruebr:509-9
+# text = Mais de dois anos depois, foi reconhecida a necessidade de realocação de mais de 8 mil imóveis nos quatro bairros.
+1	Mais	mais	ADV	_	_	3	advmod	_	_
+2	de	de	ADP	_	_	1	fixed	_	_
+3	dois	dois	NUM	_	Gender=Masc|NumType=Card	4	nummod	_	_
+4	anos	ano	NOUN	_	Gender=Masc|Number=Plur	5	obl	_	_
+5	depois	depois	ADV	_	_	8	advmod	_	SpaceAfter=No
+6	,	,	PUNCT	_	_	5	punct	_	_
+7	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	aux:pass	_	_
+8	reconhecida	reconhecer	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
+9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
+10	necessidade	necessidade	NOUN	_	Gender=Fem|Number=Sing	8	nsubj:pass	_	_
+11	de	de	ADP	_	_	12	case	_	_
+12	realocação	realocação	NOUN	_	Gender=Fem|Number=Sing	10	nmod	_	_
+13	de	de	ADP	_	_	18	case	_	_
+14	mais	mais	ADV	_	_	16	advmod	_	_
+15	de	de	ADP	_	_	14	fixed	_	_
+16	8	8	NUM	_	NumType=Card	18	nummod	_	_
+17	mil	mil	NUM	_	NumType=Card	16	flat	_	_
+18	imóveis	imóvel	NOUN	_	Number=Plur	12	nmod	_	_
+19-20	nos	_	_	_	_	_	_	_	_
+19	em	em	ADP	_	_	22	case	_	_
+20	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	22	det	_	_
+21	quatro	quatro	NUM	_	NumType=Card	22	nummod	_	_
+22	bairros	bairro	NOUN	_	Gender=Masc|Number=Plur	12	nmod	_	SpaceAfter=No
+23	.	.	PUNCT	_	_	8	punct	_	_
+
+# sent_id = faketruebr:509-10
+# text = Equipes do CPRM concluíram que a extração de sal-gema, um tipo de cloreto de sódio utilizado na fabricação de soda cáustica e PVC, na região onde existiam falhas geológicas provocou a instabilidade no solo.
+1	Equipes	equipe	NOUN	_	Gender=Fem|Number=Plur	5	nsubj	_	_
+2-3	do	_	_	_	_	_	_	_	_
+2	de	de	ADP	_	_	4	case	_	_
+3	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	_	_
+4	CPRM	CPRM	PROPN	_	_	1	nmod	_	_
+5	concluíram	concluir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+6	que	que	SCONJ	_	_	35	mark	_	_
+7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
+8	extração	extração	NOUN	_	Gender=Fem|Number=Sing	35	nsubj	_	_
+9	de	de	ADP	_	_	10	case	_	_
+10	sal-gema	sal-gemA	NOUN	_	Gender=Fem|Number=Sing	8	nmod	_	SpaceAfter=No
+11	,	,	PUNCT	_	_	13	punct	_	_
+12	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
+13	tipo	tipo	NOUN	_	Gender=Masc|Number=Sing	10	appos	_	_
+14	de	de	ADP	_	_	15	case	_	_
+15	cloreto	cloreto	NOUN	_	Gender=Masc|Number=Sing	13	nmod	_	_
+16	de	de	ADP	_	_	17	case	_	_
+17	sódio	sódio	NOUN	_	Gender=Masc|Number=Sing	15	nmod	_	_
+18	utilizado	utilizar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	13	acl	_	_
+19-20	na	_	_	_	_	_	_	_	_
+19	em	em	ADP	_	_	21	case	_	_
+20	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	21	det	_	_
+21	fabricação	fabricação	NOUN	_	Gender=Fem|Number=Sing	18	obl	_	_
+22	de	de	ADP	_	_	23	case	_	_
+23	soda	soda	NOUN	_	Gender=Fem|Number=Sing	21	nmod	_	_
+24	cáustica	cáustico	ADJ	_	Gender=Fem|Number=Sing	23	amod	_	_
+25	e	e	CCONJ	_	_	26	cc	_	_
+26	PVC	PVC	PROPN	_	_	23	conj	_	SpaceAfter=No
+27	,	,	PUNCT	_	_	30	punct	_	_
+28-29	na	_	_	_	_	_	_	_	_
+28	em	em	ADP	_	_	30	case	_	_
+29	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	30	det	_	_
+30	região	região	NOUN	_	Gender=Fem|Number=Sing	35	obl	_	_
+31	onde	onde	ADV	_	_	32	advmod	_	_
+32	existiam	existir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	30	acl:relcl	_	_
+33	falhas	falha	NOUN	_	Gender=Fem|Number=Plur	32	nsubj	_	_
+34	geológicas	geológico	ADJ	_	Gender=Fem|Number=Plur	33	amod	_	_
+35	provocou	provocar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	ccomp	_	_
+36	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	37	det	_	_
+37	instabilidade	instabilidade	NOUN	_	Gender=Fem|Number=Sing	35	obj	_	_
+38-39	no	_	_	_	_	_	_	_	_
+38	em	em	ADP	_	_	40	case	_	_
+39	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	40	det	_	_
+40	solo	solo	NOUN	_	Gender=Masc|Number=Sing	35	obl	_	SpaceAfter=No
+41	.	.	PUNCT	_	_	5	punct	_	_
+
+# sent_id = faketruebr:509-11
+# text = Com isso, a Braskem decidiu paralisar todas as atividades no estado.
+1	Com	com	ADP	_	_	2	case	_	_
+2	isso	isso	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	6	obl	_	SpaceAfter=No
+3	,	,	PUNCT	_	_	2	punct	_	_
+4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
+5	Braskem	Braskem	PROPN	_	_	6	nsubj	_	_
+6	decidiu	decidir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+7	paralisar	paralisar	VERB	_	VerbForm=Inf	6	xcomp	_	_
+8	todas	todo	DET	_	Gender=Fem|Number=Plur|PronType=Ind	10	det	_	_
+9	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	10	det	_	_
+10	atividades	atividade	NOUN	_	Gender=Fem|Number=Plur	7	obj	_	_
+11-12	no	_	_	_	_	_	_	_	_
+11	em	em	ADP	_	_	13	case	_	_
+12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
+13	estado	estado	NOUN	_	Gender=Masc|Number=Sing	7	obl	_	SpaceAfter=No
+14	.	.	PUNCT	_	_	6	punct	_	_
+
+# sent_id = faketruebr:509-12
+# text = Agora, veja o que mudamos:
+1	Agora	agora	ADV	_	_	3	advmod	_	SpaceAfter=No
+2	,	,	PUNCT	_	_	1	punct	_	_
+3	veja	ver	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+4	o	o	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Dem	3	obj	_	_
+5	que	que	PRON	_	PronType=Int	4	fixed	_	_
+6	mudamos	mudar	VERB	_	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	4	acl:relcl	_	SpaceAfter=No
+7	:	:	PUNCT	_	_	3	punct	_	_
+
+# sent_id = faketruebr:509-13
+# text = No ano da ocorrência do fenômeno de rachaduras, mudei "fevereiro de 218" para "fevereiro de 218".
+1-2	No	_	_	_	_	_	_	_	_
+1	Em	em	ADP	_	_	3	case	_	_
+2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
+3	ano	ano	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	_
+4-5	da	_	_	_	_	_	_	_	_
+4	de	de	ADP	_	_	6	case	_	_
+5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
+6	ocorrência	ocorrência	NOUN	_	Gender=Fem|Number=Sing	3	nmod	_	_
+7-8	do	_	_	_	_	_	_	_	_
+7	de	de	ADP	_	_	9	case	_	_
+8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
+9	fenômeno	fenômeno	NOUN	_	Gender=Masc|Number=Sing	6	nmod	_	_
+10	de	de	ADP	_	_	11	case	_	_
+11	rachaduras	rachadura	NOUN	_	Gender=Fem|Number=Plur	9	nmod	_	SpaceAfter=No
+12	,	,	PUNCT	_	_	3	punct	_	_
+13	mudei	mudar	VERB	_	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	_	_
+14	"	"	PUNCT	_	_	15	punct	_	SpaceAfter=No
+15	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	13	obj	_	_
+16	de	de	ADP	_	_	17	case	_	_
+17	218	218	NUM	_	NumType=Card	15	nmod	_	SpaceAfter=No
+18	"	"	PUNCT	_	_	15	punct	_	_
+19	para	para	ADP	_	_	21	case	_	_
+20	"	"	PUNCT	_	_	21	punct	_	SpaceAfter=No
+21	fevereiro	fevereiro	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	_
+22	de	de	ADP	_	_	23	case	_	_
+23	218	218	NUM	_	NumType=Card	21	nmod	_	SpaceAfter=No
+24	"	"	PUNCT	_	_	21	punct	_	SpaceAfter=No
+25	.	.	PUNCT	_	_	13	punct	_	_
+
+# sent_id = faketruebr:509-14
+# text = Isso significa que a data foi alterada para o futuro, tornando a notícia uma fake news.
+1	Isso	isso	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	2	nsubj	_	_
+2	significa	significar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+3	que	que	SCONJ	_	_	7	mark	_	_
+4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
+5	data	data	NOUN	_	Gender=Fem|Number=Sing	7	nsubj:pass	_	_
+6	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	aux:pass	_	_
+7	alterada	alterar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	2	ccomp	_	_
+8	para	para	ADP	_	_	10	case	_	_
+9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
+10	futuro	futuro	NOUN	_	Gender=Masc|Number=Sing	7	obl	_	SpaceAfter=No
+11	,	,	PUNCT	_	_	12	punct	_	_
+12	tornando	tornar	VERB	_	VerbForm=Ger	7	advcl	_	_
+13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
+14	notícia	notícia	NOUN	_	Gender=Fem|Number=Sing	12	obj	_	_
+15	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
+16	fake	fake	X	_	Foreign=Yes	12	xcomp	_	_
+17	news	news	X	_	Foreign=Yes	16	flat:foreign	_	SpaceAfter=No
+18	.	.	PUNCT	_	_	2	punct	_	_
+
+# sent_id = faketruebr:509-15
+# text = O objetivo é mostrar que a notícia pode ser facilmente modificada para se tornar falsa.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
+2	objetivo	objetivo	NOUN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
+3	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	_	_
+4	mostrar	mostrar	VERB	_	VerbForm=Inf	0	root	_	_
+5	que	que	SCONJ	_	_	8	mark	_	_
+6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
+7	notícia	notícia	NOUN	_	Gender=Fem|Number=Sing	8	nsubj	_	_
+8	pode	poder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	ccomp	_	_
+9	ser	ser	AUX	_	VerbForm=Inf	11	aux:pass	_	_
+10	facilmente	facilmente	ADV	_	_	11	advmod	_	_
+11	modificada	modificar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	8	xcomp	_	_
+12	para	para	ADP	_	_	14	mark	_	_
+13	se	se	PRON	_	Case=Nom|Person=3|PronType=Prs	14	expl	_	_
+14	tornar	tornar	VERB	_	VerbForm=Inf	11	advcl	_	_
+15	falsa	falso	ADJ	_	Gender=Fem|Number=Sing	14	xcomp	_	SpaceAfter=No
+16	.	.	PUNCT	_	_	4	punct	_	_
+
+# sent_id = faketruebr:509-16
+# text = No número de imóveis afetados, mudei "8 mil imóveis" para "2,48 moradias".
+1-2	No	_	_	_	_	_	_	_	_
+1	Em	em	ADP	_	_	3	case	_	_
+2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
+3	número	número	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	_
+4	de	de	ADP	_	_	5	case	_	_
+5	imóveis	imóvel	NOUN	_	Number=Plur	3	nmod	_	_
+6	afetados	afetar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	5	acl	_	SpaceAfter=No
+7	,	,	PUNCT	_	_	3	punct	_	_
+8	mudei	mudar	VERB	_	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	_	_
+9	"	"	PUNCT	_	_	12	punct	_	SpaceAfter=No
+10	8	8	NUM	_	NumType=Card	12	nummod	_	_
+11	mil	mil	NUM	_	NumType=Card	10	flat	_	_
+12	imóveis	imóvel	NOUN	_	Number=Plur	8	obj	_	SpaceAfter=No
+13	"	"	PUNCT	_	_	12	punct	_	_
+14	para	para	ADP	_	_	17	case	_	_
+15	"	"	PUNCT	_	_	17	punct	_	SpaceAfter=No
+16	2,48	2,48	NUM	_	NumType=Card	17	nummod	_	_
+17	moradias	moradia	NOUN	_	Gender=Fem|Number=Plur	8	obl	_	SpaceAfter=No
+18	"	"	PUNCT	_	_	17	punct	_	SpaceAfter=No
+19	.	.	PUNCT	_	_	8	punct	_	_
+
+# sent_id = faketruebr:509-17
+# text = Isso torna a notícia claramente inverídica e destaca a falta de conhecimento técnico na alteração das estatísticas.
+1	Isso	isso	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	2	nsubj	_	_
+2	torna	tornar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
+4	notícia	notícia	NOUN	_	Gender=Fem|Number=Sing	2	obj	_	_
+5	claramente	claramente	ADV	_	_	6	advmod	_	_
+6	inverídica	inverídico	ADJ	_	Gender=Fem|Number=Sing	2	xcomp	_	_
+7	e	e	CCONJ	_	_	8	cc	_	_
+8	destaca	destacar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	conj	_	_
+9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
+10	falta	falta	NOUN	_	Gender=Fem|Number=Sing	8	obj	_	_
+11	de	de	ADP	_	_	12	case	_	_
+12	conhecimento	conhecimento	NOUN	_	Gender=Masc|Number=Sing	10	nmod	_	_
+13	técnico	técnico	ADJ	_	Gender=Masc|Number=Sing	12	amod	_	_
+14-15	na	_	_	_	_	_	_	_	_
+14	em	em	ADP	_	_	16	case	_	_
+15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
+16	alteração	alteração	NOUN	_	Gender=Fem|Number=Sing	10	nmod	_	_
+17-18	das	_	_	_	_	_	_	_	_
+17	de	de	ADP	_	_	19	case	_	_
+18	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	19	det	_	_
+19	estatísticas	estatístico	NOUN	_	Gender=Fem|Number=Plur	16	nmod	_	SpaceAfter=No
+20	.	.	PUNCT	_	_	2	punct	_	_
+
+# sent_id = faketruebr:509-18
+# text = No valor das indenizações, mudei "R$ 81,5 mil" para "R$ 81,5 mil a proprietários de cada imóvel atingido pelas rachaduras".
+1-2	No	_	_	_	_	_	_	_	_
+1	Em	em	ADP	_	_	3	case	_	_
+2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
+3	valor	valor	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	_
+4-5	das	_	_	_	_	_	_	_	_
+4	de	de	ADP	_	_	6	case	_	_
+5	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	6	det	_	_
+6	indenizações	indenização	NOUN	_	Gender=Fem|Number=Plur	3	nmod	_	SpaceAfter=No
+7	,	,	PUNCT	_	_	3	punct	_	_
+8	mudei	mudar	VERB	_	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	_	_
+9	"	"	PUNCT	_	_	10	punct	_	SpaceAfter=No
+10	R$	R$	SYM	_	_	8	obj	_	_
+11	81,5	81,5	NUM	_	NumType=Card	10	nummod	_	_
+12	mil	mil	NUM	_	NumType=Card	11	flat	_	SpaceAfter=No
+13	"	"	PUNCT	_	_	10	punct	_	_
+14	para	para	ADP	_	_	16	case	_	_
+15	"	"	PUNCT	_	_	16	punct	_	SpaceAfter=No
+16	R$	R$	SYM	_	_	8	obl	_	_
+17	81,5	81,5	NUM	_	NumType=Card	16	nummod	_	_
+18	mil	mil	NUM	_	NumType=Card	11	flat	_	_
+19	a	a	ADP	_	_	20	case	_	_
+20	proprietários	proprietário	NOUN	_	Gender=Masc|Number=Plur	16	nmod	_	_
+21	de	de	ADP	_	_	23	case	_	_
+22	cada	cada	DET	_	Number=Sing|PronType=Ind	23	det	_	_
+23	imóvel	imóvel	NOUN	_	Number=Sing	20	nmod	_	_
+24	atingido	atingir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	23	acl	_	_
+25-26	pelas	_	_	_	_	_	_	_	_
+25	por	por	ADP	_	_	27	case	_	_
+26	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	27	det	_	_
+27	rachaduras	rachadura	NOUN	_	Gender=Fem|Number=Plur	24	obl:agent	_	SpaceAfter=No
+28	"	"	PUNCT	_	_	16	punct	_	SpaceAfter=No
+29	.	.	PUNCT	_	_	8	punct	_	_
+
+# sent_id = faketruebr:509-19
+# text = Isso torna a notícia mais atraente para os leitores, criando uma sensação de injustiça e levando a uma maior expectativa de que o valor pode ser mais alto.
+1	Isso	isso	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	2	nsubj	_	_
+2	torna	tornar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
+4	notícia	notícia	NOUN	_	Gender=Fem|Number=Sing	2	obj	_	_
+5	mais	mais	ADV	_	_	6	advmod	_	_
+6	atraente	atraente	ADJ	_	Number=Sing	2	xcomp	_	_
+7	para	para	ADP	_	_	9	case	_	_
+8	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	9	det	_	_
+9	leitores	leitor	NOUN	_	Gender=Masc|Number=Plur	6	obl	_	SpaceAfter=No
+10	,	,	PUNCT	_	_	11	punct	_	_
+11	criando	criar	VERB	_	VerbForm=Ger	2	advcl	_	_
+12	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
+13	sensação	sensação	NOUN	_	Gender=Fem|Number=Sing	11	obj	_	_
+14	de	de	ADP	_	_	15	case	_	_
+15	injustiça	injustiça	NOUN	_	Gender=Fem|Number=Sing	13	nmod	_	_
+16	e	e	CCONJ	_	_	17	cc	_	_
+17	levando	levar	VERB	_	VerbForm=Ger	11	conj	_	_
+18	a	a	ADP	_	_	21	case	_	_
+19	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	21	det	_	_
+20	maior	maior	ADJ	_	Number=Sing	21	amod	_	_
+21	expectativa	expectativa	NOUN	_	Gender=Fem|Number=Sing	17	obl	_	_
+22	de	de	ADP	_	_	26	mark	_	_
+23	que	que	SCONJ	_	_	22	fixed	_	_
+24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	_	_
+25	valor	valor	NOUN	_	Gender=Masc|Number=Sing	26	nsubj	_	_
+26	pode	poder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	21	acl	_	_
+27	ser	ser	AUX	_	VerbForm=Inf	29	cop	_	_
+28	mais	mais	ADV	_	_	29	advmod	_	_
+29	alto	alto	ADJ	_	Gender=Masc|Number=Sing	26	xcomp	_	SpaceAfter=No
+30	.	.	PUNCT	_	_	2	punct	_	_
+
+# sent_id = faketruebr:509-20
+# text = No programa de indenizações da Braskem, mudei "em dezembro de 219" para "em dezembro de 219".
+1-2	No	_	_	_	_	_	_	_	_
+1	Em	em	ADP	_	_	3	case	_	_
+2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
+3	programa	programa	NOUN	_	Gender=Masc|Number=Sing	10	obl	_	_
+4	de	de	ADP	_	_	5	case	_	_
+5	indenizações	indenização	NOUN	_	Gender=Fem|Number=Plur	3	nmod	_	_
+6-7	da	_	_	_	_	_	_	_	_
+6	de	de	ADP	_	_	8	case	_	_
+7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
+8	Braskem	Braskem	PROPN	_	_	3	nmod	_	SpaceAfter=No
+9	,	,	PUNCT	_	_	3	punct	_	_
+10	mudei	mudar	VERB	_	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	_	_
+11	"	"	PUNCT	_	_	13	punct	_	SpaceAfter=No
+12	em	em	ADP	_	_	13	case	_	_
+13	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	10	obl	_	_
+14	de	de	ADP	_	_	15	case	_	_
+15	219	219	NUM	_	NumType=Card	13	nmod	_	SpaceAfter=No
+16	"	"	PUNCT	_	_	13	punct	_	_
+17	para	para	ADP	_	_	20	case	_	_
+18	"	"	PUNCT	_	_	20	punct	_	SpaceAfter=No
+19	em	em	ADP	_	_	20	case	_	_
+20	dezembro	dezembro	NOUN	_	Gender=Masc|Number=Sing	10	obl	_	_
+21	de	de	ADP	_	_	22	case	_	_
+22	219	219	NUM	_	NumType=Card	20	nmod	_	SpaceAfter=No
+23	"	"	PUNCT	_	_	20	punct	_	SpaceAfter=No
+24	.	.	PUNCT	_	_	10	punct	_	_
+
+# sent_id = faketruebr:509-21
+# text = Isso torna a notícia uma fake news, pois o anúncio de um programa de indenizações é mais uma tentativa de ganhar simpatia do que uma notícia real.
+1	Isso	isso	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	2	nsubj	_	_
+2	torna	tornar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	_	_
+4	notícia	notícia	NOUN	_	Gender=Fem|Number=Sing	2	obj	_	_
+5	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
+6	fake	fake	X	_	Foreign=Yes	2	xcomp	_	_
+7	news	news	X	_	Foreign=Yes	6	flat:foreign	_	SpaceAfter=No
+8	,	,	PUNCT	_	_	20	punct	_	_
+9	pois	pois	SCONJ	_	_	20	mark	_	_
+10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
+11	anúncio	anúncio	NOUN	_	Gender=Masc|Number=Sing	20	nsubj	_	_
+12	de	de	ADP	_	_	14	case	_	_
+13	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
+14	programa	programa	NOUN	_	Gender=Masc|Number=Sing	11	nmod	_	_
+15	de	de	ADP	_	_	16	case	_	_
+16	indenizações	indenização	NOUN	_	Gender=Fem|Number=Plur	14	nmod	_	_
+17	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	20	cop	_	_
+18	mais	mais	ADV	_	_	20	advmod	_	_
+19	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
+20	tentativa	tentativa	NOUN	_	Gender=Fem|Number=Sing	2	advcl	_	_
+21	de	de	ADP	_	_	22	mark	_	_
+22	ganhar	ganhar	VERB	_	VerbForm=Inf	20	acl	_	_
+23	simpatia	simpatia	NOUN	_	Gender=Fem|Number=Sing	22	obj	_	_
+24-25	do	_	_	_	_	_	_	_	_
+24	de	de	ADP	_	_	28	mark	_	_
+25	o	o	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Dem	24	fixed	_	_
+26	que	que	PRON	_	PronType=Rel	24	fixed	_	_
+27	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	28	det	_	_
+28	notícia	notícia	NOUN	_	Gender=Fem|Number=Sing	20	advcl	_	_
+29	real	real	ADJ	_	Number=Sing	28	amod	_	SpaceAfter=No
+30	.	.	PUNCT	_	_	2	punct	_	_
+
+# sent_id = faketruebr:509-22
+# text = Essas alterações tornam a notícia uma fake news, criando expectativas falsas e gerando uma sensação de injustiça.
+1	Essas	esse	DET	_	Gender=Fem|Number=Plur|PronType=Dem	2	det	_	_
+2	alterações	alteração	NOUN	_	Gender=Fem|Number=Plur	3	nsubj	_	_
+3	tornam	tornar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
+5	notícia	notícia	NOUN	_	Gender=Fem|Number=Sing	3	obj	_	_
+6	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
+7	fake	fake	X	_	Foreign=Yes	3	xcomp	_	_
+8	news	news	X	_	Foreign=Yes	7	flat:foreign	_	SpaceAfter=No
+9	,	,	PUNCT	_	_	10	punct	_	_
+10	criando	criar	VERB	_	VerbForm=Ger	3	advcl	_	_
+11	expectativas	expectativa	NOUN	_	Gender=Fem|Number=Plur	10	obj	_	_
+12	falsas	falso	ADJ	_	Gender=Fem|Number=Plur	11	amod	_	_
+13	e	e	CCONJ	_	_	14	cc	_	_
+14	gerando	gerar	VERB	_	VerbForm=Ger	10	conj	_	_
+15	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
+16	sensação	sensação	NOUN	_	Gender=Fem|Number=Sing	14	obj	_	_
+17	de	de	ADP	_	_	18	case	_	_
+18	injustiça	injustiça	NOUN	_	Gender=Fem|Number=Sing	16	nmod	_	SpaceAfter=No
+19	.	.	PUNCT	_	_	3	punct	_	_
+

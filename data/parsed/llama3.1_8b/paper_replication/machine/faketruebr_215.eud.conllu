@@ -1,0 +1,383 @@
+# global.columns = ID FORM LEMMA UPOS XPOS FEATS HEAD DEPREL DEPS MISC
+# sent_id = faketruebr:215-1
+# text = Adidas lança programa de recrutamento de influenciadores e oferece pacote de R$ 10.000,00 por mês para 3 pessoas.
+1	Adidas	Adidas	PROPN	_	_	2	nsubj	2:nsubj|9:nsubj	_
+2	lança	lançar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+3	programa	programa	NOUN	_	Gender=Masc|Number=Sing	2	obj	2:obj	_
+4	de	de	ADP	_	_	5	case	5:case	_
+5	recrutamento	recrutamento	NOUN	_	Gender=Masc|Number=Sing	3	nmod	3:nmod:de	_
+6	de	de	ADP	_	_	7	case	7:case	_
+7	influenciadores	influenciador	NOUN	_	Gender=Masc|Number=Plur	5	nmod	5:nmod:de	_
+8	e	e	CCONJ	_	_	9	cc	9:cc	_
+9	oferece	oferecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	conj	2:conj:e	_
+10	pacote	pacote	NOUN	_	Gender=Masc|Number=Sing	9	obj	9:obj	_
+11	de	de	ADP	_	_	12	case	12:case	_
+12	R$	R$	SYM	_	_	10	nmod	10:nmod:de	_
+13	10.000,00	10.000,00	NUM	_	NumType=Card	12	nummod	12:nummod	_
+14	por	por	ADP	_	_	15	case	15:case	_
+15	mês	mês	NOUN	_	Gender=Masc|Number=Sing	12	nmod	12:nmod:por	_
+16	para	para	ADP	_	_	18	case	18:case	_
+17	3	3	NUM	_	NumType=Card	18	nummod	18:nummod	_
+18	pessoas	pessoa	NOUN	_	Gender=Fem|Number=Plur	9	obl	9:obl:para	SpaceAfter=No
+19	.	.	PUNCT	_	_	2	punct	2:punct	_
+
+# sent_id = faketruebr:215-2
+# text = A empresa está buscando talentos para representar a marca nas redes sociais e compartilhar conteúdo criativo e autêntico.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	2:det	_
+2	empresa	empresa	NOUN	_	Gender=Fem|Number=Sing	4	nsubj	4:nsubj	_
+3	está	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
+4	buscando	buscar	VERB	_	VerbForm=Ger	0	root	0:root	_
+5	talentos	talento	NOUN	_	Gender=Masc|Number=Plur	4	obj	4:obj	_
+6	para	para	ADP	_	_	7	mark	7:mark|15:mark	_
+7	representar	representar	VERB	_	VerbForm=Inf	4	advcl	4:advcl:para	_
+8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	9:det	_
+9	marca	marca	NOUN	_	Gender=Fem|Number=Sing	7	obj	7:obj	_
+10-11	nas	_	_	_	_	_	_	_	_
+10	em	em	ADP	_	_	12	case	12:case	_
+11	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	12	det	12:det	_
+12	redes	rede	NOUN	_	Gender=Fem|Number=Plur	7	obl	7:obl:em	_
+13	sociais	social	ADJ	_	Number=Plur	12	amod	12:amod	_
+14	e	e	CCONJ	_	_	15	cc	15:cc	_
+15	compartilhar	compartilhar	VERB	_	VerbForm=Inf	7	conj	4:advcl:para|7:conj:e	_
+16	conteúdo	conteúdo	NOUN	_	Gender=Masc|Number=Sing	15	obj	15:obj	_
+17	criativo	criativo	ADJ	_	Gender=Masc|Number=Sing	16	amod	16:amod	_
+18	e	e	CCONJ	_	_	19	cc	19:cc	_
+19	autêntico	autêntico	ADJ	_	Gender=Masc|Number=Sing	17	conj	16:amod|17:conj:e	SpaceAfter=No
+20	.	.	PUNCT	_	_	4	punct	4:punct	_
+
+# sent_id = faketruebr:215-3
+# text = Para participar, é necessário ter no mínimo 5.000 seguidores, seguir o perfil adidasbrasil, repostar a foto com as instruções na história e marcar o perfil no post.
+1	Para	para	ADP	_	_	2	mark	2:mark	_
+2	participar	participar	VERB	_	VerbForm=Inf	5	advcl	5:advcl:para	SpaceAfter=No
+3	,	,	PUNCT	_	_	2	punct	2:punct	_
+4	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
+5	necessário	necessário	ADJ	_	Gender=Masc|Number=Sing	0	root	0:root	_
+6	ter	ter	VERB	_	VerbForm=Inf	5	csubj	5:csubj	_
+7-8	no	_	_	_	_	_	_	_	_
+7	em	em	ADP	_	_	9	case	9:case	_
+8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	9:det	_
+9	mínimo	mínimo	NOUN	_	Gender=Masc|Number=Sing	6	obl	6:obl:em	_
+10	5.000	5.000	NUM	_	NumType=Card	11	nummod	11:nummod	_
+11	seguidores	seguidor	NOUN	_	Gender=Masc|Number=Plur	6	obj	6:obj	SpaceAfter=No
+12	,	,	PUNCT	_	_	13	punct	13:punct	_
+13	seguir	seguir	VERB	_	VerbForm=Inf	6	conj	5:csubj|6:conj:e	_
+14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	15:det	_
+15	perfil	perfil	NOUN	_	Gender=Masc|Number=Sing	13	obj	13:obj	_
+16	adidasbrasil	adidasbrasil	X	_	_	15	nmod	15:nmod	SpaceAfter=No
+17	,	,	PUNCT	_	_	18	punct	18:punct	_
+18	repostar	repostar	VERB	_	VerbForm=Inf	6	conj	5:csubj|6:conj:e	_
+19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	20:det	_
+20	foto	foto	NOUN	_	Number=Sing	18	obj	18:obj	_
+21	com	com	ADP	_	_	23	case	23:case	_
+22	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	23	det	23:det	_
+23	instruções	instrução	NOUN	_	Gender=Fem|Number=Plur	18	obl	18:obl:com	_
+24-25	na	_	_	_	_	_	_	_	_
+24	em	em	ADP	_	_	26	case	26:case	_
+25	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	26	det	26:det	_
+26	história	história	NOUN	_	Gender=Fem|Number=Sing	23	nmod	23:nmod:em	_
+27	e	e	CCONJ	_	_	28	cc	28:cc	_
+28	marcar	marcar	VERB	_	VerbForm=Inf	6	conj	5:csubj|6:conj:e	_
+29	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	30	det	30:det	_
+30	perfil	perfil	NOUN	_	Gender=Masc|Number=Sing	28	obj	28:obj	_
+31-32	no	_	_	_	_	_	_	_	_
+31	em	em	ADP	_	_	33	case	33:case	_
+32	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	33	det	33:det	_
+33	post	post	NOUN	_	Gender=Masc|Number=Sing	28	obl	28:obl:em	SpaceAfter=No
+34	.	.	PUNCT	_	_	5	punct	5:punct	_
+
+# sent_id = faketruebr:215-4
+# text = Além disso, os selecionados terão a oportunidade de viagens gratuitas e experiências incríveis com a marca.
+1	Além	além	ADV	_	_	7	advmod	7:advmod	_
+2-3	disso	_	_	_	_	_	_	_	SpaceAfter=No
+2	de	de	ADP	_	_	3	case	3:case	_
+3	isso	isso	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	1	obl	1:obl:de	_
+4	,	,	PUNCT	_	_	1	punct	1:punct	_
+5	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	6	det	6:det	_
+6	selecionados	selecionado	NOUN	_	Gender=Masc|Number=Plur	7	nsubj	7:nsubj	_
+7	terão	ter	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin	0	root	0:root	_
+8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	9:det	_
+9	oportunidade	oportunidade	NOUN	_	Gender=Fem|Number=Sing	7	obj	7:obj	_
+10	de	de	ADP	_	_	11	case	11:case|14:case	_
+11	viagens	viagem	NOUN	_	Gender=Fem|Number=Plur	9	nmod	9:nmod:de	_
+12	gratuitas	gratuito	ADJ	_	Gender=Fem|Number=Plur	11	amod	11:amod	_
+13	e	e	CCONJ	_	_	14	cc	14:cc	_
+14	experiências	experiência	NOUN	_	Gender=Fem|Number=Plur	11	conj	9:nmod:de|11:conj:e	_
+15	incríveis	incrível	ADJ	_	Number=Plur	14	amod	14:amod	_
+16	com	com	ADP	_	_	18	case	18:case	_
+17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	18:det	_
+18	marca	marca	NOUN	_	Gender=Fem|Number=Sing	14	nmod	14:nmod:com	SpaceAfter=No
+19	.	.	PUNCT	_	_	7	punct	7:punct	_
+
+# sent_id = faketruebr:215-5
+# text = O programa é uma oportunidade única para aqueles que se destacam pela criatividade e paixão pela marca.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	2:det	_
+2	programa	programa	NOUN	_	Gender=Masc|Number=Sing	5	nsubj	5:nsubj	_
+3	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
+4	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	5	det	5:det	_
+5	oportunidade	oportunidade	NOUN	_	Gender=Fem|Number=Sing	0	root	0:root	_
+6	única	único	ADJ	_	Gender=Fem|Number=Sing	5	amod	5:amod	_
+7	para	para	ADP	_	_	8	case	8:case	_
+8	aqueles	aquele	PRON	_	Gender=Masc|Number=Plur|PronType=Dem	5	nmod	5:nmod:para|11:nsubj	_
+9	que	que	PRON	_	PronType=Rel	11	nsubj	8:ref	_
+10	se	se	PRON	_	Case=Nom|Person=3|PronType=Prs	11	expl	11:expl	_
+11	destacam	destacar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	8	acl:relcl	8:acl:relcl	_
+12-13	pela	_	_	_	_	_	_	_	_
+12	por	por	ADP	_	_	14	case	14:case|16:case	_
+13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	14:det	_
+14	criatividade	criatividade	NOUN	_	Gender=Fem|Number=Sing	11	obl	11:obl:por	_
+15	e	e	CCONJ	_	_	16	cc	16:cc	_
+16	paixão	paixão	NOUN	_	Gender=Fem|Number=Sing	14	conj	11:obl:por|14:conj:e	_
+17-18	pela	_	_	_	_	_	_	_	_
+17	por	por	ADP	_	_	19	case	19:case	_
+18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	19	det	19:det	_
+19	marca	marca	NOUN	_	Gender=Fem|Number=Sing	14	nmod	14:nmod:por|16:nmod:por	SpaceAfter=No
+20	.	.	PUNCT	_	_	5	punct	5:punct	_
+
+# sent_id = faketruebr:215-6
+# text = A Adidas está sempre em busca de novos talentos e está ansiosa para conhecer os candidatos que estarão prontos para representar a marca em todo o país.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	2:det	_
+2	Adidas	Adidas	PROPN	_	_	6	nsubj	6:nsubj|12:nsubj	_
+3	está	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
+4	sempre	sempre	ADV	_	_	6	advmod	6:advmod	_
+5	em	em	ADP	_	_	6	case	6:case	_
+6	busca	busca	NOUN	_	Gender=Fem|Number=Sing	0	root	0:root	_
+7	de	de	ADP	_	_	9	case	9:case	_
+8	novos	novo	ADJ	_	Gender=Masc|Number=Plur	9	amod	9:amod	_
+9	talentos	talento	NOUN	_	Gender=Masc|Number=Plur	6	nmod	6:nmod:de	_
+10	e	e	CCONJ	_	_	12	cc	12:cc	_
+11	está	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	cop	12:cop	_
+12	ansiosa	ansioso	ADJ	_	Gender=Fem|Number=Sing	6	conj	6:conj:e	_
+13	para	para	ADP	_	_	14	mark	14:mark	_
+14	conhecer	conhecer	VERB	_	VerbForm=Inf	12	acl	12:acl:para	_
+15	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	16	det	16:det	_
+16	candidatos	candidato	NOUN	_	Gender=Masc|Number=Plur	14	obj	14:obj|19:nsubj	_
+17	que	que	PRON	_	PronType=Rel	19	nsubj	16:ref	_
+18	estarão	estar	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin	19	cop	19:cop	_
+19	prontos	pronto	ADJ	_	Gender=Masc|Number=Plur	16	acl:relcl	16:acl:relcl	_
+20	para	para	ADP	_	_	21	mark	21:mark	_
+21	representar	representar	VERB	_	VerbForm=Inf	19	acl	19:acl:para	_
+22	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	23	det	23:det	_
+23	marca	marca	NOUN	_	Gender=Fem|Number=Sing	21	obj	21:obj	_
+24	em	em	ADP	_	_	27	case	27:case	_
+25	todo	todo	DET	_	Gender=Masc|Number=Sing|PronType=Ind	27	det	27:det	_
+26	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	27	det	27:det	_
+27	país	país	NOUN	_	Gender=Masc|Number=Sing	21	obl	21:obl:em	SpaceAfter=No
+28	.	.	PUNCT	_	_	6	punct	6:punct	_
+
+# sent_id = faketruebr:215-7
+# text = Além disso, o CEO da Adidas, Kasper Rorsted, publicou uma postagem no perfil da empresa, destacando a importância do programa e a oportunidade que ele oferece para os jovens talentos.
+1	Além	além	ADV	_	_	14	advmod	14:advmod	_
+2-3	disso	_	_	_	_	_	_	_	SpaceAfter=No
+2	de	de	ADP	_	_	3	case	3:case	_
+3	isso	isso	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	1	obl	1:obl:de	_
+4	,	,	PUNCT	_	_	1	punct	1:punct	_
+5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	6:det	_
+6	CEO	CEO	PROPN	_	_	14	nsubj	14:nsubj	_
+7-8	da	_	_	_	_	_	_	_	_
+7	de	de	ADP	_	_	9	case	9:case	_
+8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	9:det	_
+9	Adidas	Adidas	PROPN	_	_	6	nmod	6:nmod:de	SpaceAfter=No
+10	,	,	PUNCT	_	_	11	punct	11:punct	_
+11	Kasper	Kasper	PROPN	_	_	6	appos	6:appos	_
+12	Rorsted	Rorsted	PROPN	_	_	11	flat:name	11:flat:name	SpaceAfter=No
+13	,	,	PUNCT	_	_	11	punct	11:punct	_
+14	publicou	publicar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+15	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	16	det	16:det	_
+16	postagem	postagem	NOUN	_	Gender=Fem|Number=Sing	14	obj	14:obj	_
+17-18	no	_	_	_	_	_	_	_	_
+17	em	em	ADP	_	_	19	case	19:case	_
+18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	19	det	19:det	_
+19	perfil	perfil	NOUN	_	Gender=Masc|Number=Sing	16	nmod	16:nmod:em	_
+20-21	da	_	_	_	_	_	_	_	_
+20	de	de	ADP	_	_	22	case	22:case	_
+21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	22:det	_
+22	empresa	empresa	NOUN	_	Gender=Fem|Number=Sing	19	nmod	19:nmod:de	SpaceAfter=No
+23	,	,	PUNCT	_	_	24	punct	24:punct	_
+24	destacando	destacar	VERB	_	VerbForm=Ger	14	advcl	14:advcl	_
+25	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	26	det	26:det	_
+26	importância	importância	NOUN	_	Gender=Fem|Number=Sing	24	obj	24:obj	_
+27-28	do	_	_	_	_	_	_	_	_
+27	de	de	ADP	_	_	29	case	29:case	_
+28	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	29	det	29:det	_
+29	programa	programa	NOUN	_	Gender=Masc|Number=Sing	26	nmod	26:nmod:de	_
+30	e	e	CCONJ	_	_	32	cc	32:cc	_
+31	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	32	det	32:det	_
+32	oportunidade	oportunidade	NOUN	_	Gender=Fem|Number=Sing	26	conj	24:obj|26:conj:e|35:obj	_
+33	que	que	PRON	_	PronType=Rel	35	obj	32:ref	_
+34	ele	ele	PRON	_	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	35	nsubj	35:nsubj	_
+35	oferece	oferecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	32	acl:relcl	32:acl:relcl	_
+36	para	para	ADP	_	_	39	case	39:case	_
+37	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	39	det	39:det	_
+38	jovens	jovem	ADJ	_	Number=Plur	39	amod	39:amod	_
+39	talentos	talento	NOUN	_	Gender=Masc|Number=Plur	35	obl	35:obl:para	SpaceAfter=No
+40	.	.	PUNCT	_	_	14	punct	14:punct	_
+
+# sent_id = faketruebr:215-8
+# text = Estamos emocionados em lançar este programa e estamos ansiosos para conhecer os nossos futuros parceiros de marketing.
+1	Estamos	estar	AUX	_	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	2	cop	2:cop	_
+2	emocionados	emocionado	ADJ	_	Gender=Masc|Number=Plur|VerbForm=Part	0	root	0:root	_
+3	em	em	ADP	_	_	4	mark	4:mark	_
+4	lançar	lançar	VERB	_	VerbForm=Inf	2	acl	2:acl:em	_
+5	este	este	DET	_	Gender=Masc|Number=Sing|PronType=Dem	6	det	6:det	_
+6	programa	programa	NOUN	_	Gender=Masc|Number=Sing	4	obj	4:obj	_
+7	e	e	CCONJ	_	_	9	cc	9:cc	_
+8	estamos	estar	AUX	_	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
+9	ansiosos	ansioso	ADJ	_	Gender=Masc|Number=Plur	2	conj	2:conj:e	_
+10	para	para	ADP	_	_	11	mark	11:mark	_
+11	conhecer	conhecer	VERB	_	VerbForm=Inf	9	acl	9:acl:para	_
+12	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	15	det	15:det	_
+13	nossos	nosso	DET	_	Gender=Masc|Number=Plur|Person=1|Poss=Yes|PronType=Prs	15	det	15:det	_
+14	futuros	futuro	ADJ	_	Gender=Masc|Number=Plur	15	amod	15:amod	_
+15	parceiros	parceiro	NOUN	_	Gender=Masc|Number=Plur	11	obj	11:obj	_
+16	de	de	ADP	_	_	17	case	17:case	_
+17	marketing	marketing	NOUN	_	Gender=Masc|Number=Sing	15	nmod	15:nmod:de	SpaceAfter=No
+18	.	.	PUNCT	_	_	2	punct	2:punct	_
+
+# sent_id = faketruebr:215-9
+# text = Eles terão a chance de trabalhar com a nossa equipe e criar conteúdo incrível que nos inspire e nos motiva a continuar crescendo e inovando, disse Rorsted.
+1	Eles	ele	PRON	_	Case=Nom|Gender=Masc|Number=Plur|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
+2	terão	ter	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin	27	ccomp:speech	27:ccomp:speech	_
+3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	4:det	_
+4	chance	chance	NOUN	_	Gender=Fem|Number=Sing	2	obj	2:obj	_
+5	de	de	ADP	_	_	6	mark	6:mark|12:mark	_
+6	trabalhar	trabalhar	VERB	_	VerbForm=Inf	4	acl	4:acl:de	_
+7	com	com	ADP	_	_	10	case	10:case	_
+8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	10:det	_
+9	nossa	nosso	DET	_	Gender=Fem|Number=Sing|Person=1|Poss=Yes|PronType=Prs	10	det	10:det	_
+10	equipe	equipe	NOUN	_	Gender=Fem|Number=Sing	6	obl	6:obl:com	_
+11	e	e	CCONJ	_	_	12	cc	12:cc	_
+12	criar	criar	VERB	_	VerbForm=Inf	6	conj	4:acl:de|6:conj:e	_
+13	conteúdo	conteúdo	NOUN	_	Gender=Masc|Number=Sing	12	obj	12:obj|17:nsubj|20:nsubj	_
+14	incrível	incrível	ADJ	_	Number=Sing	13	amod	13:amod	_
+15	que	que	PRON	_	PronType=Rel	17	nsubj	13:ref	_
+16	nos	nos	PRON	_	Case=Acc|Number=Plur|Person=1|PronType=Prs	17	obj	17:obj	_
+17	inspire	inspirar	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	acl:relcl	13:acl:relcl	_
+18	e	e	CCONJ	_	_	20	cc	20:cc	_
+19	nos	nos	PRON	_	Case=Acc|Number=Plur|Person=1|PronType=Prs	20	obj	20:obj|22:nsubj|23:nsubj|25:nsubj	_
+20	motiva	motivar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	17	conj	13:acl:relcl|17:conj:e	_
+21	a	a	ADP	_	_	22	mark	22:mark	_
+22	continuar	continuar	VERB	_	VerbForm=Inf	20	xcomp	20:xcomp	_
+23	crescendo	crescer	VERB	_	VerbForm=Ger	22	xcomp	22:xcomp	_
+24	e	e	CCONJ	_	_	25	cc	25:cc	_
+25	inovando	inovar	VERB	_	VerbForm=Ger	23	conj	22:xcomp|23:conj:e	SpaceAfter=No
+26	,	,	PUNCT	_	_	2	punct	2:punct	_
+27	disse	dizer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+28	Rorsted	Rorsted	PROPN	_	_	27	nsubj	27:nsubj	SpaceAfter=No
+29	.	.	PUNCT	_	_	27	punct	27:punct	_
+
+# sent_id = faketruebr:215-10
+# text = O programa está sendo realizado em parceria com a influenciadora digital, Natália Lima, que foi selecionada pela Adidas em 2018 e se tornou uma das principais representantes da marca nas redes sociais.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	2:det	_
+2	programa	programa	NOUN	_	Gender=Masc|Number=Sing	5	nsubj:pass	5:nsubj:pass	_
+3	está	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
+4	sendo	ser	AUX	_	VerbForm=Ger	5	aux:pass	5:aux:pass	_
+5	realizado	realizar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	0:root	_
+6	em	em	ADP	_	_	7	case	7:case	_
+7	parceria	parceria	NOUN	_	Gender=Fem|Number=Sing	5	obl	5:obl:em	_
+8	com	com	ADP	_	_	10	case	10:case	_
+9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	10:det	_
+10	influenciadora	influenciador	NOUN	_	Gender=Fem|Number=Sing	7	nmod	7:nmod:com|18:nsubj:pass|26:nsubj|27:nsubj	_
+11	digital	digital	ADJ	_	Number=Sing	10	amod	10:amod	SpaceAfter=No
+12	,	,	PUNCT	_	_	13	punct	13:punct	_
+13	Natália	Natália	PROPN	_	_	10	appos	10:appos	_
+14	Lima	Lima	PROPN	_	_	13	flat:name	13:flat:name	SpaceAfter=No
+15	,	,	PUNCT	_	_	13	punct	13:punct	_
+16	que	que	PRON	_	PronType=Rel	18	nsubj:pass	10:ref	_
+17	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	aux:pass	18:aux:pass	_
+18	selecionada	selecionar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	10	acl:relcl	10:acl:relcl	_
+19-20	pela	_	_	_	_	_	_	_	_
+19	por	por	ADP	_	_	21	case	21:case	_
+20	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	21	det	21:det	_
+21	Adidas	Adidas	PROPN	_	_	18	obl:agent	18:obl:agent	_
+22	em	em	ADP	_	_	23	case	23:case	_
+23	2018	2018	NUM	_	NumType=Card	18	obl	18:obl:em	_
+24	e	e	CCONJ	_	_	26	cc	26:cc	_
+25	se	se	PRON	_	Case=Nom|Person=3|PronType=Prs	26	expl	26:expl	_
+26	tornou	tornar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	conj	10:acl:relcl|18:conj:e	_
+27	uma	um	NUM	_	Gender=Fem|NumType=Card	26	xcomp	26:xcomp	_
+28-29	das	_	_	_	_	_	_	_	_
+28	de	de	ADP	_	_	31	case	31:case	_
+29	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	31	det	31:det	_
+30	principais	principal	ADJ	_	Number=Plur	31	amod	31:amod	_
+31	representantes	representante	NOUN	_	Number=Plur	27	nmod	27:nmod:de	_
+32-33	da	_	_	_	_	_	_	_	_
+32	de	de	ADP	_	_	34	case	34:case	_
+33	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	34	det	34:det	_
+34	marca	marca	NOUN	_	Gender=Fem|Number=Sing	31	nmod	31:nmod:de	_
+35-36	nas	_	_	_	_	_	_	_	_
+35	em	em	ADP	_	_	37	case	37:case	_
+36	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	37	det	37:det	_
+37	redes	rede	NOUN	_	Gender=Fem|Number=Plur	31	nmod	31:nmod:em	_
+38	sociais	social	ADJ	_	Number=Plur	37	amod	37:amod	SpaceAfter=No
+39	.	.	PUNCT	_	_	5	punct	5:punct	_
+
+# sent_id = faketruebr:215-11
+# text = Eu estou emocionada em estar aqui novamente e compartilhar com vocês a oportunidade que a Adidas está oferecendo.
+1	Eu	eu	PRON	_	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
+2	estou	estar	AUX	_	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
+3	emocionada	emocionado	ADJ	_	Gender=Fem|Number=Sing|VerbForm=Part	0	root	0:root	_
+4	em	em	ADP	_	_	6	mark	6:mark|9:mark	_
+5	estar	estar	AUX	_	VerbForm=Inf	6	cop	6:cop	_
+6	aqui	aqui	ADV	_	_	3	acl	3:acl:em	_
+7	novamente	novamente	ADV	_	_	6	advmod	6:advmod	_
+8	e	e	CCONJ	_	_	9	cc	9:cc	_
+9	compartilhar	compartilhar	VERB	_	VerbForm=Inf	6	conj	3:acl:em|6:conj:e	_
+10	com	com	ADP	_	_	11	case	11:case	_
+11	vocês	você	PRON	_	Case=Nom|Number=Plur|Person=2|PronType=Prs	9	obl	9:obl:com	_
+12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	13:det	_
+13	oportunidade	oportunidade	NOUN	_	Gender=Fem|Number=Sing	9	obj	9:obj|18:obj	_
+14	que	que	PRON	_	PronType=Rel	18	obj	13:ref	_
+15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	16:det	_
+16	Adidas	Adidas	PROPN	_	_	18	nsubj	18:nsubj	_
+17	está	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	aux	18:aux	_
+18	oferecendo	oferecer	VERB	_	VerbForm=Ger	13	acl:relcl	13:acl:relcl	SpaceAfter=No
+19	.	.	PUNCT	_	_	3	punct	3:punct	_
+
+# sent_id = faketruebr:215-12
+# text = É um programa incrível e vocês não devem perder!, disse Natália Lima.
+1	É	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
+2	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	3	det	3:det	_
+3	programa	programa	NOUN	_	Gender=Masc|Number=Sing	12	ccomp:speech	12:ccomp:speech	_
+4	incrível	incrível	ADJ	_	Number=Sing	3	amod	3:amod	_
+5	e	e	CCONJ	_	_	8	cc	8:cc	_
+6	vocês	você	PRON	_	Case=Nom|Number=Plur|Person=2|PronType=Prs	8	nsubj	8:nsubj|9:nsubj	_
+7	não	não	ADV	_	_	8	advmod	8:advmod	_
+8	devem	dever	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	conj	3:conj:e|12:ccomp:speech	_
+9	perder	perder	VERB	_	VerbForm=Inf	8	xcomp	8:xcomp	SpaceAfter=No
+10	!	!	PUNCT	_	_	3	punct	3:punct	SpaceAfter=No
+11	,	,	PUNCT	_	_	3	punct	3:punct	_
+12	disse	dizer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+13	Natália	Natália	PROPN	_	_	12	nsubj	12:nsubj	_
+14	Lima	Lima	PROPN	_	_	13	flat:name	13:flat:name	SpaceAfter=No
+15	.	.	PUNCT	_	_	12	punct	12:punct	_
+
+# sent_id = faketruebr:215-13
+# text = A notícia está sendo amplamente compartilhada nas redes sociais e está causando grande impacto entre os jovens talentos que estão buscando oportunidades de carreira.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	2:det	_
+2	notícia	notícia	NOUN	_	Gender=Fem|Number=Sing	6	nsubj:pass	6:nsubj:pass|13:nsubj	_
+3	está	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	aux	6:aux	_
+4	sendo	ser	AUX	_	VerbForm=Ger	6	aux:pass	6:aux:pass	_
+5	amplamente	amplamente	ADV	_	_	6	advmod	6:advmod	_
+6	compartilhada	compartilhar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	0	root	0:root	_
+7-8	nas	_	_	_	_	_	_	_	_
+7	em	em	ADP	_	_	9	case	9:case	_
+8	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	9	det	9:det	_
+9	redes	rede	NOUN	_	Gender=Fem|Number=Plur	6	obl	6:obl:em	_
+10	sociais	social	ADJ	_	Number=Plur	9	amod	9:amod	_
+11	e	e	CCONJ	_	_	13	cc	13:cc	_
+12	está	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	aux	13:aux	_
+13	causando	causar	VERB	_	VerbForm=Ger	6	conj	6:conj:e	_
+14	grande	grande	ADJ	_	Number=Sing	15	amod	15:amod	_
+15	impacto	impacto	NOUN	_	Gender=Masc|Number=Sing	13	obj	13:obj	_
+16	entre	entre	ADP	_	_	19	case	19:case	_
+17	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	19	det	19:det	_
+18	jovens	jovem	ADJ	_	Number=Plur	19	amod	19:amod	_
+19	talentos	talento	NOUN	_	Gender=Masc|Number=Plur	13	obl	13:obl:entre|22:nsubj	_
+20	que	que	PRON	_	PronType=Rel	22	nsubj	19:ref	_
+21	estão	estar	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	22	aux	22:aux	_
+22	buscando	buscar	VERB	_	VerbForm=Ger	19	acl:relcl	19:acl:relcl	_
+23	oportunidades	oportunidade	NOUN	_	Gender=Fem|Number=Plur	22	obj	22:obj	_
+24	de	de	ADP	_	_	25	case	25:case	_
+25	carreira	carreira	NOUN	_	Gender=Fem|Number=Sing	23	nmod	23:nmod:de	SpaceAfter=No
+26	.	.	PUNCT	_	_	6	punct	6:punct	_
+

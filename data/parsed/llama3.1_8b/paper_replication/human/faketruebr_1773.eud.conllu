@@ -1,0 +1,113 @@
+# global.columns = ID FORM LEMMA UPOS XPOS FEATS HEAD DEPREL DEPS MISC
+# sent_id = faketruebr:1773-1
+# text = brasil deixou de comprar gas natural da bolivia e venezuela.
+1	brasil	brasil	PROPN	_	_	2	nsubj	2:nsubj	_
+2	deixou	deixar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+3	de	de	ADP	_	_	4	mark	4:mark	_
+4	comprar	comprar	VERB	_	VerbForm=Inf	2	xcomp	2:xcomp	_
+5	gas	gas	NOUN	_	Gender=Masc|Number=Sing	4	obj	4:obj	_
+6	natural	natural	ADJ	_	Number=Sing	5	amod	5:amod	_
+7-8	da	_	_	_	_	_	_	_	_
+7	de	de	ADP	_	_	9	case	9:case|11:case	_
+8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	9:det	_
+9	bolivia	bolivia	NOUN	_	Gender=Fem|Number=Sing	5	nmod	5:nmod:de	_
+10	e	e	CCONJ	_	_	11	cc	11:cc	_
+11	venezuela	venezuela	NOUN	_	Gender=Fem|Number=Sing	9	conj	5:nmod:de|9:conj:e	SpaceAfter=No
+12	.	.	PUNCT	_	_	2	punct	2:punct	_
+
+# sent_id = faketruebr:1773-2
+# text = adeus a compra de gas da bolivia e venezuela.
+1	adeus	adeus	NOUN	_	Gender=Masc	0	root	0:root	_
+2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	3:det	_
+3	compra	compra	NOUN	_	Gender=Fem|Number=Sing	1	dep	1:dep	_
+4	de	de	ADP	_	_	5	case	5:case	_
+5	gas	gas	NOUN	_	Gender=Masc|Number=Sing	3	nmod	3:nmod:de	_
+6-7	da	_	_	_	_	_	_	_	_
+6	de	de	ADP	_	_	8	case	8:case|10:case	_
+7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	8:det	_
+8	bolivia	bolivia	NOUN	_	Gender=Fem|Number=Sing	5	nmod	5:nmod:de	_
+9	e	e	CCONJ	_	_	10	cc	10:cc	_
+10	venezuela	venezuela	NOUN	_	Gender=Fem|Number=Sing	8	conj	5:nmod:de|8:conj:e	SpaceAfter=No
+11	.	.	PUNCT	_	_	1	punct	1:punct	_
+
+# sent_id = faketruebr:1773-3
+# text = parabens bolsonaro!
+1	parabens	parabens	NOUN	_	_	0	root	0:root	_
+2	bolsonaro	bolsonaro	NOUN	_	_	1	nmod	1:nmod	SpaceAfter=No
+3	!	!	PUNCT	_	_	1	punct	1:punct	_
+
+# sent_id = faketruebr:1773-4
+# text = parabens ministro bento albuquerque (almirante da nossa armada)!
+1	parabens	parabens	INTJ	_	_	0	root	0:root	_
+2	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	1	obj	1:obj	_
+3	bento	bento	NOUN	_	Gender=Masc|Number=Sing	2	nmod	2:nmod	_
+4	albuquerque	albuquerque	NOUN	_	Gender=Fem|Number=Sing	3	flat:name	3:flat:name	_
+5	(	(	PUNCT	_	_	6	punct	6:punct	SpaceAfter=No
+6	almirante	almirante	NOUN	_	Gender=Masc|Number=Sing	2	appos	2:appos	_
+7-8	da	_	_	_	_	_	_	_	_
+7	de	de	ADP	_	_	10	case	10:case	_
+8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	10:det	_
+9	nossa	nosso	DET	_	Gender=Fem|Number=Sing|Person=1|Poss=Yes|PronType=Prs	10	det	10:det	_
+10	armada	armada	NOUN	_	Gender=Fem|Number=Sing	6	nmod	6:nmod:de	SpaceAfter=No
+11	)	)	PUNCT	_	_	6	punct	6:punct	SpaceAfter=No
+12	!	!	PUNCT	_	_	1	punct	1:punct	_
+
+# sent_id = faketruebr:1773-5
+# text = alguem viu isso na midia?
+1	alguem	alguem	NOUN	_	Gender=Masc|Number=Sing	2	nsubj	2:nsubj	_
+2	viu	ver	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+3	isso	isso	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	2	obj	2:obj	_
+4-5	na	_	_	_	_	_	_	_	_
+4	em	em	ADP	_	_	6	case	6:case	_
+5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	6:det	_
+6	midia	midia	NOUN	_	Gender=Fem|Number=Sing	2	obl	2:obl:em	SpaceAfter=No
+7	?	?	PUNCT	_	_	2	punct	2:punct	_
+
+# sent_id = faketruebr:1773-6
+# text = isso a globo nao mostra, mas deve dizer q estao destruindo a florestaps2: confira a nossa nova secao oportunidades clicando aqui.
+1	isso	isso	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	5	obj	5:obj	_
+2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	3:det	_
+3	globo	globo	NOUN	_	Gender=Fem|Number=Sing	5	nsubj	5:nsubj|8:nsubj|9:nsubj	_
+4	nao	nao	ADV	_	_	5	advmod	5:advmod	_
+5	mostra	mostrar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	SpaceAfter=No
+6	,	,	PUNCT	_	_	8	punct	8:punct	_
+7	mas	mas	CCONJ	_	_	8	cc	8:cc	_
+8	deve	dever	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	conj	5:conj:mas	_
+9	dizer	dizer	VERB	_	VerbForm=Inf	8	xcomp	8:xcomp	_
+10	q	q	SCONJ	_	_	12	mark	12:mark	_
+11	estao	estao	ADV	_	_	12	advmod	12:advmod	_
+12	destruindo	destruir	VERB	_	VerbForm=Ger	9	ccomp	9:ccomp	_
+13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	14:det	_
+14	florestaps2	FLORESTAPS2	NUM	_	NumType=Card	12	obj	12:obj	SpaceAfter=No
+15	:	:	PUNCT	_	_	16	punct	16:punct	_
+16	confira	conferir	VERB	_	Mood=Imp|Number=Sing|Person=3|VerbForm=Fin	5	parataxis	5:parataxis	_
+17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	20:det	_
+18	nossa	nosso	DET	_	Gender=Fem|Number=Sing|Person=1|Poss=Yes|PronType=Prs	20	det	20:det	_
+19	nova	novo	ADJ	_	Gender=Fem|Number=Sing	20	amod	20:amod	_
+20	secao	secao	NOUN	_	Gender=Fem|Number=Sing	16	obj	16:obj	_
+21	oportunidades	oportunidades	ADJ	_	Gender=Fem|Number=Sing	20	nmod	20:nmod	_
+22	clicando	clicar	VERB	_	VerbForm=Ger	16	advcl	16:advcl	_
+23	aqui	aqui	ADV	_	_	22	advmod	22:advmod	SpaceAfter=No
+24	.	.	PUNCT	_	_	5	punct	5:punct	_
+
+# sent_id = faketruebr:1773-7
+# text = na pagina, voce pode acesso a promocoes, descontos e sites que dao brindes.
+1-2	na	_	_	_	_	_	_	_	_
+1	em	em	ADP	_	_	3	case	3:case	_
+2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	3:det	_
+3	pagina	pagina	NOUN	_	Gender=Fem|Number=Sing	6	obl	6:obl:em	SpaceAfter=No
+4	,	,	PUNCT	_	_	3	punct	3:punct	_
+5	voce	voce	PRON	_	_	6	nsubj	6:nsubj	_
+6	pode	poder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+7	acesso	acesso	NOUN	_	Gender=Masc|Number=Sing	6	obj	6:obj	_
+8	a	a	ADP	_	_	9	case	9:case|11:case|13:case	_
+9	promocoes	promocoe	NOUN	_	Gender=Fem|Number=Plur	7	nmod	7:nmod:a	SpaceAfter=No
+10	,	,	PUNCT	_	_	11	punct	11:punct	_
+11	descontos	desconto	NOUN	_	Gender=Masc|Number=Plur	9	conj	7:nmod:a|9:conj:e	_
+12	e	e	CCONJ	_	_	13	cc	13:cc	_
+13	sites	site	NOUN	_	Gender=Masc|Number=Plur	9	conj	7:nmod:a|9:conj:e|15:nsubj	_
+14	que	que	PRON	_	PronType=Rel	15	nsubj	13:ref	_
+15	dao	dao	ADV	_	_	13	acl:relcl	13:acl:relcl	_
+16	brindes	brinde	NOUN	_	Gender=Masc|Number=Plur	15	obj	15:obj	SpaceAfter=No
+17	.	.	PUNCT	_	_	6	punct	6:punct	_
+

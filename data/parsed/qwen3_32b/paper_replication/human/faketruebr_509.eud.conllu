@@ -1,0 +1,251 @@
+# global.columns = ID FORM LEMMA UPOS XPOS FEATS HEAD DEPREL DEPS MISC
+# sent_id = faketruebr:509-1
+# text = maceió vai desaparecer por causa de rachaduras no bairro pinheiro.
+1	maceió	maceió	PROPN	_	_	3	nsubj	3:nsubj	_
+2	vai	ir	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
+3	desaparecer	desaparecer	VERB	_	VerbForm=Inf	0	root	0:root	_
+4	por	por	ADP	_	_	5	case	5:case	_
+5	causa	causa	NOUN	_	Gender=Fem|Number=Sing	3	obl	3:obl:por	_
+6	de	de	ADP	_	_	7	case	7:case	_
+7	rachaduras	rachadura	NOUN	_	Gender=Fem|Number=Plur	5	nmod	5:nmod:de	_
+8-9	no	_	_	_	_	_	_	_	_
+8	em	em	ADP	_	_	10	case	10:case	_
+9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	10:det	_
+10	bairro	bairro	NOUN	_	Gender=Masc|Number=Sing	7	nmod	7:nmod:em	_
+11	pinheiro	pinheiro	ADJ	_	Gender=Masc|Number=Sing	10	amod	10:amod	SpaceAfter=No
+12	.	.	PUNCT	_	_	3	punct	3:punct	_
+
+# sent_id = faketruebr:509-2
+# text = estudos científicos comprovados.
+1	estudos	estudo	NOUN	_	Gender=Masc|Number=Plur	0	root	0:root	_
+2	científicos	científico	ADJ	_	Gender=Masc|Number=Plur	1	amod	1:amod	_
+3	comprovados	comprovar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	1	acl	1:acl	SpaceAfter=No
+4	.	.	PUNCT	_	_	1	punct	1:punct	_
+
+# sent_id = faketruebr:509-3
+# text = maceio vai desaparecer.
+1	maceio	maceio	NOUN	_	Gender=Masc|Number=Sing	3	nsubj	3:nsubj	_
+2	vai	ir	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
+3	desaparecer	desaparecer	VERB	_	VerbForm=Inf	0	root	0:root	SpaceAfter=No
+4	.	.	PUNCT	_	_	3	punct	3:punct	_
+
+# sent_id = faketruebr:509-4
+# text = o que se espera das autoridades?
+1	o	o	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Dem	4	obj	4:obj	_
+2	que	que	PRON	_	PronType=Int	1	fixed	1:fixed	_
+3	se	se	PRON	_	Case=Nom|Person=3|PronType=Prs	4	expl:impers	4:expl:impers	_
+4	espera	esperar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+5-6	das	_	_	_	_	_	_	_	_
+5	de	de	ADP	_	_	7	case	7:case	_
+6	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	7	det	7:det	_
+7	autoridades	autoridade	NOUN	_	Gender=Fem|Number=Plur	4	obl	4:obl:de	SpaceAfter=No
+8	?	?	PUNCT	_	_	4	punct	4:punct	_
+
+# sent_id = faketruebr:509-5
+# text = o que começou com pequenas rachaduras no pinheiro, após aquele tremor de terra, é bem mais grave do que a gente imagina.
+1	o	o	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Dem	20	nsubj	3:nsubj|20:nsubj	_
+2	que	que	PRON	_	PronType=Rel	3	nsubj	1:ref	_
+3	começou	começar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	acl:relcl	1:acl:relcl	_
+4	com	com	ADP	_	_	6	case	6:case	_
+5	pequenas	pequeno	ADJ	_	Gender=Fem|Number=Plur	6	amod	6:amod	_
+6	rachaduras	rachadura	NOUN	_	Gender=Fem|Number=Plur	3	obl	3:obl:com	_
+7-8	no	_	_	_	_	_	_	_	_
+7	em	em	ADP	_	_	9	case	9:case	_
+8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	9:det	_
+9	pinheiro	pinheiro	NOUN	_	Gender=Masc|Number=Sing	6	nmod	6:nmod:em	SpaceAfter=No
+10	,	,	PUNCT	_	_	13	punct	13:punct	_
+11	após	após	ADP	_	_	13	case	13:case	_
+12	aquele	aquele	DET	_	Gender=Masc|Number=Sing|PronType=Dem	13	det	13:det	_
+13	tremor	tremor	NOUN	_	Gender=Masc|Number=Sing	3	obl	3:obl:após	_
+14	de	de	ADP	_	_	15	case	15:case	_
+15	terra	terra	NOUN	_	Gender=Fem|Number=Sing	13	nmod	13:nmod:de	SpaceAfter=No
+16	,	,	PUNCT	_	_	13	punct	13:punct	_
+17	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	20	cop	20:cop	_
+18	bem	bem	ADV	_	_	19	advmod	19:advmod	_
+19	mais	mais	ADV	_	_	20	advmod	20:advmod	_
+20	grave	grave	ADJ	_	Number=Sing	0	root	0:root	_
+21-22	do	_	_	_	_	_	_	_	_
+21	de	de	ADP	_	_	26	mark	26:mark	_
+22	o	o	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Dem	21	fixed	21:fixed	_
+23	que	que	PRON	_	PronType=Rel	21	fixed	21:fixed	_
+24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	25:det	_
+25	gente	gente	NOUN	_	Gender=Fem|Number=Sing	26	nsubj	26:nsubj	_
+26	imagina	imaginar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	20	advcl	20:advcl:de_o_que	SpaceAfter=No
+27	.	.	PUNCT	_	_	20	punct	20:punct	_
+
+# sent_id = faketruebr:509-6
+# text = nossa capital alagoana corre sérios ricos de virar manchete mundial, porém de forma negativa, e a empresa, braskem, tem 99% de culpa.
+1	nossa	nosso	DET	_	Gender=Fem|Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	det	2:det	_
+2	capital	capital	NOUN	_	Number=Sing	4	nsubj	4:nsubj	_
+3	alagoana	alagoano	ADJ	_	Gender=Fem|Number=Sing	2	amod	2:amod	_
+4	corre	correr	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+5	sérios	sério	ADJ	_	Gender=Masc|Number=Plur	6	amod	6:amod	_
+6	ricos	rico	NOUN	_	Gender=Masc|Number=Plur	4	obj	4:obj	_
+7	de	de	ADP	_	_	8	mark	8:mark	_
+8	virar	virar	VERB	_	VerbForm=Inf	6	acl	6:acl:de	_
+9	manchete	manchete	NOUN	_	Gender=Fem|Number=Sing	8	xcomp	8:xcomp	_
+10	mundial	mundial	ADJ	_	Number=Sing	9	amod	9:amod	SpaceAfter=No
+11	,	,	PUNCT	_	_	14	punct	14:punct	_
+12	porém	porém	CCONJ	_	_	14	cc	14:cc	_
+13	de	de	ADP	_	_	14	case	14:case	_
+14	forma	forma	NOUN	_	Gender=Fem|Number=Sing	8	conj	6:nmod:de|8:conj:porém	_
+15	negativa	negativo	ADJ	_	Gender=Fem|Number=Sing	14	amod	14:amod	SpaceAfter=No
+16	,	,	PUNCT	_	_	23	punct	23:punct	_
+17	e	e	CCONJ	_	_	23	cc	23:cc	_
+18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	19	det	19:det	_
+19	empresa	empresa	NOUN	_	Gender=Fem|Number=Sing	23	nsubj	23:nsubj	SpaceAfter=No
+20	,	,	PUNCT	_	_	21	punct	21:punct	_
+21	braskem	braskem	X	_	_	19	appos	19:appos	SpaceAfter=No
+22	,	,	PUNCT	_	_	21	punct	21:punct	_
+23	tem	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	conj	4:conj:e	_
+24	99	99	NUM	_	NumType=Card	25	nummod	25:nummod	SpaceAfter=No
+25	%	%	SYM	_	_	23	obj	23:obj	_
+26	de	de	ADP	_	_	27	case	27:case	_
+27	culpa	culpa	NOUN	_	Gender=Fem|Number=Sing	25	nmod	25:nmod:de	SpaceAfter=No
+28	.	.	PUNCT	_	_	4	punct	4:punct	_
+
+# sent_id = faketruebr:509-7
+# text = 45 minutos (de acordo com estudos) é o tempo máximo para salvar a população durante o anunciado desastre.
+1	45	45	NUM	_	NumType=Card	2	nummod	2:nummod	_
+2	minutos	minuto	NOUN	_	Gender=Masc|Number=Plur	11	nsubj	11:nsubj	_
+3	(	(	PUNCT	_	_	5	punct	5:punct	SpaceAfter=No
+4	de	de	ADP	_	_	5	case	5:case	_
+5	acordo	acordo	NOUN	_	Gender=Masc|Number=Sing	2	nmod	2:nmod:de	_
+6	com	com	ADP	_	_	7	case	7:case	_
+7	estudos	estudo	NOUN	_	Gender=Masc|Number=Plur	5	nmod	5:nmod:com	SpaceAfter=No
+8	)	)	PUNCT	_	_	5	punct	5:punct	_
+9	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
+10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	11:det	_
+11	tempo	tempo	NOUN	_	Gender=Masc|Number=Sing	0	root	0:root	_
+12	máximo	máximo	ADJ	_	Gender=Masc|Number=Sing	11	amod	11:amod	_
+13	para	para	ADP	_	_	14	mark	14:mark	_
+14	salvar	salvar	VERB	_	VerbForm=Inf	11	acl	11:acl:para	_
+15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	16:det	_
+16	população	população	NOUN	_	Gender=Fem|Number=Sing	14	obj	14:obj	_
+17	durante	durante	ADP	_	_	20	case	20:case	_
+18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	20:det	_
+19	anunciado	anunciar	ADJ	_	Gender=Masc|Number=Sing|VerbForm=Part	20	amod	20:amod	_
+20	desastre	desastre	NOUN	_	Gender=Masc|Number=Sing	14	obl	14:obl:durante	SpaceAfter=No
+21	.	.	PUNCT	_	_	11	punct	11:punct	_
+
+# sent_id = faketruebr:509-8
+# text = bairros em que a cruz vermelha pretende atuar, - pinheiro, 19 mil habitantes- bebedouro, 1 mil habitantes - chã da jaqueira, 16 mil habitantes - bom parto, 12 mil habitantes- levada, 1 mil habitantes - vergel, 31 mil habitantes- mutange, 2 mil habitantespouco mais de 1 mil pessoas no total para salvar em menos de uma hora.
+1	bairros	bairro	NOUN	_	Gender=Masc|Number=Plur	0	root	0:root|7:obl:em	_
+2	em	em	ADP	_	_	3	case	3:case	_
+3	que	que	PRON	_	PronType=Rel	7	obl	1:ref	_
+4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	5:det	_
+5	cruz	cruz	NOUN	_	Gender=Fem|Number=Sing	7	nsubj	7:nsubj|8:nsubj	_
+6	vermelha	vermelho	ADJ	_	Gender=Fem|Number=Sing	5	amod	5:amod	_
+7	pretende	pretender	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	acl:relcl	1:acl:relcl	_
+8	atuar	atuar	VERB	_	VerbForm=Inf	7	xcomp	7:xcomp	SpaceAfter=No
+9	,	,	PUNCT	_	_	11	punct	11:punct	_
+10	-	-	PUNCT	_	_	11	punct	11:punct	_
+11	pinheiro	pinheiro	NOUN	_	Gender=Masc|Number=Sing	1	dep	1:dep	SpaceAfter=No
+12	,	,	PUNCT	_	_	13	punct	13:punct	_
+13	19	19	NUM	_	NumType=Card	15	nummod	15:nummod	_
+14	mil	mil	NUM	_	NumType=Card	41	flat	41:flat	_
+15	habitantes	habitante	NOUN	_	Number=Plur	11	parataxis	11:parataxis	SpaceAfter=No
+16	-	-	PUNCT	_	_	17	punct	17:punct	_
+17	bebedouro	bebedouro	NOUN	_	Gender=Masc|Number=Sing	11	conj	1:dep|11:conj	SpaceAfter=No
+18	,	,	PUNCT	_	_	19	punct	19:punct	_
+19	1	1	NUM	_	NumType=Card	21	nummod	21:nummod	_
+20	mil	mil	NUM	_	NumType=Card	19	flat	19:flat	_
+21	habitantes	habitante	NOUN	_	Number=Plur	39	conj	11:parataxis|39:conj	_
+22	-	-	PUNCT	_	_	23	punct	23:punct	_
+23	chã	chã	NOUN	_	Gender=Fem|Number=Sing	11	appos	11:appos|17:appos	_
+24-25	da	_	_	_	_	_	_	_	_
+24	de	de	ADP	_	_	26	case	26:case	_
+25	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	26	det	26:det	_
+26	jaqueira	jaqueira	NOUN	_	Gender=Fem|Number=Sing	23	nmod	23:nmod:de	SpaceAfter=No
+27	,	,	PUNCT	_	_	28	punct	28:punct	_
+28	16	16	NUM	_	NumType=Card	30	nummod	30:nummod	_
+29	mil	mil	NUM	_	NumType=Card	41	flat	41:flat	_
+30	habitantes	habitante	NOUN	_	Number=Plur	11	conj	1:dep|11:conj	_
+31	-	-	PUNCT	_	_	23	punct	23:punct	_
+32	bom	bom	ADJ	_	Gender=Masc|Number=Sing	33	amod	33:amod	_
+33	parto	parto	NOUN	_	Gender=Masc|Number=Sing	11	parataxis	11:parataxis	SpaceAfter=No
+34	,	,	PUNCT	_	_	35	punct	35:punct	_
+35	12	12	NUM	_	NumType=Card	15	nummod	15:nummod	_
+36	mil	mil	NUM	_	NumType=Card	41	flat	41:flat	_
+37	habitantes	habitante	NOUN	_	Number=Plur	39	parataxis	21:parataxis|39:parataxis	SpaceAfter=No
+38	-	-	PUNCT	_	_	11	punct	11:punct	_
+39	levada	levada	NOUN	_	Gender=Fem|Number=Sing	11	parataxis	11:parataxis	SpaceAfter=No
+40	,	,	PUNCT	_	_	53	punct	53:punct	_
+41	1	1	NUM	_	NumType=Card	15	nummod	15:nummod	_
+42	mil	mil	NUM	_	NumType=Card	41	flat	41:flat	_
+43	habitantes	habitante	NOUN	_	Number=Plur	39	parataxis	39:parataxis	_
+44	-	-	PUNCT	_	_	11	punct	11:punct	_
+45	vergel	vergel	NOUN	_	Gender=Fem|Number=Sing	11	parataxis	11:parataxis	SpaceAfter=No
+46	,	,	PUNCT	_	_	53	punct	53:punct	_
+47	31	31	NUM	_	NumType=Card	49	nummod	49:nummod	_
+48	mil	mil	NUM	_	NumType=Card	53	flat	53:flat	_
+49	habitantes	habitante	NOUN	_	Number=Plur	45	parataxis	45:parataxis	SpaceAfter=No
+50	-	-	PUNCT	_	_	51	punct	51:punct	_
+51	mutange	mutange	X	_	Foreign=Yes	11	parataxis	11:parataxis	SpaceAfter=No
+52	,	,	PUNCT	_	_	53	punct	53:punct	_
+53	2	2	NUM	_	NumType=Card	49	nummod	49:nummod	_
+54	mil	mil	NUM	_	NumType=Card	53	flat	53:flat	_
+55	habitantespouco	habitantespouco	ADV	_	_	58	advmod	58:advmod	_
+56	mais	mais	ADV	_	_	58	advmod	58:advmod	_
+57	de	de	ADP	_	_	56	fixed	56:fixed	_
+58	1	1	NUM	_	NumType=Card	60	nummod	60:nummod	_
+59	mil	mil	NUM	_	NumType=Card	58	flat	58:flat	_
+60	pessoas	pessoa	NOUN	_	Gender=Fem|Number=Plur	11	nsubj	11:nsubj|17:nsubj|30:nsubj	_
+61-62	no	_	_	_	_	_	_	_	_
+61	em	em	ADP	_	_	63	case	63:case	_
+62	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	63	det	63:det	_
+63	total	total	NOUN	_	Number=Sing	60	nmod	60:nmod:em	_
+64	para	para	ADP	_	_	65	mark	65:mark	_
+65	salvar	salvar	VERB	_	VerbForm=Inf	60	advcl	60:advcl:para	_
+66	em	em	ADP	_	_	70	case	70:case	_
+67	menos	menos	ADV	_	_	69	advmod	69:advmod	_
+68	de	de	ADP	_	_	67	fixed	67:fixed	_
+69	uma	um	NUM	_	Gender=Fem|NumType=Card	70	nummod	70:nummod	_
+70	hora	hora	NOUN	_	Gender=Fem|Number=Sing	65	obl	65:obl:em	SpaceAfter=No
+71	.	.	PUNCT	_	_	11	punct	11:punct	_
+
+# sent_id = faketruebr:509-9
+# text = por que o solo está afundando?
+1	por	por	ADP	_	_	2	case	2:case	_
+2	que	que	PRON	_	PronType=Rel	6	obl	6:obl:por	_
+3	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	4:det	_
+4	solo	solo	NOUN	_	Gender=Masc|Number=Sing	6	nsubj	6:nsubj	_
+5	está	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	aux	6:aux	_
+6	afundando	afundar	VERB	_	VerbForm=Ger	0	root	0:root	SpaceAfter=No
+7	?	?	PUNCT	_	_	6	punct	6:punct	_
+
+# sent_id = faketruebr:509-10
+# text = quem pensa que começou em 216 naquele tremor de terra se engana, durante muitos e muitos anos essas explorações de sal-gema com as escavações realizadas pela braskem contribuíram.
+1	quem	quem	PRON	_	PronType=Ind	13	nsubj	13:nsubj	_
+2	pensa	pensar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	acl:relcl	1:acl:relcl	_
+3	que	que	SCONJ	_	_	4	mark	4:mark	_
+4	começou	começar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	ccomp	2:ccomp	_
+5	em	em	ADP	_	_	6	case	6:case	_
+6	216	216	NUM	_	NumType=Card	4	obl	4:obl:em	_
+7-8	naquele	_	_	_	_	_	_	_	_
+7	em	em	ADP	_	_	9	case	9:case	_
+8	aquele	aquele	DET	_	Gender=Masc|Number=Sing|PronType=Dem	9	det	9:det	_
+9	tremor	tremor	NOUN	_	Gender=Masc|Number=Sing	4	obl	4:obl:em	_
+10	de	de	ADP	_	_	11	case	11:case	_
+11	terra	terra	NOUN	_	Gender=Fem|Number=Sing	9	nmod	9:nmod:de	_
+12	se	se	PRON	_	Case=Nom|Person=3|PronType=Prs	13	expl	13:expl	_
+13	engana	enganar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	SpaceAfter=No
+14	,	,	PUNCT	_	_	30	punct	30:punct	_
+15	durante	durante	ADP	_	_	19	case	19:case	_
+16	muitos	muito	ADJ	_	Gender=Masc|Number=Plur	19	amod	19:amod	_
+17	e	e	CCONJ	_	_	18	cc	18:cc	_
+18	muitos	muito	ADJ	_	Gender=Masc|Number=Plur	16	conj	16:conj:e|19:amod	_
+19	anos	ano	NOUN	_	Gender=Masc|Number=Plur	30	obl	30:obl:durante	_
+20	essas	esse	DET	_	Gender=Fem|Number=Plur|PronType=Dem	21	det	21:det	_
+21	explorações	exploração	NOUN	_	Gender=Fem|Number=Plur	30	nsubj	30:nsubj	_
+22	de	de	ADP	_	_	23	case	23:case	_
+23	sal-gema	sal-gemA	NOUN	_	Gender=Fem|Number=Sing	21	nmod	21:nmod:de	_
+24	com	com	ADP	_	_	26	case	26:case	_
+25	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	26	det	26:det	_
+26	escavações	escavação	NOUN	_	Gender=Fem|Number=Plur	21	nmod	21:nmod:com	_
+27	realizadas	realizar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	26	acl	26:acl	_
+28	pela	pela	ADP	_	_	29	det	29:det	_
+29	braskem	braskem	X	_	Foreign=Yes	27	obl:agent	27:obl:agent	_
+30	contribuíram	contribuir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	13	conj	13:conj	SpaceAfter=No
+31	.	.	PUNCT	_	_	13	punct	13:punct	_
+

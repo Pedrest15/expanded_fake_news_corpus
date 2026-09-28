@@ -1,0 +1,788 @@
+# global.columns = ID FORM LEMMA UPOS XPOS FEATS HEAD DEPREL DEPS MISC
+# sent_id = fakebr:917-1
+# text = Um escândalo de desinformação foi revelado hoje no Brasil.
+1	Um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	2	det	2:det	_
+2	escândalo	escândalo	NOUN	_	Gender=Masc|Number=Sing	6	nsubj:pass	6:nsubj:pass	_
+3	de	de	ADP	_	_	4	case	4:case	_
+4	desinformação	desinformação	NOUN	_	Gender=Fem|Number=Sing	2	nmod	2:nmod:de	_
+5	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	aux:pass	6:aux:pass	_
+6	revelado	revelar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	0:root	_
+7	hoje	hoje	ADV	_	_	6	advmod	6:advmod	_
+8-9	no	_	_	_	_	_	_	_	_
+8	em	em	ADP	_	_	10	case	10:case	_
+9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	10:det	_
+10	Brasil	Brasil	PROPN	_	_	6	obl	6:obl:em	SpaceAfter=No
+11	.	.	PUNCT	_	_	6	punct	6:punct	_
+
+# sent_id = fakebr:917-2
+# text = De acordo com uma fonte confiável, o governo de Michel Temer está envolvido em um esquema de manipulação de dados, que inclui a alteração de estatísticas sobre desaparecimentos e violência no país.
+1	De	de	ADP	_	_	2	case	2:case	_
+2	acordo	acordo	NOUN	_	Gender=Masc|Number=Sing	14	obl	14:obl:de	_
+3	com	com	ADP	_	_	5	case	5:case	_
+4	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	5	det	5:det	_
+5	fonte	fonte	NOUN	_	Gender=Fem|Number=Sing	2	nmod	2:nmod:com	_
+6	confiável	confiável	ADJ	_	Number=Sing	5	amod	5:amod	SpaceAfter=No
+7	,	,	PUNCT	_	_	2	punct	2:punct	_
+8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	9:det	_
+9	governo	governo	NOUN	_	Gender=Masc|Number=Sing	14	nsubj	14:nsubj	_
+10	de	de	ADP	_	_	11	case	11:case	_
+11	Michel	Michel	PROPN	_	_	9	nmod	9:nmod:de	_
+12	Temer	Temer	PROPN	_	_	11	flat:name	11:flat:name	_
+13	está	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	cop	14:cop	_
+14	envolvido	envolvido	ADJ	_	Gender=Masc|Number=Sing|VerbForm=Part	0	root	0:root	_
+15	em	em	ADP	_	_	17	case	17:case	_
+16	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	17	det	17:det	_
+17	esquema	esquema	NOUN	_	Gender=Masc|Number=Sing	14	obl	14:obl:em|24:nsubj	_
+18	de	de	ADP	_	_	19	case	19:case	_
+19	manipulação	manipulação	NOUN	_	Gender=Fem|Number=Sing	17	nmod	17:nmod:de	_
+20	de	de	ADP	_	_	21	case	21:case	_
+21	dados	dado	NOUN	_	Gender=Masc|Number=Plur	19	nmod	19:nmod:de	SpaceAfter=No
+22	,	,	PUNCT	_	_	24	punct	24:punct	_
+23	que	que	PRON	_	PronType=Rel	24	nsubj	17:ref	_
+24	inclui	incluir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	17	acl:relcl	17:acl:relcl	_
+25	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	26	det	26:det	_
+26	alteração	alteração	NOUN	_	Gender=Fem|Number=Sing	24	obj	24:obj	_
+27	de	de	ADP	_	_	28	case	28:case	_
+28	estatísticas	estatística	NOUN	_	Gender=Fem|Number=Plur	26	nmod	26:nmod:de	_
+29	sobre	sobre	ADP	_	_	30	case	30:case|32:case	_
+30	desaparecimentos	desaparecimento	NOUN	_	Gender=Masc|Number=Plur	28	nmod	28:nmod:sobre	_
+31	e	e	CCONJ	_	_	32	cc	32:cc	_
+32	violência	violência	NOUN	_	Gender=Fem|Number=Sing	30	conj	28:nmod:sobre|30:conj:e	_
+33-34	no	_	_	_	_	_	_	_	_
+33	em	em	ADP	_	_	35	case	35:case	_
+34	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	35	det	35:det	_
+35	país	país	NOUN	_	Gender=Masc|Number=Sing	30	nmod	30:nmod:em|32:nmod:em	SpaceAfter=No
+36	.	.	PUNCT	_	_	14	punct	14:punct	_
+
+# sent_id = fakebr:917-3
+# text = Segundo o levantamento, realizado pela Anuário Brasileiro de Segurança Pública, quase 90 mil pessoas desapareceram no Brasil no ano passado, e não 72 mil, como anteriormente divulgado.
+1	Segundo	segundo	ADP	_	_	3	case	3:case	_
+2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	3:det	_
+3	levantamento	levantamento	NOUN	_	Gender=Masc|Number=Sing	18	obl	18:obl:segundo	SpaceAfter=No
+4	,	,	PUNCT	_	_	5	punct	5:punct	_
+5	realizado	realizar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	3	acl	3:acl	_
+6-7	pela	_	_	_	_	_	_	_	_
+6	por	por	ADP	_	_	8	case	8:case	_
+7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	8:det	_
+8	Anuário	Anuário	PROPN	_	_	5	obl:agent	5:obl:agent	_
+9	Brasileiro	Brasileiro	PROPN	_	_	8	flat:name	8:flat:name	_
+10	de	de	ADP	_	_	11	case	11:case	_
+11	Segurança	Segurança	PROPN	_	_	8	flat:name	8:flat:name	_
+12	Pública	Pública	PROPN	_	_	8	flat:name	8:flat:name	SpaceAfter=No
+13	,	,	PUNCT	_	_	5	punct	5:punct	_
+14	quase	quase	ADV	_	_	15	advmod	15:advmod	_
+15	90	90	NUM	_	NumType=Card	17	nummod	17:nummod	_
+16	mil	mil	NUM	_	NumType=Card	15	flat	15:flat	_
+17	pessoas	pessoa	NOUN	_	Gender=Fem|Number=Plur	18	nsubj	18:nsubj	_
+18	desapareceram	desaparecer	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+19-20	no	_	_	_	_	_	_	_	_
+19	em	em	ADP	_	_	21	case	21:case	_
+20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	21:det	_
+21	Brasil	Brasil	PROPN	_	_	18	obl	18:obl:em	_
+22-23	no	_	_	_	_	_	_	_	_
+22	em	em	ADP	_	_	24	case	24:case	_
+23	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	24:det	_
+24	ano	ano	NOUN	_	Gender=Masc|Number=Sing	18	obl	18:obl:em	_
+25	passado	passado	ADJ	_	Gender=Masc|Number=Sing|VerbForm=Part	24	amod	24:amod	SpaceAfter=No
+26	,	,	PUNCT	_	_	29	punct	29:punct	_
+27	e	e	CCONJ	_	_	29	cc	29:cc	_
+28	não	não	ADV	_	_	29	advmod	29:advmod	_
+29	72	72	NUM	_	NumType=Card	18	conj	18:conj:e	_
+30	mil	mil	NUM	_	NumType=Card	29	flat	29:flat	SpaceAfter=No
+31	,	,	PUNCT	_	_	34	punct	34:punct	_
+32	como	como	SCONJ	_	_	34	mark	34:mark	_
+33	anteriormente	anteriormente	ADV	_	_	34	advmod	34:advmod	_
+34	divulgado	divulgar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	29	advcl	29:advcl:como	SpaceAfter=No
+35	.	.	PUNCT	_	_	18	punct	18:punct	_
+
+# sent_id = fakebr:917-4
+# text = Além disso, o número de policiais mortos em confrontos ou fora de serviço aumentou em 25% em relação a 2015, e não 17%.
+1	Além	além	ADV	_	_	16	advmod	16:advmod	_
+2-3	disso	_	_	_	_	_	_	_	SpaceAfter=No
+2	de	de	ADP	_	_	3	case	3:case	_
+3	isso	isso	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	1	obl	1:obl:de	_
+4	,	,	PUNCT	_	_	1	punct	1:punct	_
+5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	6:det	_
+6	número	número	NOUN	_	Gender=Masc|Number=Sing	16	nsubj	16:nsubj	_
+7	de	de	ADP	_	_	8	case	8:case	_
+8	policiais	policial	NOUN	_	Number=Plur	6	nmod	6:nmod:de	_
+9	mortos	matar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	8	acl	8:acl	_
+10	em	em	ADP	_	_	11	case	11:case	_
+11	confrontos	confronto	NOUN	_	Gender=Masc|Number=Plur	9	obl	9:obl:em	_
+12	ou	ou	CCONJ	_	_	13	cc	13:cc	_
+13	fora	fora	ADV	_	_	11	conj	9:advmod|11:conj:ou	_
+14	de	de	ADP	_	_	15	case	15:case	_
+15	serviço	serviço	NOUN	_	Gender=Masc|Number=Sing	13	obl	13:obl:de	_
+16	aumentou	aumentar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+17	em	em	ADP	_	_	19	case	19:case	_
+18	25	25	NUM	_	NumType=Card	19	nummod	19:nummod	SpaceAfter=No
+19	%	%	SYM	_	_	16	obl	16:obl:em	_
+20	em	em	ADP	_	_	21	case	21:case	_
+21	relação	relação	NOUN	_	Gender=Fem|Number=Sing	16	obl	16:obl:em	_
+22	a	a	ADP	_	_	23	case	23:case	_
+23	2015	2015	NUM	_	NumType=Card	21	nmod	21:nmod:a	SpaceAfter=No
+24	,	,	PUNCT	_	_	28	punct	28:punct	_
+25	e	e	CCONJ	_	_	28	cc	28:cc	_
+26	não	não	ADV	_	_	28	advmod	28:advmod	_
+27	17	17	NUM	_	NumType=Card	28	nummod	28:nummod	SpaceAfter=No
+28	%	%	SYM	_	_	16	conj	16:conj:e	SpaceAfter=No
+29	.	.	PUNCT	_	_	16	punct	16:punct	_
+
+# sent_id = fakebr:917-5
+# text = O escândalo ganhou mais contornos quando foi descoberto que o presidente Temer teria ordenado a alteração dos números para influenciar a opinião pública e a política de segurança do país.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	2:det	_
+2	escândalo	escândalo	NOUN	_	Gender=Masc|Number=Sing	3	nsubj	3:nsubj	_
+3	ganhou	ganhar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+4	mais	mais	DET	_	PronType=Ind	5	det	5:det	_
+5	contornos	contorno	NOUN	_	Gender=Masc|Number=Plur	3	obj	3:obj	_
+6	quando	quando	SCONJ	_	_	8	mark	8:mark	_
+7	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	aux:pass	8:aux:pass	_
+8	descoberto	descobrir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	3	advcl	3:advcl:quando	_
+9	que	que	SCONJ	_	_	14	mark	14:mark	_
+10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	11:det	_
+11	presidente	presidente	NOUN	_	Number=Sing	14	nsubj	14:nsubj	_
+12	Temer	Temer	PROPN	_	_	11	nmod	11:nmod	_
+13	teria	ter	AUX	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	14	aux	14:aux	_
+14	ordenado	ordenar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	8	ccomp	8:ccomp	_
+15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	16:det	_
+16	alteração	alteração	NOUN	_	Gender=Fem|Number=Sing	14	obj	14:obj	_
+17-18	dos	_	_	_	_	_	_	_	_
+17	de	de	ADP	_	_	19	case	19:case	_
+18	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	19	det	19:det	_
+19	números	número	NOUN	_	Gender=Masc|Number=Plur	16	nmod	16:nmod:de	_
+20	para	para	ADP	_	_	21	mark	21:mark	_
+21	influenciar	influenciar	VERB	_	VerbForm=Inf	14	advcl	14:advcl:para	_
+22	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	23	det	23:det	_
+23	opinião	opinião	NOUN	_	Gender=Fem|Number=Sing	21	obj	21:obj	_
+24	pública	público	ADJ	_	Gender=Fem|Number=Sing	23	amod	23:amod	_
+25	e	e	CCONJ	_	_	27	cc	27:cc	_
+26	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	27	det	27:det	_
+27	política	política	NOUN	_	Gender=Fem|Number=Sing	23	conj	21:obj|23:conj:e	_
+28	de	de	ADP	_	_	29	case	29:case	_
+29	segurança	segurança	NOUN	_	Number=Sing	27	nmod	27:nmod:de	_
+30-31	do	_	_	_	_	_	_	_	_
+30	de	de	ADP	_	_	32	case	32:case	_
+31	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	32	det	32:det	_
+32	país	país	NOUN	_	Gender=Masc|Number=Sing	27	nmod	27:nmod:de	SpaceAfter=No
+33	.	.	PUNCT	_	_	3	punct	3:punct	_
+
+# sent_id = fakebr:917-6
+# text = A notícia foi confirmada por fontes do governo e também por funcionários do Instituto Chico Mendes, que revelaram que a retirada de equipes da cidade de Humaitá, no Amazonas, foi resultado direto da manipulação de dados.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	2:det	_
+2	notícia	notícia	NOUN	_	Gender=Fem|Number=Sing	4	nsubj:pass	4:nsubj:pass	_
+3	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux:pass	4:aux:pass	_
+4	confirmada	confirmar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	0	root	0:root	_
+5	por	por	ADP	_	_	6	case	6:case	_
+6	fontes	fonte	NOUN	_	Gender=Fem|Number=Plur	4	obl:agent	4:obl:agent|21:nsubj	_
+7-8	do	_	_	_	_	_	_	_	_
+7	de	de	ADP	_	_	9	case	9:case	_
+8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	9:det	_
+9	governo	governo	NOUN	_	Gender=Masc|Number=Sing	6	nmod	6:nmod:de	_
+10	e	e	CCONJ	_	_	13	cc	13:cc	_
+11	também	também	ADV	_	_	13	advmod	13:advmod	_
+12	por	por	ADP	_	_	13	case	13:case	_
+13	funcionários	funcionário	NOUN	_	Gender=Masc|Number=Plur	6	conj	4:obl:agent|6:conj:e|21:nsubj	_
+14-15	do	_	_	_	_	_	_	_	_
+14	de	de	ADP	_	_	16	case	16:case	_
+15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	16:det	_
+16	Instituto	Instituto	PROPN	_	_	13	nmod	13:nmod:de	_
+17	Chico	Chico	PROPN	_	_	16	flat:name	16:flat:name	_
+18	Mendes	Mendes	PROPN	_	_	16	flat:name	16:flat:name	SpaceAfter=No
+19	,	,	PUNCT	_	_	21	punct	21:punct	_
+20	que	que	PRON	_	PronType=Rel	21	nsubj	6:ref|13:ref	_
+21	revelaram	revelar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	6	acl:relcl	6:acl:relcl|13:acl:relcl	_
+22	que	que	SCONJ	_	_	38	mark	38:mark	_
+23	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	24	det	24:det	_
+24	retirada	retirada	NOUN	_	Gender=Fem|Number=Sing	38	nsubj	38:nsubj	_
+25	de	de	ADP	_	_	26	case	26:case	_
+26	equipes	equipe	NOUN	_	Gender=Fem|Number=Plur	24	nmod	24:nmod:de	_
+27-28	da	_	_	_	_	_	_	_	_
+27	de	de	ADP	_	_	29	case	29:case	_
+28	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	29	det	29:det	_
+29	cidade	cidade	NOUN	_	Gender=Fem|Number=Sing	24	nmod	24:nmod:de	_
+30	de	de	ADP	_	_	31	case	31:case	_
+31	Humaitá	Humaitá	PROPN	_	_	29	nmod	29:nmod:de	SpaceAfter=No
+32	,	,	PUNCT	_	_	35	punct	35:punct	_
+33-34	no	_	_	_	_	_	_	_	_
+33	em	em	ADP	_	_	35	case	35:case	_
+34	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	35	det	35:det	_
+35	Amazonas	Amazonas	PROPN	_	_	29	nmod	29:nmod:em	SpaceAfter=No
+36	,	,	PUNCT	_	_	35	punct	35:punct	_
+37	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	38	cop	38:cop	_
+38	resultado	resultado	NOUN	_	Gender=Masc|Number=Sing	21	ccomp	21:ccomp	_
+39	direto	direto	ADJ	_	Gender=Masc|Number=Sing	38	amod	38:amod	_
+40-41	da	_	_	_	_	_	_	_	_
+40	de	de	ADP	_	_	42	case	42:case	_
+41	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	42	det	42:det	_
+42	manipulação	manipulação	NOUN	_	Gender=Fem|Number=Sing	38	nmod	38:nmod:de	_
+43	de	de	ADP	_	_	44	case	44:case	_
+44	dados	dado	NOUN	_	Gender=Masc|Number=Plur	42	nmod	42:nmod:de	SpaceAfter=No
+45	.	.	PUNCT	_	_	4	punct	4:punct	_
+
+# sent_id = fakebr:917-7
+# text = A Câmara dos Deputados está em discussão um projeto de lei que criaria regras para o funcionamento dos aplicativos de transporte, como Uber, Cabify e 99, mas o escândalo de desinformação pode comprometer a votação.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	2:det	_
+2	Câmara	Câmara	PROPN	_	_	8	nsubj	8:nsubj|14:nsubj	_
+3-4	dos	_	_	_	_	_	_	_	_
+3	de	de	ADP	_	_	5	case	5:case	_
+4	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	5	det	5:det	_
+5	Deputados	Deputados	PROPN	_	_	2	flat:name	2:flat:name	_
+6	está	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
+7	em	em	ADP	_	_	8	case	8:case	_
+8	discussão	discussão	NOUN	_	Gender=Fem|Number=Sing	0	root	0:root	_
+9	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	10	det	10:det	_
+10	projeto	projeto	NOUN	_	Gender=Masc|Number=Sing	8	nsubj	8:nsubj|14:nsubj	_
+11	de	de	ADP	_	_	12	case	12:case	_
+12	lei	lei	NOUN	_	Gender=Fem|Number=Sing	10	nmod	10:nmod:de	_
+13	que	que	PRON	_	PronType=Rel	14	nsubj	10:ref	_
+14	criaria	criar	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	10	acl:relcl	10:acl:relcl	_
+15	regras	regra	NOUN	_	Gender=Fem|Number=Plur	14	obj	14:obj	_
+16	para	para	ADP	_	_	18	case	18:case	_
+17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	18:det	_
+18	funcionamento	funcionamento	NOUN	_	Gender=Masc|Number=Sing	15	nmod	15:nmod:para	_
+19-20	dos	_	_	_	_	_	_	_	_
+19	de	de	ADP	_	_	21	case	21:case	_
+20	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	21	det	21:det	_
+21	aplicativos	aplicativo	NOUN	_	Gender=Masc|Number=Plur	18	nmod	18:nmod:de	_
+22	de	de	ADP	_	_	23	case	23:case	_
+23	transporte	transporte	NOUN	_	Gender=Masc|Number=Sing	21	nmod	21:nmod:de	SpaceAfter=No
+24	,	,	PUNCT	_	_	26	punct	26:punct	_
+25	como	como	ADP	_	_	26	case	26:case|28:case|30:case	_
+26	Uber	Uber	PROPN	_	_	21	nmod	21:nmod:como	SpaceAfter=No
+27	,	,	PUNCT	_	_	28	punct	28:punct	_
+28	Cabify	Cabify	PROPN	_	_	26	conj	21:nmod:como|26:conj:e	_
+29	e	e	CCONJ	_	_	30	cc	30:cc	_
+30	99	99	NUM	_	NumType=Card	26	conj	21:nmod:como|26:conj:e	SpaceAfter=No
+31	,	,	PUNCT	_	_	37	punct	37:punct	_
+32	mas	mas	CCONJ	_	_	37	cc	37:cc	_
+33	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	34	det	34:det	_
+34	escândalo	escândalo	NOUN	_	Gender=Masc|Number=Sing	37	nsubj	37:nsubj|38:nsubj	_
+35	de	de	ADP	_	_	36	case	36:case	_
+36	desinformação	desinformação	NOUN	_	Gender=Fem|Number=Sing	34	nmod	34:nmod:de	_
+37	pode	poder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	conj	8:conj:mas	_
+38	comprometer	comprometer	VERB	_	VerbForm=Inf	37	xcomp	37:xcomp	_
+39	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	40	det	40:det	_
+40	votação	votação	NOUN	_	Gender=Fem|Number=Sing	38	obj	38:obj	SpaceAfter=No
+41	.	.	PUNCT	_	_	8	punct	8:punct	_
+
+# sent_id = fakebr:917-8
+# text = A opinião pública está dividida, e o governo de Temer enfrenta críticas de todos os lados.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	2:det	_
+2	opinião	opinião	NOUN	_	Gender=Fem|Number=Sing	5	nsubj	5:nsubj	_
+3	pública	público	ADJ	_	Gender=Fem|Number=Sing	2	amod	2:amod	_
+4	está	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
+5	dividida	dividido	ADJ	_	Gender=Fem|Number=Sing|VerbForm=Part	0	root	0:root	SpaceAfter=No
+6	,	,	PUNCT	_	_	12	punct	12:punct	_
+7	e	e	CCONJ	_	_	12	cc	12:cc	_
+8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	9:det	_
+9	governo	governo	NOUN	_	Gender=Masc|Number=Sing	12	nsubj	12:nsubj	_
+10	de	de	ADP	_	_	11	case	11:case	_
+11	Temer	Temer	PROPN	_	_	9	nmod	9:nmod:de	_
+12	enfrenta	enfrentar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	conj	5:conj:e	_
+13	críticas	crítico	NOUN	_	Gender=Fem|Number=Plur	12	obj	12:obj	_
+14	de	de	ADP	_	_	17	case	17:case	_
+15	todos	todo	DET	_	Gender=Masc|Number=Plur|PronType=Ind	17	det	17:det	_
+16	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	17	det	17:det	_
+17	lados	lado	NOUN	_	Gender=Masc|Number=Plur	13	nmod	13:nmod:de	SpaceAfter=No
+18	.	.	PUNCT	_	_	5	punct	5:punct	_
+
+# sent_id = fakebr:917-9
+# text = Já o Senado está em pauta um projeto que criaria regras para o funcionamento dos aplicativos de transporte, mas o escândalo de desinformação pode comprometer a votação.
+1	Já	já	CCONJ	_	_	6	cc	6:cc	_
+2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	3:det	_
+3	Senado	Senado	PROPN	_	_	6	nsubj	6:nsubj|10:nsubj	_
+4	está	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
+5	em	em	ADP	_	_	6	case	6:case	_
+6	pauta	pauta	NOUN	_	Gender=Fem|Number=Sing	0	root	0:root	_
+7	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	8	det	8:det	_
+8	projeto	projeto	NOUN	_	Gender=Masc|Number=Sing	6	nsubj	6:nsubj|10:nsubj	_
+9	que	que	PRON	_	PronType=Rel	10	nsubj	8:ref	_
+10	criaria	criar	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	8	acl:relcl	8:acl:relcl	_
+11	regras	regra	NOUN	_	Gender=Fem|Number=Plur	10	obj	10:obj	_
+12	para	para	ADP	_	_	14	case	14:case	_
+13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	14:det	_
+14	funcionamento	funcionamento	NOUN	_	Gender=Masc|Number=Sing	11	nmod	11:nmod:para	_
+15-16	dos	_	_	_	_	_	_	_	_
+15	de	de	ADP	_	_	17	case	17:case	_
+16	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	17	det	17:det	_
+17	aplicativos	aplicativo	NOUN	_	Gender=Masc|Number=Plur	14	nmod	14:nmod:de	_
+18	de	de	ADP	_	_	19	case	19:case	_
+19	transporte	transporte	NOUN	_	Gender=Masc|Number=Sing	17	nmod	17:nmod:de	SpaceAfter=No
+20	,	,	PUNCT	_	_	26	punct	26:punct	_
+21	mas	mas	CCONJ	_	_	26	cc	26:cc	_
+22	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	23	det	23:det	_
+23	escândalo	escândalo	NOUN	_	Gender=Masc|Number=Sing	26	nsubj	26:nsubj|27:nsubj	_
+24	de	de	ADP	_	_	25	case	25:case	_
+25	desinformação	desinformação	NOUN	_	Gender=Fem|Number=Sing	23	nmod	23:nmod:de	_
+26	pode	poder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	conj	6:conj:mas	_
+27	comprometer	comprometer	VERB	_	VerbForm=Inf	26	xcomp	26:xcomp	_
+28	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	29	det	29:det	_
+29	votação	votação	NOUN	_	Gender=Fem|Number=Sing	27	obj	27:obj	SpaceAfter=No
+30	.	.	PUNCT	_	_	6	punct	6:punct	_
+
+# sent_id = fakebr:917-10
+# text = O clima está tenso na cidade de Humaitá, no Amazonas, onde prédios e veículos do Ibama e do Instituto Chico Mendes foram incendiados após uma operação contra o garimpo ilegal no Rio Madeira.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	2:det	_
+2	clima	clima	NOUN	_	Gender=Masc|Number=Sing	4	nsubj	4:nsubj	_
+3	está	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
+4	tenso	tenso	ADJ	_	Gender=Masc|Number=Sing	0	root	0:root	_
+5-6	na	_	_	_	_	_	_	_	_
+5	em	em	ADP	_	_	7	case	7:case	_
+6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	7:det	_
+7	cidade	cidade	NOUN	_	Gender=Fem|Number=Sing	4	obl	4:obl:em|29:obl	_
+8	de	de	ADP	_	_	9	case	9:case	_
+9	Humaitá	Humaitá	PROPN	_	_	7	nmod	7:nmod:de	SpaceAfter=No
+10	,	,	PUNCT	_	_	13	punct	13:punct	_
+11-12	no	_	_	_	_	_	_	_	_
+11	em	em	ADP	_	_	13	case	13:case	_
+12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	13:det	_
+13	Amazonas	Amazonas	PROPN	_	_	9	nmod	9:nmod:em	SpaceAfter=No
+14	,	,	PUNCT	_	_	13	punct	13:punct	_
+15	onde	onde	ADV	_	_	29	advmod	7:ref	_
+16	prédios	prédio	NOUN	_	Gender=Masc|Number=Plur	29	nsubj:pass	29:nsubj:pass	_
+17	e	e	CCONJ	_	_	18	cc	18:cc	_
+18	veículos	veículo	NOUN	_	Gender=Masc|Number=Plur	16	conj	16:conj:e|29:nsubj:pass	_
+19-20	do	_	_	_	_	_	_	_	_
+19	de	de	ADP	_	_	21	case	21:case	_
+20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	21:det	_
+21	Ibama	Ibama	PROPN	_	_	16	nmod	16:nmod:de|18:nmod:de	_
+22	e	e	CCONJ	_	_	25	cc	25:cc	_
+23-24	do	_	_	_	_	_	_	_	_
+23	de	de	ADP	_	_	25	case	25:case	_
+24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	25:det	_
+25	Instituto	Instituto	PROPN	_	_	21	conj	16:nmod:de|18:nmod:de|21:conj:e	_
+26	Chico	Chico	PROPN	_	_	25	flat:name	25:flat:name	_
+27	Mendes	Mendes	PROPN	_	_	25	flat:name	25:flat:name	_
+28	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	29	aux:pass	29:aux:pass	_
+29	incendiados	incendiar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	7	acl:relcl	7:acl:relcl	_
+30	após	após	ADP	_	_	32	case	32:case	_
+31	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	32	det	32:det	_
+32	operação	operação	NOUN	_	Gender=Fem|Number=Sing	29	obl	29:obl:após	_
+33	contra	contra	ADP	_	_	35	case	35:case	_
+34	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	35	det	35:det	_
+35	garimpo	garimpo	NOUN	_	Gender=Masc|Number=Sing	32	nmod	32:nmod:contra	_
+36	ilegal	ilegal	ADJ	_	Number=Sing	35	amod	35:amod	_
+37-38	no	_	_	_	_	_	_	_	_
+37	em	em	ADP	_	_	39	case	39:case	_
+38	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	39	det	39:det	_
+39	Rio	Rio	PROPN	_	_	35	nmod	35:nmod:em	_
+40	Madeira	Madeira	PROPN	_	_	39	flat:name	39:flat:name	SpaceAfter=No
+41	.	.	PUNCT	_	_	4	punct	4:punct	_
+
+# sent_id = fakebr:917-11
+# text = Militares e policiais federais foram enviados à região para reforçar a segurança, e os órgãos ambientais decidiram retirar suas equipes da cidade.
+1	Militares	militar	NOUN	_	Number=Plur	6	nsubj:pass	6:nsubj:pass	_
+2	e	e	CCONJ	_	_	3	cc	3:cc	_
+3	policiais	policial	NOUN	_	Number=Plur	1	conj	1:conj:e|6:nsubj:pass	_
+4	federais	federal	ADJ	_	Number=Plur	3	amod	3:amod	_
+5	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	6	aux:pass	6:aux:pass	_
+6	enviados	enviar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	0	root	0:root	_
+7-8	à	_	_	_	_	_	_	_	_
+7	a	a	ADP	_	_	9	case	9:case	_
+8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	9:det	_
+9	região	região	NOUN	_	Gender=Fem|Number=Sing	6	obl	6:obl:a	_
+10	para	para	ADP	_	_	11	mark	11:mark	_
+11	reforçar	reforçar	VERB	_	VerbForm=Inf	6	advcl	6:advcl:para	_
+12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	13:det	_
+13	segurança	segurança	NOUN	_	Number=Sing	11	obj	11:obj	SpaceAfter=No
+14	,	,	PUNCT	_	_	19	punct	19:punct	_
+15	e	e	CCONJ	_	_	19	cc	19:cc	_
+16	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	17	det	17:det	_
+17	órgãos	órgão	NOUN	_	Gender=Masc|Number=Plur	19	nsubj	19:nsubj|20:nsubj	_
+18	ambientais	ambiental	ADJ	_	Number=Plur	17	amod	17:amod	_
+19	decidiram	decidir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	6	conj	6:conj:e	_
+20	retirar	retirar	VERB	_	VerbForm=Inf	19	xcomp	19:xcomp	_
+21	suas	seu	DET	_	Gender=Fem|Number=Plur|Person=3|Poss=Yes|PronType=Prs	22	det	22:det	_
+22	equipes	equipe	NOUN	_	Gender=Fem|Number=Plur	20	obj	20:obj	_
+23-24	da	_	_	_	_	_	_	_	_
+23	de	de	ADP	_	_	25	case	25:case	_
+24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	25:det	_
+25	cidade	cidade	NOUN	_	Gender=Fem|Number=Sing	20	obl	20:obl:de	SpaceAfter=No
+26	.	.	PUNCT	_	_	6	punct	6:punct	_
+
+# sent_id = fakebr:917-12
+# text = Foram controladas as chamas que consumiam a vegetação na Chapada dos Veadeiros, em Goiás.
+1	Foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	2	aux:pass	2:aux:pass	_
+2	controladas	controlar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	0	root	0:root	_
+3	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	4	det	4:det	_
+4	chamas	chama	NOUN	_	Gender=Fem|Number=Plur	2	nsubj:pass	2:nsubj:pass|6:nsubj	_
+5	que	que	PRON	_	PronType=Rel	6	nsubj	4:ref	_
+6	consumiam	consumir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	4	acl:relcl	4:acl:relcl	_
+7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	8:det	_
+8	vegetação	vegetação	NOUN	_	Gender=Fem|Number=Sing	6	obj	6:obj	_
+9-10	na	_	_	_	_	_	_	_	_
+9	em	em	ADP	_	_	11	case	11:case	_
+10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	11:det	_
+11	Chapada	Chapada	PROPN	_	_	6	obl	6:obl:em	_
+12-13	dos	_	_	_	_	_	_	_	_
+12	de	de	ADP	_	_	14	case	14:case	_
+13	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	14	det	14:det	_
+14	Veadeiros	Veadeiros	PROPN	_	_	11	flat:name	11:flat:name	SpaceAfter=No
+15	,	,	PUNCT	_	_	17	punct	17:punct	_
+16	em	em	ADP	_	_	17	case	17:case	_
+17	Goiás	Goiás	PROPN	_	_	11	nmod	11:nmod:em	SpaceAfter=No
+18	.	.	PUNCT	_	_	2	punct	2:punct	_
+
+# sent_id = fakebr:917-13
+# text = Segundo o chefe do parque, a chuva que caiu no fim de semana ajudou.
+1	Segundo	segundo	ADP	_	_	3	case	3:case	_
+2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	3:det	_
+3	chefe	chefe	NOUN	_	Gender=Masc|Number=Sing	17	obl	17:obl:segundo	_
+4-5	do	_	_	_	_	_	_	_	_
+4	de	de	ADP	_	_	6	case	6:case	_
+5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	6:det	_
+6	parque	parque	NOUN	_	Gender=Masc|Number=Sing	3	nmod	3:nmod:de	SpaceAfter=No
+7	,	,	PUNCT	_	_	3	punct	3:punct	_
+8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	9:det	_
+9	chuva	chuva	NOUN	_	Gender=Fem|Number=Sing	17	nsubj	11:nsubj|17:nsubj	_
+10	que	que	PRON	_	PronType=Rel	11	nsubj	9:ref	_
+11	caiu	cair	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	acl:relcl	9:acl:relcl	_
+12-13	no	_	_	_	_	_	_	_	_
+12	em	em	ADP	_	_	14	case	14:case	_
+13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	14:det	_
+14	fim	fim	NOUN	_	Gender=Masc|Number=Sing	11	obl	11:obl:em	_
+15	de	de	ADP	_	_	16	case	16:case	_
+16	semana	semana	NOUN	_	Gender=Fem|Number=Sing	14	nmod	14:nmod:de	_
+17	ajudou	ajudar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	SpaceAfter=No
+18	.	.	PUNCT	_	_	17	punct	17:punct	_
+
+# sent_id = fakebr:917-14
+# text = O Instituto Chico Mendes diz que 68 mil hectares foram atingidos.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	2:det	_
+2	Instituto	Instituto	PROPN	_	_	5	nsubj	5:nsubj	_
+3	Chico	Chico	PROPN	_	_	2	flat:name	2:flat:name	_
+4	Mendes	Mendes	PROPN	_	_	2	flat:name	2:flat:name	_
+5	diz	dizer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+6	que	que	SCONJ	_	_	11	mark	11:mark	_
+7	68	68	NUM	_	NumType=Card	9	nummod	9:nummod	_
+8	mil	mil	NUM	_	NumType=Card	7	flat	7:flat	_
+9	hectares	hectare	NOUN	_	Gender=Masc|Number=Plur	11	nsubj:pass	11:nsubj:pass	_
+10	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	11	aux:pass	11:aux:pass	_
+11	atingidos	atingir	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	5	ccomp	5:ccomp	SpaceAfter=No
+12	.	.	PUNCT	_	_	5	punct	5:punct	_
+
+# sent_id = fakebr:917-15
+# text = Quatro policiais foram presos suspeitos de atirarem por engano em um delegado no Tocantins.
+1	Quatro	quatro	NUM	_	NumType=Card	2	nummod	2:nummod	_
+2	policiais	policial	NOUN	_	Number=Plur	4	nsubj:pass	4:nsubj:pass	_
+3	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	4	aux:pass	4:aux:pass	_
+4	presos	prender	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	0	root	0:root	_
+5	suspeitos	suspeito	ADJ	_	Gender=Masc|Number=Plur	4	advcl	4:advcl	_
+6	de	de	ADP	_	_	7	mark	7:mark	_
+7	atirarem	atirar	VERB	_	Number=Plur|Person=3|VerbForm=Inf	5	acl	5:acl:de	_
+8	por	por	ADP	_	_	9	case	9:case	_
+9	engano	engano	NOUN	_	Gender=Masc|Number=Sing	7	obl	7:obl:por	_
+10	em	em	ADP	_	_	12	case	12:case	_
+11	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	12	det	12:det	_
+12	delegado	delegado	NOUN	_	Gender=Masc|Number=Sing	7	obl	7:obl:em	_
+13-14	no	_	_	_	_	_	_	_	_
+13	em	em	ADP	_	_	15	case	15:case	_
+14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	15:det	_
+15	Tocantins	Tocantins	PROPN	_	_	12	nmod	12:nmod:em	SpaceAfter=No
+16	.	.	PUNCT	_	_	4	punct	4:punct	_
+
+# sent_id = fakebr:917-16
+# text = Eles buscavam suspeitos de roubar um carro-forte.
+1	Eles	ele	PRON	_	Case=Nom|Gender=Masc|Number=Plur|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
+2	buscavam	buscar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	0	root	0:root	_
+3	suspeitos	suspeito	NOUN	_	Gender=Masc|Number=Plur	2	obj	2:obj	_
+4	de	de	ADP	_	_	5	mark	5:mark	_
+5	roubar	roubar	VERB	_	VerbForm=Inf	3	acl	3:acl:de	_
+6	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	7	det	7:det	_
+7	carro-forte	carrO-forte	NOUN	_	Number=Sing	5	obj	5:obj	SpaceAfter=No
+8	.	.	PUNCT	_	_	2	punct	2:punct	_
+
+# sent_id = fakebr:917-17
+# text = O delegado levou três tiros e perdeu parte de uma orelha, mas já teve alta.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	2:det	_
+2	delegado	delegado	NOUN	_	Gender=Masc|Number=Sing	3	nsubj	3:nsubj|7:nsubj|15:nsubj	_
+3	levou	levar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+4	três	três	NUM	_	NumType=Card	5	nummod	5:nummod	_
+5	tiros	tiro	NOUN	_	Gender=Masc|Number=Plur	3	obj	3:obj	_
+6	e	e	CCONJ	_	_	7	cc	7:cc	_
+7	perdeu	perder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	conj	3:conj:e	_
+8	parte	parte	NOUN	_	Gender=Fem|Number=Sing	7	obj	7:obj	_
+9	de	de	ADP	_	_	11	case	11:case	_
+10	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	11	det	11:det	_
+11	orelha	orelha	NOUN	_	Gender=Fem|Number=Sing	8	nmod	8:nmod:de	SpaceAfter=No
+12	,	,	PUNCT	_	_	15	punct	15:punct	_
+13	mas	mas	CCONJ	_	_	15	cc	15:cc	_
+14	já	já	ADV	_	_	15	advmod	15:advmod	_
+15	teve	ter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	conj	3:conj:mas	_
+16	alta	alta	NOUN	_	Gender=Fem|Number=Sing	15	obj	15:obj	SpaceAfter=No
+17	.	.	PUNCT	_	_	3	punct	3:punct	_
+
+# sent_id = fakebr:917-18
+# text = Ele narrou o episódio ao G1.
+1	Ele	ele	PRON	_	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj	_
+2	narrou	narrar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+3	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	4:det	_
+4	episódio	episódio	NOUN	_	Gender=Masc|Number=Sing	2	obj	2:obj	_
+5-6	ao	_	_	_	_	_	_	_	_
+5	a	a	ADP	_	_	7	case	7:case	_
+6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	7:det	_
+7	G1	G1	PROPN	_	_	2	obl	2:obl:a	SpaceAfter=No
+8	.	.	PUNCT	_	_	2	punct	2:punct	_
+
+# sent_id = fakebr:917-19
+# text = A 1a prova do Enem será no próximo domingo, e o G1 mostra quais foram os temas mais cobrados nas provas de ciências humanas entre 2009 e 2016.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	3:det	_
+2	1a	1A	ADJ	_	Gender=Fem|NumType=Ord	3	amod	3:amod	_
+3	prova	prova	NOUN	_	Gender=Fem|Number=Sing	11	nsubj	11:nsubj	_
+4-5	do	_	_	_	_	_	_	_	_
+4	de	de	ADP	_	_	6	case	6:case	_
+5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	6:det	_
+6	Enem	Enem	PROPN	_	_	3	nmod	3:nmod:de	_
+7	será	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin	11	cop	11:cop	_
+8-9	no	_	_	_	_	_	_	_	_
+8	em	em	ADP	_	_	11	case	11:case	_
+9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	11:det	_
+10	próximo	próximo	ADJ	_	Gender=Masc|Number=Sing	11	amod	11:amod	_
+11	domingo	domingo	NOUN	_	Gender=Masc|Number=Sing	0	root	0:root	SpaceAfter=No
+12	,	,	PUNCT	_	_	16	punct	16:punct	_
+13	e	e	CCONJ	_	_	16	cc	16:cc	_
+14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	15:det	_
+15	G1	G1	PROPN	_	_	16	nsubj	16:nsubj	_
+16	mostra	mostrar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	conj	11:conj:e	_
+17	quais	qual	PRON	_	Number=Plur|PronType=Int	20	nsubj	20:nsubj	_
+18	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	20	cop	20:cop	_
+19	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	20	det	20:det	_
+20	temas	tema	NOUN	_	Gender=Masc|Number=Plur	16	ccomp	16:ccomp	_
+21	mais	mais	ADV	_	_	22	advmod	22:advmod	_
+22	cobrados	cobrar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	20	acl	20:acl	_
+23-24	nas	_	_	_	_	_	_	_	_
+23	em	em	ADP	_	_	25	case	25:case	_
+24	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	25	det	25:det	_
+25	provas	prova	NOUN	_	Gender=Fem|Number=Plur	22	obl	22:obl:em	_
+26	de	de	ADP	_	_	27	case	27:case	_
+27	ciências	ciência	NOUN	_	Gender=Fem|Number=Plur	25	nmod	25:nmod:de	_
+28	humanas	humano	ADJ	_	Gender=Fem|Number=Plur	27	amod	27:amod	_
+29	entre	entre	ADP	_	_	30	case	30:case	_
+30	2009	2009	NUM	_	NumType=Card	22	obl	22:obl:entre	_
+31	e	e	CCONJ	_	_	32	cc	32:cc	_
+32	2016	2016	NUM	_	NumType=Card	30	conj	22:obl:entre|30:conj:e	SpaceAfter=No
+33	.	.	PUNCT	_	_	11	punct	11:punct	_
+
+# sent_id = fakebr:917-20
+# text = Mais de 370 mil eleitores estavam aptos ontem a decidir sobre o uso de armas de fogo pelos guardas municipais.
+1	Mais	mais	ADV	_	_	3	advmod	3:advmod	_
+2	de	de	ADP	_	_	1	fixed	1:fixed	_
+3	370	370	NUM	_	NumType=Card	5	nummod	5:nummod	_
+4	mil	mil	NUM	_	NumType=Card	3	flat	3:flat	_
+5	eleitores	eleitor	NOUN	_	Gender=Masc|Number=Plur	7	nsubj	7:nsubj	_
+6	estavam	estar	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin	7	cop	7:cop	_
+7	aptos	apto	ADJ	_	Gender=Masc|Number=Plur	0	root	0:root	_
+8	ontem	ontem	ADV	_	_	7	advmod	7:advmod	_
+9	a	a	ADP	_	_	10	mark	10:mark	_
+10	decidir	decidir	VERB	_	VerbForm=Inf	7	acl	7:acl:a	_
+11	sobre	sobre	ADP	_	_	13	case	13:case	_
+12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	13:det	_
+13	uso	uso	NOUN	_	Gender=Masc|Number=Sing	10	obl	10:obl:sobre	_
+14	de	de	ADP	_	_	15	case	15:case	_
+15	armas	arma	NOUN	_	Gender=Fem|Number=Plur	13	nmod	13:nmod:de	_
+16	de	de	ADP	_	_	17	case	17:case	_
+17	fogo	fogo	NOUN	_	Gender=Masc|Number=Sing	15	nmod	15:nmod:de	_
+18-19	pelos	_	_	_	_	_	_	_	_
+18	por	por	ADP	_	_	20	case	20:case	_
+19	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	20	det	20:det	_
+20	guardas	guarda	NOUN	_	Number=Plur	13	nmod	13:nmod:por	_
+21	municipais	municipal	ADJ	_	Number=Plur	20	amod	20:amod	SpaceAfter=No
+22	.	.	PUNCT	_	_	7	punct	7:punct	_
+
+# sent_id = fakebr:917-21
+# text = Niterói foi a primeira cidade do país a ouvir sua população sobre o tema.
+1	Niterói	Niterói	PROPN	_	_	5	nsubj	5:nsubj	_
+2	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	cop	5:cop	_
+3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	5:det	_
+4	primeira	primeiro	ADJ	_	Gender=Fem|Number=Sing|NumType=Ord	5	amod	5:amod	_
+5	cidade	cidade	NOUN	_	Gender=Fem|Number=Sing	0	root	0:root	_
+6-7	do	_	_	_	_	_	_	_	_
+6	de	de	ADP	_	_	8	case	8:case	_
+7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	8:det	_
+8	país	país	NOUN	_	Gender=Masc|Number=Sing	5	nmod	5:nmod:de	_
+9	a	a	ADP	_	_	10	mark	10:mark	_
+10	ouvir	ouvir	VERB	_	VerbForm=Inf	5	acl	5:acl:a	_
+11	sua	seu	DET	_	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	12	det	12:det	_
+12	população	população	NOUN	_	Gender=Fem|Number=Sing	10	obj	10:obj	_
+13	sobre	sobre	ADP	_	_	15	case	15:case	_
+14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	15:det	_
+15	tema	tema	NOUN	_	Gender=Masc|Number=Sing	10	obl	10:obl:sobre	SpaceAfter=No
+16	.	.	PUNCT	_	_	5	punct	5:punct	_
+
+# sent_id = fakebr:917-22
+# text = De acordo com a prefeitura, a opção pelo não recebeu 13.478 votos, contra 5.478 votos para o sim.
+1	De	de	ADP	_	_	2	case	2:case	_
+2	acordo	acordo	NOUN	_	Gender=Masc|Number=Sing	12	obl	12:obl:de	_
+3	com	com	ADP	_	_	5	case	5:case	_
+4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	5:det	_
+5	prefeitura	prefeitura	NOUN	_	Gender=Fem|Number=Sing	2	nmod	2:nmod:com	SpaceAfter=No
+6	,	,	PUNCT	_	_	2	punct	2:punct	_
+7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	8:det	_
+8	opção	opção	NOUN	_	Gender=Fem|Number=Sing	12	nsubj	12:nsubj	_
+9-10	pelo	_	_	_	_	_	_	_	_
+9	por	por	ADP	_	_	11	case	11:case	_
+10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	11:det	_
+11	não	não	ADV	_	_	8	nmod	8:nmod:por	_
+12	recebeu	receber	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+13	13.478	13.478	NUM	_	NumType=Card	14	nummod	14:nummod	_
+14	votos	voto	NOUN	_	Gender=Masc|Number=Plur	12	obj	12:obj	SpaceAfter=No
+15	,	,	PUNCT	_	_	18	punct	18:punct	_
+16	contra	contra	ADP	_	_	18	case	18:case	_
+17	5.478	5.478	NUM	_	NumType=Card	18	nummod	18:nummod	_
+18	votos	voto	NOUN	_	Gender=Masc|Number=Plur	12	obl	12:obl:contra	_
+19	para	para	ADP	_	_	21	case	21:case	_
+20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	21:det	_
+21	sim	sim	ADV	_	_	18	nmod	18:nmod:para	SpaceAfter=No
+22	.	.	PUNCT	_	_	12	punct	12:punct	_
+
+# sent_id = fakebr:917-23
+# text = Entre os votantes, 25 moradores votaram nulo e oito, em branco.
+1	Entre	entre	ADP	_	_	3	case	3:case	_
+2	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	3	det	3:det	_
+3	votantes	votante	NOUN	_	Number=Plur	7	obl	7:obl:entre	SpaceAfter=No
+4	,	,	PUNCT	_	_	3	punct	3:punct	_
+5	25	25	NUM	_	NumType=Card	6	nummod	6:nummod	_
+6	moradores	morador	NOUN	_	Gender=Masc|Number=Plur	7	nsubj	7:nsubj	_
+7	votaram	votar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+8	nulo	nulo	ADJ	_	Gender=Masc|Number=Sing	7	obj	7:obj	_
+9	e	e	CCONJ	_	_	10	cc	9.1:cc	_
+9.1	__NOFORM__	votar	VERB	_	_	_	_	7:conj	_
+10	oito	oito	NUM	_	NumType=Card	7	conj	9.1:obj	SpaceAfter=No
+11	,	,	PUNCT	_	_	13	punct	13:punct	_
+12	em	em	ADP	_	_	13	case	13:case	_
+13	branco	branco	NOUN	_	Gender=Masc|Number=Sing	10	orphan	9.1:obl:em	SpaceAfter=No
+14	.	.	PUNCT	_	_	7	punct	7:punct	_
+
+# sent_id = fakebr:917-24
+# text = Vai esquentar a reta final do campeonato.
+1	Vai	ir	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	aux	2:aux	_
+2	esquentar	esquentar	VERB	_	VerbForm=Inf	0	root	0:root	_
+3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	4	det	4:det	_
+4	reta	reta	NOUN	_	Gender=Fem|Number=Sing	2	obj	2:obj	_
+5	final	final	ADJ	_	Number=Sing	4	amod	4:amod	_
+6-7	do	_	_	_	_	_	_	_	_
+6	de	de	ADP	_	_	8	case	8:case	_
+7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	8:det	_
+8	campeonato	campeonato	NOUN	_	Gender=Masc|Number=Sing	4	nmod	4:nmod:de	SpaceAfter=No
+9	.	.	PUNCT	_	_	2	punct	2:punct	_
+
+# sent_id = fakebr:917-25
+# text = Após mais uma derrota, o líder Corinthians pode ver a diferença cair para 3 pontos hoje, já que o Palmeiras enfrenta o Cruzeiro.
+1	Após	após	ADP	_	_	4	case	4:case	_
+2	mais	mais	ADV	_	_	3	advmod	3:advmod	_
+3	uma	um	NUM	_	Gender=Fem|NumType=Card	4	nummod	4:nummod	_
+4	derrota	derrota	NOUN	_	Gender=Fem|Number=Sing	9	obl	9:obl:após	SpaceAfter=No
+5	,	,	PUNCT	_	_	4	punct	4:punct	_
+6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	7:det	_
+7	líder	líder	NOUN	_	Gender=Masc|Number=Sing	9	nsubj	9:nsubj|10:nsubj	_
+8	Corinthians	Corinthians	PROPN	_	_	7	nmod	7:nmod	_
+9	pode	poder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+10	ver	ver	VERB	_	VerbForm=Inf	9	xcomp	9:xcomp	_
+11	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	12:det	_
+12	diferença	diferença	NOUN	_	Gender=Fem|Number=Sing	10	obj	10:obj|13:nsubj	_
+13	cair	cair	VERB	_	Number=Sing|Person=3|VerbForm=Inf	10	xcomp	10:xcomp	_
+14	para	para	ADP	_	_	16	case	16:case	_
+15	3	3	NUM	_	NumType=Card	16	nummod	16:nummod	_
+16	pontos	ponto	NOUN	_	Gender=Masc|Number=Plur	13	obl	13:obl:para	_
+17	hoje	hoje	ADV	_	_	13	advmod	13:advmod	SpaceAfter=No
+18	,	,	PUNCT	_	_	23	punct	23:punct	_
+19	já	já	ADV	_	_	23	mark	23:mark	_
+20	que	que	SCONJ	_	_	19	fixed	19:fixed	_
+21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	22:det	_
+22	Palmeiras	Palmeiras	PROPN	_	_	23	nsubj	23:nsubj	_
+23	enfrenta	enfrentar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	advcl	10:advcl:já_que	_
+24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	25:det	_
+25	Cruzeiro	Cruzeiro	PROPN	_	_	23	obj	23:obj	SpaceAfter=No
+26	.	.	PUNCT	_	_	9	punct	9:punct	_
+
+# sent_id = fakebr:917-26
+# text = Assista abaixo aos gols do Fantástico e veja a classificação.
+1	Assista	assistir	VERB	_	Mood=Imp|Number=Sing|Person=3|VerbForm=Fin	0	root	0:root	_
+2	abaixo	abaixo	ADV	_	_	1	advmod	1:advmod	_
+3-4	aos	_	_	_	_	_	_	_	_
+3	a	a	ADP	_	_	5	case	5:case	_
+4	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	5	det	5:det	_
+5	gols	gol	NOUN	_	Gender=Masc|Number=Plur	1	obl	1:obl:a	_
+6-7	do	_	_	_	_	_	_	_	_
+6	de	de	ADP	_	_	8	case	8:case	_
+7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	8:det	_
+8	Fantástico	Fantástico	PROPN	_	_	5	nmod	5:nmod:de	_
+9	e	e	CCONJ	_	_	10	cc	10:cc	_
+10	veja	ver	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	conj	1:conj:e	_
+11	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	12:det	_
+12	classificação	classificação	NOUN	_	Gender=Fem|Number=Sing	10	obj	10:obj	SpaceAfter=No
+13	.	.	PUNCT	_	_	1	punct	1:punct	_
+
+# sent_id = fakebr:917-27
+# text = Lewis Hamilton fez o que precisava.
+1	Lewis	Lewis	PROPN	_	_	3	nsubj	3:nsubj	_
+2	Hamilton	Hamilton	PROPN	_	_	1	flat:name	1:flat:name	_
+3	fez	fazer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+4	o	o	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Dem	3	obj	3:obj|6:obj	_
+5	que	que	PRON	_	PronType=Rel	6	obj	4:ref	_
+6	precisava	precisar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	4	acl:relcl	4:acl:relcl	SpaceAfter=No
+7	.	.	PUNCT	_	_	3	punct	3:punct	_
+
+# sent_id = fakebr:917-28
+# text = Chegou em 9o no GP do México e faturou o 4o título mundial porque Vettel terminou a corrida na 4a colocação.
+1	Chegou	chegar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+2	em	em	ADP	_	_	3	case	3:case	_
+3	9o	9o	ADJ	_	Gender=Masc|NumType=Ord	1	obl	1:obl:em	_
+4-5	no	_	_	_	_	_	_	_	_
+4	em	em	ADP	_	_	6	case	6:case	_
+5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	6:det	_
+6	GP	GP	PROPN	_	_	1	obl	1:obl:em	_
+7-8	do	_	_	_	_	_	_	_	_
+7	de	de	ADP	_	_	9	case	9:case	_
+8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	9:det	_
+9	México	México	PROPN	_	_	6	nmod	6:nmod:de	_
+10	e	e	CCONJ	_	_	11	cc	11:cc	_
+11	faturou	faturar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	conj	1:conj:e	_
+12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	14:det	_
+13	4o	4o	ADJ	_	Gender=Masc|NumType=Ord	14	amod	14:amod	_
+14	título	título	NOUN	_	Gender=Masc|Number=Sing	11	obj	11:obj	_
+15	mundial	mundial	ADJ	_	Number=Sing	14	amod	14:amod	_
+16	porque	porque	SCONJ	_	_	18	mark	18:mark	_
+17	Vettel	Vettel	PROPN	_	_	18	nsubj	18:nsubj	_
+18	terminou	terminar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	advcl	11:advcl:porque	_
+19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	20:det	_
+20	corrida	corrida	NOUN	_	Gender=Fem|Number=Sing	18	obj	18:obj	_
+21-22	na	_	_	_	_	_	_	_	_
+21	em	em	ADP	_	_	24	case	24:case	_
+22	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	24	det	24:det	_
+23	4a	4A	ADJ	_	Gender=Fem|NumType=Ord	24	amod	24:amod	_
+24	colocação	colocação	NOUN	_	Gender=Fem|Number=Sing	18	obl	18:obl:em	SpaceAfter=No
+25	.	.	PUNCT	_	_	1	punct	1:punct	_
+
+# sent_id = fakebr:917-29
+# text = Os rivais tiveram uma corrida de recuperação após se tocarem e precisarem voltar para os boxes ainda na 1a volta.
+1	Os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	2	det	2:det	_
+2	rivais	rival	NOUN	_	Number=Plur	3	nsubj	3:nsubj	_
+3	tiveram	ter	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+4	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	5	det	5:det	_
+5	corrida	corrida	NOUN	_	Gender=Fem|Number=Sing	3	obj	3:obj	_
+6	de	de	ADP	_	_	7	case	7:case	_
+7	recuperação	recuperação	NOUN	_	Gender=Fem|Number=Sing	5	nmod	5:nmod:de	_
+8	após	após	ADP	_	_	10	mark	10:mark|12:mark	_
+9	se	se	PRON	_	Case=Nom|Person=3|PronType=Prs	10	expl	10:expl	_
+10	tocarem	tocar	VERB	_	Number=Plur|Person=3|VerbForm=Inf	3	advcl	3:advcl:após	_
+11	e	e	CCONJ	_	_	12	cc	12:cc	_
+12	precisarem	precisar	VERB	_	Number=Plur|Person=3|VerbForm=Inf	10	conj	3:advcl:após|10:conj:e	_
+13	voltar	voltar	VERB	_	VerbForm=Inf	12	xcomp	12:xcomp	_
+14	para	para	ADP	_	_	16	case	16:case	_
+15	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	16	det	16:det	_
+16	boxes	boxe	NOUN	_	Gender=Masc|Number=Plur	13	obl	13:obl:para	_
+17	ainda	ainda	ADV	_	_	21	advmod	21:advmod	_
+18-19	na	_	_	_	_	_	_	_	_
+18	em	em	ADP	_	_	21	case	21:case	_
+19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	21	det	21:det	_
+20	1a	1A	ADJ	_	Gender=Fem|NumType=Ord	21	amod	21:amod	_
+21	volta	volta	NOUN	_	Gender=Fem|Number=Sing	13	obl	13:obl:em	SpaceAfter=No
+22	.	.	PUNCT	_	_	3	punct	3:punct	_
+
+# sent_id = fakebr:917-30
+# text = Verstappen venceu.
+1	Verstappen	Verstappen	PROPN	_	_	2	nsubj	2:nsubj	_
+2	venceu	vencer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	SpaceAfter=No
+3	.	.	PUNCT	_	_	2	punct	2:punct	_
+

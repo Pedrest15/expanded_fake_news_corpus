@@ -1,0 +1,86 @@
+S0002	27	mantiveram	LmLEX	mantiver	manter
+S0010	13	siga	LmLEX	sigir	seguir
+S0013	5	envolvidos	L1LEX	envolvir	envolver
+S0015	35	mantinha	LmLEX	mantiner	manter
+S0022	4	exigem	L1LEX	exiger	exigir
+S0023	5	Político-Eleitoral	LrepTAG	Político-eleitoral	Político-Eleitoral
+S0026	18	distribuído	L1LEX	distribuír	distribuir
+S0028	9	proíbe	LmLEX	proíbe	proibir
+S0028	21	paga	LmLEX	par	pagar
+S0032	8	proibia	LmLEX	proiber	proibir
+S0032	17	mantida	L1LEX	mantir	manter
+S0033	12	incluído	L1LEX	incluír	incluir
+S0036	6	quis	LmLEX	quis	querer
+S0045	21	incluíssem	L1LEX	incluír	incluir
+S0048	9	garantia	LmLEX	garantr	garantir
+S0048	16	garantia	LmLEX	garantr	garantir
+S0058	12	estrague	LmLEX	estraguar	estragar
+S0078	21	S.Paulo	LrepTAG	S.paulo	S.Paulo
+S0084	7	FalsoRisco	LrepTAG	FalsorIsco	FalsoRisco
+S0095	11	incluso	L1LEX	inclur	incluir
+S0096	4	obtido	L1LEX	obtir	obter
+S0101	26	obtido	L1LEX	obtir	obter
+S0102	5	desenvolvido	L1LEX	desenvolvir	desenvolver
+S0103	40	fossem	LmLEX	fossem	ir
+S0106	25	km	LuAbbr	km	quilômetro
+S0106	37	previstos	L1LEX	previsr	prever
+S0109	18	prometido	L1LEX	prometir	prometer
+S0114	23	quiseram	LmLEX	quiser	querer
+S0120	13	opôs	L1LEX	opôr	opor
+S0122	4	for	LmLEX	for	ir
+S0122	29	absolvido	L1LEX	absolvir	absolver
+S0132	6	mortos	LmLEX	mortos	matar
+S0134	11	descoberto	L1LEX	descobeer	descobrir
+S0140	4	mortos	LmLEX	mortos	matar
+S0151	20	Dlamini-Zuma	LrepTAG	Dlamini-zuma	Dlamini-Zuma
+S0154	19	garantem	L1LEX	garanter	garantir
+S0157	34	WhatsApp	LrepTAG	Whatsapp	WhatsApp
+S0158	8	obtido	L1LEX	obtir	obter
+S0172	13	saiba	LmLEX	sair	saber
+S0176	28	#SalárioMínimoCortado	LrepTAG	#saláriomínimocortado	#SalárioMínimoCortado
+S0176	30	#BolsonaroTraiTrabalhadores	LrepTAG	#bolsonarotraitrabalhadores	#BolsonaroTraiTrabalhadores
+S0177	11	baseia	L1LEX	baseiar	basear
+S0181	6	sugerem	L1LEX	sugerer	sugerir
+S0186	7	Bolívia-Brasil	LrepTAG	Bolívia-brasil	Bolívia-Brasil
+S0186	29	liquefeito	L1LEX	liquefeir	liquefazer
+S0198	1	Garanta	LmLEX	garanter	garantir
+S0202	8	@adidasinfluenciadores	LrepTAG	@adidasinfluenciador	@adidasinfluenciadores
+S0202	19	#AdidasiNovaGeração	LrepTAG	#adidasinovageração	#AdidasiNovaGeração
+S0209	9	NextGen	LrepTAG	Nextgen	NextGen
+S0211	3	for	LmLEX	for	ir
+S0219	12	#PaollaContraBolsonaro	LrepTAG	#paollacontrabolsonaro	#PaollaContraBolsonaro
+S0219	14	#ProstiçãoComoFuturo	LrepTAG	#prostiçãocomofuturo	#ProstiçãoComoFuturo
+S0222	16	destruíram	LmLEX	destruír	destruir
+S0231	18	pague	LmLEX	paguar	pagar
+S0241	14	app.	LrepTAG	APP.	app.
+S0246	14	Android	LrepTAG	ANDROID	Android
+S0246	16	iOS	LrepTAG	IOS	iOS
+S0255	6	ligue	LmLEX	liguar	ligar
+S0257	13	mantido	L1LEX	mantir	manter
+S0262	2	perca	LmLEX	percer	perder
+S0263	2	Chocante	FrepTAG	Number=Sing	_
+S0284	7	exigem	L1LEX	exiger	exigir
+S0288	11	concedia	LmLEX	concedir	conceder
+
+==========================================================
+
+Lchanged - fixed: 62
+LnoLEX   - fixed: 0
+L1LEX    - fixed: 22
+LmLEX    - fixed: 23
+LunkTAG  - fixed: 0
+LdaysW   - fixed: 0
+Lmonth   - fixed: 0
+LuAbbr   - fixed: 1
+Lord     - fixed: 0
+LrepTAG  - fixed: 16
+Fchanged - fixed: 1
+FnoLEX   - fixed: 0
+F1LEX    - fixed: 0
+FmLEX    - fixed: 0
+FunkTAG  - fixed: 0
+FdaysW   - fixed: 0
+Fmonth   - fixed: 0
+FuAbbr   - fixed: 0
+Ford     - fixed: 0
+FrepTAG  - fixed: 1

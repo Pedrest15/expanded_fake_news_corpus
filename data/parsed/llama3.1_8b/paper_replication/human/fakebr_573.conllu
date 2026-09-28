@@ -1,0 +1,329 @@
+# sent_id = fakebr:573-1
+# text = Alexandre de Moraes x Sabiá no twitter.
+1	Alexandre	Alexandre	PROPN	_	_	0	root	_	_
+2	de	de	ADP	_	_	3	case	_	_
+3	Moraes	Moraes	PROPN	_	_	1	flat:name	_	_
+4	x	x	ADP	_	_	5	case	_	_
+5	Sabiá	Sabiá	PROPN	_	_	1	nmod	_	_
+6-7	no	_	_	_	_	_	_	_	_
+6	em	em	ADP	_	_	8	case	_	_
+7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
+8	twitter	twitter	NOUN	_	Foreign=Yes|Gender=Masc|Number=Sing	1	nmod	_	SpaceAfter=No
+9	.	.	PUNCT	_	_	1	punct	_	_
+
+# sent_id = fakebr:573-2
+# text = Alexandre de Moraes, ministro do STF, criticou hoje (23) a novela "A força do querer", da Rede Globo.
+1	Alexandre	Alexandre	PROPN	_	_	10	nsubj	_	_
+2	de	de	ADP	_	_	3	case	_	_
+3	Moraes	Moraes	PROPN	_	_	1	flat:name	_	SpaceAfter=No
+4	,	,	PUNCT	_	_	5	punct	_	_
+5	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	1	appos	_	_
+6-7	do	_	_	_	_	_	_	_	_
+6	de	de	ADP	_	_	8	case	_	_
+7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
+8	STF	STF	PROPN	_	_	5	nmod	_	SpaceAfter=No
+9	,	,	PUNCT	_	_	5	punct	_	_
+10	criticou	criticar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+11	hoje	hoje	ADV	_	_	10	advmod	_	_
+12	(	(	PUNCT	_	_	13	punct	_	SpaceAfter=No
+13	23	23	NUM	_	NumType=Card	11	appos	_	SpaceAfter=No
+14	)	)	PUNCT	_	_	13	punct	_	_
+15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
+16	novela	novela	NOUN	_	Gender=Fem|Number=Sing	10	obj	_	_
+17	"	"	PUNCT	_	_	18	punct	_	SpaceAfter=No
+18	A	A	PROPN	_	_	16	nmod	_	_
+19	força	força	NOUN	_	Gender=Fem|Number=Sing	18	flat:name	_	_
+20-21	do	_	_	_	_	_	_	_	_
+20	de	de	ADP	_	_	22	case	_	_
+21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
+22	querer	querer	VERB	_	Number=Sing|Person=3|VerbForm=Inf	18	nmod	_	SpaceAfter=No
+23	"	"	PUNCT	_	_	18	punct	_	SpaceAfter=No
+24	,	,	PUNCT	_	_	27	punct	_	_
+25-26	da	_	_	_	_	_	_	_	_
+25	de	de	ADP	_	_	27	case	_	_
+26	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	27	det	_	_
+27	Rede	Rede	PROPN	_	_	16	nmod	_	_
+28	Globo	Globo	PROPN	_	_	27	flat:name	_	SpaceAfter=No
+29	.	.	PUNCT	_	_	10	punct	_	_
+
+# sent_id = fakebr:573-3
+# text = O ministro disse que a novela de Glória Perez glamouriza o tráfico, em referência às tramas que foram narradas com os personagens Bibi, Rubinho, Sabiá, etc...
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
+2	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	3	nsubj	_	_
+3	disse	dizer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+4	que	que	SCONJ	_	_	10	mark	_	_
+5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
+6	novela	novela	NOUN	_	Gender=Fem|Number=Sing	10	nsubj	_	_
+7	de	de	ADP	_	_	8	case	_	_
+8	Glória	Glória	PROPN	_	_	6	nmod	_	_
+9	Perez	Perez	PROPN	_	_	8	flat:name	_	_
+10	glamouriza	glamourizar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	ccomp	_	_
+11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
+12	tráfico	tráfico	NOUN	_	Gender=Masc|Number=Sing	10	obj	_	SpaceAfter=No
+13	,	,	PUNCT	_	_	15	punct	_	_
+14	em	em	ADP	_	_	15	case	_	_
+15	referência	referência	NOUN	_	Gender=Fem|Number=Sing	3	obl	_	_
+16-17	às	_	_	_	_	_	_	_	_
+16	a	a	ADP	_	_	18	case	_	_
+17	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	18	det	_	_
+18	tramas	trama	NOUN	_	Gender=Fem|Number=Plur	15	nmod	_	_
+19	que	que	PRON	_	PronType=Rel	21	nsubj:pass	_	_
+20	foram	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	21	aux:pass	_	_
+21	narradas	narrar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	18	acl:relcl	_	_
+22	com	com	ADP	_	_	24	case	_	_
+23	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	24	det	_	_
+24	personagens	personagem	NOUN	_	Number=Plur	21	obl	_	_
+25	Bibi	Bibi	PROPN	_	_	24	nmod	_	SpaceAfter=No
+26	,	,	PUNCT	_	_	27	punct	_	_
+27	Rubinho	Rubinho	PROPN	_	_	25	conj	_	SpaceAfter=No
+28	,	,	PUNCT	_	_	29	punct	_	_
+29	Sabiá	Sabiá	PROPN	_	_	25	conj	_	SpaceAfter=No
+30	,	,	PUNCT	_	_	31	punct	_	_
+31	etc.	etc.	PUNCT	_	_	25	conj	_	SpaceAfter=No
+32	..	..	PUNCT	_	_	3	punct	_	_
+
+# sent_id = fakebr:573-4
+# text = "Vocês concordam com o glamour do tráfico de drogas, banhado a sangue contra o trabalho sério do povo brasileiro?", escreveu o ministro.
+1	"	"	PUNCT	_	_	3	punct	_	SpaceAfter=No
+2	Vocês	você	PRON	_	Case=Nom|Number=Plur|Person=2|PronType=Prs	3	nsubj	_	_
+3	concordam	concordar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	27	ccomp:speech	_	_
+4	com	com	ADP	_	_	6	case	_	_
+5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
+6	glamour	glamour	NOUN	_	Gender=Masc|Number=Sing	3	obl	_	_
+7-8	do	_	_	_	_	_	_	_	_
+7	de	de	ADP	_	_	9	case	_	_
+8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
+9	tráfico	tráfico	NOUN	_	Gender=Masc|Number=Sing	6	nmod	_	_
+10	de	de	ADP	_	_	11	case	_	_
+11	drogas	droga	NOUN	_	Gender=Fem|Number=Plur	9	nmod	_	SpaceAfter=No
+12	,	,	PUNCT	_	_	13	punct	_	_
+13	banhado	banhar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	9	acl	_	_
+14	a	a	ADP	_	_	15	case	_	_
+15	sangue	sangue	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	_
+16	contra	contra	ADP	_	_	18	case	_	_
+17	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	18	det	_	_
+18	trabalho	trabalho	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	_
+19	sério	sério	ADJ	_	Gender=Masc|Number=Sing	18	amod	_	_
+20-21	do	_	_	_	_	_	_	_	_
+20	de	de	ADP	_	_	22	case	_	_
+21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
+22	povo	povo	NOUN	_	Gender=Masc|Number=Sing	18	nmod	_	_
+23	brasileiro	brasileiro	ADJ	_	Gender=Masc|Number=Sing	22	amod	_	SpaceAfter=No
+24	?	?	PUNCT	_	_	3	punct	_	SpaceAfter=No
+25	"	"	PUNCT	_	_	3	punct	_	SpaceAfter=No
+26	,	,	PUNCT	_	_	3	punct	_	_
+27	escreveu	escrever	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+28	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	29	det	_	_
+29	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	27	nsubj	_	SpaceAfter=No
+30	.	.	PUNCT	_	_	27	punct	_	_
+
+# sent_id = fakebr:573-5
+# text = Em primeiro lugar, temos o cidadão Alexandre de Moraes, que pode e deve exercer seu direito de opinar sobre o que ele achar conveniente [...] e nós até concordamos com suas críticas em relação à Globo.
+1	Em	em	ADP	_	_	3	case	_	_
+2	primeiro	primeiro	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	3	amod	_	_
+3	lugar	lugar	NOUN	_	Gender=Masc|Number=Sing	5	obl	_	SpaceAfter=No
+4	,	,	PUNCT	_	_	3	punct	_	_
+5	temos	ter	VERB	_	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	0	root	_	_
+6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
+7	cidadão	cidadão	NOUN	_	Gender=Masc|Number=Sing	5	obj	_	_
+8	Alexandre	Alexandre	PROPN	_	_	7	nmod	_	_
+9	de	de	ADP	_	_	10	case	_	_
+10	Moraes	Moraes	PROPN	_	_	8	flat:name	_	SpaceAfter=No
+11	,	,	PUNCT	_	_	13	punct	_	_
+12	que	que	PRON	_	PronType=Rel	13	nsubj	_	_
+13	pode	poder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	acl:relcl	_	_
+14	e	e	CCONJ	_	_	15	cc	_	_
+15	deve	dever	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	conj	_	_
+16	exercer	exercer	VERB	_	VerbForm=Inf	13	xcomp	_	_
+17	seu	seu	DET	_	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	18	det	_	_
+18	direito	direito	NOUN	_	Gender=Masc|Number=Sing	16	obj	_	_
+19	de	de	ADP	_	_	20	mark	_	_
+20	opinar	opinar	VERB	_	VerbForm=Inf	18	acl	_	_
+21	sobre	sobre	ADP	_	_	22	case	_	_
+22	o	o	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Dem	20	obl	_	_
+23	que	que	PRON	_	PronType=Rel	25	obj	_	_
+24	ele	ele	PRON	_	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	25	nsubj	_	_
+25	achar	achar	VERB	_	VerbForm=Inf	22	acl:relcl	_	_
+26	conveniente	conveniente	ADJ	_	Number=Sing	25	xcomp	_	_
+27	[	[	PUNCT	_	_	28	punct	_	SpaceAfter=No
+28	.	.	PUNCT	_	_	25	parataxis	_	SpaceAfter=No
+29	..	..	PUNCT	_	_	28	punct	_	SpaceAfter=No
+30	]	]	PUNCT	_	_	28	punct	_	_
+31	e	e	CCONJ	_	_	34	cc	_	_
+32	nós	nós	PRON	_	Case=Nom|Number=Plur|Person=1|PronType=Prs	34	nsubj	_	_
+33	até	até	ADV	_	_	34	advmod	_	_
+34	concordamos	concordar	VERB	_	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	5	conj	_	_
+35	com	com	ADP	_	_	37	case	_	_
+36	suas	seu	DET	_	Gender=Fem|Number=Plur|Person=3|Poss=Yes|PronType=Prs	37	det	_	_
+37	críticas	crítico	NOUN	_	Gender=Fem|Number=Plur	34	obl	_	_
+38	em	em	ADP	_	_	39	case	_	_
+39	relação	relação	NOUN	_	Gender=Fem|Number=Sing	37	nmod	_	_
+40-41	à	_	_	_	_	_	_	_	_
+40	a	a	ADP	_	_	42	case	_	_
+41	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	42	det	_	_
+42	Globo	Globo	PROPN	_	_	39	nmod	_	SpaceAfter=No
+43	.	.	PUNCT	_	_	5	punct	_	_
+
+# sent_id = fakebr:573-6
+# text = Já em segundo lugar, temos o ministro Alexandre de Moraes.
+1	Já	já	CCONJ	_	_	4	cc	_	_
+2	em	em	ADP	_	_	4	case	_	_
+3	segundo	segundo	ADJ	_	Gender=Masc|Number=Sing|NumType=Ord	4	amod	_	_
+4	lugar	lugar	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	SpaceAfter=No
+5	,	,	PUNCT	_	_	4	punct	_	_
+6	temos	ter	VERB	_	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	0	root	_	_
+7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
+8	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	6	obj	_	_
+9	Alexandre	Alexandre	PROPN	_	_	8	nmod	_	_
+10	de	de	ADP	_	_	11	case	_	_
+11	Moraes	Moraes	PROPN	_	_	9	flat:name	_	SpaceAfter=No
+12	.	.	PUNCT	_	_	6	punct	_	_
+
+# sent_id = fakebr:573-7
+# text = Como membro da Suprema Corte do país, essa foi uma declaração totalmente impensada.
+1	Como	como	ADP	_	_	2	case	_	_
+2	membro	membro	NOUN	_	Gender=Masc|Number=Sing	14	nmod	_	_
+3-4	da	_	_	_	_	_	_	_	_
+3	de	de	ADP	_	_	5	case	_	_
+4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
+5	Suprema	Suprema	PROPN	_	_	2	nmod	_	_
+6	Corte	Corte	PROPN	_	_	5	flat:name	_	_
+7-8	do	_	_	_	_	_	_	_	_
+7	de	de	ADP	_	_	9	case	_	_
+8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
+9	país	país	NOUN	_	Gender=Masc|Number=Sing	5	nmod	_	SpaceAfter=No
+10	,	,	PUNCT	_	_	2	punct	_	_
+11	essa	esse	PRON	_	Gender=Fem|Number=Sing|PronType=Dem	14	nsubj	_	_
+12	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	cop	_	_
+13	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
+14	declaração	declaração	NOUN	_	Gender=Fem|Number=Sing	0	root	_	_
+15	totalmente	totalmente	ADV	_	_	16	advmod	_	_
+16	impensada	impensado	ADJ	_	Gender=Fem|Number=Sing|VerbForm=Part	14	amod	_	SpaceAfter=No
+17	.	.	PUNCT	_	_	14	punct	_	_
+
+# sent_id = fakebr:573-8
+# text = Quem julga e, na maioria das vezes, solta bandidos, empresário corruptos, políticos pilantras, enfim, a banda podre da sociedade, é o STF e não a Rede Globo ou a autora Glória Perez.
+1	Quem	quem	PRON	_	PronType=Rel	32	nsubj	_	_
+2	julga	julgar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	acl:relcl	_	_
+3	e	e	CCONJ	_	_	12	cc	_	SpaceAfter=No
+4	,	,	PUNCT	_	_	7	punct	_	_
+5-6	na	_	_	_	_	_	_	_	_
+5	em	em	ADP	_	_	7	case	_	_
+6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
+7	maioria	maioria	NOUN	_	Gender=Fem|Number=Sing	12	obl	_	_
+8-9	das	_	_	_	_	_	_	_	_
+8	de	de	ADP	_	_	10	case	_	_
+9	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	10	det	_	_
+10	vezes	vez	NOUN	_	Gender=Fem|Number=Plur	7	nmod	_	SpaceAfter=No
+11	,	,	PUNCT	_	_	7	punct	_	_
+12	solta	soltar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	conj	_	_
+13	bandidos	bandido	NOUN	_	Gender=Masc|Number=Plur	12	obj	_	SpaceAfter=No
+14	,	,	PUNCT	_	_	15	punct	_	_
+15	empresário	empresário	NOUN	_	Gender=Masc|Number=Sing	13	conj	_	_
+16	corruptos	corrupto	ADJ	_	Gender=Masc|Number=Plur	15	amod	_	SpaceAfter=No
+17	,	,	PUNCT	_	_	18	punct	_	_
+18	políticos	político	NOUN	_	Gender=Masc|Number=Plur	13	conj	_	_
+19	pilantras	pilantra	ADJ	_	Number=Plur	18	amod	_	SpaceAfter=No
+20	,	,	PUNCT	_	_	21	punct	_	_
+21	enfim	enfim	ADV	_	_	24	advmod	_	SpaceAfter=No
+22	,	,	PUNCT	_	_	21	punct	_	_
+23	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	24	det	_	_
+24	banda	banda	NOUN	_	Gender=Fem|Number=Sing	13	conj	_	_
+25	podre	podre	ADJ	_	Number=Sing	24	amod	_	_
+26-27	da	_	_	_	_	_	_	_	_
+26	de	de	ADP	_	_	28	case	_	_
+27	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	28	det	_	_
+28	sociedade	sociedade	NOUN	_	Gender=Fem|Number=Sing	24	nmod	_	SpaceAfter=No
+29	,	,	PUNCT	_	_	12	punct	_	_
+30	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	32	cop	_	_
+31	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	32	det	_	_
+32	STF	STF	PROPN	_	_	0	root	_	_
+33	e	e	CCONJ	_	_	36	cc	_	_
+34	não	não	ADV	_	_	36	advmod	_	_
+35	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	36	det	_	_
+36	Rede	Rede	PROPN	_	_	32	conj	_	_
+37	Globo	Globo	PROPN	_	_	36	flat:name	_	_
+38	ou	ou	CCONJ	_	_	40	cc	_	_
+39	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	40	det	_	_
+40	autora	autor	NOUN	_	Gender=Fem|Number=Sing	36	conj	_	_
+41	Glória	Glória	PROPN	_	_	40	nmod	_	_
+42	Perez	Perez	PROPN	_	_	41	flat:name	_	SpaceAfter=No
+43	.	.	PUNCT	_	_	32	punct	_	_
+
+# sent_id = fakebr:573-9
+# text = Eu (Aline), se fosse ministra do STF, jamais me envolveria em assuntos como "novela das nove"...
+1	Eu	eu	PRON	_	Case=Nom|Number=Sing|Person=1|PronType=Prs	15	nsubj	_	_
+2	(	(	PUNCT	_	_	3	punct	_	SpaceAfter=No
+3	Aline	Aline	PROPN	_	_	1	appos	_	SpaceAfter=No
+4	)	)	PUNCT	_	_	3	punct	_	SpaceAfter=No
+5	,	,	PUNCT	_	_	8	punct	_	_
+6	se	se	SCONJ	_	_	8	mark	_	_
+7	fosse	ir	AUX	_	Mood=Sub|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	cop	_	_
+8	ministra	ministro	NOUN	_	Gender=Fem|Number=Sing	15	advcl	_	_
+9-10	do	_	_	_	_	_	_	_	_
+9	de	de	ADP	_	_	11	case	_	_
+10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
+11	STF	STF	PROPN	_	_	8	nmod	_	SpaceAfter=No
+12	,	,	PUNCT	_	_	8	punct	_	_
+13	jamais	jamais	ADV	_	_	15	advmod	_	_
+14	me	me	PRON	_	Case=Acc|Number=Sing|Person=1|PronType=Prs	15	obj	_	_
+15	envolveria	envolver	VERB	_	Mood=Cnd|Number=Sing|Person=1|VerbForm=Fin	0	root	_	_
+16	em	em	ADP	_	_	17	case	_	_
+17	assuntos	assunto	NOUN	_	Gender=Masc|Number=Plur	15	obl	_	_
+18	como	como	ADP	_	_	20	case	_	_
+19	"	"	PUNCT	_	_	20	punct	_	SpaceAfter=No
+20	novela	novela	NOUN	_	Gender=Fem|Number=Sing	17	nmod	_	_
+21-22	das	_	_	_	_	_	_	_	_
+21	de	de	ADP	_	_	23	case	_	_
+22	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	23	det	_	_
+23	nove	nove	NUM	_	NumType=Card	20	nmod	_	SpaceAfter=No
+24	"	"	PUNCT	_	_	20	punct	_	SpaceAfter=No
+25	...	...	PUNCT	_	_	15	punct	_	_
+
+# sent_id = fakebr:573-10
+# text = questão de bom senso!
+1	questão	questão	NOUN	_	Gender=Fem|Number=Sing	0	root	_	_
+2	de	de	ADP	_	_	4	case	_	_
+3	bom	bom	ADJ	_	Gender=Masc|Number=Sing	4	amod	_	_
+4	senso	senso	NOUN	_	Gender=Masc|Number=Sing	1	nmod	_	SpaceAfter=No
+5	!	!	PUNCT	_	_	1	punct	_	_
+
+# sent_id = fakebr:573-11
+# text = Deixo aqui minha pergunta ao ministro:
+1	Deixo	deixar	VERB	_	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	_	_
+2	aqui	aqui	ADV	_	_	1	advmod	_	_
+3	minha	meu	DET	_	Gender=Fem|Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	det	_	_
+4	pergunta	pergunta	NOUN	_	Gender=Fem|Number=Sing	1	obj	_	_
+5-6	ao	_	_	_	_	_	_	_	_
+5	a	a	ADP	_	_	7	case	_	_
+6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
+7	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	1	obl	_	SpaceAfter=No
+8	:	:	PUNCT	_	_	1	punct	_	_
+
+# sent_id = fakebr:573-12
+# text = Você concorda que o STF glamouriza a impunidade no país contra o trabalho sério e honesto do povo brasileiro?
+1	Você	você	PRON	_	Case=Nom|Number=Sing|Person=2|PronType=Prs	2	nsubj	_	_
+2	concorda	concordar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+3	que	que	SCONJ	_	_	6	mark	_	_
+4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
+5	STF	STF	PROPN	_	_	6	nsubj	_	_
+6	glamouriza	glamourizar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	ccomp	_	_
+7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
+8	impunidade	impunidade	NOUN	_	Gender=Fem|Number=Sing	6	obj	_	_
+9-10	no	_	_	_	_	_	_	_	_
+9	em	em	ADP	_	_	11	case	_	_
+10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
+11	país	país	NOUN	_	Gender=Masc|Number=Sing	8	nmod	_	_
+12	contra	contra	ADP	_	_	14	case	_	_
+13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
+14	trabalho	trabalho	NOUN	_	Gender=Masc|Number=Sing	6	obl	_	_
+15	sério	sério	ADJ	_	Gender=Masc|Number=Sing	14	amod	_	_
+16	e	e	CCONJ	_	_	17	cc	_	_
+17	honesto	honesto	ADJ	_	Gender=Masc|Number=Sing	15	conj	_	_
+18-19	do	_	_	_	_	_	_	_	_
+18	de	de	ADP	_	_	20	case	_	_
+19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	_	_
+20	povo	povo	NOUN	_	Gender=Masc|Number=Sing	14	nmod	_	_
+21	brasileiro	brasileiro	ADJ	_	Gender=Masc|Number=Sing	20	amod	_	SpaceAfter=No
+22	?	?	PUNCT	_	_	2	punct	_	_
+

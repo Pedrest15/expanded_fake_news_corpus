@@ -1,0 +1,90 @@
+S0024	15	paga	LmLEX	par	pagar
+S0027	15	defendida	L1LEX	defendir	defender
+S0032	16	determinados	LnoLEX	determinado	determinados
+S0032	16	determinados	FnoLEX	Gender=Masc|Number=Plur|PronType=Ind	_
+S0038	6	disseram	LmLEX	disseram	dizer
+S0041	20	disseram	LmLEX	disseram	dizer
+S0060	6	expedidos	L1LEX	expeder	expedir
+S0066	57	enche	LmLEX	enchir	encher
+S0082	18	partido-MS	LrepTAG	PARTIDO-MS	partido-MS
+S0084	8	‘o	FnoLEX	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	_
+S0085	8	enche	LmLEX	enchir	encher
+S0086	16	investigue	LmLEX	investiguar	investigar
+S0087	1	‘Tutor’	LrepTAG	‘TUTOR’	‘Tutor’
+S0089	27	assume	LmLEX	assumer	assumir
+S0090	8	salvo	LmLEX	salr	salvar
+S0092	9	constrangidos	L1LEX	constrangir	constranger
+S0102	30	fuja	LmLEX	fuja	fugir
+S0103	7	posto	LmLEX	posr	pôr
+S0106	18	DIREITO	FrepTAG	Gender=Masc|Number=Sing	_
+S0111	9	acendido	L1LEX	acendir	acender
+S0117	11	tiveram	LmLEX	tiveram	ter
+S0119	7	mede	LmLEX	meder	medir
+S0122	33	conhecidos	L1LEX	conhecido	conhecer
+S0132	23	seja	FmLEX	_	Mood=Imp|Number=Sing|Person=3|VerbForm=Fin
+S0135	28	TroianoBranding	LrepTAG	Troianobranding	TroianoBranding
+S0141	10	disseram	LmLEX	disseram	dizer
+S0151	41	produzem	L1LEX	produzer	produzir
+S0153	22	agem	L1LEX	ager	agir
+S0183	15	baseados	L1LEX	baseado	basear
+S0188	5	dispuseram	LmLEX	dispuser	dispor
+S0196	39	TV	LuAbbr	tv	televisão
+S0196	39	TV	FuAbbr	Gender=Fem|Number=Sing	Abbr=Yes|Gender=Fem|Number=Sing
+S0202	20	estejam	LmLEX	estejam	estar
+S0204	17	contem	LmLEX	cor	contar
+S0204	24	faria	LmLEX	far	fazer
+S0204	29	fossem	LmLEX	fossem	ir
+S0205	10	possam	LmLEX	possam	poder
+S0209	2	tiver	LmLEX	tiver	ter
+S0222	4	composto	L1LEX	composr	compor
+S0223	13	reuniu	L1LEX	reunar	reunir
+S0227	7	envolveu	L1LEX	envolvar	envolver
+S0237	20	tiver	LmLEX	tiver	ter
+S0239	2	vier	LmLEX	vier	vir
+S0250	9	mortos	LmLEX	mortos	matar
+S0251	8	descoberto	L1LEX	descobeer	descobrir
+S0258	6	consumiam	L1LEX	consumr	consumir
+S0272	1	Assista	LmLEX	assisr	assistir
+S0275	3	tiveram	LmLEX	tiveram	ter
+S0277	26	TV	LuAbbr	tv	televisão
+S0277	26	TV	FuAbbr	Gender=Fem|Number=Sing	Abbr=Yes|Gender=Fem|Number=Sing
+S0279	22	saia	LmLEX	saier	sair
+S0279	36	prescrita	L1LEX	prescer	prescrever
+S0283	1	Nenhuma	L1LEX	nenhumo	nenhum
+S0288	17	estejam	LmLEX	estejam	estar
+S0293	12	insistiam	L1LEX	insister	insistir
+S0296	31	WhatsApp	LrepTAG	Whatsapp	WhatsApp
+S0300	16	publique	LmLEX	publiquar	publicar
+S0305	3	mede	LmLEX	meder	medir
+S0324	8	saia	LmLEX	saiir	sair
+S0326	39	definida	L1LEX	definer	definir
+S0354	15	km	LuAbbr	km	quilômetro
+S0354	32	tiveram	LmLEX	tiveram	ter
+S0355	8	reconhecida	L1LEX	reconhecir	reconhecer
+S0356	5	concluíram	LmLEX	concluír	concluir
+S0356	32	existiam	L1LEX	existr	existir
+S0370	10	concede	LmLEX	concedir	conceder
+S0376	15	aceitos	L1LEX	aceir	aceitar
+
+==========================================================
+
+Lchanged - fixed: 61
+LnoLEX   - fixed: 1
+L1LEX    - fixed: 20
+LmLEX    - fixed: 33
+LunkTAG  - fixed: 0
+LdaysW   - fixed: 0
+Lmonth   - fixed: 0
+LuAbbr   - fixed: 3
+Lord     - fixed: 0
+LrepTAG  - fixed: 4
+Fchanged - fixed: 6
+FnoLEX   - fixed: 2
+F1LEX    - fixed: 0
+FmLEX    - fixed: 1
+FunkTAG  - fixed: 0
+FdaysW   - fixed: 0
+Fmonth   - fixed: 0
+FuAbbr   - fixed: 2
+Ford     - fixed: 0
+FrepTAG  - fixed: 1

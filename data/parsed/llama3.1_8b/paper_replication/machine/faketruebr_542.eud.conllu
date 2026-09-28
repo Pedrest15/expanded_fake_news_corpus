@@ -1,0 +1,199 @@
+# global.columns = ID FORM LEMMA UPOS XPOS FEATS HEAD DEPREL DEPS MISC
+# sent_id = faketruebr:542-1
+# text = Notícia falsificada:
+1	Notícia	notícia	NOUN	_	Gender=Fem|Number=Sing	0	root	0:root	_
+2	falsificada	falsificado	ADJ	_	Gender=Fem|Number=Sing|VerbForm=Part	1	amod	1:amod	SpaceAfter=No
+3	:	:	PUNCT	_	_	1	punct	1:punct	_
+
+# sent_id = faketruebr:542-2
+# text = Uma nova lei foi aprovada no Brasil que concede uma 'Carteira de Fim de Semana' para jovens de 15 a 29 anos.
+1	Uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	3	det	3:det	_
+2	nova	novo	ADJ	_	Gender=Fem|Number=Sing	3	amod	3:amod	_
+3	lei	lei	NOUN	_	Gender=Fem|Number=Sing	5	nsubj:pass	5:nsubj:pass	_
+4	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux:pass	5:aux:pass	_
+5	aprovada	aprovar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	0	root	0:root	_
+6-7	no	_	_	_	_	_	_	_	_
+6	em	em	ADP	_	_	8	case	8:case	_
+7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	8:det	_
+8	Brasil	Brasil	PROPN	_	_	5	obl	5:obl:em|10:nsubj	_
+9	que	que	PRON	_	PronType=Rel	10	nsubj	8:ref	_
+10	concede	conceder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	acl:relcl	8:acl:relcl	_
+11	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	13	det	13:det	_
+12	'	'	PUNCT	_	_	13	punct	13:punct	SpaceAfter=No
+13	Carteira	Carteira	PROPN	_	_	10	obj	10:obj	_
+14	de	de	ADP	_	_	15	case	15:case	_
+15	Fim	Fim	PROPN	_	_	13	flat:name	13:flat:name	_
+16	de	de	ADP	_	_	17	case	17:case	_
+17	Semana	Semana	PROPN	_	_	13	flat:name	13:flat:name	SpaceAfter=No
+18	'	'	PUNCT	_	_	13	punct	13:punct	_
+19	para	para	ADP	_	_	20	case	20:case	_
+20	jovens	jovem	NOUN	_	Number=Plur	10	obl	10:obl:para	_
+21	de	de	ADP	_	_	22	case	22:case	_
+22	15	15	NUM	_	NumType=Card	25	nummod	25:nummod	_
+23	a	a	ADP	_	_	24	case	24:case	_
+24	29	29	NUM	_	NumType=Card	22	nummod	22:nummod	_
+25	anos	ano	NOUN	_	Gender=Masc|Number=Plur	20	nmod	20:nmod	SpaceAfter=No
+26	.	.	PUNCT	_	_	5	punct	5:punct	_
+
+# sent_id = faketruebr:542-3
+# text = Com ela, eles terão acesso a descontos em eventos culturais e esportivos, além de vagas gratuitas para transporte coletivo interestadual.
+1	Com	com	ADP	_	_	2	case	2:case	_
+2	ela	ele	PRON	_	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	5	obl	5:obl:com	SpaceAfter=No
+3	,	,	PUNCT	_	_	2	punct	2:punct	_
+4	eles	ele	PRON	_	Case=Nom|Gender=Masc|Number=Plur|Person=3|PronType=Prs	5	nsubj	5:nsubj	_
+5	terão	ter	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin	0	root	0:root	_
+6	acesso	acesso	NOUN	_	Gender=Masc|Number=Sing	5	obj	5:obj	_
+7	a	a	ADP	_	_	8	case	8:case	_
+8	descontos	desconto	NOUN	_	Gender=Masc|Number=Plur	6	nmod	6:nmod:a	_
+9	em	em	ADP	_	_	10	case	10:case	_
+10	eventos	evento	NOUN	_	Gender=Masc|Number=Plur	8	nmod	8:nmod:em	_
+11	culturais	cultural	ADJ	_	Number=Plur	10	amod	10:amod	_
+12	e	e	CCONJ	_	_	13	cc	13:cc	_
+13	esportivos	esportivo	ADJ	_	Gender=Masc|Number=Plur	11	conj	10:amod|11:conj:e	SpaceAfter=No
+14	,	,	PUNCT	_	_	15	punct	15:punct	_
+15	além	além	ADV	_	_	5	advmod	5:advmod	_
+16	de	de	ADP	_	_	17	case	17:case	_
+17	vagas	vaga	NOUN	_	Gender=Fem|Number=Plur	15	obl	15:obl:de	_
+18	gratuitas	gratuito	ADJ	_	Gender=Fem|Number=Plur	17	amod	17:amod	_
+19	para	para	ADP	_	_	20	case	20:case	_
+20	transporte	transporte	NOUN	_	Gender=Masc|Number=Sing	17	nmod	17:nmod:para	_
+21	coletivo	coletivo	ADJ	_	Gender=Masc|Number=Sing	20	amod	20:amod	_
+22	interestadual	interestadual	ADJ	_	Number=Sing	20	amod	20:amod	SpaceAfter=No
+23	.	.	PUNCT	_	_	5	punct	5:punct	_
+
+# sent_id = faketruebr:542-4
+# text = A carteira pode ser solicitada pelo aplicativo 'Fim de Semana' ou pelo site do governo.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	2:det	_
+2	carteira	carteira	NOUN	_	Gender=Fem|Number=Sing	3	nsubj	3:nsubj|5:nsubj:pass	_
+3	pode	poder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+4	ser	ser	AUX	_	VerbForm=Inf	5	aux:pass	5:aux:pass	_
+5	solicitada	solicitar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	3	xcomp	3:xcomp	_
+6-7	pelo	_	_	_	_	_	_	_	_
+6	por	por	ADP	_	_	8	case	8:case	_
+7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	8:det	_
+8	aplicativo	aplicativo	NOUN	_	Gender=Masc|Number=Sing	5	obl:agent	5:obl:agent	_
+9	'	'	PUNCT	_	_	10	punct	10:punct	SpaceAfter=No
+10	Fim	Fim	PROPN	_	_	8	nmod	8:nmod	_
+11	de	de	ADP	_	_	12	case	12:case	_
+12	Semana	Semana	PROPN	_	_	10	flat:name	10:flat:name	SpaceAfter=No
+13	'	'	PUNCT	_	_	10	punct	10:punct	_
+14	ou	ou	CCONJ	_	_	17	cc	17:cc	_
+15-16	pelo	_	_	_	_	_	_	_	_
+15	por	por	ADP	_	_	17	case	17:case	_
+16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	17:det	_
+17	site	site	NOUN	_	Gender=Masc|Number=Sing	8	conj	5:obl:agent|8:conj:ou	_
+18-19	do	_	_	_	_	_	_	_	_
+18	de	de	ADP	_	_	20	case	20:case	_
+19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	20:det	_
+20	governo	governo	NOUN	_	Gender=Masc|Number=Sing	17	nmod	17:nmod:de	SpaceAfter=No
+21	.	.	PUNCT	_	_	3	punct	3:punct	_
+
+# sent_id = faketruebr:542-5
+# text = Para se registrar, os jovens devem atualizar o Cadastro Único e ter em mãos o número de identificação social.
+1	Para	para	ADP	_	_	3	mark	3:mark	_
+2	se	se	PRON	_	Case=Acc|Person=3|PronType=Prs	3	obj	3:obj	_
+3	registrar	registrar	VERB	_	Number=Sing|Person=3|VerbForm=Inf	7	advcl	7:advcl:para	SpaceAfter=No
+4	,	,	PUNCT	_	_	3	punct	3:punct	_
+5	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	6	det	6:det	_
+6	jovens	jovem	NOUN	_	Number=Plur	7	nsubj	7:nsubj|8:nsubj|13:nsubj	_
+7	devem	dever	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+8	atualizar	atualizar	VERB	_	VerbForm=Inf	7	xcomp	7:xcomp	_
+9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	10:det	_
+10	Cadastro	Cadastro	PROPN	_	_	8	obj	8:obj	_
+11	Único	Único	PROPN	_	_	10	flat:name	10:flat:name	_
+12	e	e	CCONJ	_	_	13	cc	13:cc	_
+13	ter	ter	VERB	_	VerbForm=Inf	8	conj	7:xcomp|8:conj:e	_
+14	em	em	ADP	_	_	15	case	15:case	_
+15	mãos	mão	NOUN	_	Gender=Fem|Number=Plur	13	obl	13:obl:em	_
+16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	17:det	_
+17	número	número	NOUN	_	Gender=Masc|Number=Sing	13	obj	13:obj	_
+18	de	de	ADP	_	_	19	case	19:case	_
+19	identificação	identificação	NOUN	_	Gender=Fem|Number=Sing	17	nmod	17:nmod:de	_
+20	social	social	ADJ	_	Number=Sing	19	amod	19:amod	SpaceAfter=No
+21	.	.	PUNCT	_	_	7	punct	7:punct	_
+
+# sent_id = faketruebr:542-6
+# text = Além disso, a carteira é válida por um ano e pode ser renovada facilmente pelo aplicativo.
+1	Além	além	ADV	_	_	8	advmod	8:advmod	_
+2-3	disso	_	_	_	_	_	_	_	SpaceAfter=No
+2	de	de	ADP	_	_	3	case	3:case	_
+3	isso	isso	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	1	obl	1:obl:de	_
+4	,	,	PUNCT	_	_	1	punct	1:punct	_
+5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	6:det	_
+6	carteira	carteira	NOUN	_	Gender=Fem|Number=Sing	8	nsubj	8:nsubj|13:nsubj|15:nsubj:pass	_
+7	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
+8	válida	válido	ADJ	_	Gender=Fem|Number=Sing	0	root	0:root	_
+9	por	por	ADP	_	_	11	case	11:case	_
+10	um	um	NUM	_	Gender=Masc|NumType=Card	11	nummod	11:nummod	_
+11	ano	ano	NOUN	_	Gender=Masc|Number=Sing	8	obl	8:obl:por	_
+12	e	e	CCONJ	_	_	13	cc	13:cc	_
+13	pode	poder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	conj	8:conj:e	_
+14	ser	ser	AUX	_	VerbForm=Inf	15	aux:pass	15:aux:pass	_
+15	renovada	renovar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	13	xcomp	13:xcomp	_
+16	facilmente	facilmente	ADV	_	_	15	advmod	15:advmod	_
+17-18	pelo	_	_	_	_	_	_	_	_
+17	por	por	ADP	_	_	19	case	19:case	_
+18	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	19	det	19:det	_
+19	aplicativo	aplicativo	NOUN	_	Gender=Masc|Number=Sing	15	obl:agent	15:obl:agent	SpaceAfter=No
+20	.	.	PUNCT	_	_	8	punct	8:punct	_
+
+# sent_id = faketruebr:542-7
+# text = Os jovens podem usar a carteira em cinemas, teatros e eventos de entretenimento, e também terão descontos em transporte coletivo interestadual.
+1	Os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	2	det	2:det	_
+2	jovens	jovem	NOUN	_	Number=Plur	3	nsubj	3:nsubj|4:nsubj|18:nsubj	_
+3	podem	poder	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+4	usar	usar	VERB	_	VerbForm=Inf	3	xcomp	3:xcomp	_
+5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	6:det	_
+6	carteira	carteira	NOUN	_	Gender=Fem|Number=Sing	4	obj	4:obj	_
+7	em	em	ADP	_	_	8	case	8:case|10:case|12:case	_
+8	cinemas	cinema	NOUN	_	Gender=Masc|Number=Plur	4	obl	4:obl:em	SpaceAfter=No
+9	,	,	PUNCT	_	_	10	punct	10:punct	_
+10	teatros	teatro	NOUN	_	Gender=Masc|Number=Plur	8	conj	4:obl:em|8:conj:e	_
+11	e	e	CCONJ	_	_	12	cc	12:cc	_
+12	eventos	evento	NOUN	_	Gender=Masc|Number=Plur	8	conj	4:obl:em|8:conj:e	_
+13	de	de	ADP	_	_	14	case	14:case	_
+14	entretenimento	entretenimento	NOUN	_	Gender=Masc|Number=Sing	12	nmod	12:nmod:de	SpaceAfter=No
+15	,	,	PUNCT	_	_	18	punct	18:punct	_
+16	e	e	CCONJ	_	_	18	cc	18:cc	_
+17	também	também	ADV	_	_	18	advmod	18:advmod	_
+18	terão	ter	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin	3	conj	3:conj:e	_
+19	descontos	desconto	NOUN	_	Gender=Masc|Number=Plur	18	obj	18:obj	_
+20	em	em	ADP	_	_	21	case	21:case	_
+21	transporte	transporte	NOUN	_	Gender=Masc|Number=Sing	19	nmod	19:nmod:em	_
+22	coletivo	coletivo	ADJ	_	Gender=Masc|Number=Sing	21	amod	21:amod	_
+23	interestadual	interestadual	ADJ	_	Number=Sing	21	amod	21:amod	SpaceAfter=No
+24	.	.	PUNCT	_	_	3	punct	3:punct	_
+
+# sent_id = faketruebr:542-8
+# text = As empresas de transporte devem emitir um documento para os jovens que não forem aceitos, com a data, hora, local e motivo da recusa.
+1	As	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	2	det	2:det	_
+2	empresas	empresa	NOUN	_	Gender=Fem|Number=Plur	5	nsubj	5:nsubj|6:nsubj	_
+3	de	de	ADP	_	_	4	case	4:case	_
+4	transporte	transporte	NOUN	_	Gender=Masc|Number=Sing	2	nmod	2:nmod:de	_
+5	devem	dever	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+6	emitir	emitir	VERB	_	VerbForm=Inf	5	xcomp	5:xcomp	_
+7	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	8	det	8:det	_
+8	documento	documento	NOUN	_	Gender=Masc|Number=Sing	6	obj	6:obj	_
+9	para	para	ADP	_	_	11	case	11:case	_
+10	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	11	det	11:det	_
+11	jovens	jovem	NOUN	_	Number=Plur	6	obl	6:obl:para|15:nsubj:pass	_
+12	que	que	PRON	_	PronType=Rel	15	nsubj:pass	11:ref	_
+13	não	não	ADV	_	_	15	advmod	15:advmod	_
+14	forem	ser	AUX	_	Mood=Sub|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin	15	aux:pass	15:aux:pass	_
+15	aceitos	aceitar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	11	acl:relcl	11:acl:relcl	SpaceAfter=No
+16	,	,	PUNCT	_	_	19	punct	19:punct	_
+17	com	com	ADP	_	_	19	case	19:case|21:case|23:case|25:case	_
+18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	19	det	19:det	_
+19	data	data	NOUN	_	Gender=Fem|Number=Sing	6	obl	6:obl:com	SpaceAfter=No
+20	,	,	PUNCT	_	_	21	punct	21:punct	_
+21	hora	hora	NOUN	_	Gender=Fem|Number=Sing	19	conj	6:obl:com|19:conj:e	SpaceAfter=No
+22	,	,	PUNCT	_	_	23	punct	23:punct	_
+23	local	local	NOUN	_	Number=Sing	19	conj	6:obl:com|19:conj:e	_
+24	e	e	CCONJ	_	_	25	cc	25:cc	_
+25	motivo	motivo	NOUN	_	Gender=Masc|Number=Sing	19	conj	6:obl:com|19:conj:e	_
+26-27	da	_	_	_	_	_	_	_	_
+26	de	de	ADP	_	_	28	case	28:case	_
+27	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	28	det	28:det	_
+28	recusa	recusa	NOUN	_	Gender=Fem|Number=Sing	25	nmod	25:nmod:de	SpaceAfter=No
+29	.	.	PUNCT	_	_	5	punct	5:punct	_
+

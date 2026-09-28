@@ -1,0 +1,354 @@
+# global.columns = ID FORM LEMMA UPOS XPOS FEATS HEAD DEPREL DEPS MISC
+# sent_id = faketruebr:509-1
+# text = Braskem teria ocultado dados de extração de sal-gema por 15 anos, causando rachaduras que destruíram 10 mil casas em Maceió.
+1	Braskem	Braskem	PROPN	_	_	3	nsubj	3:nsubj	_
+2	teria	ter	AUX	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	3	aux	3:aux	_
+3	ocultado	ocultar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	0	root	0:root	_
+4	dados	dado	NOUN	_	Gender=Masc|Number=Plur	3	obj	3:obj	_
+5	de	de	ADP	_	_	6	case	6:case	_
+6	extração	extração	NOUN	_	Gender=Fem|Number=Sing	4	nmod	4:nmod:de	_
+7	de	de	ADP	_	_	8	case	8:case	_
+8	sal-gema	sal-gemA	NOUN	_	Gender=Fem|Number=Sing	6	nmod	6:nmod:de	_
+9	por	por	ADP	_	_	11	case	11:case	_
+10	15	15	NUM	_	NumType=Card	11	nummod	11:nummod	_
+11	anos	ano	NOUN	_	Gender=Masc|Number=Plur	3	obl	3:obl:por	SpaceAfter=No
+12	,	,	PUNCT	_	_	13	punct	13:punct	_
+13	causando	causar	VERB	_	VerbForm=Ger	3	advcl	3:advcl	_
+14	rachaduras	rachadura	NOUN	_	Gender=Fem|Number=Plur	13	obj	13:obj|16:nsubj	_
+15	que	que	PRON	_	PronType=Rel	16	nsubj	14:ref	_
+16	destruíram	destruir	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	14	acl:relcl	14:acl:relcl	_
+17	10	10	NUM	_	NumType=Card	19	nummod	19:nummod	_
+18	mil	mil	NUM	_	NumType=Card	17	flat	17:flat	_
+19	casas	casa	NOUN	_	Gender=Fem|Number=Plur	16	obj	16:obj	_
+20	em	em	ADP	_	_	21	case	21:case	_
+21	Maceió	Maceió	PROPN	_	_	16	obl	16:obl:em	SpaceAfter=No
+22	.	.	PUNCT	_	_	3	punct	3:punct	_
+
+# sent_id = faketruebr:509-2
+# text = Em uma revelação bombástica, investigações independentes e vazamentos de documentos internos da Braskem apontam que a empresa vinha explorando sal-gema em Maceió desde 2010, ignorando alertas científicos sobre instabilidade geológica.
+1	Em	em	ADP	_	_	3	case	3:case	_
+2	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	3	det	3:det	_
+3	revelação	revelação	NOUN	_	Gender=Fem|Number=Sing	16	obl	16:obl:em	_
+4	bombástica	bombástico	ADJ	_	Gender=Fem|Number=Sing	3	amod	3:amod	SpaceAfter=No
+5	,	,	PUNCT	_	_	3	punct	3:punct	_
+6	investigações	investigação	NOUN	_	Gender=Fem|Number=Plur	16	nsubj	16:nsubj	_
+7	independentes	independente	ADJ	_	Number=Plur	6	amod	6:amod	_
+8	e	e	CCONJ	_	_	9	cc	9:cc	_
+9	vazamentos	vazamento	NOUN	_	Gender=Masc|Number=Plur	6	conj	6:conj:e|16:nsubj	_
+10	de	de	ADP	_	_	11	case	11:case	_
+11	documentos	documento	NOUN	_	Gender=Masc|Number=Plur	9	nmod	9:nmod:de	_
+12	internos	interno	ADJ	_	Gender=Masc|Number=Plur	11	amod	11:amod	_
+13-14	da	_	_	_	_	_	_	_	_
+13	de	de	ADP	_	_	15	case	15:case	_
+14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	15:det	_
+15	Braskem	Braskem	PROPN	_	_	11	nmod	11:nmod:de	_
+16	apontam	apontar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+17	que	que	SCONJ	_	_	21	mark	21:mark	_
+18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	19	det	19:det	_
+19	empresa	empresa	NOUN	_	Gender=Fem|Number=Sing	21	nsubj	21:nsubj	_
+20	vinha	vir	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	21	aux	21:aux	_
+21	explorando	explorar	VERB	_	VerbForm=Ger	16	ccomp	16:ccomp	_
+22	sal-gema	sal-gemA	NOUN	_	Gender=Fem|Number=Sing	21	obj	21:obj	_
+23	em	em	ADP	_	_	24	case	24:case	_
+24	Maceió	Maceió	PROPN	_	_	21	obl	21:obl:em	_
+25	desde	desde	ADP	_	_	26	case	26:case	_
+26	2010	2010	NUM	_	NumType=Card	21	obl	21:obl:desde	SpaceAfter=No
+27	,	,	PUNCT	_	_	28	punct	28:punct	_
+28	ignorando	ignorar	VERB	_	VerbForm=Ger	21	advcl	21:advcl	_
+29	alertas	alerta	NOUN	_	Number=Plur	28	obj	28:obj	_
+30	científicos	científico	ADJ	_	Gender=Masc|Number=Plur	29	amod	29:amod	_
+31	sobre	sobre	ADP	_	_	32	case	32:case	_
+32	instabilidade	instabilidade	NOUN	_	Gender=Fem|Number=Sing	29	nmod	29:nmod:sobre	_
+33	geológica	geológico	ADJ	_	Gender=Fem|Number=Sing	32	amod	32:amod	SpaceAfter=No
+34	.	.	PUNCT	_	_	16	punct	16:punct	_
+
+# sent_id = faketruebr:509-3
+# text = As rachaduras que começaram no Pinheiro em 2018, segundo fontes anônimas do Serviço Geológico do Brasil, são apenas o início de uma crise que já afetou 10 mil imóveis em quatro bairros.
+1	As	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	2	det	2:det	_
+2	rachaduras	rachadura	NOUN	_	Gender=Fem|Number=Plur	25	nsubj	4:nsubj|25:nsubj	_
+3	que	que	PRON	_	PronType=Rel	4	nsubj	2:ref	_
+4	começaram	começar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	2	acl:relcl	2:acl:relcl	_
+5-6	no	_	_	_	_	_	_	_	_
+5	em	em	ADP	_	_	7	case	7:case	_
+6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	7:det	_
+7	Pinheiro	Pinheiro	PROPN	_	_	4	obl	4:obl:em	_
+8	em	em	ADP	_	_	9	case	9:case	_
+9	2018	2018	NUM	_	NumType=Card	4	obl	4:obl:em	SpaceAfter=No
+10	,	,	PUNCT	_	_	12	punct	12:punct	_
+11	segundo	segundo	ADP	_	_	12	case	12:case	_
+12	fontes	fonte	NOUN	_	Gender=Fem|Number=Plur	25	nmod	25:nmod:segundo	_
+13	anônimas	anônimo	ADJ	_	Gender=Fem|Number=Plur	12	amod	12:amod	_
+14-15	do	_	_	_	_	_	_	_	_
+14	de	de	ADP	_	_	16	case	16:case	_
+15	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	16	det	16:det	_
+16	Serviço	Serviço	PROPN	_	_	12	nmod	12:nmod:de	_
+17	Geológico	Geológico	PROPN	_	_	16	flat:name	16:flat:name	_
+18-19	do	_	_	_	_	_	_	_	_
+18	de	de	ADP	_	_	20	case	20:case	_
+19	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	20	det	20:det	_
+20	Brasil	Brasil	PROPN	_	_	16	flat:name	16:flat:name	SpaceAfter=No
+21	,	,	PUNCT	_	_	12	punct	12:punct	_
+22	são	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	25	cop	25:cop	_
+23	apenas	apenas	ADV	_	_	25	advmod	25:advmod	_
+24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	25:det	_
+25	início	início	NOUN	_	Gender=Masc|Number=Sing	0	root	0:root	_
+26	de	de	ADP	_	_	28	case	28:case	_
+27	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	28	det	28:det	_
+28	crise	crise	NOUN	_	Gender=Fem|Number=Sing	25	nmod	25:nmod:de|31:nsubj	_
+29	que	que	PRON	_	PronType=Rel	31	nsubj	28:ref	_
+30	já	já	ADV	_	_	31	advmod	31:advmod	_
+31	afetou	afetar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	28	acl:relcl	28:acl:relcl	_
+32	10	10	NUM	_	NumType=Card	34	nummod	34:nummod	_
+33	mil	mil	NUM	_	NumType=Card	32	flat	32:flat	_
+34	imóveis	imóvel	NOUN	_	Number=Plur	31	obj	31:obj	_
+35	em	em	ADP	_	_	37	case	37:case	_
+36	quatro	quatro	NUM	_	NumType=Card	37	nummod	37:nummod	_
+37	bairros	bairro	NOUN	_	Gender=Masc|Number=Plur	34	nmod	34:nmod:em	SpaceAfter=No
+38	.	.	PUNCT	_	_	25	punct	25:punct	_
+
+# sent_id = faketruebr:509-4
+# text = Uma fonte próxima à Braskem, que pediu anonimato por medo de represálias, afirmou que a empresa "sabia desde 2015 que a extração causaria colapsos, mas continuou operando para não afetar os lucros".
+1	Uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	2	det	2:det	_
+2	fonte	fonte	NOUN	_	Gender=Fem|Number=Sing	16	nsubj	9:nsubj|16:nsubj	_
+3	próxima	próximo	ADJ	_	Gender=Fem|Number=Sing	2	amod	2:amod	_
+4-5	à	_	_	_	_	_	_	_	_
+4	a	a	ADP	_	_	6	case	6:case	_
+5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	6:det	_
+6	Braskem	Braskem	PROPN	_	_	3	obl	3:obl:a	SpaceAfter=No
+7	,	,	PUNCT	_	_	9	punct	9:punct	_
+8	que	que	PRON	_	PronType=Rel	9	nsubj	2:ref	_
+9	pediu	pedir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	acl:relcl	2:acl:relcl	_
+10	anonimato	anonimato	NOUN	_	Gender=Masc|Number=Sing	9	obj	9:obj	_
+11	por	por	ADP	_	_	12	case	12:case	_
+12	medo	medo	NOUN	_	Gender=Masc|Number=Sing	9	obl	9:obl:por	_
+13	de	de	ADP	_	_	14	case	14:case	_
+14	represálias	represália	NOUN	_	Gender=Fem|Number=Plur	12	nmod	12:nmod:de	SpaceAfter=No
+15	,	,	PUNCT	_	_	9	punct	9:punct	_
+16	afirmou	afirmar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+17	que	que	SCONJ	_	_	21	mark	21:mark|31:mark	_
+18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	19	det	19:det	_
+19	empresa	empresa	NOUN	_	Gender=Fem|Number=Sing	21	nsubj	21:nsubj|31:nsubj|32:nsubj	_
+20	"	"	PUNCT	_	_	21	punct	21:punct	SpaceAfter=No
+21	sabia	saber	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	16	ccomp	16:ccomp	_
+22	desde	desde	ADP	_	_	23	case	23:case	_
+23	2015	2015	NUM	_	NumType=Card	21	obl	21:obl:desde	_
+24	que	que	SCONJ	_	_	27	mark	27:mark	_
+25	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	26	det	26:det	_
+26	extração	extração	NOUN	_	Gender=Fem|Number=Sing	27	nsubj	27:nsubj	_
+27	causaria	causar	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	21	ccomp	21:ccomp	_
+28	colapsos	colapso	NOUN	_	Gender=Masc|Number=Plur	27	obj	27:obj	SpaceAfter=No
+29	,	,	PUNCT	_	_	31	punct	31:punct	_
+30	mas	mas	CCONJ	_	_	31	cc	31:cc	_
+31	continuou	continuar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	21	conj	16:ccomp|21:conj:mas	_
+32	operando	operar	VERB	_	VerbForm=Ger	31	xcomp	31:xcomp	_
+33	para	para	ADP	_	_	35	mark	35:mark	_
+34	não	não	ADV	_	_	35	advmod	35:advmod	_
+35	afetar	afetar	VERB	_	VerbForm=Inf	31	advcl	31:advcl:para	_
+36	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	37	det	37:det	_
+37	lucros	lucro	NOUN	_	Gender=Masc|Number=Plur	35	obj	35:obj	SpaceAfter=No
+38	"	"	PUNCT	_	_	21	punct	21:punct	SpaceAfter=No
+39	.	.	PUNCT	_	_	16	punct	16:punct	_
+
+# sent_id = faketruebr:509-5
+# text = O governo de Alagoas, acusado de conivência, nega-se a divulgar relatórios técnicos e teria impedido a entrada de equipes da Defesa Civil em áreas críticas.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	2:det	_
+2	governo	governo	NOUN	_	Gender=Masc|Number=Sing	10	nsubj	10:nsubj|13:nsubj|18:nsubj	_
+3	de	de	ADP	_	_	4	case	4:case	_
+4	Alagoas	Alagoas	PROPN	_	_	2	nmod	2:nmod:de	SpaceAfter=No
+5	,	,	PUNCT	_	_	6	punct	6:punct	_
+6	acusado	acusar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	2	acl	2:acl	_
+7	de	de	ADP	_	_	8	case	8:case	_
+8	conivência	conivência	NOUN	_	Gender=Fem|Number=Sing	6	obl	6:obl:de	SpaceAfter=No
+9	,	,	PUNCT	_	_	6	punct	6:punct	_
+10-11	nega-se	_	_	_	_	_	_	_	_
+10	nega	negar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+11	se	se	PRON	_	Case=Nom|Person=3|PronType=Prs	10	expl	10:expl	_
+12	a	a	ADP	_	_	13	mark	13:mark	_
+13	divulgar	divulgar	VERB	_	VerbForm=Inf	10	xcomp	10:xcomp	_
+14	relatórios	relatório	NOUN	_	Gender=Masc|Number=Plur	13	obj	13:obj	_
+15	técnicos	técnico	ADJ	_	Gender=Masc|Number=Plur	14	amod	14:amod	_
+16	e	e	CCONJ	_	_	18	cc	18:cc	_
+17	teria	ter	AUX	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	18	aux	18:aux	_
+18	impedido	impedir	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	10	conj	10:conj:e	_
+19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	20:det	_
+20	entrada	entrada	NOUN	_	Gender=Fem|Number=Sing	18	obj	18:obj	_
+21	de	de	ADP	_	_	22	case	22:case	_
+22	equipes	equipe	NOUN	_	Gender=Fem|Number=Plur	20	nmod	20:nmod:de	_
+23-24	da	_	_	_	_	_	_	_	_
+23	de	de	ADP	_	_	25	case	25:case	_
+24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	25	det	25:det	_
+25	Defesa	Defesa	PROPN	_	_	22	nmod	22:nmod:de	_
+26	Civil	Civil	PROPN	_	_	25	flat:name	25:flat:name	_
+27	em	em	ADP	_	_	28	case	28:case	_
+28	áreas	área	NOUN	_	Gender=Fem|Number=Plur	20	nmod	20:nmod:em	_
+29	críticas	crítico	ADJ	_	Gender=Fem|Number=Plur	28	amod	28:amod	SpaceAfter=No
+30	.	.	PUNCT	_	_	10	punct	10:punct	_
+
+# sent_id = faketruebr:509-6
+# text = A Braskem, em nota, reafirma que paralisou todas as atividades no estado em 2019 e que "não há evidências de negligência".
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	2:det	_
+2	Braskem	Braskem	PROPN	_	_	7	nsubj	7:nsubj	SpaceAfter=No
+3	,	,	PUNCT	_	_	5	punct	5:punct	_
+4	em	em	ADP	_	_	5	case	5:case	_
+5	nota	nota	NOUN	_	Gender=Fem|Number=Sing	7	obl	7:obl:em	SpaceAfter=No
+6	,	,	PUNCT	_	_	5	punct	5:punct	_
+7	reafirma	reafirmar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+8	que	que	SCONJ	_	_	9	mark	9:mark	_
+9	paralisou	paralisar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	ccomp	7:ccomp	_
+10	todas	todo	DET	_	Gender=Fem|Number=Plur|PronType=Ind	12	det	12:det	_
+11	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	12	det	12:det	_
+12	atividades	atividade	NOUN	_	Gender=Fem|Number=Plur	9	obj	9:obj	_
+13-14	no	_	_	_	_	_	_	_	_
+13	em	em	ADP	_	_	15	case	15:case	_
+14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	15:det	_
+15	estado	estado	NOUN	_	Gender=Masc|Number=Sing	9	obl	9:obl:em	_
+16	em	em	ADP	_	_	17	case	17:case	_
+17	2019	2019	NUM	_	NumType=Card	9	obl	9:obl:em	_
+18	e	e	CCONJ	_	_	22	cc	22:cc	_
+19	que	que	SCONJ	_	_	22	mark	22:mark	_
+20	"	"	PUNCT	_	_	22	punct	22:punct	SpaceAfter=No
+21	não	não	ADV	_	_	22	advmod	22:advmod	_
+22	há	haver	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	conj	7:ccomp|9:conj:e	_
+23	evidências	evidência	NOUN	_	Gender=Fem|Number=Plur	22	obj	22:obj	_
+24	de	de	ADP	_	_	25	case	25:case	_
+25	negligência	negligência	NOUN	_	Gender=Fem|Number=Sing	23	nmod	23:nmod:de	SpaceAfter=No
+26	"	"	PUNCT	_	_	22	punct	22:punct	SpaceAfter=No
+27	.	.	PUNCT	_	_	7	punct	7:punct	_
+
+# sent_id = faketruebr:509-7
+# text = No entanto, moradores relatam que, mesmo com o programa de indenização de R$ 81,5 mil por imóvel, a empresa está oferecendo "terrenos baldios no interior" em troca de assinaturas no documento.
+1-2	No	_	_	_	_	_	_	_	_
+1	Em	em	ADP	_	_	6	cc	6:cc	_
+2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	1	fixed	1:fixed	_
+3	entanto	entanto	NOUN	_	Gender=Masc|Number=Sing	1	fixed	1:fixed	SpaceAfter=No
+4	,	,	PUNCT	_	_	1	punct	1:punct	_
+5	moradores	morador	NOUN	_	Gender=Masc|Number=Plur	6	nsubj	6:nsubj	_
+6	relatam	relatar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+7	que	que	SCONJ	_	_	25	mark	25:mark	SpaceAfter=No
+8	,	,	PUNCT	_	_	12	punct	12:punct	_
+9	mesmo	mesmo	ADV	_	_	12	advmod	12:advmod	_
+10	com	com	ADP	_	_	12	case	12:case	_
+11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	12:det	_
+12	programa	programa	NOUN	_	Gender=Masc|Number=Sing	25	obl	25:obl:com	_
+13	de	de	ADP	_	_	14	case	14:case	_
+14	indenização	indenização	NOUN	_	Gender=Fem|Number=Sing	12	nmod	12:nmod:de	_
+15	de	de	ADP	_	_	16	case	16:case	_
+16	R$	R$	SYM	_	_	14	nmod	14:nmod:de	_
+17	81,5	81,5	NUM	_	NumType=Card	16	nummod	16:nummod	_
+18	mil	mil	NUM	_	NumType=Card	17	flat	17:flat	_
+19	por	por	ADP	_	_	20	case	20:case	_
+20	imóvel	imóvel	NOUN	_	Number=Sing	14	nmod	14:nmod:por	SpaceAfter=No
+21	,	,	PUNCT	_	_	12	punct	12:punct	_
+22	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	23	det	23:det	_
+23	empresa	empresa	NOUN	_	Gender=Fem|Number=Sing	25	nsubj	25:nsubj	_
+24	está	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	25	aux	25:aux	_
+25	oferecendo	oferecer	VERB	_	VerbForm=Ger	6	ccomp	6:ccomp	_
+26	"	"	PUNCT	_	_	27	punct	27:punct	SpaceAfter=No
+27	terrenos	terreno	NOUN	_	Gender=Masc|Number=Plur	25	obj	25:obj	_
+28	baldios	baldio	ADJ	_	Gender=Masc|Number=Plur	27	amod	27:amod	_
+29-30	no	_	_	_	_	_	_	_	_
+29	em	em	ADP	_	_	31	case	31:case	_
+30	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	31	det	31:det	_
+31	interior	interior	NOUN	_	Number=Sing	27	nmod	27:nmod:em	SpaceAfter=No
+32	"	"	PUNCT	_	_	27	punct	27:punct	_
+33	em	em	ADP	_	_	34	case	34:case	_
+34	troca	troca	NOUN	_	Gender=Fem|Number=Sing	25	obl	25:obl:em	_
+35	de	de	ADP	_	_	36	case	36:case	_
+36	assinaturas	assinatura	NOUN	_	Gender=Fem|Number=Plur	34	nmod	34:nmod:de	_
+37-38	no	_	_	_	_	_	_	_	_
+37	em	em	ADP	_	_	39	case	39:case	_
+38	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	39	det	39:det	_
+39	documento	documento	NOUN	_	Gender=Masc|Number=Sing	36	nmod	36:nmod:em	SpaceAfter=No
+40	.	.	PUNCT	_	_	6	punct	6:punct	_
+
+# sent_id = faketruebr:509-8
+# text = A ONG Direito ao Solo denuncia que os valores são insuficientes, já que casas em áreas nobres chegam a valer R$ 2 milhões.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	2:det	_
+2	ONG	ong	NOUN	_	Gender=Fem|Number=Sing	7	nsubj	7:nsubj	_
+3	Direito	Direito	PROPN	_	_	2	nmod	2:nmod	_
+4-5	ao	_	_	_	_	_	_	_	_
+4	a	a	ADP	_	_	6	case	6:case	_
+5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	6:det	_
+6	Solo	Solo	PROPN	_	_	3	flat:name	3:flat:name	_
+7	denuncia	denunciar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+8	que	que	SCONJ	_	_	12	mark	12:mark	_
+9	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	10	det	10:det	_
+10	valores	valor	NOUN	_	Gender=Masc|Number=Plur	12	nsubj	12:nsubj	_
+11	são	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	12	cop	12:cop	_
+12	insuficientes	insuficientl	ADJ	_	Number=Plur	7	ccomp	7:ccomp	SpaceAfter=No
+13	,	,	PUNCT	_	_	20	punct	20:punct	_
+14	já	já	ADV	_	_	20	mark	20:mark	_
+15	que	que	SCONJ	_	_	14	fixed	14:fixed	_
+16	casas	casa	NOUN	_	Gender=Fem|Number=Plur	20	nsubj	20:nsubj|22:nsubj	_
+17	em	em	ADP	_	_	18	case	18:case	_
+18	áreas	área	NOUN	_	Gender=Fem|Number=Plur	16	nmod	16:nmod:em	_
+19	nobres	nobre	ADJ	_	Number=Plur	18	amod	18:amod	_
+20	chegam	chegar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	12	advcl	12:advcl:já_que	_
+21	a	a	ADP	_	_	22	mark	22:mark	_
+22	valer	valer	VERB	_	VerbForm=Inf	20	xcomp	20:xcomp	_
+23	R$	R$	SYM	_	_	25	nmod	25:nmod	_
+24	2	2	NUM	_	NumType=Card	25	nummod	25:nummod	_
+25	milhões	milhão	NOUN	_	Gender=Masc|Number=Plur	22	obj	22:obj	SpaceAfter=No
+26	.	.	PUNCT	_	_	7	punct	7:punct	_
+
+# sent_id = faketruebr:509-9
+# text = Cientistas alertam que novas rachaduras podem surgir em até 60 dias, comprometendo o aeroporto de Maceió.
+1	Cientistas	cientista	NOUN	_	Number=Plur	2	nsubj	2:nsubj	_
+2	alertam	alertar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+3	que	que	SCONJ	_	_	6	mark	6:mark	_
+4	novas	novo	ADJ	_	Gender=Fem|Number=Plur	5	amod	5:amod	_
+5	rachaduras	rachadura	NOUN	_	Gender=Fem|Number=Plur	6	nsubj	6:nsubj|7:nsubj	_
+6	podem	poder	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	2	ccomp	2:ccomp	_
+7	surgir	surgir	VERB	_	VerbForm=Inf	6	xcomp	6:xcomp	_
+8	em	em	ADP	_	_	11	case	11:case	_
+9	até	até	ADP	_	_	10	case	10:case	_
+10	60	60	NUM	_	NumType=Card	11	nummod	11:nummod	_
+11	dias	dia	NOUN	_	Gender=Masc|Number=Plur	7	obl	7:obl:em	SpaceAfter=No
+12	,	,	PUNCT	_	_	13	punct	13:punct	_
+13	comprometendo	comprometer	VERB	_	VerbForm=Ger	6	advcl	6:advcl	_
+14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	15:det	_
+15	aeroporto	aeroporto	NOUN	_	Gender=Masc|Number=Sing	13	obj	13:obj	_
+16	de	de	ADP	_	_	17	case	17:case	_
+17	Maceió	Maceió	PROPN	_	_	15	nmod	15:nmod:de	SpaceAfter=No
+18	.	.	PUNCT	_	_	2	punct	2:punct	_
+
+# sent_id = faketruebr:509-10
+# text = A população, em estado de pânico, organiza protestos diários com cartazes como "Braskem, pague o que deve"!
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	2:det	_
+2	população	população	NOUN	_	Gender=Fem|Number=Sing	9	nsubj	9:nsubj	SpaceAfter=No
+3	,	,	PUNCT	_	_	5	punct	5:punct	_
+4	em	em	ADP	_	_	5	case	5:case	_
+5	estado	estado	NOUN	_	Gender=Masc|Number=Sing	9	obl	9:obl:em	_
+6	de	de	ADP	_	_	7	case	7:case	_
+7	pânico	pânico	NOUN	_	Gender=Masc|Number=Sing	5	nmod	5:nmod:de	SpaceAfter=No
+8	,	,	PUNCT	_	_	5	punct	5:punct	_
+9	organiza	organizar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+10	protestos	protesto	NOUN	_	Gender=Masc|Number=Plur	9	obj	9:obj	_
+11	diários	diário	ADJ	_	Gender=Masc|Number=Plur	10	amod	10:amod	_
+12	com	com	ADP	_	_	13	case	13:case	_
+13	cartazes	cartaz	NOUN	_	Gender=Masc|Number=Plur	10	nmod	10:nmod:com	_
+14	como	como	ADP	_	_	16	case	16:case	_
+15	"	"	PUNCT	_	_	16	punct	16:punct	SpaceAfter=No
+16	Braskem	Braskem	PROPN	_	_	13	nmod	13:nmod:como	SpaceAfter=No
+17	,	,	PUNCT	_	_	18	punct	18:punct	_
+18	pague	pagar	VERB	_	Mood=Imp|Number=Sing|Person=3|VerbForm=Fin	16	acl	16:acl	_
+19	o	o	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Dem	18	obj	18:obj|21:obj	_
+20	que	que	PRON	_	PronType=Rel	21	obj	19:ref	_
+21	deve	dever	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	19	acl:relcl	19:acl:relcl	SpaceAfter=No
+22	"	"	PUNCT	_	_	16	punct	16:punct	SpaceAfter=No
+23	!	!	PUNCT	_	_	9	punct	9:punct	_
+
+# sent_id = faketruebr:509-11
+# text = e "O solo não é seu para explorar".
+1	e	e	CCONJ	_	_	7	cc	7:cc	_
+2	"	"	PUNCT	_	_	7	punct	7:punct	SpaceAfter=No
+3	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	det	4:det	_
+4	solo	solo	NOUN	_	Gender=Masc|Number=Sing	7	nsubj	7:nsubj	_
+5	não	não	ADV	_	_	7	advmod	7:advmod	_
+6	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
+7	seu	seu	PRON	_	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	0	root	0:root	_
+8	para	para	ADP	_	_	9	mark	9:mark	_
+9	explorar	explorar	VERB	_	VerbForm=Inf	7	acl	7:acl:para	SpaceAfter=No
+10	"	"	PUNCT	_	_	7	punct	7:punct	SpaceAfter=No
+11	.	.	PUNCT	_	_	7	punct	7:punct	_
+

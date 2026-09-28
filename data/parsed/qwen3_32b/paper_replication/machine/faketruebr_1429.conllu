@@ -1,0 +1,376 @@
+# sent_id = faketruebr:1429-1
+# text = ❗❗ ALERTA URGENTE DO STF:
+1	❗❗	❗❗	ADJ	_	Gender=Fem|NumType=Ord	2	amod	_	_
+2	ALERTA	alerta	NOUN	_	_	0	root	_	_
+3	URGENTE	urgente	ADJ	_	_	2	amod	_	_
+4-5	DO	_	_	_	_	_	_	_	_
+4	DE	de	ADP	_	_	6	case	_	_
+5	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
+6	STF	STF	PROPN	_	_	2	nmod	_	SpaceAfter=No
+7	:	:	PUNCT	_	_	2	punct	_	_
+
+# sent_id = faketruebr:1429-2
+# text = MONITORAMENTO GLOBAL DE MENSAGENS A PARTIR DE 15/10❗❗.
+1	MONITORAMENTO	monitoramento	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
+2	GLOBAL	Global	ADJ	_	Number=Sing	1	amod	_	_
+3	DE	de	ADP	_	_	4	case	_	_
+4	MENSAGENS	MENSAGENS	PROPN	_	_	1	nmod	_	_
+5	A	a	ADP	_	_	6	mark	_	_
+6	PARTIR	partir	VERB	_	VerbForm=Inf	1	acl	_	_
+7	DE	de	ADP	_	_	8	case	_	_
+8	15/10❗❗	15/10❗❗	ADJ	_	Gender=Masc|NumType=Ord	6	obl	_	SpaceAfter=No
+9	.	.	PUNCT	_	_	1	punct	_	_
+
+# sent_id = faketruebr:1429-3
+# text = O Supremo Tribunal Federal (STF) confirmou oficialmente uma parceria secreta com os EUA, Europa e governos da América Latina para monitorar em tempo real todas as mensagens do WhatsApp, Facebook, Instagram, Twitter e Telegram a partir de 15 de outubro.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
+2	Supremo	Supremo	PROPN	_	_	8	nsubj	_	_
+3	Tribunal	Tribunal	PROPN	_	_	2	flat:name	_	_
+4	Federal	Federal	PROPN	_	_	2	flat:name	_	_
+5	(	(	PUNCT	_	_	6	punct	_	SpaceAfter=No
+6	STF	STF	PROPN	_	_	2	appos	_	SpaceAfter=No
+7	)	)	PUNCT	_	_	6	punct	_	_
+8	confirmou	confirmar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+9	oficialmente	oficialmente	ADV	_	_	8	advmod	_	_
+10	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	11	det	_	_
+11	parceria	parceria	NOUN	_	Gender=Fem|Number=Sing	8	obj	_	_
+12	secreta	secreto	ADJ	_	Gender=Fem|Number=Sing	11	amod	_	_
+13	com	com	ADP	_	_	15	case	_	_
+14	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	15	det	_	_
+15	EUA	EUA	PROPN	_	_	11	nmod	_	SpaceAfter=No
+16	,	,	PUNCT	_	_	17	punct	_	_
+17	Europa	Europa	PROPN	_	_	15	conj	_	_
+18	e	e	CCONJ	_	_	19	cc	_	_
+19	governos	governo	NOUN	_	Gender=Masc|Number=Plur	15	conj	_	_
+20-21	da	_	_	_	_	_	_	_	_
+20	de	de	ADP	_	_	22	case	_	_
+21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
+22	América	América	PROPN	_	_	19	nmod	_	_
+23	Latina	Latina	PROPN	_	_	22	flat:name	_	_
+24	para	para	ADP	_	_	25	mark	_	_
+25	monitorar	monitorar	VERB	_	VerbForm=Inf	8	advcl	_	_
+26	em	em	ADP	_	_	27	case	_	_
+27	tempo	tempo	NOUN	_	Gender=Masc|Number=Sing	25	obl	_	_
+28	real	real	ADJ	_	Number=Sing	27	amod	_	_
+29	todas	todo	DET	_	Gender=Fem|Number=Plur|PronType=Ind	31	det	_	_
+30	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	31	det	_	_
+31	mensagens	mensagem	NOUN	_	Gender=Fem|Number=Plur	25	obj	_	_
+32-33	do	_	_	_	_	_	_	_	_
+32	de	de	ADP	_	_	34	case	_	_
+33	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	34	det	_	_
+34	WhatsApp	WhatsApp	PROPN	_	_	31	nmod	_	SpaceAfter=No
+35	,	,	PUNCT	_	_	36	punct	_	_
+36	Facebook	Facebook	PROPN	_	_	34	conj	_	SpaceAfter=No
+37	,	,	PUNCT	_	_	38	punct	_	_
+38	Instagram	Instagram	PROPN	_	_	34	conj	_	SpaceAfter=No
+39	,	,	PUNCT	_	_	40	punct	_	_
+40	Twitter	Twitter	PROPN	_	_	34	conj	_	_
+41	e	e	CCONJ	_	_	42	cc	_	_
+42	Telegram	Telegram	PROPN	_	_	34	conj	_	_
+43	a	a	ADP	_	_	44	mark	_	_
+44	partir	partir	VERB	_	VerbForm=Inf	8	advcl	_	_
+45	de	de	ADP	_	_	46	case	_	_
+46	15	15	NUM	_	NumType=Card	44	obl	_	_
+47	de	de	ADP	_	_	48	case	_	_
+48	outubro	outubro	NOUN	_	Gender=Masc|Number=Sing	46	nmod	_	SpaceAfter=No
+49	.	.	PUNCT	_	_	8	punct	_	_
+
+# sent_id = faketruebr:1429-4
+# text = A decisão, divulgada em documento sigiloso obtido exclusivamente pelo site "Verdade Nacional", autoriza a coleta de dados de 250 milhões de brasileiros sem ordem judicial.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	decisão	decisão	NOUN	_	Gender=Fem|Number=Sing	18	nsubj	_	SpaceAfter=No
+3	,	,	PUNCT	_	_	4	punct	_	_
+4	divulgada	divulgar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	2	acl	_	_
+5	em	em	ADP	_	_	6	case	_	_
+6	documento	documento	NOUN	_	Gender=Masc|Number=Sing	4	obl	_	_
+7	sigiloso	sigiloso	ADJ	_	Gender=Masc|Number=Sing	6	amod	_	_
+8	obtido	obter	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	6	acl	_	_
+9	exclusivamente	exclusivamente	ADV	_	_	8	advmod	_	_
+10-11	pelo	_	_	_	_	_	_	_	_
+10	por	por	ADP	_	_	12	case	_	_
+11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
+12	site	site	NOUN	_	Gender=Masc|Number=Sing	8	obl:agent	_	_
+13	"	"	PUNCT	_	_	14	punct	_	SpaceAfter=No
+14	Verdade	Verdade	PROPN	_	_	12	nmod	_	_
+15	Nacional	Nacional	PROPN	_	_	14	flat:name	_	SpaceAfter=No
+16	"	"	PUNCT	_	_	14	punct	_	SpaceAfter=No
+17	,	,	PUNCT	_	_	4	punct	_	_
+18	autoriza	autorizar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
+20	coleta	coleta	NOUN	_	Gender=Fem|Number=Sing	18	obj	_	_
+21	de	de	ADP	_	_	22	case	_	_
+22	dados	dado	NOUN	_	Gender=Masc|Number=Plur	20	nmod	_	_
+23	de	de	ADP	_	_	25	case	_	_
+24	250	250	NUM	_	NumType=Card	25	nummod	_	_
+25	milhões	milhão	NOUN	_	Gender=Masc|Number=Plur	22	nmod	_	_
+26	de	de	ADP	_	_	27	case	_	_
+27	brasileiros	brasileiro	NOUN	_	Gender=Masc|Number=Plur	25	nmod	_	_
+28	sem	sem	ADP	_	_	29	case	_	_
+29	ordem	ordem	NOUN	_	Gender=Fem|Number=Sing	25	nmod	_	_
+30	judicial	judicial	ADJ	_	Number=Sing	29	amod	_	SpaceAfter=No
+31	.	.	PUNCT	_	_	18	punct	_	_
+
+# sent_id = faketruebr:1429-5
+# text = "Essa operação visa combater o tráfego de drogas, pedofilia, terrorismo e desinformação em massa", afirmou o ministro Luís Fux em entrevista exclusiva à Rádio Globo, segundo versão amplamente compartilhada nas redes.
+1	"	"	PUNCT	_	_	4	punct	_	SpaceAfter=No
+2	Essa	esse	DET	_	Gender=Fem|Number=Sing|PronType=Dem	3	det	_	_
+3	operação	operação	NOUN	_	Gender=Fem|Number=Sing	4	nsubj	_	_
+4	visa	visar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	20	ccomp:speech	_	_
+5	combater	combater	VERB	_	VerbForm=Inf	4	xcomp	_	_
+6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
+7	tráfego	tráfego	NOUN	_	Gender=Masc|Number=Sing	5	obj	_	_
+8	de	de	ADP	_	_	9	case	_	_
+9	drogas	droga	NOUN	_	Gender=Fem|Number=Plur	7	nmod	_	SpaceAfter=No
+10	,	,	PUNCT	_	_	11	punct	_	_
+11	pedofilia	pedofilia	NOUN	_	Gender=Fem|Number=Sing	7	conj	_	SpaceAfter=No
+12	,	,	PUNCT	_	_	13	punct	_	_
+13	terrorismo	terrorismo	NOUN	_	Gender=Masc|Number=Sing	7	conj	_	_
+14	e	e	CCONJ	_	_	15	cc	_	_
+15	desinformação	desinformação	NOUN	_	Gender=Fem|Number=Sing	7	conj	_	_
+16	em	em	ADP	_	_	17	case	_	_
+17	massa	massa	NOUN	_	Gender=Fem|Number=Sing	15	nmod	_	SpaceAfter=No
+18	"	"	PUNCT	_	_	4	punct	_	SpaceAfter=No
+19	,	,	PUNCT	_	_	4	punct	_	_
+20	afirmou	afirmar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
+22	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	20	nsubj	_	_
+23	Luís	Luís	PROPN	_	_	22	nmod	_	_
+24	Fux	Fux	PROPN	_	_	23	flat:name	_	_
+25	em	em	ADP	_	_	26	case	_	_
+26	entrevista	entrevista	NOUN	_	Gender=Fem|Number=Sing	20	obl	_	_
+27	exclusiva	exclusivo	ADJ	_	Gender=Fem|Number=Sing	26	amod	_	_
+28-29	à	_	_	_	_	_	_	_	_
+28	a	a	ADP	_	_	30	case	_	_
+29	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	30	det	_	_
+30	Rádio	Rádio	PROPN	_	_	26	nmod	_	_
+31	Globo	Globo	PROPN	_	_	30	flat:name	_	SpaceAfter=No
+32	,	,	PUNCT	_	_	34	punct	_	_
+33	segundo	segundo	ADP	_	_	34	case	_	_
+34	versão	versão	NOUN	_	Gender=Fem|Number=Sing	20	obl	_	_
+35	amplamente	amplamente	ADV	_	_	36	advmod	_	_
+36	compartilhada	compartilhar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	34	acl	_	_
+37-38	nas	_	_	_	_	_	_	_	_
+37	em	em	ADP	_	_	39	case	_	_
+38	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	39	det	_	_
+39	redes	rede	NOUN	_	Gender=Fem|Number=Plur	36	obl	_	SpaceAfter=No
+40	.	.	PUNCT	_	_	20	punct	_	_
+
+# sent_id = faketruebr:1429-6
+# text = O texto, que circula como "informe oficial", afirma que mensagens privadas, chamadas de áudio e até localizações serão armazenadas em servidores do FBI e do Gabinete de Segurança Institucional.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
+2	texto	texto	NOUN	_	Gender=Masc|Number=Sing	12	nsubj	_	SpaceAfter=No
+3	,	,	PUNCT	_	_	5	punct	_	_
+4	que	que	PRON	_	PronType=Rel	5	nsubj	_	_
+5	circula	circular	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	acl:relcl	_	_
+6	como	como	ADP	_	_	8	case	_	_
+7	"	"	PUNCT	_	_	8	punct	_	SpaceAfter=No
+8	informe	informe	NOUN	_	Gender=Masc|Number=Sing	5	obl	_	_
+9	oficial	oficial	ADJ	_	Number=Sing	8	amod	_	SpaceAfter=No
+10	"	"	PUNCT	_	_	8	punct	_	SpaceAfter=No
+11	,	,	PUNCT	_	_	5	punct	_	_
+12	afirma	afirmar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+13	que	que	SCONJ	_	_	24	mark	_	_
+14	mensagens	mensagem	NOUN	_	Gender=Fem|Number=Plur	24	nsubj:pass	_	_
+15	privadas	privado	ADJ	_	Gender=Fem|Number=Plur|VerbForm=Part	14	amod	_	SpaceAfter=No
+16	,	,	PUNCT	_	_	17	punct	_	_
+17	chamadas	chamar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	14	conj	_	_
+18	de	de	ADP	_	_	19	case	_	_
+19	áudio	áudio	NOUN	_	Gender=Masc|Number=Sing	17	obl	_	_
+20	e	e	CCONJ	_	_	22	cc	_	_
+21	até	até	ADV	_	_	22	case	_	_
+22	localizações	localização	NOUN	_	Gender=Fem|Number=Plur	14	conj	_	_
+23	serão	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin	24	aux:pass	_	_
+24	armazenadas	armazenar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	12	ccomp	_	_
+25	em	em	ADP	_	_	26	case	_	_
+26	servidores	servidor	NOUN	_	Gender=Masc|Number=Plur	24	obl	_	_
+27-28	do	_	_	_	_	_	_	_	_
+27	de	de	ADP	_	_	29	case	_	_
+28	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	29	det	_	_
+29	FBI	FBI	PROPN	_	_	26	nmod	_	_
+30	e	e	CCONJ	_	_	33	cc	_	_
+31-32	do	_	_	_	_	_	_	_	_
+31	de	de	ADP	_	_	33	case	_	_
+32	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	33	det	_	_
+33	Gabinete	Gabinete	PROPN	_	_	29	conj	_	_
+34	de	de	ADP	_	_	35	case	_	_
+35	Segurança	Segurança	PROPN	_	_	33	flat:name	_	_
+36	Institucional	Institucional	PROPN	_	_	33	flat:name	_	SpaceAfter=No
+37	.	.	PUNCT	_	_	12	punct	_	_
+
+# sent_id = faketruebr:1429-7
+# text = ⚠️ Medidas de segurança urgentes:
+1	⚠️	⚠️	ADJ	_	Gender=Masc|NumType=Ord	2	amod	_	_
+2	Medidas	medida	NOUN	_	Gender=Fem|Number=Plur	0	root	_	_
+3	de	de	ADP	_	_	4	case	_	_
+4	segurança	segurança	NOUN	_	Number=Sing	2	nmod	_	_
+5	urgentes	urgente	ADJ	_	Number=Plur	2	amod	_	SpaceAfter=No
+6	:	:	PUNCT	_	_	2	punct	_	_
+
+# sent_id = faketruebr:1429-8
+# text = 1. Desative o WhatsApp até 15/10.
+1	1	1	NUM	_	NumType=Card	3	parataxis	_	SpaceAfter=No
+2	.	.	PUNCT	_	_	3	punct	_	_
+3	Desative	desativar	VERB	_	Mood=Imp|Number=Sing|Person=3|VerbForm=Fin	0	root	_	_
+4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
+5	WhatsApp	WhatsApp	PROPN	_	_	3	obj	_	_
+6	até	até	ADP	_	_	7	case	_	_
+7	15/10	15/10	NUM	_	NumType=Card	3	obl	_	SpaceAfter=No
+8	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = faketruebr:1429-9
+# text = 2. Evite discutir política ou religião em redes sociais.
+1	2	2	NUM	_	NumType=Card	3	parataxis	_	SpaceAfter=No
+2	.	.	PUNCT	_	_	3	punct	_	_
+3	Evite	evitar	VERB	_	Mood=Imp|Number=Sing|Person=3|VerbForm=Fin	0	root	_	_
+4	discutir	discutir	VERB	_	VerbForm=Inf	3	xcomp	_	_
+5	política	política	NOUN	_	Gender=Fem|Number=Sing	4	obj	_	_
+6	ou	ou	CCONJ	_	_	7	cc	_	_
+7	religião	religião	NOUN	_	Gender=Fem|Number=Sing	5	conj	_	_
+8	em	em	ADP	_	_	9	case	_	_
+9	redes	rede	NOUN	_	Gender=Fem|Number=Plur	4	obl	_	_
+10	sociais	social	ADJ	_	Number=Plur	9	amod	_	SpaceAfter=No
+11	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = faketruebr:1429-10
+# text = 3. Use redes privadas (VPN) para mensagens sensíveis.
+1	3	3	NUM	_	NumType=Card	3	parataxis	_	SpaceAfter=No
+2	.	.	PUNCT	_	_	3	punct	_	_
+3	Use	usar	VERB	_	Mood=Imp|Number=Sing|Person=3|VerbForm=Fin	0	root	_	_
+4	redes	rede	NOUN	_	Gender=Fem|Number=Plur	3	obj	_	_
+5	privadas	privado	ADJ	_	Gender=Fem|Number=Plur|VerbForm=Part	4	amod	_	_
+6	(	(	PUNCT	_	_	7	punct	_	SpaceAfter=No
+7	VPN	VPN	PROPN	_	_	4	appos	_	SpaceAfter=No
+8	)	)	PUNCT	_	_	7	punct	_	_
+9	para	para	ADP	_	_	10	case	_	_
+10	mensagens	mensagem	NOUN	_	Gender=Fem|Number=Plur	3	obl	_	_
+11	sensíveis	sensível	ADJ	_	Number=Plur	10	amod	_	SpaceAfter=No
+12	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = faketruebr:1429-11
+# text = 4. Compartilhe esta informação com sua família.
+1	4	4	NUM	_	NumType=Card	3	parataxis	_	SpaceAfter=No
+2	.	.	PUNCT	_	_	3	punct	_	_
+3	Compartilhe	compartilhar	VERB	_	Mood=Imp|Number=Sing|Person=3|VerbForm=Fin	0	root	_	_
+4	esta	este	DET	_	Gender=Fem|Number=Sing|PronType=Dem	5	det	_	_
+5	informação	informação	NOUN	_	Gender=Fem|Number=Sing	3	obj	_	_
+6	com	com	ADP	_	_	8	case	_	_
+7	sua	seu	DET	_	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	8	det	_	_
+8	família	família	NOUN	_	Gender=Fem|Number=Sing	3	obl	_	SpaceAfter=No
+9	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = faketruebr:1429-12
+# text = O link oficial da "verificação de dados": www.stfmonitoramento.com.br.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
+2	link	link	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
+3	oficial	oficial	ADJ	_	Number=Sing	2	amod	_	_
+4-5	da	_	_	_	_	_	_	_	_
+4	de	de	ADP	_	_	7	case	_	_
+5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
+6	"	"	PUNCT	_	_	7	punct	_	SpaceAfter=No
+7	verificação	verificação	NOUN	_	Gender=Fem|Number=Sing	2	nmod	_	_
+8	de	de	ADP	_	_	9	case	_	_
+9	dados	dado	NOUN	_	Gender=Masc|Number=Plur	7	nmod	_	SpaceAfter=No
+10	"	"	PUNCT	_	_	7	punct	_	SpaceAfter=No
+11	:	:	PUNCT	_	_	12	punct	_	_
+12	www.stfmonitoramento.com.br	www.stfmonitoramento.com.br	SYM	_	_	2	appos	_	SpaceAfter=No
+13	.	.	PUNCT	_	_	2	punct	_	_
+
+# sent_id = faketruebr:1429-13
+# text = ⚠️ AVISO:
+1	⚠️	⚠️	ADJ	_	Gender=Masc|NumType=Ord	2	amod	_	_
+2	AVISO	aviso	NOUN	_	Gender=Masc|Number=Sing	0	root	_	SpaceAfter=No
+3	:	:	PUNCT	_	_	2	punct	_	_
+
+# sent_id = faketruebr:1429-14
+# text = Este site não é do STF, mas oferece orientações sobre proteção digital.
+1	Este	este	DET	_	Gender=Masc|Number=Sing|PronType=Dem	2	det	_	_
+2	site	site	NOUN	_	Gender=Masc|Number=Sing	7	nsubj	_	_
+3	não	não	ADV	_	_	7	advmod	_	_
+4	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	_	_
+5-6	do	_	_	_	_	_	_	_	_
+5	de	de	ADP	_	_	7	case	_	_
+6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
+7	STF	STF	PROPN	_	_	0	root	_	SpaceAfter=No
+8	,	,	PUNCT	_	_	10	punct	_	_
+9	mas	mas	CCONJ	_	_	10	cc	_	_
+10	oferece	oferecer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	conj	_	_
+11	orientações	orientação	NOUN	_	Gender=Fem|Number=Plur	10	obj	_	_
+12	sobre	sobre	ADP	_	_	13	case	_	_
+13	proteção	proteção	NOUN	_	Gender=Fem|Number=Sing	11	nmod	_	_
+14	digital	digital	ADJ	_	Number=Sing	13	amod	_	SpaceAfter=No
+15	.	.	PUNCT	_	_	7	punct	_	_
+
+# sent_id = faketruebr:1429-15
+# text = 📢 Não é uma brincadeira.
+1	📢	📢	ADJ	_	Gender=Masc|NumType=Ord	5	nsubj	_	_
+2	Não	não	ADV	_	_	5	advmod	_	_
+3	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	_	_
+4	uma	um	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
+5	brincadeira	brincadeira	NOUN	_	Gender=Fem|Number=Sing	0	root	_	SpaceAfter=No
+6	.	.	PUNCT	_	_	5	punct	_	_
+
+# sent_id = faketruebr:1429-16
+# text = Tudo o que você digitar pode ser usado contra você, alerta o texto, assinado por Comitê de Cibersegurança Global.
+1	Tudo	tudo	PRON	_	PronType=Ind	6	nsubj	_	_
+2	o	o	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Dem	5	obj	_	_
+3	que	que	PRON	_	PronType=Rel	2	fixed	_	_
+4	você	você	PRON	_	Case=Nom|Number=Sing|Person=2|PronType=Prs	5	nsubj	_	_
+5	digitar	digitar	VERB	_	VerbForm=Inf	1	acl:relcl	_	_
+6	pode	poder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	ccomp:speech	_	_
+7	ser	ser	AUX	_	VerbForm=Inf	8	aux:pass	_	_
+8	usado	usar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	6	xcomp	_	_
+9	contra	contra	ADP	_	_	10	case	_	_
+10	você	você	PRON	_	Case=Nom|Number=Sing|Person=2|PronType=Prs	8	obl	_	SpaceAfter=No
+11	,	,	PUNCT	_	_	6	punct	_	_
+12	alerta	alertar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
+14	texto	texto	NOUN	_	Gender=Masc|Number=Sing	12	nsubj	_	SpaceAfter=No
+15	,	,	PUNCT	_	_	16	punct	_	_
+16	assinado	assinar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	14	acl	_	_
+17	por	por	ADP	_	_	18	case	_	_
+18	Comitê	Comitê	PROPN	_	_	16	obl:agent	_	_
+19	de	de	ADP	_	_	20	case	_	_
+20	Cibersegurança	Cibersegurança	PROPN	_	_	18	flat:name	_	_
+21	Global	Global	PROPN	_	_	18	flat:name	_	SpaceAfter=No
+22	.	.	PUNCT	_	_	12	punct	_	_
+
+# sent_id = faketruebr:1429-17
+# text = O documento, que contém erros de português (como "tráfego" em vez de "tráfico") e logotipos falsos do STF, tem se espalhado rapidamente em grupos de WhatsApp.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
+2	documento	documento	NOUN	_	Gender=Masc|Number=Sing	30	nsubj	_	SpaceAfter=No
+3	,	,	PUNCT	_	_	5	punct	_	_
+4	que	que	PRON	_	PronType=Rel	5	nsubj	_	_
+5	contém	conter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	acl:relcl	_	_
+6	erros	erro	NOUN	_	Gender=Masc|Number=Plur	5	obj	_	_
+7	de	de	ADP	_	_	8	case	_	_
+8	português	português	NOUN	_	Gender=Masc|Number=Sing	6	nmod	_	_
+9	(	(	PUNCT	_	_	12	punct	_	SpaceAfter=No
+10	como	como	ADP	_	_	12	case	_	_
+11	"	"	PUNCT	_	_	12	punct	_	SpaceAfter=No
+12	tráfego	tráfego	NOUN	_	Gender=Masc|Number=Sing	6	nmod	_	SpaceAfter=No
+13	"	"	PUNCT	_	_	12	punct	_	_
+14	em	em	ADP	_	_	15	case	_	_
+15	vez	vez	NOUN	_	Gender=Fem|Number=Sing	12	nmod	_	_
+16	de	de	ADP	_	_	18	case	_	_
+17	"	"	PUNCT	_	_	18	punct	_	SpaceAfter=No
+18	tráfico	tráfico	NOUN	_	Gender=Masc|Number=Sing	15	nmod	_	SpaceAfter=No
+19	"	"	PUNCT	_	_	18	punct	_	SpaceAfter=No
+20	)	)	PUNCT	_	_	12	punct	_	_
+21	e	e	CCONJ	_	_	22	cc	_	_
+22	logotipos	logotipo	NOUN	_	Gender=Masc|Number=Plur	12	conj	_	_
+23	falsos	falso	ADJ	_	Gender=Masc|Number=Plur	22	amod	_	_
+24-25	do	_	_	_	_	_	_	_	_
+24	de	de	ADP	_	_	26	case	_	_
+25	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	26	det	_	_
+26	STF	STF	PROPN	_	_	22	nmod	_	SpaceAfter=No
+27	,	,	PUNCT	_	_	12	punct	_	_
+28	tem	ter	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	30	aux	_	_
+29	se	se	PRON	_	Case=Nom|Person=3|PronType=Prs	30	expl	_	_
+30	espalhado	espalhar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	0	root	_	_
+31	rapidamente	rapidamente	ADV	_	_	30	advmod	_	_
+32	em	em	ADP	_	_	33	case	_	_
+33	grupos	grupo	NOUN	_	Gender=Masc|Number=Plur	30	obl	_	_
+34	de	de	ADP	_	_	35	case	_	_
+35	WhatsApp	WhatsApp	PROPN	_	_	33	nmod	_	SpaceAfter=No
+36	.	.	PUNCT	_	_	30	punct	_	_
+

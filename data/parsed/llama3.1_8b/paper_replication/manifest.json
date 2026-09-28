@@ -1,0 +1,32 @@
+{
+  "experiment": "paper_replication",
+  "parser": "Portparser v2 (LatinPipe + BERTimbau) com pós-processamento",
+  "pipeline": [
+    "portSentencer -r",
+    "portTokenizer -m",
+    "latinpipe --load Portparser_v2_model",
+    "postprocess.py -l -f"
+  ],
+  "tools": {
+    "portSentencer": "12723af",
+    "portTokenizer": "3a96f32",
+    "Portparser.v2": "9a76e8d",
+    "latinpipe": "cb25e7d",
+    "portparser_model_bytes": "1638156432"
+  },
+  "documents": 59,
+  "last_run": {
+    "parsed": 19,
+    "sentences": 395,
+    "dropped_sentences": 0,
+    "finished_at": "2026-09-27T11:42:31-03:00"
+  },
+  "eud": {
+    "tool": "grew 1.19.0",
+    "grs": "resources/eud/conjunto_regras_porttinari.grs",
+    "grs_sha256": "46c46938591c905e",
+    "strategy": "eud_portuguese",
+    "documents": 39,
+    "finished_at": "2026-09-28T00:50:13-03:00"
+  }
+}
