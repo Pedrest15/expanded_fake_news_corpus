@@ -41,6 +41,10 @@ from expanded_fake_news_corpus.analysis.cleaning import (
 
 logger = logging.getLogger(__name__)
 
+#: Nome da rodada gravada sem o nível de ``--run-name`` no caminho — a primeira
+#: de cada modelo. Serve para ``--round`` poder isolá-la das seguintes.
+UNNAMED_ROUND = "1"
+
 #: O texto de uma notícia do FakeTrueBR estoura o limite default do módulo csv.
 csv.field_size_limit(min(sys.maxsize, 2**31 - 1))
 
@@ -194,6 +198,7 @@ def load_paired_corpus(
     *,
     sources: Sequence[Source] | None = None,
     models: Sequence[str] | None = None,
+    rounds: Sequence[str] | None = None,
 ) -> list[Document]:
     """Carrega as notícias sintéticas e suas contrapartes humanas.
 
@@ -204,6 +209,7 @@ def load_paired_corpus(
         paths: Localização dos corpora; usa os caminhos do repositório se omitido
         sources: Restringe a estes corpora de origem (todos, se omitido)
         models: Restringe a estes modelos geradores (todos, se omitido)
+        rounds: Restringe a estas rodadas (todas, se omitido)
 
     Returns:
         Documentos dos dois grupos, ordenados por ``uid``
@@ -238,6 +244,7 @@ def load_machine_documents(
     *,
     sources: Sequence[Source] | None = None,
     models: Sequence[str] | None = None,
+    rounds: Sequence[str] | None = None,
 ) -> list[Document]:
     """Lê as notícias sintéticas dos JSONL de saída da geração.
 
@@ -245,6 +252,8 @@ def load_machine_documents(
         synthetic_dir: Raiz de ``corpus/fake_news``
         sources: Restringe a estes corpora de origem (todos, se omitido)
         models: Restringe a estes modelos geradores (todos, se omitido)
+        rounds: Restringe a estas rodadas — o ``--run-name`` da geração, ou
+            :data:`UNNAMED_ROUND` para a rodada gravada sem esse nível
 
     Returns:
         Documentos do grupo ``machine``
@@ -257,6 +266,7 @@ def load_machine_documents(
 
     wanted_sources = set(sources) if sources else None
     wanted_models = set(models) if models else None
+    wanted_rounds = set(rounds) if rounds else None
 
     documents: list[Document] = []
     markdown: list[MarkdownReport] = []
@@ -270,6 +280,10 @@ def load_machine_documents(
             if wanted_sources and document.source not in wanted_sources:
                 continue
             if wanted_models and document.model not in wanted_models:
+                continue
+            if wanted_rounds and (document.round_name or UNNAMED_ROUND) not in (
+                wanted_rounds
+            ):
                 continue
             documents.append(document)
             markdown.append(report)
@@ -604,6 +618,18 @@ def add_corpus_arguments(parser: argparse.ArgumentParser) -> None:
         help="Restringe a um modelo gerador (repetível)",
     )
     parser.add_argument(
+        "--round",
+        action="append",
+        dest="rounds",
+        metavar="NOME",
+        help=(
+            "Restringe a uma rodada de geração (repetível): o --run-name usado "
+            f"na geração, ou {UNNAMED_ROUND!r} para a primeira, gravada sem "
+            "esse nível no caminho. Sem a opção, todas — o que juntaria "
+            "rodadas do mesmo modelo no mesmo grupo."
+        ),
+    )
+    parser.add_argument(
         "--exclude-uid",
         action="append",
         default=[],
@@ -630,7 +656,9 @@ def documents_from_args(
     """
     sources = [Source(value) for value in args.source] if args.source else None
     paths = replace(paths or CorpusPaths(), synthetic_dir=EXPERIMENTS[args.experiment])
-    documents = load_paired_corpus(paths, sources=sources, models=args.model)
+    documents = load_paired_corpus(
+        paths, sources=sources, models=args.model, rounds=getattr(args, "rounds", None)
+    )
 
     excluded = set(getattr(args, "exclude_uid", None) or ())
     if excluded:
