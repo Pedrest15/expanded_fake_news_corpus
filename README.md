@@ -341,8 +341,8 @@ in `resources/eud/`.
 **the paper replication**: `index.html` browses the synthetic fake news (only
 the link and metadata of the source article, never its text) and
 `analysis.html` shows the linguistic characterisation. Both pages carry the
-generators that produced the whole sample with no refusal — currently
-gpt-4.1-mini and Claude Sonnet 4.5 — one at a time: a *Modelo* filter on the
+generators whose output is usable — currently gpt-4.1-mini, Claude Sonnet 4.5,
+Qwen3 32B and Llama 3.1 8B — one at a time: a *Modelo* filter on the
 corpus page, a *Gerador* selector on the characterisation page. The human side
 is the same 20 documents everywhere, so the two readings are comparable.
 
@@ -351,13 +351,19 @@ The data comes from two scripts; run them after generating and analysing:
 ```bash
 uv run python scripts/build_site.py \
     --model openai/gpt-4.1-mini-2025-04-14 \
-    --model anthropic/claude-sonnet-4-5-20250929
+    --model anthropic/claude-sonnet-4-5-20250929 \
+    --model ollama/qwen3:32b --model ollama/llama3.1:8b \
+    --exclude "ollama/llama3.1:8b:fakebr:1006"
 uv run python scripts/build_analysis_data.py   # generators in DEFAULT_GENERATORS
 ```
 
-`build_site.py` discards refusals (records without the paper's tags), and
-`--model` leaves the GPT-5.1 and Claude Sonnet 5 folders out — both refused
-most of the sample, so what they did produce is self-selected. A new generator
+`build_site.py` discards refusals (records without the paper's tags), `--model`
+leaves out the generators whose output is not usable, and `--exclude` drops an
+individual defective record. Left out today: GPT-5.1 and Claude Sonnet 5 (they
+refused most of the sample, so what they produced is self-selected),
+DeepSeek-R1 32B (12 of 20 texts came back in English) and one degenerate Llama
+document (`fakebr:1006`, one paragraph repeated 651 times). The reasons and
+counts are in `corpus/paper_replication/NOTES.md`. A new generator
 is added to the corpus page with one more `--model`, and to the
 characterisation page with one entry in `DEFAULT_GENERATORS` in
 [build_analysis_data.py](scripts/build_analysis_data.py) (model string and the

@@ -488,6 +488,152 @@ Both pages were exercised in a headless DOM against the real `docs/*.json`
 (selector options, re-render on switch, no leftover rows, panel following the
 filter).
 
+## 2026-09-28 — três modelos locais no Ollama, e um inventário de modos de falha
+
+Rodada com modelos abertos servidos por Ollama numa RTX 5090 (32 GB), tudo na
+faixa de 32B onde ela existe: `qwen3:32b`, `deepseek-r1:32b` e `llama3.1:8b`
+(a família Llama não tem 32B — 3.1 é 8B/70B/405B, 3.3 é só 70B —, então o
+Llama é o único abaixo da faixa, por decisão registrada). Contexto explícito
+de 16384 nos dois modelos de raciocínio e 8192 no Llama; sem temperatura e sem
+teto de tokens, como nas rodadas de API. ~28 s por notícia no pior caso.
+
+### Modos de falha, os sete geradores lado a lado
+
+A recusa deixou de ser o único jeito de o prompt do artigo fracassar. Os
+modelos abertos falham de outras formas, e algumas são invisíveis se só se
+olha a taxa de recusa:
+
+| Gerador | Recusa | Inglês | Degenerado | Markdown | Erro de formato | Aproveitáveis |
+|---|---|---|---|---|---|---|
+| `openai/gpt-5.1-2025-11-13` | **12** | 0 | 0 | 2 | 1 | 8/20 |
+| `anthropic/claude-sonnet-5` | **10** | 0 | 0 | 0 | 0 | 10/20 |
+| `ollama/deepseek-r1:32b` | 0 | **12** | 0 | 16 | 12 | 8/20 |
+| `ollama/llama3.1:8b` | 0 | 0 | **1** | 1 | 20 | 19/20 |
+| `ollama/qwen3:32b` | 0 | 0 | 0 | 13 | 0 | 20/20 |
+| `openai/gpt-4.1-mini-2025-04-14` | 0 | 0 | 0 | 0 | 5 | 20/20 |
+| `anthropic/claude-sonnet-4-5-20250929` | 0 | 0 | 0 | 0 | 0 | 20/20 |
+
+O que cada coluna quer dizer, e o que aprendemos com ela:
+
+**Recusa** — resposta em texto corrido dizendo que não fará o trabalho. É o
+modo de falha dos modelos de fronteira, e só deles: GPT-5.1 (65%) e Claude
+Sonnet 5 (50%) recusam explicitamente o enquadramento acadêmico do prompt,
+enquanto gpt-4.1-mini, Sonnet 4.5 e os três abertos não recusam nada. Não é
+gradual: ou o modelo recusa metade ou mais, ou recusa zero.
+
+**Inglês** — o DeepSeek-R1 32B escreveu **12 das 20 em inglês**, ignorando o
+idioma do prompt e da notícia de entrada. Não são recusas: são fake news
+completas, no idioma errado ("The Pentagon's Secret Microwave Missile
+Program"). A medição é inequívoca — 25–32% de palavras funcionais inglesas
+contra ~0% portuguesas nesses 12, e o oposto nos outros 8. As 8 em português
+são `fakebr:2623, 1129, 917, 573, 421` e `faketruebr:70, 509, 542`.
+
+Isto expôs um defeito do nosso próprio instrumento: o aviso
+`response without format tags` classificaria esses 12 como recusa, e a taxa
+sairia 60% para um modelo que **não recusou nenhuma**. Recusa e "gerou, mas
+fora do formato" são indistinguíveis pela estrutura; só o conteúdo separa.
+As contagens desta tabela são feitas por conteúdo, não pelo aviso.
+
+**Degenerado** — `llama3.1:8b`, `fakebr:1006`: 53.042 palavras, 1.310 linhas,
+apenas **10 distintas**, um parágrafo repetido 651 vezes até estourar o
+contexto. Excluído das análises com a flag nova `--exclude-uid`, que descarta
+o par dos dois lados (a comparação é pareada). O Llama roda com 19 pares.
+
+**Markdown** — manchete em `**negrito**`, listas, linhas de `---`. Apareceu
+**só nos modelos locais**: 13/20 no Qwen3 e 16/20 no DeepSeek, contra 0 nos
+quatro de API (as duas ocorrências do GPT-5.1 estão em textos de recusa, que
+são prosa explicativa, não notícia). Tratado por limpeza na análise, sem
+alterar o corpus — veja abaixo.
+
+**Erro de formato** — tag mal grafada, aberta sem fechar, ou irreconhecível.
+Os 20 do Llama são quase todos `unclosed <changes> tag` (a resposta acaba sem
+fechar a seção, mas o conteúdo está completo, como já acontecia com o
+gpt-4.1-mini); há também dois `<synthiaText>`, que o parser reconhece por
+similaridade desde a última leva. Não descartam o registro.
+
+### Markdown: limpeza na análise, corpus intacto
+
+Segue o padrão que já existia para o Fake.br humano (`analysis/cleaning.py`):
+o corpus guarda o que o modelo escreveu, e a limpeza vale só para a análise.
+`strip_markdown` remove os marcadores e preserva o texto que eles envolvem,
+com relatório por execução:
+
+| Gerador | Textos limpos | Negritos | Itálicos | Listas | Divisórias |
+|---|---|---|---|---|---|
+| `qwen3:32b` | 15/20 | 43 | 5 | 3 | 0 |
+| `deepseek-r1:32b` | 15/20 | 105 | 1 | 10 | 3 |
+| `llama3.1:8b` | 1/20 | 0 | 0 | 4 | 0 |
+
+Era necessário, não cosmético: `**` seria contado como pontuação na
+distribuição de UPOS, entraria no Zipf e no SAGE como token, e inflaria PUNCT
+de um lado só de uma comparação pareada.
+
+### DeepSeek-R1 não foi caracterizado
+
+As oito análises não foram rodadas sobre ele. Silabação, LIWC em português,
+SAGE e o parser do Porttinari sobre 60% de texto em inglês não produzem
+caracterização, produzem ruído — e o ruído acabaria nas tabelas e no site. O
+recorte de 8 textos em português também não serve: é pequeno e
+auto-selecionado, porque foi o próprio modelo que escolheu quando trocar de
+idioma. O corpus fica gravado como evidência do modo de falha, como as pastas
+de recusa do GPT-5.1 e do Sonnet 5.
+
+### Resultados: Qwen3 32B e Llama 3.1 8B
+
+Valores do lado máquina com o d de Cohen entre parênteses (negativo = maior na
+máquina). O lado humano é o mesmo em todas as colunas (n=20; n=19 para o
+Llama, por causa da exclusão — muda no máximo a terceira decimal).
+
+| Medida | Humano | gpt-4.1-mini | Sonnet 4.5 | Qwen3 32B | Llama 3.1 8B |
+|---|---|---|---|---|---|
+| Sílabas por palavra | 2.20 | 2.51 (−2.38) | 2.43 (−1.88) | 2.36 (−1.30) | 2.24 (−0.24) |
+| Sílabas por sentença | 43.6 | 78.2 (−2.19) | 55.5 (−0.81) | 60.0 (−1.00) | 54.3 (−0.69) |
+| MATTR | 0.813 | 0.87 (−2.02) | 0.87 (−2.04) | 0.85 (−1.02) | **0.79 (+0.57)** |
+| Tipo/ocorrência bruta | 0.632 | 0.62 (+0.19) | 0.62 (+0.20) | 0.60 (+0.40) | **0.49 (+1.50)** |
+| Palavras por sentença | 21.6 | 35.2 (−2.21) | 24.4 (−0.45) | 28.2 (−0.91) | 28.5 (−1.28) |
+| Regras por sentença | 29.9 | 48.9 (−2.27) | 33.9 (−0.46) | 38.7 (−0.89) | 39.3 (−1.27) |
+| **Diversidade de regras** | 0.269 | 0.21 (+1.80) | 0.22 (+1.43) | 0.22 (+1.44) | 0.20 (+1.48) |
+| Regras EUD por sentença | 9.0 | 15.4 (−1.95) | 10.1 (−0.33) | 10.8 (−0.53) | 12.7 (−1.10) |
+| Diversidade de regras EUD | 0.383 | 0.30 (+1.38) | 0.32 (+1.01) | 0.33 (+0.83) | 0.29 (+1.26) |
+| LIWC p<0.05 / FDR | | 19 / 10 | 17 / 0 | 15 / 0 | 6 / 0 |
+| UPOS significativo (FDR) | | ADJ (−2.71) | ADJ (−1.57) | nenhum | nenhum |
+
+Três leituras, e a primeira corrige o que escrevi antes:
+
+- **Diversidade de regras é a única medida estável nos quatro geradores**:
+  +1.80, +1.43, +1.44, +1.48 — mesma direção, mesma ordem de grandeza, de um
+  8B aberto a um modelo de fronteira. A máquina repete suas construções
+  sintáticas mais que o humano, e isso não depende de tamanho, família nem
+  pós-treino. É o candidato mais forte a marcador de autoria.
+- **O MATTR não é estável, ao contrário do que a entrada anterior sugeria.**
+  Ele se sustenta entre os modelos grandes (−2.02, −2.04, −1.02) e **inverte**
+  no Llama 8B (+0.57), com a razão tipo/ocorrência bruta indo a +1.50: o 8B é
+  *menos* diverso que o humano. Repetição é a assinatura do modelo pequeno, e
+  ela contamina justamente a métrica de diversidade lexical. Note que isso
+  aparece mesmo depois de excluir o documento degenerado — não é efeito dele.
+- **O sinal de adjetivo não sobrevive aos modelos abertos.** ADJ era o único
+  UPOS significativo sob FDR no gpt-4.1-mini (−2.71) e no Sonnet 4.5 (−1.57);
+  no Qwen3 e no Llama nenhuma etiqueta passa (no Qwen3 os menores q são PUNCT
+  0.075 e PROPN 0.115). O "mais adjetivos" do PROPOR parece ser propriedade
+  dos geradores de API, não de texto de máquina em geral.
+
+Tabelas em `data/analysis/paper_replication/qwen3_32b/` e
+`.../llama3.1_8b/`; CoNLL-U em `data/parsed/qwen3_32b/` e
+`data/parsed/llama3.1_8b/`. Sentenças do lado máquina: 293 (Qwen3, contra 224
+do humano) e 395 (Llama, contra 218 do humano — o lado humano perde as 6
+sentenças de `fakebr:1006`, excluído).
+
+Reproduzir, com o Ollama em `localhost:11434`:
+
+```bash
+for f in FakeBr_true FakeTrueBr_true; do
+  uv run fakegen paper --input true-corpus/clean/paper_replication/$f.csv \
+      --id-field uid --model ollama/qwen3:32b --out-dir corpus/paper_replication \
+      --concurrency 1 --num-ctx 16384 --timeout 1800
+done
+```
+
+
 ## 2026-09-15 — Fake.br cleaning, results regenerated, POS distribution
 
 **Cleaning.** The human Fake.br side now goes through the four rules of the

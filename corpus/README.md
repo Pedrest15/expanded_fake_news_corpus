@@ -148,6 +148,13 @@ replication uses gpt-4.1-mini; both outputs are kept as evidence in their own
 model folders. Claude Sonnet 4.5 (`anthropic/claude-sonnet-4-5-20250929`)
 produced all 20 and is the second full sample.
 
+Three open models served by Ollama were added later: `ollama/qwen3:32b`
+(20/20, usable), `ollama/llama3.1:8b` (20/20, one degenerate document) and
+`ollama/deepseek-r1:32b`, which refused nothing but wrote 12 of the 20 texts
+in English and is therefore kept as evidence only. `NOTES.md` has the
+failure-mode table for all seven generators — refusal, wrong language,
+degenerate repetition, Markdown and format errors side by side.
+
 ## Language
 
 Code, identifiers, JSON keys and documentation are in English, for international
