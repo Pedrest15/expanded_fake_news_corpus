@@ -1,0 +1,21 @@
+{
+  "provider": "ollama",
+  "model": "deepseek-r1:32b",
+  "model_string": "ollama/deepseek-r1:32b",
+  "sampling": {},
+  "sampling_dropped": [],
+  "max_tokens": null,
+  "num_ctx": 16384,
+  "timeout": 1800.0,
+  "max_input_chars": null,
+  "stage": "paper",
+  "run_name": "rodada2",
+  "strategy": null,
+  "genre": null,
+  "prompt_sha256": "795f6b38a9560e9c",
+  "input": "true-corpus/clean/paper_replication/FakeTrueBr_true.csv",
+  "output": "corpus/paper_replication/rodada2/ollama/deepseek-r1_32b/FakeTrueBr_true.jsonl",
+  "processed": 10,
+  "failures": 0,
+  "finished_at": "2026-10-06T16:45:19-03:00"
+}
