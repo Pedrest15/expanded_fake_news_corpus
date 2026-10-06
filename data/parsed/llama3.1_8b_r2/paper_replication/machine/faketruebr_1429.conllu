@@ -1,0 +1,185 @@
+# sent_id = faketruebr:1429-1
+# text = A partir de amanhã, todos os brasileiros terão seus dados de internet monitorados pelo governo.
+1	A	a	ADP	_	_	2	mark	_	_
+2	partir	partir	VERB	_	VerbForm=Inf	9	advcl	_	_
+3	de	de	ADP	_	_	4	case	_	_
+4	amanhã	amanhã	ADV	_	_	2	advmod	_	SpaceAfter=No
+5	,	,	PUNCT	_	_	2	punct	_	_
+6	todos	todo	DET	_	Gender=Masc|Number=Plur|PronType=Ind	8	det	_	_
+7	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	8	det	_	_
+8	brasileiros	brasileiro	NOUN	_	Gender=Masc|Number=Plur	9	nsubj	_	_
+9	terão	ter	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin	0	root	_	_
+10	seus	seu	DET	_	Gender=Masc|Number=Plur|Person=3|Poss=Yes|PronType=Prs	11	det	_	_
+11	dados	dado	NOUN	_	Gender=Masc|Number=Plur	9	obj	_	_
+12	de	de	ADP	_	_	13	case	_	_
+13	internet	internet	NOUN	_	Foreign=Yes|Gender=Fem|Number=Sing	11	nmod	_	_
+14	monitorados	monitorar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part|Voice=Pass	9	xcomp	_	_
+15-16	pelo	_	_	_	_	_	_	_	_
+15	por	por	ADP	_	_	17	case	_	_
+16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
+17	governo	governo	NOUN	_	Gender=Masc|Number=Sing	14	obl:agent	_	SpaceAfter=No
+18	.	.	PUNCT	_	_	9	punct	_	_
+
+# sent_id = faketruebr:1429-2
+# text = A medida, aprovada pelo STF, visa combater o tráfico de drogas e o terrorismo.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	medida	medida	NOUN	_	Gender=Fem|Number=Sing	9	nsubj	_	SpaceAfter=No
+3	,	,	PUNCT	_	_	4	punct	_	_
+4	aprovada	aprovar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	2	acl	_	_
+5-6	pelo	_	_	_	_	_	_	_	_
+5	por	por	ADP	_	_	7	case	_	_
+6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
+7	STF	STF	PROPN	_	_	4	obl:agent	_	SpaceAfter=No
+8	,	,	PUNCT	_	_	4	punct	_	_
+9	visa	visar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+10	combater	combater	VERB	_	VerbForm=Inf	9	xcomp	_	_
+11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
+12	tráfico	tráfico	NOUN	_	Gender=Masc|Number=Sing	10	obj	_	_
+13	de	de	ADP	_	_	14	case	_	_
+14	drogas	droga	NOUN	_	Gender=Fem|Number=Plur	12	nmod	_	_
+15	e	e	CCONJ	_	_	17	cc	_	_
+16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
+17	terrorismo	terrorismo	NOUN	_	Gender=Masc|Number=Sing	12	conj	_	SpaceAfter=No
+18	.	.	PUNCT	_	_	9	punct	_	_
+
+# sent_id = faketruebr:1429-3
+# text = A decisão inclui a vigilância em todas as redes sociais, incluindo Facebook, Twitter, WhatsApp e Instagram.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	decisão	decisão	NOUN	_	Gender=Fem|Number=Sing	3	nsubj	_	_
+3	inclui	incluir	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
+5	vigilância	vigilância	NOUN	_	Gender=Fem|Number=Sing	3	obj	_	_
+6	em	em	ADP	_	_	9	case	_	_
+7	todas	todo	DET	_	Gender=Fem|Number=Plur|PronType=Ind	9	det	_	_
+8	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	9	det	_	_
+9	redes	rede	NOUN	_	Gender=Fem|Number=Plur	5	nmod	_	_
+10	sociais	social	ADJ	_	Number=Plur	9	amod	_	SpaceAfter=No
+11	,	,	PUNCT	_	_	12	punct	_	_
+12	incluindo	incluir	VERB	_	VerbForm=Ger	9	acl	_	_
+13	Facebook	Facebook	PROPN	_	_	12	obj	_	SpaceAfter=No
+14	,	,	PUNCT	_	_	15	punct	_	_
+15	Twitter	Twitter	PROPN	_	_	13	conj	_	SpaceAfter=No
+16	,	,	PUNCT	_	_	17	punct	_	_
+17	WhatsApp	WhatsApp	PROPN	_	_	13	conj	_	_
+18	e	e	CCONJ	_	_	19	cc	_	_
+19	Instagram	Instagram	PROPN	_	_	13	conj	_	SpaceAfter=No
+20	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = faketruebr:1429-4
+# text = Além disso, todas as chamadas telefônicas serão gravadas e todas as mensagens de texto serão monitoradas.
+1	Além	além	ADV	_	_	10	advmod	_	_
+2-3	disso	_	_	_	_	_	_	_	SpaceAfter=No
+2	de	de	ADP	_	_	3	case	_	_
+3	isso	isso	PRON	_	Gender=Masc|Number=Sing|PronType=Dem	1	obl	_	_
+4	,	,	PUNCT	_	_	1	punct	_	_
+5	todas	todo	DET	_	Gender=Fem|Number=Plur|PronType=Ind	7	det	_	_
+6	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	7	det	_	_
+7	chamadas	chamada	NOUN	_	Gender=Fem|Number=Plur	10	nsubj:pass	_	_
+8	telefônicas	telefônico	ADJ	_	Gender=Fem|Number=Plur	7	amod	_	_
+9	serão	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin	10	aux:pass	_	_
+10	gravadas	gravar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	0	root	_	_
+11	e	e	CCONJ	_	_	18	cc	_	_
+12	todas	todo	DET	_	Gender=Fem|Number=Plur|PronType=Ind	14	det	_	_
+13	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	14	det	_	_
+14	mensagens	mensagem	NOUN	_	Gender=Fem|Number=Plur	18	nsubj:pass	_	_
+15	de	de	ADP	_	_	16	case	_	_
+16	texto	texto	NOUN	_	Gender=Masc|Number=Sing	14	nmod	_	_
+17	serão	ser	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin	18	aux:pass	_	_
+18	monitoradas	monitorar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	10	conj	_	SpaceAfter=No
+19	.	.	PUNCT	_	_	10	punct	_	_
+
+# sent_id = faketruebr:1429-5
+# text = O objetivo é proteger a sociedade contra ameaças terroristas e criminosas, mas também é claro que a medida visa controlar a liberdade de expressão e a privacidade dos cidadãos.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
+2	objetivo	objetivo	NOUN	_	Gender=Masc|Number=Sing	4	nsubj	_	_
+3	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	_	_
+4	proteger	proteger	VERB	_	VerbForm=Inf	0	root	_	_
+5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
+6	sociedade	sociedade	NOUN	_	Gender=Fem|Number=Sing	4	obj	_	_
+7	contra	contra	ADP	_	_	8	case	_	_
+8	ameaças	ameaça	NOUN	_	Gender=Fem|Number=Plur	4	obl	_	_
+9	terroristas	terrorista	ADJ	_	Number=Plur	8	amod	_	_
+10	e	e	CCONJ	_	_	11	cc	_	_
+11	criminosas	criminoso	ADJ	_	Gender=Fem|Number=Plur	9	conj	_	SpaceAfter=No
+12	,	,	PUNCT	_	_	16	punct	_	_
+13	mas	mas	CCONJ	_	_	16	cc	_	_
+14	também	também	ADV	_	_	16	advmod	_	_
+15	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	cop	_	_
+16	claro	claro	ADJ	_	Gender=Masc|Number=Sing	4	conj	_	_
+17	que	que	SCONJ	_	_	20	mark	_	_
+18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	19	det	_	_
+19	medida	medida	NOUN	_	Gender=Fem|Number=Sing	20	nsubj	_	_
+20	visa	visar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	csubj	_	_
+21	controlar	controlar	VERB	_	VerbForm=Inf	20	xcomp	_	_
+22	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	23	det	_	_
+23	liberdade	liberdade	NOUN	_	Gender=Fem|Number=Sing	21	obj	_	_
+24	de	de	ADP	_	_	25	case	_	_
+25	expressão	expressão	NOUN	_	Gender=Fem|Number=Sing	23	nmod	_	_
+26	e	e	CCONJ	_	_	28	cc	_	_
+27	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	28	det	_	_
+28	privacidade	privacidade	NOUN	_	Gender=Fem|Number=Sing	23	conj	_	_
+29-30	dos	_	_	_	_	_	_	_	_
+29	de	de	ADP	_	_	31	case	_	_
+30	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	31	det	_	_
+31	cidadãos	cidadão	NOUN	_	Gender=Masc|Number=Plur	28	nmod	_	SpaceAfter=No
+32	.	.	PUNCT	_	_	4	punct	_	_
+
+# sent_id = faketruebr:1429-6
+# text = O governo afirma que a medida é necessária para garantir a segurança nacional, mas muitos estão preocupados com a invasão da privacidade e a possibilidade de perda de liberdade.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
+2	governo	governo	NOUN	_	Gender=Masc|Number=Sing	3	nsubj	_	_
+3	afirma	afirmar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+4	que	que	SCONJ	_	_	8	mark	_	_
+5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
+6	medida	medida	NOUN	_	Gender=Fem|Number=Sing	8	nsubj	_	_
+7	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	_	_
+8	necessária	necessário	ADJ	_	Gender=Fem|Number=Sing	3	ccomp	_	_
+9	para	para	ADP	_	_	10	mark	_	_
+10	garantir	garantir	VERB	_	VerbForm=Inf	8	advcl	_	_
+11	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
+12	segurança	segurança	NOUN	_	Number=Sing	10	obj	_	_
+13	nacional	nacional	ADJ	_	Number=Sing	12	amod	_	SpaceAfter=No
+14	,	,	PUNCT	_	_	18	punct	_	_
+15	mas	mas	CCONJ	_	_	18	cc	_	_
+16	muitos	muito	PRON	_	Gender=Masc|Number=Plur|PronType=Ind	18	nsubj	_	_
+17	estão	estar	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	18	cop	_	_
+18	preocupados	preocupado	ADJ	_	Gender=Masc|Number=Plur|VerbForm=Part	3	conj	_	_
+19	com	com	ADP	_	_	21	case	_	_
+20	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	21	det	_	_
+21	invasão	invasão	NOUN	_	Gender=Fem|Number=Sing	18	obl	_	_
+22-23	da	_	_	_	_	_	_	_	_
+22	de	de	ADP	_	_	24	case	_	_
+23	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	24	det	_	_
+24	privacidade	privacidade	NOUN	_	Gender=Fem|Number=Sing	21	nmod	_	_
+25	e	e	CCONJ	_	_	27	cc	_	_
+26	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	27	det	_	_
+27	possibilidade	possibilidade	NOUN	_	Gender=Fem|Number=Sing	21	conj	_	_
+28	de	de	ADP	_	_	29	case	_	_
+29	perda	perda	NOUN	_	Gender=Fem|Number=Sing	27	nmod	_	_
+30	de	de	ADP	_	_	31	case	_	_
+31	liberdade	liberdade	NOUN	_	Gender=Fem|Number=Sing	29	nmod	_	SpaceAfter=No
+32	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = faketruebr:1429-7
+# text = O que você faria se soubesse que tudo o que você digita ou diz pode ser usado contra você?
+1	O	o	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Dem	4	obj	_	_
+2	que	que	PRON	_	PronType=Int	1	fixed	_	_
+3	você	você	PRON	_	Case=Nom|Number=Sing|Person=2|PronType=Prs	4	nsubj	_	_
+4	faria	fazer	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Fin	0	root	_	_
+5	se	se	SCONJ	_	_	6	mark	_	_
+6	soubesse	saber	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	advcl	_	_
+7	que	que	SCONJ	_	_	15	mark	_	_
+8	tudo	tudo	PRON	_	PronType=Ind	15	nsubj	_	_
+9	o	o	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Dem	12	obj	_	_
+10	que	que	PRON	_	PronType=Rel	9	fixed	_	_
+11	você	você	PRON	_	Case=Nom|Number=Sing|Person=2|PronType=Prs	12	nsubj	_	_
+12	digita	digitar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	acl:relcl	_	_
+13	ou	ou	CCONJ	_	_	14	cc	_	_
+14	diz	dizer	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	conj	_	_
+15	pode	poder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	ccomp	_	_
+16	ser	ser	AUX	_	VerbForm=Inf	17	aux:pass	_	_
+17	usado	usar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	15	xcomp	_	_
+18	contra	contra	ADP	_	_	19	case	_	_
+19	você	você	PRON	_	Case=Nom|Number=Sing|Person=2|PronType=Prs	17	obl	_	SpaceAfter=No
+20	?	?	PUNCT	_	_	4	punct	_	_
+

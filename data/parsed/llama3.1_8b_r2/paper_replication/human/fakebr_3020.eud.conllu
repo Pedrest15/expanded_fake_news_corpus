@@ -1,0 +1,167 @@
+# global.columns = ID FORM LEMMA UPOS XPOS FEATS HEAD DEPREL DEPS MISC
+# sent_id = fakebr:3020-1
+# text = Lula não está sozinho!
+1	Lula	Lula	PROPN	_	_	4	nsubj	4:nsubj	_
+2	não	não	ADV	_	_	4	advmod	4:advmod	_
+3	está	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
+4	sozinho	sozinho	ADJ	_	Gender=Masc|Number=Sing	0	root	0:root	SpaceAfter=No
+5	!	!	PUNCT	_	_	4	punct	4:punct	_
+
+# sent_id = fakebr:3020-2
+# text = Ele poderá ter a companhia do governador de MG na cadeia.
+1	Ele	ele	PRON	_	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj|3:nsubj	_
+2	poderá	poder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin	0	root	0:root	_
+3	ter	ter	VERB	_	VerbForm=Inf	2	xcomp	2:xcomp	_
+4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	5:det	_
+5	companhia	companhia	NOUN	_	Gender=Fem|Number=Sing	3	obj	3:obj	_
+6-7	do	_	_	_	_	_	_	_	_
+6	de	de	ADP	_	_	8	case	8:case	_
+7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	8:det	_
+8	governador	governador	NOUN	_	Gender=Masc|Number=Sing	5	nmod	5:nmod:de	_
+9	de	de	ADP	_	_	10	case	10:case	_
+10	MG	MG	PROPN	_	_	8	nmod	8:nmod:de	_
+11-12	na	_	_	_	_	_	_	_	_
+11	em	em	ADP	_	_	13	case	13:case	_
+12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	13:det	_
+13	cadeia	cadeia	NOUN	_	Gender=Fem|Number=Sing	3	obl	3:obl:em	SpaceAfter=No
+14	.	.	PUNCT	_	_	2	punct	2:punct	_
+
+# sent_id = fakebr:3020-3
+# text = Matéria publicada na Revista Época informa que Danielle Fonteles, dona da agência Pepper Interativa, já fechou acordo de delação premiada na Operação Acrônimo, da PF.
+1	Matéria	matéria	NOUN	_	Gender=Fem|Number=Sing	7	nsubj	7:nsubj	_
+2	publicada	publicar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	1	acl	1:acl	_
+3-4	na	_	_	_	_	_	_	_	_
+3	em	em	ADP	_	_	5	case	5:case	_
+4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	5:det	_
+5	Revista	Revista	PROPN	_	_	2	obl	2:obl:em	_
+6	Época	Época	PROPN	_	_	5	flat:name	5:flat:name	_
+7	informa	informar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+8	que	que	SCONJ	_	_	20	mark	20:mark	_
+9	Danielle	Danielle	PROPN	_	_	20	nsubj	20:nsubj	_
+10	Fonteles	Fonteles	PROPN	_	_	9	flat:name	9:flat:name	SpaceAfter=No
+11	,	,	PUNCT	_	_	12	punct	12:punct	_
+12	dona	dono	NOUN	_	Gender=Fem|Number=Sing	9	appos	9:appos	_
+13-14	da	_	_	_	_	_	_	_	_
+13	de	de	ADP	_	_	15	case	15:case	_
+14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	15:det	_
+15	agência	agência	NOUN	_	Gender=Fem|Number=Sing	12	nmod	12:nmod:de	_
+16	Pepper	Pepper	PROPN	_	_	15	nmod	15:nmod	_
+17	Interativa	Interativa	PROPN	_	_	16	flat:name	16:flat:name	SpaceAfter=No
+18	,	,	PUNCT	_	_	12	punct	12:punct	_
+19	já	já	ADV	_	_	20	advmod	20:advmod	_
+20	fechou	fechar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	ccomp	7:ccomp	_
+21	acordo	acordo	NOUN	_	Gender=Masc|Number=Sing	20	obj	20:obj	_
+22	de	de	ADP	_	_	23	case	23:case	_
+23	delação	delação	NOUN	_	Gender=Fem|Number=Sing	21	nmod	21:nmod:de	_
+24	premiada	premiado	ADJ	_	Gender=Fem|Number=Sing|VerbForm=Part	23	amod	23:amod	_
+25-26	na	_	_	_	_	_	_	_	_
+25	em	em	ADP	_	_	27	case	27:case	_
+26	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	27	det	27:det	_
+27	Operação	Operação	PROPN	_	_	20	obl	20:obl:em	_
+28	Acrônimo	Acrônimo	PROPN	_	_	27	flat:name	27:flat:name	SpaceAfter=No
+29	,	,	PUNCT	_	_	32	punct	32:punct	_
+30-31	da	_	_	_	_	_	_	_	_
+30	de	de	ADP	_	_	32	case	32:case	_
+31	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	32	det	32:det	_
+32	PF	PF	PROPN	_	_	27	nmod	27:nmod:de	SpaceAfter=No
+33	.	.	PUNCT	_	_	7	punct	7:punct	_
+
+# sent_id = fakebr:3020-4
+# text = A operação investiga um esquema de desvio de $$$$$$$ do Ministério do Desenvolvimento.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	2:det	_
+2	operação	operação	NOUN	_	Gender=Fem|Number=Sing	3	nsubj	3:nsubj	_
+3	investiga	investigar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+4	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	5	det	5:det	_
+5	esquema	esquema	NOUN	_	Gender=Masc|Number=Sing	3	obj	3:obj	_
+6	de	de	ADP	_	_	7	case	7:case	_
+7	desvio	desvio	NOUN	_	Gender=Masc|Number=Sing	5	nmod	5:nmod:de	_
+8	de	de	ADP	_	_	9	case	9:case	_
+9	$$$$$$$	$$$$$$$	SYM	_	_	7	nmod	7:nmod:de	_
+10-11	do	_	_	_	_	_	_	_	_
+10	de	de	ADP	_	_	12	case	12:case	_
+11	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	12	det	12:det	_
+12	Ministério	Ministério	PROPN	_	_	7	nmod	7:nmod:de	_
+13-14	do	_	_	_	_	_	_	_	_
+13	de	de	ADP	_	_	15	case	15:case	_
+14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	15:det	_
+15	Desenvolvimento	Desenvolvimento	PROPN	_	_	12	flat:name	12:flat:name	SpaceAfter=No
+16	.	.	PUNCT	_	_	3	punct	3:punct	_
+
+# sent_id = fakebr:3020-5
+# text = Os rercursos teriam abastecido a campanha do atual governador de Minas Gerais, Fernando Pimentel [PT].
+1	Os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	2	det	2:det	_
+2	rercursos	rercurso	NOUN	_	Gender=Masc|Number=Plur	4	nsubj	4:nsubj	_
+3	teriam	ter	AUX	_	Mood=Cnd|Number=Plur|Person=3|VerbForm=Fin	4	aux	4:aux	_
+4	abastecido	abastecer	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	0	root	0:root	_
+5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	6:det	_
+6	campanha	campanha	NOUN	_	Gender=Fem|Number=Sing	4	obj	4:obj	_
+7-8	do	_	_	_	_	_	_	_	_
+7	de	de	ADP	_	_	10	case	10:case	_
+8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	10:det	_
+9	atual	atual	ADJ	_	Number=Sing	10	amod	10:amod	_
+10	governador	governador	NOUN	_	Gender=Masc|Number=Sing	6	nmod	6:nmod:de	_
+11	de	de	ADP	_	_	12	case	12:case	_
+12	Minas	Minas	PROPN	_	_	10	nmod	10:nmod:de	_
+13	Gerais	Gerais	PROPN	_	_	12	flat:name	12:flat:name	SpaceAfter=No
+14	,	,	PUNCT	_	_	15	punct	15:punct	_
+15	Fernando	Fernando	PROPN	_	_	10	appos	10:appos	_
+16	Pimentel	Pimentel	PROPN	_	_	15	flat:name	15:flat:name	_
+17	[	[	PUNCT	_	_	18	punct	18:punct	SpaceAfter=No
+18	PT	PT	PROPN	_	_	15	parataxis	15:parataxis	SpaceAfter=No
+19	]	]	PUNCT	_	_	18	punct	18:punct	SpaceAfter=No
+20	.	.	PUNCT	_	_	4	punct	4:punct	_
+
+# sent_id = fakebr:3020-6
+# text = A delação está nas mãos do ministro Herman Benjamin, do STJ, faltando apenas ser homologada.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	2:det	_
+2	delação	delação	NOUN	_	Gender=Fem|Number=Sing	6	nsubj	6:nsubj	_
+3	está	estar	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
+4-5	nas	_	_	_	_	_	_	_	_
+4	em	em	ADP	_	_	6	case	6:case	_
+5	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	6	det	6:det	_
+6	mãos	mão	NOUN	_	Gender=Fem|Number=Plur	0	root	0:root	_
+7-8	do	_	_	_	_	_	_	_	_
+7	de	de	ADP	_	_	9	case	9:case	_
+8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	9:det	_
+9	ministro	ministro	NOUN	_	Gender=Masc|Number=Sing	6	nmod	6:nmod:de	_
+10	Herman	Herman	PROPN	_	_	9	nmod	9:nmod	_
+11	Benjamin	Benjamin	PROPN	_	_	10	flat:name	10:flat:name	SpaceAfter=No
+12	,	,	PUNCT	_	_	15	punct	15:punct	_
+13-14	do	_	_	_	_	_	_	_	_
+13	de	de	ADP	_	_	15	case	15:case	_
+14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	15:det	_
+15	STJ	STJ	PROPN	_	_	9	nmod	9:nmod:de	SpaceAfter=No
+16	,	,	PUNCT	_	_	17	punct	17:punct	_
+17	faltando	faltar	VERB	_	VerbForm=Ger	6	advcl	6:advcl	_
+18	apenas	apenas	ADV	_	_	20	advmod	20:advmod	_
+19	ser	ser	AUX	_	VerbForm=Inf	20	aux:pass	20:aux:pass	_
+20	homologada	homologar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	17	xcomp	17:xcomp	SpaceAfter=No
+21	.	.	PUNCT	_	_	6	punct	6:punct	_
+
+# sent_id = fakebr:3020-7
+# text = Na delação, Danielle conta que Fernando Pimentel e seu tesoureiro usaram esquema criminoso para financiar "ilegalmente" campanhas eleitorais.
+1-2	Na	_	_	_	_	_	_	_	_
+1	Em	em	ADP	_	_	3	case	3:case	_
+2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	3	det	3:det	_
+3	delação	delação	NOUN	_	Gender=Fem|Number=Sing	6	obl	6:obl:em	SpaceAfter=No
+4	,	,	PUNCT	_	_	3	punct	3:punct	_
+5	Danielle	Danielle	PROPN	_	_	6	nsubj	6:nsubj	_
+6	conta	contar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+7	que	que	SCONJ	_	_	13	mark	13:mark	_
+8	Fernando	Fernando	PROPN	_	_	13	nsubj	13:nsubj	_
+9	Pimentel	Pimentel	PROPN	_	_	8	flat:name	8:flat:name	_
+10	e	e	CCONJ	_	_	12	cc	12:cc	_
+11	seu	seu	DET	_	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	12	det	12:det	_
+12	tesoureiro	tesoureiro	NOUN	_	Gender=Masc|Number=Sing	8	conj	8:conj:e|13:nsubj	_
+13	usaram	usar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	6	ccomp	6:ccomp	_
+14	esquema	esquema	NOUN	_	Gender=Masc|Number=Sing	13	obj	13:obj	_
+15	criminoso	criminoso	ADJ	_	Gender=Masc|Number=Sing	14	amod	14:amod	_
+16	para	para	ADP	_	_	17	mark	17:mark	_
+17	financiar	financiar	VERB	_	VerbForm=Inf	13	advcl	13:advcl:para	_
+18	"	"	PUNCT	_	_	19	punct	19:punct	SpaceAfter=No
+19	ilegalmente	ilegalmente	ADV	_	_	17	advmod	17:advmod	SpaceAfter=No
+20	"	"	PUNCT	_	_	19	punct	19:punct	_
+21	campanhas	campanha	NOUN	_	Gender=Fem|Number=Plur	17	obj	17:obj	_
+22	eleitorais	eleitoral	ADJ	_	Number=Plur	21	amod	21:amod	SpaceAfter=No
+23	.	.	PUNCT	_	_	6	punct	6:punct	_
+

@@ -1,0 +1,114 @@
+S0003	3	mantiveram	LmLEX	mantiver	manter
+S0015	14	obtido	L1LEX	obtir	obter
+S0016	8	manteve	L1LEX	mantear	manter
+S0022	26	obtido	L1LEX	obtir	obter
+S0031	19	requer	L1LEX	requeir	requerer
+S0032	15	requer	L1LEX	requeir	requerer
+S0033	7	fossem	LmLEX	fossem	ir
+S0034	25	pago	LmLEX	par	pagar
+S0038	32	chegue	LmLEX	cheguar	chegar
+S0047	16	previstos	L1LEX	previsr	prever
+S0052	11	for	LmLEX	for	ir
+S0053	15	defendida	L1LEX	defendir	defender
+S0059	4	pagas	LmLEX	par	pagar
+S0066	28	reunidas	L1LEX	reunido	reunir
+S0073	6	expedidos	L1LEX	expeder	expedir
+S0081	35	determinados	L1LEX	determiner	determinar
+S0090	10	Lava-Jato	LrepTAG	Lava-jato	Lava-Jato
+S0091	14	pra	L1LEX	pra	para
+S0092	45	envolvidas	L1LEX	envolvir	envolver
+S0100	4	conduzi	LmLEX	conduzer	conduzir
+S0106	40	solto	LmLEX	solr	soltar
+S0108	9	determinado	L1LEX	determiner	determinar
+S0109	7	soltos	L1LEX	solto	soltar
+S0118	57	enche	LmLEX	enchir	encher
+S0129	15	partido-MS	LrepTAG	PARTIDO-MS	partido-MS
+S0131	8	‘o	FnoLEX	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	_
+S0132	8	enche	LmLEX	enchir	encher
+S0134	17	investigue	LmLEX	investiguar	investigar
+S0137	27	assume	LmLEX	assumer	assumir
+S0138	8	salvo	LmLEX	salr	salvar
+S0150	9	acendido	L1LEX	acendir	acender
+S0156	11	tiveram	LmLEX	tiveram	ter
+S0158	7	mede	LmLEX	meder	medir
+S0161	33	conhecidos	L1LEX	conhecido	conhecer
+S0171	23	seja	FmLEX	_	Mood=Imp|Number=Sing|Person=3|VerbForm=Fin
+S0174	28	TroianoBranding	LrepTAG	Troianobranding	TroianoBranding
+S0176	5	estejam	LmLEX	estejam	estar
+S0179	41	produzem	L1LEX	produzer	produzir
+S0181	22	agem	L1LEX	ager	agir
+S0192	10	disseram	LmLEX	disseram	dizer
+S0205	20	substituídos	L1LEX	substituír	substituir
+S0206	37	for	LmLEX	for	ir
+S0209	11	comandando	F1LEX	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	VerbForm=Ger
+S0215	5	sintam	LmLEX	sinzer	sentir
+S0215	6	respeitados	L1LEX	respeitado	respeitar
+S0216	21	envolvidas	L1LEX	envolvir	envolver
+S0250	2	tiver	LmLEX	tiver	ter
+S0255	4	composto	L1LEX	composr	compor
+S0256	18	reuniu	L1LEX	reunar	reunir
+S0260	7	envolveu	L1LEX	envolvar	envolver
+S0270	20	tiver	LmLEX	tiver	ter
+S0272	2	vier	LmLEX	vier	vir
+S0294	21	saia	LmLEX	saiir	sair
+S0294	35	prescrita	L1LEX	prescer	prescrever
+S0298	1	Nenhuma	L1LEX	nenhumo	nenhum
+S0306	17	estejam	LmLEX	estejam	estar
+S0309	46	Dlamini-Zuma	LrepTAG	Dlamini-zuma	Dlamini-Zuma
+S0313	12	insistiam	L1LEX	insister	insistir
+S0316	17	WhatsApp	LrepTAG	Whatsapp	WhatsApp
+S0320	4	faria	LmLEX	far	fazer
+S0320	6	soubesse	LmLEX	souber	saber
+S0321	16	publique	LmLEX	publiquar	publicar
+S0343	29	previstas	L1LEX	previsr	prever
+S0346	8	saia	LmLEX	saiir	sair
+S0348	9	entregue	LmLEX	entregr	entregar
+S0355	8	abastecido	L1LEX	abastecir	abastecer
+S0357	11	definida	L1LEX	definer	definir
+S0358	24	Bolívia-Brasil	LrepTAG	Bolívia-brasil	Bolívia-Brasil
+S0359	7	concluída	L1LEX	concluír	concluir
+S0361	17	os	FmLEX	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	Gender=Masc|Number=Plur|Person=3|PronType=Dem
+S0373	24	for	LmLEX	for	ir
+S0381	23	sugere	LmLEX	sugerer	sugerir
+S0404	3	contribuem	L1LEX	contribuer	contribuir
+S0407	35	estejam	LmLEX	estejam	estar
+S0408	31	mantida	L1LEX	mantir	manter
+S0412	9	pertençam	LmLEX	pertençir	pertencer
+S0412	21	estejam	LmLEX	estejam	estar
+S0418	13	impressa	L1LEX	impresr	imprimir
+S0419	9	impressa	L1LEX	impresr	imprimir
+S0420	34	promovidos	L1LEX	promovir	promover
+S0423	5	for	LmLEX	for	ir
+S0423	23	indique	LmLEX	indiquar	indicar
+S0426	13	desmentem	LmLEX	desmenter	desmentar
+S0430	9	desmentem	LmLEX	desmenter	desmentar
+S0434	19	1º	Lord	1º	primeiro
+S0434	40	trlAV	LrepTAG	TRLAV	trlAV
+S0436	33	pago	LmLEX	par	pagar
+S0436	36	devidos	L1LEX	devir	dever
+S0438	14	trlAV	LrepTAG	TRLAV	trlAV
+S0443	16	pago	LmLEX	par	pagar
+S0443	19	devidos	L1LEX	devir	dever
+
+==========================================================
+
+Lchanged - fixed: 87
+LnoLEX   - fixed: 0
+L1LEX    - fixed: 38
+LmLEX    - fixed: 40
+LunkTAG  - fixed: 0
+LdaysW   - fixed: 0
+Lmonth   - fixed: 0
+LuAbbr   - fixed: 0
+Lord     - fixed: 1
+LrepTAG  - fixed: 8
+Fchanged - fixed: 4
+FnoLEX   - fixed: 1
+F1LEX    - fixed: 1
+FmLEX    - fixed: 2
+FunkTAG  - fixed: 0
+FdaysW   - fixed: 0
+Fmonth   - fixed: 0
+FuAbbr   - fixed: 0
+Ford     - fixed: 0
+FrepTAG  - fixed: 0

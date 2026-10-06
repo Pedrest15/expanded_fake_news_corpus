@@ -1,0 +1,610 @@
+# sent_id = fakebr:1006-1
+# text = Ex-presidente Lula condenado em segunda instância por corrupção passiva e lavagem de dinheiro.
+1	Ex-presidente	ex-presidente	NOUN	_	Number=Sing	3	nsubj:pass	_	_
+2	Lula	Lula	PROPN	_	_	1	nmod	_	_
+3	condenado	condenar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
+4	em	em	ADP	_	_	6	case	_	_
+5	segunda	segundo	ADJ	_	Gender=Fem|Number=Sing|NumType=Ord	6	amod	_	_
+6	instância	instância	NOUN	_	Gender=Fem|Number=Sing	3	obl	_	_
+7	por	por	ADP	_	_	8	case	_	_
+8	corrupção	corrupção	NOUN	_	Gender=Fem|Number=Sing	3	obl	_	_
+9	passiva	passivo	ADJ	_	Gender=Fem|Number=Sing	8	amod	_	_
+10	e	e	CCONJ	_	_	11	cc	_	_
+11	lavagem	lavagem	NOUN	_	Gender=Fem|Number=Sing	8	conj	_	_
+12	de	de	ADP	_	_	13	case	_	_
+13	dinheiro	dinheiro	NOUN	_	Gender=Masc|Number=Sing	11	nmod	_	SpaceAfter=No
+14	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = fakebr:1006-2
+# text = TRF-4 confirma sentença de Moro, mas aumenta pena para 15 anos.
+1	TRF-4	TRF-4	PROPN	_	_	2	nsubj	_	_
+2	confirma	confirmar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+3	sentença	sentença	NOUN	_	Gender=Fem|Number=Sing	2	obj	_	_
+4	de	de	ADP	_	_	5	case	_	_
+5	Moro	Moro	PROPN	_	_	3	nmod	_	SpaceAfter=No
+6	,	,	PUNCT	_	_	8	punct	_	_
+7	mas	mas	CCONJ	_	_	8	cc	_	_
+8	aumenta	aumentar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	conj	_	_
+9	pena	pena	NOUN	_	Gender=Fem|Number=Sing	8	obj	_	_
+10	para	para	ADP	_	_	12	case	_	_
+11	15	15	NUM	_	NumType=Card	12	nummod	_	_
+12	anos	ano	NOUN	_	Gender=Masc|Number=Plur	8	obl	_	SpaceAfter=No
+13	.	.	PUNCT	_	_	2	punct	_	_
+
+# sent_id = fakebr:1006-3
+# text = Desembargadores também mantiveram condenação de Léo Pinheiro, ex-presidente da OAS.
+1	Desembargadores	desembargador	NOUN	_	Gender=Masc|Number=Plur	3	nsubj	_	_
+2	também	também	ADV	_	_	3	advmod	_	_
+3	mantiveram	manter	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+4	condenação	condenação	NOUN	_	Gender=Fem|Number=Sing	3	obj	_	_
+5	de	de	ADP	_	_	6	case	_	_
+6	Léo	Léo	PROPN	_	_	4	nmod	_	_
+7	Pinheiro	Pinheiro	PROPN	_	_	6	flat:name	_	SpaceAfter=No
+8	,	,	PUNCT	_	_	9	punct	_	_
+9	ex-presidente	ex-presidente	NOUN	_	Number=Sing	6	appos	_	_
+10-11	da	_	_	_	_	_	_	_	_
+10	de	de	ADP	_	_	12	case	_	_
+11	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
+12	OAS	OAS	PROPN	_	_	9	nmod	_	SpaceAfter=No
+13	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = fakebr:1006-4
+# text = A decisão foi unânime e confirma a condenação a 9 anos de prisão determinada por Moro, mas aumenta a pena para 15 anos.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	decisão	decisão	NOUN	_	Gender=Fem|Number=Sing	4	nsubj	_	_
+3	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	_	_
+4	unânime	unânime	ADJ	_	Number=Sing	0	root	_	_
+5	e	e	CCONJ	_	_	6	cc	_	_
+6	confirma	confirmar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	conj	_	_
+7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
+8	condenação	condenação	NOUN	_	Gender=Fem|Number=Sing	6	obj	_	_
+9	a	a	ADP	_	_	11	case	_	_
+10	9	9	NUM	_	NumType=Card	11	nummod	_	_
+11	anos	ano	NOUN	_	Gender=Masc|Number=Plur	8	nmod	_	_
+12	de	de	ADP	_	_	13	case	_	_
+13	prisão	prisão	NOUN	_	Gender=Fem|Number=Sing	11	nmod	_	_
+14	determinada	determinar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	13	acl	_	_
+15	por	por	ADP	_	_	16	case	_	_
+16	Moro	Moro	PROPN	_	_	14	obl:agent	_	SpaceAfter=No
+17	,	,	PUNCT	_	_	19	punct	_	_
+18	mas	mas	CCONJ	_	_	19	cc	_	_
+19	aumenta	aumentar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	conj	_	_
+20	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	21	det	_	_
+21	pena	pena	NOUN	_	Gender=Fem|Number=Sing	19	obj	_	_
+22	para	para	ADP	_	_	24	case	_	_
+23	15	15	NUM	_	NumType=Card	24	nummod	_	_
+24	anos	ano	NOUN	_	Gender=Masc|Number=Plur	19	obl	_	SpaceAfter=No
+25	.	.	PUNCT	_	_	4	punct	_	_
+
+# sent_id = fakebr:1006-5
+# text = O recurso da defesa contra a condenação foi rejeitado pelos três desembargadores da 8a Turma do TRF-4.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
+2	recurso	recurso	NOUN	_	Gender=Masc|Number=Sing	10	nsubj:pass	_	_
+3-4	da	_	_	_	_	_	_	_	_
+3	de	de	ADP	_	_	5	case	_	_
+4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
+5	defesa	defesa	NOUN	_	Gender=Fem|Number=Sing	2	nmod	_	_
+6	contra	contra	ADP	_	_	8	case	_	_
+7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
+8	condenação	condenação	NOUN	_	Gender=Fem|Number=Sing	2	nmod	_	_
+9	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	aux:pass	_	_
+10	rejeitado	rejeitar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
+11-12	pelos	_	_	_	_	_	_	_	_
+11	por	por	ADP	_	_	14	case	_	_
+12	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	14	det	_	_
+13	três	três	NUM	_	NumType=Card	14	nummod	_	_
+14	desembargadores	desembargador	NOUN	_	Gender=Masc|Number=Plur	10	obl:agent	_	_
+15-16	da	_	_	_	_	_	_	_	_
+15	de	de	ADP	_	_	18	case	_	_
+16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
+17	8a	8A	ADJ	_	Gender=Fem|NumType=Ord	18	amod	_	_
+18	Turma	Turma	PROPN	_	_	14	nmod	_	_
+19-20	do	_	_	_	_	_	_	_	_
+19	de	de	ADP	_	_	21	case	_	_
+20	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	21	det	_	_
+21	TRF-4	TRF-4	PROPN	_	_	18	nmod	_	SpaceAfter=No
+22	.	.	PUNCT	_	_	10	punct	_	_
+
+# sent_id = fakebr:1006-6
+# text = Os desembargadores se manifestaram em relação ao recurso apresentado pela defesa de Lula contra a condenação.
+1	Os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	2	det	_	_
+2	desembargadores	desembargador	NOUN	_	Gender=Masc|Number=Plur	4	nsubj	_	_
+3	se	se	PRON	_	Case=Nom|Person=3|PronType=Prs	4	expl	_	_
+4	manifestaram	manifestar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+5	em	em	ADP	_	_	6	case	_	_
+6	relação	relação	NOUN	_	Gender=Fem|Number=Sing	4	obl	_	_
+7-8	ao	_	_	_	_	_	_	_	_
+7	a	a	ADP	_	_	9	case	_	_
+8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	9	det	_	_
+9	recurso	recurso	NOUN	_	Gender=Masc|Number=Sing	6	nmod	_	_
+10	apresentado	apresentar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	9	acl	_	_
+11-12	pela	_	_	_	_	_	_	_	_
+11	por	por	ADP	_	_	13	case	_	_
+12	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	13	det	_	_
+13	defesa	defesa	NOUN	_	Gender=Fem|Number=Sing	10	obl:agent	_	_
+14	de	de	ADP	_	_	15	case	_	_
+15	Lula	Lula	PROPN	_	_	13	nmod	_	_
+16	contra	contra	ADP	_	_	18	case	_	_
+17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
+18	condenação	condenação	NOUN	_	Gender=Fem|Number=Sing	10	obl	_	SpaceAfter=No
+19	.	.	PUNCT	_	_	4	punct	_	_
+
+# sent_id = fakebr:1006-7
+# text = O voto do relator, João Pedro Gebran Neto, foi o mais detalhado e durou três horas e meia.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
+2	voto	voto	NOUN	_	Gender=Masc|Number=Sing	13	nsubj	_	_
+3-4	do	_	_	_	_	_	_	_	_
+3	de	de	ADP	_	_	5	case	_	_
+4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
+5	relator	relator	NOUN	_	Gender=Masc|Number=Sing	2	nmod	_	SpaceAfter=No
+6	,	,	PUNCT	_	_	7	punct	_	_
+7	João	João	PROPN	_	_	5	appos	_	_
+8	Pedro	Pedro	PROPN	_	_	7	flat:name	_	_
+9	Gebran	Gebran	PROPN	_	_	7	flat:name	_	_
+10	Neto	Neto	PROPN	_	_	7	flat:name	_	SpaceAfter=No
+11	,	,	PUNCT	_	_	7	punct	_	_
+12	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	cop	_	_
+13	o	o	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Dem	0	root	_	_
+14	mais	mais	ADV	_	_	15	advmod	_	_
+15	detalhado	detalhado	ADJ	_	Gender=Masc|Number=Sing|VerbForm=Part	13	amod	_	_
+16	e	e	CCONJ	_	_	17	cc	_	_
+17	durou	durar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	conj	_	_
+18	três	três	NUM	_	NumType=Card	19	nummod	_	_
+19	horas	hora	NOUN	_	Gender=Fem|Number=Plur	17	obj	_	_
+20	e	e	CCONJ	_	_	21	cc	_	_
+21	meia	meio	NUM	_	Gender=Fem|NumType=Frac	19	conj	_	SpaceAfter=No
+22	.	.	PUNCT	_	_	13	punct	_	_
+
+# sent_id = fakebr:1006-8
+# text = Ele apontou a "culpabilidade extremamente elevada" do petista e destacou a participação de Lula nos crimes.
+1	Ele	ele	PRON	_	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	_	_
+2	apontou	apontar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+3	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	5	det	_	_
+4	"	"	PUNCT	_	_	5	punct	_	SpaceAfter=No
+5	culpabilidade	culpabilidade	NOUN	_	Gender=Fem|Number=Sing	2	obj	_	_
+6	extremamente	extremamente	ADV	_	_	7	advmod	_	_
+7	elevada	elevado	ADJ	_	Gender=Fem|Number=Sing|VerbForm=Part	5	amod	_	SpaceAfter=No
+8	"	"	PUNCT	_	_	5	punct	_	_
+9-10	do	_	_	_	_	_	_	_	_
+9	de	de	ADP	_	_	11	case	_	_
+10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
+11	petista	petista	NOUN	_	Number=Sing	5	nmod	_	_
+12	e	e	CCONJ	_	_	13	cc	_	_
+13	destacou	destacar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	conj	_	_
+14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
+15	participação	participação	NOUN	_	Gender=Fem|Number=Sing	13	obj	_	_
+16	de	de	ADP	_	_	17	case	_	_
+17	Lula	Lula	PROPN	_	_	15	nmod	_	_
+18-19	nos	_	_	_	_	_	_	_	_
+18	em	em	ADP	_	_	20	case	_	_
+19	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	20	det	_	_
+20	crimes	crime	NOUN	_	Gender=Masc|Number=Plur	15	nmod	_	SpaceAfter=No
+21	.	.	PUNCT	_	_	2	punct	_	_
+
+# sent_id = fakebr:1006-9
+# text = A defesa, no entanto, ainda poderá tentar inocentar Lula nas instâncias superiores (Superior Tribunal de Justiça e Supremo Tribunal Federal).
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	defesa	defesa	NOUN	_	Gender=Fem|Number=Sing	9	nsubj	_	SpaceAfter=No
+3	,	,	PUNCT	_	_	4	punct	_	_
+4-5	no	_	_	_	_	_	_	_	_
+4	em	em	ADP	_	_	9	cc	_	_
+5	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	4	fixed	_	_
+6	entanto	entanto	NOUN	_	Gender=Masc|Number=Sing	4	fixed	_	SpaceAfter=No
+7	,	,	PUNCT	_	_	4	punct	_	_
+8	ainda	ainda	ADV	_	_	9	advmod	_	_
+9	poderá	poder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin	0	root	_	_
+10	tentar	tentar	VERB	_	VerbForm=Inf	9	xcomp	_	_
+11	inocentar	inocentar	VERB	_	VerbForm=Inf	10	xcomp	_	_
+12	Lula	Lula	PROPN	_	_	11	obj	_	_
+13-14	nas	_	_	_	_	_	_	_	_
+13	em	em	ADP	_	_	15	case	_	_
+14	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	15	det	_	_
+15	instâncias	instância	NOUN	_	Gender=Fem|Number=Plur	11	obl	_	_
+16	superiores	superior	ADJ	_	Number=Plur	15	amod	_	_
+17	(	(	PUNCT	_	_	18	punct	_	SpaceAfter=No
+18	Superior	Superior	PROPN	_	_	15	appos	_	_
+19	Tribunal	Tribunal	PROPN	_	_	18	flat:name	_	_
+20	de	de	ADP	_	_	21	case	_	_
+21	Justiça	Justiça	PROPN	_	_	18	flat:name	_	_
+22	e	e	CCONJ	_	_	23	cc	_	_
+23	Supremo	Supremo	PROPN	_	_	18	conj	_	_
+24	Tribunal	Tribunal	PROPN	_	_	23	flat:name	_	_
+25	Federal	Federal	PROPN	_	_	23	flat:name	_	SpaceAfter=No
+26	)	)	PUNCT	_	_	18	punct	_	SpaceAfter=No
+27	.	.	PUNCT	_	_	9	punct	_	_
+
+# sent_id = fakebr:1006-10
+# text = Mas, após o julgamento dos embargos no TRF-4, poderá ser expedida ordem de execução de sentença.
+1	Mas	mas	CCONJ	_	_	13	cc	_	SpaceAfter=No
+2	,	,	PUNCT	_	_	5	punct	_	_
+3	após	após	ADP	_	_	5	case	_	_
+4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
+5	julgamento	julgamento	NOUN	_	Gender=Masc|Number=Sing	13	obl	_	_
+6-7	dos	_	_	_	_	_	_	_	_
+6	de	de	ADP	_	_	8	case	_	_
+7	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	8	det	_	_
+8	embargos	embargo	NOUN	_	Gender=Masc|Number=Plur	5	nmod	_	_
+9-10	no	_	_	_	_	_	_	_	_
+9	em	em	ADP	_	_	11	case	_	_
+10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
+11	TRF-4	TRF-4	PROPN	_	_	5	nmod	_	SpaceAfter=No
+12	,	,	PUNCT	_	_	5	punct	_	_
+13	poderá	poder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin	0	root	_	_
+14	ser	ser	AUX	_	VerbForm=Inf	15	aux:pass	_	_
+15	expedida	expedir	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	13	xcomp	_	_
+16	ordem	ordem	NOUN	_	Gender=Fem|Number=Sing	15	nsubj:pass	_	_
+17	de	de	ADP	_	_	18	case	_	_
+18	execução	execução	NOUN	_	Gender=Fem|Number=Sing	16	nmod	_	_
+19	de	de	ADP	_	_	20	case	_	_
+20	sentença	sentença	NOUN	_	Gender=Fem|Number=Sing	18	nmod	_	SpaceAfter=No
+21	.	.	PUNCT	_	_	13	punct	_	_
+
+# sent_id = fakebr:1006-11
+# text = Nesse caso, ao recorrer ao STJ e depois ao STF, Lula já poderá estar preso.
+1-2	Nesse	_	_	_	_	_	_	_	_
+1	Em	em	ADP	_	_	3	case	_	_
+2	esse	esse	DET	_	Gender=Masc|Number=Sing|PronType=Dem	3	det	_	_
+3	caso	caso	NOUN	_	Gender=Masc|Number=Sing	19	obl	_	SpaceAfter=No
+4	,	,	PUNCT	_	_	3	punct	_	_
+5-6	ao	_	_	_	_	_	_	_	_
+5	a	a	ADP	_	_	7	mark	_	_
+6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	fixed	_	_
+7	recorrer	recorrer	VERB	_	VerbForm=Inf	19	advcl	_	_
+8-9	ao	_	_	_	_	_	_	_	_
+8	a	a	ADP	_	_	10	case	_	_
+9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
+10	STJ	STJ	PROPN	_	_	7	obl	_	_
+11	e	e	CCONJ	_	_	15	cc	_	_
+12	depois	depois	ADV	_	_	15	advmod	_	_
+13-14	ao	_	_	_	_	_	_	_	_
+13	a	a	ADP	_	_	15	case	_	_
+14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
+15	STF	STF	PROPN	_	_	10	conj	_	SpaceAfter=No
+16	,	,	PUNCT	_	_	7	punct	_	_
+17	Lula	Lula	PROPN	_	_	19	nsubj	_	_
+18	já	já	ADV	_	_	19	advmod	_	_
+19	poderá	poder	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin	0	root	_	_
+20	estar	estar	AUX	_	VerbForm=Inf	21	cop	_	_
+21	preso	preso	ADJ	_	Gender=Masc|Number=Sing|VerbForm=Part	19	xcomp	_	SpaceAfter=No
+22	.	.	PUNCT	_	_	19	punct	_	_
+
+# sent_id = fakebr:1006-12
+# text = A condenação é uma das mais duras aplicadas a um ex-presidente da República e confirma a sentença de Moro.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	condenação	condenação	NOUN	_	Gender=Fem|Number=Sing	4	nsubj	_	_
+3	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	_	_
+4	uma	um	NUM	_	Gender=Fem|NumType=Card	0	root	_	_
+5-6	das	_	_	_	_	_	_	_	_
+5	de	de	ADP	_	_	6	case	_	_
+6	as	o	PRON	_	Gender=Fem|Number=Plur|Person=3|PronType=Dem	4	nmod	_	_
+7	mais	mais	ADV	_	_	8	advmod	_	_
+8	duras	duro	ADJ	_	Gender=Fem|Number=Plur	6	amod	_	_
+9	aplicadas	aplicar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	6	acl	_	_
+10	a	a	ADP	_	_	12	case	_	_
+11	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	12	det	_	_
+12	ex-presidente	ex-presidente	NOUN	_	Number=Sing	9	obl	_	_
+13-14	da	_	_	_	_	_	_	_	_
+13	de	de	ADP	_	_	15	case	_	_
+14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
+15	República	República	PROPN	_	_	12	nmod	_	_
+16	e	e	CCONJ	_	_	17	cc	_	_
+17	confirma	confirmar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	conj	_	_
+18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	19	det	_	_
+19	sentença	sentença	NOUN	_	Gender=Fem|Number=Sing	17	obj	_	_
+20	de	de	ADP	_	_	21	case	_	_
+21	Moro	Moro	PROPN	_	_	19	nmod	_	SpaceAfter=No
+22	.	.	PUNCT	_	_	4	punct	_	_
+
+# sent_id = fakebr:1006-13
+# text = O julgamento durou oito horas e 15 minutos, além de uma hora de intervalo.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
+2	julgamento	julgamento	NOUN	_	Gender=Masc|Number=Sing	3	nsubj	_	_
+3	durou	durar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+4	oito	oito	NUM	_	NumType=Card	5	nummod	_	_
+5	horas	hora	NOUN	_	Gender=Fem|Number=Plur	3	obj	_	_
+6	e	e	CCONJ	_	_	8	cc	_	_
+7	15	15	NUM	_	NumType=Card	8	nummod	_	_
+8	minutos	minuto	NOUN	_	Gender=Masc|Number=Plur	5	conj	_	SpaceAfter=No
+9	,	,	PUNCT	_	_	10	punct	_	_
+10	além	além	ADV	_	_	3	advmod	_	_
+11	de	de	ADP	_	_	13	case	_	_
+12	uma	um	NUM	_	Gender=Fem|NumType=Card	13	nummod	_	_
+13	hora	hora	NOUN	_	Gender=Fem|Number=Sing	10	obl	_	_
+14	de	de	ADP	_	_	15	case	_	_
+15	intervalo	intervalo	NOUN	_	Gender=Masc|Number=Sing	13	nmod	_	SpaceAfter=No
+16	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = fakebr:1006-14
+# text = A decisão é um dos capítulos finais da Operação Lava Jato.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	decisão	decisão	NOUN	_	Gender=Fem|Number=Sing	4	nsubj	_	_
+3	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	_	_
+4	um	um	NUM	_	Gender=Masc|NumType=Card	0	root	_	_
+5-6	dos	_	_	_	_	_	_	_	_
+5	de	de	ADP	_	_	7	case	_	_
+6	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	7	det	_	_
+7	capítulos	capítulo	NOUN	_	Gender=Masc|Number=Plur	4	nmod	_	_
+8	finais	final	ADJ	_	Number=Plur	7	amod	_	_
+9-10	da	_	_	_	_	_	_	_	_
+9	de	de	ADP	_	_	11	case	_	_
+10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	11	det	_	_
+11	Operação	Operação	PROPN	_	_	7	nmod	_	_
+12	Lava	Lava	PROPN	_	_	11	flat:name	_	_
+13	Jato	Jato	PROPN	_	_	11	flat:name	_	SpaceAfter=No
+14	.	.	PUNCT	_	_	4	punct	_	_
+
+# sent_id = fakebr:1006-15
+# text = A defesa de Lula alegou que não houve provas de que o dinheiro obtido pela OAS em contratos com a Petrobras foi usado no apartamento.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	defesa	defesa	NOUN	_	Gender=Fem|Number=Sing	5	nsubj	_	_
+3	de	de	ADP	_	_	4	case	_	_
+4	Lula	Lula	PROPN	_	_	2	nmod	_	_
+5	alegou	alegar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+6	que	que	SCONJ	_	_	8	mark	_	_
+7	não	não	ADV	_	_	8	advmod	_	_
+8	houve	haver	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	ccomp	_	_
+9	provas	prova	NOUN	_	Gender=Fem|Number=Plur	8	obj	_	_
+10	de	de	ADP	_	_	24	mark	_	_
+11	que	que	SCONJ	_	_	10	fixed	_	_
+12	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
+13	dinheiro	dinheiro	NOUN	_	Gender=Masc|Number=Sing	24	nsubj:pass	_	_
+14	obtido	obter	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	13	acl	_	_
+15-16	pela	_	_	_	_	_	_	_	_
+15	por	por	ADP	_	_	17	case	_	_
+16	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	17	det	_	_
+17	OAS	OAS	PROPN	_	_	14	obl:agent	_	_
+18	em	em	ADP	_	_	19	case	_	_
+19	contratos	contrato	NOUN	_	Gender=Masc|Number=Plur	14	obl	_	_
+20	com	com	ADP	_	_	22	case	_	_
+21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	22	det	_	_
+22	Petrobras	Petrobras	PROPN	_	_	19	nmod	_	_
+23	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	24	aux:pass	_	_
+24	usado	usar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	9	acl	_	_
+25-26	no	_	_	_	_	_	_	_	_
+25	em	em	ADP	_	_	27	case	_	_
+26	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	27	det	_	_
+27	apartamento	apartamento	NOUN	_	Gender=Masc|Number=Sing	24	obl	_	SpaceAfter=No
+28	.	.	PUNCT	_	_	5	punct	_	_
+
+# sent_id = fakebr:1006-16
+# text = Mas o TRF-4 rejeitou essas alegações e manteve a condenação.
+1	Mas	mas	CCONJ	_	_	4	cc	_	_
+2	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	3	det	_	_
+3	TRF-4	TRF-4	PROPN	_	_	4	nsubj	_	_
+4	rejeitou	rejeitar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+5	essas	esse	DET	_	Gender=Fem|Number=Plur|PronType=Dem	6	det	_	_
+6	alegações	alegação	NOUN	_	Gender=Fem|Number=Plur	4	obj	_	_
+7	e	e	CCONJ	_	_	8	cc	_	_
+8	manteve	manter	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	conj	_	_
+9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
+10	condenação	condenação	NOUN	_	Gender=Fem|Number=Sing	8	obj	_	SpaceAfter=No
+11	.	.	PUNCT	_	_	4	punct	_	_
+
+# sent_id = fakebr:1006-17
+# text = A sentença é a quarta condenação de Lula em processos relacionados à Operação Lava Jato.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	sentença	sentença	NOUN	_	Gender=Fem|Number=Sing	6	nsubj	_	_
+3	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	_	_
+4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
+5	quarta	quarto	ADJ	_	Gender=Fem|Number=Sing|NumType=Ord	6	amod	_	_
+6	condenação	condenação	NOUN	_	Gender=Fem|Number=Sing	0	root	_	_
+7	de	de	ADP	_	_	8	case	_	_
+8	Lula	Lula	PROPN	_	_	6	nmod	_	_
+9	em	em	ADP	_	_	10	case	_	_
+10	processos	processo	NOUN	_	Gender=Masc|Number=Plur	6	nmod	_	_
+11	relacionados	relacionar	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	10	acl	_	_
+12-13	à	_	_	_	_	_	_	_	_
+12	a	a	ADP	_	_	14	case	_	_
+13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
+14	Operação	Operação	PROPN	_	_	11	obl	_	_
+15	Lava	Lava	PROPN	_	_	14	flat:name	_	_
+16	Jato	Jato	PROPN	_	_	14	flat:name	_	SpaceAfter=No
+17	.	.	PUNCT	_	_	6	punct	_	_
+
+# sent_id = fakebr:1006-18
+# text = Lula já foi condenado também por corrupção e lavagem de dinheiro no caso do triplex em Guarujá.
+1	Lula	Lula	PROPN	_	_	4	nsubj:pass	_	_
+2	já	já	ADV	_	_	4	advmod	_	_
+3	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux:pass	_	_
+4	condenado	condenar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
+5	também	também	ADV	_	_	4	advmod	_	_
+6	por	por	ADP	_	_	7	case	_	_
+7	corrupção	corrupção	NOUN	_	Gender=Fem|Number=Sing	4	obl	_	_
+8	e	e	CCONJ	_	_	9	cc	_	_
+9	lavagem	lavagem	NOUN	_	Gender=Fem|Number=Sing	7	conj	_	_
+10	de	de	ADP	_	_	11	case	_	_
+11	dinheiro	dinheiro	NOUN	_	Gender=Masc|Number=Sing	9	nmod	_	_
+12-13	no	_	_	_	_	_	_	_	_
+12	em	em	ADP	_	_	14	case	_	_
+13	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	14	det	_	_
+14	caso	caso	NOUN	_	Gender=Masc|Number=Sing	4	obl	_	_
+15-16	do	_	_	_	_	_	_	_	_
+15	de	de	ADP	_	_	17	case	_	_
+16	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	17	det	_	_
+17	triplex	triplex	NOUN	_	Gender=Masc|Number=Sing	14	nmod	_	_
+18	em	em	ADP	_	_	19	case	_	_
+19	Guarujá	Guarujá	PROPN	_	_	17	nmod	_	SpaceAfter=No
+20	.	.	PUNCT	_	_	4	punct	_	_
+
+# sent_id = fakebr:1006-19
+# text = A decisão do TRF-4 é a segunda condenação de Lula em segunda instância e confirma a sentença de Moro.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	decisão	decisão	NOUN	_	Gender=Fem|Number=Sing	9	nsubj	_	_
+3-4	do	_	_	_	_	_	_	_	_
+3	de	de	ADP	_	_	5	case	_	_
+4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
+5	TRF-4	TRF-4	PROPN	_	_	2	nmod	_	_
+6	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	_	_
+7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	_	_
+8	segunda	segundo	ADJ	_	Gender=Fem|Number=Sing|NumType=Ord	9	amod	_	_
+9	condenação	condenação	NOUN	_	Gender=Fem|Number=Sing	0	root	_	_
+10	de	de	ADP	_	_	11	case	_	_
+11	Lula	Lula	PROPN	_	_	9	nmod	_	_
+12	em	em	ADP	_	_	14	case	_	_
+13	segunda	segundo	ADJ	_	Gender=Fem|Number=Sing|NumType=Ord	14	amod	_	_
+14	instância	instância	NOUN	_	Gender=Fem|Number=Sing	9	nmod	_	_
+15	e	e	CCONJ	_	_	16	cc	_	_
+16	confirma	confirmar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	conj	_	_
+17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	18	det	_	_
+18	sentença	sentença	NOUN	_	Gender=Fem|Number=Sing	16	obj	_	_
+19	de	de	ADP	_	_	20	case	_	_
+20	Moro	Moro	PROPN	_	_	18	nmod	_	SpaceAfter=No
+21	.	.	PUNCT	_	_	9	punct	_	_
+
+# sent_id = fakebr:1006-20
+# text = A pena de 15 anos é a mais alta aplicada a um ex-presidente da República.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	pena	pena	NOUN	_	Gender=Fem|Number=Sing	7	nsubj	_	_
+3	de	de	ADP	_	_	5	case	_	_
+4	15	15	NUM	_	NumType=Card	5	nummod	_	_
+5	anos	ano	NOUN	_	Gender=Masc|Number=Plur	2	nmod	_	_
+6	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	_	_
+7	a	o	PRON	_	Gender=Fem|Number=Sing|Person=3|PronType=Dem	0	root	_	_
+8	mais	mais	ADV	_	_	9	advmod	_	_
+9	alta	alto	ADJ	_	Gender=Fem|Number=Sing	7	amod	_	_
+10	aplicada	aplicar	VERB	_	Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass	7	acl	_	_
+11	a	a	ADP	_	_	13	case	_	_
+12	um	um	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	13	det	_	_
+13	ex-presidente	ex-presidente	NOUN	_	Number=Sing	10	obl	_	_
+14-15	da	_	_	_	_	_	_	_	_
+14	de	de	ADP	_	_	16	case	_	_
+15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	16	det	_	_
+16	República	República	PROPN	_	_	13	nmod	_	SpaceAfter=No
+17	.	.	PUNCT	_	_	7	punct	_	_
+
+# sent_id = fakebr:1006-21
+# text = O julgamento foi marcado por longos debates e alegações entre a defesa e a acusação.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
+2	julgamento	julgamento	NOUN	_	Gender=Masc|Number=Sing	4	nsubj:pass	_	_
+3	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux:pass	_	_
+4	marcado	marcar	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	_
+5	por	por	ADP	_	_	7	case	_	_
+6	longos	longo	ADJ	_	Gender=Masc|Number=Plur	7	amod	_	_
+7	debates	debate	NOUN	_	Gender=Masc|Number=Plur	4	obl:agent	_	_
+8	e	e	CCONJ	_	_	9	cc	_	_
+9	alegações	alegação	NOUN	_	Gender=Fem|Number=Plur	7	conj	_	_
+10	entre	entre	ADP	_	_	12	case	_	_
+11	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
+12	defesa	defesa	NOUN	_	Gender=Fem|Number=Sing	7	nmod	_	_
+13	e	e	CCONJ	_	_	15	cc	_	_
+14	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
+15	acusação	acusação	NOUN	_	Gender=Fem|Number=Sing	12	conj	_	SpaceAfter=No
+16	.	.	PUNCT	_	_	4	punct	_	_
+
+# sent_id = fakebr:1006-22
+# text = A defesa alegou que a sentença de Moro foi injusta e que não houve provas de que Lula sabia do uso do dinheiro obtido pela OAS.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	defesa	defesa	NOUN	_	Gender=Fem|Number=Sing	3	nsubj	_	_
+3	alegou	alegar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+4	que	que	SCONJ	_	_	10	mark	_	_
+5	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
+6	sentença	sentença	NOUN	_	Gender=Fem|Number=Sing	10	nsubj	_	_
+7	de	de	ADP	_	_	8	case	_	_
+8	Moro	Moro	PROPN	_	_	6	nmod	_	_
+9	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	cop	_	_
+10	injusta	injusto	ADJ	_	Gender=Fem|Number=Sing	3	ccomp	_	_
+11	e	e	CCONJ	_	_	14	cc	_	_
+12	que	que	SCONJ	_	_	14	mark	_	_
+13	não	não	ADV	_	_	14	advmod	_	_
+14	houve	haver	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	conj	_	_
+15	provas	prova	NOUN	_	Gender=Fem|Number=Plur	14	obj	_	_
+16	de	de	ADP	_	_	19	mark	_	_
+17	que	que	SCONJ	_	_	16	fixed	_	_
+18	Lula	Lula	PROPN	_	_	19	nsubj	_	_
+19	sabia	saber	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	15	acl	_	_
+20-21	do	_	_	_	_	_	_	_	_
+20	de	de	ADP	_	_	22	case	_	_
+21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
+22	uso	uso	NOUN	_	Gender=Masc|Number=Sing	19	obl	_	_
+23-24	do	_	_	_	_	_	_	_	_
+23	de	de	ADP	_	_	25	case	_	_
+24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	_	_
+25	dinheiro	dinheiro	NOUN	_	Gender=Masc|Number=Sing	22	nmod	_	_
+26	obtido	obter	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part|Voice=Pass	25	acl	_	_
+27-28	pela	_	_	_	_	_	_	_	_
+27	por	por	ADP	_	_	29	case	_	_
+28	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	29	det	_	_
+29	OAS	OAS	PROPN	_	_	26	obl:agent	_	SpaceAfter=No
+30	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = fakebr:1006-23
+# text = A acusação, por sua vez, argumentou que as provas apresentadas no processo mostram que Lula sabia do uso do dinheiro e que foi um dos principais beneficiários da propina.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	acusação	acusação	NOUN	_	Gender=Fem|Number=Sing	8	nsubj	_	SpaceAfter=No
+3	,	,	PUNCT	_	_	6	punct	_	_
+4	por	por	ADP	_	_	6	case	_	_
+5	sua	seu	DET	_	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	6	det	_	_
+6	vez	vez	NOUN	_	Gender=Fem|Number=Sing	8	obl	_	SpaceAfter=No
+7	,	,	PUNCT	_	_	6	punct	_	_
+8	argumentou	argumentar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+9	que	que	SCONJ	_	_	16	mark	_	_
+10	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	11	det	_	_
+11	provas	prova	NOUN	_	Gender=Fem|Number=Plur	16	nsubj	_	_
+12	apresentadas	apresentar	VERB	_	Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	11	acl	_	_
+13-14	no	_	_	_	_	_	_	_	_
+13	em	em	ADP	_	_	15	case	_	_
+14	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	_
+15	processo	processo	NOUN	_	Gender=Masc|Number=Sing	12	obl	_	_
+16	mostram	mostrar	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	8	ccomp	_	_
+17	que	que	SCONJ	_	_	19	mark	_	_
+18	Lula	Lula	PROPN	_	_	19	nsubj	_	_
+19	sabia	saber	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	16	ccomp	_	_
+20-21	do	_	_	_	_	_	_	_	_
+20	de	de	ADP	_	_	22	case	_	_
+21	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	22	det	_	_
+22	uso	uso	NOUN	_	Gender=Masc|Number=Sing	19	obl	_	_
+23-24	do	_	_	_	_	_	_	_	_
+23	de	de	ADP	_	_	25	case	_	_
+24	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	25	det	_	_
+25	dinheiro	dinheiro	NOUN	_	Gender=Masc|Number=Sing	22	nmod	_	_
+26	e	e	CCONJ	_	_	29	cc	_	_
+27	que	que	SCONJ	_	_	29	mark	_	_
+28	foi	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	29	cop	_	_
+29	um	um	NUM	_	Gender=Masc|NumType=Card	19	conj	_	_
+30-31	dos	_	_	_	_	_	_	_	_
+30	de	de	ADP	_	_	33	case	_	_
+31	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	33	det	_	_
+32	principais	principal	ADJ	_	Number=Plur	33	amod	_	_
+33	beneficiários	beneficiário	NOUN	_	Gender=Masc|Number=Plur	29	nmod	_	_
+34-35	da	_	_	_	_	_	_	_	_
+34	de	de	ADP	_	_	36	case	_	_
+35	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	36	det	_	_
+36	propina	propina	NOUN	_	Gender=Fem|Number=Sing	33	nmod	_	SpaceAfter=No
+37	.	.	PUNCT	_	_	8	punct	_	_
+
+# sent_id = fakebr:1006-24
+# text = A decisão do TRF-4 é um dos capítulos finais da Operação Lava Jato e confirma a condenação de Lula por corrupção passiva e lavagem de dinheiro.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	decisão	decisão	NOUN	_	Gender=Fem|Number=Sing	7	nsubj	_	_
+3-4	do	_	_	_	_	_	_	_	_
+3	de	de	ADP	_	_	5	case	_	_
+4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
+5	TRF-4	TRF-4	PROPN	_	_	2	nmod	_	_
+6	é	ser	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	_	_
+7	um	um	NUM	_	Gender=Masc|NumType=Card	0	root	_	_
+8-9	dos	_	_	_	_	_	_	_	_
+8	de	de	ADP	_	_	10	case	_	_
+9	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	10	det	_	_
+10	capítulos	capítulo	NOUN	_	Gender=Masc|Number=Plur	7	nmod	_	_
+11	finais	final	ADJ	_	Number=Plur	10	amod	_	_
+12-13	da	_	_	_	_	_	_	_	_
+12	de	de	ADP	_	_	14	case	_	_
+13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
+14	Operação	Operação	PROPN	_	_	10	nmod	_	_
+15	Lava	Lava	PROPN	_	_	14	flat:name	_	_
+16	Jato	Jato	PROPN	_	_	14	flat:name	_	_
+17	e	e	CCONJ	_	_	18	cc	_	_
+18	confirma	confirmar	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	conj	_	_
+19	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
+20	condenação	condenação	NOUN	_	Gender=Fem|Number=Sing	18	obj	_	_
+21	de	de	ADP	_	_	22	case	_	_
+22	Lula	Lula	PROPN	_	_	20	nmod	_	_
+23	por	por	ADP	_	_	24	case	_	_
+24	corrupção	corrupção	NOUN	_	Gender=Fem|Number=Sing	20	nmod	_	_
+25	passiva	passivo	ADJ	_	Gender=Fem|Number=Sing	24	amod	_	_
+26	e	e	CCONJ	_	_	27	cc	_	_
+27	lavagem	lavagem	NOUN	_	Gender=Fem|Number=Sing	24	conj	_	_
+28	de	de	ADP	_	_	29	case	_	_
+29	dinheiro	dinheiro	NOUN	_	Gender=Masc|Number=Sing	27	nmod	_	SpaceAfter=No
+30	.	.	PUNCT	_	_	7	punct	_	_
+

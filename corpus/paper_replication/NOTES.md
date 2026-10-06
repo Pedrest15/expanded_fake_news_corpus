@@ -634,6 +634,107 @@ done
 ```
 
 
+## 2026-10-06 — segunda rodada: Llama e DeepSeek repetidos
+
+Até aqui todo número do projeto vinha de **uma** execução por modelo, e não
+havia como saber o que era propriedade do gerador e o que era sorteio da
+amostra. Com temperatura no padrão do provedor e sem semente, cada execução é
+um sorteio independente. Repetimos a amostra inteira dos dois geradores mais
+instáveis — nenhum item foi repetido isoladamente, o que enviesaria a amostra
+(ver a entrada do GPT-5.1).
+
+Condições idênticas à primeira rodada nos dois: mesmo `prompt_sha256`
+(`795f6b38a9560e9c`), nenhuma amostragem enviada, sem teto de tokens,
+`num_ctx` 16384. Saída em `corpus/paper_replication/rodada2/ollama/...`, via
+`--run-name rodada2`.
+
+### DeepSeek-R1 32B: a taxa é do modelo, o item é sorteio
+
+| | Rodada 1 | Rodada 2 |
+|---|---|---|
+| Em inglês | 12/20 (60%) | 13/20 (65%) |
+| Recusa | 0 | 0 |
+| Markdown | 16/20 | 16/20 |
+| Erro de formato | 12 | 14 |
+
+A taxa se repete, mas **quais** artigos saem em inglês é quase aleatório:
+
+- em inglês nas duas (8): `fakebr:458, 3020` e `faketruebr:74, 230, 1043,
+  1429, 1587, 1773`
+- só na rodada 1 (4): `fakebr:104, 1006, 3041` e `faketruebr:215`
+- só na rodada 2 (5): `fakebr:2623, 573, 917` e `faketruebr:509, 542`
+- **em português nas duas: apenas 3** — `fakebr:1129, 421` e `faketruebr:70`
+
+A concordância item a item é **11/20 (55%)**, contra 52% esperados por acaso
+puro com p = 0,6. Isto é, nenhuma concordância acima do aleatório: a troca de
+idioma **não é propriedade do artigo** (comprimento, tema, corpus de origem),
+é um sorteio a cada chamada com viés constante de ~60% para o inglês.
+
+Duas consequências. A primeira é que o diagnóstico da rodada 1 ficou mais
+forte, não mais fraco: não foi uma execução infeliz, é o comportamento do
+modelo, medido em duas amostras. A segunda é que **somar rodadas não resolve**:
+só 3 dos 20 artigos saem em português nas duas, então não há como montar uma
+amostra pareada completa juntando execuções.
+
+### Llama 3.1 8B: a degeneração era sorteio
+
+| | Rodada 1 | Rodada 2 |
+|---|---|---|
+| Documento degenerado | 1 (`fakebr:1006`, 53.042 palavras) | **0** |
+| Maior texto | 53.042 palavras | 1.807 palavras |
+| Erro de formato | 20 | 18 |
+| Inglês / recusa | 0 / 0 | 0 / 0 |
+
+Repetição degenerada é sensível ao sorteio, ao contrário da troca de idioma.
+A rodada 2 não tem nenhum caso e foi analisada inteira, 20/20, sem exclusão.
+
+### As duas rodadas medem a mesma coisa
+
+Comparando as nove medidas de autoria entre as duas rodadas do Llama (rodada 1
+com n=19 pela exclusão, rodada 2 com n=20):
+
+| Medida | Rodada 1 | Rodada 2 | Δd |
+|---|---|---|---|
+| Sílabas por palavra | 2.238 (−0.24) | 2.239 (−0.30) | −0.06 |
+| Sílabas por sentença | 54.31 (−0.69) | 51.94 (−0.59) | +0.10 |
+| MATTR | 0.790 (+0.57) | 0.796 (+0.44) | −0.13 |
+| Tipo/ocorrência bruta | 0.486 (+1.50) | 0.470 (+1.79) | +0.29 |
+| Palavras por sentença | 28.46 (−1.28) | 27.97 (−1.08) | +0.19 |
+| Regras por sentença | 39.28 (−1.27) | 38.73 (−1.10) | +0.17 |
+| Diversidade de regras | 0.201 (+1.48) | 0.186 (+1.94) | +0.46 |
+| Regras EUD por sentença | 12.65 (−1.10) | 12.06 (−0.98) | +0.12 |
+| Diversidade de regras EUD | 0.294 (+1.26) | 0.281 (+1.45) | +0.19 |
+| LIWC p<0.05 / FDR | 6 / 0 | 6 / 0 | — |
+
+**Toda medida mantém sinal e ordem de grandeza.** Sete das nove ficam com
+|Δd| ≤ 0,2; a maior variação é a diversidade de regras (+1,48 → +1,94, Δ 0,46),
+e mesmo ela não muda de interpretação. O LIWC dá exatamente o mesmo resultado.
+
+Isso é a primeira evidência de reprodutibilidade do pipeline, e tem uma
+consequência importante para a leitura das tabelas anteriores: as diferenças
+**entre geradores** que vínhamos reportando são bem maiores que a variação
+entre rodadas do mesmo gerador. O MATTR indo de −2.02 no gpt-4.1-mini para
++0.57 no Llama é uma diferença de 2,6 em d, contra 0,13 de variação entre
+rodadas — a inversão é real, não ruído de amostragem.
+
+Com n = 2 isso é amplitude, não variância: dá para dizer que o fenômeno se
+repete e em que faixa, não para pôr barra de erro. Três a cinco rodadas
+mudariam de patamar, e a ~30 min cada são baratas na RTX 5090.
+
+### Um defeito do `--round` corrigido antes de medir
+
+O `--round` da leva anterior aceitava o argumento em `load_paired_corpus` e
+**não o repassava** ao carregador de máquina, de modo que as duas rodadas
+caíam no mesmo grupo: 40 documentos de máquina contra 20 humanos, em silêncio.
+Pegou porque a contagem de documentos do parsing não fechou (60 em vez de 40).
+Corrigido, com teste de regressão no caminho que falhou — o teste anterior
+exercitava só `load_machine_documents`, que sempre esteve correto.
+
+Tabelas da rodada 2 em `data/analysis/paper_replication/llama3.1_8b_r2/`,
+CoNLL-U em `data/parsed/llama3.1_8b_r2/`. O DeepSeek segue sem caracterização,
+agora por evidência de duas amostras.
+
+
 ## 2026-09-15 — Fake.br cleaning, results regenerated, POS distribution
 
 **Cleaning.** The human Fake.br side now goes through the four rules of the

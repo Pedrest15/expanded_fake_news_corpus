@@ -216,7 +216,7 @@ def load_paired_corpus(
     """
     paths = paths or CorpusPaths()
     machine = load_machine_documents(
-        paths.synthetic_dir, sources=sources, models=models
+        paths.synthetic_dir, sources=sources, models=models, rounds=rounds
     )
     if not machine:
         logger.warning(f"Nenhuma notícia sintética encontrada em {paths.synthetic_dir}")
