@@ -148,6 +148,25 @@ def truncate_pair(
     )
 
 
+def truncate_text(text: str, tokenizer, *, budget: int) -> str:
+    """Corta um texto solto num orçamento fixo de tokens.
+
+    Serve para a avaliação, onde não há par: todos os textos de teste são
+    cortados no mesmo orçamento para que a taxa de detecção de um gerador não
+    reflita o comprimento dele. O treino usa :func:`truncate_pair`.
+
+    Args:
+        text: Texto a cortar
+        tokenizer: Tokenizador do encoder, já carregado
+        budget: Tokens a manter
+
+    Returns:
+        O texto cortado
+    """
+    tokens = tokenizer.encode(text, add_special_tokens=False)
+    return tokenizer.decode(tokens[:budget], skip_special_tokens=True)
+
+
 def flatten_pairs(pairs: Sequence[PairedSample]) -> list[LabelledText]:
     """Achata os pares em documentos rotulados, humano antes de máquina.
 

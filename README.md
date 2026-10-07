@@ -374,6 +374,39 @@ Results go to `data/classification/<experiment>/<mode>.json`. The embedding
 cache under `data/classification/cache/` holds one `.npy` per
 encoder/pooling/length combination and should not be versioned.
 
+#### Transfer — a detector trained elsewhere, tested here
+
+With 20 source articles there is no training a classifier, but there is
+**testing** one. `classification/transfer.py` fits a detector on the prior
+study's 5,391 human/Sabiá-3 pairs and applies it to our generators, which no
+detector has ever seen. It answers a question our corpus cannot answer on its
+own: *does a detector trained against one generator recognise the others?*
+
+```bash
+uv run python -m expanded_fake_news_corpus.classification.transfer \
+    --mode tfidf --classifier logistic_regression
+```
+
+The design is asymmetric on purpose:
+
+| Role | Where it comes from |
+|---|---|
+| Training | human/Sabiá-3 pairs on the prior work's **train** uids |
+| Test, machine side | our generators' texts — detection rate per generator |
+| Test, human side | human fake news on the prior work's **test** uids — false positive rate |
+| Reference | Sabiá-3 on those same test uids — in-distribution detection |
+
+The human side deliberately does **not** come from our 20 articles: 16 of them
+are in the prior work's training split, because our sample was drawn from the
+same source corpora. Using them would measure memorisation. The split files are
+vendored in [resources/prior_splits/](resources/prior_splits/README.md) so the
+experiment is reproducible from this repository; the prior corpus itself is
+located through `FAKEGEN_PRIOR_CORPUS` or `--prior-dir`.
+
+Every test text is cut to the same token budget (by default the median of the
+training pairs' truncation), so a generator's detection rate reflects its style
+and not its length.
+
 ### Page (GitHub Pages)
 
 `docs/` is published at <https://pedrest15.github.io/expanded_fake_news_corpus/> and shows
