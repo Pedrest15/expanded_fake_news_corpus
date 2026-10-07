@@ -25,6 +25,20 @@ fakegen-analysis = "expanded_fake_news_corpus.analysis.runner:main"
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0", "ruff>=0.8"]
+# Classificação humano vs máquina (src/expanded_fake_news_corpus/classification)
+#
+# O `transformers` é necessário em todos os modos: o truncamento pareado usa o
+# tokenizador do encoder. O `torch` só no modo `embedding`, que é o único que
+# roda o encoder de fato — por isso os dois extras são separados.
+classification = [
+    "scikit-learn>=1.5",
+    "transformers>=4.48",
+    "numpy>=2.0",
+]
+classification-embedding = [
+    "torch>=2.4",
+]
+
 # Caracterização lexical/sintática do corpus (src/expanded_fake_news_corpus/analysis)
 analysis = [
     "matplotlib>=3.9",

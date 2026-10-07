@@ -335,6 +335,45 @@ be on the PATH (installed via opam). The EUD rule set comes from
 [eud-portugues](https://github.com/alvelvis/eud-portugues), vendored unchanged
 in `resources/eud/`.
 
+### Classification — human vs. machine
+
+`classification/` ports the two experiments of
+`noticias_falsas_humano_maquina_semantica/linguistic_features` that do **not**
+depend on the analysis tables: a frozen-encoder vector per document
+(`--mode embedding`) and a bag of words over the text (`--mode tfidf|bow`).
+Estimators, grids and the grouping by source article are the ones from there;
+the encoders are BERTimbau, multilingual BERT and **NorBERTo** base/large, with
+mean pooling as NorBERTo's default (it follows the ModernBERT recipe and has no
+trained `[CLS]`).
+
+```bash
+uv sync --extra classification              # transformers, scikit-learn
+uv sync --extra classification-embedding    # + torch, only for --mode embedding
+
+uv run python -m expanded_fake_news_corpus.classification.runner \
+    --experiment paper_replication --model ollama/qwen3:32b --mode tfidf
+uv run python -m expanded_fake_news_corpus.classification.runner \
+    --mode embedding --encoder norberto --classifier svm
+```
+
+Two methodological points carried over, both of which decide whether the
+experiment measures style or something else. **Paired truncation**: the two
+sides of a pair are cut to the shorter one's token count, so the classifier
+cannot win by reading length — the machine writes ~2.2× more here.
+**Grouping by `uid`**: both sides of an article always land in the same fold.
+
+One deliberate departure: the prior study has 5,391 pairs and reports a
+held-out test set; this corpus has **20** source articles, and the pairing ties
+the experiment to that ceiling however many generators are added. A held-out
+test would hold 4 articles. So the protocol here is **nested cross-validation**
+— the outer fold measures, the inner one picks the grid — and the report gives
+mean and spread across folds, not a single figure. The numbers are feasibility
+checks, not results; they become results when the corpus grows.
+
+Results go to `data/classification/<experiment>/<mode>.json`. The embedding
+cache under `data/classification/cache/` holds one `.npy` per
+encoder/pooling/length combination and should not be versioned.
+
 ### Page (GitHub Pages)
 
 `docs/` is published at <https://pedrest15.github.io/expanded_fake_news_corpus/> and shows
