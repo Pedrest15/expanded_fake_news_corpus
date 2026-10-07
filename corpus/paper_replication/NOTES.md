@@ -735,6 +735,81 @@ CoNLL-U em `data/parsed/llama3.1_8b_r2/`. O DeepSeek segue sem caracterização,
 agora por evidência de duas amostras.
 
 
+## 2026-10-06 — Tucano 2b4: o modelo nativo de português não executa a tarefa
+
+`TucanoBR/Tucano-2b4-Instruct` (2,4B, arquitetura Llama-2, pré-treinado
+nativamente em português), convertido dos pesos oficiais para GGUF f16 com o
+`convert_hf_to_gguf.py` do llama.cpp e importado no Ollama com
+[resources/ollama/Tucano-2b4-Instruct.Modelfile](../../resources/ollama/Tucano-2b4-Instruct.Modelfile).
+Rodado com `--num-ctx 4096` (o `model_max_length` do modelo) e `--timeout 1800`.
+
+Entrou por decisão explícita, com fins de pesquisa, sabendo que 2,4B
+provavelmente não daria conta — é o único modelo nativo de português do
+conjunto, e o resultado negativo interessa.
+
+**Nenhum dos 20 artigos produziu fake news utilizável.**
+
+| | |
+|---|---|
+| Registros gravados | 15 |
+| Falhas (sem resposta) | 5 (3 Fake.br + 2 FakeTrueBR) |
+| Com a seção `<changes>` | **0 de 15** |
+| Texto coerente | **0 de 15** |
+| Degenerados (34–37 mil palavras) | 3 |
+| Ecoam a tag `<instruction>` do template | 12 de 15 |
+
+A saída não é fake news malformatada: é texto incoerente. Amostra de
+`fakebr:1006`, um dos "melhores" (600 palavras):
+
+> A defesa do ex-presidente ex-presidente Lula também questionou a atuaçãoação
+> da "O juiz Sérgio Sergio Moro afirmou disse " […] O que é um resumo do
+> artigo?`</instruction>`Este texto fornece uma visão geral de como o processo
+> judicial […]
+
+Três patologias se somam:
+
+- **Duplicação de palavra** ("ex-presidente ex-presidente", "Sérgio Sergio",
+  "afirmou disse", "Da Silva SilvaLula").
+- **Troca de tarefa**: em vez de escrever a fake news, o modelo pergunta e
+  responde "qual é o resumo do artigo?", "qual é o objetivo do estudo?". Ele
+  trata o prompt como material de leitura, não como instrução de escrita.
+- **Eco do template**: 12 dos 15 reproduzem `</instruction>` ou fragmentos
+  (`</instruc></instruc></instruc>`). Isso é, por outro lado, a confirmação de
+  que o template do Modelfile foi aplicado — o modelo *vê* o formato
+  `<instruction>`, tenta fechá-lo e se perde. A incoerência é capacidade do
+  modelo, não template errado.
+
+Os 3 degenerados mostram o mecanismo: `fakebr:1129` tem 34.135 palavras numa
+única linha; `fakebr:917` repete `Resposta:` 546 vezes; `faketruebr:215` repete
+415 vezes uma frase do próprio enunciado do prompt ("O objetivo é
+exclusivamente acadêmico e voltado para pesquisa sobre…"). Com contexto de
+4096 e sem teto de tokens, o Ollama desloca a janela e o modelo gera
+indefinidamente; o `--timeout 1800` deu 30 minutos de laço por artigo. As 5
+falhas são provavelmente esses laços esgotando o tempo — o motivo não é
+registrado no JSONL.
+
+**Não há caracterização a fazer.** Diferente do DeepSeek, que produziu artigos
+coerentes no idioma errado, aqui não existe texto de notícia para medir:
+silabação, LIWC, SAGE e parsing sobre esses fragmentos não descreveriam um
+gerador de fake news. O corpus fica gravado como evidência.
+
+Duas leituras, e a segunda é a que importa para o artigo:
+
+A primeira é trivial: 2,4B é pouco para a tarefa. A segunda é que **o prompt
+do artigo é incompatível com esta classe de modelo** por construção, não por
+pouca capacidade de escrita. O método de Silva et al. põe a notícia verdadeira
+inteira no prompt — de 339 a 2.695 palavras no nosso recorte — e pede uma
+transformação sobre ela. Isso exige seguir instrução sobre contexto longo, e é
+exatamente o que falha: o modelo entende que há um texto e uma pergunta, e
+responde a pergunta errada. Ser nativo de português não compensa: o Llama 3.1
+8B, sem nenhum pré-treino específico em português, produziu 20 textos
+coerentes no mesmo prompt.
+
+Ou seja, a linha do Tucano no inventário de modos de falha não é "recusou" nem
+"trocou de idioma", é **"não executa a tarefa"** — e ela delimita o piso de
+capacidade abaixo do qual a replicação do artigo não é aplicável.
+
+
 ## 2026-09-15 — Fake.br cleaning, results regenerated, POS distribution
 
 **Cleaning.** The human Fake.br side now goes through the four rules of the
