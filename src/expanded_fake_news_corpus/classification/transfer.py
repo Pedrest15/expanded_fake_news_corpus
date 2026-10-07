@@ -211,6 +211,7 @@ def train_detector(
     min_df: int,
     folds: int,
     n_jobs: int,
+    cache_dir: Path | None = None,
 ) -> tuple[Any, dict[str, Any]]:
     """Ajusta o detector no corpus anterior, com busca em grade agrupada.
 
@@ -222,6 +223,7 @@ def train_detector(
         min_df: Documentos mínimos por termo
         folds: Dobras da busca em grade
         n_jobs: Processos da busca
+        cache_dir: Pasta de cache do vetorizador entre pontos da grade
 
     Returns:
         Tupla ``(detector ajustado, procedência do treino)``
@@ -244,7 +246,11 @@ def train_detector(
 
     spec = catalogue[classifier]
     pipeline, grid = build_pipeline(
-        spec, mode, max_features=max_features, min_df=min_df
+        spec,
+        mode,
+        max_features=max_features,
+        min_df=min_df,
+        memory=str(cache_dir) if cache_dir else None,
     )
     logger.info(
         f"Treinando {classifier} em {len(texts)} documentos "
@@ -303,6 +309,55 @@ def evaluate(detector: Any, test_sets: Sequence[TestSet]) -> dict[str, Any]:
     return results
 
 
+def build_readings(evaluation: dict[str, Any]) -> dict[str, Any]:
+    """Separa as duas leituras do mesmo conjunto de predições.
+
+    A primeira olha só os geradores: é a taxa de detecção, e é o que compara os
+    geradores entre si — o comportamento do detector no texto humano é
+    constante e não entra nessa comparação. A segunda acrescenta o controle
+    humano, que não é objeto do teste mas fixa o ponto de operação: sem ele a
+    taxa de detecção de um gerador isolado não tem escala.
+
+    Args:
+        evaluation: Saída de :func:`evaluate`
+
+    Returns:
+        As duas leituras, cada uma com o que lhe cabe
+    """
+    generators = {
+        name: result
+        for name, result in evaluation.items()
+        if result["expected"] == "machine"
+    }
+    human = {
+        name: result
+        for name, result in evaluation.items()
+        if result["expected"] == "human"
+    }
+
+    rates = {name: result["flagged_as_machine"] for name, result in generators.items()}
+    llms_only: dict[str, Any] = {
+        "detection_rate": rates,
+        "mean": float(np.mean(list(rates.values()))) if rates else None,
+        "spread": (max(rates.values()) - min(rates.values())) if rates else None,
+    }
+
+    with_human: dict[str, Any] = {"false_positive_rate": None, "balanced": {}}
+    if human:
+        false_positive = float(
+            np.mean([result["flagged_as_machine"] for result in human.values()])
+        )
+        with_human["false_positive_rate"] = false_positive
+        with_human["human_texts"] = sum(result["texts"] for result in human.values())
+        # Acurácia balanceada do par (gerador, controle humano): tira do número
+        # o detector que marcaria tudo como máquina.
+        with_human["balanced"] = {
+            name: (rate + (1.0 - false_positive)) / 2 for name, rate in rates.items()
+        }
+
+    return {"llms_only": llms_only, "with_human_control": with_human}
+
+
 def report(payload: dict[str, Any]) -> None:
     """Imprime o quadro de transferência."""
     logger.info("-" * 72)
@@ -310,15 +365,30 @@ def report(payload: dict[str, Any]) -> None:
         f"detector: {payload['training']['classifier']} | modo {payload['mode']} | "
         f"{payload['training']['pairs']} pares de treino"
     )
-    logger.info(f"{'conjunto':<46} {'n':>5} {'marcado máquina':>16}")
-    for name, result in payload["evaluation"].items():
-        logger.info(
-            f"{name:<46} {result['texts']:>5} {result['flagged_as_machine']:>15.1%}"
-        )
+    readings = payload["readings"]
+
+    logger.info("leitura 1 — só os LLMs (taxa de detecção)")
+    logger.info(f"  {'gerador':<46} {'n':>5} {'detectado':>11}")
+    for name, rate in readings["llms_only"]["detection_rate"].items():
+        texts = payload["evaluation"][name]["texts"]
+        logger.info(f"  {name:<46} {texts:>5} {rate:>10.1%}")
+    spread = readings["llms_only"]["spread"]
     logger.info(
-        "A linha humana é a taxa de falso positivo; a do sabiá-3 é a detecção "
-        "dentro da distribuição de treino, contra a qual as outras se leem."
+        f"  média {readings['llms_only']['mean']:.1%}, amplitude "
+        f"{spread:.1%} entre o melhor e o pior gerador"
     )
+
+    human = readings["with_human_control"]
+    if human["false_positive_rate"] is None:
+        return
+    logger.info("")
+    logger.info(
+        f"leitura 2 — com o controle humano ({human['human_texts']} textos): "
+        f"falso positivo {human['false_positive_rate']:.1%}"
+    )
+    logger.info(f"  {'gerador':<46} {'acurácia balanceada':>20}")
+    for name, value in human["balanced"].items():
+        logger.info(f"  {name:<46} {value:>19.1%}")
 
 
 def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
@@ -390,6 +460,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         min_df=args.min_df,
         folds=args.cv_folds,
         n_jobs=args.n_jobs,
+        cache_dir=args.output_dir / "cache" / "pipeline",
     )
 
     test_sets = build_test_sets(
@@ -400,6 +471,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         experiment=args.experiment,
         models=args.models,
     )
+    evaluation = evaluate(detector, test_sets)
     payload = {
         "design": "trained on the prior corpus, tested on unseen generators",
         "mode": args.mode,
@@ -411,7 +483,8 @@ def main(argv: Sequence[str] | None = None) -> int:
         "test_tokens": budget,
         "experiment": args.experiment,
         "training": training,
-        "evaluation": evaluate(detector, test_sets),
+        "evaluation": evaluation,
+        "readings": build_readings(evaluation),
         "built_at": datetime.now().astimezone().isoformat(timespec="seconds"),
     }
     report(payload)

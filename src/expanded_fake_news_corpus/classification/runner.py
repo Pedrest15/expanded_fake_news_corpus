@@ -129,7 +129,14 @@ def truncate_all(
     return truncated
 
 
-def build_pipeline(spec: ClassifierSpec, mode: str, *, max_features: int, min_df: int):
+def build_pipeline(
+    spec: ClassifierSpec,
+    mode: str,
+    *,
+    max_features: int,
+    min_df: int,
+    memory: str | None = None,
+):
     """Monta o pipeline do modo, com o vetorizador dentro.
 
     O vetorizador fica no pipeline de propósito: ajustá-lo fora da validação
@@ -140,6 +147,11 @@ def build_pipeline(spec: ClassifierSpec, mode: str, *, max_features: int, min_df
         mode: Um de :data:`MODES`
         max_features: Teto de termos da sacola de palavras
         min_df: Documentos mínimos por termo
+        memory: Pasta de cache dos transformadores. A busca em grade reajusta
+            o pipeline inteiro em cada ponto, mas o vetorizador não depende dos
+            hiperparâmetros do classificador — com cache ele é ajustado uma vez
+            por dobra em vez de uma por ponto da grade, o que no corpus
+            anterior é a diferença entre ~8 e ~2 minutos.
 
     Returns:
         Tupla ``(pipeline, grade com os prefixos do pipeline)``
@@ -158,7 +170,7 @@ def build_pipeline(spec: ClassifierSpec, mode: str, *, max_features: int, min_df
     steps.append(("clf", spec.estimator))
 
     grid = {f"clf__{key}": values for key, values in spec.param_grid.items()}
-    return Pipeline(steps), grid
+    return Pipeline(steps, memory=memory), grid
 
 
 def nested_cross_validate(
