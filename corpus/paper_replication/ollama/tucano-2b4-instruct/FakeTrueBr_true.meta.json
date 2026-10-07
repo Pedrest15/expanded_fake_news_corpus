@@ -1,0 +1,21 @@
+{
+  "provider": "ollama",
+  "model": "tucano-2b4-instruct",
+  "model_string": "ollama/tucano-2b4-instruct",
+  "sampling": {},
+  "sampling_dropped": [],
+  "max_tokens": null,
+  "num_ctx": 4096,
+  "timeout": 1800.0,
+  "max_input_chars": null,
+  "stage": "paper",
+  "run_name": null,
+  "strategy": null,
+  "genre": null,
+  "prompt_sha256": "795f6b38a9560e9c",
+  "input": "true-corpus/clean/paper_replication/FakeTrueBr_true.csv",
+  "output": "corpus/paper_replication/ollama/tucano-2b4-instruct/FakeTrueBr_true.jsonl",
+  "processed": 10,
+  "failures": 2,
+  "finished_at": "2026-10-06T21:11:30-03:00"
+}
