@@ -36,6 +36,7 @@ from expanded_fake_news_corpus.analysis.cleaning import (
     CleaningReport,
     MarkdownReport,
     clean_fakebr_text,
+    strip_appendix,
     strip_markdown,
 )
 
@@ -276,7 +277,7 @@ def load_machine_documents(
             result = _machine_document(record, round_name=round_name)
             if result is None:
                 continue
-            document, report = result
+            document, report, appendix_words = result
             if wanted_sources and document.source not in wanted_sources:
                 continue
             if wanted_models and document.model not in wanted_models:
@@ -287,6 +288,11 @@ def load_machine_documents(
                 continue
             documents.append(document)
             markdown.append(report)
+            if appendix_words:
+                logger.warning(
+                    f"Apêndice de metacomentário cortado: {document.cohort} "
+                    f"{document.uid} ({appendix_words} palavras)"
+                )
 
     logger.info(f"Lidas {len(documents)} notícias sintéticas de {synthetic_dir}")
     _log_markdown(markdown)
@@ -457,12 +463,14 @@ def load_prior_cohort(
 
 def _machine_document(
     record: dict, *, round_name: str | None
-) -> tuple[Document, MarkdownReport] | None:
+) -> tuple[Document, MarkdownReport, int] | None:
     """Converte um registro do JSONL em documento, ou None se estiver incompleto.
 
-    O texto passa por :func:`strip_markdown`: os modelos locais devolvem a
-    notícia formatada, e os marcadores contariam como pontuação nas análises.
-    O corpus gravado não é alterado — a limpeza vale só para a análise.
+    O texto passa por :func:`strip_appendix`, que corta o metacomentário do
+    modelo sobre as próprias alterações quando ele vem colado no corpo, e por
+    :func:`strip_markdown`: os modelos locais devolvem a notícia formatada, e
+    os marcadores contariam como pontuação nas análises. O corpus gravado não
+    é alterado — a limpeza vale só para a análise.
     """
     uid = record.get("source_id", "")
     body = (record.get("synthetic_text") or "").strip()
@@ -478,6 +486,7 @@ def _machine_document(
         logger.warning(f"Registro ignorado: {err}")
         return None
 
+    body, appendix_words = strip_appendix(body)
     body, report = strip_markdown(body)
     document = Document(
         uid=uid,
@@ -487,7 +496,7 @@ def _machine_document(
         model=record.get("model"),
         round_name=round_name,
     )
-    return document, report
+    return document, report, appendix_words
 
 
 def compose_news(headline: str, body: str) -> str:

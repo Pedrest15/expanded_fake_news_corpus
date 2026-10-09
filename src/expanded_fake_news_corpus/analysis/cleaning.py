@@ -1,7 +1,8 @@
 """Limpezas aplicadas antes da análise, sem tocar no corpus gravado.
 
-Duas, independentes: as regras do Fake.br humano (``adapt_fake.py`` do
-trabalho anterior) e a remoção de marcação Markdown do lado máquina.
+Três, independentes: as regras do Fake.br humano (``adapt_fake.py`` do
+trabalho anterior), e do lado máquina a remoção de marcação Markdown e do
+apêndice em que o modelo comenta as próprias alterações (:func:`strip_appendix`).
 
 Os ``.txt`` do Fake.br trazem lixo de coleta: caracteres fora do teclado
 (emoji, espaços não separáveis, bytes de codificação errada), linhas
@@ -108,6 +109,37 @@ def strip_markdown(text: str) -> tuple[str, MarkdownReport]:
         text = _DOUBLE_SPACE_RE.sub(" ", text)
         text = re.sub(r"\n{3,}", "\n\n", text).strip()
     return text, report
+
+
+#: Frases que abrem o apêndice em que o modelo, depois da notícia, explica o que
+#: alterou. O prompt pede as mudanças dentro de ``<changes>``; quando o modelo
+#: esquece a tag, elas chegam coladas no corpo. Lista explícita, levantada
+#: lendo o corpus (Llama 3.1 8B, ``faketruebr:509`` nas duas rodadas): um
+#: padrão genérico pegaria "fake news" e "alterações" ditos dentro da notícia.
+APPENDIX_OPENINGS: tuple[str, ...] = (
+    "Agora, veja o que mudamos",
+    "A notícia apresentada anteriormente foi modificada",
+)
+
+_APPENDIX_RE = re.compile(
+    r"^[ \t]*(?:" + "|".join(re.escape(opening) for opening in APPENDIX_OPENINGS) + ")",
+    re.MULTILINE | re.IGNORECASE,
+)
+
+
+def strip_appendix(text: str) -> tuple[str, int]:
+    """Corta o apêndice de metacomentário, da linha que o abre até o fim.
+
+    Args:
+        text: Texto da notícia sintética como o modelo devolveu
+
+    Returns:
+        O texto sem o apêndice e quantas palavras saíram (0 se não havia)
+    """
+    match = _APPENDIX_RE.search(text)
+    if match is None:
+        return text, 0
+    return text[: match.start()].rstrip(), len(text[match.start() :].split())
 
 
 @dataclass(frozen=True)

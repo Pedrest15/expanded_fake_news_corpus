@@ -30,7 +30,7 @@ faketruebr:215,faketruebr,machine,faketruebr_machine,ollama/llama3.1:8b,14,279,6
 faketruebr:230,faketruebr,human,faketruebr_human,,3,86,192,64.0,2.2325581395348837
 faketruebr:230,faketruebr,machine,faketruebr_machine,ollama/llama3.1:8b,7,187,418,59.714285714285715,2.235294117647059
 faketruebr:509,faketruebr,human,faketruebr_human,,10,159,353,39.22222222222222,2.220125786163522
-faketruebr:509,faketruebr,machine,faketruebr_machine,ollama/llama3.1:8b,18,351,770,42.77777777777778,2.1937321937321936
+faketruebr:509,faketruebr,machine,faketruebr_machine,ollama/llama3.1:8b,8,170,366,45.75,2.152941176470588
 faketruebr:542,faketruebr,human,faketruebr_human,,9,199,422,46.888888888888886,2.120603015075377
 faketruebr:542,faketruebr,machine,faketruebr_machine,ollama/llama3.1:8b,7,137,302,43.142857142857146,2.204379562043796
 faketruebr:70,faketruebr,human,faketruebr_human,,6,76,177,29.5,2.3289473684210527
