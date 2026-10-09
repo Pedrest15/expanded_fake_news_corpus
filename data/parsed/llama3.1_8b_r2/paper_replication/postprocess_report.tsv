@@ -70,31 +70,30 @@ S0359	7	concluída	L1LEX	concluír	concluir
 S0361	17	os	FmLEX	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	Gender=Masc|Number=Plur|Person=3|PronType=Dem
 S0373	24	for	LmLEX	for	ir
 S0381	23	sugere	LmLEX	sugerer	sugerir
-S0404	3	contribuem	L1LEX	contribuer	contribuir
-S0407	35	estejam	LmLEX	estejam	estar
-S0408	31	mantida	L1LEX	mantir	manter
-S0412	9	pertençam	LmLEX	pertençir	pertencer
-S0412	21	estejam	LmLEX	estejam	estar
-S0418	13	impressa	L1LEX	impresr	imprimir
-S0419	9	impressa	L1LEX	impresr	imprimir
-S0420	34	promovidos	L1LEX	promovir	promover
-S0423	5	for	LmLEX	for	ir
-S0423	23	indique	LmLEX	indiquar	indicar
-S0426	13	desmentem	LmLEX	desmenter	desmentar
-S0430	9	desmentem	LmLEX	desmenter	desmentar
-S0434	19	1º	Lord	1º	primeiro
-S0434	40	trlAV	LrepTAG	TRLAV	trlAV
-S0436	33	pago	LmLEX	par	pagar
-S0436	36	devidos	L1LEX	devir	dever
-S0438	14	trlAV	LrepTAG	TRLAV	trlAV
-S0443	16	pago	LmLEX	par	pagar
-S0443	19	devidos	L1LEX	devir	dever
+S0393	35	estejam	LmLEX	estejam	estar
+S0394	31	mantida	L1LEX	mantir	manter
+S0398	9	pertençam	LmLEX	pertençir	pertencer
+S0398	21	estejam	LmLEX	estejam	estar
+S0404	13	impressa	L1LEX	impresr	imprimir
+S0405	9	impressa	L1LEX	impresr	imprimir
+S0406	34	promovidos	L1LEX	promovir	promover
+S0409	5	for	LmLEX	for	ir
+S0409	23	indique	LmLEX	indiquar	indicar
+S0412	13	desmentem	LmLEX	desmenter	desmentar
+S0416	9	desmentem	LmLEX	desmenter	desmentar
+S0420	19	1º	Lord	1º	primeiro
+S0420	40	trlAV	LrepTAG	TRLAV	trlAV
+S0422	33	pago	LmLEX	par	pagar
+S0422	36	devidos	L1LEX	devir	dever
+S0424	14	trlAV	LrepTAG	TRLAV	trlAV
+S0429	16	pago	LmLEX	par	pagar
+S0429	19	devidos	L1LEX	devir	dever
 
 ==========================================================
 
-Lchanged - fixed: 87
+Lchanged - fixed: 86
 LnoLEX   - fixed: 0
-L1LEX    - fixed: 38
+L1LEX    - fixed: 37
 LmLEX    - fixed: 40
 LunkTAG  - fixed: 0
 LdaysW   - fixed: 0

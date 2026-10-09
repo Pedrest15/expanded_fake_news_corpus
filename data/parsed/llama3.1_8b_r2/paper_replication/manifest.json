@@ -17,9 +17,9 @@
   "documents": 60,
   "last_run": {
     "parsed": 20,
-    "sentences": 444,
+    "sentences": 430,
     "dropped_sentences": 0,
-    "finished_at": "2026-10-06T19:09:27-03:00"
+    "finished_at": "2026-10-09T17:04:15-03:00"
   },
   "eud": {
     "tool": "grew 1.19.0",
@@ -27,6 +27,6 @@
     "grs_sha256": "46c46938591c905e",
     "strategy": "eud_portuguese",
     "documents": 40,
-    "finished_at": "2026-10-06T19:19:24-03:00"
+    "finished_at": "2026-10-09T17:05:24-03:00"
   }
 }
