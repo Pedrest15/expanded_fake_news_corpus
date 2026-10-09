@@ -32,6 +32,7 @@ from expanded_fake_news_corpus.analysis import (
     grammar_rules,
     lexical_diversity,
     liwc,
+    nilc_metrix,
     pos,
     sage,
     syllables,
@@ -79,6 +80,11 @@ ANALYSES: tuple[Analysis, ...] = (
     Analysis("zipf", "Distribuição de frequências e palavras mais comuns", zipf.main),
     Analysis("sage", "Termos distintivos (SAGE)", sage.main),
     Analysis("liwc", "Perfil psicolinguístico (LIWC)", liwc.main),
+    Analysis(
+        "nilc_metrix",
+        "Complexidade, coesão e semântica (NILC-Metrix, calculado no servidor)",
+        nilc_metrix.main,
+    ),
     Analysis(
         "pos",
         "Distribuição de classes gramaticais (UPOS)",

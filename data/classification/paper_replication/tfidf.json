@@ -1,0 +1,106 @@
+{
+  "mode": "tfidf",
+  "encoder": null,
+  "encoder_model": "neuralmind/bert-base-portuguese-cased",
+  "pooling": null,
+  "max_length": 512,
+  "max_features": 10000,
+  "min_df": 2,
+  "protocol": "nested GroupKFold, grouped by source article",
+  "cv_folds": 5,
+  "pairs": 20,
+  "documents": 40,
+  "generators": [
+    "ollama/qwen3:32b"
+  ],
+  "built_at": "2026-10-06T21:58:22-03:00",
+  "results": {
+    "logistic_regression": {
+      "per_fold": [
+        {
+          "fold": 1,
+          "n_test": 8,
+          "accuracy": 0.75,
+          "f1": 0.7333333333333334
+        },
+        {
+          "fold": 2,
+          "n_test": 8,
+          "accuracy": 0.875,
+          "f1": 0.873015873015873
+        },
+        {
+          "fold": 3,
+          "n_test": 8,
+          "accuracy": 1.0,
+          "f1": 1.0
+        },
+        {
+          "fold": 4,
+          "n_test": 8,
+          "accuracy": 0.75,
+          "f1": 0.7333333333333334
+        },
+        {
+          "fold": 5,
+          "n_test": 8,
+          "accuracy": 0.75,
+          "f1": 0.7333333333333334
+        }
+      ],
+      "best_params_per_fold": [
+        {
+          "clf__C": 10.0,
+          "clf__l1_ratio": 0.0,
+          "clf__solver": "liblinear"
+        },
+        {
+          "clf__C": 1.0,
+          "clf__l1_ratio": 0.0,
+          "clf__solver": "saga"
+        },
+        {
+          "clf__C": 100.0,
+          "clf__l1_ratio": 0.0,
+          "clf__solver": "saga"
+        },
+        {
+          "clf__C": 100.0,
+          "clf__l1_ratio": 1.0,
+          "clf__solver": "saga"
+        },
+        {
+          "clf__C": 10.0,
+          "clf__l1_ratio": 0.0,
+          "clf__solver": "saga"
+        }
+      ],
+      "accuracy_mean": 0.825,
+      "accuracy_std": 0.09999999999999999,
+      "f1_mean": 0.8146031746031746,
+      "f1_std": 0.10732976055423712,
+      "pooled": {
+        "accuracy": 0.825,
+        "f1": 0.8248905565978737,
+        "precision": 0.825814536340852,
+        "recall": 0.825
+      },
+      "confusion_matrix": {
+        "labels": [
+          "human",
+          "machine"
+        ],
+        "matrix": [
+          [
+            17,
+            3
+          ],
+          [
+            4,
+            16
+          ]
+        ]
+      }
+    }
+  }
+}

@@ -232,6 +232,3 @@ tools/
 # Pesos GGUF dos modelos locais. Regeneráveis: o cabeçalho de cada
 # resources/ollama/*.Modelfile diz de onde vêm e como converter.
 *.gguf
-
-# NILC-Metrix: a entrada é regenerável (--export); metrics.csv é versionado
-data/nilc_metrix/input.csv

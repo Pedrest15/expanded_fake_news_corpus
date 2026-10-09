@@ -20,7 +20,8 @@ What the repository contains:
   (`fakegen paper`) instead feeds the whole true article to the prompt of
   Silva et al., reproduced verbatim, and only swaps the model.
 - **Linguistic analyses** — syllables, lexical diversity (MATTR), Zipf, SAGE,
-  LIWC, UPOS distribution, dependency-grammar rules and Enhanced-UD rules, all
+  LIWC, NILC-Metrix, UPOS distribution, dependency-grammar rules and
+  Enhanced-UD rules, all
   human vs. machine on paired documents, run one at a time or through the
   `fakegen-analysis` orchestrator.
 - **Syntactic parsing** — the Portparser v2 chain (LatinPipe + BERTimbau) and
@@ -309,6 +310,37 @@ not exist. To add an analysis, the module exposes `main(argv)` like the others
 and takes one line in the `ANALYSES` catalogue in
 [analysis/runner.py](src/expanded_fake_news_corpus/analysis/runner.py).
 
+### NILC-Metrix
+
+[NILC-Metrix](https://github.com/sidleal/nilcmetrix) (~200 measures of
+readability, lexical frequency and diversity, referential and LSA cohesion,
+connectives, psycholinguistic norms and syntax) does not run here: it needs a
+Docker image, a Postgres lexicon and the PALAVRAS parser, all on the NILC
+server. The server returns a spreadsheet keyed by
+`/<generator folder>/<source>_<id>`, which is imported once and then analysed
+like any other module:
+
+```bash
+uv run python scripts/import_nilc_metrix.py data/nilc_metrix/raw/_pedro_metrics.csv
+uv run python -m expanded_fake_news_corpus.analysis.nilc_metrix \
+    --experiment paper_replication --model openai/gpt-4.1-mini-2025-04-14
+```
+
+The importer translates the ids into the corpus keys (`group`, `model`,
+`round`, `uid`), repairs ids the server's wrapper truncated at the first dot
+(`gpt-4.1-mini` → `gpt-4`), and checks every row's word count against the text
+the analyses see; a row that describes a different text (`text_matches`
+false) is dropped with its pair. The human side is taken from the semantics
+repository's `nilc-metrix/results/human.csv` (`--human-metrics`), not from the
+server spreadsheet; the two NILC installations disagree on a few measures
+(`gunning_fox`, `punctuation_ratio`, `anaphoric_refs`, …), listed in
+`corpus/paper_replication/NOTES.md`. Besides the project's usual tables, the module
+ports `rank_discriminative_metrics.py` from the semantics repository: Cliff's δ
+over the 117 complexity/cohesion/semantics measures, with a strong signal at
+|δ| ≥ 0.330 and q < 0.05. Paragraph measures are flagged `layout_dependent`:
+the cleaned human Fake.br text is a single paragraph, so they measure the
+distribution format, not authorship.
+
 ### Syntactic parsing and dependency rules
 
 The `pos` (UPOS distribution), `grammar_rules` (basic-tree rules) and
@@ -492,6 +524,8 @@ uv run ruff check src && uv run ruff format --check src
 | [analysis/pos.py](src/expanded_fake_news_corpus/analysis/pos.py) | UPOS distribution: pooled frequencies, χ²/Cramér's V, per-tag tests |
 | [analysis/grammar_rules.py](src/expanded_fake_news_corpus/analysis/grammar_rules.py) | Dependency rules: productivity, frequencies, discriminative TF-IDF |
 | [analysis/eud_rules.py](src/expanded_fake_news_corpus/analysis/eud_rules.py) | The same over the *enhanced* edges (EUD) |
+| [analysis/nilc_metrix.py](src/expanded_fake_news_corpus/analysis/nilc_metrix.py) | NILC-Metrix: per-measure tests, Cliff's δ ranking and strong signals |
+| [scripts/import_nilc_metrix.py](scripts/import_nilc_metrix.py) | Import of the NILC server spreadsheet into `data/nilc_metrix/metrics.csv` |
 | [parsing/preprocess.py](src/expanded_fake_news_corpus/parsing/preprocess.py) | Text treatment before the sentencer and realignment after the tokenizer |
 | [parsing/portparser.py](src/expanded_fake_news_corpus/parsing/portparser.py) | Portparser v2 chain → `data/parsed/` |
 | [parsing/eud.py](src/expanded_fake_news_corpus/parsing/eud.py) | EUD enrichment with Grew |

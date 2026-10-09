@@ -810,6 +810,186 @@ Ou seja, a linha do Tucano no inventário de modos de falha não é "recusou" ne
 capacidade abaixo do qual a replicação do artigo não é aplicável.
 
 
+## 2026-10-08 — NILC-Metrix: complexidade, coesão e semântica
+
+O NILC-Metrix (~200 métricas: legibilidade, frequência e diversidade lexical,
+coesão referencial e por LSA, conectivos, normas psicolinguísticas, sintaxe)
+foi calculado no servidor do NILC pelo Pedro, sobre os textos de quatro
+geradores — gpt-4.1-mini, Sonnet 4.5, Qwen3 32B e Llama 3.1 8B **rodada 2** —
+e as 20 fake news humanas. Não roda aqui (Docker + Postgres com o léxico +
+PALAVRAS), então o projeto recebe a planilha e cuida das pontas:
+
+```bash
+uv run python scripts/import_nilc_metrix.py data/nilc_metrix/raw/_pedro_metrics.csv
+uv run python -m expanded_fake_news_corpus.analysis.nilc_metrix \
+    --experiment paper_replication --model openai/gpt-4.1-mini-2025-04-14
+# e um por gerador, com --output-dir data/analysis/paper_replication/<pasta>/nilc_metrix
+# (Llama: --model ollama/llama3.1:8b --round rodada2 ... /llama3.1_8b_r2/nilc_metrix)
+```
+
+A planilha crua fica em `data/nilc_metrix/raw/`; a normalizada, com as chaves
+do corpus, em `data/nilc_metrix/metrics.csv`; as tabelas em
+`data/analysis/paper_replication/[<gerador>/]nilc_metrix/`.
+
+### O lado humano vem do repositório de semântica
+
+As linhas humanas da planilha do servidor são descartadas na importação e
+substituídas pelas de `nilc-metrix/results/human.csv` do repositório
+`noticias_falsas_humano_maquina_semantica`, que já mediu as 5.391 fake news
+humanas do trabalho anterior — as nossas 20 são um subconjunto delas. A coluna
+`metrics_source` de `metrics.csv` diz de onde veio cada linha.
+
+**Custo dessa escolha: as duas instalações do NILC não medem igual.** Nos 19
+textos humanos medidos pelas duas, comparando as 200 métricas texto a texto:
+
+| Métrica | Textos que diferem | Servidor (mediana) | Semântica (mediana) |
+|---|---|---|---|
+| `gunning_fox` | 19/19 | 20,1 | 6,9 |
+| `punctuation_ratio` | 17/19 | 0,108 | 0,133 |
+| `anaphoric_refs` | 12/19 | 2,0 | 0,2 |
+| `demonstrative_pronoun_ratio` | 12/19 | 0,67 | 0,22 |
+| `lsa_all_std` | 11/19 | 0,10–0,17 | 0,0 |
+| `named_entity_ratio_text` / `_sentence` | 5/19, 4/19 | — | 0 onde o servidor mede |
+| `paragraphs`, `sentences_per_paragraph`, `lsa_paragraph_*` | ~11/19 | 1 parágrafo | 7 parágrafos |
+
+As quatro primeiras parecem diferença de versão ou de fórmula entre as
+instalações; as de parágrafo, diferença de entrada (lá o Fake.br humano foi
+medido com as quebras de parágrafo, aqui a limpeza cola as linhas). Outras
+~100 métricas divergem em 3–5 textos isolados — os de contagem de palavras
+ligeiramente diferente, como `fakebr:104` e `faketruebr:1587`. Nessas métricas
+a comparação humano × máquina mistura autoria com instrumento — o Gunning Fog
+sai com δ = −1,00 em todos os geradores, separação perfeita e espúria. Elas
+continuam nas tabelas; a leitura abaixo as descarta.
+
+### Defeitos encontrados na importação
+
+- **Identificadores truncados no primeiro ponto.** O wrapper do servidor tratou
+  o ponto como extensão: `/openai/gpt-4.1-mini-2025-04-14/fakebr_1006` chegou
+  como `/openai/gpt-4`, e `/rodada2/ollama/llama3.1_8b/...` como
+  `/rodada2/ollama/llama3` — 40 linhas sem uid. Recuperadas pela posição: os
+  blocos íntegros vêm todos na mesma ordem lexicográfica de `<source>_<id>`, e
+  nos truncados a contagem de palavras de cada linha bate com o texto daquela
+  posição (±2%). O importador só aceita o conserto se o prefixo casar com uma
+  única pasta e o bloco tiver o mesmo tamanho dos íntegros.
+- **Humano `faketruebr:1043`: o NILC mede só a manchete** (9 palavras contra
+  134), **nas duas instalações**. O corpo dessa notícia vem entre `<i>…</i>` no
+  FakeTrueBR, e o NILC o descarta como marcação. O par sai, como no
+  `--exclude-uid`: **n = 19 em todos os geradores**. Para recuperá-lo seria
+  preciso remedir o texto sem as tags.
+- **Llama `faketruebr:509`: um apêndice de metacomentário.** O NILC mediu a
+  notícia sem o trecho "A notícia apresentada anteriormente foi modificada…",
+  que as nossas análises viam. Ver a seção seguinte.
+
+Os dois últimos foram pegos porque o importador confere a contagem de palavras
+de cada linha contra o texto que as análises veem (coluna `text_matches`,
+tolerância 10%; os textos íntegros ficam todos abaixo de 5%).
+
+### O apêndice do Llama, cortado em todas as análises
+
+Varrendo os textos dos quatro geradores caracterizados atrás de metacomentário,
+o caso é único: o Llama 3.1 8B, no mesmo artigo (`faketruebr:509`) **nas duas
+rodadas**, cola depois da notícia uma explicação das próprias alterações, fora
+da tag `<changes>` — "Agora, veja o que mudamos:" na rodada 1 (193 de 369
+palavras) e "A notícia apresentada anteriormente foi modificada…" na rodada 2
+(256 de 459). As outras ocorrências de "fake news" e "alterações" no Sonnet
+4.5, no gpt-4.1-mini e no Qwen3 estão dentro da notícia.
+
+A análise agora corta esse apêndice (`strip_appendix` em `analysis/cleaning.py`,
+por lista explícita de aberturas — um padrão genérico pegaria "fake news" dito
+dentro da notícia), antes da limpeza de Markdown; o corpus gravado não muda.
+Com o corte, o texto da rodada 2 fica com 207 palavras contra 202 do NILC, a
+linha volta a casar e o Llama r2 fica com n = 19 no NILC.
+
+As nove análises das duas rodadas do Llama foram refeitas, incluindo o parsing
+dos textos de máquina. O efeito é pequeno — um documento de 20 —, e nenhuma
+leitura muda:
+
+| Medida (d de Cohen) | Rodada 1 antes → depois | Rodada 2 antes → depois |
+|---|---|---|
+| Sílabas por palavra | −0.24 → −0.23 | −0.30 → −0.36 |
+| Sílabas por sentença | −0.69 → −0.70 | −0.59 → −0.63 |
+| MATTR | +0.57 → +0.51 | +0.44 → +0.36 |
+| Tipo/ocorrência bruta | +1.50 → +1.36 | +1.79 → +1.68 |
+| Palavras por sentença | −1.28 → −1.26 | −1.08 → −1.11 |
+| Regras por sentença | −1.27 → −1.26 | −1.10 → −1.14 |
+| Diversidade de regras | +1.48 → +1.36 | +1.94 → +1.84 |
+| Regras EUD por sentença | −1.10 → −1.09 | −0.98 → −1.04 |
+| Diversidade de regras EUD | +1.26 → +1.18 | +1.45 → +1.39 |
+| UPOS significativo (FDR) | nenhum → nenhum | nenhum → nenhum |
+| LIWC p<0.05 / FDR | 6 / 0 → 7 / 0 | 6 / 0 → 6 / 0 |
+
+No SAGE do lado máquina saem termos do apêndice ("falta de", de "falta de
+conhecimento técnico", na rodada 1). A inversão do MATTR no Llama continua.
+
+### Estatística
+
+Duas leituras, nas mesmas tabelas:
+
+- **a do projeto** (`nilc_metrix_significance.csv`): t, Mann-Whitney, d de
+  Cohen e q de BH sobre as 200 métricas, como nos outros oito módulos;
+  `top_human` / `top_machine` replicam `analyze_metrics.py` do repositório de
+  semântica (lá o d e o BH são idênticos aos de `significance.py`);
+- **a do repositório de semântica** (`nilc_metrix_ranked.csv`,
+  `nilc_metrix_strong_signals.csv`): `rank_discriminative_metrics.py` portado —
+  só as 117 métricas de complexidade, coesão e semântica, medianas e MAD, δ de
+  Cliff, AUC, BH sobre as 117, sinal forte com |δ| ≥ 0,330 e q < 0,05.
+
+As métricas de parágrafo (`paragraphs`, `sentences_per_paragraph`,
+`subtitles`, `lsa_paragraph_*`) levam a coluna `layout_dependent`: medem a
+diagramação da distribuição, não a autoria.
+
+### Resultados
+
+| | gpt-4.1-mini | Sonnet 4.5 | Qwen3 32B | Llama 8B r2 |
+|---|---|---|---|---|
+| Pares | 19 | 19 | 19 | 19 |
+| Métricas com q < 0,05 (de 200) | 90 | 54 | 45 | 46 |
+| Sinais fortes (de 117) | 53 | 30 | 27 | 36 |
+| … sem as de parágrafo | 52 | 29 | 27 | 35 |
+
+Catorze sinais fortes são comuns aos quatro geradores; quatro deles
+(`gunning_fox`, `demonstrative_pronoun_ratio`, `named_entity_ratio_text` e
+`_sentence`) estão entre as métricas que divergem entre instalações e ficam de
+fora. **Os dez restantes têm a mesma direção nos quatro geradores** (δ de
+Cliff, positivo = maior no humano; mediana humana na primeira coluna):
+
+| Métrica | Humano | gpt-4.1-mini | Sonnet 4.5 | Qwen3 32B | Llama 8B r2 |
+|---|---|---|---|---|---|
+| `words` | 172 | −0.87 | −0.84 | −0.77 | −0.77 |
+| `short_sentence_ratio` | 0.44 | +0.98 | +0.75 | +0.71 | +0.91 |
+| `punctuation_diversity` | 0.21 | +0.80 | +0.69 | +0.78 | +0.81 |
+| `idade_aquisicao_55_7_ratio` | 0.29 | −0.83 | −0.68 | −0.81 | −0.67 |
+| `flesch` | 50.9 | +0.99 | +0.91 | +0.78 | +0.58 |
+| `lsa_givenness_mean` | 0.81 | −0.94 | −0.70 | −0.56 | −0.66 |
+| `sentences` | 10 | −0.56 | −0.70 | −0.56 | −0.60 |
+| `idade_aquisicao_mean` | 4.88 | −0.91 | −0.59 | −0.75 | −0.54 |
+| `lsa_span_mean` | 0.84 | −0.90 | −0.69 | −0.50 | −0.71 |
+| `words_per_sentence` | 16.8 | −0.89 | −0.51 | −0.49 | −0.68 |
+
+Três leituras:
+
+- **A máquina escreve texto mais coeso por LSA, menos legível e com vocabulário
+  de aquisição mais tardia, em qualquer gerador.** Sentenças novas e o texto
+  inteiro são semanticamente mais parecidos com o que veio antes
+  (`lsa_givenness_mean`, `lsa_span_mean` maiores): a fake news de máquina
+  martela o mesmo tema, a humana divaga. É o mesmo quadro do corpus anterior
+  com o sabiá-3, onde os primeiros sinais fortes eram `flesch` (+0,81),
+  `syllables_per_content_word`, `honore`, `idade_aquisicao_mean`,
+  `punctuation_diversity` (+0,73), `lsa_span_mean` (−0,70) e
+  `lsa_givenness_mean` (−0,69). Cinco geradores, duas bases, a mesma direção.
+- **O gpt-4.1-mini é o extremo em quase tudo**, como já era nas sílabas e no
+  MATTR: δ de +0,99 no Flesch e +0,98 em `short_sentence_ratio` é separação
+  quase perfeita com 19 pares.
+- **A diversidade lexical do NILC confirma a inversão do Llama.** TTR, Honoré e
+  `content_word_diversity` favorecem a máquina nos três modelos grandes (TTR
+  −0,89 / −0,91 / −0,60) e **viram para o lado humano no Llama 8B** (TTR +0,34,
+  Honoré +0,13; Brunet, que é invertido, −0,77). É a mesma inversão do MATTR,
+  agora por um instrumento independente. TTR e `verb_diversity` (−0,37 no
+  gpt-4.1-mini, +0,64 no Llama) são as únicas métricas, fora as de parágrafo,
+  com sinal forte em sentidos opostos entre geradores — as duas de diversidade.
+  A repetição é a assinatura do modelo pequeno.
+
+
 ## 2026-09-15 — Fake.br cleaning, results regenerated, POS distribution
 
 **Cleaning.** The human Fake.br side now goes through the four rules of the
