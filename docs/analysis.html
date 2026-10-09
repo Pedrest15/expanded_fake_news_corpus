@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Caracterização do corpus</title>
-<meta name="description" content="Como as fake news sintéticas se separam das escritas por humanos: silabação, diversidade lexical, LIWC, SAGE e distribuição de frequências.">
+<meta name="description" content="Como as fake news sintéticas se separam das escritas por humanos: silabação, diversidade lexical, LIWC, NILC-Metrix, SAGE e distribuição de frequências.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap">
@@ -125,6 +125,8 @@
   .axis{display:grid; grid-template-columns:118px 1fr 58px; gap:10px; margin-top:7px;
     font-size:10.5px; color:var(--ink-3)}
   .axis .ends{display:flex; justify-content:space-between}
+  .dchart.wide .drow, .axis.wide{grid-template-columns:230px 1fr 58px}
+  @media (max-width:720px){.dchart.wide .drow, .axis.wide{grid-template-columns:150px 1fr 50px}}
 
   /* ---------- SAGE: listas ranqueadas ---------- */
   .terms{display:grid; grid-template-columns:1fr 1fr; gap:18px}
@@ -256,6 +258,33 @@
     </div>
   </section>
 
+  <section class="card" id="sec-nilc">
+    <div class="card-head">
+      <h2>Complexidade, coesão e semântica (NILC-Metrix)</h2>
+      <p>As 117 métricas de complexidade, coesão e semântica do NILC-Metrix — legibilidade, frequência e diversidade lexical, coesão por LSA, conectivos, normas psicolinguísticas. A barra é o δ de Cliff, de −1 a +1: a probabilidade de um texto humano ter valor maior que um de máquina, menos a do contrário. Para a esquerda, a métrica é maior no lado humano; para a direita, no da máquina.</p>
+    </div>
+    <div class="card-body">
+      <div id="nilc-body">
+        <div class="legend">
+          <span class="key"><span class="sw human"></span>humano</span>
+          <span class="key"><span class="sw machine"></span>máquina</span>
+          <span class="hint"><span class="sig">✳</span> sinal forte (|δ| ≥ 0,33 e q &lt; 0,05)</span>
+        </div>
+        <div class="dchart wide" id="nilc"></div>
+        <div class="axis wide">
+          <span></span>
+          <span class="ends"><span>← humano</span><span>0</span><span>máquina →</span></span>
+          <span></span>
+        </div>
+        <p class="note" id="nilc-note"></p>
+        <details class="more"><summary>Todas as métricas</summary>
+          <div class="inner tablewrap"><table id="nilc-table"></table></div>
+        </details>
+      </div>
+      <p class="note" id="nilc-empty" hidden>Este gerador não foi medido pelo NILC-Metrix. No Llama 3.1 8B, só a segunda rodada foi medida, e a página mostra a primeira; as tabelas da segunda estão em <code>data/analysis/paper_replication/llama3.1_8b_r2/nilc_metrix/</code>.</p>
+    </div>
+  </section>
+
   <section class="card" id="sec-sage">
     <div class="card-head">
       <h2>Termos distintivos (SAGE)</h2>
@@ -289,7 +318,7 @@
 <footer>
   <div class="wrap">
     <p>Os dois lados comparados são <strong>fake news</strong>: de um lado as escritas por humanos nos corpora de origem, do outro as geradas por modelo a partir da notícia verdadeira correspondente, inteira, com o prompt de Silva et al. reproduzido sem adaptação. O pareamento é por notícia, então a diferença medida é de autoria, não de assunto. O seletor <em>Gerador</em> troca o lado máquina entre os modelos que produziram a amostra inteira, sem recusa: o lado humano é sempre o mesmo, então as duas leituras são comparáveis entre si.</p>
-    <p>Tabelas completas em <code>data/analysis/paper_replication/</code>, uma subpasta por gerador além do primeiro; os módulos que as produzem, em <code>src/expanded_fake_news_corpus/analysis/</code>; o registro das execuções, em <code>corpus/paper_replication/NOTES.md</code>. Dicionário LIWC sob licença própria, não redistribuído — veja <a href="https://www.liwc.app/">liwc.app</a>.</p>
+    <p>Tabelas completas em <code>data/analysis/paper_replication/</code>, uma subpasta por gerador além do primeiro; os módulos que as produzem, em <code>src/expanded_fake_news_corpus/analysis/</code>; o registro das execuções, em <code>corpus/paper_replication/NOTES.md</code>. Dicionário LIWC sob licença própria, não redistribuído — veja <a href="https://www.liwc.app/">liwc.app</a>. Métricas do <a href="https://github.com/sidleal/nilcmetrix">NILC-Metrix</a> calculadas fora do projeto: o lado máquina no servidor do NILC, o lado humano no repositório do trabalho anterior.</p>
   </div>
 </footer>
 
@@ -298,6 +327,7 @@
   "use strict";
 
   var TOP_LIWC = 16;
+  var TOP_NILC = 16;
   var payload = null;   // o arquivo inteiro, com um bloco por gerador
   var data = null;      // o bloco do gerador selecionado
 
@@ -433,6 +463,73 @@
                 (c.cohens_d > 0 ? "+" : "") + fmt(c.cohens_d), fmtP(c.p_value), fmtP(c.q_value)];
       }), [false, false, true, true, true, true, true],
       data.liwc.categories.map(function (c) { return c.significant; }));
+  }
+
+  /* ---------- NILC-Metrix ---------- */
+
+  // As métricas com ressalva ficam fora do gráfico — as de parágrafo medem a
+  // diagramação da distribuição, as de instalação divergem entre o servidor
+  // que mediu a máquina e o repositório que mediu o humano — mas continuam na
+  // tabela, marcadas.
+  function nilcCaveat(m) {
+    if (m.layout_dependent) return "parágrafo";
+    if (m.installation_dependent) return "instalação";
+    return "";
+  }
+
+  function renderNilc() {
+    var nilc = data.nilc || { available: false };
+    document.getElementById("nilc-body").hidden = !nilc.available;
+    document.getElementById("nilc-empty").hidden = !!nilc.available;
+    if (!nilc.available) return;
+
+    var clean = nilc.metrics.filter(function (m) { return !nilcCaveat(m); });
+    var shown = clean.slice().sort(function (a, b) {
+      return Math.abs(b.cliffs_delta) - Math.abs(a.cliffs_delta);
+    }).slice(0, TOP_NILC);
+
+    var box = document.getElementById("nilc");
+    box.textContent = "";
+    shown.forEach(function (m) {
+      var row = el("div", "drow");
+      var cat = el("div", "cat");
+      cat.appendChild(document.createTextNode(m.metric));
+      if (m.strong) {
+        cat.appendChild(document.createTextNode(" "));
+        cat.appendChild(el("span", "star", "✳"));
+      }
+      row.appendChild(cat);
+
+      var bar = el("div", "dbar");
+      var fill = el("div", "fill " + (m.cliffs_delta > 0 ? "human" : "machine"));
+      fill.style.width = (50 * Math.abs(m.cliffs_delta)) + "%";
+      bar.appendChild(fill);
+      tipFor(bar,
+        "<b>" + m.metric + "</b> — " + m.category +
+        "<br>mediana humano <b>" + fmt(m.human_median, 3) + "</b> · máquina <b>" + fmt(m.machine_median, 3) + "</b>" +
+        "<br>δ = <b>" + fmt(m.cliffs_delta) + "</b> (" + m.magnitude + ") · q = <b>" + fmtP(m.q_value) + "</b>");
+      row.appendChild(bar);
+
+      row.appendChild(el("div", "d", (m.cliffs_delta > 0 ? "+" : "") + fmt(m.cliffs_delta)));
+      box.appendChild(row);
+    });
+
+    document.getElementById("nilc-note").textContent =
+      nilc.pairs + " pares · " + nilc.total + " métricas · " + nilc.strong +
+      " sinais fortes, " + nilc.strong_clean + " sem ressalva. O gráfico deixa de fora as métricas de parágrafo " +
+      "(o humano chega em um ou dois parágrafos pela forma como o corpus é distribuído) e as que o NILC mede " +
+      "diferente entre as duas instalações usadas — a máquina foi medida no servidor do NILC, o humano no " +
+      "repositório do trabalho anterior. Estão na tabela, marcadas.";
+
+    renderTable("nilc-table",
+      ["Métrica", "Categoria", "Humano", "Máquina", "δ", "q", "Ressalva"],
+      nilc.metrics.map(function (m) {
+        return [m.metric, m.category, fmt(m.human_median, 3), fmt(m.machine_median, 3),
+                (m.cliffs_delta > 0 ? "+" : "") + fmt(m.cliffs_delta), fmtP(m.q_value),
+                nilcCaveat(m) || "—"];
+      }), [false, false, true, true, true, true, false],
+      nilc.metrics.map(function (m) { return m.strong; }),
+      [true, false, false, false, false, false, false]);
   }
 
   /* ---------- SAGE ---------- */
@@ -571,6 +668,7 @@
     renderSyllables();
     renderLexical();
     renderLiwc();
+    renderNilc();
     renderSage();
     renderZipf();
   }
