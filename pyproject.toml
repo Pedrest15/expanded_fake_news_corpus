@@ -31,7 +31,9 @@ dev = ["pytest>=8.0", "ruff>=0.8"]
 # tokenizador do encoder. O `torch` só no modo `embedding`, que é o único que
 # roda o encoder de fato — por isso os dois extras são separados.
 classification = [
+    "pandas>=2.2",
     "scikit-learn>=1.5",
+    "xgboost>=2.0",
     "transformers>=4.48",
     "numpy>=2.0",
 ]

@@ -129,6 +129,15 @@ def truncate_all(
     return truncated
 
 
+def to_dense(matrix):
+    """Densifica a matriz esparsa do vetorizador.
+
+    Função de módulo, e não ``lambda``, porque o cache do pipeline (``memory``)
+    calcula o hash de cada transformador e uma função local não é serializável.
+    """
+    return matrix.toarray()
+
+
 def build_pipeline(
     spec: ClassifierSpec,
     mode: str,
@@ -166,7 +175,7 @@ def build_pipeline(
         steps.append(("vectorize", vectorizer))
         # GaussianNB e MLP não aceitam matriz esparsa; com 40 documentos o
         # custo de densificar é irrelevante.
-        steps.append(("densify", FunctionTransformer(lambda matrix: matrix.toarray())))
+        steps.append(("densify", FunctionTransformer(to_dense)))
     steps.append(("clf", spec.estimator))
 
     grid = {f"clf__{key}": values for key, values in spec.param_grid.items()}

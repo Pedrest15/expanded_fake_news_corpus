@@ -119,6 +119,12 @@ _PRIOR_SUBDIRS = {
 }
 
 
+#: Pasta do Fake.br humano **sem limpeza**, a que o repositório de semântica lê
+#: no treino. ``fake_br_clean`` (acima) é a versão que as análises de
+#: caracterização usam; os classificadores de transferência seguem o original.
+_PRIOR_RAW_FAKEBR_SUBDIR = Path("Fake.br-Corpus-master/full_texts/fake")
+
+
 class CorpusError(Exception):
     """Falha ao montar o corpus de análise."""
 
@@ -400,6 +406,7 @@ def load_prior_cohort(
     prior_dir: Path | None = None,
     sources: Sequence[Source] | None = None,
     uids: Iterable[str] | None = None,
+    raw_fakebr: bool = False,
 ) -> list[Document]:
     """Carrega uma coorte do repositório do trabalho anterior.
 
@@ -412,6 +419,8 @@ def load_prior_cohort(
         prior_dir: Raiz do corpus anterior
         sources: Restringe a estes corpora de origem (todos, se omitido)
         uids: Restringe a estes identificadores (todos, se omitido)
+        raw_fakebr: Lê o Fake.br humano sem a limpeza (``full_texts/fake``), como
+            o repositório de semântica; só afeta a coorte humana
 
     Returns:
         Documentos da coorte, ordenados por ``uid``
@@ -426,6 +435,8 @@ def load_prior_cohort(
     documents: list[Document] = []
     for source in sources or list(Source):
         subdir = _PRIOR_SUBDIRS.get((cohort, source))
+        if raw_fakebr and (cohort, source) == (HUMAN_COHORT, Source.FAKEBR):
+            subdir = _PRIOR_RAW_FAKEBR_SUBDIR
         if subdir is None:
             raise MissingPriorCorpusError(
                 f"unknown cohort {cohort!r} for {source.value}"

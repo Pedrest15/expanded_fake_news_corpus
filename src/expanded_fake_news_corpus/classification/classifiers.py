@@ -16,6 +16,8 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import GaussianNB
 from sklearn.neural_network import MLPClassifier
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import FunctionTransformer
 from sklearn.svm import SVC
 
 logger = logging.getLogger(__name__)
@@ -31,6 +33,9 @@ class ClassifierSpec:
     name: str
     estimator: Any
     param_grid: dict[str, list[Any]] = field(default_factory=dict)
+    #: Processos da busca em grade; ``None`` deixa o chamador decidir. O Naive
+    #: Bayes densifica a matriz e roda com 1 para limitar a memória.
+    n_jobs: int | None = None
 
     @property
     def grid_size(self) -> int:
@@ -112,4 +117,83 @@ def build_catalogue() -> dict[str, ClassifierSpec]:
             },
         )
 
+    return catalogue
+
+
+def to_dense(matrix):
+    """Densifica uma matriz esparsa (função de módulo, para o pipeline serializar)."""
+    return matrix.toarray() if hasattr(matrix, "toarray") else matrix
+
+
+def build_enriched_catalogue() -> dict[str, ClassifierSpec]:
+    """Catálogo da grade B: a menor, do BoW/TF-IDF com features linguísticas.
+
+    Espelha ``CLASSIFIERS_CONFIG`` de ``text_enriched.py`` do trabalho anterior.
+    O Naive Bayes ganha uma etapa de densificação dentro do próprio estimador, e
+    o MultinomialNB fica de fora porque exige entrada não negativa, o que as
+    features linguísticas padronizadas não são.
+
+    Returns:
+        Especificação por nome
+    """
+    catalogue = {
+        "svm": ClassifierSpec(
+            "svm",
+            SVC(probability=True, random_state=RANDOM_STATE),
+            {"kernel": ["linear", "rbf"], "C": [0.1, 1.0, 10.0], "gamma": ["scale"]},
+        ),
+        "random_forest": ClassifierSpec(
+            "random_forest",
+            RandomForestClassifier(random_state=RANDOM_STATE, n_jobs=-1),
+            {
+                "n_estimators": [100, 200],
+                "max_depth": [10, 20, None],
+                "min_samples_split": [2, 5],
+            },
+        ),
+        "naive_bayes": ClassifierSpec(
+            "naive_bayes",
+            Pipeline(
+                [
+                    ("dense", FunctionTransformer(to_dense, accept_sparse=True)),
+                    ("nb", GaussianNB()),
+                ]
+            ),
+            {"nb__var_smoothing": [1e-9, 1e-8, 1e-7, 1e-6, 1e-5]},
+            n_jobs=1,
+        ),
+        "logistic_regression": ClassifierSpec(
+            "logistic_regression",
+            LogisticRegression(random_state=RANDOM_STATE, max_iter=1000),
+            # `penalty=['l2']` do trabalho anterior, escrito como l1_ratio=0
+            # (ver build_catalogue).
+            {
+                "C": [0.01, 0.1, 1.0, 10.0],
+                "l1_ratio": [0.0],
+                "solver": ["lbfgs", "liblinear"],
+            },
+        ),
+        "mlp": ClassifierSpec(
+            "mlp",
+            MLPClassifier(random_state=RANDOM_STATE, max_iter=500, early_stopping=True),
+            {
+                "hidden_layer_sizes": [(256,), (512,), (256, 128)],
+                "alpha": [0.0001, 0.001],
+            },
+        ),
+    }
+    try:
+        from xgboost import XGBClassifier
+    except ImportError:
+        logger.info("XGBoost não instalado; fica fora do catálogo")
+    else:
+        catalogue["xgboost"] = ClassifierSpec(
+            "xgboost",
+            XGBClassifier(random_state=RANDOM_STATE, eval_metric="logloss", n_jobs=-1),
+            {
+                "n_estimators": [100, 200],
+                "max_depth": [3, 6],
+                "learning_rate": [0.1, 0.3],
+            },
+        )
     return catalogue

@@ -409,35 +409,64 @@ encoder/pooling/length combination and should not be versioned.
 #### Transfer — a detector trained elsewhere, tested here
 
 With 20 source articles there is no training a classifier, but there is
-**testing** one. `classification/transfer.py` fits a detector on the prior
-study's 5,391 human/Sabiá-3 pairs and applies it to our generators, which no
-detector has ever seen. It answers a question our corpus cannot answer on its
+**testing** one. `classification/linguistic_transfer.py` fits a detector on the
+prior study's 5,391 human/Sabiá-3 pairs and applies it to our generators, which
+no detector has ever seen. It answers a question our corpus cannot answer on its
 own: *does a detector trained against one generator recognise the others?*
 
+It follows the prior repository's experiments one for one; `--mode` picks which:
+
+| `--mode` | Prior experiment | Input |
+|---|---|---|
+| `linguistic` | `linguistic_features.py --feature-mode linguistic` | NILC-Metrix, LIWC, rule frequencies, syllables, UPOS, rules/sentence, SAGE bigrams |
+| `embedding` | `--feature-mode embedding` | frozen BERTimbau or mBERT (`--encoder`) |
+| `combined` | `--feature-mode combined` | both concatenated |
+| `tfidf`, `bow` | `text_enriched.py` | bag of words + the linguistic features; `--no-linguistic` for the text-only condition |
+
 ```bash
-uv run python -m expanded_fake_news_corpus.classification.transfer \
-    --mode tfidf --classifier logistic_regression
+uv run python -m expanded_fake_news_corpus.classification.linguistic_transfer \
+    --mode linguistic --classifier all
+uv run python -m expanded_fake_news_corpus.classification.linguistic_transfer \
+    --mode combined --encoder bert-multilingual --classifier all
+uv run python -m expanded_fake_news_corpus.classification.linguistic_transfer \
+    --mode tfidf --no-linguistic --classifier all
 ```
+
+The training table of the linguistic modes is exported once, with the prior
+repository's own loaders (so its length filter and top-500 rules are the
+original's), by `scripts/export_prior_features.py`, run with that repository's
+Python. The prior repository never saved a fitted classifier, so the detector is
+refitted here on its split and saved to `data/classification/models/`.
 
 The design is asymmetric on purpose:
 
 | Role | Where it comes from |
 |---|---|
-| Training | human/Sabiá-3 pairs on the prior work's **train** uids |
+| Training | human/Sabiá-3 pairs on the prior work's **train** uids (Fake.br human read raw, `full_texts/fake`, as there) |
 | Test, machine side | our generators' texts — detection rate per generator |
 | Test, human side | human fake news on the prior work's **test** uids — false positive rate |
 | Reference | Sabiá-3 on those same test uids — in-distribution detection |
 
+Generators in the test are the four with data on the site: gpt-4.1-mini, Claude
+Sonnet 4.5, Qwen3 32B and Llama 3.1 8B (round 2).
+
 The human side deliberately does **not** come from our 20 articles: 16 of them
 are in the prior work's training split, because our sample was drawn from the
 same source corpora. Using them would measure memorisation. The split files are
-vendored in [resources/prior_splits/](resources/prior_splits/README.md) so the
-experiment is reproducible from this repository; the prior corpus itself is
-located through `FAKEGEN_PRIOR_CORPUS` or `--prior-dir`.
+vendored in [resources/prior_splits/](resources/prior_splits/README.md); the prior
+corpus is located through `FAKEGEN_PRIOR_CORPUS` or `--prior-dir`.
 
-Every test text is cut to the same token budget (by default the median of the
-training pairs' truncation), so a generator's detection rate reflects its style
-and not its length.
+**Truncation is the prior protocol's, pair by pair.** The human and the Sabiá-3
+of each test uid are cut to the shorter of the two, and each generator's text is
+cut to the shorter of it and the prior corpus' human fake news for the same uid.
+No text is longer than its human counterpart, so length never separates the
+classes. The linguistic features are computed on whole texts, as there; the
+length control is the column filter.
+
+Each result file carries, besides the detection rates, the prior study's own
+test metrics (accuracy, weighted F1/precision/recall, confusion matrix on the
+2,158 human/Sabiá-3 test documents), so the detector can be checked against the
+original before the generators are read.
 
 ### Page (GitHub Pages)
 
