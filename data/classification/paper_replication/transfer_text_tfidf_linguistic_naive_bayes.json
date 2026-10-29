@@ -1,0 +1,161 @@
+{
+  "design": "trained on the prior corpus, tested on unseen generators",
+  "mode": "tfidf",
+  "feature_groups": [
+    "nilcmetrics",
+    "liwc",
+    "enhanced_ud",
+    "syllables",
+    "pos_tagger",
+    "parser_stats",
+    "sage_terms"
+  ],
+  "encoder": "bertimbau",
+  "encoder_model": "neuralmind/bert-base-portuguese-cased",
+  "max_length": 512,
+  "test_truncation": "paired",
+  "vectorizer": "tfidf",
+  "max_features": 10000,
+  "min_df": 5,
+  "linguistic": true,
+  "experiment": "paper_replication",
+  "limit_pairs": null,
+  "training": {
+    "classifier": "naive_bayes",
+    "documents": 8624,
+    "pairs": 4312,
+    "features": 782,
+    "best_params": {
+      "clf__nb__var_smoothing": 1e-05
+    },
+    "train_cv_score": 0.9581264204903999,
+    "cv_folds": 5,
+    "vocabulary": 10000
+  },
+  "coverage": {
+    "anthropic/claude-sonnet-4-5-20250929": {
+      "nilcmetrics": 1.0,
+      "liwc": 1.0,
+      "syllables": 1.0,
+      "pos_tagger": 1.0,
+      "enhanced_ud": 1.0,
+      "parser_stats": 1.0,
+      "sage_terms": 1.0
+    },
+    "ollama/llama3.1:8b (rodada2)": {
+      "nilcmetrics": 1.0,
+      "liwc": 1.0,
+      "syllables": 1.0,
+      "pos_tagger": 1.0,
+      "enhanced_ud": 1.0,
+      "parser_stats": 1.0,
+      "sage_terms": 1.0
+    },
+    "ollama/qwen3:32b": {
+      "nilcmetrics": 1.0,
+      "liwc": 1.0,
+      "syllables": 1.0,
+      "pos_tagger": 1.0,
+      "enhanced_ud": 1.0,
+      "parser_stats": 1.0,
+      "sage_terms": 1.0
+    },
+    "openai/gpt-4.1-mini-2025-04-14": {
+      "nilcmetrics": 1.0,
+      "liwc": 1.0,
+      "syllables": 1.0,
+      "pos_tagger": 1.0,
+      "enhanced_ud": 1.0,
+      "parser_stats": 1.0,
+      "sage_terms": 1.0
+    }
+  },
+  "evaluation": {
+    "humano (teste do trabalho anterior)": {
+      "texts": 1079,
+      "expected": "human",
+      "flagged_as_machine": 0.04448563484708063,
+      "accuracy": 0.9555143651529193
+    },
+    "sabia-3 (referência, dentro da distribuição)": {
+      "texts": 1079,
+      "expected": "machine",
+      "flagged_as_machine": 0.9833178869323448,
+      "accuracy": 0.9833178869323448
+    },
+    "anthropic/claude-sonnet-4-5-20250929": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 1.0,
+      "accuracy": 1.0
+    },
+    "ollama/llama3.1:8b (rodada2)": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 0.85,
+      "accuracy": 0.85
+    },
+    "ollama/qwen3:32b": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 0.95,
+      "accuracy": 0.95
+    },
+    "openai/gpt-4.1-mini-2025-04-14": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 1.0,
+      "accuracy": 1.0
+    }
+  },
+  "readings": {
+    "llms_only": {
+      "detection_rate": {
+        "anthropic/claude-sonnet-4-5-20250929": 1.0,
+        "ollama/llama3.1:8b (rodada2)": 0.85,
+        "ollama/qwen3:32b": 0.95,
+        "openai/gpt-4.1-mini-2025-04-14": 1.0
+      },
+      "reference_rate": {
+        "sabia-3 (referência, dentro da distribuição)": 0.9833178869323448
+      },
+      "mean": 0.95,
+      "spread": 0.15000000000000002
+    },
+    "with_human_control": {
+      "false_positive_rate": 0.04448563484708063,
+      "balanced": {
+        "anthropic/claude-sonnet-4-5-20250929": 0.9777571825764597,
+        "ollama/llama3.1:8b (rodada2)": 0.9027571825764596,
+        "ollama/qwen3:32b": 0.9527571825764596,
+        "openai/gpt-4.1-mini-2025-04-14": 0.9777571825764597,
+        "sabia-3 (referência, dentro da distribuição)": 0.969416126042632
+      },
+      "human_texts": 1079
+    }
+  },
+  "prior_test": {
+    "documents": 2158,
+    "accuracy": 0.969416126042632,
+    "f1": 0.9694102142925869,
+    "precision": 0.969779282256879,
+    "recall": 0.969416126042632,
+    "confusion_matrix": [
+      [
+        1031,
+        48
+      ],
+      [
+        18,
+        1061
+      ]
+    ],
+    "labels": [
+      "human",
+      "machine"
+    ]
+  },
+  "feature_importance": null,
+  "built_at": "2026-10-28T17:17:04-03:00",
+  "seed": 42
+}

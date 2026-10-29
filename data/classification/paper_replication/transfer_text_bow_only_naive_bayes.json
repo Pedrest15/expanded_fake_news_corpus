@@ -1,0 +1,116 @@
+{
+  "design": "trained on the prior corpus, tested on unseen generators",
+  "mode": "bow",
+  "feature_groups": [],
+  "encoder": "bertimbau",
+  "encoder_model": "neuralmind/bert-base-portuguese-cased",
+  "max_length": 512,
+  "test_truncation": "paired",
+  "vectorizer": "bow",
+  "max_features": 10000,
+  "min_df": 5,
+  "linguistic": false,
+  "experiment": "paper_replication",
+  "limit_pairs": null,
+  "training": {
+    "classifier": "naive_bayes",
+    "documents": 8624,
+    "pairs": 4312,
+    "features": 1,
+    "best_params": {
+      "clf__nb__var_smoothing": 1e-05
+    },
+    "train_cv_score": 0.9198568886375668,
+    "cv_folds": 5,
+    "vocabulary": 10000
+  },
+  "coverage": {},
+  "evaluation": {
+    "humano (teste do trabalho anterior)": {
+      "texts": 1079,
+      "expected": "human",
+      "flagged_as_machine": 0.11214087117701575,
+      "accuracy": 0.8878591288229842
+    },
+    "sabia-3 (referência, dentro da distribuição)": {
+      "texts": 1079,
+      "expected": "machine",
+      "flagged_as_machine": 0.9564411492122336,
+      "accuracy": 0.9564411492122336
+    },
+    "anthropic/claude-sonnet-4-5-20250929": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 1.0,
+      "accuracy": 1.0
+    },
+    "ollama/llama3.1:8b (rodada2)": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 0.9,
+      "accuracy": 0.9
+    },
+    "ollama/qwen3:32b": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 0.95,
+      "accuracy": 0.95
+    },
+    "openai/gpt-4.1-mini-2025-04-14": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 1.0,
+      "accuracy": 1.0
+    }
+  },
+  "readings": {
+    "llms_only": {
+      "detection_rate": {
+        "anthropic/claude-sonnet-4-5-20250929": 1.0,
+        "ollama/llama3.1:8b (rodada2)": 0.9,
+        "ollama/qwen3:32b": 0.95,
+        "openai/gpt-4.1-mini-2025-04-14": 1.0
+      },
+      "reference_rate": {
+        "sabia-3 (referência, dentro da distribuição)": 0.9564411492122336
+      },
+      "mean": 0.9624999999999999,
+      "spread": 0.09999999999999998
+    },
+    "with_human_control": {
+      "false_positive_rate": 0.11214087117701575,
+      "balanced": {
+        "anthropic/claude-sonnet-4-5-20250929": 0.9439295644114921,
+        "ollama/llama3.1:8b (rodada2)": 0.8939295644114922,
+        "ollama/qwen3:32b": 0.9189295644114921,
+        "openai/gpt-4.1-mini-2025-04-14": 0.9439295644114921,
+        "sabia-3 (referência, dentro da distribuição)": 0.9221501390176089
+      },
+      "human_texts": 1079
+    }
+  },
+  "prior_test": {
+    "documents": 2158,
+    "accuracy": 0.9221501390176089,
+    "f1": 0.9220584896704022,
+    "precision": 0.9241451027602663,
+    "recall": 0.9221501390176089,
+    "confusion_matrix": [
+      [
+        958,
+        121
+      ],
+      [
+        47,
+        1032
+      ]
+    ],
+    "labels": [
+      "human",
+      "machine"
+    ]
+  },
+  "feature_importance": null,
+  "built_at": "2026-10-28T18:16:48-03:00",
+  "seed": 42
+}

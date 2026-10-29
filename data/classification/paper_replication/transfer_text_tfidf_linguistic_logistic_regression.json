@@ -1,0 +1,284 @@
+{
+  "design": "trained on the prior corpus, tested on unseen generators",
+  "mode": "tfidf",
+  "feature_groups": [
+    "nilcmetrics",
+    "liwc",
+    "enhanced_ud",
+    "syllables",
+    "pos_tagger",
+    "parser_stats",
+    "sage_terms"
+  ],
+  "encoder": "bertimbau",
+  "encoder_model": "neuralmind/bert-base-portuguese-cased",
+  "max_length": 512,
+  "test_truncation": "paired",
+  "vectorizer": "tfidf",
+  "max_features": 10000,
+  "min_df": 5,
+  "linguistic": true,
+  "experiment": "paper_replication",
+  "limit_pairs": null,
+  "training": {
+    "classifier": "logistic_regression",
+    "documents": 8624,
+    "pairs": 4312,
+    "features": 782,
+    "best_params": {
+      "clf__C": 1.0,
+      "clf__l1_ratio": 0.0,
+      "clf__solver": "lbfgs"
+    },
+    "train_cv_score": 0.9901445447023878,
+    "cv_folds": 5,
+    "vocabulary": 10000
+  },
+  "coverage": {
+    "anthropic/claude-sonnet-4-5-20250929": {
+      "nilcmetrics": 1.0,
+      "liwc": 1.0,
+      "syllables": 1.0,
+      "pos_tagger": 1.0,
+      "enhanced_ud": 1.0,
+      "parser_stats": 1.0,
+      "sage_terms": 1.0
+    },
+    "ollama/llama3.1:8b (rodada2)": {
+      "nilcmetrics": 1.0,
+      "liwc": 1.0,
+      "syllables": 1.0,
+      "pos_tagger": 1.0,
+      "enhanced_ud": 1.0,
+      "parser_stats": 1.0,
+      "sage_terms": 1.0
+    },
+    "ollama/qwen3:32b": {
+      "nilcmetrics": 1.0,
+      "liwc": 1.0,
+      "syllables": 1.0,
+      "pos_tagger": 1.0,
+      "enhanced_ud": 1.0,
+      "parser_stats": 1.0,
+      "sage_terms": 1.0
+    },
+    "openai/gpt-4.1-mini-2025-04-14": {
+      "nilcmetrics": 1.0,
+      "liwc": 1.0,
+      "syllables": 1.0,
+      "pos_tagger": 1.0,
+      "enhanced_ud": 1.0,
+      "parser_stats": 1.0,
+      "sage_terms": 1.0
+    }
+  },
+  "evaluation": {
+    "humano (teste do trabalho anterior)": {
+      "texts": 1079,
+      "expected": "human",
+      "flagged_as_machine": 0.015755329008341055,
+      "accuracy": 0.9842446709916589
+    },
+    "sabia-3 (referência, dentro da distribuição)": {
+      "texts": 1079,
+      "expected": "machine",
+      "flagged_as_machine": 0.9888785912882299,
+      "accuracy": 0.9888785912882299
+    },
+    "anthropic/claude-sonnet-4-5-20250929": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 0.75,
+      "accuracy": 0.75
+    },
+    "ollama/llama3.1:8b (rodada2)": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 0.5,
+      "accuracy": 0.5
+    },
+    "ollama/qwen3:32b": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 0.95,
+      "accuracy": 0.95
+    },
+    "openai/gpt-4.1-mini-2025-04-14": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 1.0,
+      "accuracy": 1.0
+    }
+  },
+  "readings": {
+    "llms_only": {
+      "detection_rate": {
+        "anthropic/claude-sonnet-4-5-20250929": 0.75,
+        "ollama/llama3.1:8b (rodada2)": 0.5,
+        "ollama/qwen3:32b": 0.95,
+        "openai/gpt-4.1-mini-2025-04-14": 1.0
+      },
+      "reference_rate": {
+        "sabia-3 (referência, dentro da distribuição)": 0.9888785912882299
+      },
+      "mean": 0.8,
+      "spread": 0.5
+    },
+    "with_human_control": {
+      "false_positive_rate": 0.015755329008341055,
+      "balanced": {
+        "anthropic/claude-sonnet-4-5-20250929": 0.8671223354958295,
+        "ollama/llama3.1:8b (rodada2)": 0.7421223354958295,
+        "ollama/qwen3:32b": 0.9671223354958294,
+        "openai/gpt-4.1-mini-2025-04-14": 0.9921223354958295,
+        "sabia-3 (referência, dentro da distribuição)": 0.9865616311399443
+      },
+      "human_texts": 1079
+    }
+  },
+  "prior_test": {
+    "documents": 2158,
+    "accuracy": 0.9865616311399444,
+    "f1": 0.9865615589983033,
+    "precision": 0.9865720794079449,
+    "recall": 0.9865616311399444,
+    "confusion_matrix": [
+      [
+        1062,
+        17
+      ],
+      [
+        12,
+        1067
+      ]
+    ],
+    "labels": [
+      "human",
+      "machine"
+    ]
+  },
+  "feature_importance": [
+    [
+      "nilc__sentences_per_paragraph",
+      1.4189779801166482
+    ],
+    [
+      "ud__VERB(PUNCT/punct, *, NOUN/obj)",
+      0.9645759600868167
+    ],
+    [
+      "nilc__add_neg_conn_ratio",
+      0.842081955282465
+    ],
+    [
+      "syll__media_silabas_por_palavra",
+      0.8396182378212467
+    ],
+    [
+      "nilc__gerund_verbs",
+      0.8302181504852719
+    ],
+    [
+      "nilc__adj_stem_ovl",
+      0.8261583267690373
+    ],
+    [
+      "nilc__lsa_span_mean",
+      0.8128270495422875
+    ],
+    [
+      "nilc__stem_ovl",
+      0.7995830422409674
+    ],
+    [
+      "liwc__number (Numbers)",
+      0.7434983670434585
+    ],
+    [
+      "nilc__adj_cw_ovl",
+      0.689367881345391
+    ],
+    [
+      "ud__PUNCT(PUNCT/punct, *, PUNCT/punct, PUNCT/punct)",
+      0.6502761650076351
+    ],
+    [
+      "liwc__posemo (Positive Emotions)",
+      0.6320637550178925
+    ],
+    [
+      "ud__VERB(PUNCT/punct, *, VERB/ccomp)",
+      0.6154635669011057
+    ],
+    [
+      "nilc__cau_neg_conn_ratio",
+      0.6119217940987581
+    ],
+    [
+      "nilc__syllables_per_content_word",
+      0.6056165865640591
+    ],
+    [
+      "pos__PUNCT",
+      0.5775996607918502
+    ],
+    [
+      "liwc__article (Articles)",
+      0.5765396088985169
+    ],
+    [
+      "liwc__prep (Prepositions)",
+      0.5744483073382638
+    ],
+    [
+      "nilc__dep_distance",
+      0.5728890859450712
+    ],
+    [
+      "nilc__long_sentence_ratio",
+      0.569900618186653
+    ],
+    [
+      "nilc__subjunctive_present_ratio",
+      0.5567392586226569
+    ],
+    [
+      "ud__ADV(*, NUM/appos)",
+      0.5531196257648149
+    ],
+    [
+      "sage__diz_que",
+      0.5369197933385732
+    ],
+    [
+      "nilc__first_person_possessive_pronouns",
+      0.53637870418498
+    ],
+    [
+      "nilc__idade_aquisicao_1_25_ratio",
+      0.5350750975551273
+    ],
+    [
+      "liwc__power (Power)",
+      0.5256973107374919
+    ],
+    [
+      "ud__ADV(*, PRON/obl, PUNCT/punct)",
+      0.5247877089135524
+    ],
+    [
+      "nilc__abstract_nouns_ratio",
+      0.5247222566177224
+    ],
+    [
+      "nilc__lsa_paragraph_mean",
+      0.5229453602553172
+    ],
+    [
+      "liwc__adj (Adjectives)",
+      0.5224852821676688
+    ]
+  ],
+  "built_at": "2026-10-28T17:17:24-03:00",
+  "seed": 42
+}

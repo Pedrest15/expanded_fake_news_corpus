@@ -108,7 +108,7 @@ def build_catalogue() -> dict[str, ClassifierSpec]:
     else:
         catalogue["xgboost"] = ClassifierSpec(
             "xgboost",
-            XGBClassifier(random_state=RANDOM_STATE, eval_metric="logloss", n_jobs=-1),
+            XGBClassifier(random_state=RANDOM_STATE, eval_metric="logloss", n_jobs=1),
             {
                 "n_estimators": [50, 100, 200],
                 "max_depth": [3, 6, 10],
@@ -189,7 +189,7 @@ def build_enriched_catalogue() -> dict[str, ClassifierSpec]:
     else:
         catalogue["xgboost"] = ClassifierSpec(
             "xgboost",
-            XGBClassifier(random_state=RANDOM_STATE, eval_metric="logloss", n_jobs=-1),
+            XGBClassifier(random_state=RANDOM_STATE, eval_metric="logloss", n_jobs=1),
             {
                 "n_estimators": [100, 200],
                 "max_depth": [3, 6],

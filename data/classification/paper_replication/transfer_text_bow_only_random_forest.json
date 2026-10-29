@@ -1,0 +1,239 @@
+{
+  "design": "trained on the prior corpus, tested on unseen generators",
+  "mode": "bow",
+  "feature_groups": [],
+  "encoder": "bertimbau",
+  "encoder_model": "neuralmind/bert-base-portuguese-cased",
+  "max_length": 512,
+  "test_truncation": "paired",
+  "vectorizer": "bow",
+  "max_features": 10000,
+  "min_df": 5,
+  "linguistic": false,
+  "experiment": "paper_replication",
+  "limit_pairs": null,
+  "training": {
+    "classifier": "random_forest",
+    "documents": 8624,
+    "pairs": 4312,
+    "features": 1,
+    "best_params": {
+      "clf__max_depth": null,
+      "clf__min_samples_split": 5,
+      "clf__n_estimators": 200
+    },
+    "train_cv_score": 0.9751850279232246,
+    "cv_folds": 5,
+    "vocabulary": 10000
+  },
+  "coverage": {},
+  "evaluation": {
+    "humano (teste do trabalho anterior)": {
+      "texts": 1079,
+      "expected": "human",
+      "flagged_as_machine": 0.013901760889712697,
+      "accuracy": 0.9860982391102873
+    },
+    "sabia-3 (referência, dentro da distribuição)": {
+      "texts": 1079,
+      "expected": "machine",
+      "flagged_as_machine": 0.9786839666357738,
+      "accuracy": 0.9786839666357738
+    },
+    "anthropic/claude-sonnet-4-5-20250929": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 0.95,
+      "accuracy": 0.95
+    },
+    "ollama/llama3.1:8b (rodada2)": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 0.5,
+      "accuracy": 0.5
+    },
+    "ollama/qwen3:32b": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 1.0,
+      "accuracy": 1.0
+    },
+    "openai/gpt-4.1-mini-2025-04-14": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 1.0,
+      "accuracy": 1.0
+    }
+  },
+  "readings": {
+    "llms_only": {
+      "detection_rate": {
+        "anthropic/claude-sonnet-4-5-20250929": 0.95,
+        "ollama/llama3.1:8b (rodada2)": 0.5,
+        "ollama/qwen3:32b": 1.0,
+        "openai/gpt-4.1-mini-2025-04-14": 1.0
+      },
+      "reference_rate": {
+        "sabia-3 (referência, dentro da distribuição)": 0.9786839666357738
+      },
+      "mean": 0.8625,
+      "spread": 0.5
+    },
+    "with_human_control": {
+      "false_positive_rate": 0.013901760889712697,
+      "balanced": {
+        "anthropic/claude-sonnet-4-5-20250929": 0.9680491195551436,
+        "ollama/llama3.1:8b (rodada2)": 0.7430491195551436,
+        "ollama/qwen3:32b": 0.9930491195551436,
+        "openai/gpt-4.1-mini-2025-04-14": 0.9930491195551436,
+        "sabia-3 (referência, dentro da distribuição)": 0.9823911028730306
+      },
+      "human_texts": 1079
+    }
+  },
+  "prior_test": {
+    "documents": 2158,
+    "accuracy": 0.9823911028730306,
+    "f1": 0.982390860873113,
+    "precision": 0.9824176220626245,
+    "recall": 0.9823911028730306,
+    "confusion_matrix": [
+      [
+        1064,
+        15
+      ],
+      [
+        23,
+        1056
+      ]
+    ],
+    "labels": [
+      "human",
+      "machine"
+    ]
+  },
+  "feature_importance": [
+    [
+      "text__fontes",
+      0.018474290238506597
+    ],
+    [
+      "text__surpreendente",
+      0.01651071718973455
+    ],
+    [
+      "text__teria",
+      0.015157372688759906
+    ],
+    [
+      "text__exclusivo",
+      0.015093045196053909
+    ],
+    [
+      "text__disse",
+      0.014766420471576242
+    ],
+    [
+      "text__bombástica",
+      0.013253170069195585
+    ],
+    [
+      "text__revela",
+      0.012079620879266754
+    ],
+    [
+      "text__supostamente",
+      0.011771885162835439
+    ],
+    [
+      "text__especialistas",
+      0.011584500370105945
+    ],
+    [
+      "text__uma",
+      0.010603758419950916
+    ],
+    [
+      "text__segundo",
+      0.0098965698887539
+    ],
+    [
+      "text__apenas",
+      0.009784672236844939
+    ],
+    [
+      "text__afirmam",
+      0.00878106773775801
+    ],
+    [
+      "text__chocante",
+      0.008068472538877509
+    ],
+    [
+      "text__feira",
+      0.007051742883149161
+    ],
+    [
+      "text__enquanto",
+      0.006293416460102407
+    ],
+    [
+      "text__redes",
+      0.005860841221582499
+    ],
+    [
+      "text__alegando",
+      0.0058081328212214655
+    ],
+    [
+      "text__promete",
+      0.005750555535310627
+    ],
+    [
+      "text__afirmou",
+      0.005681003857133561
+    ],
+    [
+      "text__sociais",
+      0.005603142648743534
+    ],
+    [
+      "text__pra",
+      0.005543072563592552
+    ],
+    [
+      "text__indicam",
+      0.005541815548841608
+    ],
+    [
+      "text__vai",
+      0.005448418564680022
+    ],
+    [
+      "text__reviravolta",
+      0.005295106148813158
+    ],
+    [
+      "text__mas",
+      0.005282708448019895
+    ],
+    [
+      "text__diz",
+      0.005265737394942267
+    ],
+    [
+      "text__revelação",
+      0.005264647874219392
+    ],
+    [
+      "text__após",
+      0.004993464743646779
+    ],
+    [
+      "text__alarmante",
+      0.004952569401419641
+    ]
+  ],
+  "built_at": "2026-10-28T18:16:29-03:00",
+  "seed": 42
+}

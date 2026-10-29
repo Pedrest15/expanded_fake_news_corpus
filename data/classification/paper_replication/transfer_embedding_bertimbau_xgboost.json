@@ -1,0 +1,196 @@
+{
+  "design": "trained on the prior corpus, tested on unseen generators",
+  "mode": "embedding",
+  "feature_groups": [],
+  "encoder": "bertimbau",
+  "encoder_model": "neuralmind/bert-base-portuguese-cased",
+  "max_length": 512,
+  "test_truncation": "paired",
+  "pooling": "cls",
+  "experiment": "paper_replication",
+  "limit_pairs": null,
+  "training": {
+    "classifier": "xgboost",
+    "documents": 8624,
+    "pairs": 4312,
+    "features": 768,
+    "best_params": {
+      "clf__learning_rate": 0.3,
+      "clf__max_depth": 3,
+      "clf__n_estimators": 200,
+      "clf__subsample": 0.8
+    },
+    "train_cv_score": 0.982837838719257,
+    "cv_folds": 5
+  },
+  "coverage": {},
+  "evaluation": {
+    "humano (teste do trabalho anterior)": {
+      "texts": 1079,
+      "expected": "human",
+      "flagged_as_machine": 0.021316033364226137,
+      "accuracy": 0.9786839666357738
+    },
+    "sabia-3 (referência, dentro da distribuição)": {
+      "texts": 1079,
+      "expected": "machine",
+      "flagged_as_machine": 0.9888785912882299,
+      "accuracy": 0.9888785912882299
+    },
+    "anthropic/claude-sonnet-4-5-20250929": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 0.95,
+      "accuracy": 0.95
+    },
+    "ollama/llama3.1:8b (rodada2)": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 0.7,
+      "accuracy": 0.7
+    },
+    "ollama/qwen3:32b": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 1.0,
+      "accuracy": 1.0
+    },
+    "openai/gpt-4.1-mini-2025-04-14": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 1.0,
+      "accuracy": 1.0
+    }
+  },
+  "readings": {
+    "llms_only": {
+      "detection_rate": {
+        "anthropic/claude-sonnet-4-5-20250929": 0.95,
+        "ollama/llama3.1:8b (rodada2)": 0.7,
+        "ollama/qwen3:32b": 1.0,
+        "openai/gpt-4.1-mini-2025-04-14": 1.0
+      },
+      "reference_rate": {
+        "sabia-3 (referência, dentro da distribuição)": 0.9888785912882299
+      },
+      "mean": 0.9125,
+      "spread": 0.30000000000000004
+    },
+    "with_human_control": {
+      "false_positive_rate": 0.021316033364226137,
+      "balanced": {
+        "anthropic/claude-sonnet-4-5-20250929": 0.9643419833178869,
+        "ollama/llama3.1:8b (rodada2)": 0.8393419833178869,
+        "ollama/qwen3:32b": 0.9893419833178869,
+        "openai/gpt-4.1-mini-2025-04-14": 0.9893419833178869,
+        "sabia-3 (referência, dentro da distribuição)": 0.9837812789620018
+      },
+      "human_texts": 1079
+    }
+  },
+  "prior_test": {
+    "documents": 2158,
+    "accuracy": 0.9837812789620018,
+    "f1": 0.9837808575466254,
+    "precision": 0.9838315637563139,
+    "recall": 0.9837812789620018,
+    "confusion_matrix": [
+      [
+        1056,
+        23
+      ],
+      [
+        12,
+        1067
+      ]
+    ],
+    "labels": [
+      "human",
+      "machine"
+    ]
+  },
+  "feature_importance": [
+    [
+      "bert_bertimbau__124",
+      0.07336021214723587
+    ],
+    [
+      "bert_bertimbau__188",
+      0.04386181756854057
+    ],
+    [
+      "bert_bertimbau__150",
+      0.04109852761030197
+    ],
+    [
+      "bert_bertimbau__572",
+      0.03865757957100868
+    ],
+    [
+      "bert_bertimbau__424",
+      0.03788646310567856
+    ],
+    [
+      "bert_bertimbau__54",
+      0.03199630230665207
+    ],
+    [
+      "bert_bertimbau__261",
+      0.030700959265232086
+    ],
+    [
+      "bert_bertimbau__632",
+      0.02456573210656643
+    ],
+    [
+      "bert_bertimbau__579",
+      0.02439376711845398
+    ],
+    [
+      "bert_bertimbau__407",
+      0.018882183358073235
+    ],
+    [
+      "bert_bertimbau__165",
+      0.017244625836610794
+    ],
+    [
+      "bert_bertimbau__231",
+      0.016289299353957176
+    ],
+    [
+      "bert_bertimbau__42",
+      0.014978826977312565
+    ],
+    [
+      "bert_bertimbau__654",
+      0.014693419449031353
+    ],
+    [
+      "bert_bertimbau__514",
+      0.014599990099668503
+    ],
+    [
+      "bert_bertimbau__287",
+      0.012254062108695507
+    ],
+    [
+      "bert_bertimbau__609",
+      0.012141208164393902
+    ],
+    [
+      "bert_bertimbau__104",
+      0.011951521970331669
+    ],
+    [
+      "bert_bertimbau__172",
+      0.011546474881470203
+    ],
+    [
+      "bert_bertimbau__506",
+      0.011414894834160805
+    ]
+  ],
+  "built_at": "2026-10-28T23:52:47-03:00",
+  "seed": 42
+}

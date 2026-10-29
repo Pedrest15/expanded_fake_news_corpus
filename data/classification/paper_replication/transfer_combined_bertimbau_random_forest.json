@@ -1,0 +1,241 @@
+{
+  "design": "trained on the prior corpus, tested on unseen generators",
+  "mode": "combined",
+  "feature_groups": [
+    "nilcmetrics",
+    "liwc",
+    "enhanced_ud",
+    "syllables",
+    "pos_tagger",
+    "parser_stats",
+    "sage_terms"
+  ],
+  "encoder": "bertimbau",
+  "encoder_model": "neuralmind/bert-base-portuguese-cased",
+  "max_length": 512,
+  "test_truncation": "paired",
+  "pooling": "cls",
+  "experiment": "paper_replication",
+  "limit_pairs": null,
+  "training": {
+    "classifier": "random_forest",
+    "documents": 8624,
+    "pairs": 4312,
+    "features": 1549,
+    "best_params": {
+      "clf__max_depth": null,
+      "clf__min_samples_leaf": 1,
+      "clf__min_samples_split": 2,
+      "clf__n_estimators": 100
+    },
+    "train_cv_score": 0.9948983201137096,
+    "cv_folds": 5
+  },
+  "coverage": {
+    "anthropic/claude-sonnet-4-5-20250929": {
+      "nilcmetrics": 1.0,
+      "liwc": 1.0,
+      "syllables": 1.0,
+      "pos_tagger": 1.0,
+      "enhanced_ud": 1.0,
+      "parser_stats": 1.0,
+      "sage_terms": 1.0
+    },
+    "ollama/llama3.1:8b (rodada2)": {
+      "nilcmetrics": 1.0,
+      "liwc": 1.0,
+      "syllables": 1.0,
+      "pos_tagger": 1.0,
+      "enhanced_ud": 1.0,
+      "parser_stats": 1.0,
+      "sage_terms": 1.0
+    },
+    "ollama/qwen3:32b": {
+      "nilcmetrics": 1.0,
+      "liwc": 1.0,
+      "syllables": 1.0,
+      "pos_tagger": 1.0,
+      "enhanced_ud": 1.0,
+      "parser_stats": 1.0,
+      "sage_terms": 1.0
+    },
+    "openai/gpt-4.1-mini-2025-04-14": {
+      "nilcmetrics": 1.0,
+      "liwc": 1.0,
+      "syllables": 1.0,
+      "pos_tagger": 1.0,
+      "enhanced_ud": 1.0,
+      "parser_stats": 1.0,
+      "sage_terms": 1.0
+    }
+  },
+  "evaluation": {
+    "humano (teste do trabalho anterior)": {
+      "texts": 1079,
+      "expected": "human",
+      "flagged_as_machine": 0.0,
+      "accuracy": 1.0
+    },
+    "sabia-3 (referência, dentro da distribuição)": {
+      "texts": 1079,
+      "expected": "machine",
+      "flagged_as_machine": 0.9888785912882299,
+      "accuracy": 0.9888785912882299
+    },
+    "anthropic/claude-sonnet-4-5-20250929": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 0.95,
+      "accuracy": 0.95
+    },
+    "ollama/llama3.1:8b (rodada2)": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 0.75,
+      "accuracy": 0.75
+    },
+    "ollama/qwen3:32b": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 1.0,
+      "accuracy": 1.0
+    },
+    "openai/gpt-4.1-mini-2025-04-14": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 1.0,
+      "accuracy": 1.0
+    }
+  },
+  "readings": {
+    "llms_only": {
+      "detection_rate": {
+        "anthropic/claude-sonnet-4-5-20250929": 0.95,
+        "ollama/llama3.1:8b (rodada2)": 0.75,
+        "ollama/qwen3:32b": 1.0,
+        "openai/gpt-4.1-mini-2025-04-14": 1.0
+      },
+      "reference_rate": {
+        "sabia-3 (referência, dentro da distribuição)": 0.9888785912882299
+      },
+      "mean": 0.925,
+      "spread": 0.25
+    },
+    "with_human_control": {
+      "false_positive_rate": 0.0,
+      "balanced": {
+        "anthropic/claude-sonnet-4-5-20250929": 0.975,
+        "ollama/llama3.1:8b (rodada2)": 0.875,
+        "ollama/qwen3:32b": 1.0,
+        "openai/gpt-4.1-mini-2025-04-14": 1.0,
+        "sabia-3 (referência, dentro da distribuição)": 0.9944392956441149
+      },
+      "human_texts": 1079
+    }
+  },
+  "prior_test": {
+    "documents": 2158,
+    "accuracy": 0.9944392956441149,
+    "f1": 0.9944391236938513,
+    "precision": 0.9945004582951419,
+    "recall": 0.9944392956441149,
+    "confusion_matrix": [
+      [
+        1079,
+        0
+      ],
+      [
+        12,
+        1067
+      ]
+    ],
+    "labels": [
+      "human",
+      "machine"
+    ]
+  },
+  "feature_importance": [
+    [
+      "nilc__sentences_per_paragraph",
+      0.05947539201728371
+    ],
+    [
+      "nilc__named_entity_ratio_text",
+      0.039268373767354696
+    ],
+    [
+      "nilc__lsa_paragraph_mean",
+      0.03283641464354161
+    ],
+    [
+      "syll__media_silabas_por_palavra",
+      0.028667587147029567
+    ],
+    [
+      "nilc__flesch",
+      0.0280505568187881
+    ],
+    [
+      "nilc__syllables_per_content_word",
+      0.02717774275094234
+    ],
+    [
+      "nilc__lsa_givenness_mean",
+      0.024085288771055025
+    ],
+    [
+      "nilc__idade_aquisicao_1_25_ratio",
+      0.018648878179654313
+    ],
+    [
+      "nilc__gerund_verbs",
+      0.018516688441261763
+    ],
+    [
+      "nilc__long_sentence_ratio",
+      0.01743948580819694
+    ],
+    [
+      "nilc__positive_words",
+      0.017350803680592542
+    ],
+    [
+      "ud__VERB(PUNCT/punct, *, NOUN/obj)",
+      0.01703192985959459
+    ],
+    [
+      "nilc__short_sentence_ratio",
+      0.016294427573991334
+    ],
+    [
+      "nilc__idade_aquisicao_55_7_ratio",
+      0.016156442223601644
+    ],
+    [
+      "nilc__imageabilidade_4_55_ratio",
+      0.015620482710069817
+    ],
+    [
+      "ud__ADJ(*)",
+      0.014485304172773116
+    ],
+    [
+      "nilc__imageabilidade_25_4_ratio",
+      0.01406041367670251
+    ],
+    [
+      "nilc__named_entity_ratio_sentence",
+      0.013266908191089216
+    ],
+    [
+      "nilc__idade_aquisicao_mean",
+      0.012523096092628068
+    ],
+    [
+      "nilc__adjective_ratio",
+      0.01031534673146536
+    ]
+  ],
+  "built_at": "2026-10-28T15:29:47-03:00",
+  "seed": 42
+}

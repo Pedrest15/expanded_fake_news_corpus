@@ -1,0 +1,86 @@
+{
+  "svm": {
+    "train_cv_score": 0.9916509751337571,
+    "detection_rate": {
+      "anthropic/claude-sonnet-4-5-20250929": 0.95,
+      "ollama/llama3.1:8b (rodada2)": 0.45,
+      "ollama/qwen3:32b": 1.0,
+      "openai/gpt-4.1-mini-2025-04-14": 1.0
+    },
+    "reference_rate": {
+      "sabia-3 (referência, dentro da distribuição)": 0.9851714550509731
+    },
+    "mean_detection": 0.85,
+    "false_positive_rate": 0.0037071362372567192
+  },
+  "random_forest": {
+    "train_cv_score": 0.9921152738038991,
+    "detection_rate": {
+      "anthropic/claude-sonnet-4-5-20250929": 0.95,
+      "ollama/llama3.1:8b (rodada2)": 0.7,
+      "ollama/qwen3:32b": 1.0,
+      "openai/gpt-4.1-mini-2025-04-14": 1.0
+    },
+    "reference_rate": {
+      "sabia-3 (referência, dentro da distribuição)": 0.9768303985171455
+    },
+    "mean_detection": 0.9125,
+    "false_positive_rate": 0.0
+  },
+  "naive_bayes": {
+    "train_cv_score": 0.9368164188437804,
+    "detection_rate": {
+      "anthropic/claude-sonnet-4-5-20250929": 0.85,
+      "ollama/llama3.1:8b (rodada2)": 0.65,
+      "ollama/qwen3:32b": 0.85,
+      "openai/gpt-4.1-mini-2025-04-14": 0.95
+    },
+    "reference_rate": {
+      "sabia-3 (referência, dentro da distribuição)": 0.9712696941612604
+    },
+    "mean_detection": 0.825,
+    "false_positive_rate": 0.10194624652455977
+  },
+  "logistic_regression": {
+    "train_cv_score": 0.9900285166578568,
+    "detection_rate": {
+      "anthropic/claude-sonnet-4-5-20250929": 0.95,
+      "ollama/llama3.1:8b (rodada2)": 0.5,
+      "ollama/qwen3:32b": 1.0,
+      "openai/gpt-4.1-mini-2025-04-14": 1.0
+    },
+    "reference_rate": {
+      "sabia-3 (referência, dentro da distribuição)": 0.989805375347544
+    },
+    "mean_detection": 0.8625,
+    "false_positive_rate": 0.013901760889712697
+  },
+  "mlp": {
+    "train_cv_score": 0.9881726972392528,
+    "detection_rate": {
+      "anthropic/claude-sonnet-4-5-20250929": 0.9,
+      "ollama/llama3.1:8b (rodada2)": 0.55,
+      "ollama/qwen3:32b": 1.0,
+      "openai/gpt-4.1-mini-2025-04-14": 1.0
+    },
+    "reference_rate": {
+      "sabia-3 (referência, dentro da distribuição)": 0.9907321594068582
+    },
+    "mean_detection": 0.8625,
+    "false_positive_rate": 0.012048192771084338
+  },
+  "xgboost": {
+    "train_cv_score": 0.9987242951390296,
+    "detection_rate": {
+      "anthropic/claude-sonnet-4-5-20250929": 0.95,
+      "ollama/llama3.1:8b (rodada2)": 1.0,
+      "ollama/qwen3:32b": 1.0,
+      "openai/gpt-4.1-mini-2025-04-14": 1.0
+    },
+    "reference_rate": {
+      "sabia-3 (referência, dentro da distribuição)": 0.9944392956441149
+    },
+    "mean_detection": 0.9875,
+    "false_positive_rate": 0.0009267840593141798
+  }
+}

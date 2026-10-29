@@ -1,0 +1,284 @@
+{
+  "design": "trained on the prior corpus, tested on unseen generators",
+  "mode": "tfidf",
+  "feature_groups": [
+    "nilcmetrics",
+    "liwc",
+    "enhanced_ud",
+    "syllables",
+    "pos_tagger",
+    "parser_stats",
+    "sage_terms"
+  ],
+  "encoder": "bertimbau",
+  "encoder_model": "neuralmind/bert-base-portuguese-cased",
+  "max_length": 512,
+  "test_truncation": "paired",
+  "vectorizer": "tfidf",
+  "max_features": 10000,
+  "min_df": 5,
+  "linguistic": true,
+  "experiment": "paper_replication",
+  "limit_pairs": null,
+  "training": {
+    "classifier": "random_forest",
+    "documents": 8624,
+    "pairs": 4312,
+    "features": 782,
+    "best_params": {
+      "clf__max_depth": null,
+      "clf__min_samples_split": 5,
+      "clf__n_estimators": 200
+    },
+    "train_cv_score": 0.985041292883934,
+    "cv_folds": 5,
+    "vocabulary": 10000
+  },
+  "coverage": {
+    "anthropic/claude-sonnet-4-5-20250929": {
+      "nilcmetrics": 1.0,
+      "liwc": 1.0,
+      "syllables": 1.0,
+      "pos_tagger": 1.0,
+      "enhanced_ud": 1.0,
+      "parser_stats": 1.0,
+      "sage_terms": 1.0
+    },
+    "ollama/llama3.1:8b (rodada2)": {
+      "nilcmetrics": 1.0,
+      "liwc": 1.0,
+      "syllables": 1.0,
+      "pos_tagger": 1.0,
+      "enhanced_ud": 1.0,
+      "parser_stats": 1.0,
+      "sage_terms": 1.0
+    },
+    "ollama/qwen3:32b": {
+      "nilcmetrics": 1.0,
+      "liwc": 1.0,
+      "syllables": 1.0,
+      "pos_tagger": 1.0,
+      "enhanced_ud": 1.0,
+      "parser_stats": 1.0,
+      "sage_terms": 1.0
+    },
+    "openai/gpt-4.1-mini-2025-04-14": {
+      "nilcmetrics": 1.0,
+      "liwc": 1.0,
+      "syllables": 1.0,
+      "pos_tagger": 1.0,
+      "enhanced_ud": 1.0,
+      "parser_stats": 1.0,
+      "sage_terms": 1.0
+    }
+  },
+  "evaluation": {
+    "humano (teste do trabalho anterior)": {
+      "texts": 1079,
+      "expected": "human",
+      "flagged_as_machine": 0.0009267840593141798,
+      "accuracy": 0.9990732159406858
+    },
+    "sabia-3 (referência, dentro da distribuição)": {
+      "texts": 1079,
+      "expected": "machine",
+      "flagged_as_machine": 0.9731232622798888,
+      "accuracy": 0.9731232622798888
+    },
+    "anthropic/claude-sonnet-4-5-20250929": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 1.0,
+      "accuracy": 1.0
+    },
+    "ollama/llama3.1:8b (rodada2)": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 0.55,
+      "accuracy": 0.55
+    },
+    "ollama/qwen3:32b": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 1.0,
+      "accuracy": 1.0
+    },
+    "openai/gpt-4.1-mini-2025-04-14": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 1.0,
+      "accuracy": 1.0
+    }
+  },
+  "readings": {
+    "llms_only": {
+      "detection_rate": {
+        "anthropic/claude-sonnet-4-5-20250929": 1.0,
+        "ollama/llama3.1:8b (rodada2)": 0.55,
+        "ollama/qwen3:32b": 1.0,
+        "openai/gpt-4.1-mini-2025-04-14": 1.0
+      },
+      "reference_rate": {
+        "sabia-3 (referência, dentro da distribuição)": 0.9731232622798888
+      },
+      "mean": 0.8875,
+      "spread": 0.44999999999999996
+    },
+    "with_human_control": {
+      "false_positive_rate": 0.0009267840593141798,
+      "balanced": {
+        "anthropic/claude-sonnet-4-5-20250929": 0.9995366079703429,
+        "ollama/llama3.1:8b (rodada2)": 0.7745366079703428,
+        "ollama/qwen3:32b": 0.9995366079703429,
+        "openai/gpt-4.1-mini-2025-04-14": 0.9995366079703429,
+        "sabia-3 (referência, dentro da distribuição)": 0.9860982391102873
+      },
+      "human_texts": 1079
+    }
+  },
+  "prior_test": {
+    "documents": 2158,
+    "accuracy": 0.9860982391102873,
+    "f1": 0.986095898354445,
+    "precision": 0.9864257982890645,
+    "recall": 0.9860982391102873,
+    "confusion_matrix": [
+      [
+        1078,
+        1
+      ],
+      [
+        29,
+        1050
+      ]
+    ],
+    "labels": [
+      "human",
+      "machine"
+    ]
+  },
+  "feature_importance": [
+    [
+      "syll__media_silabas_por_palavra",
+      0.030987915657042397
+    ],
+    [
+      "nilc__sentences_per_paragraph",
+      0.028763527754382904
+    ],
+    [
+      "nilc__syllables_per_content_word",
+      0.028650641620242636
+    ],
+    [
+      "nilc__lsa_paragraph_mean",
+      0.022494115737985834
+    ],
+    [
+      "nilc__idade_aquisicao_mean",
+      0.01742613566035518
+    ],
+    [
+      "ud__ADJ(*)",
+      0.015035990807205584
+    ],
+    [
+      "nilc__idade_aquisicao_55_7_ratio",
+      0.014337715437518944
+    ],
+    [
+      "nilc__flesch",
+      0.014012156782256386
+    ],
+    [
+      "ud__VERB(PUNCT/punct, *, NOUN/obj)",
+      0.012175381698849255
+    ],
+    [
+      "nilc__gerund_verbs",
+      0.012166075608657907
+    ],
+    [
+      "nilc__named_entity_ratio_sentence",
+      0.011875180668131069
+    ],
+    [
+      "nilc__idade_aquisicao_1_25_ratio",
+      0.010507793844703739
+    ],
+    [
+      "pos__ADJ",
+      0.010297554007797369
+    ],
+    [
+      "nilc__non-inflected_verbs",
+      0.010245831656100797
+    ],
+    [
+      "nilc__lsa_span_mean",
+      0.010059894767507302
+    ],
+    [
+      "nilc__positive_words",
+      0.009818937213877523
+    ],
+    [
+      "nilc__short_sentence_ratio",
+      0.009614264082397125
+    ],
+    [
+      "nilc__long_sentence_ratio",
+      0.009579511450383667
+    ],
+    [
+      "nilc__familiaridade_55_7_ratio",
+      0.009342915263915013
+    ],
+    [
+      "nilc__lsa_adj_mean",
+      0.009135687279500785
+    ],
+    [
+      "nilc__named_entity_ratio_text",
+      0.009009587296878403
+    ],
+    [
+      "nilc__words_before_main_verb",
+      0.00885356586338598
+    ],
+    [
+      "nilc__imageabilidade_25_4_ratio",
+      0.008605405335113813
+    ],
+    [
+      "nilc__yngve",
+      0.00833668596308659
+    ],
+    [
+      "nilc__apposition_per_clause",
+      0.008252429641496986
+    ],
+    [
+      "ud__NOUN(DET/det, *, ADJ/amod)",
+      0.008134722377017387
+    ],
+    [
+      "nilc__concretude_4_55_ratio",
+      0.007621247021843222
+    ],
+    [
+      "nilc__lsa_givenness_mean",
+      0.007578533494389279
+    ],
+    [
+      "nilc__imageabilidade_4_55_ratio",
+      0.007551927851652432
+    ],
+    [
+      "nilc__concretude_25_4_ratio",
+      0.007434628924890466
+    ]
+  ],
+  "built_at": "2026-10-28T17:16:35-03:00",
+  "seed": 42
+}

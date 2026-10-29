@@ -1,0 +1,196 @@
+{
+  "design": "trained on the prior corpus, tested on unseen generators",
+  "mode": "embedding",
+  "feature_groups": [],
+  "encoder": "bert-multilingual",
+  "encoder_model": "bert-base-multilingual-cased",
+  "max_length": 512,
+  "test_truncation": "paired",
+  "pooling": "cls",
+  "experiment": "paper_replication",
+  "limit_pairs": null,
+  "training": {
+    "classifier": "random_forest",
+    "documents": 8624,
+    "pairs": 4312,
+    "features": 768,
+    "best_params": {
+      "clf__max_depth": 20,
+      "clf__min_samples_leaf": 2,
+      "clf__min_samples_split": 2,
+      "clf__n_estimators": 200
+    },
+    "train_cv_score": 0.9459495018764162,
+    "cv_folds": 5
+  },
+  "coverage": {},
+  "evaluation": {
+    "humano (teste do trabalho anterior)": {
+      "texts": 1079,
+      "expected": "human",
+      "flagged_as_machine": 0.07136237256719184,
+      "accuracy": 0.9286376274328082
+    },
+    "sabia-3 (referência, dentro da distribuição)": {
+      "texts": 1079,
+      "expected": "machine",
+      "flagged_as_machine": 0.9610750695088045,
+      "accuracy": 0.9610750695088045
+    },
+    "anthropic/claude-sonnet-4-5-20250929": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 0.9,
+      "accuracy": 0.9
+    },
+    "ollama/llama3.1:8b (rodada2)": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 0.9,
+      "accuracy": 0.9
+    },
+    "ollama/qwen3:32b": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 0.95,
+      "accuracy": 0.95
+    },
+    "openai/gpt-4.1-mini-2025-04-14": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 1.0,
+      "accuracy": 1.0
+    }
+  },
+  "readings": {
+    "llms_only": {
+      "detection_rate": {
+        "anthropic/claude-sonnet-4-5-20250929": 0.9,
+        "ollama/llama3.1:8b (rodada2)": 0.9,
+        "ollama/qwen3:32b": 0.95,
+        "openai/gpt-4.1-mini-2025-04-14": 1.0
+      },
+      "reference_rate": {
+        "sabia-3 (referência, dentro da distribuição)": 0.9610750695088045
+      },
+      "mean": 0.9375,
+      "spread": 0.09999999999999998
+    },
+    "with_human_control": {
+      "false_positive_rate": 0.07136237256719184,
+      "balanced": {
+        "anthropic/claude-sonnet-4-5-20250929": 0.9143188137164041,
+        "ollama/llama3.1:8b (rodada2)": 0.9143188137164041,
+        "ollama/qwen3:32b": 0.9393188137164041,
+        "openai/gpt-4.1-mini-2025-04-14": 0.964318813716404,
+        "sabia-3 (referência, dentro da distribuição)": 0.9448563484708064
+      },
+      "human_texts": 1079
+    }
+  },
+  "prior_test": {
+    "documents": 2158,
+    "accuracy": 0.9448563484708064,
+    "f1": 0.9448418392869531,
+    "precision": 0.9453249138446935,
+    "recall": 0.9448563484708064,
+    "confusion_matrix": [
+      [
+        1002,
+        77
+      ],
+      [
+        42,
+        1037
+      ]
+    ],
+    "labels": [
+      "human",
+      "machine"
+    ]
+  },
+  "feature_importance": [
+    [
+      "bert_bert-multilingual__247",
+      0.02793460314531575
+    ],
+    [
+      "bert_bert-multilingual__162",
+      0.02381225149241985
+    ],
+    [
+      "bert_bert-multilingual__333",
+      0.019499390365706283
+    ],
+    [
+      "bert_bert-multilingual__588",
+      0.01804430025150424
+    ],
+    [
+      "bert_bert-multilingual__161",
+      0.01648142027287665
+    ],
+    [
+      "bert_bert-multilingual__255",
+      0.013426614749002148
+    ],
+    [
+      "bert_bert-multilingual__44",
+      0.012954031308812872
+    ],
+    [
+      "bert_bert-multilingual__639",
+      0.012920132435178797
+    ],
+    [
+      "bert_bert-multilingual__174",
+      0.012526448713367683
+    ],
+    [
+      "bert_bert-multilingual__271",
+      0.011697435408499516
+    ],
+    [
+      "bert_bert-multilingual__417",
+      0.01142808719579376
+    ],
+    [
+      "bert_bert-multilingual__575",
+      0.010745487314787019
+    ],
+    [
+      "bert_bert-multilingual__748",
+      0.010437470961687387
+    ],
+    [
+      "bert_bert-multilingual__692",
+      0.010327116889946898
+    ],
+    [
+      "bert_bert-multilingual__3",
+      0.01003191723784046
+    ],
+    [
+      "bert_bert-multilingual__504",
+      0.009806907309525142
+    ],
+    [
+      "bert_bert-multilingual__175",
+      0.009162979063163497
+    ],
+    [
+      "bert_bert-multilingual__415",
+      0.00881606561746638
+    ],
+    [
+      "bert_bert-multilingual__192",
+      0.008545547810334122
+    ],
+    [
+      "bert_bert-multilingual__420",
+      0.008388372566534234
+    ]
+  ],
+  "built_at": "2026-10-28T14:12:38-03:00",
+  "seed": 42
+}
