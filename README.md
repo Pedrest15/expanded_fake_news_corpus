@@ -468,6 +468,46 @@ test metrics (accuracy, weighted F1/precision/recall, confusion matrix on the
 2,158 human/Sabiá-3 test documents), so the detector can be checked against the
 original before the generators are read.
 
+##### BERT fine-tuning
+
+`finetune_transfer` is the prior work's `bert_finetuning.py` with the same test
+side as above. The whole encoder (BERTimbau or multilingual BERT) is fine-tuned
+with a fresh 2-class head, on the prior train pairs, with 5 pair-grouped folds
+over the training part (the folds shuffle the same `<file>__<corpus>` group names
+as there) and the prior hyperparameters (AdamW, lr 5e-5, batch 8, 3 epochs, 500
+warm-up steps, early stopping with patience 3). The fold with the best validation
+weighted F1 is the detector; it reads the generators exactly as the other modes.
+It needs a GPU in practice, and a few GB of disk for the checkpoints
+(`data/classification/models/`, git-ignored).
+
+```bash
+uv sync --extra classification --extra classification-embedding
+
+# Quick check of the plumbing (not a result)
+uv run python -m expanded_fake_news_corpus.classification.finetune_transfer \
+  --bert-model bertimbau --limit-pairs 60 --folds-to-run 1 --epochs 1 \
+  --eval-steps 10 --warmup-steps 5
+
+uv run python -m expanded_fake_news_corpus.classification.finetune_transfer --bert-model bertimbau
+uv run python -m expanded_fake_news_corpus.classification.finetune_transfer --bert-model bert-multilingual
+```
+
+The result (`data/classification/<experiment>/finetune_<model>.json`) adds the
+per-fold validation scores, the best fold's directory (`best_model_dir`) and the
+machine probability of every test text. The classifiers over the fine-tuned
+encoder's `[CLS]` (the prior `finetuned_embeddings.py`) are the embedding mode
+pointed at that directory:
+
+```bash
+uv run python -m expanded_fake_news_corpus.classification.linguistic_transfer \
+  --mode embedding --encoder <best_model_dir> --pooling cls --classifier all \
+  --label finetuned_embedding_bertimbau
+```
+
+The fine-tuned encoder has already seen the training texts of its fold, so the
+classifiers' training embeddings are more separable than the test ones; the
+test is never seen by it.
+
 ### Page (GitHub Pages)
 
 `docs/` is published at <https://pedrest15.github.io/expanded_fake_news_corpus/> and shows

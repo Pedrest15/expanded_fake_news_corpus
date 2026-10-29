@@ -39,6 +39,7 @@ classification = [
 ]
 classification-embedding = [
     "torch>=2.4",
+    "accelerate>=1.1",
 ]
 
 # Caracterização lexical/sintática do corpus (src/expanded_fake_news_corpus/analysis)
