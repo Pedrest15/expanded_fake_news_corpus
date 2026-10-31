@@ -311,6 +311,21 @@
     </div>
   </section>
 
+  <section class="card" id="sec-detection">
+    <div class="card-head">
+      <h2>Detecção por modelos treinados fora</h2>
+      <p>Detectores treinados no corpus do trabalho anterior (fake news humanas contra as do Sabiá-3, na divisão 80/20 de lá) leem os textos dos nossos geradores, que nunca viram. Cada célula de gerador é a fração dos 20 textos marcada como máquina; as duas colunas antes dela medem o detector no teste do próprio trabalho anterior.</p>
+    </div>
+    <div class="card-body">
+      <div class="tablewrap"><table id="detection-table"></table></div>
+      <p class="note">Média dos classificadores de cada modo, sem o Naive Bayes, que marca texto demais como máquina e infla a detecção; ele está no detalhe. No fine-tuning direto não há classificador: a decisão sai da cabeça do BERT. <strong>Cada gerador tem só 20 textos</strong>, então um texto vale 5 pontos e diferenças de 5 a 10 pontos entre modos são ruído. O Llama é a <strong>rodada 2</strong>; o seletor de gerador acima mostra a rodada 1.</p>
+      <p class="note">O xgboost com features linguísticas detecta os 20 textos do Llama, mas isso depende de duas features do NILC-Metrix, sentenças por parágrafo e razão de entidades nomeadas, que parecem refletir também o formato dos textos humanos do corpus antigo: numa amostra de 400 pares de teste, 92% dos humanos não têm quebra de linha (18% nos do Sabiá-3). Sem essas duas features, a detecção do Llama cai para 80%.</p>
+      <details class="more"><summary>Cada classificador</summary>
+        <div class="inner tablewrap"><table id="detection-detail"></table></div>
+      </details>
+    </div>
+  </section>
+
 </main>
 
 <div id="tip" role="tooltip" aria-hidden="true"></div>
@@ -602,6 +617,49 @@
     table.appendChild(tbody);
   }
 
+  /* ---------- detecção ---------- */
+
+  function pct(value, digits) {
+    return (value * 100).toFixed(digits) + "%";
+  }
+
+  function renderDetection() {
+    var c = payload.classification;
+    var sec = document.getElementById("sec-detection");
+    if (!c || !c.modes || !c.modes.length) {
+      sec.hidden = true;
+      return;
+    }
+    var gens = c.generators;
+    var headers = ["Família", "Modo", "Acurácia no teste antigo", "Falso positivo"]
+      .concat(gens.map(function (g) { return g.label; }));
+    var numeric = headers.map(function (_, i) { return i >= 2; });
+    var words = headers.map(function (_, i) { return i < 2; });
+
+    renderTable(
+      "detection-table", headers,
+      c.modes.map(function (m) {
+        return [m.family, m.label, pct(m.mean.prior_accuracy, 2), pct(m.mean.false_positive_rate, 1)]
+          .concat(gens.map(function (g) { return pct(m.mean.detection[g.key], 0); }));
+      }),
+      numeric, null, words);
+
+    var detail = [];
+    c.modes.forEach(function (m) {
+      Object.keys(m.classifiers).forEach(function (name) {
+        var r = m.classifiers[name];
+        detail.push([m.family + " · " + m.label, name, pct(r.prior_accuracy, 2), pct(r.false_positive_rate, 1)]
+          .concat(gens.map(function (g) { return pct(r.detection[g.key], 0); })));
+      });
+    });
+    var dheaders = headers.slice(1);
+    dheaders[0] = "Modo";
+    dheaders.splice(1, 0, "Classificador");
+    var dnumeric = dheaders.map(function (_, i) { return i >= 2; });
+    var dwords = dheaders.map(function (_, i) { return i < 2; });
+    renderTable("detection-detail", dheaders, detail, dnumeric, null, dwords);
+  }
+
   /* ---------- cabeçalho ---------- */
 
   function renderStats() {
@@ -705,6 +763,7 @@
       "atualizado em " + (payload.built_at || "").replace("T", " ").slice(0, 16);
     fillGenerators();
     selectGenerator(0);
+    renderDetection();
     wireTooltip();
   }
 

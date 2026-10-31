@@ -508,6 +508,49 @@ The fine-tuned encoder has already seen the training texts of its fold, so the
 classifiers' training embeddings are more separable than the test ones; the
 test is never seen by it.
 
+##### Results
+
+Detection rate per generator (share of its 20 texts flagged as machine), with the
+detector's accuracy and false-positive rate on the prior work's own test set
+(1,079 human + 1,079 Sabiá-3 documents). Each row is the mean over the five
+classifiers other than Naive Bayes, which flags too much text as machine (7–19%
+false positives in several modes) and inflates detection; the fine-tuning rows
+have no classifier, the BERT head decides. Per-classifier numbers are in the
+result files and on the [page](docs/analysis.html).
+
+| Mode | Prior test acc. | False pos. | GPT-4.1-mini | Claude Sonnet 4.5 | Qwen3 32B | Llama 3.1 8B (r2) |
+|---|---:|---:|---:|---:|---:|---:|
+| Linguistic · linguistic features | 99.06% | 0.6% | 100% | 94% | 100% | 64% |
+| Frozen embedding · BERTimbau | 98.29% | 2.4% | 100% | 95% | 100% | 74% |
+| Frozen embedding · mBERT | 96.75% | 4.3% | 100% | 86% | 95% | 73% |
+| Combined · BERTimbau + linguistic | 99.66% | 0.2% | 100% | 97% | 100% | 76% |
+| Combined · mBERT + linguistic | 99.45% | 0.3% | 100% | 94% | 100% | 79% |
+| Text · TF-IDF + linguistic | 99.02% | 0.6% | 100% | 91% | 99% | 59% |
+| Text · TF-IDF | 98.55% | 1.1% | 98% | 96% | 98% | 48% |
+| Text · BoW + linguistic | 99.33% | 0.4% | 100% | 93% | 100% | 62% |
+| Text · BoW | 98.55% | 1.3% | 99% | 91% | 98% | 43% |
+| Fine-tuning · BERTimbau (BERT head) | 99.91% | 0.1% | 100% | 95% | 100% | 65% |
+| Fine-tuning · mBERT (BERT head) | 99.77% | 0.3% | 100% | 95% | 100% | 65% |
+| Fine-tuned `[CLS]` · BERTimbau | 99.92% | 0.1% | 100% | 95% | 100% | 67% |
+| Fine-tuned `[CLS]` · mBERT | 99.80% | 0.2% | 100% | 95% | 100% | 65% |
+
+How to read it:
+
+- Qwen3 32B and GPT-4.1-mini are detected almost perfectly everywhere; Claude Sonnet
+  4.5 loses about one text in twenty. Llama 3.1 8B (round 2) is the only generator
+  that separates the detectors.
+- Fine-tuning raises the prior test accuracy (0.97–0.98 → 0.998–0.999) but not the
+  Llama detection (65–67%, against 73–74% for the frozen encoders). Over the
+  fine-tuned `[CLS]` the classifier no longer matters: all six give the same Llama
+  rate within one text.
+- Each generator has only 20 texts, so one text is 5 points and gaps of 5–10 points
+  between modes are noise.
+- XGBoost with the linguistic features flags all 20 Llama texts, in every mode that
+  uses them. It leans on two NILC-Metrix features, sentences per paragraph and the
+  named-entity ratio, which seem to reflect the format of the prior human texts
+  (92% of the human test texts have no line break, against 18% of Sabiá-3's, in a
+  sample of 400 pairs). Without those two, Llama detection falls to 80%.
+
 ### Page (GitHub Pages)
 
 `docs/` is published at <https://pedrest15.github.io/expanded_fake_news_corpus/> and shows
