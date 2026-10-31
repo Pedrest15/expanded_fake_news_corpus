@@ -1,7 +1,7 @@
 {
  "corpus": "FakeGen.BR",
  "experiment": "paper_replication",
- "built_at": "2026-10-31T13:04:14-03:00",
+ "built_at": "2026-10-31T16:06:29-03:00",
  "generators": [
   {
    "model": "openai/gpt-4.1-mini-2025-04-14",
@@ -8814,46 +8814,46 @@
   {
    "model": "ollama/llama3.1:8b",
    "label": "llama3.1:8b",
-   "analysis_dir": "data/analysis/paper_replication/llama3.1_8b",
+   "analysis_dir": "data/analysis/paper_replication/llama3.1_8b_r2",
    "syllables": {
     "metrics": [
      {
       "metric": "syllables_per_sentence",
       "label": "Sílabas por sentença",
-      "human_mean": 43.479,
-      "machine_mean": 54.462,
-      "cohens_d": -0.704,
-      "p_value": 0.005545667315244056,
+      "human_mean": 43.58,
+      "machine_mean": 52.53,
+      "cohens_d": -0.634,
+      "p_value": 0.0055604599321374135,
       "effect_size": "medium"
      },
      {
       "metric": "syllables_per_word",
       "label": "Sílabas por palavra",
-      "human_mean": 2.206,
-      "machine_mean": 2.236,
-      "cohens_d": -0.225,
-      "p_value": 0.5398170365829753,
+      "human_mean": 2.198,
+      "machine_mean": 2.246,
+      "cohens_d": -0.356,
+      "p_value": 0.33691523838231996,
       "effect_size": "small"
      }
     ],
     "by_group": {
-     "human": 19,
-     "machine": 19
+     "human": 20,
+     "machine": 20
     },
     "by_dataset": [
      {
       "dataset": "fakebr_human",
       "label": "Fake.br · humano",
-      "documents": 9,
-      "words": 1997,
-      "syllables_per_word": 2.174
+      "documents": 10,
+      "words": 2175,
+      "syllables_per_word": 2.163
      },
      {
       "dataset": "fakebr_machine",
       "label": "Fake.br · máquina",
-      "documents": 9,
-      "words": 6342,
-      "syllables_per_word": 2.251
+      "documents": 10,
+      "words": 6659,
+      "syllables_per_word": 2.233
      },
      {
       "dataset": "faketruebr_human",
@@ -8866,8 +8866,8 @@
       "dataset": "faketruebr_machine",
       "label": "FakeTrueBR · máquina",
       "documents": 10,
-      "words": 2423,
-      "syllables_per_word": 2.22
+      "words": 3149,
+      "syllables_per_word": 2.254
      }
     ]
    },
@@ -8876,19 +8876,19 @@
      {
       "metric": "mattr",
       "label": "MATTR (janela de 50 palavras)",
-      "human_mean": 0.812,
-      "machine_mean": 0.792,
-      "cohens_d": 0.512,
-      "p_value": 0.17926166093995222,
-      "effect_size": "medium"
+      "human_mean": 0.813,
+      "machine_mean": 0.8,
+      "cohens_d": 0.361,
+      "p_value": 0.19881342637773858,
+      "effect_size": "small"
      },
      {
       "metric": "type_token_ratio",
       "label": "Tipo/ocorrência bruta",
-      "human_mean": 0.631,
-      "machine_mean": 0.493,
-      "cohens_d": 1.364,
-      "p_value": 0.00020912306549351892,
+      "human_mean": 0.632,
+      "machine_mean": 0.48,
+      "cohens_d": 1.68,
+      "p_value": 4.16576035126058e-05,
       "effect_size": "large"
      }
     ],
@@ -8896,18 +8896,18 @@
      {
       "dataset": "fakebr_human",
       "label": "Fake.br · humano",
-      "documents": 9,
-      "tokens": 2021,
+      "documents": 10,
+      "tokens": 2203,
       "mattr": 0.826,
-      "type_token_ratio": 0.628
+      "type_token_ratio": 0.63
      },
      {
       "dataset": "fakebr_machine",
       "label": "Fake.br · máquina",
-      "documents": 9,
-      "tokens": 6399,
-      "mattr": 0.793,
-      "type_token_ratio": 0.43
+      "documents": 10,
+      "tokens": 6731,
+      "mattr": 0.812,
+      "type_token_ratio": 0.449
      },
      {
       "dataset": "faketruebr_human",
@@ -8921,1113 +8921,2640 @@
       "dataset": "faketruebr_machine",
       "label": "FakeTrueBR · máquina",
       "documents": 10,
-      "tokens": 2454,
-      "mattr": 0.791,
-      "type_token_ratio": 0.55
+      "tokens": 3187,
+      "mattr": 0.789,
+      "type_token_ratio": 0.512
      }
     ]
    },
    "liwc": {
     "categories": [
      {
-      "metric": "prep (Prepositions)",
-      "label": "prep",
-      "human_mean": 21.091,
-      "machine_mean": 24.575,
-      "cohens_d": -1.158,
-      "p_value": 0.004221935451370102,
-      "effect_size": "large",
-      "name": "Prepositions",
-      "q_value": 0.18652747265387273,
-      "significant": false
-     },
-     {
       "metric": "work (Work)",
       "label": "work",
-      "human_mean": 3.125,
-      "machine_mean": 5.824,
-      "cohens_d": -1.078,
-      "p_value": 0.005041283044699263,
+      "human_mean": 3.181,
+      "machine_mean": 5.057,
+      "cohens_d": -0.899,
+      "p_value": 0.009752142781708035,
       "effect_size": "large",
       "name": "Work",
-      "q_value": 0.18652747265387273,
+      "q_value": 0.3608292829231973,
       "significant": false
      },
      {
-      "metric": "see (See)",
-      "label": "see",
-      "human_mean": 1.333,
-      "machine_mean": 0.551,
-      "cohens_d": 0.792,
-      "p_value": 0.07722167895684015,
-      "effect_size": "medium",
-      "name": "See",
-      "q_value": 0.44596970975472694,
-      "significant": false
-     },
-     {
-      "metric": "you (You)",
-      "label": "you",
-      "human_mean": 1.191,
-      "machine_mean": 0.488,
-      "cohens_d": 0.788,
-      "p_value": 0.05739458150897888,
-      "effect_size": "medium",
-      "name": "You",
-      "q_value": 0.44596970975472694,
-      "significant": false
-     },
-     {
-      "metric": "compare (Comparisons)",
-      "label": "compare",
-      "human_mean": 1.431,
-      "machine_mean": 2.34,
-      "cohens_d": -0.766,
-      "p_value": 0.02523344439754373,
-      "effect_size": "medium",
-      "name": "Comparisons",
-      "q_value": 0.44596970975472694,
-      "significant": false
-     },
-     {
-      "metric": "quant (Quantifiers)",
-      "label": "quant",
-      "human_mean": 1.433,
-      "machine_mean": 0.895,
-      "cohens_d": 0.754,
-      "p_value": 0.08491255015746219,
-      "effect_size": "medium",
-      "name": "Quantifiers",
-      "q_value": 0.44596970975472694,
-      "significant": false
-     },
-     {
-      "metric": "article (Articles)",
-      "label": "article",
-      "human_mean": 15.309,
-      "machine_mean": 17.44,
-      "cohens_d": -0.725,
-      "p_value": 0.09039926549082303,
-      "effect_size": "medium",
-      "name": "Articles",
-      "q_value": 0.44596970975472694,
-      "significant": false
-     },
-     {
-      "metric": "percept (Perceptual Processes)",
-      "label": "percept",
-      "human_mean": 2.363,
-      "machine_mean": 1.41,
-      "cohens_d": 0.693,
-      "p_value": 0.07486844485288632,
-      "effect_size": "medium",
-      "name": "Perceptual Processes",
-      "q_value": 0.44596970975472694,
-      "significant": false
-     },
-     {
-      "metric": "space (Space)",
-      "label": "space",
-      "human_mean": 5.115,
-      "machine_mean": 6.577,
-      "cohens_d": -0.689,
-      "p_value": 0.0330713067273506,
-      "effect_size": "medium",
-      "name": "Space",
-      "q_value": 0.44596970975472694,
-      "significant": false
-     },
-     {
-      "metric": "social (Social)",
-      "label": "social",
-      "human_mean": 7.903,
-      "machine_mean": 5.607,
-      "cohens_d": 0.669,
-      "p_value": 0.06586082652818358,
-      "effect_size": "medium",
-      "name": "Social",
-      "q_value": 0.44596970975472694,
-      "significant": false
-     },
-     {
-      "metric": "friend (Friends)",
-      "label": "friend",
-      "human_mean": 0.604,
-      "machine_mean": 0.28,
-      "cohens_d": 0.632,
-      "p_value": 0.31271069361899284,
-      "effect_size": "medium",
-      "name": "Friends",
-      "q_value": 0.6934097895621945,
-      "significant": false
-     },
-     {
-      "metric": "affect (Affect)",
-      "label": "affect",
-      "human_mean": 4.532,
-      "machine_mean": 3.381,
-      "cohens_d": 0.595,
-      "p_value": 0.10833740252317324,
-      "effect_size": "medium",
-      "name": "Affect",
-      "q_value": 0.5010604866696763,
-      "significant": false
-     },
-     {
-      "metric": "informal (Informal Language)",
-      "label": "informal",
-      "human_mean": 1.068,
-      "machine_mean": 0.405,
-      "cohens_d": 0.591,
-      "p_value": 0.03764788236534467,
-      "effect_size": "medium",
-      "name": "Informal Language",
-      "q_value": 0.44596970975472694,
-      "significant": false
-     },
-     {
-      "metric": "dictionary_coverage",
-      "label": "dictionary_coverage",
-      "human_mean": 69.093,
-      "machine_mean": 72.317,
-      "cohens_d": -0.555,
-      "p_value": 0.1989429808662312,
-      "effect_size": "medium",
-      "name": "",
-      "q_value": 0.588336028241406,
-      "significant": false
-     },
-     {
-      "metric": "body (Body)",
-      "label": "body",
-      "human_mean": 0.458,
-      "machine_mean": 0.14,
-      "cohens_d": 0.55,
-      "p_value": 0.27271373033749124,
-      "effect_size": "medium",
-      "name": "Body",
-      "q_value": 0.6726938681658118,
-      "significant": false
-     },
-     {
-      "metric": "negate (Negations)",
-      "label": "negate",
-      "human_mean": 1.226,
-      "machine_mean": 0.821,
-      "cohens_d": 0.549,
-      "p_value": 0.17880929194292317,
-      "effect_size": "medium",
-      "name": "Negations",
-      "q_value": 0.5513286501573464,
-      "significant": false
-     },
-     {
-      "metric": "netspeak (Netspeak)",
-      "label": "netspeak",
-      "human_mean": 0.794,
-      "machine_mean": 0.225,
-      "cohens_d": 0.547,
-      "p_value": 0.047401228617510845,
-      "effect_size": "medium",
-      "name": "Netspeak",
-      "q_value": 0.44596970975472694,
-      "significant": false
-     },
-     {
-      "metric": "verb (Verbs)",
-      "label": "verb",
-      "human_mean": 9.832,
-      "machine_mean": 8.478,
-      "cohens_d": 0.529,
-      "p_value": 0.16101840231873044,
-      "effect_size": "medium",
-      "name": "Verbs",
-      "q_value": 0.5513286501573464,
-      "significant": false
-     },
-     {
-      "metric": "cause (Causal)",
-      "label": "cause",
-      "human_mean": 2.248,
-      "machine_mean": 2.976,
-      "cohens_d": -0.52,
-      "p_value": 0.1442744322628964,
-      "effect_size": "medium",
-      "name": "Causal",
-      "q_value": 0.5513286501573464,
-      "significant": false
-     },
-     {
-      "metric": "tentat (Tentative)",
-      "label": "tentat",
-      "human_mean": 1.806,
-      "machine_mean": 1.315,
-      "cohens_d": 0.495,
-      "p_value": 0.17880929194292317,
-      "effect_size": "small",
-      "name": "Tentative",
-      "q_value": 0.5513286501573464,
-      "significant": false
-     },
-     {
-      "metric": "adj (Adjectives)",
-      "label": "adj",
-      "human_mean": 2.668,
-      "machine_mean": 3.426,
-      "cohens_d": -0.495,
-      "p_value": 0.20934297667674906,
-      "effect_size": "small",
-      "name": "Adjectives",
-      "q_value": 0.588336028241406,
-      "significant": false
-     },
-     {
-      "metric": "home (Home)",
-      "label": "home",
-      "human_mean": 0.069,
-      "machine_mean": 0.221,
-      "cohens_d": -0.488,
-      "p_value": 0.16321614052011435,
-      "effect_size": "small",
-      "name": "Home",
-      "q_value": 0.5513286501573464,
+      "metric": "prep (Prepositions)",
+      "label": "prep",
+      "human_mean": 21.233,
+      "machine_mean": 24.116,
+      "cohens_d": -0.855,
+      "p_value": 0.02944088441208284,
+      "effect_size": "large",
+      "name": "Prepositions",
+      "q_value": 0.4601358147708992,
       "significant": false
      },
      {
       "metric": "assent (Assent)",
       "label": "assent",
-      "human_mean": 0.194,
-      "machine_mean": 0.077,
-      "cohens_d": 0.486,
-      "p_value": 0.3391008109517769,
-      "effect_size": "small",
+      "human_mean": 0.184,
+      "machine_mean": 0.015,
+      "cohens_d": 0.814,
+      "p_value": 0.04006620177880384,
+      "effect_size": "large",
       "name": "Assent",
-      "q_value": 0.6934097895621945,
+      "q_value": 0.4601358147708992,
       "significant": false
      },
      {
-      "metric": "posemo (Positive Emotions)",
-      "label": "posemo",
-      "human_mean": 2.474,
-      "machine_mean": 1.766,
-      "cohens_d": 0.48,
-      "p_value": 0.047069155416980424,
-      "effect_size": "small",
-      "name": "Positive Emotions",
-      "q_value": 0.44596970975472694,
+      "metric": "see (See)",
+      "label": "see",
+      "human_mean": 1.266,
+      "machine_mean": 0.507,
+      "cohens_d": 0.767,
+      "p_value": 0.09822962540354441,
+      "effect_size": "medium",
+      "name": "See",
+      "q_value": 0.4601358147708992,
       "significant": false
      },
      {
-      "metric": "function (Function Words)",
-      "label": "function",
-      "human_mean": 45.643,
-      "machine_mean": 47.681,
-      "cohens_d": -0.458,
-      "p_value": 0.17001577679662316,
-      "effect_size": "small",
-      "name": "Function Words",
-      "q_value": 0.5513286501573464,
+      "metric": "informal (Informal Language)",
+      "label": "informal",
+      "human_mean": 1.041,
+      "machine_mean": 0.239,
+      "cohens_d": 0.744,
+      "p_value": 0.0013467021202644472,
+      "effect_size": "medium",
+      "name": "Informal Language",
+      "q_value": 0.09965595689956909,
+      "significant": false
+     },
+     {
+      "metric": "article (Articles)",
+      "label": "article",
+      "human_mean": 15.315,
+      "machine_mean": 17.243,
+      "cohens_d": -0.71,
+      "p_value": 0.06786818721248442,
+      "effect_size": "medium",
+      "name": "Articles",
+      "q_value": 0.4601358147708992,
+      "significant": false
+     },
+     {
+      "metric": "social (Social)",
+      "label": "social",
+      "human_mean": 8.093,
+      "machine_mean": 5.531,
+      "cohens_d": 0.706,
+      "p_value": 0.03603961127766174,
+      "effect_size": "medium",
+      "name": "Social",
+      "q_value": 0.4601358147708992,
+      "significant": false
+     },
+     {
+      "metric": "percept (Perceptual Processes)",
+      "label": "percept",
+      "human_mean": 2.271,
+      "machine_mean": 1.357,
+      "cohens_d": 0.649,
+      "p_value": 0.07419814096923526,
+      "effect_size": "medium",
+      "name": "Perceptual Processes",
+      "q_value": 0.4601358147708992,
+      "significant": false
+     },
+     {
+      "metric": "cause (Causal)",
+      "label": "cause",
+      "human_mean": 2.322,
+      "machine_mean": 3.351,
+      "cohens_d": -0.64,
+      "p_value": 0.10744537987188106,
+      "effect_size": "medium",
+      "name": "Causal",
+      "q_value": 0.4601358147708992,
+      "significant": false
+     },
+     {
+      "metric": "friend (Friends)",
+      "label": "friend",
+      "human_mean": 0.654,
+      "machine_mean": 0.335,
+      "cohens_d": 0.584,
+      "p_value": 0.27848327652836646,
+      "effect_size": "medium",
+      "name": "Friends",
+      "q_value": 0.639774211429361,
+      "significant": false
+     },
+     {
+      "metric": "netspeak (Netspeak)",
+      "label": "netspeak",
+      "human_mean": 0.754,
+      "machine_mean": 0.168,
+      "cohens_d": 0.58,
+      "p_value": 0.030095562548767517,
+      "effect_size": "medium",
+      "name": "Netspeak",
+      "q_value": 0.4601358147708992,
+      "significant": false
+     },
+     {
+      "metric": "you (You)",
+      "label": "you",
+      "human_mean": 1.185,
+      "machine_mean": 0.642,
+      "cohens_d": 0.557,
+      "p_value": 0.13109396993567937,
+      "effect_size": "medium",
+      "name": "You",
+      "q_value": 0.4601358147708992,
+      "significant": false
+     },
+     {
+      "metric": "quant (Quantifiers)",
+      "label": "quant",
+      "human_mean": 1.414,
+      "machine_mean": 1.016,
+      "cohens_d": 0.526,
+      "p_value": 0.1439083271098339,
+      "effect_size": "medium",
+      "name": "Quantifiers",
+      "q_value": 0.4630094002664221,
       "significant": false
      },
      {
       "metric": "leisure (Leisure)",
       "label": "leisure",
-      "human_mean": 1.594,
-      "machine_mean": 0.899,
-      "cohens_d": 0.435,
-      "p_value": 0.25966732008078597,
-      "effect_size": "small",
+      "human_mean": 1.515,
+      "machine_mean": 0.695,
+      "cohens_d": 0.517,
+      "p_value": 0.11104410525142981,
+      "effect_size": "medium",
       "name": "Leisure",
-      "q_value": 0.6625993684820056,
+      "q_value": 0.4601358147708992,
       "significant": false
      },
      {
-      "metric": "shehe (SheHe)",
-      "label": "shehe",
-      "human_mean": 7.98,
-      "machine_mean": 9.073,
-      "cohens_d": -0.422,
-      "p_value": 0.21466314543943188,
-      "effect_size": "small",
-      "name": "SheHe",
-      "q_value": 0.588336028241406,
+      "metric": "compare (Comparisons)",
+      "label": "compare",
+      "human_mean": 1.439,
+      "machine_mean": 2.041,
+      "cohens_d": -0.514,
+      "p_value": 0.1326273659620714,
+      "effect_size": "medium",
+      "name": "Comparisons",
+      "q_value": 0.4601358147708992,
       "significant": false
      },
      {
-      "metric": "power (Power)",
-      "label": "power",
-      "human_mean": 3.321,
-      "machine_mean": 4.495,
-      "cohens_d": -0.419,
-      "p_value": 0.1217040977341724,
-      "effect_size": "small",
-      "name": "Power",
-      "q_value": 0.5297707783722798,
-      "significant": false
-     },
-     {
-      "metric": "we (We)",
-      "label": "we",
-      "human_mean": 0.5,
-      "machine_mean": 0.213,
-      "cohens_d": 0.413,
-      "p_value": 0.9740616233352632,
-      "effect_size": "small",
-      "name": "We",
-      "q_value": 0.9874049332439655,
-      "significant": false
-     },
-     {
-      "metric": "focusfuture (Future Focus)",
-      "label": "focusfuture",
-      "human_mean": 1.12,
-      "machine_mean": 0.69,
-      "cohens_d": 0.396,
-      "p_value": 0.7206955325766651,
-      "effect_size": "small",
-      "name": "Future Focus",
-      "q_value": 0.929629284738363,
-      "significant": false
-     },
-     {
-      "metric": "reward (Reward)",
-      "label": "reward",
-      "human_mean": 2.767,
-      "machine_mean": 2.22,
-      "cohens_d": 0.39,
-      "p_value": 0.22564703755016402,
-      "effect_size": "small",
-      "name": "Reward",
-      "q_value": 0.5963528849540048,
-      "significant": false
-     },
-     {
-      "metric": "achieve (Achievement)",
-      "label": "achieve",
-      "human_mean": 0.966,
-      "machine_mean": 1.335,
-      "cohens_d": -0.372,
-      "p_value": 0.41223378196929694,
-      "effect_size": "small",
-      "name": "Achievement",
-      "q_value": 0.7626324966431994,
-      "significant": false
-     },
-     {
-      "metric": "hear (Hear)",
-      "label": "hear",
-      "human_mean": 0.674,
-      "machine_mean": 0.415,
-      "cohens_d": 0.369,
-      "p_value": 0.9026061880900491,
-      "effect_size": "small",
-      "name": "Hear",
-      "q_value": 0.9822479105685827,
-      "significant": false
-     },
-     {
-      "metric": "motion (Motion)",
-      "label": "motion",
-      "human_mean": 4.456,
-      "machine_mean": 3.695,
-      "cohens_d": 0.346,
-      "p_value": 0.3501842790705516,
-      "effect_size": "small",
-      "name": "Motion",
-      "q_value": 0.6934097895621945,
-      "significant": false
-     },
-     {
-      "metric": "death (Death)",
-      "label": "death",
-      "human_mean": 0.335,
-      "machine_mean": 0.16,
-      "cohens_d": 0.342,
-      "p_value": 0.9709237754485716,
-      "effect_size": "small",
-      "name": "Death",
-      "q_value": 0.9874049332439655,
-      "significant": false
-     },
-     {
-      "metric": "swear (Swear)",
-      "label": "swear",
-      "human_mean": 0.025,
-      "machine_mean": 0.0,
-      "cohens_d": 0.333,
-      "p_value": 0.3434510768344097,
-      "effect_size": "small",
-      "name": "Swear",
-      "q_value": 0.6934097895621945,
-      "significant": false
-     },
-     {
-      "metric": "ipron (Impersonal Pronouns)",
-      "label": "ipron",
-      "human_mean": 13.74,
-      "machine_mean": 14.729,
-      "cohens_d": -0.333,
-      "p_value": 0.30686792369038496,
-      "effect_size": "small",
-      "name": "Impersonal Pronouns",
-      "q_value": 0.6934097895621945,
-      "significant": false
-     },
-     {
-      "metric": "ppron (Personal Pronouns)",
-      "label": "ppron",
-      "human_mean": 10.404,
-      "machine_mean": 11.212,
-      "cohens_d": -0.32,
-      "p_value": 0.3577374699161686,
-      "effect_size": "small",
-      "name": "Personal Pronouns",
-      "q_value": 0.6934097895621945,
-      "significant": false
-     },
-     {
-      "metric": "negemo (Negative Emotions)",
-      "label": "negemo",
-      "human_mean": 2.007,
-      "machine_mean": 1.558,
-      "cohens_d": 0.304,
-      "p_value": 0.7150112616987804,
-      "effect_size": "small",
-      "name": "Negative Emotions",
-      "q_value": 0.929629284738363,
-      "significant": false
-     },
-     {
-      "metric": "affiliation (Affiliation)",
-      "label": "affiliation",
-      "human_mean": 1.792,
-      "machine_mean": 1.411,
-      "cohens_d": 0.303,
-      "p_value": 0.7257977150353494,
-      "effect_size": "small",
-      "name": "Affiliation",
-      "q_value": 0.929629284738363,
-      "significant": false
-     },
-     {
-      "metric": "interrog (Interrogatives)",
-      "label": "interrog",
-      "human_mean": 3.298,
-      "machine_mean": 3.714,
-      "cohens_d": -0.298,
-      "p_value": 0.33533345431670925,
-      "effect_size": "small",
-      "name": "Interrogatives",
-      "q_value": 0.6934097895621945,
+      "metric": "posemo (Positive Emotions)",
+      "label": "posemo",
+      "human_mean": 2.483,
+      "machine_mean": 1.827,
+      "cohens_d": 0.514,
+      "p_value": 0.06781657681198607,
+      "effect_size": "medium",
+      "name": "Positive Emotions",
+      "q_value": 0.4601358147708992,
       "significant": false
      },
      {
       "metric": "male (Male)",
       "label": "male",
-      "human_mean": 1.387,
-      "machine_mean": 0.994,
-      "cohens_d": 0.291,
-      "p_value": 0.7688471023951964,
-      "effect_size": "small",
+      "human_mean": 1.424,
+      "machine_mean": 0.759,
+      "cohens_d": 0.512,
+      "p_value": 0.18811350292575524,
+      "effect_size": "medium",
       "name": "Male",
-      "q_value": 0.929629284738363,
+      "q_value": 0.5568159686602355,
       "significant": false
      },
      {
-      "metric": "bio (Biological Processes)",
-      "label": "bio",
-      "human_mean": 1.312,
-      "machine_mean": 1.061,
-      "cohens_d": 0.276,
-      "p_value": 0.758921278154969,
+      "metric": "function (Function Words)",
+      "label": "function",
+      "human_mean": 45.701,
+      "machine_mean": 47.96,
+      "cohens_d": -0.511,
+      "p_value": 0.11985556595924766,
+      "effect_size": "medium",
+      "name": "Function Words",
+      "q_value": 0.4601358147708992,
+      "significant": false
+     },
+     {
+      "metric": "shehe (SheHe)",
+      "label": "shehe",
+      "human_mean": 8.006,
+      "machine_mean": 9.225,
+      "cohens_d": -0.51,
+      "p_value": 0.11985556595924766,
+      "effect_size": "medium",
+      "name": "SheHe",
+      "q_value": 0.4601358147708992,
+      "significant": false
+     },
+     {
+      "metric": "body (Body)",
+      "label": "body",
+      "human_mean": 0.435,
+      "machine_mean": 0.149,
+      "cohens_d": 0.495,
+      "p_value": 0.3488700169563973,
       "effect_size": "small",
-      "name": "Biological Processes",
-      "q_value": 0.929629284738363,
+      "name": "Body",
+      "q_value": 0.6977400339127946,
       "significant": false
      },
      {
-      "metric": "drives (Drives)",
-      "label": "drives",
-      "human_mean": 8.86,
-      "machine_mean": 9.682,
-      "cohens_d": -0.266,
-      "p_value": 0.3654456999043998,
+      "metric": "we (We)",
+      "label": "we",
+      "human_mean": 0.475,
+      "machine_mean": 0.157,
+      "cohens_d": 0.49,
+      "p_value": 0.8822542161153425,
       "effect_size": "small",
-      "name": "Drives",
-      "q_value": 0.6934097895621945,
+      "name": "We",
+      "q_value": 0.9860593559190374,
       "significant": false
      },
      {
-      "metric": "money (Money)",
-      "label": "money",
-      "human_mean": 1.347,
-      "machine_mean": 1.836,
-      "cohens_d": -0.264,
-      "p_value": 0.3149984390468742,
+      "metric": "affect (Affect)",
+      "label": "affect",
+      "human_mean": 4.731,
+      "machine_mean": 3.737,
+      "cohens_d": 0.483,
+      "p_value": 0.1805773768084653,
       "effect_size": "small",
-      "name": "Money",
-      "q_value": 0.6934097895621945,
+      "name": "Affect",
+      "q_value": 0.5567802451594347,
       "significant": false
      },
      {
-      "metric": "sad (Sad)",
-      "label": "sad",
-      "human_mean": 0.467,
-      "machine_mean": 0.29,
-      "cohens_d": 0.257,
-      "p_value": 0.1462715378126006,
+      "metric": "negate (Negations)",
+      "label": "negate",
+      "human_mean": 1.271,
+      "machine_mean": 0.902,
+      "cohens_d": 0.469,
+      "p_value": 0.23319747861074036,
       "effect_size": "small",
-      "name": "Sad",
-      "q_value": 0.5513286501573464,
+      "name": "Negations",
+      "q_value": 0.616307622042671,
       "significant": false
      },
      {
-      "metric": "health (Health)",
-      "label": "health",
-      "human_mean": 0.375,
-      "machine_mean": 0.527,
-      "cohens_d": -0.231,
-      "p_value": 0.0810575936837481,
+      "metric": "dictionary_coverage",
+      "label": "dictionary_coverage",
+      "human_mean": 69.415,
+      "machine_mean": 72.317,
+      "cohens_d": -0.465,
+      "p_value": 0.21840551261012597,
       "effect_size": "small",
-      "name": "Health",
-      "q_value": 0.44596970975472694,
+      "name": "",
+      "q_value": 0.5985928864129378,
       "significant": false
      },
      {
-      "metric": "i (I)",
-      "label": "i",
-      "human_mean": 0.213,
-      "machine_mean": 0.117,
-      "cohens_d": 0.228,
-      "p_value": 0.8860194259894867,
+      "metric": "space (Space)",
+      "label": "space",
+      "human_mean": 5.258,
+      "machine_mean": 6.256,
+      "cohens_d": -0.451,
+      "p_value": 0.13679713412107813,
       "effect_size": "small",
-      "name": "I",
-      "q_value": 0.9822479105685827,
-      "significant": false
-     },
-     {
-      "metric": "family (Family)",
-      "label": "family",
-      "human_mean": 0.185,
-      "machine_mean": 0.287,
-      "cohens_d": -0.216,
-      "p_value": 0.062354111978581685,
-      "effect_size": "small",
-      "name": "Family",
-      "q_value": 0.44596970975472694,
-      "significant": false
-     },
-     {
-      "metric": "filler (Filler Words)",
-      "label": "filler",
-      "human_mean": 0.055,
-      "machine_mean": 0.096,
-      "cohens_d": -0.216,
-      "p_value": 0.665933582573772,
-      "effect_size": "small",
-      "name": "Filler Words",
-      "q_value": 0.929629284738363,
-      "significant": false
-     },
-     {
-      "metric": "insight (Insight)",
-      "label": "insight",
-      "human_mean": 1.287,
-      "machine_mean": 1.108,
-      "cohens_d": 0.198,
-      "p_value": 0.7476353251362173,
-      "effect_size": "negligible",
-      "name": "Insight",
-      "q_value": 0.929629284738363,
-      "significant": false
-     },
-     {
-      "metric": "ingest (Ingest)",
-      "label": "ingest",
-      "human_mean": 0.49,
-      "machine_mean": 0.388,
-      "cohens_d": 0.196,
-      "p_value": 0.8913826842117274,
-      "effect_size": "negligible",
-      "name": "Ingest",
-      "q_value": 0.9822479105685827,
-      "significant": false
-     },
-     {
-      "metric": "sexual (Sexual)",
-      "label": "sexual",
-      "human_mean": 0.12,
-      "machine_mean": 0.047,
-      "cohens_d": 0.196,
-      "p_value": 0.6175064399532864,
-      "effect_size": "negligible",
-      "name": "Sexual",
-      "q_value": 0.929629284738363,
-      "significant": false
-     },
-     {
-      "metric": "anx (Anx)",
-      "label": "anx",
-      "human_mean": 0.429,
-      "machine_mean": 0.334,
-      "cohens_d": 0.185,
-      "p_value": 1.0,
-      "effect_size": "negligible",
-      "name": "Anx",
-      "q_value": 1.0,
-      "significant": false
-     },
-     {
-      "metric": "time (Time)",
-      "label": "time",
-      "human_mean": 5.493,
-      "machine_mean": 5.067,
-      "cohens_d": 0.157,
-      "p_value": 0.5790997419539189,
-      "effect_size": "negligible",
-      "name": "Time",
-      "q_value": 0.929629284738363,
-      "significant": false
-     },
-     {
-      "metric": "they (They)",
-      "label": "they",
-      "human_mean": 1.858,
-      "machine_mean": 2.041,
-      "cohens_d": -0.152,
-      "p_value": 0.7927300942249003,
-      "effect_size": "negligible",
-      "name": "They",
-      "q_value": 0.929629284738363,
-      "significant": false
-     },
-     {
-      "metric": "anger (Anger)",
-      "label": "anger",
-      "human_mean": 0.516,
-      "machine_mean": 0.411,
-      "cohens_d": 0.141,
-      "p_value": 0.708054400144748,
-      "effect_size": "negligible",
-      "name": "Anger",
-      "q_value": 0.929629284738363,
-      "significant": false
-     },
-     {
-      "metric": "focuspast (Past Focus)",
-      "label": "focuspast",
-      "human_mean": 1.906,
-      "machine_mean": 1.701,
-      "cohens_d": 0.14,
-      "p_value": 0.7369979553590704,
-      "effect_size": "negligible",
-      "name": "Past Focus",
-      "q_value": 0.929629284738363,
-      "significant": false
-     },
-     {
-      "metric": "feel (Feel)",
-      "label": "feel",
-      "human_mean": 0.555,
-      "machine_mean": 0.462,
-      "cohens_d": 0.137,
-      "p_value": 0.8674484617393305,
-      "effect_size": "negligible",
-      "name": "Feel",
-      "q_value": 0.9822479105685827,
-      "significant": false
-     },
-     {
-      "metric": "relativ (Relativity)",
-      "label": "relativ",
-      "human_mean": 11.595,
-      "machine_mean": 12.108,
-      "cohens_d": -0.12,
-      "p_value": 0.5019153153059345,
-      "effect_size": "negligible",
-      "name": "Relativity",
-      "q_value": 0.8637612402939338,
-      "significant": false
-     },
-     {
-      "metric": "number (Numbers)",
-      "label": "number",
-      "human_mean": 2.584,
-      "machine_mean": 2.75,
-      "cohens_d": -0.12,
-      "p_value": 0.456545299798079,
-      "effect_size": "negligible",
-      "name": "Numbers",
-      "q_value": 0.8240085898794597,
-      "significant": false
-     },
-     {
-      "metric": "adverb (Adverbs)",
-      "label": "adverb",
-      "human_mean": 7.219,
-      "machine_mean": 7.506,
-      "cohens_d": -0.105,
-      "p_value": 0.7260858260602032,
-      "effect_size": "negligible",
-      "name": "Adverbs",
-      "q_value": 0.929629284738363,
-      "significant": false
-     },
-     {
-      "metric": "risk (Risk)",
-      "label": "risk",
-      "human_mean": 2.078,
-      "machine_mean": 2.202,
-      "cohens_d": -0.097,
-      "p_value": 0.5018217064773991,
-      "effect_size": "negligible",
-      "name": "Risk",
-      "q_value": 0.8637612402939338,
-      "significant": false
-     },
-     {
-      "metric": "female (Female)",
-      "label": "female",
-      "human_mean": 0.703,
-      "machine_mean": 0.553,
-      "cohens_d": 0.096,
-      "p_value": 0.7488421466115449,
-      "effect_size": "negligible",
-      "name": "Female",
-      "q_value": 0.929629284738363,
-      "significant": false
-     },
-     {
-      "metric": "nonflu (Nonfluencies)",
-      "label": "nonflu",
-      "human_mean": 0.061,
-      "machine_mean": 0.08,
-      "cohens_d": -0.092,
-      "p_value": 0.6547343115507807,
-      "effect_size": "negligible",
-      "name": "Nonfluencies",
-      "q_value": 0.929629284738363,
-      "significant": false
-     },
-     {
-      "metric": "certain (Certainty)",
-      "label": "certain",
-      "human_mean": 1.112,
-      "machine_mean": 1.028,
-      "cohens_d": 0.081,
-      "p_value": 0.769294006283941,
-      "effect_size": "negligible",
-      "name": "Certainty",
-      "q_value": 0.929629284738363,
-      "significant": false
-     },
-     {
-      "metric": "auxverb (Auxiliary Verbs)",
-      "label": "auxverb",
-      "human_mean": 4.597,
-      "machine_mean": 4.463,
-      "cohens_d": 0.076,
-      "p_value": 0.8040037057196653,
-      "effect_size": "negligible",
-      "name": "Auxiliary Verbs",
-      "q_value": 0.929629284738363,
-      "significant": false
-     },
-     {
-      "metric": "discrep (Discrepancies)",
-      "label": "discrep",
-      "human_mean": 1.741,
-      "machine_mean": 1.676,
-      "cohens_d": 0.058,
-      "p_value": 0.9185992052859592,
-      "effect_size": "negligible",
-      "name": "Discrepancies",
-      "q_value": 0.9833537665918702,
-      "significant": false
-     },
-     {
-      "metric": "conj (Conjunctions)",
-      "label": "conj",
-      "human_mean": 7.848,
-      "machine_mean": 7.755,
-      "cohens_d": 0.048,
-      "p_value": 0.9301995089382556,
-      "effect_size": "negligible",
-      "name": "Conjunctions",
-      "q_value": 0.9833537665918702,
-      "significant": false
-     },
-     {
-      "metric": "pronoun (Pronouns)",
-      "label": "pronoun",
-      "human_mean": 17.347,
-      "machine_mean": 17.505,
-      "cohens_d": -0.045,
-      "p_value": 0.599231866303024,
-      "effect_size": "negligible",
-      "name": "Pronouns",
-      "q_value": 0.929629284738363,
+      "name": "Space",
+      "q_value": 0.4601358147708992,
       "significant": false
      },
      {
       "metric": "cogproc (Cognitive Processes)",
       "label": "cogproc",
-      "human_mean": 8.997,
-      "machine_mean": 9.081,
-      "cohens_d": -0.033,
-      "p_value": 0.9534383827988425,
-      "effect_size": "negligible",
+      "human_mean": 9.185,
+      "machine_mean": 10.471,
+      "cohens_d": -0.445,
+      "p_value": 0.24474496351613373,
+      "effect_size": "small",
       "name": "Cognitive Processes",
-      "q_value": 0.9874049332439655,
+      "q_value": 0.6171795081543194,
+      "significant": false
+     },
+     {
+      "metric": "reward (Reward)",
+      "label": "reward",
+      "human_mean": 2.788,
+      "machine_mean": 2.231,
+      "cohens_d": 0.443,
+      "p_value": 0.19883449020829447,
+      "effect_size": "small",
+      "name": "Reward",
+      "q_value": 0.5659135490543766,
+      "significant": false
+     },
+     {
+      "metric": "death (Death)",
+      "label": "death",
+      "human_mean": 0.318,
+      "machine_mean": 0.107,
+      "cohens_d": 0.432,
+      "p_value": 0.7220671493039061,
+      "effect_size": "small",
+      "name": "Death",
+      "q_value": 0.932082820750955,
+      "significant": false
+     },
+     {
+      "metric": "achieve (Achievement)",
+      "label": "achieve",
+      "human_mean": 0.998,
+      "machine_mean": 1.401,
+      "cohens_d": -0.422,
+      "p_value": 0.3293362478971804,
+      "effect_size": "small",
+      "name": "Achievement",
+      "q_value": 0.6963109241254671,
+      "significant": false
+     },
+     {
+      "metric": "affiliation (Affiliation)",
+      "label": "affiliation",
+      "human_mean": 1.888,
+      "machine_mean": 1.388,
+      "cohens_d": 0.396,
+      "p_value": 0.4403207131398047,
+      "effect_size": "small",
+      "name": "Affiliation",
+      "q_value": 0.7765215513814513,
+      "significant": false
+     },
+     {
+      "metric": "ipron (Impersonal Pronouns)",
+      "label": "ipron",
+      "human_mean": 13.718,
+      "machine_mean": 14.975,
+      "cohens_d": -0.393,
+      "p_value": 0.379331935127312,
+      "effect_size": "small",
+      "name": "Impersonal Pronouns",
+      "q_value": 0.722385383061239,
+      "significant": false
+     },
+     {
+      "metric": "power (Power)",
+      "label": "power",
+      "human_mean": 3.58,
+      "machine_mean": 4.635,
+      "cohens_d": -0.388,
+      "p_value": 0.1134836596603835,
+      "effect_size": "small",
+      "name": "Power",
+      "q_value": 0.4601358147708992,
+      "significant": false
+     },
+     {
+      "metric": "nonflu (Nonfluencies)",
+      "label": "nonflu",
+      "human_mean": 0.085,
+      "machine_mean": 0.027,
+      "cohens_d": 0.355,
+      "p_value": 0.588270083860515,
+      "effect_size": "small",
+      "name": "Nonfluencies",
+      "q_value": 0.8706397241135623,
+      "significant": false
+     },
+     {
+      "metric": "ppron (Personal Pronouns)",
+      "label": "ppron",
+      "human_mean": 10.335,
+      "machine_mean": 11.147,
+      "cohens_d": -0.328,
+      "p_value": 0.285304715907688,
+      "effect_size": "small",
+      "name": "Personal Pronouns",
+      "q_value": 0.639774211429361,
+      "significant": false
+     },
+     {
+      "metric": "swear (Swear)",
+      "label": "swear",
+      "human_mean": 0.024,
+      "machine_mean": 0.0,
+      "cohens_d": 0.324,
+      "p_value": 0.34211225261696365,
+      "effect_size": "small",
+      "name": "Swear",
+      "q_value": 0.6977400339127946,
+      "significant": false
+     },
+     {
+      "metric": "hear (Hear)",
+      "label": "hear",
+      "human_mean": 0.667,
+      "machine_mean": 0.43,
+      "cohens_d": 0.317,
+      "p_value": 0.6781078116251028,
+      "effect_size": "small",
+      "name": "Hear",
+      "q_value": 0.9292588529677336,
+      "significant": false
+     },
+     {
+      "metric": "interrog (Interrogatives)",
+      "label": "interrog",
+      "human_mean": 3.319,
+      "machine_mean": 3.798,
+      "cohens_d": -0.317,
+      "p_value": 0.44072844808136424,
+      "effect_size": "small",
+      "name": "Interrogatives",
+      "q_value": 0.7765215513814513,
+      "significant": false
+     },
+     {
+      "metric": "verb (Verbs)",
+      "label": "verb",
+      "human_mean": 9.872,
+      "machine_mean": 9.149,
+      "cohens_d": 0.311,
+      "p_value": 0.5074853847612371,
+      "effect_size": "small",
+      "name": "Verbs",
+      "q_value": 0.8163895320072074,
+      "significant": false
+     },
+     {
+      "metric": "auxverb (Auxiliary Verbs)",
+      "label": "auxverb",
+      "human_mean": 4.473,
+      "machine_mean": 5.02,
+      "cohens_d": -0.309,
+      "p_value": 0.5249869101903615,
+      "effect_size": "small",
+      "name": "Auxiliary Verbs",
+      "q_value": 0.8265751351933351,
       "significant": false
      },
      {
       "metric": "focuspresent (Present Focus)",
       "label": "focuspresent",
-      "human_mean": 5.475,
-      "machine_mean": 5.419,
-      "cohens_d": 0.03,
-      "p_value": 0.7260858260602032,
-      "effect_size": "negligible",
+      "human_mean": 5.653,
+      "machine_mean": 5.144,
+      "cohens_d": 0.298,
+      "p_value": 0.2732851201810752,
+      "effect_size": "small",
       "name": "Present Focus",
-      "q_value": 0.929629284738363,
+      "q_value": 0.639774211429361,
       "significant": false
      },
      {
-      "metric": "differ (Differentiation)",
-      "label": "differ",
-      "human_mean": 2.425,
-      "machine_mean": 2.393,
-      "cohens_d": 0.023,
-      "p_value": 0.7260714420575062,
+      "metric": "risk (Risk)",
+      "label": "risk",
+      "human_mean": 2.133,
+      "machine_mean": 2.496,
+      "cohens_d": -0.294,
+      "p_value": 0.25020790871121057,
+      "effect_size": "small",
+      "name": "Risk",
+      "q_value": 0.6171795081543194,
+      "significant": false
+     },
+     {
+      "metric": "anger (Anger)",
+      "label": "anger",
+      "human_mean": 0.65,
+      "machine_mean": 0.403,
+      "cohens_d": 0.294,
+      "p_value": 1.0,
+      "effect_size": "small",
+      "name": "Anger",
+      "q_value": 1.0,
+      "significant": false
+     },
+     {
+      "metric": "motion (Motion)",
+      "label": "motion",
+      "human_mean": 4.472,
+      "machine_mean": 3.886,
+      "cohens_d": 0.277,
+      "p_value": 0.7557428276359095,
+      "effect_size": "small",
+      "name": "Motion",
+      "q_value": 0.932082820750955,
+      "significant": false
+     },
+     {
+      "metric": "bio (Biological Processes)",
+      "label": "bio",
+      "human_mean": 1.246,
+      "machine_mean": 1.002,
+      "cohens_d": 0.274,
+      "p_value": 0.796674335889687,
+      "effect_size": "small",
+      "name": "Biological Processes",
+      "q_value": 0.9664573910792924,
+      "significant": false
+     },
+     {
+      "metric": "home (Home)",
+      "label": "home",
+      "human_mean": 0.119,
+      "machine_mean": 0.188,
+      "cohens_d": -0.266,
+      "p_value": 0.10879209277935747,
+      "effect_size": "small",
+      "name": "Home",
+      "q_value": 0.4601358147708992,
+      "significant": false
+     },
+     {
+      "metric": "adj (Adjectives)",
+      "label": "adj",
+      "human_mean": 2.854,
+      "machine_mean": 3.227,
+      "cohens_d": -0.256,
+      "p_value": 0.5699816552569423,
+      "effect_size": "small",
+      "name": "Adjectives",
+      "q_value": 0.86078862222477,
+      "significant": false
+     },
+     {
+      "metric": "drives (Drives)",
+      "label": "drives",
+      "human_mean": 9.242,
+      "machine_mean": 10.019,
+      "cohens_d": -0.252,
+      "p_value": 0.3234817459216911,
+      "effect_size": "small",
+      "name": "Drives",
+      "q_value": 0.6963109241254671,
+      "significant": false
+     },
+     {
+      "metric": "i (I)",
+      "label": "i",
+      "human_mean": 0.202,
+      "machine_mean": 0.104,
+      "cohens_d": 0.248,
+      "p_value": 0.9228952581698946,
+      "effect_size": "small",
+      "name": "I",
+      "q_value": 0.9860593559190374,
+      "significant": false
+     },
+     {
+      "metric": "family (Family)",
+      "label": "family",
+      "human_mean": 0.256,
+      "machine_mean": 0.375,
+      "cohens_d": -0.242,
+      "p_value": 0.06460383843637255,
+      "effect_size": "small",
+      "name": "Family",
+      "q_value": 0.4601358147708992,
+      "significant": false
+     },
+     {
+      "metric": "female (Female)",
+      "label": "female",
+      "human_mean": 0.667,
+      "machine_mean": 0.348,
+      "cohens_d": 0.233,
+      "p_value": 0.8451221518358926,
+      "effect_size": "small",
+      "name": "Female",
+      "q_value": 0.9674772071775702,
+      "significant": false
+     },
+     {
+      "metric": "money (Money)",
+      "label": "money",
+      "human_mean": 1.386,
+      "machine_mean": 1.719,
+      "cohens_d": -0.205,
+      "p_value": 0.39047858543850755,
+      "effect_size": "small",
+      "name": "Money",
+      "q_value": 0.722385383061239,
+      "significant": false
+     },
+     {
+      "metric": "filler (Filler Words)",
+      "label": "filler",
+      "human_mean": 0.079,
+      "machine_mean": 0.05,
+      "cohens_d": 0.196,
+      "p_value": 0.9228952581698946,
       "effect_size": "negligible",
-      "name": "Differentiation",
-      "q_value": 0.929629284738363,
+      "name": "Filler Words",
+      "q_value": 0.9860593559190374,
+      "significant": false
+     },
+     {
+      "metric": "sexual (Sexual)",
+      "label": "sexual",
+      "human_mean": 0.114,
+      "machine_mean": 0.043,
+      "cohens_d": 0.188,
+      "p_value": 1.0,
+      "effect_size": "negligible",
+      "name": "Sexual",
+      "q_value": 1.0,
+      "significant": false
+     },
+     {
+      "metric": "health (Health)",
+      "label": "health",
+      "human_mean": 0.356,
+      "machine_mean": 0.462,
+      "cohens_d": -0.183,
+      "p_value": 0.0707438923635203,
+      "effect_size": "negligible",
+      "name": "Health",
+      "q_value": 0.4601358147708992,
+      "significant": false
+     },
+     {
+      "metric": "time (Time)",
+      "label": "time",
+      "human_mean": 5.458,
+      "machine_mean": 5.005,
+      "cohens_d": 0.182,
+      "p_value": 0.8498110603586766,
+      "effect_size": "negligible",
+      "name": "Time",
+      "q_value": 0.9674772071775702,
+      "significant": false
+     },
+     {
+      "metric": "negemo (Negative Emotions)",
+      "label": "negemo",
+      "human_mean": 2.199,
+      "machine_mean": 1.902,
+      "cohens_d": 0.169,
+      "p_value": 0.9030259320733558,
+      "effect_size": "negligible",
+      "name": "Negative Emotions",
+      "q_value": 0.9860593559190374,
+      "significant": false
+     },
+     {
+      "metric": "insight (Insight)",
+      "label": "insight",
+      "human_mean": 1.329,
+      "machine_mean": 1.488,
+      "cohens_d": -0.165,
+      "p_value": 0.46494438108624847,
+      "effect_size": "negligible",
+      "name": "Insight",
+      "q_value": 0.7784760765687112,
+      "significant": false
+     },
+     {
+      "metric": "tentat (Tentative)",
+      "label": "tentat",
+      "human_mean": 1.796,
+      "machine_mean": 1.634,
+      "cohens_d": 0.164,
+      "p_value": 0.5699816552569423,
+      "effect_size": "negligible",
+      "name": "Tentative",
+      "q_value": 0.86078862222477,
+      "significant": false
+     },
+     {
+      "metric": "discrep (Discrepancies)",
+      "label": "discrep",
+      "human_mean": 1.787,
+      "machine_mean": 1.961,
+      "cohens_d": -0.156,
+      "p_value": 0.6167746941014318,
+      "effect_size": "negligible",
+      "name": "Discrepancies",
+      "q_value": 0.8949279875197246,
+      "significant": false
+     },
+     {
+      "metric": "adverb (Adverbs)",
+      "label": "adverb",
+      "human_mean": 7.257,
+      "machine_mean": 7.687,
+      "cohens_d": -0.147,
+      "p_value": 0.6359445511344555,
+      "effect_size": "negligible",
+      "name": "Adverbs",
+      "q_value": 0.9049980150759559,
+      "significant": false
+     },
+     {
+      "metric": "ingest (Ingest)",
+      "label": "ingest",
+      "human_mean": 0.466,
+      "machine_mean": 0.401,
+      "cohens_d": 0.114,
+      "p_value": 0.8170634967025908,
+      "effect_size": "negligible",
+      "name": "Ingest",
+      "q_value": 0.9674772071775702,
+      "significant": false
+     },
+     {
+      "metric": "conj (Conjunctions)",
+      "label": "conj",
+      "human_mean": 7.881,
+      "machine_mean": 8.065,
+      "cohens_d": -0.095,
+      "p_value": 0.7352681529274933,
+      "effect_size": "negligible",
+      "name": "Conjunctions",
+      "q_value": 0.932082820750955,
+      "significant": false
+     },
+     {
+      "metric": "anx (Anx)",
+      "label": "anx",
+      "human_mean": 0.407,
+      "machine_mean": 0.354,
+      "cohens_d": 0.087,
+      "p_value": 0.8263878381278349,
+      "effect_size": "negligible",
+      "name": "Anx",
+      "q_value": 0.9674772071775702,
+      "significant": false
+     },
+     {
+      "metric": "pronoun (Pronouns)",
+      "label": "pronoun",
+      "human_mean": 17.224,
+      "machine_mean": 17.46,
+      "cohens_d": -0.061,
+      "p_value": 0.9460839766250224,
+      "effect_size": "negligible",
+      "name": "Pronouns",
+      "q_value": 0.9860593559190374,
       "significant": false
      },
      {
       "metric": "relig (Religion)",
       "label": "relig",
-      "human_mean": 0.091,
-      "machine_mean": 0.089,
-      "cohens_d": 0.006,
-      "p_value": 0.7956033238154172,
+      "human_mean": 0.086,
+      "machine_mean": 0.098,
+      "cohens_d": -0.059,
+      "p_value": 0.38467424509431225,
       "effect_size": "negligible",
       "name": "Religion",
-      "q_value": 0.929629284738363,
+      "q_value": 0.722385383061239,
+      "significant": false
+     },
+     {
+      "metric": "they (They)",
+      "label": "they",
+      "human_mean": 1.845,
+      "machine_mean": 1.912,
+      "cohens_d": -0.059,
+      "p_value": 0.9892083986374413,
+      "effect_size": "negligible",
+      "name": "They",
+      "q_value": 1.0,
+      "significant": false
+     },
+     {
+      "metric": "number (Numbers)",
+      "label": "number",
+      "human_mean": 2.641,
+      "machine_mean": 2.707,
+      "cohens_d": -0.05,
+      "p_value": 0.47339761412962167,
+      "effect_size": "negligible",
+      "name": "Numbers",
+      "q_value": 0.7784760765687112,
+      "significant": false
+     },
+     {
+      "metric": "certain (Certainty)",
+      "label": "certain",
+      "human_mean": 1.083,
+      "machine_mean": 1.137,
+      "cohens_d": -0.047,
+      "p_value": 0.9458706132684596,
+      "effect_size": "negligible",
+      "name": "Certainty",
+      "q_value": 0.9860593559190374,
+      "significant": false
+     },
+     {
+      "metric": "sad (Sad)",
+      "label": "sad",
+      "human_mean": 0.47,
+      "machine_mean": 0.508,
+      "cohens_d": -0.047,
+      "p_value": 0.08331879039315564,
+      "effect_size": "negligible",
+      "name": "Sad",
+      "q_value": 0.4601358147708992,
+      "significant": false
+     },
+     {
+      "metric": "feel (Feel)",
+      "label": "feel",
+      "human_mean": 0.528,
+      "machine_mean": 0.507,
+      "cohens_d": 0.037,
+      "p_value": 0.4637820985508103,
+      "effect_size": "negligible",
+      "name": "Feel",
+      "q_value": 0.7784760765687112,
+      "significant": false
+     },
+     {
+      "metric": "differ (Differentiation)",
+      "label": "differ",
+      "human_mean": 2.57,
+      "machine_mean": 2.537,
+      "cohens_d": 0.023,
+      "p_value": 0.704883340227854,
+      "effect_size": "negligible",
+      "name": "Differentiation",
+      "q_value": 0.9314529853010928,
+      "significant": false
+     },
+     {
+      "metric": "focuspast (Past Focus)",
+      "label": "focuspast",
+      "human_mean": 1.864,
+      "machine_mean": 1.852,
+      "cohens_d": 0.009,
+      "p_value": 0.7556984478990305,
+      "effect_size": "negligible",
+      "name": "Past Focus",
+      "q_value": 0.932082820750955,
+      "significant": false
+     },
+     {
+      "metric": "focusfuture (Future Focus)",
+      "label": "focusfuture",
+      "human_mean": 1.064,
+      "machine_mean": 1.069,
+      "cohens_d": -0.004,
+      "p_value": 0.690927891248915,
+      "effect_size": "negligible",
+      "name": "Future Focus",
+      "q_value": 0.9296120718621765,
+      "significant": false
+     },
+     {
+      "metric": "relativ (Relativity)",
+      "label": "relativ",
+      "human_mean": 11.574,
+      "machine_mean": 11.568,
+      "cohens_d": 0.001,
+      "p_value": 0.6750141566504884,
+      "effect_size": "negligible",
+      "name": "Relativity",
+      "q_value": 0.9292588529677336,
       "significant": false
      }
     ],
     "total": 74,
-    "significant_raw": 7,
+    "significant_raw": 6,
     "significant_fdr": 0
    },
    "nilc": {
-    "available": false
+    "available": true,
+    "pairs": 19,
+    "metrics": [
+     {
+      "metric": "gunning_fox",
+      "category": "Legibilidade",
+      "cliffs_delta": -1.0,
+      "human_median": 6.861,
+      "machine_median": 24.004,
+      "p_value": 1.4798065133032065e-07,
+      "q_value": 1.7165755554317196e-05,
+      "magnitude": "large",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": true
+     },
+     {
+      "metric": "short_sentence_ratio",
+      "category": "Simplicidade",
+      "cliffs_delta": 0.911,
+      "human_median": 0.444,
+      "machine_median": 0.083,
+      "p_value": 1.5552839882814283e-06,
+      "q_value": 9.020647132032284e-05,
+      "magnitude": "large",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "freq_bra",
+      "category": "Frequência",
+      "cliffs_delta": -0.839,
+      "human_median": 5.235,
+      "machine_median": 5.584,
+      "p_value": 1.0413380321979796e-05,
+      "q_value": 0.00040265070578321876,
+      "magnitude": "large",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "punctuation_diversity",
+      "category": "Diversidade lexical",
+      "cliffs_delta": 0.806,
+      "human_median": 0.207,
+      "machine_median": 0.091,
+      "p_value": 2.284577659678826e-05,
+      "q_value": 0.0006474461734649116,
+      "magnitude": "large",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "function_word_diversity",
+      "category": "Diversidade lexical",
+      "cliffs_delta": 0.798,
+      "human_median": 0.455,
+      "machine_median": 0.332,
+      "p_value": 2.790716264934964e-05,
+      "q_value": 0.0006474461734649116,
+      "magnitude": "large",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "content_word_standard_deviation",
+      "category": "Diversidade lexical",
+      "cliffs_delta": 0.773,
+      "human_median": 0.098,
+      "machine_median": 0.065,
+      "p_value": 4.947996853464267e-05,
+      "q_value": 0.0008118819485603313,
+      "magnitude": "large",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "brunet",
+      "category": "Legibilidade",
+      "cliffs_delta": -0.773,
+      "human_median": 10.741,
+      "machine_median": 12.341,
+      "p_value": 4.947996853464267e-05,
+      "q_value": 0.0008118819485603313,
+      "magnitude": "large",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "words",
+      "category": "Descritivas",
+      "cliffs_delta": -0.767,
+      "human_median": 172.0,
+      "machine_median": 415.0,
+      "p_value": 5.5991858521402156e-05,
+      "q_value": 0.0008118819485603313,
+      "magnitude": "large",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "cw_freq_bra",
+      "category": "Frequência",
+      "cliffs_delta": -0.723,
+      "human_median": 4.341,
+      "machine_median": 4.629,
+      "p_value": 0.00014745484874210306,
+      "q_value": 0.001900529161564884,
+      "magnitude": "large",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "lsa_span_mean",
+      "category": "Coesão semântica (LSA)",
+      "cliffs_delta": -0.706,
+      "human_median": 0.836,
+      "machine_median": 0.909,
+      "p_value": 0.00020912306549351892,
+      "q_value": 0.002425827559724819,
+      "magnitude": "large",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "freq_brwac",
+      "category": "Frequência",
+      "cliffs_delta": -0.684,
+      "human_median": 5.076,
+      "machine_median": 5.352,
+      "p_value": 0.00032946991137343146,
+      "q_value": 0.0031848758099431705,
+      "magnitude": "large",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "words_per_sentence",
+      "category": "Descritivas",
+      "cliffs_delta": -0.684,
+      "human_median": 16.818,
+      "machine_median": 23.727,
+      "p_value": 0.00032946991137343146,
+      "q_value": 0.0031848758099431705,
+      "magnitude": "large",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "idade_aquisicao_55_7_ratio",
+      "category": "Psicolinguísticas",
+      "cliffs_delta": -0.673,
+      "human_median": 0.289,
+      "machine_median": 0.408,
+      "p_value": 0.00041154996248824344,
+      "q_value": 0.0036722919729720183,
+      "magnitude": "large",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "lsa_givenness_mean",
+      "category": "Coesão semântica (LSA)",
+      "cliffs_delta": -0.662,
+      "human_median": 0.807,
+      "machine_median": 0.861,
+      "p_value": 0.0005124268764219729,
+      "q_value": 0.00424582269035349,
+      "magnitude": "large",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "verb_diversity",
+      "category": "Diversidade lexical",
+      "cliffs_delta": 0.64,
+      "human_median": 0.885,
+      "machine_median": 0.784,
+      "p_value": 0.0007857585227211786,
+      "q_value": 0.005696749289728545,
+      "magnitude": "large",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "sentence_length_min",
+      "category": "Descritivas",
+      "cliffs_delta": -0.637,
+      "human_median": 4.0,
+      "machine_median": 11.0,
+      "p_value": 0.0007822231408539456,
+      "q_value": 0.005696749289728545,
+      "magnitude": "large",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "sentences",
+      "category": "Descritivas",
+      "cliffs_delta": -0.604,
+      "human_median": 10.0,
+      "machine_median": 17.0,
+      "p_value": 0.0014736075957040452,
+      "q_value": 0.010055204770686426,
+      "magnitude": "large",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "lsa_span_std",
+      "category": "Coesão semântica (LSA)",
+      "cliffs_delta": 0.596,
+      "human_median": 0.092,
+      "machine_median": 0.057,
+      "p_value": 0.0017850874127460351,
+      "q_value": 0.011503896659918893,
+      "magnitude": "large",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "lsa_adj_mean",
+      "category": "Coesão semântica (LSA)",
+      "cliffs_delta": -0.584,
+      "human_median": 0.736,
+      "machine_median": 0.799,
+      "p_value": 0.0021734383890608055,
+      "q_value": 0.013269413322687024,
+      "magnitude": "large",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "flesch",
+      "category": "Legibilidade",
+      "cliffs_delta": 0.579,
+      "human_median": 50.933,
+      "machine_median": 37.889,
+      "p_value": 0.0023953771698956737,
+      "q_value": 0.013893187585394907,
+      "magnitude": "large",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "lsa_all_mean",
+      "category": "Coesão semântica (LSA)",
+      "cliffs_delta": -0.568,
+      "human_median": 0.724,
+      "machine_median": 0.769,
+      "p_value": 0.0029026455024026027,
+      "q_value": 0.016033660870414378,
+      "magnitude": "large",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "adj_stem_ovl",
+      "category": "Coesão referencial",
+      "cliffs_delta": -0.56,
+      "human_median": 0.769,
+      "machine_median": 1.571,
+      "p_value": 0.003326464295577316,
+      "q_value": 0.017539539013044027,
+      "magnitude": "large",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "preposition_diversity",
+      "category": "Diversidade lexical",
+      "cliffs_delta": 0.554,
+      "human_median": 0.407,
+      "machine_median": 0.268,
+      "p_value": 0.003670240670748566,
+      "q_value": 0.018510779035079725,
+      "magnitude": "large",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "cw_freq_brwac",
+      "category": "Frequência",
+      "cliffs_delta": -0.551,
+      "human_median": 4.013,
+      "machine_median": 4.33,
+      "p_value": 0.0038489886910322664,
+      "q_value": 0.018603445339989286,
+      "magnitude": "large",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "cross_entropy",
+      "category": "Coesão semântica (LSA)",
+      "cliffs_delta": 0.54,
+      "human_median": 0.644,
+      "machine_median": 0.543,
+      "p_value": 0.004627369575109064,
+      "q_value": 0.020645187335101976,
+      "magnitude": "large",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "idade_aquisicao_mean",
+      "category": "Psicolinguísticas",
+      "cliffs_delta": -0.54,
+      "human_median": 4.884,
+      "machine_median": 5.213,
+      "p_value": 0.004627369575109064,
+      "q_value": 0.020645187335101976,
+      "magnitude": "large",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "sentences_per_paragraph",
+      "category": "Descritivas",
+      "cliffs_delta": -0.515,
+      "human_median": 1.1,
+      "machine_median": 3.222,
+      "p_value": 0.006544515361321339,
+      "q_value": 0.02811717710789909,
+      "magnitude": "large",
+      "strong": true,
+      "layout_dependent": true,
+      "installation_dependent": false
+     },
+     {
+      "metric": "content_word_max",
+      "category": "Diversidade lexical",
+      "cliffs_delta": 0.501,
+      "human_median": 0.714,
+      "machine_median": 0.652,
+      "p_value": 0.008341156935616403,
+      "q_value": 0.032252473484383426,
+      "magnitude": "large",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "named_entity_ratio_text",
+      "category": "Semântica lexical",
+      "cliffs_delta": -0.501,
+      "human_median": 0.0,
+      "machine_median": 0.04,
+      "p_value": 0.007329940305374676,
+      "q_value": 0.030237587125009884,
+      "magnitude": "large",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": true
+     },
+     {
+      "metric": "demonstrative_pronoun_ratio",
+      "category": "Coesão referencial",
+      "cliffs_delta": -0.501,
+      "human_median": 0.222,
+      "machine_median": 1.864,
+      "p_value": 0.007559396781252471,
+      "q_value": 0.030237587125009884,
+      "magnitude": "large",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": true
+     },
+     {
+      "metric": "named_entity_ratio_sentence",
+      "category": "Semântica lexical",
+      "cliffs_delta": -0.485,
+      "human_median": 0.0,
+      "machine_median": 0.048,
+      "p_value": 0.009539535715070458,
+      "q_value": 0.03569632719187655,
+      "magnitude": "large",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": true
+     },
+     {
+      "metric": "idade_aquisicao_1_25_ratio",
+      "category": "Psicolinguísticas",
+      "cliffs_delta": 0.474,
+      "human_median": 0.105,
+      "machine_median": 0.053,
+      "p_value": 0.013076123955382416,
+      "q_value": 0.04335452554802465,
+      "magnitude": "medium",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "imageabilidade_mean",
+      "category": "Psicolinguísticas",
+      "cliffs_delta": 0.474,
+      "human_median": 4.283,
+      "machine_median": 4.191,
+      "p_value": 0.013076123955382416,
+      "q_value": 0.04335452554802465,
+      "magnitude": "medium",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "lsa_givenness_std",
+      "category": "Coesão semântica (LSA)",
+      "cliffs_delta": 0.474,
+      "human_median": 0.096,
+      "machine_median": 0.069,
+      "p_value": 0.013081106846386747,
+      "q_value": 0.04335452554802465,
+      "magnitude": "medium",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "abstract_nouns_ratio",
+      "category": "Semântica lexical",
+      "cliffs_delta": -0.457,
+      "human_median": 0.026,
+      "machine_median": 0.04,
+      "p_value": 0.016661194004113648,
+      "q_value": 0.05223509471559954,
+      "magnitude": "medium",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "syllables_per_content_word",
+      "category": "Descritivas",
+      "cliffs_delta": -0.452,
+      "human_median": 2.751,
+      "machine_median": 2.877,
+      "p_value": 0.01804105110095319,
+      "q_value": 0.05366056224898898,
+      "magnitude": "medium",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "pronoun_diversity",
+      "category": "Diversidade lexical",
+      "cliffs_delta": 0.452,
+      "human_median": 0.8,
+      "machine_median": 0.625,
+      "p_value": 0.017614590053420417,
+      "q_value": 0.05366056224898898,
+      "magnitude": "medium",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "adj_cw_ovl",
+      "category": "Coesão referencial",
+      "cliffs_delta": -0.44,
+      "human_median": 0.667,
+      "machine_median": 1.143,
+      "p_value": 0.021032800871604296,
+      "q_value": 0.060995122527652455,
+      "magnitude": "medium",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "idade_aquisicao_25_4_ratio",
+      "category": "Psicolinguísticas",
+      "cliffs_delta": 0.435,
+      "human_median": 0.196,
+      "machine_median": 0.16,
+      "p_value": 0.022767429242379827,
+      "q_value": 0.0644151656613673,
+      "magnitude": "medium",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "adj_arg_ovl",
+      "category": "Coesão referencial",
+      "cliffs_delta": -0.427,
+      "human_median": 0.5,
+      "machine_median": 1.0,
+      "p_value": 0.025442236558725084,
+      "q_value": 0.06863487071656069,
+      "magnitude": "medium",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "adjective_diversity_ratio",
+      "category": "Diversidade lexical",
+      "cliffs_delta": 0.427,
+      "human_median": 0.938,
+      "machine_median": 0.81,
+      "p_value": 0.023608481407132374,
+      "q_value": 0.06520437721969893,
+      "magnitude": "medium",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "log_neg_conn_ratio",
+      "category": "Conectivos",
+      "cliffs_delta": -0.418,
+      "human_median": 0.0,
+      "machine_median": 0.002,
+      "p_value": 0.014744291776721359,
+      "q_value": 0.047509384613879935,
+      "magnitude": "medium",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "cw_freq",
+      "category": "Frequência",
+      "cliffs_delta": -0.407,
+      "human_median": 274063.833,
+      "machine_median": 457558.811,
+      "p_value": 0.0330713067273506,
+      "q_value": 0.0871879904630152,
+      "magnitude": "medium",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "cau_neg_conn_ratio",
+      "category": "Conectivos",
+      "cliffs_delta": -0.404,
+      "human_median": 0.0,
+      "machine_median": 0.001,
+      "p_value": 0.01026165909489833,
+      "q_value": 0.03719851421900645,
+      "magnitude": "medium",
+      "strong": true,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "imageabilidade_25_4_ratio",
+      "category": "Psicolinguísticas",
+      "cliffs_delta": -0.402,
+      "human_median": 0.301,
+      "machine_median": 0.36,
+      "p_value": 0.03555136653524533,
+      "q_value": 0.09164352262418796,
+      "magnitude": "medium",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "stem_ovl",
+      "category": "Coesão referencial",
+      "cliffs_delta": -0.388,
+      "human_median": 0.864,
+      "machine_median": 1.537,
+      "p_value": 0.04243212219913966,
+      "q_value": 0.10700274293696088,
+      "magnitude": "medium",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "arg_ovl",
+      "category": "Coesão referencial",
+      "cliffs_delta": -0.368,
+      "human_median": 0.6,
+      "machine_median": 0.903,
+      "p_value": 0.05399791318207523,
+      "q_value": 0.1304949568566818,
+      "magnitude": "medium",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "familiaridade_4_55_ratio",
+      "category": "Psicolinguísticas",
+      "cliffs_delta": -0.368,
+      "human_median": 0.588,
+      "machine_median": 0.652,
+      "p_value": 0.05398477197734988,
+      "q_value": 0.1304949568566818,
+      "magnitude": "medium",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "sentence_length_standard_deviation",
+      "category": "Descritivas",
+      "cliffs_delta": 0.357,
+      "human_median": 11.495,
+      "machine_median": 7.415,
+      "p_value": 0.061697448759210884,
+      "q_value": 0.14033145207977377,
+      "magnitude": "medium",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "imageabilidade_4_55_ratio",
+      "category": "Psicolinguísticas",
+      "cliffs_delta": 0.357,
+      "human_median": 0.677,
+      "machine_median": 0.6,
+      "p_value": 0.0616547412055101,
+      "q_value": 0.14033145207977377,
+      "magnitude": "medium",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "adverbs_diversity_ratio",
+      "category": "Diversidade lexical",
+      "cliffs_delta": 0.352,
+      "human_median": 0.833,
+      "machine_median": 0.6,
+      "p_value": 0.06027961226844312,
+      "q_value": 0.14033145207977377,
+      "magnitude": "medium",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "min_freq_bra",
+      "category": "Frequência",
+      "cliffs_delta": -0.352,
+      "human_median": 1.67,
+      "machine_median": 1.964,
+      "p_value": 0.06587561973663641,
+      "q_value": 0.14695330556634278,
+      "magnitude": "medium",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "ttr",
+      "category": "Diversidade lexical",
+      "cliffs_delta": 0.341,
+      "human_median": 0.733,
+      "machine_median": 0.704,
+      "p_value": 0.0749321256249994,
+      "q_value": 0.16400238816037604,
+      "magnitude": "medium",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "familiaridade_std",
+      "category": "Psicolinguísticas",
+      "cliffs_delta": 0.327,
+      "human_median": 0.792,
+      "machine_median": 0.718,
+      "p_value": 0.08763891111312926,
+      "q_value": 0.1882613646133888,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "familiaridade_55_7_ratio",
+      "category": "Psicolinguísticas",
+      "cliffs_delta": 0.316,
+      "human_median": 0.224,
+      "machine_median": 0.194,
+      "p_value": 0.09902611193243087,
+      "q_value": 0.2051255175743211,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "add_neg_conn_ratio",
+      "category": "Conectivos",
+      "cliffs_delta": -0.307,
+      "human_median": 0.0,
+      "machine_median": 0.005,
+      "p_value": 0.09511669622131325,
+      "q_value": 0.20060975930313338,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "imageabilidade_55_7_ratio",
+      "category": "Psicolinguísticas",
+      "cliffs_delta": 0.307,
+      "human_median": 0.045,
+      "machine_median": 0.019,
+      "p_value": 0.10764191722814387,
+      "q_value": 0.21906074383271384,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "nouns_ambiguity",
+      "category": "Semântica lexical",
+      "cliffs_delta": -0.299,
+      "human_median": 2.491,
+      "machine_median": 2.776,
+      "p_value": 0.11828694428883316,
+      "q_value": 0.2365738885776663,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "concretude_mean",
+      "category": "Psicolinguísticas",
+      "cliffs_delta": 0.291,
+      "human_median": 4.091,
+      "machine_median": 4.014,
+      "p_value": 0.12898242291070003,
+      "q_value": 0.2458587868968019,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "min_cw_freq_bra",
+      "category": "Frequência",
+      "cliffs_delta": -0.291,
+      "human_median": 1.947,
+      "machine_median": 2.185,
+      "p_value": 0.12898242291070003,
+      "q_value": 0.2458587868968019,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "min_freq_brwac",
+      "category": "Frequência",
+      "cliffs_delta": -0.285,
+      "human_median": 1.482,
+      "machine_median": 1.633,
+      "p_value": 0.13650524817388807,
+      "q_value": 0.25134299663763515,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "paragraphs",
+      "category": "Descritivas",
+      "cliffs_delta": 0.285,
+      "human_median": 7.0,
+      "machine_median": 4.0,
+      "p_value": 0.1311570225073969,
+      "q_value": 0.2458587868968019,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": true,
+      "installation_dependent": false
+     },
+     {
+      "metric": "indefinite_pronouns_diversity",
+      "category": "Diversidade lexical",
+      "cliffs_delta": -0.274,
+      "human_median": 0.5,
+      "machine_median": 1.0,
+      "p_value": 0.13140728265173895,
+      "q_value": 0.2458587868968019,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "imageabilidade_std",
+      "category": "Psicolinguísticas",
+      "cliffs_delta": 0.269,
+      "human_median": 0.594,
+      "machine_median": 0.557,
+      "p_value": 0.1611100746061278,
+      "q_value": 0.2789368455867287,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "lsa_all_std",
+      "category": "Coesão semântica (LSA)",
+      "cliffs_delta": -0.269,
+      "human_median": 0.0,
+      "machine_median": 0.079,
+      "p_value": 0.1572882507323095,
+      "q_value": 0.2789368455867287,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": true
+     },
+     {
+      "metric": "hard_conjunctions_ratio",
+      "category": "Simplicidade",
+      "cliffs_delta": -0.269,
+      "human_median": 0.01,
+      "machine_median": 0.015,
+      "p_value": 0.16030723769582478,
+      "q_value": 0.2789368455867287,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "min_cw_freq_brwac",
+      "category": "Frequência",
+      "cliffs_delta": -0.269,
+      "human_median": 1.629,
+      "machine_median": 1.894,
+      "p_value": 0.1611100746061278,
+      "q_value": 0.2789368455867287,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "lsa_adj_std",
+      "category": "Coesão semântica (LSA)",
+      "cliffs_delta": 0.247,
+      "human_median": 0.096,
+      "machine_median": 0.087,
+      "p_value": 0.1989429808662312,
+      "q_value": 0.33445486638380895,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "simple_word_ratio",
+      "category": "Simplicidade",
+      "cliffs_delta": -0.247,
+      "human_median": 0.636,
+      "machine_median": 0.687,
+      "p_value": 0.1989429808662312,
+      "q_value": 0.33445486638380895,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "idade_aquisicao_std",
+      "category": "Psicolinguísticas",
+      "cliffs_delta": 0.241,
+      "human_median": 1.621,
+      "machine_median": 1.569,
+      "p_value": 0.20934297667674906,
+      "q_value": 0.34691121849289847,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "dalechall_adapted",
+      "category": "Legibilidade",
+      "cliffs_delta": 0.235,
+      "human_median": 11.205,
+      "machine_median": 10.707,
+      "p_value": 0.22013117868669163,
+      "q_value": 0.3596509398261441,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "add_pos_conn_ratio",
+      "category": "Conectivos",
+      "cliffs_delta": -0.23,
+      "human_median": 0.033,
+      "machine_median": 0.033,
+      "p_value": 0.2312870172605912,
+      "q_value": 0.37262908336428585,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "noun_diversity",
+      "category": "Diversidade lexical",
+      "cliffs_delta": 0.222,
+      "human_median": 0.747,
+      "machine_median": 0.71,
+      "p_value": 0.24880548419202342,
+      "q_value": 0.39001940765236104,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "concretude_std",
+      "category": "Psicolinguísticas",
+      "cliffs_delta": 0.208,
+      "human_median": 0.749,
+      "machine_median": 0.725,
+      "p_value": 0.28005061506422047,
+      "q_value": 0.4331449512993276,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "concretude_25_4_ratio",
+      "category": "Psicolinguísticas",
+      "cliffs_delta": -0.202,
+      "human_median": 0.471,
+      "machine_median": 0.525,
+      "p_value": 0.2932271741592427,
+      "q_value": 0.4360814384932328,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "easy_conjunctions_ratio",
+      "category": "Simplicidade",
+      "cliffs_delta": -0.202,
+      "human_median": 0.067,
+      "machine_median": 0.079,
+      "p_value": 0.2932271741592427,
+      "q_value": 0.4360814384932328,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "lsa_paragraph_std",
+      "category": "Coesão semântica (LSA)",
+      "cliffs_delta": 0.197,
+      "human_median": 0.053,
+      "machine_median": 0.012,
+      "p_value": 0.28428842859313275,
+      "q_value": 0.43391391732636053,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": true,
+      "installation_dependent": false
+     },
+     {
+      "metric": "familiaridade_25_4_ratio",
+      "category": "Psicolinguísticas",
+      "cliffs_delta": 0.191,
+      "human_median": 0.176,
+      "machine_median": 0.123,
+      "p_value": 0.32089449007115967,
+      "q_value": 0.471186846180437,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "min_cw_freq",
+      "category": "Frequência",
+      "cliffs_delta": 0.175,
+      "human_median": 2347.714,
+      "machine_median": 1542.882,
+      "p_value": 0.3654456999043998,
+      "q_value": 0.5107433878181973,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "content_density",
+      "category": "Diversidade lexical",
+      "cliffs_delta": 0.169,
+      "human_median": 1.493,
+      "machine_median": 1.412,
+      "p_value": 0.3811157081784654,
+      "q_value": 0.5201108488082586,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "negation_ratio",
+      "category": "Conectivos",
+      "cliffs_delta": 0.166,
+      "human_median": 0.009,
+      "machine_median": 0.005,
+      "p_value": 0.37692814786866513,
+      "q_value": 0.5201108488082586,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "negative_words",
+      "category": "Semântica lexical",
+      "cliffs_delta": 0.161,
+      "human_median": 0.266,
+      "machine_median": 0.265,
+      "p_value": 0.4053548610414287,
+      "q_value": 0.5404731480552383,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "concretude_55_7_ratio",
+      "category": "Psicolinguísticas",
+      "cliffs_delta": 0.161,
+      "human_median": 0.038,
+      "machine_median": 0.023,
+      "p_value": 0.4048402704416003,
+      "q_value": 0.5404731480552383,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "dialog_pronoun_ratio",
+      "category": "Simplicidade",
+      "cliffs_delta": 0.155,
+      "human_median": 0.0,
+      "machine_median": 0.0,
+      "p_value": 0.23506396362311643,
+      "q_value": 0.3735262983600206,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "idade_aquisicao_4_55_ratio",
+      "category": "Psicolinguísticas",
+      "cliffs_delta": 0.152,
+      "human_median": 0.286,
+      "machine_median": 0.267,
+      "p_value": 0.4304952600667804,
+      "q_value": 0.554893070303021,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "verbs_ambiguity",
+      "category": "Semântica lexical",
+      "cliffs_delta": -0.152,
+      "human_median": 9.062,
+      "machine_median": 9.467,
+      "p_value": 0.43052048557993006,
+      "q_value": 0.554893070303021,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "conn_ratio",
+      "category": "Conectivos",
+      "cliffs_delta": -0.152,
+      "human_median": 0.07,
+      "machine_median": 0.08,
+      "p_value": 0.43052048557993006,
+      "q_value": 0.554893070303021,
+      "magnitude": "small",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "log_pos_conn_ratio",
+      "category": "Conectivos",
+      "cliffs_delta": -0.147,
+      "human_median": 0.026,
+      "machine_median": 0.028,
+      "p_value": 0.44781461608564543,
+      "q_value": 0.5646358202819007,
+      "magnitude": "negligible",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "content_word_diversity",
+      "category": "Diversidade lexical",
+      "cliffs_delta": 0.141,
+      "human_median": 0.823,
+      "machine_median": 0.806,
+      "p_value": 0.4654704588944648,
+      "q_value": 0.5744103535293396,
+      "magnitude": "negligible",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "concretude_4_55_ratio",
+      "category": "Psicolinguísticas",
+      "cliffs_delta": 0.141,
+      "human_median": 0.5,
+      "machine_median": 0.453,
+      "p_value": 0.4654704588944648,
+      "q_value": 0.5744103535293396,
+      "magnitude": "negligible",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "if_ratio",
+      "category": "Conectivos",
+      "cliffs_delta": -0.136,
+      "human_median": 0.0,
+      "machine_median": 0.0,
+      "p_value": 0.34727491587552184,
+      "q_value": 0.4912669541653723,
+      "magnitude": "negligible",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "honore",
+      "category": "Legibilidade",
+      "cliffs_delta": 0.13,
+      "human_median": 871.085,
+      "machine_median": 807.718,
+      "p_value": 0.5019153153059345,
+      "q_value": 0.6002286244895711,
+      "magnitude": "negligible",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "or_ratio",
+      "category": "Conectivos",
+      "cliffs_delta": -0.13,
+      "human_median": 0.0,
+      "machine_median": 0.0,
+      "p_value": 0.4376182942333313,
+      "q_value": 0.5578431003413893,
+      "magnitude": "negligible",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "sentence_length_max",
+      "category": "Descritivas",
+      "cliffs_delta": -0.125,
+      "human_median": 38.0,
+      "machine_median": 40.0,
+      "p_value": 0.5202545092481947,
+      "q_value": 0.6158114599264346,
+      "magnitude": "negligible",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "medium_short_sentence_ratio",
+      "category": "Simplicidade",
+      "cliffs_delta": 0.122,
+      "human_median": 0.0,
+      "machine_median": 0.0,
+      "p_value": 0.49102771245855903,
+      "q_value": 0.5933251525540921,
+      "magnitude": "negligible",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "logic_operators",
+      "category": "Conectivos",
+      "cliffs_delta": 0.119,
+      "human_median": 0.035,
+      "machine_median": 0.032,
+      "p_value": 0.5398170365829753,
+      "q_value": 0.6325128913497489,
+      "magnitude": "negligible",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "coreference_pronoun_ratio",
+      "category": "Coesão referencial",
+      "cliffs_delta": -0.119,
+      "human_median": 0.0,
+      "machine_median": 0.0,
+      "p_value": 0.4784636957314543,
+      "q_value": 0.5842293547878811,
+      "magnitude": "negligible",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "positive_words",
+      "category": "Semântica lexical",
+      "cliffs_delta": -0.108,
+      "human_median": 0.418,
+      "machine_median": 0.421,
+      "p_value": 0.5790997419539189,
+      "q_value": 0.6717557006665459,
+      "magnitude": "negligible",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "lsa_paragraph_mean",
+      "category": "Coesão semântica (LSA)",
+      "cliffs_delta": -0.102,
+      "human_median": 0.805,
+      "machine_median": 0.872,
+      "p_value": 0.5981082270808371,
+      "q_value": 0.686936181597793,
+      "magnitude": "negligible",
+      "strong": false,
+      "layout_dependent": true,
+      "installation_dependent": false
+     },
+     {
+      "metric": "relative_pronouns_diversity_ratio",
+      "category": "Diversidade lexical",
+      "cliffs_delta": -0.072,
+      "human_median": 0.5,
+      "machine_median": 0.333,
+      "p_value": 0.7071116019784391,
+      "q_value": 0.804166135583323,
+      "magnitude": "negligible",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "adverbs_ambiguity",
+      "category": "Semântica lexical",
+      "cliffs_delta": -0.066,
+      "human_median": 2.0,
+      "machine_median": 2.7,
+      "p_value": 0.7364276942739472,
+      "q_value": 0.8293748789881347,
+      "magnitude": "negligible",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "adjectives_ambiguity",
+      "category": "Semântica lexical",
+      "cliffs_delta": -0.061,
+      "human_median": 2.727,
+      "machine_median": 2.92,
+      "p_value": 0.7591004194547404,
+      "q_value": 0.8429857591443296,
+      "magnitude": "negligible",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "and_ratio",
+      "category": "Conectivos",
+      "cliffs_delta": -0.058,
+      "human_median": 0.024,
+      "machine_median": 0.022,
+      "p_value": 0.7703145730111978,
+      "q_value": 0.8429857591443296,
+      "magnitude": "negligible",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "adjacent_refs",
+      "category": "Coesão referencial",
+      "cliffs_delta": -0.053,
+      "human_median": 0.0,
+      "machine_median": 0.0,
+      "p_value": 0.7697731139943479,
+      "q_value": 0.8429857591443296,
+      "magnitude": "negligible",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "tmp_neg_conn_ratio",
+      "category": "Conectivos",
+      "cliffs_delta": -0.053,
+      "human_median": 0.0,
+      "machine_median": 0.0,
+      "p_value": 0.3434510768344097,
+      "q_value": 0.4912669541653723,
+      "magnitude": "negligible",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "imageabilidade_1_25_ratio",
+      "category": "Psicolinguísticas",
+      "cliffs_delta": 0.053,
+      "human_median": 0.0,
+      "machine_median": 0.0,
+      "p_value": 0.3434510768344097,
+      "q_value": 0.4912669541653723,
+      "magnitude": "negligible",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "content_words_ambiguity",
+      "category": "Semântica lexical",
+      "cliffs_delta": -0.036,
+      "human_median": 4.361,
+      "machine_median": 4.351,
+      "p_value": 0.8609472483171523,
+      "q_value": 0.928152599459143,
+      "magnitude": "negligible",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "hypernyms_verbs",
+      "category": "Semântica lexical",
+      "cliffs_delta": -0.033,
+      "human_median": 0.545,
+      "machine_median": 0.558,
+      "p_value": 0.8724242907734054,
+      "q_value": 0.928152599459143,
+      "magnitude": "negligible",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "medium_long_sentence_ratio",
+      "category": "Simplicidade",
+      "cliffs_delta": -0.03,
+      "human_median": 0.091,
+      "machine_median": 0.091,
+      "p_value": 0.8801447063836702,
+      "q_value": 0.928152599459143,
+      "magnitude": "negligible",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "anaphoric_refs",
+      "category": "Coesão referencial",
+      "cliffs_delta": 0.03,
+      "human_median": 0.2,
+      "machine_median": 0.0,
+      "p_value": 0.876002222597991,
+      "q_value": 0.928152599459143,
+      "magnitude": "negligible",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": true
+     },
+     {
+      "metric": "tmp_pos_conn_ratio",
+      "category": "Conectivos",
+      "cliffs_delta": -0.019,
+      "human_median": 0.006,
+      "machine_median": 0.007,
+      "p_value": 0.9297455499758019,
+      "q_value": 0.9548989818524268,
+      "magnitude": "negligible",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "concretude_1_25_ratio",
+      "category": "Psicolinguísticas",
+      "cliffs_delta": -0.019,
+      "human_median": 0.0,
+      "machine_median": 0.0,
+      "p_value": 0.9129255735399431,
+      "q_value": 0.9540483471228234,
+      "magnitude": "negligible",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "familiaridade_mean",
+      "category": "Psicolinguísticas",
+      "cliffs_delta": 0.019,
+      "human_median": 4.741,
+      "machine_median": 4.808,
+      "p_value": 0.9302033185286571,
+      "q_value": 0.9548989818524268,
+      "magnitude": "negligible",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "cau_pos_conn_ratio",
+      "category": "Conectivos",
+      "cliffs_delta": -0.014,
+      "human_median": 0.033,
+      "machine_median": 0.031,
+      "p_value": 0.9534358380707895,
+      "q_value": 0.9701627825983472,
+      "magnitude": "negligible",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "content_word_min",
+      "category": "Diversidade lexical",
+      "cliffs_delta": -0.006,
+      "human_median": 0.4,
+      "machine_median": 0.4,
+      "p_value": 0.9883425479684624,
+      "q_value": 0.9969368309942751,
+      "magnitude": "negligible",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "familiaridade_1_25_ratio",
+      "category": "Psicolinguísticas",
+      "cliffs_delta": -0.003,
+      "human_median": 0.0,
+      "machine_median": 0.0,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "magnitude": "negligible",
+      "strong": false,
+      "layout_dependent": false,
+      "installation_dependent": false
+     },
+     {
+      "metric": "subtitles",
+      "category": "Descritivas",
+      "cliffs_delta": 0.0,
+      "human_median": 0.0,
+      "machine_median": 0.0,
+      "p_value": null,
+      "q_value": null,
+      "magnitude": "negligible",
+      "strong": false,
+      "layout_dependent": true,
+      "installation_dependent": false
+     }
+    ],
+    "total": 117,
+    "strong": 36,
+    "strong_clean": 31
    },
    "sage": {
     "human": [
      {
-      "term": "voce",
-      "distinctiveness": 2.596
-     },
-     {
-      "term": "essa",
-      "distinctiveness": 2.53
-     },
-     {
-      "term": "partir de",
-      "distinctiveness": 2.236
-     },
-     {
-      "term": "seus",
-      "distinctiveness": 2.236
-     },
-     {
       "term": "hoje",
-      "distinctiveness": 2.074
+      "distinctiveness": 5.437
      },
      {
-      "term": "delacao",
-      "distinctiveness": 2.074
-     },
-     {
-      "term": "todos os",
-      "distinctiveness": 1.844
-     },
-     {
-      "term": "muito",
-      "distinctiveness": 1.699
-     },
-     {
-      "term": "quem",
-      "distinctiveness": 1.663
-     },
-     {
-      "term": "deu",
-      "distinctiveness": 1.663
-     },
-     {
-      "term": "pouco",
-      "distinctiveness": 1.663
+      "term": "voce",
+      "distinctiveness": 2.265
      },
      {
       "term": "todos",
-      "distinctiveness": 1.597
+      "distinctiveness": 2.159
      },
      {
-      "term": "ele",
-      "distinctiveness": 1.527
-     },
-     {
-      "term": "vai",
-      "distinctiveness": 1.377
-     },
-     {
-      "term": "aqui",
-      "distinctiveness": 1.366
-     },
-     {
-      "term": "primeiro",
-      "distinctiveness": 1.366
-     },
-     {
-      "term": "todo",
-      "distinctiveness": 1.366
-     },
-     {
-      "term": "site",
-      "distinctiveness": 1.366
-     },
-     {
-      "term": "partir",
-      "distinctiveness": 1.345
-     },
-     {
-      "term": "relacao",
-      "distinctiveness": 1.273
-     },
-     {
-      "term": "rede",
-      "distinctiveness": 1.273
+      "term": "globo",
+      "distinctiveness": 2.037
      },
      {
       "term": "mil",
-      "distinctiveness": 1.243
+      "distinctiveness": 1.861
      },
      {
-      "term": "que ele",
-      "distinctiveness": 1.222
+      "term": "fim",
+      "distinctiveness": 1.747
      },
      {
-      "term": "durante",
-      "distinctiveness": 1.221
+      "term": "no brasil",
+      "distinctiveness": 1.724
      },
      {
-      "term": "valor",
-      "distinctiveness": 1.186
+      "term": "vida",
+      "distinctiveness": 1.724
+     },
+     {
+      "term": "pouco",
+      "distinctiveness": 1.724
+     },
+     {
+      "term": "partir",
+      "distinctiveness": 1.63
+     },
+     {
+      "term": "de um",
+      "distinctiveness": 1.47
+     },
+     {
+      "term": "so",
+      "distinctiveness": 1.47
+     },
+     {
+      "term": "vai",
+      "distinctiveness": 1.437
+     },
+     {
+      "term": "primeiro",
+      "distinctiveness": 1.431
+     },
+     {
+      "term": "forca",
+      "distinctiveness": 1.431
+     },
+     {
+      "term": "essas",
+      "distinctiveness": 1.431
+     },
+     {
+      "term": "foi uma",
+      "distinctiveness": 1.431
+     },
+     {
+      "term": "ele",
+      "distinctiveness": 1.398
+     },
+     {
+      "term": "muito",
+      "distinctiveness": 1.362
+     },
+     {
+      "term": "tempo",
+      "distinctiveness": 1.333
+     },
+     {
+      "term": "deu",
+      "distinctiveness": 1.333
+     },
+     {
+      "term": "nao tem",
+      "distinctiveness": 1.333
+     },
+     {
+      "term": "poderia",
+      "distinctiveness": 1.333
+     },
+     {
+      "term": "seu",
+      "distinctiveness": 1.305
+     },
+     {
+      "term": "rede",
+      "distinctiveness": 1.289
      }
     ],
     "machine": [
      {
       "term": "crise",
-      "distinctiveness": 4.702
-     },
-     {
-      "term": "afirma",
-      "distinctiveness": 4.378
-     },
-     {
-      "term": "afirma que",
-      "distinctiveness": 4.278
+      "distinctiveness": 4.588
      },
      {
       "term": "alem",
+      "distinctiveness": 4.153
+     },
+     {
+      "term": "afirma",
       "distinctiveness": 4.035
      },
      {
-      "term": "antes",
-      "distinctiveness": 3.806
+      "term": "publico",
+      "distinctiveness": 3.971
      },
      {
-      "term": "disso",
-      "distinctiveness": 3.805
+      "term": "paulo",
+      "distinctiveness": 3.971
+     },
+     {
+      "term": "antes",
+      "distinctiveness": 3.901
      },
      {
       "term": "afirmou",
-      "distinctiveness": 3.716
-     },
-     {
-      "term": "afirmou que",
-      "distinctiveness": 3.505
-     },
-     {
-      "term": "transporte",
-      "distinctiveness": 3.505
-     },
-     {
-      "term": "alem disso",
-      "distinctiveness": 3.505
-     },
-     {
-      "term": "do presidente",
-      "distinctiveness": 3.381
+      "distinctiveness": 3.901
      },
      {
       "term": "tribunal",
-      "distinctiveness": 3.381
+      "distinctiveness": 3.827
      },
      {
-      "term": "lei",
-      "distinctiveness": 3.381
+      "term": "disso",
+      "distinctiveness": 3.827
      },
      {
-      "term": "nao foi",
-      "distinctiveness": 3.242
-     },
-     {
-      "term": "tribunal federal",
-      "distinctiveness": 3.078
-     },
-     {
-      "term": "equipes",
-      "distinctiveness": 3.078
-     },
-     {
-      "term": "supremo tribunal",
-      "distinctiveness": 3.077
-     },
-     {
-      "term": "que ja",
-      "distinctiveness": 3.077
+      "term": "um dos",
+      "distinctiveness": 3.827
      },
      {
       "term": "em uma",
-      "distinctiveness": 3.076
+      "distinctiveness": 3.658
      },
      {
-      "term": "corrupcao",
-      "distinctiveness": 2.161
+      "term": "afirma que",
+      "distinctiveness": 3.561
      },
      {
-      "term": "empresa",
-      "distinctiveness": 2.122
+      "term": "dia",
+      "distinctiveness": 3.561
      },
      {
-      "term": "politica",
-      "distinctiveness": 1.628
+      "term": "da operacao",
+      "distinctiveness": 3.561
      },
      {
-      "term": "presidente da",
-      "distinctiveness": 1.338
+      "term": "alem disso",
+      "distinctiveness": 3.561
      },
      {
-      "term": "suas",
-      "distinctiveness": 1.337
+      "term": "pagamento",
+      "distinctiveness": 3.454
      },
      {
-      "term": "no entanto",
-      "distinctiveness": 1.249
+      "term": "afirmou que",
+      "distinctiveness": 3.454
+     },
+     {
+      "term": "lei",
+      "distinctiveness": 3.332
+     },
+     {
+      "term": "passado",
+      "distinctiveness": 3.332
+     },
+     {
+      "term": "principais",
+      "distinctiveness": 3.196
+     },
+     {
+      "term": "afirmando que",
+      "distinctiveness": 3.195
+     },
+     {
+      "term": "afirmando",
+      "distinctiveness": 3.195
+     },
+     {
+      "term": "do ano",
+      "distinctiveness": 3.195
+     },
+     {
+      "term": "nao foi",
+      "distinctiveness": 3.195
+     },
+     {
+      "term": "exemplo",
+      "distinctiveness": 3.195
      }
     ]
    },
@@ -10038,156 +11565,156 @@
       "human_word": "ministro",
       "human_frequency": 13,
       "machine_word": "ministro",
-      "machine_frequency": 34
+      "machine_frequency": 31
      },
      {
       "rank": 2,
-      "human_word": "brasil",
-      "human_frequency": 10,
-      "machine_word": "presidente",
-      "machine_frequency": 32
+      "human_word": "mil",
+      "human_frequency": 11,
+      "machine_word": "crise",
+      "machine_frequency": 28
      },
      {
       "rank": 3,
-      "human_word": "mil",
+      "human_word": "brasil",
       "human_frequency": 10,
-      "machine_word": "crise",
-      "machine_frequency": 29
+      "machine_word": "pode",
+      "machine_frequency": 27
      },
      {
       "rank": 4,
       "human_word": "vai",
       "human_frequency": 10,
-      "machine_word": "corrupção",
-      "machine_frequency": 27
+      "machine_word": "segundo",
+      "machine_frequency": 26
      },
      {
       "rank": 5,
-      "human_word": "todos",
+      "human_word": "lula",
       "human_frequency": 9,
-      "machine_word": "governo",
-      "machine_frequency": 26
+      "machine_word": "operação",
+      "machine_frequency": 25
      },
      {
       "rank": 6,
-      "human_word": "anos",
-      "human_frequency": 8,
-      "machine_word": "empresa",
-      "machine_frequency": 26
+      "human_word": "país",
+      "human_frequency": 9,
+      "machine_word": "presidente",
+      "machine_frequency": 25
      },
      {
       "rank": 7,
-      "human_word": "país",
-      "human_frequency": 8,
-      "machine_word": "afirma",
-      "machine_frequency": 21
+      "human_word": "todos",
+      "human_frequency": 9,
+      "machine_word": "empresa",
+      "machine_frequency": 25
      },
      {
       "rank": 8,
-      "human_word": "habitantes",
+      "human_word": "globo",
       "human_frequency": 8,
-      "machine_word": "segundo",
+      "machine_word": "lula",
       "machine_frequency": 20
      },
      {
       "rank": 9,
-      "human_word": "aécio",
-      "human_frequency": 7,
-      "machine_word": "moraes",
+      "human_word": "anos",
+      "human_frequency": 8,
+      "machine_word": "governo",
       "machine_frequency": 20
      },
      {
       "rank": 10,
-      "human_word": "entrevistados",
-      "human_frequency": 7,
-      "machine_word": "petrobras",
+      "human_word": "habitantes",
+      "human_frequency": 8,
+      "machine_word": "federal",
       "machine_frequency": 19
      },
      {
       "rank": 11,
-      "human_word": "pode",
+      "human_word": "decisão",
       "human_frequency": 7,
-      "machine_word": "odebrecht",
+      "machine_word": "decisão",
       "machine_frequency": 18
      },
      {
       "rank": 12,
-      "human_word": "apenas",
+      "human_word": "caso",
       "human_frequency": 7,
-      "machine_word": "estado",
+      "machine_word": "caso",
       "machine_frequency": 18
      },
      {
       "rank": 13,
-      "human_word": "partir",
+      "human_word": "aécio",
       "human_frequency": 7,
-      "machine_word": "anos",
+      "machine_word": "além",
       "machine_frequency": 18
      },
      {
       "rank": 14,
-      "human_word": "globo",
+      "human_word": "entrevistados",
       "human_frequency": 7,
-      "machine_word": "lava",
+      "machine_word": "milhões",
       "machine_frequency": 17
      },
      {
       "rank": 15,
-      "human_word": "delação",
-      "human_frequency": 6,
-      "machine_word": "jato",
-      "machine_frequency": 17
-     },
-     {
-      "rank": 16,
-      "human_word": "fim",
-      "human_frequency": 6,
+      "human_word": "pode",
+      "human_frequency": 7,
       "machine_word": "disse",
       "machine_frequency": 17
      },
      {
+      "rank": 16,
+      "human_word": "apenas",
+      "human_frequency": 7,
+      "machine_word": "ter",
+      "machine_frequency": 17
+     },
+     {
       "rank": 17,
-      "human_word": "hoje",
-      "human_frequency": 6,
-      "machine_word": "operação",
-      "machine_frequency": 16
+      "human_word": "partir",
+      "human_frequency": 7,
+      "machine_word": "míssil",
+      "machine_frequency": 17
      },
      {
       "rank": 18,
-      "human_word": "pessoas",
+      "human_word": "ex-presidente",
       "human_frequency": 6,
-      "machine_word": "política",
-      "machine_frequency": 16
+      "machine_word": "moraes",
+      "machine_frequency": 17
      },
      {
       "rank": 19,
-      "human_word": "stf",
+      "human_word": "delação",
       "human_frequency": 6,
-      "machine_word": "além",
-      "machine_frequency": 15
+      "machine_word": "lava",
+      "machine_frequency": 16
      },
      {
       "rank": 20,
-      "human_word": "valor",
+      "human_word": "fim",
       "human_frequency": 6,
-      "machine_word": "investigação",
-      "machine_frequency": 15
+      "machine_word": "jato",
+      "machine_frequency": 16
      }
     ],
     "recuts": [
      {
       "dataset": "fakebr_human",
       "label": "Fake.br · humano",
-      "tokens": 1133,
-      "types": 808,
-      "type_token_ratio": 0.7132
+      "tokens": 1232,
+      "types": 868,
+      "type_token_ratio": 0.7045
      },
      {
       "dataset": "fakebr_machine",
       "label": "Fake.br · máquina",
-      "tokens": 3560,
-      "types": 1774,
-      "type_token_ratio": 0.4983
+      "tokens": 3728,
+      "types": 1744,
+      "type_token_ratio": 0.4678
      },
      {
       "dataset": "faketruebr_human",
@@ -10199,23 +11726,23 @@
      {
       "dataset": "faketruebr_machine",
       "label": "FakeTrueBR · máquina",
-      "tokens": 1333,
-      "types": 828,
-      "type_token_ratio": 0.6212
+      "tokens": 1763,
+      "types": 1021,
+      "type_token_ratio": 0.5791
      },
      {
       "dataset": "human",
       "label": "Humano",
-      "tokens": 1915,
-      "types": 1240,
-      "type_token_ratio": 0.6475
+      "tokens": 2014,
+      "types": 1297,
+      "type_token_ratio": 0.644
      },
      {
       "dataset": "machine",
       "label": "Máquina",
-      "tokens": 4893,
-      "types": 2344,
-      "type_token_ratio": 0.4791
+      "tokens": 5491,
+      "types": 2436,
+      "type_token_ratio": 0.4436
      }
     ]
    }
@@ -10243,6 +11770,7 @@
   "mean_excludes": [
    "naive_bayes"
   ],
+  "human_test_size": 1079,
   "modes": [
    {
     "id": "linguistic",
@@ -11213,6 +12741,36 @@
      }
     }
    }
-  ]
+  ],
+  "xgboost_ablation": {
+   "label": "Ablação do XGBoost linguístico",
+   "generator": "ollama/llama3.1:8b (rodada2)",
+   "steps": [
+    {
+     "id": "none",
+     "label": "Nenhuma removida",
+     "detection": 1.0,
+     "false_positive_rate": 0.001
+    },
+    {
+     "id": "top2",
+     "label": "Sem as 2 principais features",
+     "detection": 0.8,
+     "false_positive_rate": 0.004
+    },
+    {
+     "id": "top16",
+     "label": "Sem as 16 principais features",
+     "detection": 0.5,
+     "false_positive_rate": 0.011
+    },
+    {
+     "id": "nilc",
+     "label": "Sem todo o NILC-Metrix",
+     "detection": 0.4,
+     "false_positive_rate": 0.021
+    }
+   ]
+  }
  }
 }

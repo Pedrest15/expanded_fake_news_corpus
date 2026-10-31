@@ -18,6 +18,7 @@
        escuro) contra as superficies do site. Nao reusa o verde/vermelho de
        verdadeiro/falso: aqui os dois lados sao fake news. */
     --human:#2a78d6; --machine:#e34948; --neutral:#f0efec;
+    --seq-lo:#EAF3F1; --seq-hi:#08463F; --ok:#0E6B61;
     --sans:"IBM Plex Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
     --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
     --news:"Newsreader",Georgia,"Times New Roman",serif;
@@ -29,6 +30,7 @@
       --rule:#2C3735; --rule-soft:#222B29;
       --accent:#5EC0B2; --accent-soft:#12302C;
       --human:#3987e5; --machine:#e66767; --neutral:#383835;
+      --seq-lo:#1E2725; --seq-hi:#6FCFC0; --ok:#5EC0B2;
     }
   }
   :root[data-theme="dark"]{
@@ -37,6 +39,7 @@
     --rule:#2C3735; --rule-soft:#222B29;
     --accent:#5EC0B2; --accent-soft:#12302C;
     --human:#3987e5; --machine:#e66767; --neutral:#383835;
+    --seq-lo:#1E2725; --seq-hi:#6FCFC0; --ok:#5EC0B2;
   }
 
   *{box-sizing:border-box}
@@ -165,6 +168,79 @@
 
   .note{font-size:12.5px; color:var(--ink-3); margin:14px 0 0; max-width:82ch}
 
+
+  /* ---------- comparação dos detectores ---------- */
+  .ctl{display:flex; flex-wrap:wrap; gap:10px 22px; align-items:flex-end; margin:0 0 16px}
+  .ctl label.pick select{min-width:150px; max-width:100%}
+  .viz{margin:0 0 30px}
+  .viz:last-of-type{margin-bottom:6px}
+  .viz h3{margin:0 0 3px; font-size:14px; font-weight:700}
+  .viz > p.q{margin:0 0 11px; color:var(--ink-2); font-size:13px; max-width:78ch}
+  .caveat{border-left:3px solid var(--accent); background:var(--accent-soft); padding:9px 13px;
+    margin:0 0 20px; font-size:12.5px; color:var(--ink-2); max-width:none}
+  .caveat ul{margin:5px 0 0; padding-left:18px}
+  .caveat li{margin:2px 0}
+  .scale{display:flex; align-items:center; gap:8px; font-size:11.5px; color:var(--ink-3); margin:0 0 9px; flex-wrap:wrap}
+  .scale .ramp{width:140px; height:10px; border-radius:2px; border:1px solid var(--rule);
+    background:linear-gradient(90deg,var(--seq-lo),var(--seq-hi))}
+  table.hm{border-collapse:separate; border-spacing:2px; width:100%; min-width:560px}
+  table.hm th, table.hm td{border:0; padding:0}
+  table.hm thead th{vertical-align:bottom; padding:0 0 4px}
+  table.hm th.rowh{text-align:left; font-size:12.5px; font-weight:500; letter-spacing:0; text-transform:none;
+    color:var(--ink); white-space:normal; padding:0 10px 0 0; line-height:1.25}
+  table.hm th.rowh small{display:block; color:var(--ink-3); font-size:10.5px; letter-spacing:.05em; text-transform:uppercase}
+  table.hm th.rowh.grp{border-top:6px solid transparent}
+  table.hm button.sortb{all:unset; cursor:pointer; box-sizing:border-box; width:100%; padding:3px 4px; text-align:center;
+    font-size:10.5px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-3);
+    line-height:1.2; border-radius:2px}
+  table.hm button.sortb:hover{color:var(--ink); background:var(--panel-2)}
+  table.hm button.sortb:focus-visible{outline:2px solid var(--accent)}
+  table.hm button.sortb[aria-pressed="true"]{color:var(--accent)}
+  table.hm button.sortb[aria-pressed="true"]::after{content:attr(data-dir)}
+  table.hm td.cell{height:30px; text-align:center; font-family:var(--mono); font-size:12.5px; font-weight:500;
+    font-variant-numeric:tabular-nums; border-radius:2px; min-width:58px; cursor:default}
+  table.hm td.cell:focus-visible{outline:2px solid var(--ink); outline-offset:1px}
+  table.hm td.aux{text-align:center; font-family:var(--mono); font-size:12px; color:var(--ink-2);
+    font-variant-numeric:tabular-nums; min-width:62px; border-bottom:1px solid var(--rule-soft)}
+  table.hm td.gap, table.hm th.gap{width:10px; min-width:10px}
+  table.hm tr.grp th, table.hm tr.grp td{padding-top:7px}
+  svg.chart{display:block; width:100%; height:auto; overflow:visible}
+  svg.chart text{font-family:var(--sans); fill:var(--ink-2); font-size:11px}
+  svg.chart .grid{stroke:var(--rule-soft); stroke-width:1}
+  svg.chart .axisl{stroke:var(--rule); stroke-width:1}
+  svg.chart .ci{stroke:var(--ink-3); stroke-width:1.5}
+  svg.chart .pt{fill:var(--accent); stroke:var(--panel); stroke-width:2}
+  svg.chart .pt.hol{fill:var(--panel); stroke:var(--ink-3); stroke-width:2}
+  svg.chart text.lbl{font-size:10.5px; fill:var(--ink)}
+  svg.chart text.ttl{font-size:11px; fill:var(--ink-3)}
+  svg.chart .hit{fill:transparent; cursor:default}
+  svg.chart .hit:focus-visible{stroke:var(--ink); stroke-width:2; outline:none}
+  svg.chart .meanl{stroke:var(--accent); stroke-width:1.5; stroke-dasharray:4 3}
+  #trade{overflow-x:auto}
+  #trade svg.chart{min-width:560px}
+  .shapes{display:flex; flex-wrap:wrap; gap:6px 16px; margin:0 0 8px; font-size:12px; color:var(--ink-2)}
+  .shapes span{display:inline-flex; align-items:center; gap:6px}
+  .shapes svg{width:12px; height:12px; flex:none}
+  .shapes svg *{fill:var(--accent)}
+  .panels{display:grid; grid-template-columns:repeat(auto-fit,minmax(215px,1fr)); gap:14px 18px}
+  .panels h4{margin:0 0 2px; font-size:12px; font-weight:600}
+  .ab{display:grid; grid-template-columns:minmax(120px,210px) 1fr 70px 70px; gap:7px 12px; align-items:center;
+    font-size:12.5px; max-width:760px}
+  .ab .hd{font-size:10.5px; font-weight:600; letter-spacing:.07em; text-transform:uppercase; color:var(--ink-3)}
+  .ab .hd.r, .ab .v{text-align:right}
+  .ab .v{font-family:var(--mono); font-variant-numeric:tabular-nums; color:var(--ink)}
+  .ab .trk{position:relative; height:14px; background:var(--panel-2); border-radius:2px}
+  .ab .bar{position:absolute; left:0; top:2px; bottom:2px; background:var(--accent); border-radius:0 4px 4px 0}
+  .ab .whisk{position:absolute; top:6px; height:2px; background:var(--ink)}
+  .ab .whisk::before, .ab .whisk::after{content:""; position:absolute; top:-3px; width:2px; height:8px; background:var(--ink)}
+  .ab .whisk::before{left:0} .ab .whisk::after{right:0}
+  .ab .lab{line-height:1.25}
+  @media (max-width:560px){.ab{grid-template-columns:84px minmax(0,1fr) 44px 44px; gap:7px 8px; font-size:12px}}
+  .ab .scalee{grid-column:2; display:flex; justify-content:space-between; font-size:10.5px; color:var(--ink-3)}
+  table.mini{margin-top:12px; max-width:640px}
+  table.mini td.word{white-space:nowrap}
+  .vsr{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)}
+
   /* ---------- tooltip ---------- */
   #tip{position:fixed; z-index:20; pointer-events:none; opacity:0; transition:opacity .12s;
     background:var(--panel); color:var(--ink); border:1px solid var(--rule);
@@ -281,7 +357,7 @@
           <div class="inner tablewrap"><table id="nilc-table"></table></div>
         </details>
       </div>
-      <p class="note" id="nilc-empty" hidden>Este gerador não foi medido pelo NILC-Metrix. No Llama 3.1 8B, só a segunda rodada foi medida, e a página mostra a primeira; as tabelas da segunda estão em <code>data/analysis/paper_replication/llama3.1_8b_r2/nilc_metrix/</code>.</p>
+      <p class="note" id="nilc-empty" hidden>Este gerador não foi medido pelo NILC-Metrix.</p>
     </div>
   </section>
 
@@ -311,14 +387,64 @@
     </div>
   </section>
 
-  <section class="card" id="sec-detection">
+  <section class="card" id="sec-compare">
     <div class="card-head">
       <h2>Detecção por modelos treinados fora</h2>
-      <p>Detectores treinados no corpus do trabalho anterior (fake news humanas contra as do Sabiá-3, na divisão 80/20 de lá) leem os textos dos nossos geradores, que nunca viram. Cada célula de gerador é a fração dos 20 textos marcada como máquina; as duas colunas antes dela medem o detector no teste do próprio trabalho anterior.</p>
+      <p>Detectores treinados no corpus do trabalho anterior (fake news humanas contra as do Sabiá-3) leem os textos dos nossos geradores, que nunca viram. Quatro leituras do mesmo resultado: onde cada modo acerta, como os classificadores de um modo diferem, o que se paga em falso positivo e quanto o melhor resultado do Llama depende de poucas features.</p>
+    </div>
+    <div class="card-body">
+      <div class="caveat"><strong>Leia com cuidado.</strong>
+        <ul>
+          <li><strong>Cada gerador tem só 20 textos:</strong> um texto vale 5 pontos. Os intervalos exibidos são de Wilson (95%) sobre 20 textos; quando se sobrepõem, a diferença não é distinguível de ruído.</li>
+          <li>O Llama 3.1 8B é a <strong>rodada 2</strong> em toda a página.</li>
+          <li>A média entre classificadores <strong>exclui o Naive Bayes</strong>, que marca texto demais como máquina; ele aparece nos gráficos por classificador, com marcador vazado. Na média os cinco classificadores leem os mesmos 20 textos, então o intervalo é aproximado e tratado como de 20 textos.</li>
+          <li>O melhor resultado do Llama (XGBoost + linguístico) depende de duas features que parecem refletir o formato do corpus humano antigo; veja a ablação mais abaixo.</li>
+        </ul>
+      </div>
+      <div class="ctl">
+        <label class="pick"><span>Classificador</span><select id="c-clf"></select></label>
+        <label class="pick"><span>Gerador no gráfico de compromisso</span><select id="c-gen"></select></label>
+      </div>
+
+      <div class="viz" id="viz-heat">
+        <h3>Modo por gerador</h3>
+        <p class="q">Em que modos cada gerador é detectado? Clique no cabeçalho de uma coluna para ordenar por ela. Cor e número mostram a fração dos 20 textos marcada como máquina; falso positivo e acurácia ficam fora da escala de cor, pois menos é melhor no primeiro e a escala é outra.</p>
+        <div class="scale"><span>0%</span><span class="ramp" aria-hidden="true"></span><span>100% dos textos detectados</span></div>
+        <div class="tablewrap" id="heat"></div>
+      </div>
+
+      <div class="viz" id="viz-trade">
+        <h3>Detecção contra falso positivo</h3>
+        <p class="q">Qual modo detecta mais sem acusar humano? O melhor lugar é o canto superior esquerdo. As barras verticais são o intervalo de 95% da detecção; o falso positivo vem de um teste muito maior e seu intervalo é estreito demais para desenhar.</p>
+        <div class="shapes" id="trade-legend"></div>
+        <div id="trade"></div>
+      </div>
+
+      <div class="viz" id="viz-mode">
+        <h3>Classificadores dentro de um modo</h3>
+        <p class="q">Os seis classificadores concordam num mesmo modo? Cada ponto é um classificador, com o intervalo de 95%; a linha tracejada é a média sem o Naive Bayes (marcador vazado).</p>
+        <div class="ctl"><label class="pick"><span>Modo</span><select id="c-mode"></select></label></div>
+        <div class="panels" id="mode-panels"></div>
+        <div class="tablewrap"><table class="mini" id="mode-table"></table></div>
+      </div>
+
+      <div class="viz" id="viz-abl">
+        <h3>Ablação do XGBoost linguístico</h3>
+        <p class="q">O 100% no Llama sobrevive sem as features do NILC-Metrix? Cada linha tira mais features e treina de novo; a barra é a detecção do Llama (rodada 2) com o intervalo de 95%.</p>
+        <div class="ab" id="ablation"></div>
+        <p class="note">Ablação feita fora do pipeline que gera o restante da página, com os mesmos 20 textos do Llama. As duas features principais, sentenças por parágrafo e razão de entidades nomeadas, parecem refletir o formato dos textos humanos do corpus antigo; por isso o 100% inicial não deve ser lido como capacidade geral de detectar texto do Llama.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="card" id="sec-detection">
+    <div class="card-head">
+      <h2>Tabela completa da detecção</h2>
+      <p>Os mesmos números das visualizações acima, em tabela: média dos classificadores de cada modo (sem o Naive Bayes) e, no detalhe, cada classificador. As duas colunas antes dos geradores medem o detector no teste do próprio trabalho anterior.</p>
     </div>
     <div class="card-body">
       <div class="tablewrap"><table id="detection-table"></table></div>
-      <p class="note">Média dos classificadores de cada modo, sem o Naive Bayes, que marca texto demais como máquina e infla a detecção; ele está no detalhe. No fine-tuning direto não há classificador: a decisão sai da cabeça do BERT. <strong>Cada gerador tem só 20 textos</strong>, então um texto vale 5 pontos e diferenças de 5 a 10 pontos entre modos são ruído. O Llama é a <strong>rodada 2</strong>; o seletor de gerador acima mostra a rodada 1.</p>
+      <p class="note">Média dos classificadores de cada modo, sem o Naive Bayes, que marca texto demais como máquina e infla a detecção; ele está no detalhe. No fine-tuning direto não há classificador: a decisão sai da cabeça do BERT. <strong>Cada gerador tem só 20 textos</strong>, então um texto vale 5 pontos e diferenças de 5 a 10 pontos entre modos são ruído. O Llama é a <strong>rodada 2</strong>.</p>
       <p class="note">O xgboost com features linguísticas detecta os 20 textos do Llama, mas isso depende de duas features do NILC-Metrix, sentenças por parágrafo e razão de entidades nomeadas, que parecem refletir também o formato dos textos humanos do corpus antigo: numa amostra de 400 pares de teste, 92% dos humanos não têm quebra de linha (18% nos do Sabiá-3). Sem essas duas features, a detecção do Llama cai para 80%.</p>
       <details class="more"><summary>Cada classificador</summary>
         <div class="inner tablewrap"><table id="detection-detail"></table></div>
@@ -660,6 +786,498 @@
     renderTable("detection-detail", dheaders, detail, dnumeric, null, dwords);
   }
 
+  /* ---------- comparação dos detectores ---------- */
+
+  var SVGNS = "http://www.w3.org/2000/svg";
+  var N_TEXTS = 20;   // textos por gerador
+  var SHORT = {
+    linguistic: "Linguístico",
+    embedding_bertimbau: "Emb. BERTimbau",
+    embedding_bert_multilingual: "Emb. mBERT",
+    combined_bertimbau: "Comb. BERTimbau",
+    combined_bert_multilingual: "Comb. mBERT",
+    tfidf_linguistic: "TF-IDF + ling.",
+    tfidf_only: "TF-IDF",
+    bow_linguistic: "BoW + ling.",
+    bow_only: "BoW",
+    finetune_bertimbau: "FT BERTimbau",
+    finetune_bert_multilingual: "FT mBERT",
+    finetuned_embedding_bertimbau: "CLS BERTimbau",
+    finetuned_embedding_bert_multilingual: "CLS mBERT"
+  };
+  var CLF_NAME = {
+    svm: "SVM", random_forest: "Random Forest", naive_bayes: "Naive Bayes",
+    logistic_regression: "Regressão logística", mlp: "MLP", xgboost: "XGBoost",
+    "fine-tuning": "Cabeça do BERT"
+  };
+  var CLF_SHORT = {
+    svm: "SVM", random_forest: "RF", naive_bayes: "NB",
+    logistic_regression: "LR", mlp: "MLP", xgboost: "XGB", "fine-tuning": "BERT"
+  };
+  var SHAPE_OF = ["circle", "square", "diamond", "up", "cross", "down"];
+  var cs = { clf: "mean", gen: 3, mode: null, sort: null };
+
+  function esc(t) {
+    return String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
+
+  function sv(tag, attrs, text) {
+    var n = document.createElementNS(SVGNS, tag);
+    Object.keys(attrs || {}).forEach(function (k) { n.setAttribute(k, attrs[k]); });
+    if (text != null) n.textContent = text;
+    return n;
+  }
+
+  // Intervalo de Wilson para k sucessos em n (k pode ser fracionário: médias).
+  function wilson(k, n) {
+    var z = 1.96, p = k / n, z2 = z * z;
+    var d = 1 + z2 / n;
+    var c = (p + z2 / (2 * n)) / d;
+    var h = z * Math.sqrt(p * (1 - p) / n + z2 / (4 * n * n)) / d;
+    return [Math.max(0, c - h), Math.min(1, c + h)];
+  }
+
+  function pctr1(a, b) {
+    return (a * 100).toFixed(1).replace(".", ",") + "–" + (b * 100).toFixed(1).replace(".", ",") + "%";
+  }
+
+  function pctr(a, b) {
+    return Math.round(a * 100) + "–" + Math.round(b * 100) + "%";
+  }
+
+  function allClassifiers(c) {
+    var seen = [];
+    c.modes.forEach(function (m) {
+      Object.keys(m.classifiers).forEach(function (k) {
+        if (k !== "fine-tuning" && seen.indexOf(k) < 0) seen.push(k);
+      });
+    });
+    return seen;
+  }
+
+  // Linha de um modo para o classificador escolhido. Os modos de fine-tuning
+  // direto não têm classificador: valem para qualquer escolha.
+  function rowOf(m) {
+    if (cs.clf === "mean") return { r: m.mean, kind: "mean" };
+    if (m.classifiers[cs.clf]) return { r: m.classifiers[cs.clf], kind: "clf" };
+    if (m.classifiers["fine-tuning"]) return { r: m.classifiers["fine-tuning"], kind: "ft" };
+    return null;
+  }
+
+  // Texto da dica e o equivalente em texto puro (leitor de tela).
+  function detectTip(title, genLabel, v, kind) {
+    var ci, html, plain;
+    if (kind === "mean") {
+      ci = wilson(v * N_TEXTS, N_TEXTS);
+      html = "<b>" + esc(title) + "</b><br>" + esc(genLabel) + "<br>média sem NB: <b>" + pct(v, 0) +
+        "</b> (≈" + (v * N_TEXTS).toFixed(1).replace(".", ",") + " de " + N_TEXTS + ")<br>IC 95% aprox.: " + pctr(ci[0], ci[1]);
+      plain = title + ", " + genLabel + ": média " + pct(v, 0) + ", intervalo " + pctr(ci[0], ci[1]);
+    } else {
+      var k = Math.round(v * N_TEXTS);
+      ci = wilson(k, N_TEXTS);
+      html = "<b>" + esc(title) + "</b><br>" + esc(genLabel) + "<br><b>" + k + "/" + N_TEXTS +
+        "</b> detectados (" + pct(v, 0) + ")<br>IC 95%: " + pctr(ci[0], ci[1]);
+      plain = title + ", " + genLabel + ": " + k + " de " + N_TEXTS + ", intervalo " + pctr(ci[0], ci[1]);
+    }
+    return { html: html, plain: plain };
+  }
+
+  function setTip(node, t) {
+    node.setAttribute("data-tip", t.html);
+    node.setAttribute("aria-label", t.plain);
+  }
+
+  /* cores da escala sequencial, lidas do tema ativo */
+  function cssColor(name) {
+    var v = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+    var m = /^#([0-9a-f]{6})$/i.exec(v);
+    if (!m) return [128, 128, 128];
+    var n = parseInt(m[1], 16);
+    return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+  }
+
+  function lum(rgb) {
+    var c = rgb.map(function (x) {
+      x /= 255;
+      return x <= 0.03928 ? x / 12.92 : Math.pow((x + 0.055) / 1.055, 2.4);
+    });
+    return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2];
+  }
+
+  function seqColors(t) {
+    var lo = cssColor("--seq-lo"), hi = cssColor("--seq-hi");
+    var rgb = lo.map(function (x, i) { return Math.round(x + (hi[i] - x) * t); });
+    var L = lum(rgb);
+    var onWhite = 1.05 / (L + 0.05), onDark = (L + 0.05) / 0.055;
+    return {
+      bg: "rgb(" + rgb.join(",") + ")",
+      fg: onWhite > onDark ? "#ffffff" : "#0b100f"
+    };
+  }
+
+  /* ---- 1. mapa de calor ---- */
+
+  function heatRows(c) {
+    var gens = c.generators;
+    var rows = c.modes.map(function (m, i) {
+      var o = rowOf(m);
+      return o ? { m: m, o: o, i: i } : null;
+    }).filter(Boolean);
+    var s = cs.sort;
+    if (s) {
+      var val = function (x) {
+        if (s.key === "fp") return x.o.r.false_positive_rate;
+        if (s.key === "acc") return x.o.r.prior_accuracy;
+        return x.o.r.detection[s.key];
+      };
+      rows.sort(function (a, b) {
+        var d = (val(a) - val(b)) * s.dir;
+        return d || a.i - b.i;
+      });
+    }
+    return { rows: rows, gens: gens };
+  }
+
+  function renderHeat() {
+    var c = payload.classification;
+    var host = document.getElementById("heat");
+    host.textContent = "";
+    var hr = heatRows(c);
+    var table = el("table", "hm");
+    var cap = el("caption", "vsr", "Taxa de detecção por modo e gerador");
+    table.appendChild(cap);
+
+    var thead = el("thead"), htr = el("tr");
+    htr.appendChild(el("th", "rowh"));
+    var cols = hr.gens.map(function (g) { return { key: g.key, label: g.label, best: -1 }; });
+    cols.forEach(function (col) { htr.appendChild(headBtn(col.key, col.label, -1)); });
+    htr.appendChild(el("th", "gap"));
+    htr.appendChild(headBtn("fp", "Falso positivo", 1));
+    htr.appendChild(headBtn("acc", "Acurácia no teste antigo", -1));
+    thead.appendChild(htr);
+    table.appendChild(thead);
+
+    var tbody = el("tbody"), prev = null;
+    hr.rows.forEach(function (x) {
+      var m = x.m, r = x.o.r;
+      var tr = el("tr", !cs.sort && prev && prev !== m.family ? "grp" : null);
+      prev = m.family;
+      var th = el("th", "rowh");
+      th.scope = "row";
+      th.appendChild(el("small", null, m.family));
+      th.appendChild(document.createTextNode(m.label + (x.o.kind === "ft" ? " *" : "")));
+      tr.appendChild(th);
+      hr.gens.forEach(function (g) {
+        var v = r.detection[g.key];
+        var col = seqColors(v);
+        var td = el("td", "cell", pct(v, 0));
+        td.style.background = col.bg;
+        td.style.color = col.fg;
+        td.tabIndex = 0;
+        setTip(td, detectTip(m.family + " · " + m.label + (x.o.kind === "ft" ? " (sem classificador)" : ""), g.label, v, x.o.kind));
+        tr.appendChild(td);
+      });
+      tr.appendChild(el("td", "gap"));
+      tr.appendChild(el("td", "aux", pct(r.false_positive_rate, 1)));
+      tr.appendChild(el("td", "aux", pct(r.prior_accuracy, 2)));
+      tbody.appendChild(tr);
+    });
+    table.appendChild(tbody);
+    host.appendChild(table);
+
+    var note = document.getElementById("heat-note");
+    if (!note) {
+      note = el("p", "note");
+      note.id = "heat-note";
+      host.parentNode.appendChild(note);
+    }
+    note.textContent = cs.clf === "mean"
+      ? "Cada célula é a média de cinco classificadores, sem o Naive Bayes."
+      : "Classificador: " + CLF_NAME[cs.clf] + ". * Modos de fine-tuning direto não têm classificador e mostram a decisão da cabeça do BERT, qualquer que seja a escolha.";
+  }
+
+  function headBtn(key, label, dir) {
+    var th = el("th");
+    var b = el("button", "sortb", label);
+    b.type = "button";
+    var on = cs.sort && cs.sort.key === key;
+    b.setAttribute("aria-pressed", on ? "true" : "false");
+    b.setAttribute("data-dir", on ? (cs.sort.dir === 1 ? " ▲" : " ▼") : "");
+    b.title = "Ordenar por " + label.toLowerCase();
+    b.addEventListener("click", function () {
+      if (cs.sort && cs.sort.key === key) {
+        if (cs.sort.dir === dir) cs.sort = { key: key, dir: -dir };
+        else cs.sort = null;
+      } else {
+        cs.sort = { key: key, dir: dir };
+      }
+      renderHeat();
+      var again = document.querySelector('#heat button[data-key="' + key + '"]');
+      if (again) again.focus();
+    });
+    b.setAttribute("data-key", key);
+    th.appendChild(b);
+    return th;
+  }
+
+  /* ---- 2. compromisso detecção x falso positivo ---- */
+
+  function shapePath(kind, r) {
+    switch (kind) {
+      case "square": return "M" + -r + "," + -r + "h" + 2 * r + "v" + 2 * r + "h" + -2 * r + "z";
+      case "diamond": return "M0," + -1.35 * r + "L" + 1.35 * r + ",0L0," + 1.35 * r + "L" + -1.35 * r + ",0z";
+      case "up": return "M0," + -1.25 * r + "L" + 1.15 * r + "," + 0.95 * r + "L" + -1.15 * r + "," + 0.95 * r + "z";
+      case "down": return "M0," + 1.25 * r + "L" + 1.15 * r + "," + -0.95 * r + "L" + -1.15 * r + "," + -0.95 * r + "z";
+      case "cross": {
+        var a = r * 0.45, b = r * 1.25;
+        return "M" + -a + "," + -b + "h" + 2 * a + "v" + (b - a) + "h" + (b - a) + "v" + 2 * a + "h" + (a - b) + "v" + (b - a) +
+          "h" + -2 * a + "v" + (a - b) + "h" + (a - b) + "v" + -2 * a + "h" + (b - a) + "z";
+      }
+      default: return "M" + -r + ",0a" + r + "," + r + " 0 1,0 " + 2 * r + ",0a" + r + "," + r + " 0 1,0 " + -2 * r + ",0z";
+    }
+  }
+
+  function renderTrade() {
+    var c = payload.classification;
+    var gen = c.generators[cs.gen] || c.generators[0];
+    var fams = [];
+    c.modes.forEach(function (m) { if (fams.indexOf(m.family) < 0) fams.push(m.family); });
+
+    var lg = document.getElementById("trade-legend");
+    lg.textContent = "";
+    fams.forEach(function (f, i) {
+      var span = el("span");
+      var s = sv("svg", { viewBox: "-8 -8 16 16", "aria-hidden": "true" });
+      s.appendChild(sv("path", { d: shapePath(SHAPE_OF[i % SHAPE_OF.length], 5.5) }));
+      span.appendChild(s);
+      span.appendChild(document.createTextNode(f));
+      lg.appendChild(span);
+    });
+
+    var pts = c.modes.map(function (m) {
+      var o = rowOf(m);
+      if (!o) return null;
+      var v = o.r.detection[gen.key];
+      var k = o.kind === "mean" ? v * N_TEXTS : Math.round(v * N_TEXTS);
+      return { m: m, o: o, v: v, fp: o.r.false_positive_rate, ci: wilson(k, N_TEXTS), fci: wilson(Math.round(o.r.false_positive_rate * c.human_test_size), c.human_test_size), shape: SHAPE_OF[fams.indexOf(m.family) % SHAPE_OF.length] };
+    }).filter(Boolean);
+
+    var W = 680, H = 400, ml = 48, mr = 18, mt = 16, mb = 48;
+    var pw = W - ml - mr, ph = H - mt - mb;
+    var maxFp = Math.max.apply(null, pts.map(function (p) { return p.fp; })) * 100;
+    var step = maxFp <= 5 ? 1 : maxFp <= 12 ? 2 : 5;
+    var xmax = Math.max(step, Math.ceil(maxFp * 1.08 / step) * step);
+    function X(v) { return ml + 8 + (v * 100 / xmax) * (pw - 16); }
+    function Y(v) { return mt + ph - (v + 0.04) / 1.08 * ph; }
+
+    var svg = sv("svg", { "class": "chart", viewBox: "0 0 " + W + " " + H, role: "img",
+      "aria-label": "Detecção de " + gen.label + " contra falso positivo, um ponto por modo; a tabela completa está abaixo." });
+    [0, 0.25, 0.5, 0.75, 1].forEach(function (t) {
+      svg.appendChild(sv("line", { "class": "grid", x1: ml, x2: W - mr, y1: Y(t), y2: Y(t) }));
+      svg.appendChild(sv("text", { x: ml - 7, y: Y(t) + 4, "text-anchor": "end" }, Math.round(t * 100) + "%"));
+    });
+    for (var t = 0; t <= xmax + 1e-9; t += step) {
+      svg.appendChild(sv("line", { "class": "grid", x1: X(t / 100), x2: X(t / 100), y1: mt, y2: mt + ph }));
+      svg.appendChild(sv("text", { x: X(t / 100), y: mt + ph + 16, "text-anchor": "middle" }, t + "%"));
+    }
+    svg.appendChild(sv("line", { "class": "axisl", x1: ml, x2: W - mr, y1: mt + ph, y2: mt + ph }));
+    svg.appendChild(sv("text", { "class": "ttl", x: ml + pw / 2, y: H - 6, "text-anchor": "middle" },
+      "Falso positivo em texto humano do teste antigo (menos é melhor)"));
+    svg.appendChild(sv("text", { "class": "ttl", transform: "translate(12," + (mt + ph / 2) + ") rotate(-90)", "text-anchor": "middle" },
+      "Detecção de " + gen.label + " (mais é melhor)"));
+    svg.appendChild(sv("text", { "class": "ttl", x: ml + 12, y: mt + 12 }, "↖ melhor"));
+
+    pts.forEach(function (p) {
+      svg.appendChild(sv("line", { "class": "ci", x1: X(p.fp), x2: X(p.fp), y1: Y(p.ci[0]), y2: Y(p.ci[1]) }));
+      svg.appendChild(sv("line", { "class": "ci", x1: X(p.fci[0]), x2: Math.min(X(p.fci[1]), W - mr), y1: Y(p.v), y2: Y(p.v) }));
+    });
+    // rótulos diretos: o primeiro encaixe sem colisão entre quatro posições
+    var boxes = pts.map(function (p) { return { x0: X(p.fp) - 9, x1: X(p.fp) + 9, y0: Y(p.v) - 9, y1: Y(p.v) + 9 }; });
+    var placed = [];
+    var order = pts.slice().sort(function (a, b) { return b.v - a.v || a.fp - b.fp; });
+    order.forEach(function (p) {
+      var name = SHORT[p.m.id] || p.m.label, w = name.length * 5.6, h = 11;
+      var cx = X(p.fp), cy = Y(p.v);
+      var cand = [
+        { x: cx + 10, y: cy + 4, a: "start" }, { x: cx - 10, y: cy + 4, a: "end" },
+        { x: cx, y: cy - 12, a: "middle" }, { x: cx, y: cy + 19, a: "middle" }
+      ];
+      for (var i = 0; i < cand.length; i++) {
+        var k = cand[i];
+        var x0 = k.a === "start" ? k.x : k.a === "end" ? k.x - w : k.x - w / 2;
+        var b = { x0: x0, x1: x0 + w, y0: k.y - h + 2, y1: k.y + 3 };
+        var bad = b.x0 < ml || b.x1 > W - 4 || b.y0 < mt - 4 || b.y1 > mt + ph + 2 ||
+          boxes.concat(placed).some(function (o) {
+            return !(b.x1 < o.x0 || b.x0 > o.x1 || b.y1 < o.y0 || b.y0 > o.y1);
+          });
+        if (!bad) {
+          placed.push(b);
+          svg.appendChild(sv("text", { "class": "lbl", x: k.x, y: k.y, "text-anchor": k.a }, name));
+          break;
+        }
+      }
+    });
+    pts.forEach(function (p) {
+      var g = sv("g", { transform: "translate(" + X(p.fp) + "," + Y(p.v) + ")" });
+      g.appendChild(sv("path", { "class": "pt", d: shapePath(p.shape, 5.5) }));
+      var hit = sv("circle", { "class": "hit", r: 11, tabindex: 0 });
+      var t = detectTip(p.m.family + " · " + p.m.label + (p.o.kind === "ft" ? " (sem classificador)" : ""), gen.label, p.v, p.o.kind);
+      t.html += "<br>falso positivo: <b>" + pct(p.fp, 1) + "</b> (IC 95%: " + pctr1(p.fci[0], p.fci[1]) + ", n=" + c.human_test_size + ") · acurácia: <b>" + pct(p.o.r.prior_accuracy, 2) + "</b>";
+      t.plain += "; falso positivo " + pct(p.fp, 1) + ", intervalo " + pctr1(p.fci[0], p.fci[1]) + "; acurácia " + pct(p.o.r.prior_accuracy, 2);
+      hit.setAttribute("data-tip", t.html);
+      hit.setAttribute("aria-label", t.plain);
+      g.appendChild(hit);
+      svg.appendChild(g);
+    });
+    var host = document.getElementById("trade");
+    host.textContent = "";
+    host.appendChild(svg);
+  }
+
+  /* ---- 3. classificadores dentro de um modo ---- */
+
+  function renderMode() {
+    var c = payload.classification;
+    var m = c.modes.filter(function (x) { return x.id === cs.mode; })[0] || c.modes[0];
+    var names = Object.keys(m.classifiers);
+    var host = document.getElementById("mode-panels");
+    host.textContent = "";
+
+    var rh = 24, top = 8, left = 40, right = 18, W = 230;
+    var H = top + names.length * rh + 24;
+    var isMean = names.length > 1;
+    function X(v) { return left + v * (W - left - right); }
+
+    c.generators.forEach(function (g) {
+      var box = el("div");
+      box.appendChild(el("h4", null, g.label));
+      var svg = sv("svg", { "class": "chart", viewBox: "0 0 " + W + " " + H, role: "img",
+        "aria-label": "Detecção de " + g.label + " por classificador no modo " + m.label });
+      [0, 0.5, 1].forEach(function (t) {
+        svg.appendChild(sv("line", { "class": "grid", x1: X(t), x2: X(t), y1: top - 2, y2: top + names.length * rh }));
+        svg.appendChild(sv("text", { x: X(t), y: H - 6, "text-anchor": t === 0 ? "start" : t === 1 ? "end" : "middle" }, Math.round(t * 100) + "%"));
+      });
+      if (isMean) {
+        svg.appendChild(sv("line", { "class": "meanl", x1: X(m.mean.detection[g.key]), x2: X(m.mean.detection[g.key]),
+          y1: top - 2, y2: top + names.length * rh }));
+      }
+      names.forEach(function (n, i) {
+        var r = m.classifiers[n], v = r.detection[g.key], k = Math.round(v * N_TEXTS);
+        var ci = wilson(k, N_TEXTS), cy = top + i * rh + rh / 2;
+        svg.appendChild(sv("text", { x: 0, y: cy + 4 }, CLF_SHORT[n] || n));
+        svg.appendChild(sv("line", { "class": "ci", x1: X(ci[0]), x2: X(ci[1]), y1: cy, y2: cy }));
+        svg.appendChild(sv("circle", { "class": "pt" + (n === "naive_bayes" ? " hol" : ""), cx: X(v), cy: cy, r: 5.5 }));
+        var hit = sv("circle", { "class": "hit", cx: X(v), cy: cy, r: 11, tabindex: 0 });
+        var t = detectTip(m.label + " · " + (CLF_NAME[n] || n), g.label, v, "clf");
+        t.html += n === "naive_bayes" ? "<br>fora da média" : "";
+        setTip(hit, t);
+        svg.appendChild(hit);
+      });
+      box.appendChild(svg);
+      host.appendChild(box);
+    });
+
+    var rows = names.map(function (n) {
+      var r = m.classifiers[n];
+      return [CLF_NAME[n] || n + (n === "naive_bayes" ? " (fora da média)" : ""), pct(r.prior_accuracy, 2),
+        pct(r.false_positive_rate, 1), isNaN(r.reference_rate) || r.reference_rate == null ? "—" : pct(r.reference_rate, 1)];
+    });
+    if (isMean) rows.push(["Média sem Naive Bayes", pct(m.mean.prior_accuracy, 2), pct(m.mean.false_positive_rate, 1), "—"]);
+    renderTable("mode-table", ["Classificador", "Acurácia no teste antigo", "Falso positivo", "Sabiá-3 detectado (teste antigo)"],
+      rows, [false, true, true, true], null, [true, false, false, false]);
+  }
+
+  /* ---- 4. ablação ---- */
+
+  function renderAblation() {
+    var host = document.getElementById("ablation");
+    var ab = payload.classification.xgboost_ablation;
+    var box = document.getElementById("viz-abl");
+    if (!ab || !ab.steps || !ab.steps.length) { box.hidden = true; return; }
+    host.textContent = "";
+    var gen = payload.classification.generators.filter(function (g) { return g.key === ab.generator; })[0];
+    var gl = gen ? gen.label : "Llama";
+    host.appendChild(el("div", "hd", "Features removidas"));
+    host.appendChild(el("div", "hd", "Detecção de " + gl + " · IC 95%"));
+    host.appendChild(el("div", "hd r", "Detecção"));
+    host.appendChild(el("div", "hd r", "Falso positivo"));
+    ab.steps.forEach(function (s) {
+      var k = Math.round(s.detection * N_TEXTS), ci = wilson(k, N_TEXTS);
+      var lab = el("div", "lab", s.label);
+      var trk = el("div", "trk");
+      trk.tabIndex = 0;
+      var bar = el("div", "bar");
+      bar.style.width = (s.detection * 100) + "%";
+      var wh = el("div", "whisk");
+      wh.style.left = (ci[0] * 100) + "%";
+      wh.style.width = ((ci[1] - ci[0]) * 100) + "%";
+      trk.appendChild(bar);
+      trk.appendChild(wh);
+      setTip(trk, { html: "<b>" + esc(s.label) + "</b><br><b>" + k + "/" + N_TEXTS + "</b> detectados (" + pct(s.detection, 0) +
+        ")<br>IC 95%: " + pctr(ci[0], ci[1]) + "<br>falso positivo: " + pct(s.false_positive_rate, 1),
+        plain: s.label + ": " + k + " de " + N_TEXTS + ", intervalo " + pctr(ci[0], ci[1]) + ", falso positivo " + pct(s.false_positive_rate, 1) });
+      host.appendChild(lab);
+      host.appendChild(trk);
+      host.appendChild(el("div", "v", k + "/" + N_TEXTS));
+      host.appendChild(el("div", "v", pct(s.false_positive_rate, 1)));
+    });
+    host.appendChild(el("div"));
+    var sc = el("div", "scalee");
+    ["0%", "50%", "100%"].forEach(function (t) { sc.appendChild(el("span", null, t)); });
+    host.appendChild(sc);
+  }
+
+  function renderCompare() {
+    var c = payload.classification;
+    var sec = document.getElementById("sec-compare");
+    if (!c || !c.modes || !c.modes.length) { sec.hidden = true; return; }
+    var cl = document.getElementById("c-clf");
+    if (!cl.options.length) {
+      var o = el("option", null, "Média (sem Naive Bayes)");
+      o.value = "mean";
+      cl.appendChild(o);
+      allClassifiers(c).forEach(function (k) {
+        var p = el("option", null, CLF_NAME[k] || k);
+        p.value = k;
+        cl.appendChild(p);
+      });
+      cl.addEventListener("change", function () { cs.clf = cl.value; renderHeat(); renderTrade(); });
+      var cg = document.getElementById("c-gen");
+      c.generators.forEach(function (g, i) {
+        var p = el("option", null, g.label);
+        p.value = String(i);
+        cg.appendChild(p);
+      });
+      cs.gen = c.generators.length - 1;
+      cg.value = String(cs.gen);
+      cg.addEventListener("change", function () { cs.gen = Number(cg.value); renderTrade(); });
+      var cm = document.getElementById("c-mode");
+      var best = c.modes.filter(function (m) { return m.id === "combined_bertimbau"; })[0] || c.modes[0];
+      cs.mode = best.id;
+      var fam = null, grp = null;
+      c.modes.forEach(function (m) {
+        if (m.family !== fam) { grp = el("optgroup"); grp.label = m.family; cm.appendChild(grp); fam = m.family; }
+        var p = el("option", null, m.label);
+        p.value = m.id;
+        grp.appendChild(p);
+      });
+      cm.value = cs.mode;
+      cm.addEventListener("change", function () { cs.mode = cm.value; renderMode(); });
+      var rerender = function () { renderHeat(); };
+      if (window.matchMedia) {
+        var mq = window.matchMedia("(prefers-color-scheme: dark)");
+        if (mq.addEventListener) mq.addEventListener("change", rerender);
+      }
+      if (window.MutationObserver) {
+        new MutationObserver(rerender).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+      }
+    }
+    renderHeat();
+    renderTrade();
+    renderMode();
+    renderAblation();
+  }
+
   /* ---------- cabeçalho ---------- */
 
   function renderStats() {
@@ -706,6 +1324,19 @@
     document.addEventListener("mouseout", function (e) {
       if (e.target.closest("[data-tip]")) tip.classList.remove("on");
     });
+    document.addEventListener("focusin", function (e) {
+      var host = e.target.closest ? e.target.closest("[data-tip]") : null;
+      if (!host) return;
+      tip.innerHTML = host.getAttribute("data-tip");
+      tip.classList.add("on");
+      var r = host.getBoundingClientRect(), box = tip.getBoundingClientRect();
+      var x = Math.min(Math.max(8, r.left + r.width / 2 - box.width / 2), window.innerWidth - box.width - 8);
+      var y = r.top - box.height - 8;
+      if (y < 8) y = r.bottom + 8;
+      tip.style.left = x + "px";
+      tip.style.top = y + "px";
+    });
+    document.addEventListener("focusout", function () { tip.classList.remove("on"); });
     document.addEventListener("mousemove", function (e) {
       if (!tip.classList.contains("on")) return;
       var pad = 14;
@@ -764,6 +1395,7 @@
     fillGenerators();
     selectGenerator(0);
     renderDetection();
+    renderCompare();
     wireTooltip();
   }
 
