@@ -1,0 +1,196 @@
+{
+  "design": "trained on the prior corpus, tested on unseen generators",
+  "mode": "embedding",
+  "feature_groups": [],
+  "encoder": "/home/pedrolucas/fakegen_br/data/classification/models/finetune_norberto/fold_3/final_model",
+  "encoder_model": "/home/pedrolucas/fakegen_br/data/classification/models/finetune_norberto/fold_3/final_model",
+  "max_length": 512,
+  "test_truncation": "paired",
+  "pooling": "mean",
+  "experiment": "paper_replication",
+  "limit_pairs": null,
+  "training": {
+    "classifier": "random_forest",
+    "documents": 8624,
+    "pairs": 4312,
+    "features": 768,
+    "best_params": {
+      "clf__max_depth": 5,
+      "clf__min_samples_leaf": 1,
+      "clf__min_samples_split": 2,
+      "clf__n_estimators": 50
+    },
+    "train_cv_score": 0.9995365004237893,
+    "cv_folds": 5
+  },
+  "coverage": {},
+  "evaluation": {
+    "humano (teste do trabalho anterior)": {
+      "texts": 1079,
+      "expected": "human",
+      "flagged_as_machine": 0.0,
+      "accuracy": 1.0
+    },
+    "sabia-3 (referência, dentro da distribuição)": {
+      "texts": 1079,
+      "expected": "machine",
+      "flagged_as_machine": 0.9981464318813716,
+      "accuracy": 0.9981464318813716
+    },
+    "anthropic/claude-sonnet-4-5-20250929": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 1.0,
+      "accuracy": 1.0
+    },
+    "ollama/llama3.1:8b (rodada2)": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 0.75,
+      "accuracy": 0.75
+    },
+    "ollama/qwen3:32b": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 0.95,
+      "accuracy": 0.95
+    },
+    "openai/gpt-4.1-mini-2025-04-14": {
+      "texts": 20,
+      "expected": "machine",
+      "flagged_as_machine": 0.9,
+      "accuracy": 0.9
+    }
+  },
+  "readings": {
+    "llms_only": {
+      "detection_rate": {
+        "anthropic/claude-sonnet-4-5-20250929": 1.0,
+        "ollama/llama3.1:8b (rodada2)": 0.75,
+        "ollama/qwen3:32b": 0.95,
+        "openai/gpt-4.1-mini-2025-04-14": 0.9
+      },
+      "reference_rate": {
+        "sabia-3 (referência, dentro da distribuição)": 0.9981464318813716
+      },
+      "mean": 0.9,
+      "spread": 0.25
+    },
+    "with_human_control": {
+      "false_positive_rate": 0.0,
+      "balanced": {
+        "anthropic/claude-sonnet-4-5-20250929": 1.0,
+        "ollama/llama3.1:8b (rodada2)": 0.875,
+        "ollama/qwen3:32b": 0.975,
+        "openai/gpt-4.1-mini-2025-04-14": 0.95,
+        "sabia-3 (referência, dentro da distribuição)": 0.9990732159406859
+      },
+      "human_texts": 1079
+    }
+  },
+  "prior_test": {
+    "documents": 2158,
+    "accuracy": 0.9990732159406858,
+    "f1": 0.9990732151446436,
+    "precision": 0.9990749306197965,
+    "recall": 0.9990732159406858,
+    "confusion_matrix": [
+      [
+        1079,
+        0
+      ],
+      [
+        2,
+        1077
+      ]
+    ],
+    "labels": [
+      "human",
+      "machine"
+    ]
+  },
+  "feature_importance": [
+    [
+      "bert_/home/pedrolucas/fakegen_br/data/classification/models/finetune_norberto/fold_3/final_model__335",
+      0.09985169491160482
+    ],
+    [
+      "bert_/home/pedrolucas/fakegen_br/data/classification/models/finetune_norberto/fold_3/final_model__308",
+      0.07985173382787984
+    ],
+    [
+      "bert_/home/pedrolucas/fakegen_br/data/classification/models/finetune_norberto/fold_3/final_model__290",
+      0.07980534484885272
+    ],
+    [
+      "bert_/home/pedrolucas/fakegen_br/data/classification/models/finetune_norberto/fold_3/final_model__613",
+      0.060110925047073493
+    ],
+    [
+      "bert_/home/pedrolucas/fakegen_br/data/classification/models/finetune_norberto/fold_3/final_model__553",
+      0.05992587541797298
+    ],
+    [
+      "bert_/home/pedrolucas/fakegen_br/data/classification/models/finetune_norberto/fold_3/final_model__555",
+      0.04002775821790719
+    ],
+    [
+      "bert_/home/pedrolucas/fakegen_br/data/classification/models/finetune_norberto/fold_3/final_model__217",
+      0.03993509411026706
+    ],
+    [
+      "bert_/home/pedrolucas/fakegen_br/data/classification/models/finetune_norberto/fold_3/final_model__756",
+      0.039912396688364375
+    ],
+    [
+      "bert_/home/pedrolucas/fakegen_br/data/classification/models/finetune_norberto/fold_3/final_model__24",
+      0.03986095852765397
+    ],
+    [
+      "bert_/home/pedrolucas/fakegen_br/data/classification/models/finetune_norberto/fold_3/final_model__149",
+      0.039777726400373685
+    ],
+    [
+      "bert_/home/pedrolucas/fakegen_br/data/classification/models/finetune_norberto/fold_3/final_model__349",
+      0.020167828004438507
+    ],
+    [
+      "bert_/home/pedrolucas/fakegen_br/data/classification/models/finetune_norberto/fold_3/final_model__29",
+      0.020018417341100124
+    ],
+    [
+      "bert_/home/pedrolucas/fakegen_br/data/classification/models/finetune_norberto/fold_3/final_model__132",
+      0.01999309399345254
+    ],
+    [
+      "bert_/home/pedrolucas/fakegen_br/data/classification/models/finetune_norberto/fold_3/final_model__109",
+      0.01999186462631026
+    ],
+    [
+      "bert_/home/pedrolucas/fakegen_br/data/classification/models/finetune_norberto/fold_3/final_model__659",
+      0.019981452137012662
+    ],
+    [
+      "bert_/home/pedrolucas/fakegen_br/data/classification/models/finetune_norberto/fold_3/final_model__15",
+      0.019964657684813304
+    ],
+    [
+      "bert_/home/pedrolucas/fakegen_br/data/classification/models/finetune_norberto/fold_3/final_model__254",
+      0.019953653419077778
+    ],
+    [
+      "bert_/home/pedrolucas/fakegen_br/data/classification/models/finetune_norberto/fold_3/final_model__767",
+      0.019944417160041715
+    ],
+    [
+      "bert_/home/pedrolucas/fakegen_br/data/classification/models/finetune_norberto/fold_3/final_model__547",
+      0.019944383624931995
+    ],
+    [
+      "bert_/home/pedrolucas/fakegen_br/data/classification/models/finetune_norberto/fold_3/final_model__228",
+      0.019944383194523293
+    ]
+  ],
+  "built_at": "2026-11-03T16:10:28-03:00",
+  "seed": 42
+}
