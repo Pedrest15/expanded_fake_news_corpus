@@ -23,6 +23,10 @@ Uso::
         --bert-model bertimbau --limit-pairs 60 --folds-to-run 1 --epochs 1 \\
         --eval-steps 10 --warmup-steps 5
 
+O NorBERTo (``--bert-model norberto``) é um ModernBERT: a cabeça de classificação
+dele faz *mean pooling* (``classifier_pooling`` da configuração), então os
+classificadores sobre o encoder ajustado dele usam ``--pooling mean``, não ``cls``.
+
 Os classificadores sobre o ``[CLS]`` do encoder ajustado (o
 ``finetuned_embeddings.py`` de lá) saem do
 :mod:`~expanded_fake_news_corpus.classification.linguistic_transfer` apontando
@@ -84,7 +88,7 @@ logger = logging.getLogger(__name__)
 DEFAULT_OUTPUT_DIR = PROJECT_ROOT / "data" / "classification"
 
 #: O fine-tuning vale para os encoders com cabeça [CLS]/pooler treinada.
-FINETUNE_MODELS = ("bertimbau", "bert-multilingual")
+FINETUNE_MODELS = ("bertimbau", "bert-multilingual", "norberto", "norberto-large")
 
 #: Hiperparâmetros do pipeline original, mantidos como estão.
 DEFAULTS: dict[str, Any] = {
