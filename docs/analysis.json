@@ -1,7 +1,7 @@
 {
  "corpus": "FakeGen.BR",
  "experiment": "paper_replication",
- "built_at": "2026-10-31T16:06:29-03:00",
+ "built_at": "2026-11-03T19:46:29-03:00",
  "generators": [
   {
    "model": "openai/gpt-4.1-mini-2025-04-14",
@@ -12022,6 +12022,89 @@
     }
    },
    {
+    "id": "embedding_norberto",
+    "family": "Embedding congelado",
+    "label": "NorBERTo (mean pooling)",
+    "classifiers": {
+     "svm": {
+      "prior_accuracy": 0.9981,
+      "false_positive_rate": 0.0009,
+      "reference_rate": 0.9972,
+      "detection": {
+       "openai/gpt-4.1-mini-2025-04-14": 1.0,
+       "anthropic/claude-sonnet-4-5-20250929": 1.0,
+       "ollama/qwen3:32b": 1.0,
+       "ollama/llama3.1:8b (rodada2)": 0.6
+      }
+     },
+     "random_forest": {
+      "prior_accuracy": 0.9884,
+      "false_positive_rate": 0.0158,
+      "reference_rate": 0.9926,
+      "detection": {
+       "openai/gpt-4.1-mini-2025-04-14": 1.0,
+       "anthropic/claude-sonnet-4-5-20250929": 1.0,
+       "ollama/qwen3:32b": 0.95,
+       "ollama/llama3.1:8b (rodada2)": 0.7
+      }
+     },
+     "naive_bayes": {
+      "prior_accuracy": 0.8707,
+      "false_positive_rate": 0.2345,
+      "reference_rate": 0.9759,
+      "detection": {
+       "openai/gpt-4.1-mini-2025-04-14": 1.0,
+       "anthropic/claude-sonnet-4-5-20250929": 0.95,
+       "ollama/qwen3:32b": 0.95,
+       "ollama/llama3.1:8b (rodada2)": 0.8
+      }
+     },
+     "logistic_regression": {
+      "prior_accuracy": 0.9954,
+      "false_positive_rate": 0.0028,
+      "reference_rate": 0.9935,
+      "detection": {
+       "openai/gpt-4.1-mini-2025-04-14": 1.0,
+       "anthropic/claude-sonnet-4-5-20250929": 1.0,
+       "ollama/qwen3:32b": 1.0,
+       "ollama/llama3.1:8b (rodada2)": 0.55
+      }
+     },
+     "mlp": {
+      "prior_accuracy": 0.9968,
+      "false_positive_rate": 0.0019,
+      "reference_rate": 0.9954,
+      "detection": {
+       "openai/gpt-4.1-mini-2025-04-14": 1.0,
+       "anthropic/claude-sonnet-4-5-20250929": 0.95,
+       "ollama/qwen3:32b": 1.0,
+       "ollama/llama3.1:8b (rodada2)": 0.55
+      }
+     },
+     "xgboost": {
+      "prior_accuracy": 0.9935,
+      "false_positive_rate": 0.0074,
+      "reference_rate": 0.9944,
+      "detection": {
+       "openai/gpt-4.1-mini-2025-04-14": 1.0,
+       "anthropic/claude-sonnet-4-5-20250929": 1.0,
+       "ollama/qwen3:32b": 1.0,
+       "ollama/llama3.1:8b (rodada2)": 0.65
+      }
+     }
+    },
+    "mean": {
+     "prior_accuracy": 0.9944,
+     "false_positive_rate": 0.0058,
+     "detection": {
+      "openai/gpt-4.1-mini-2025-04-14": 1.0,
+      "anthropic/claude-sonnet-4-5-20250929": 0.99,
+      "ollama/qwen3:32b": 0.99,
+      "ollama/llama3.1:8b (rodada2)": 0.61
+     }
+    }
+   },
+   {
     "id": "combined_bertimbau",
     "family": "Combinado",
     "label": "BERTimbau + linguístico",
@@ -12184,6 +12267,89 @@
       "anthropic/claude-sonnet-4-5-20250929": 0.94,
       "ollama/qwen3:32b": 1.0,
       "ollama/llama3.1:8b (rodada2)": 0.79
+     }
+    }
+   },
+   {
+    "id": "combined_norberto",
+    "family": "Combinado",
+    "label": "NorBERTo + linguístico",
+    "classifiers": {
+     "svm": {
+      "prior_accuracy": 0.9972,
+      "false_positive_rate": 0.0019,
+      "reference_rate": 0.9963,
+      "detection": {
+       "openai/gpt-4.1-mini-2025-04-14": 1.0,
+       "anthropic/claude-sonnet-4-5-20250929": 1.0,
+       "ollama/qwen3:32b": 1.0,
+       "ollama/llama3.1:8b (rodada2)": 0.6
+      }
+     },
+     "random_forest": {
+      "prior_accuracy": 0.9963,
+      "false_positive_rate": 0.0,
+      "reference_rate": 0.9926,
+      "detection": {
+       "openai/gpt-4.1-mini-2025-04-14": 1.0,
+       "anthropic/claude-sonnet-4-5-20250929": 1.0,
+       "ollama/qwen3:32b": 1.0,
+       "ollama/llama3.1:8b (rodada2)": 0.75
+      }
+     },
+     "naive_bayes": {
+      "prior_accuracy": 0.9453,
+      "false_positive_rate": 0.0862,
+      "reference_rate": 0.9768,
+      "detection": {
+       "openai/gpt-4.1-mini-2025-04-14": 1.0,
+       "anthropic/claude-sonnet-4-5-20250929": 0.85,
+       "ollama/qwen3:32b": 0.9,
+       "ollama/llama3.1:8b (rodada2)": 0.7
+      }
+     },
+     "logistic_regression": {
+      "prior_accuracy": 0.9991,
+      "false_positive_rate": 0.0009,
+      "reference_rate": 0.9991,
+      "detection": {
+       "openai/gpt-4.1-mini-2025-04-14": 1.0,
+       "anthropic/claude-sonnet-4-5-20250929": 1.0,
+       "ollama/qwen3:32b": 1.0,
+       "ollama/llama3.1:8b (rodada2)": 0.65
+      }
+     },
+     "mlp": {
+      "prior_accuracy": 0.9986,
+      "false_positive_rate": 0.0,
+      "reference_rate": 0.9972,
+      "detection": {
+       "openai/gpt-4.1-mini-2025-04-14": 1.0,
+       "anthropic/claude-sonnet-4-5-20250929": 1.0,
+       "ollama/qwen3:32b": 1.0,
+       "ollama/llama3.1:8b (rodada2)": 0.55
+      }
+     },
+     "xgboost": {
+      "prior_accuracy": 0.9986,
+      "false_positive_rate": 0.0,
+      "reference_rate": 0.9972,
+      "detection": {
+       "openai/gpt-4.1-mini-2025-04-14": 1.0,
+       "anthropic/claude-sonnet-4-5-20250929": 0.95,
+       "ollama/qwen3:32b": 1.0,
+       "ollama/llama3.1:8b (rodada2)": 1.0
+      }
+     }
+    },
+    "mean": {
+     "prior_accuracy": 0.998,
+     "false_positive_rate": 0.0006,
+     "detection": {
+      "openai/gpt-4.1-mini-2025-04-14": 1.0,
+      "anthropic/claude-sonnet-4-5-20250929": 0.99,
+      "ollama/qwen3:32b": 1.0,
+      "ollama/llama3.1:8b (rodada2)": 0.71
      }
     }
    },
@@ -12576,6 +12742,34 @@
     }
    },
    {
+    "id": "finetune_norberto",
+    "family": "Fine-tuning",
+    "label": "NorBERTo (cabeça do ModernBERT)",
+    "classifiers": {
+     "fine-tuning": {
+      "prior_accuracy": 0.9991,
+      "false_positive_rate": 0.0,
+      "reference_rate": 0.9981,
+      "detection": {
+       "openai/gpt-4.1-mini-2025-04-14": 0.95,
+       "anthropic/claude-sonnet-4-5-20250929": 1.0,
+       "ollama/qwen3:32b": 0.95,
+       "ollama/llama3.1:8b (rodada2)": 0.8
+      }
+     }
+    },
+    "mean": {
+     "prior_accuracy": 0.9991,
+     "false_positive_rate": 0.0,
+     "detection": {
+      "openai/gpt-4.1-mini-2025-04-14": 0.95,
+      "anthropic/claude-sonnet-4-5-20250929": 1.0,
+      "ollama/qwen3:32b": 0.95,
+      "ollama/llama3.1:8b (rodada2)": 0.8
+     }
+    }
+   },
+   {
     "id": "finetuned_embedding_bertimbau",
     "family": "[CLS] ajustado",
     "label": "BERTimbau",
@@ -12738,6 +12932,89 @@
       "anthropic/claude-sonnet-4-5-20250929": 0.95,
       "ollama/qwen3:32b": 1.0,
       "ollama/llama3.1:8b (rodada2)": 0.65
+     }
+    }
+   },
+   {
+    "id": "finetuned_embedding_norberto",
+    "family": "[CLS] ajustado",
+    "label": "NorBERTo (mean pooling)",
+    "classifiers": {
+     "svm": {
+      "prior_accuracy": 0.9991,
+      "false_positive_rate": 0.0,
+      "reference_rate": 0.9981,
+      "detection": {
+       "openai/gpt-4.1-mini-2025-04-14": 0.9,
+       "anthropic/claude-sonnet-4-5-20250929": 1.0,
+       "ollama/qwen3:32b": 0.95,
+       "ollama/llama3.1:8b (rodada2)": 0.75
+      }
+     },
+     "random_forest": {
+      "prior_accuracy": 0.9991,
+      "false_positive_rate": 0.0,
+      "reference_rate": 0.9981,
+      "detection": {
+       "openai/gpt-4.1-mini-2025-04-14": 0.9,
+       "anthropic/claude-sonnet-4-5-20250929": 1.0,
+       "ollama/qwen3:32b": 0.95,
+       "ollama/llama3.1:8b (rodada2)": 0.75
+      }
+     },
+     "naive_bayes": {
+      "prior_accuracy": 0.9991,
+      "false_positive_rate": 0.0,
+      "reference_rate": 0.9981,
+      "detection": {
+       "openai/gpt-4.1-mini-2025-04-14": 0.9,
+       "anthropic/claude-sonnet-4-5-20250929": 1.0,
+       "ollama/qwen3:32b": 0.95,
+       "ollama/llama3.1:8b (rodada2)": 0.8
+      }
+     },
+     "logistic_regression": {
+      "prior_accuracy": 0.9991,
+      "false_positive_rate": 0.0,
+      "reference_rate": 0.9981,
+      "detection": {
+       "openai/gpt-4.1-mini-2025-04-14": 0.9,
+       "anthropic/claude-sonnet-4-5-20250929": 1.0,
+       "ollama/qwen3:32b": 0.95,
+       "ollama/llama3.1:8b (rodada2)": 0.8
+      }
+     },
+     "mlp": {
+      "prior_accuracy": 0.9991,
+      "false_positive_rate": 0.0,
+      "reference_rate": 0.9981,
+      "detection": {
+       "openai/gpt-4.1-mini-2025-04-14": 0.9,
+       "anthropic/claude-sonnet-4-5-20250929": 1.0,
+       "ollama/qwen3:32b": 0.95,
+       "ollama/llama3.1:8b (rodada2)": 0.8
+      }
+     },
+     "xgboost": {
+      "prior_accuracy": 0.9981,
+      "false_positive_rate": 0.0009,
+      "reference_rate": 0.9972,
+      "detection": {
+       "openai/gpt-4.1-mini-2025-04-14": 0.9,
+       "anthropic/claude-sonnet-4-5-20250929": 1.0,
+       "ollama/qwen3:32b": 0.95,
+       "ollama/llama3.1:8b (rodada2)": 0.8
+      }
+     }
+    },
+    "mean": {
+     "prior_accuracy": 0.9989,
+     "false_positive_rate": 0.0002,
+     "detection": {
+      "openai/gpt-4.1-mini-2025-04-14": 0.9,
+      "anthropic/claude-sonnet-4-5-20250929": 1.0,
+      "ollama/qwen3:32b": 0.95,
+      "ollama/llama3.1:8b (rodada2)": 0.78
      }
     }
    }

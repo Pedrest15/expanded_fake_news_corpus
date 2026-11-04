@@ -419,7 +419,7 @@ It follows the prior repository's experiments one for one; `--mode` picks which:
 | `--mode` | Prior experiment | Input |
 |---|---|---|
 | `linguistic` | `linguistic_features.py --feature-mode linguistic` | NILC-Metrix, LIWC, rule frequencies, syllables, UPOS, rules/sentence, SAGE bigrams |
-| `embedding` | `--feature-mode embedding` | frozen BERTimbau or mBERT (`--encoder`) |
+| `embedding` | `--feature-mode embedding` | frozen BERTimbau, mBERT or NorBERTo (`--encoder`; NorBERTo uses mean pooling) |
 | `combined` | `--feature-mode combined` | both concatenated |
 | `tfidf`, `bow` | `text_enriched.py` | bag of words + the linguistic features; `--no-linguistic` for the text-only condition |
 
@@ -471,7 +471,7 @@ original before the generators are read.
 ##### BERT fine-tuning
 
 `finetune_transfer` is the prior work's `bert_finetuning.py` with the same test
-side as above. The whole encoder (BERTimbau or multilingual BERT) is fine-tuned
+side as above. The whole encoder (BERTimbau, multilingual BERT or NorBERTo) is fine-tuned
 with a fresh 2-class head, on the prior train pairs, with 5 pair-grouped folds
 over the training part (the folds shuffle the same `<file>__<corpus>` group names
 as there) and the prior hyperparameters (AdamW, lr 5e-5, batch 8, 3 epochs, 500
@@ -523,16 +523,20 @@ result files and on the [page](docs/analysis.html).
 | Linguistic · linguistic features | 99.06% | 0.6% | 100% | 94% | 100% | 64% |
 | Frozen embedding · BERTimbau | 98.29% | 2.4% | 100% | 95% | 100% | 74% |
 | Frozen embedding · mBERT | 96.75% | 4.3% | 100% | 86% | 95% | 73% |
+| Frozen embedding · NorBERTo (mean pooling) | 99.44% | 0.6% | 100% | 99% | 99% | 61% |
 | Combined · BERTimbau + linguistic | 99.66% | 0.2% | 100% | 97% | 100% | 76% |
 | Combined · mBERT + linguistic | 99.45% | 0.3% | 100% | 94% | 100% | 79% |
+| Combined · NorBERTo + linguistic | 99.80% | 0.1% | 100% | 99% | 100% | 71% |
 | Text · TF-IDF + linguistic | 99.02% | 0.6% | 100% | 91% | 99% | 59% |
 | Text · TF-IDF | 98.55% | 1.1% | 98% | 96% | 98% | 48% |
 | Text · BoW + linguistic | 99.33% | 0.4% | 100% | 93% | 100% | 62% |
 | Text · BoW | 98.55% | 1.3% | 99% | 91% | 98% | 43% |
 | Fine-tuning · BERTimbau (BERT head) | 99.91% | 0.1% | 100% | 95% | 100% | 65% |
 | Fine-tuning · mBERT (BERT head) | 99.77% | 0.3% | 100% | 95% | 100% | 65% |
+| Fine-tuning · NorBERTo (ModernBERT head) | 99.91% | 0.0% | 95% | 100% | 95% | 80% |
 | Fine-tuned `[CLS]` · BERTimbau | 99.92% | 0.1% | 100% | 95% | 100% | 67% |
 | Fine-tuned `[CLS]` · mBERT | 99.80% | 0.2% | 100% | 95% | 100% | 65% |
+| Fine-tuned encoder · NorBERTo (mean pooling) | 99.89% | 0.0% | 90% | 100% | 95% | 78% |
 
 How to read it:
 
@@ -540,9 +544,16 @@ How to read it:
   4.5 loses about one text in twenty. Llama 3.1 8B (round 2) is the only generator
   that separates the detectors.
 - Fine-tuning raises the prior test accuracy (0.97–0.98 → 0.998–0.999) but not the
-  Llama detection (65–67%, against 73–74% for the frozen encoders). Over the
-  fine-tuned `[CLS]` the classifier no longer matters: all six give the same Llama
-  rate within one text.
+  Llama detection of BERTimbau and mBERT (65–67%, against 73–74% for the frozen
+  encoders). Over the fine-tuned `[CLS]` the classifier no longer matters: all six
+  give the same Llama rate within one text.
+- NorBERTo (a ModernBERT, so mean pooling instead of `[CLS]`) separates the prior
+  corpus better than the BERTs (frozen: 99.44% against 98.29% for BERTimbau, with
+  a lower false-positive rate) but detects less Llama when frozen (61%). Fine-tuned
+  it reaches 78–80% on Llama, the best of the encoder modes without the NILC
+  features, at the price of GPT-4.1-mini and Qwen3 at 90–95%. Each of those gaps is
+  one to three texts out of 20. The context stays at 512 tokens: with the paired
+  truncation only 4.3% of the training pairs and one Llama text are longer.
 - Each generator has only 20 texts, so one text is 5 points and gaps of 5–10 points
   between modes are noise.
 - XGBoost with the linguistic features flags all 20 Llama texts, in every mode that
