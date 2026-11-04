@@ -222,7 +222,6 @@ __marimo__/
 
 tests/
 *.pdf
-scripts/
 
 # Dicionários LIWC são proprietários — não versionar (https://www.liwc.app/)
 *.dic
