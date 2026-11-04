@@ -208,11 +208,15 @@
   svg.chart text{font-family:var(--sans); fill:var(--ink-2); font-size:11px}
   svg.chart .grid{stroke:var(--rule-soft); stroke-width:1}
   svg.chart .axisl{stroke:var(--rule); stroke-width:1}
-  svg.chart .ci{stroke:var(--ink-3); stroke-width:1.5}
-  svg.chart .pt{fill:var(--accent); stroke:var(--panel); stroke-width:2}
+  svg.chart .ci{stroke:var(--ink-3); stroke-width:1.5; opacity:.2}
+  svg.chart g:hover .ci, svg.chart g:focus-within .ci{opacity:1}
+  svg.chart .front{fill:none; stroke:var(--ink-3); stroke-width:1; stroke-dasharray:4 3}
+  svg.chart g.bg .pt{opacity:.6}
+  svg.chart g:hover .pt, svg.chart g:focus-within .pt{opacity:1}
+  svg.chart .pt{fill:var(--accent); stroke:var(--panel); stroke-width:1.5}
   svg.chart .pt.hol{fill:var(--panel); stroke:var(--ink-3); stroke-width:2}
   svg.chart .lead{stroke:var(--ink-3); stroke-width:1}
-  svg.chart .cix{stroke:var(--ink-3); stroke-width:1.5; opacity:.22}
+  svg.chart .cix{stroke:var(--ink-3); stroke-width:1.5; opacity:0}
   svg.chart g:hover .cix, svg.chart g:focus-within .cix{opacity:1}
   svg.chart text.lbl{font-size:10.5px; fill:var(--ink); paint-order:stroke; stroke:var(--panel); stroke-width:3px; stroke-linejoin:round}
   svg.chart text.ttl{font-size:11px; fill:var(--ink-3)}
@@ -419,7 +423,7 @@
 
       <div class="viz" id="viz-trade">
         <h3>Detecção contra falso positivo</h3>
-        <p class="q">Qual modo detecta mais sem acusar humano? O melhor lugar é o canto superior esquerdo. As barras verticais são o intervalo de 95% da detecção; o falso positivo vem de um teste muito maior e seu intervalo é estreito demais para desenhar.</p>
+        <p class="q">Qual modo detecta mais sem acusar humano? Falso positivo é texto humano marcado como máquina. O melhor lugar é o canto superior esquerdo. A barra vertical de cada ponto, visível ao passar o mouse, é o intervalo de 95% da detecção; o falso positivo vem de um teste muito maior e seu intervalo é estreito demais para desenhar.</p>
         <div class="shapes" id="trade-legend"></div>
         <div id="trade"></div>
         <p class="note" id="trade-note"></p>
@@ -1077,35 +1081,52 @@
       omitted = pts.filter(function (p) { return p.fp > ZOOM_MAX; });
       pts = pts.filter(function (p) { return p.fp <= ZOOM_MAX; });
     }
-    var note = document.getElementById("trade-note");
-    note.textContent = cs.zoom
-      ? "Ampliado: eixo horizontal de 0% a 1% e eixo vertical de 40% a 100%; intervalos que descem de 40% são cortados na base. " + (omitted.length
-        ? omitted.length + " modo(s) com falso positivo acima de 1% ficam fora do desenho (" +
-          omitted.map(function (p) { return SHORT[p.m.id] || p.m.label; }).join(", ") + "); estão na tabela completa."
-        : "Nenhum modo ficou fora da faixa.")
-      : "";
+    // fronteira de Pareto: nenhum outro modo detecta tanto ou mais com menos falso positivo
+    var front = [], bestV = -1;
+    pts.slice().sort(function (a, b) { return a.fp - b.fp || b.v - a.v; }).forEach(function (p) {
+      if (p.v > bestV) { front.push(p); bestV = p.v; }
+    });
+    var topV = Math.max.apply(null, pts.map(function (p) { return p.v; }));
+    pts.forEach(function (p) { p.front = front.indexOf(p) >= 0 || p.fp > 0.01 || p.v >= topV - 0.05; });
 
-    var W = 680, H = 400, ml = 48, mr = 18, mt = 16, mb = 48;
+    var W = 720, H = 480, ml = 48, mr = 22, mt = 16, mb = 48;
     var pw = W - ml - mr, ph = H - mt - mb;
     var maxFp = Math.max.apply(null, pts.map(function (p) { return p.fp; }).concat([0])) * 100;
-    var step = maxFp <= 5 ? 1 : maxFp <= 12 ? 2 : 5;
-    var xmax = Math.max(step, Math.ceil(maxFp * 1.08 / step) * step);
-    if (cs.zoom) { step = 0.2; xmax = 1; }
-    function X(v) { return ml + 8 + (v * 100 / xmax) * (pw - 16); }
-    var ylo = cs.zoom ? 0.4 : 0;   // ampliado, o eixo vertical começa em 40%
+    var xmax = cs.zoom ? 1 : Math.max(1, Math.ceil(maxFp * 1.08));
+    var xticks = cs.zoom ? [0, 0.2, 0.4, 0.6, 0.8, 1]
+      : [0, 0.1, 0.25, 0.5, 1, 2, 3, 4, 5, 6, 8, 10, 15, 20, 30, 50].filter(function (t) { return t <= xmax + 1e-9; });
+    // escala de raiz quadrada: abre a região de falso positivo baixo, onde ficam quase todos os modos
+    function X(v) {
+      var f = Math.min(v * 100 / xmax, 1);
+      return ml + 10 + (cs.zoom ? f : Math.sqrt(f)) * (pw - 20);
+    }
+    // eixo vertical ajustado aos dados: começa abaixo do menor ponto, em passos redondos
+    var minV = Math.min.apply(null, pts.map(function (p) { return p.v; }).concat([1]));
+    var ylo = Math.max(0, Math.floor((minV - 0.06) / 0.1) * 0.1);
     function Y(v) { return mt + ph - ((Math.max(v, ylo) - ylo) + 0.04 * (1 - ylo)) / ((1 - ylo) * 1.08) * ph; }
+    var yspan = 1 - ylo, ystep = yspan <= 0.25 ? 0.05 : yspan <= 0.5 ? 0.1 : yspan <= 0.7 ? 0.2 : 0.25;
+    var yticks = [];
+    for (var yt = 1; yt >= ylo - 1e-9; yt -= ystep) yticks.push(Math.round(yt * 100) / 100);
+
+    var note = document.getElementById("trade-note");
+    var clipped = pts.some(function (p) { return p.ci[0] < ylo; });
+    note.textContent = "Eixo horizontal em raiz quadrada" + (cs.zoom ? " desligado (linear, de 0% a 1%)" : ", para separar os modos com falso positivo baixo") +
+      "; eixo vertical de " + Math.round(ylo * 100) + "% a 100%" + (clipped ? ", com intervalos que descem além disso cortados na base" : "") +
+      ". Passe o mouse num ponto para ver o intervalo completo. Rótulos só nos modos de maior detecção, nos acima de 1% e na fronteira (linha tracejada: nenhum outro modo detecta tanto com menos falso positivo)" +
+      (cs.zoom && omitted.length ? "; " + omitted.length + " modo(s) acima de 1% ficam fora do desenho (" +
+        omitted.map(function (p) { return SHORT[p.m.id] || p.m.label; }).join(", ") + "); estão na tabela completa" : "") + ".";
 
     var svg = sv("svg", { "class": "chart", viewBox: "0 0 " + W + " " + H, role: "img",
       "aria-label": "Detecção de " + gen.label + " contra falso positivo, um ponto por modo; a tabela completa está abaixo." });
-    (cs.zoom ? [0.4, 0.55, 0.7, 0.85, 1] : [0, 0.25, 0.5, 0.75, 1]).forEach(function (t) {
+    yticks.forEach(function (t) {
       svg.appendChild(sv("line", { "class": "grid", x1: ml, x2: W - mr, y1: Y(t), y2: Y(t) }));
       svg.appendChild(sv("text", { x: ml - 7, y: Y(t) + 4, "text-anchor": "end" }, Math.round(t * 100) + "%"));
     });
-    for (var t = 0; t <= xmax + 1e-9; t += step) {
+    xticks.forEach(function (t) {
       svg.appendChild(sv("line", { "class": "grid", x1: X(t / 100), x2: X(t / 100), y1: mt, y2: mt + ph }));
       svg.appendChild(sv("text", { x: X(t / 100), y: mt + ph + 16, "text-anchor": "middle" },
-        (step < 1 ? t.toFixed(1).replace(".", ",") : Math.round(t)) + "%"));
-    }
+        String(t).replace(".", ",") + "%"));
+    });
     svg.appendChild(sv("line", { "class": "axisl", x1: ml, x2: W - mr, y1: mt + ph, y2: mt + ph }));
     svg.appendChild(sv("text", { "class": "ttl", x: ml + pw / 2, y: H - 6, "text-anchor": "middle" },
       "Falso positivo em texto humano do teste antigo (menos é melhor)"));
@@ -1113,13 +1134,15 @@
       "Detecção de " + gen.label + " (mais é melhor)"));
     svg.appendChild(sv("text", { "class": "ttl", x: ml + 12, y: mt + 12 }, "↖ melhor"));
 
-    pts.forEach(function (p) {
-      svg.appendChild(sv("line", { "class": "ci", x1: X(p.fp), x2: X(p.fp), y1: Y(p.ci[0]), y2: Y(p.ci[1]) }));
-    });
+    // fronteira em degraus, do falso positivo menor ao maior
+    var fd = "";
+    front.forEach(function (p, i) { fd += (i ? "H" + X(p.fp) + "V" : "M" + X(p.fp) + ",") + Y(p.v); });
+    if (front.length) fd += "H" + (W - mr);
+    svg.appendChild(sv("path", { "class": "front", d: fd }));
     // rótulos diretos, um por ponto, na posição de menor sobreposição
     var boxes = pts.map(function (p) { return { x0: X(p.fp) - 9, x1: X(p.fp) + 9, y0: Y(p.v) - 9, y1: Y(p.v) + 9 }; });
     var placed = [];
-    var order = pts.slice().sort(function (a, b) { return b.v - a.v || a.fp - b.fp; });
+    var order = pts.filter(function (p) { return p.front; }).sort(function (a, b) { return b.v - a.v || a.fp - b.fp; });
     order.forEach(function (p) {
       var name = SHORT[p.m.id] || p.m.label, w = name.length * 5.6, h = 11;
       var cx = X(p.fp), cy = Y(p.v);
@@ -1149,7 +1172,8 @@
       svg.appendChild(sv("text", { "class": "lbl", x: bestC.k.x, y: bestC.k.y, "text-anchor": bestC.k.a }, name));
     });
     pts.forEach(function (p) {
-      var g = sv("g", { transform: "translate(" + X(p.fp) + "," + Y(p.v) + ")" });
+      var g = sv("g", { "class": p.front ? "fr" : "bg", transform: "translate(" + X(p.fp) + "," + Y(p.v) + ")" });
+      g.appendChild(sv("line", { "class": "ci", x1: 0, x2: 0, y1: Y(p.ci[0]) - Y(p.v), y2: Y(p.ci[1]) - Y(p.v) }));
       // intervalo horizontal (falso positivo): apagado até o ponto receber o mouse ou o foco
       g.appendChild(sv("line", { "class": "cix", x1: X(p.fci[0]) - X(p.fp), x2: Math.min(X(p.fci[1]), W - mr) - X(p.fp), y1: 0, y2: 0 }));
       g.appendChild(sv("path", { "class": "pt", d: shapePath(p.shape, 5.5) }));
