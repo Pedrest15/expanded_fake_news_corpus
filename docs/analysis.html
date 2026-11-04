@@ -211,7 +211,10 @@
   svg.chart .ci{stroke:var(--ink-3); stroke-width:1.5}
   svg.chart .pt{fill:var(--accent); stroke:var(--panel); stroke-width:2}
   svg.chart .pt.hol{fill:var(--panel); stroke:var(--ink-3); stroke-width:2}
-  svg.chart text.lbl{font-size:10.5px; fill:var(--ink)}
+  svg.chart .lead{stroke:var(--ink-3); stroke-width:1}
+  svg.chart .cix{stroke:var(--ink-3); stroke-width:1.5; opacity:.22}
+  svg.chart g:hover .cix, svg.chart g:focus-within .cix{opacity:1}
+  svg.chart text.lbl{font-size:10.5px; fill:var(--ink); paint-order:stroke; stroke:var(--panel); stroke-width:3px; stroke-linejoin:round}
   svg.chart text.ttl{font-size:11px; fill:var(--ink-3)}
   svg.chart .hit{fill:transparent; cursor:default}
   svg.chart .hit:focus-visible{stroke:var(--ink); stroke-width:2; outline:none}
@@ -404,6 +407,7 @@
       <div class="ctl">
         <label class="pick"><span>Classificador</span><select id="c-clf"></select></label>
         <label class="pick"><span>Gerador no gráfico de compromisso</span><select id="c-gen"></select></label>
+        <label class="pick"><span>Faixa do falso positivo</span><select id="c-zoom"><option value="0">Todos os modos</option><option value="1">Ampliar até 1%</option></select></label>
       </div>
 
       <div class="viz" id="viz-heat">
@@ -418,6 +422,7 @@
         <p class="q">Qual modo detecta mais sem acusar humano? O melhor lugar é o canto superior esquerdo. As barras verticais são o intervalo de 95% da detecção; o falso positivo vem de um teste muito maior e seu intervalo é estreito demais para desenhar.</p>
         <div class="shapes" id="trade-legend"></div>
         <div id="trade"></div>
+        <p class="note" id="trade-note"></p>
       </div>
 
       <div class="viz" id="viz-mode">
@@ -819,7 +824,7 @@
     logistic_regression: "LR", mlp: "MLP", xgboost: "XGB", "fine-tuning": "BERT"
   };
   var SHAPE_OF = ["circle", "square", "diamond", "up", "cross", "down"];
-  var cs = { clf: "mean", gen: 3, mode: null, sort: null };
+  var cs = { clf: "mean", gen: 3, mode: null, sort: null, zoom: 0 };
 
   function esc(t) {
     return String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -1066,23 +1071,40 @@
       return { m: m, o: o, v: v, fp: o.r.false_positive_rate, ci: wilson(k, N_TEXTS), fci: wilson(Math.round(o.r.false_positive_rate * c.human_test_size), c.human_test_size), shape: SHAPE_OF[fams.indexOf(m.family) % SHAPE_OF.length] };
     }).filter(Boolean);
 
+    // ampliação: só os modos com falso positivo até 1%; o resto sai do desenho e é contado na nota
+    var ZOOM_MAX = 0.01, omitted = [];
+    if (cs.zoom) {
+      omitted = pts.filter(function (p) { return p.fp > ZOOM_MAX; });
+      pts = pts.filter(function (p) { return p.fp <= ZOOM_MAX; });
+    }
+    var note = document.getElementById("trade-note");
+    note.textContent = cs.zoom
+      ? "Ampliado: eixo horizontal de 0% a 1% e eixo vertical de 40% a 100%; intervalos que descem de 40% são cortados na base. " + (omitted.length
+        ? omitted.length + " modo(s) com falso positivo acima de 1% ficam fora do desenho (" +
+          omitted.map(function (p) { return SHORT[p.m.id] || p.m.label; }).join(", ") + "); estão na tabela completa."
+        : "Nenhum modo ficou fora da faixa.")
+      : "";
+
     var W = 680, H = 400, ml = 48, mr = 18, mt = 16, mb = 48;
     var pw = W - ml - mr, ph = H - mt - mb;
-    var maxFp = Math.max.apply(null, pts.map(function (p) { return p.fp; })) * 100;
+    var maxFp = Math.max.apply(null, pts.map(function (p) { return p.fp; }).concat([0])) * 100;
     var step = maxFp <= 5 ? 1 : maxFp <= 12 ? 2 : 5;
     var xmax = Math.max(step, Math.ceil(maxFp * 1.08 / step) * step);
+    if (cs.zoom) { step = 0.2; xmax = 1; }
     function X(v) { return ml + 8 + (v * 100 / xmax) * (pw - 16); }
-    function Y(v) { return mt + ph - (v + 0.04) / 1.08 * ph; }
+    var ylo = cs.zoom ? 0.4 : 0;   // ampliado, o eixo vertical começa em 40%
+    function Y(v) { return mt + ph - ((Math.max(v, ylo) - ylo) + 0.04 * (1 - ylo)) / ((1 - ylo) * 1.08) * ph; }
 
     var svg = sv("svg", { "class": "chart", viewBox: "0 0 " + W + " " + H, role: "img",
       "aria-label": "Detecção de " + gen.label + " contra falso positivo, um ponto por modo; a tabela completa está abaixo." });
-    [0, 0.25, 0.5, 0.75, 1].forEach(function (t) {
+    (cs.zoom ? [0.4, 0.55, 0.7, 0.85, 1] : [0, 0.25, 0.5, 0.75, 1]).forEach(function (t) {
       svg.appendChild(sv("line", { "class": "grid", x1: ml, x2: W - mr, y1: Y(t), y2: Y(t) }));
       svg.appendChild(sv("text", { x: ml - 7, y: Y(t) + 4, "text-anchor": "end" }, Math.round(t * 100) + "%"));
     });
     for (var t = 0; t <= xmax + 1e-9; t += step) {
       svg.appendChild(sv("line", { "class": "grid", x1: X(t / 100), x2: X(t / 100), y1: mt, y2: mt + ph }));
-      svg.appendChild(sv("text", { x: X(t / 100), y: mt + ph + 16, "text-anchor": "middle" }, t + "%"));
+      svg.appendChild(sv("text", { x: X(t / 100), y: mt + ph + 16, "text-anchor": "middle" },
+        (step < 1 ? t.toFixed(1).replace(".", ",") : Math.round(t)) + "%"));
     }
     svg.appendChild(sv("line", { "class": "axisl", x1: ml, x2: W - mr, y1: mt + ph, y2: mt + ph }));
     svg.appendChild(sv("text", { "class": "ttl", x: ml + pw / 2, y: H - 6, "text-anchor": "middle" },
@@ -1093,36 +1115,43 @@
 
     pts.forEach(function (p) {
       svg.appendChild(sv("line", { "class": "ci", x1: X(p.fp), x2: X(p.fp), y1: Y(p.ci[0]), y2: Y(p.ci[1]) }));
-      svg.appendChild(sv("line", { "class": "ci", x1: X(p.fci[0]), x2: Math.min(X(p.fci[1]), W - mr), y1: Y(p.v), y2: Y(p.v) }));
     });
-    // rótulos diretos: o primeiro encaixe sem colisão entre quatro posições
+    // rótulos diretos, um por ponto, na posição de menor sobreposição
     var boxes = pts.map(function (p) { return { x0: X(p.fp) - 9, x1: X(p.fp) + 9, y0: Y(p.v) - 9, y1: Y(p.v) + 9 }; });
     var placed = [];
     var order = pts.slice().sort(function (a, b) { return b.v - a.v || a.fp - b.fp; });
     order.forEach(function (p) {
       var name = SHORT[p.m.id] || p.m.label, w = name.length * 5.6, h = 11;
       var cx = X(p.fp), cy = Y(p.v);
+      // dez posições, das mais próximas às mais afastadas; sem encaixe livre, a de menor sobreposição
       var cand = [
         { x: cx + 10, y: cy + 4, a: "start" }, { x: cx - 10, y: cy + 4, a: "end" },
-        { x: cx, y: cy - 12, a: "middle" }, { x: cx, y: cy + 19, a: "middle" }
+        { x: cx, y: cy - 12, a: "middle" }, { x: cx, y: cy + 19, a: "middle" },
+        { x: cx + 9, y: cy - 10, a: "start" }, { x: cx - 9, y: cy - 10, a: "end" },
+        { x: cx + 9, y: cy + 17, a: "start" }, { x: cx - 9, y: cy + 17, a: "end" },
+        { x: cx + 10, y: cy - 24, a: "start" }, { x: cx - 10, y: cy + 31, a: "end" }
       ];
-      for (var i = 0; i < cand.length; i++) {
-        var k = cand[i];
+      var bestC = null;
+      cand.forEach(function (k) {
         var x0 = k.a === "start" ? k.x : k.a === "end" ? k.x - w : k.x - w / 2;
         var b = { x0: x0, x1: x0 + w, y0: k.y - h + 2, y1: k.y + 3 };
-        var bad = b.x0 < ml || b.x1 > W - 4 || b.y0 < mt - 4 || b.y1 > mt + ph + 2 ||
-          boxes.concat(placed).some(function (o) {
-            return !(b.x1 < o.x0 || b.x0 > o.x1 || b.y1 < o.y0 || b.y0 > o.y1);
-          });
-        if (!bad) {
-          placed.push(b);
-          svg.appendChild(sv("text", { "class": "lbl", x: k.x, y: k.y, "text-anchor": k.a }, name));
-          break;
-        }
+        var out = b.x0 < ml || b.x1 > W - 4 || b.y0 < mt - 4 || b.y1 > mt + ph + 2;
+        var hits = boxes.concat(placed).filter(function (o) {
+          return !(b.x1 < o.x0 || b.x0 > o.x1 || b.y1 < o.y0 || b.y0 > o.y1);
+        }).length;
+        var score = (out ? 100 : 0) + hits;
+        if (!bestC || score < bestC.score) bestC = { score: score, k: k, b: b };
+      });
+      placed.push(bestC.b);
+      if (cand.indexOf(bestC.k) >= 8) {
+        svg.appendChild(sv("line", { "class": "lead", x1: cx, y1: cy, x2: bestC.k.x, y2: bestC.k.y - 3 }));
       }
+      svg.appendChild(sv("text", { "class": "lbl", x: bestC.k.x, y: bestC.k.y, "text-anchor": bestC.k.a }, name));
     });
     pts.forEach(function (p) {
       var g = sv("g", { transform: "translate(" + X(p.fp) + "," + Y(p.v) + ")" });
+      // intervalo horizontal (falso positivo): apagado até o ponto receber o mouse ou o foco
+      g.appendChild(sv("line", { "class": "cix", x1: X(p.fci[0]) - X(p.fp), x2: Math.min(X(p.fci[1]), W - mr) - X(p.fp), y1: 0, y2: 0 }));
       g.appendChild(sv("path", { "class": "pt", d: shapePath(p.shape, 5.5) }));
       var hit = sv("circle", { "class": "hit", r: 11, tabindex: 0 });
       var t = detectTip(p.m.family + " · " + p.m.label + (p.o.kind === "ft" ? " (sem classificador)" : ""), gen.label, p.v, p.o.kind);
@@ -1255,6 +1284,7 @@
       cs.gen = c.generators.length - 1;
       cg.value = String(cs.gen);
       cg.addEventListener("change", function () { cs.gen = Number(cg.value); renderTrade(); });
+      document.getElementById("c-zoom").addEventListener("change", function (e) { cs.zoom = Number(e.target.value); renderTrade(); });
       var cm = document.getElementById("c-mode");
       var best = c.modes.filter(function (m) { return m.id === "combined_bertimbau"; })[0] || c.modes[0];
       cs.mode = best.id;
