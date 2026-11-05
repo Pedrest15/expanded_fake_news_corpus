@@ -421,16 +421,6 @@ CLASSIFICATION_MEAN_EXCLUDES = frozenset({"naive_bayes"})
 #: ex.: 4/1079 = 0,37% no SVM linguístico).
 PRIOR_HUMAN_TEST_SIZE = 1079
 
-#: Ablação do XGBoost com features linguísticas, feita fora deste script (os
-#: números vêm de execuções avulsas, não dos ``transfer_*.json``). Cada passo
-#: tira features do NILC-Metrix antes de treinar; mede o Llama (rodada 2).
-XGBOOST_ABLATION: tuple[tuple[str, str, float, float], ...] = (
-    ("none", "Nenhuma removida", 1.0, 0.001),
-    ("top2", "Sem as 2 principais features", 0.8, 0.004),
-    ("top16", "Sem as 16 principais features", 0.5, 0.011),
-    ("nilc", "Sem todo o NILC-Metrix", 0.4, 0.021),
-)
-
 CLASSIFIER_ORDER = (
     "svm",
     "random_forest",
@@ -524,14 +514,6 @@ def load_classification(directory: Path) -> dict | None:
         "mean_excludes": sorted(CLASSIFICATION_MEAN_EXCLUDES),
         "human_test_size": PRIOR_HUMAN_TEST_SIZE,
         "modes": modes,
-        "xgboost_ablation": {
-            "label": "Ablação do XGBoost linguístico",
-            "generator": "ollama/llama3.1:8b (rodada2)",
-            "steps": [
-                {"id": i, "label": l, "detection": d, "false_positive_rate": f}
-                for i, l, d, f in XGBOOST_ABLATION
-            ],
-        },
     }
 
 

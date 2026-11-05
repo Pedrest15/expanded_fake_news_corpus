@@ -13018,36 +13018,6 @@
      }
     }
    }
-  ],
-  "xgboost_ablation": {
-   "label": "Ablação do XGBoost linguístico",
-   "generator": "ollama/llama3.1:8b (rodada2)",
-   "steps": [
-    {
-     "id": "none",
-     "label": "Nenhuma removida",
-     "detection": 1.0,
-     "false_positive_rate": 0.001
-    },
-    {
-     "id": "top2",
-     "label": "Sem as 2 principais features",
-     "detection": 0.8,
-     "false_positive_rate": 0.004
-    },
-    {
-     "id": "top16",
-     "label": "Sem as 16 principais features",
-     "detection": 0.5,
-     "false_positive_rate": 0.011
-    },
-    {
-     "id": "nilc",
-     "label": "Sem todo o NILC-Metrix",
-     "detection": 0.4,
-     "false_positive_rate": 0.021
-    }
-   ]
-  }
+  ]
  }
 }

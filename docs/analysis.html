@@ -231,19 +231,7 @@
   .shapes svg *{fill:var(--accent)}
   .panels{display:grid; grid-template-columns:repeat(auto-fit,minmax(215px,1fr)); gap:14px 18px}
   .panels h4{margin:0 0 2px; font-size:12px; font-weight:600}
-  .ab{display:grid; grid-template-columns:minmax(120px,210px) 1fr 70px 70px; gap:7px 12px; align-items:center;
     font-size:12.5px; max-width:760px}
-  .ab .hd{font-size:10.5px; font-weight:600; letter-spacing:.07em; text-transform:uppercase; color:var(--ink-3)}
-  .ab .hd.r, .ab .v{text-align:right}
-  .ab .v{font-family:var(--mono); font-variant-numeric:tabular-nums; color:var(--ink)}
-  .ab .trk{position:relative; height:14px; background:var(--panel-2); border-radius:2px}
-  .ab .bar{position:absolute; left:0; top:2px; bottom:2px; background:var(--accent); border-radius:0 4px 4px 0}
-  .ab .whisk{position:absolute; top:6px; height:2px; background:var(--ink)}
-  .ab .whisk::before, .ab .whisk::after{content:""; position:absolute; top:-3px; width:2px; height:8px; background:var(--ink)}
-  .ab .whisk::before{left:0} .ab .whisk::after{right:0}
-  .ab .lab{line-height:1.25}
-  @media (max-width:560px){.ab{grid-template-columns:84px minmax(0,1fr) 44px 44px; gap:7px 8px; font-size:12px}}
-  .ab .scalee{grid-column:2; display:flex; justify-content:space-between; font-size:10.5px; color:var(--ink-3)}
   table.mini{margin-top:12px; max-width:640px}
   table.mini td.word{white-space:nowrap}
   .vsr{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)}
@@ -405,7 +393,6 @@
           <li><strong>Cada gerador tem só 20 textos:</strong> um texto vale 5 pontos. Os intervalos exibidos são de Wilson (95%) sobre 20 textos; quando se sobrepõem, a diferença não é distinguível de ruído.</li>
           <li>O Llama 3.1 8B é a <strong>rodada 2</strong> em toda a página.</li>
           <li>A média entre classificadores <strong>exclui o Naive Bayes</strong>, que marca texto demais como máquina; ele aparece nos gráficos por classificador, com marcador vazado. Na média os cinco classificadores leem os mesmos 20 textos, então o intervalo é aproximado e tratado como de 20 textos.</li>
-          <li>O melhor resultado do Llama (XGBoost + linguístico) depende de duas features que parecem refletir o formato do corpus humano antigo; veja a ablação mais abaixo.</li>
         </ul>
       </div>
       <div class="ctl">
@@ -437,12 +424,6 @@
         <div class="tablewrap"><table class="mini" id="mode-table"></table></div>
       </div>
 
-      <div class="viz" id="viz-abl">
-        <h3>Ablação do XGBoost linguístico</h3>
-        <p class="q">O 100% no Llama sobrevive sem as features do NILC-Metrix? Cada linha tira mais features e treina de novo; a barra é a detecção do Llama (rodada 2) com o intervalo de 95%.</p>
-        <div class="ab" id="ablation"></div>
-        <p class="note">Ablação feita fora do pipeline que gera o restante da página, com os mesmos 20 textos do Llama. As duas features principais, sentenças por parágrafo e razão de entidades nomeadas, parecem refletir o formato dos textos humanos do corpus antigo; por isso o 100% inicial não deve ser lido como capacidade geral de detectar texto do Llama.</p>
-      </div>
     </div>
   </section>
 
@@ -1244,46 +1225,6 @@
       rows, [false, true, true, true], null, [true, false, false, false]);
   }
 
-  /* ---- 4. ablação ---- */
-
-  function renderAblation() {
-    var host = document.getElementById("ablation");
-    var ab = payload.classification.xgboost_ablation;
-    var box = document.getElementById("viz-abl");
-    if (!ab || !ab.steps || !ab.steps.length) { box.hidden = true; return; }
-    host.textContent = "";
-    var gen = payload.classification.generators.filter(function (g) { return g.key === ab.generator; })[0];
-    var gl = gen ? gen.label : "Llama";
-    host.appendChild(el("div", "hd", "Features removidas"));
-    host.appendChild(el("div", "hd", "Detecção de " + gl + " · IC 95%"));
-    host.appendChild(el("div", "hd r", "Detecção"));
-    host.appendChild(el("div", "hd r", "Falso positivo"));
-    ab.steps.forEach(function (s) {
-      var k = Math.round(s.detection * N_TEXTS), ci = wilson(k, N_TEXTS);
-      var lab = el("div", "lab", s.label);
-      var trk = el("div", "trk");
-      trk.tabIndex = 0;
-      var bar = el("div", "bar");
-      bar.style.width = (s.detection * 100) + "%";
-      var wh = el("div", "whisk");
-      wh.style.left = (ci[0] * 100) + "%";
-      wh.style.width = ((ci[1] - ci[0]) * 100) + "%";
-      trk.appendChild(bar);
-      trk.appendChild(wh);
-      setTip(trk, { html: "<b>" + esc(s.label) + "</b><br><b>" + k + "/" + N_TEXTS + "</b> detectados (" + pct(s.detection, 0) +
-        ")<br>IC 95%: " + pctr(ci[0], ci[1]) + "<br>falso positivo: " + pct(s.false_positive_rate, 1),
-        plain: s.label + ": " + k + " de " + N_TEXTS + ", intervalo " + pctr(ci[0], ci[1]) + ", falso positivo " + pct(s.false_positive_rate, 1) });
-      host.appendChild(lab);
-      host.appendChild(trk);
-      host.appendChild(el("div", "v", k + "/" + N_TEXTS));
-      host.appendChild(el("div", "v", pct(s.false_positive_rate, 1)));
-    });
-    host.appendChild(el("div"));
-    var sc = el("div", "scalee");
-    ["0%", "50%", "100%"].forEach(function (t) { sc.appendChild(el("span", null, t)); });
-    host.appendChild(sc);
-  }
-
   function renderCompare() {
     var c = payload.classification;
     var sec = document.getElementById("sec-compare");
@@ -1333,7 +1274,6 @@
     renderHeat();
     renderTrade();
     renderMode();
-    renderAblation();
   }
 
   /* ---------- cabeçalho ---------- */
