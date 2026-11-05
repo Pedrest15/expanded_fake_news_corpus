@@ -770,8 +770,19 @@ def train_detector(
     return search.best_estimator_, training
 
 
-def evaluate(detector: Any, sets: dict[str, tuple[np.ndarray, int]]) -> dict[str, Any]:
-    """Fração marcada como máquina em cada conjunto (formato de :mod:`transfer`)."""
+def evaluate(
+    detector: Any,
+    sets: dict[str, tuple[np.ndarray, int]],
+    per_text: list[dict[str, Any]] | None = None,
+) -> dict[str, Any]:
+    """Fração marcada como máquina em cada conjunto (formato de :mod:`transfer`).
+
+    Args:
+        detector: Detector já ajustado.
+        sets: Conjuntos de teste, ``{nome: (matriz, rótulo esperado)}``.
+        per_text: Se dado, recebe uma linha por texto (``set``, ``uid`` e
+            ``flagged``), para cruzar a predição com propriedades do texto.
+    """
     results: dict[str, Any] = {}
     for name, (matrix, expected) in sets.items():
         if len(matrix) == 0:
@@ -779,6 +790,12 @@ def evaluate(detector: Any, sets: dict[str, tuple[np.ndarray, int]]) -> dict[str
             continue
         predictions = detector.predict(matrix)
         share = float(np.mean(np.asarray(predictions) == MACHINE_LABEL))
+        if per_text is not None:
+            uids = getattr(matrix, "index", range(len(matrix)))
+            per_text.extend(
+                {"set": name, "uid": str(uid), "flagged": int(flag == MACHINE_LABEL)}
+                for uid, flag in zip(uids, np.asarray(predictions), strict=True)
+            )
         results[name] = {
             "texts": len(matrix),
             "expected": "machine" if expected == MACHINE_LABEL else "human",
@@ -986,7 +1003,8 @@ def main(argv: Sequence[str] | None = None) -> int:
         detector, training = train_detector(
             data, classifier=classifier, folds=args.cv_folds, n_jobs=args.n_jobs
         )
-        evaluation = evaluate(detector, data.sets)
+        per_text: list[dict[str, Any]] = []
+        evaluation = evaluate(detector, data.sets, per_text)
         prior_test = prior_test_metrics(detector, data.sets)
         importance = feature_importance(
             detector,
@@ -1024,6 +1042,9 @@ def main(argv: Sequence[str] | None = None) -> int:
             json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
         )
         logger.info(f"Gravado {output}")
+        pd.DataFrame(per_text).to_csv(
+            out_dir / f"predictions_{label}_{classifier}.csv", index=False
+        )
         if not args.no_save_models:
             models_dir = args.output_dir / "models"
             models_dir.mkdir(parents=True, exist_ok=True)
